@@ -1,0 +1,54 @@
+\contentsline {section}{List of Figures}{iii}{chapter*.2}
+\contentsline {section}{List of Tables}{iv}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}The DANCe project}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}The Pleiades as a benchmark}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Generalities}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}The distance controversy}{3}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Spatial Distribution}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Velocity Distribution}{3}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Radial Velocity}{3}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.4}Luminosity Distribution}{3}{section.2.4}
+\contentsline {section}{\numberline {2.5}Mass Distribution}{3}{section.2.5}
+\contentsline {section}{\numberline {2.6}The current dynamical scenario}{3}{section.2.6}
+\contentsline {section}{\numberline {2.7}The Pleiades DANCe DR2.}{3}{section.2.7}
+\contentsline {chapter}{\numberline {3}Bayesian formalism}{4}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction to probability theory.}{4}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Bayes theorem}{7}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Model Selection}{9}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Membership probability}{9}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Bayesian Hierarchical Models}{9}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Generalities}{9}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Examples}{9}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Graphical representation:Probabilistic Graphical Models}{9}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Modelling the data}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Missing values}{10}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Missing value pattern}{10}{subsubsection.3.3.1.1}
+\contentsline {subsection}{\numberline {3.3.2}The field population}{10}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}The cluster population}{10}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Priors}{10}{section.3.4}
+\contentsline {section}{\numberline {3.5}Sampling the posterior distribution}{10}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}PSO}{10}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}The charged PSO}{10}{subsubsection.3.5.1.1}
+\contentsline {subsection}{\numberline {3.5.2}MCMC}{10}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Generalities}{10}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}Flavours}{10}{subsubsection.3.5.2.2}
+\contentsline {subsubsection}{\numberline {3.5.2.3}Convergence}{11}{subsubsection.3.5.2.3}
+\contentsline {subsubsection}{\numberline {3.5.2.4}The evidence}{11}{subsubsection.3.5.2.4}
+\contentsline {section}{\numberline {3.6}Codes}{11}{section.3.6}
+\contentsline {subsubsection}{\numberline {3.6.0.5}The modified charged PSO}{11}{subsubsection.3.6.0.5}
+\contentsline {subsubsection}{\numberline {3.6.0.6}Improvements of emcee}{11}{subsubsection.3.6.0.6}
+\contentsline {subsubsection}{\numberline {3.6.0.7}The GMM with missing values}{11}{subsubsection.3.6.0.7}
+\contentsline {subsection}{\numberline {3.6.1}Parallel implementations}{11}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {4}Results}{12}{chapter.4}
+\contentsline {section}{\numberline {4.1}Performance of the classifier}{12}{section.4.1}
+\contentsline {section}{\numberline {4.2}Velocity distribution}{12}{section.4.2}
+\contentsline {section}{\numberline {4.3}Spatial distribution}{12}{section.4.3}
+\contentsline {section}{\numberline {4.4}Luminosity distribution}{12}{section.4.4}
+\contentsline {section}{\numberline {4.5}Mass distribution}{12}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}The mass-luminosity relation}{12}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}The mass distribution on time}{12}{section.4.6}
+\contentsline {section}{\numberline {4.7}The phase space}{12}{section.4.7}
+\contentsline {section}{\numberline {4.8}Updating the previous knowledge}{12}{section.4.8}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{13}{chapter.5}
+\contentsline {chapter}{\numberline {A}Appendix Chapter Title}{14}{appendix.A}

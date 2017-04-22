@@ -1,0 +1,136 @@
+%!TEX root = ../thesis.tex
+\chapter{Bayesian formalism}
+\label{chap:BHM}
+This chapter provides a general introduction to probability theory and its application to parametric inference. Since the objective of this work is to infer the probability distributions of the cluster properties (e.g. luminosity and velocity), I give reason to prove that the Bayes' theorem provides the proper framework for the inference of the parameters governing these distributions. Later in this chapter, I describe the reason for which the Bayesian Hierarchical Models are the best option to parametric inference under the Bayesian framework.
+
+In the following Sections I will describe in detail the assumptions I made to model the data and to select the prior distributions. The two final Sections of this Chapter focus on: the practical issues related to the sampling of the cluster distributions, and the description of details and assumptions embed in the codes I developed.
+
+\section{Introduction to probability theory.}
+ 
+Uncertainty and probability are closely entangled. Anything we measure has an associated uncertainty, otherwise is not a complete measurement \footnote{Upper and lower limits are examples of incomplete measurements.}. The term uncertainty must not be confused with the term error, which refers to the difference between the measured value of the quantity and the \emph{true} value\footnote{The true value is that which ideally results when the uncertainty tends to zero.} of it \citep{GUM2008}. It is commonly agreed that uncertainty of a measurement can be expressed in a probabilistic basis \citep{GUM2008}. This means that whenever we measure a quantity, lets say $a$, the distribution of the repeated measurements of $a$, is a probability distribution function, $p(a)$. As any other probability distribution, $p(a)$ satisfies the following properties:
+
+\begin{enumerate}[label=\textbf{Property \arabic*}]
+\item  It has units, those of the inverse of $a$. \label{property:1}
+\item $p(a) \geq 0$. \label{property:3}
+\item $1=\int_a p(a) da$. \label{property:3}
+\end{enumerate}
+
+These properties hold regardless of the dimension of $a$, it means that the joint uncertainty of all measured quantities of an object is also a probability distribution. Furthermore, they also hold if the probability distribution is conditioned in any other quantity. Lets imagine that we measure the positions, projected in the plane of sky (the plane perpendicular to the line of sight), of one star, these measurements are conditioned in the magnitude (brightness) of the object we measure. If the object is too bright, like the sun, it will saturate the detector and it will render the measurement useless. On the other hand, if the object is too faint we simple will not have enough photons to measure it. So, the stellar positions in the sky, which we can call $a$ and $b$ because they are two dimensions, are conditioned on the magnitude, $c$, of the object. Therefore, $p(a,b|c)$ must also satisfy:
+
+\begin{itemize}
+\item It has units of $a^{-1} b^{-1}$.
+\item $p(a,b|c)\geq0$.
+\item $1=\int_a \int_b p(a,b|c)da\cdot db$.
+\end{itemize}
+
+The link between joint and conditioned probabilities is given by the following symmetric definition:
+
+\begin{align}
+p(a,b)=p(a|b)\cdot p(b).\nonumber \\
+p(a,b)=p(b|a) \cdot p(a).
+\end{align}
+
+This can be further conditioned on $c$ to obtain:
+\begin{align}
+\label{eq:conditioned}
+p(a,b|c)=p(a|b,c)\cdot p(b|c),\nonumber \\
+p(a,b|c)=p(b|a,c) \cdot p(a|c),
+\end{align}
+
+If the joint probability of $a$ and $b$ can be factorised, this is
+\begin{align}
+p(a,b)=p(a)\cdot p(b),\nonumber \\
+p(a,b)=p(b) \cdot p(a),
+\end{align}
+then $a$ and $b$ are say to be \emph{independent}. An alternative option is to say that $a$ and $b$ are \emph{independent}, if the conditional probability of $a$ on $b$ is $p(a|b)=p(a)$.
+
+The most important thing we can do with probability distributions is to integrate them. \ref{property:3} establish that the amount\footnote{Which could be infinite, like in Dirac's delta.} of probability $p(a)$ spread over the volume of the support of $a$ adds to one. This Property allows us to \emph{marginalise} any non-desired variable. Lets imagine again that $a$ and $b$ are the measured positions of some star and we have several measurements of these positions. Then we will have the joint probability distribution of them, $p(a,b)$ (must likely it will be a bivariate gaussian but that does not matter now). If we are interested lets say in the mean value of $a$, we first must get rid of $b$. For it, we \emph{marginalise} out $b$ in the following way,
+\begin{align}
+\label{eq:marginalisation}
+p(a)=\int_b p(a,b)\cdot db.
+\end{align}
+
+Then we compute the \emph{expected value} of $a$, $E(a)$, which is identified with the mean of $a$ once we have drawn many realisations from its probability distribution. To compute it, we add all the possible values of $a$ weighted by their probability. This is,
+
+\begin{align}
+\label{eq:expectation}
+E(a)=\int_a a\cdot p(a)\cdot da.
+\end{align}
+
+Once again, these last two equations (\ref{eq:marginalisation} and \ref{eq:expectation}) hold in case they are conditioned in any other measurement. For example, the magnitude of the object, as in our previous analogy. Notice however that, once the brightness of the object lay within in the dynamic range of the detector, $a$ and $b$ became \emph{independent} of the magnitude.
+
+It is important to recall that the term measurement, and its unavoidable uncertainty, refer not just to directly measured quantities, like the photons (counts) and pixels in a CCD, but also to indirect measurements. Stellar magnitudes and positions in the sky, for example, are indirect measurements derived from the direct measurement of photons, pixels and telescope arrangement. This generalisation also applies to the measurement of parameters in any physical or statistical model, like the one I will describe in Section \ref{sect:BHM}.
+
+\subsection{Bayes theorem}
+The definition of conditioned probability (Eq. \ref{eq:conditioned}) leads to the Bayes' theorem:
+\begin{equation}
+p(a|b,c) = \frac{p(b|a,c)\cdot p(a|c)}{p(b|c)}.
+\end{equation}
+Integrating on $a$ we find that,
+\begin{align}
+p(b|c) \cdot \int_a p(a|b,c)\cdot da = \int_a p(b|a,c) \cdot p(a|c) \cdot da \nonumber \\
+Z \equiv p(b|c) = \int_a p(b|a,c) \cdot p(a|c) \cdot da.
+\end{align}
+In this last equation $Z$ refers to what is known as the \emph{evidence}. I will come back to this \emph{evidence} in a few paragraphs. This last Eq. also illustrates that $p(b|c)$ is a normalisation constant which can be evaluated once $p(b|a,c)$ and $p(a|c)$ are known. These two terms are commonly referred as the \emph{likelihood} of the data ($p(b|a,c)$), and the \emph{prior} ($p(a|c)$). These names arise in the context of parametric inference, where $a,b$ and $c$ are identified, respectively, with the parameters in a model, the data which the model tries to describe, and the information used in the construction of the model. Thus, the term $p(a|b,c)$ is called the \emph{posterior} distribution of the parameters given the data and of course it is also conditioned in the model and the information used to construct it. Notice that, although formally the likelihood and the prior are probability distributions in $b$ and $a$, respectively, for $p(a|b,c)$ to be a probability distribution on $a$, it only suffices that the product of the likelihood times the prior does not vanish everywhere or be negative anywhere\footnote{Although negative probabilities may have sense in quantum mechanics. See for example \citep{1942RSPSA.180....1D}}. In this case, they are called \emph{improper} priors or likelihoods. If their product vanishes everywhere, which may be the case if the prior is terribly specified or if the likelihood does not take proper account of extreme data, then the posterior is not a probability distribution due to a division by zero. In any case, it makes no sense try to estimate the parameters of a model with zero evidence.
+
+The Bayes' theorem can be interpreted as the probabilistic way to update knowledge. In other words, the way to update knowledge when we recognise the uncertainty associated to it. When I say knowledge I refer to abstractions or models that we made about nature. In my perspective, they are always uncertain, even if its uncertainty is negligible given the current evidence that support them.
+
+Whenever we have a model, we have prior knowledge over it. Actually, this can be classified in to kinds of priors. One refers to the prior information conveyed in the model, which I call $M$. It is the information that the creator of the model use to establish the relations among the elements of the model: data and parameters. The second kind of prior, which coincides with the previous use of the term, refers to the statement the user of the model made of his/her believes about the distribution of the parameter values. This is indeed subjective. However, it is, in my opinion, less subjective that the former, $M$, prior information. At least in this last kind, the subjectivity is expressed objectively in a probabilistic, and therefore measurable way.
+
+That said, the Bayes' theorem helps us to update our prior believes by means of the data, once we multiply them by the likelihood of it. Then, the posterior probabilities of the parameters given the current data, became the new prior believes once more data is available. Furthermore, the Bayes' theorem also provides the objective way to compare two models and update the prior information, $M$, used to construct them. This is called model selection.
+
+\subsection{Model Selection}
+
+Whenever we have a collection of models, even two of them, and a data set,  the most frequent thing we do is try to compare them with each other. Most of the time, if not always, when we fit a collection of models is to find the one that best describes the data. 
+
+
+
+
+\subsection{Membership probability}
+
+
+
+\section{Bayesian Hierarchical Models}
+\subsection{Generalities}
+Comparisons with other techniques in IA.
+It must be clear the BHM are the only option.
+\subsection{Examples}
+Its applications in IA.
+Its applications in astrophysics.
+\subsection{Graphical representation:Probabilistic Graphical Models}
+
+\section{Modelling the data}
+Positions, proper motions, photometry
+\subsection{Missing values}
+\subsubsection{Missing value pattern}
+\subsection{The field population}
+\subsection{The cluster population}
+\section{Priors}
+
+\section{Sampling the posterior distribution}
+
+Description of the techniques used to obtain samples from the posterior distribution.
+
+History and used versions.
+
+\subsection{PSO}
+\subsubsection{The charged PSO}
+
+
+\subsection{MCMC}
+\subsubsection{Generalities}
+\subsubsection{Flavours}
+HMC,NUTS,Gibbs, Metropolis-Hasting, Affine invariant, stretch-move, MultiNest.
+It must be clear why we choose emcee and multinest
+\subsubsection{Convergence}
+\subsubsection{The evidence}
+
+
+\section{Codes}
+\subsubsection{The modified charged PSO}
+\subsubsection{Improvements of emcee}
+\subsubsection{The GMM with missing values}
+\subsection{Parallel implementations}
+Description of the implementation. MPI, python stan, etc.
+explain in detail the difficulties faced at implementing the different codes in the different servers.
+
