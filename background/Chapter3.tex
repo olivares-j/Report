@@ -59,7 +59,7 @@ E(a)=\int_a a\cdot p(a)\cdot da.
 
 Once again, these last two equations (\ref{eq:marginalisation} and \ref{eq:expectation}) hold in case they are conditioned in any other measurement. For example, the magnitude of the object, as in our previous analogy. Notice however that, once the brightness of the object lay within in the dynamic range of the detector, $a$ and $b$ became \emph{independent} of the magnitude.
 
-It is important to recall that the term measurement, and its unavoidable uncertainty, refer not just to directly measured quantities, like the photons (counts) and pixels in a CCD, but also to indirect measurements. Stellar magnitudes and positions in the sky, for example, are indirect measurements derived from the direct measurement of photons, pixels and telescope arrangement. This generalisation also applies to the measurement of parameters in any physical or statistical model, like the one I will describe in Section \ref{sect:BHM}.
+It is important to recall that the term measurement, and its unavoidable uncertainty, refer not just to directly measured quantities, like the photons (counts) and pixels in a CCD, but also to indirect measurements. Stellar magnitudes and positions in the sky, for example, are indirect measurements derived from the direct measurement of photons, pixels and telescope arrangement. This generalisation also applies to the measurement of parameters in any physical or statistical model, like the one I will describe in the following Section.
 
 \subsection{Bayes theorem}
 The definition of conditioned probability (Eq. \ref{eq:conditioned}) leads to the Bayes' theorem:
@@ -68,25 +68,65 @@ p(a|b,c) = \frac{p(b|a,c)\cdot p(a|c)}{p(b|c)}.
 \end{equation}
 Integrating on $a$ we find that,
 \begin{align}
+\label{eq:evidence}
 p(b|c) \cdot \int_a p(a|b,c)\cdot da = \int_a p(b|a,c) \cdot p(a|c) \cdot da \nonumber \\
 Z \equiv p(b|c) = \int_a p(b|a,c) \cdot p(a|c) \cdot da.
 \end{align}
 In this last equation $Z$ refers to what is known as the \emph{evidence}. I will come back to this \emph{evidence} in a few paragraphs. This last Eq. also illustrates that $p(b|c)$ is a normalisation constant which can be evaluated once $p(b|a,c)$ and $p(a|c)$ are known. These two terms are commonly referred as the \emph{likelihood} of the data ($p(b|a,c)$), and the \emph{prior} ($p(a|c)$). These names arise in the context of parametric inference, where $a,b$ and $c$ are identified, respectively, with the parameters in a model, the data which the model tries to describe, and the information used in the construction of the model. Thus, the term $p(a|b,c)$ is called the \emph{posterior} distribution of the parameters given the data and of course it is also conditioned in the model and the information used to construct it. Notice that, although formally the likelihood and the prior are probability distributions in $b$ and $a$, respectively, for $p(a|b,c)$ to be a probability distribution on $a$, it only suffices that the product of the likelihood times the prior does not vanish everywhere or be negative anywhere\footnote{Although negative probabilities may have sense in quantum mechanics. See for example \citep{1942RSPSA.180....1D}}. In this case, they are called \emph{improper} priors or likelihoods. If their product vanishes everywhere, which may be the case if the prior is terribly specified or if the likelihood does not take proper account of extreme data, then the posterior is not a probability distribution due to a division by zero. In any case, it makes no sense try to estimate the parameters of a model with zero evidence.
 
-The Bayes' theorem can be interpreted as the probabilistic way to update knowledge. In other words, the way to update knowledge when we recognise the uncertainty associated to it. When I say knowledge I refer to abstractions or models that we made about nature. In my perspective, they are always uncertain, even if its uncertainty is negligible given the current evidence that support them.
+Previous to any further dissertation, I state my concept of a model. To me, it is a representation of the understanding about something. They are everywhere in our daily life. Sometime the understanding is shared by others, some time it is no. They go from the words we spoke every day, to the evolution of the species and the general relativity; from a kid's draw to the cosmological models. In science, however, we restrict the concept of model to a mathematical representation of the relations among the variables of interest: an equation.   
 
-Whenever we have a model, we have prior knowledge over it. Actually, this can be classified in to kinds of priors. One refers to the prior information conveyed in the model, which I call $M$. It is the information that the creator of the model use to establish the relations among the elements of the model: data and parameters. The second kind of prior, which coincides with the previous use of the term, refers to the statement the user of the model made of his/her believes about the distribution of the parameter values. This is indeed subjective. However, it is, in my opinion, less subjective that the former, $M$, prior information. At least in this last kind, the subjectivity is expressed objectively in a probabilistic, and therefore measurable way.
+Whenever we have a model, we have prior knowledge over it. Actually, it can be classified in two kinds of prior information. One refers to the prior information conveyed in the model, which I call $M$. This is the information that the creator of the model uses to establish the relations among the elements of the model: variables. The second kind of prior, which coincides with the common \emph{probability of the parameters}, refers to the statement the user of the model made of his/her believes about the probability distribution of the parameter values. This is indeed subjective. However, it is, in my opinion, less subjective than the former, $M$, prior information. At least in this last kind, the subjectivity is expressed objectively in a probabilistic, and therefore measurable way.
+
+Thus, I interpret Bayes' theorem as the probabilistic way to update knowledge. It is the way, to update knowledge when we recognise the uncertainty associated to it. In my perspective, knowledge is always uncertain, even if its uncertainty is negligible given the current evidence that supports it. 
 
 That said, the Bayes' theorem helps us to update our prior believes by means of the data, once we multiply them by the likelihood of it. Then, the posterior probabilities of the parameters given the current data, became the new prior believes once more data is available. Furthermore, the Bayes' theorem also provides the objective way to compare two models and update the prior information, $M$, used to construct them. This is called model selection.
 
 \subsection{Model Selection}
 
-Whenever we have a collection of models, even two of them, and a data set,  the most frequent thing we do is try to compare them with each other. Most of the time, if not always, when we fit a collection of models is to find the one that best describes the data. 
+Whenever we have a data set and two or more models that attempt to describe it, the most straightforward thing to do is to compare these models. Almost always, we want to select the \emph{best} model. Obviously the term \emph{best} depends on the objective of research. For example, lets imagine that our data set consists of a set of measurements of the positions of an object as it moves in the sky. If we were interested in reproducing exactly the same points in the data set, the \emph{best} model will be a polynomial with degree equal to the number of points. This polynomial will pass trough all the points. 
 
+Once we recognise the unavoidable uncertainty of the data, we realise that an exact representation of the data is of poor use. 
+In general, we are interested in the predictive capabilities of a model, this is its ability to predict future observations rather than to replicate the ones we have. Thus, an exact representation of the observed data (an over-fitted model), will poorly describe any new data set. In this sense, an over-fitted model \emph{memorises} the data rather than \emph{learns} from them.
 
+A model that \emph{learns} from the data is that which obtains the \emph{true} underlying relation embedded in data.  This \emph{true} underlying relation produces de data, once it is convolved (added) with the source of uncertainty. Thus, we call \emph{deconvolution} the the process by which the \emph{true} underlying relation is obtained. Nevertheless, we still need to select among learning models.  
 
+We can draw some help from the commonly known Ockham's razor or principle \footnote{The origin of this motto and its exact phrasing is beyond the scope of this work. I just mention that paradoxically, an ancient formulation is attributed to Ptolomey: "We consider it a good principle to explain the phenomena by the simplest hypothesis possible" \citep{Franklin2001}}. It says:
+
+\textit{Among competing hypotheses, the one with the fewest assumptions should be selected.}
+
+Here, I identify hypotheses with models. Thus, this principle tells us we should choose the model with the fewest assumptions. I classify the assumptions of a model in two groups: fixed and free ones. The fixed assumptions belong to what I previously described as the prior information, $M$, used to construct the model. They render the model more physically or statistically interpretable, give it sense within a corpus of hypotheses. Free assumptions correspond to the parameters of the model. They give it more flexibility to fit the data. For example, in the case of a straight line model, a fixed assumption is that the data is linearly related, whereas the free assumptions correspond to the slope and ordinate at the origin. A linear model and a quadratic model in which the constant term has been fixed, have the same number of free parameters (assumptions) but clearly the second one has an extra fixed assumption. Therefore, choosing the model with fewer free parameters does not necessarily means choosing the model with the fewest assumptions.
+
+One of the great advantages of the Bayesian methodology is that it incorporates directly Ockham's principle. Suppose we want to compare two models $M_1$ and $M_2$, which we assume describe the data set $\mathbf{D}$. Each model has prior probabilities, $p(M_k)$ and likelihoods $p(\mathbf{D}|M_k)$ (with $k=1,2$). The prior probabilities reflect our believes about the fixed assumptions mentioned before. On the other hand, the likelihood of the data, given the model, is related parameters (the free assumptions) and priors within a model. It corresponds to the \emph{evidence} of the model, Eq. \ref{eq:evidence}. This evidence in terms of the model parameters, $\theta_k$, is
+
+ \begin{equation}
+p(\mathbf{D}|M_k)=\int_{\theta_k} p(\mathbf{D}|\theta_k,M_K)\cdot p(\theta_k|M_k)\cdot d\theta_k. \label{eq:evidence2}
+\end{equation}
+The Bayes' theorem applied to models instead of individual parameters tells us that
+\begin{equation}
+p(M_k|\mathbf{D})=\frac{p(\mathbf{D}|M_k)\cdot p(M_k)}{p(\mathbf{D})}.
+\end{equation}
+with $k=1,2$. Since there are only two models, their prior probabilities are related by $p(M_1)= 1- p(M_2)$. Therefore,
+ \begin{equation}
+p(M_k|\mathbf{D})=\frac{p(\mathbf{D}|M_k)\cdot p(M_k)}{p(\mathbf{D}|M_1)\cdot p(M_1)+p(\mathbf{D}|M_2)\cdot p(M_2)}.
+\end{equation}
+From this last Equation, the ratio of the posterior distributions is:
+\begin{equation}
+\frac{p(M_1|\mathbf{D})}{p(M_2|\mathbf{D})}=\frac{p(\mathbf{D}|M_1)\cdot p(M_1)}{p(\mathbf{D}|M_2)\cdot p(M_2)}.
+\end{equation}
+This ratio provides an objective measure of how better model $M_1$ is when compared to model $M_2$, under the measure provided by the data $\mathbf{D}$ by means of the evidence. When both prior probabilities  $p(M_1)$ and $p(M_2)$ are set equal, the ratio of posteriors equal the ratio of likelihoods. This is known as the \emph{Bayes factor}\footnote{For a similar derivation and some example see \citep{Kaas1995}}. Even in the equal priors case, the evidences themselves, Eq. \ref{eq:evidence2}, embody the Ockham's principle. Indeed, each evidence is a measure of the prior times the likelihood, this time for parameters in a single model. The larger the number of parameters (assumptions), the larger the volume, in parametric space, over which the likelihood of the data spreads. Since the likelihood is not a probability distribution on the parameters, it does not integrate to one, even if the priors are uniform. The evidence also penalises the assumptions made in the priors of the parameters. The most concentrated the prior is the less of the likelihood contributes to the evidence.
+
+Thus, the Bayes' theorem is the way to update knowledge, either if it refers to models or to parameters within a model. 
 
 \subsection{Membership probability}
+
+In the previous Section, I derived, by means of the Bayes' theorem, the probability of models $M_1$ and $M_2$ given the data $\mathbf{D}$. Now, I describe the same problem but instead of the likelihood of a data set I do it for a single datum. This is, the probability of model $M_1$ or $M_2$ for datum $\mathbf{d}$. This is known as the membership probability of datum $\mathbf{d}$ to model or class, $M_k$ ($k=1,2$). The Bayes' theorem in this case is,
+
+\begin{equation}
+p( M_k | \mathbf{d}) =\frac{p(\mathbf{d}|M_k)\cdot p(M_k)}{\Sum_{k=1}^2 p(\mathbf{d}|M_k)\cdot p(M_k)} 
+\end{equation}
+
+
 
 
 
