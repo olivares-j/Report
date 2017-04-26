@@ -5,7 +5,8 @@
 \section{Generalities}
 
 Description of the current knowledge on the pleiades cluster
-Age, distance, metallically reddening, number of members, 
+Age, distance, metallically reddening, number of members, proper motion.
+Describe what are they.
 
 \subsection{The distance controversy}
 
@@ -21,3 +22,43 @@ Age, distance, metallically reddening, number of members,
 \section{The current dynamical scenario}
 
 \section{The Pleiades DANCe DR2.}
+\label{Chapter2:Sect:DR2}
+This section must contain a detailed description of the DR2 data.
+
+\begin{table}[htdp]
+\caption{Pleiades DANCe DR2 properties}
+\begin{center}
+\begin{tabular}{|c|c|}
+
+\end{tabular}
+\end{center}
+\label{tab:DR2properties}
+\end{table}%
+\subsection{Particularities of the Pleiades DANCe DR2}
+As described in Section \ref{Chapter2:Sect:DR2} the Pleiades DANCe DR2 contains astrometric (stellar positions and proper motions) and photometric ($ugrizYJHK_s$) measurements for 1,972,245 objects. 
+
+
+
+\subsection{Selection of variables}
+\citet{Sarro2014} demonstrated that the most effective variables for the discrimination of members are the proper motions and the $riYJHK_s$ bands. However, they excluded the $r$ band due to its large number of missing values in their training set. The selection of variables in this work aims at comparing its results with those found by \citet{Bouy2015} using the $\mu_{\alpha},\mu_{\delta},J,H,K_s,i-K_s,Y-J$ variables. 
+
+The set of variables used in this work are the stellar positions, the proper motions in right ascension and declination, $\mu_{\alpha},\mu_{\delta}$, and the photometric colours and magnitudes, $i-K_s$,$Y,J,H,K_s$. However, in order to compare the results with those of \citet{Bouy2015}, the analysis of the spatial distribution of the Pleiades stellar positions is done independently, in \citet{Olivares2017b}.
+
+As described in \citet{Olivares2017}, the photometry is modelled by parametric series of cubic spline. The parameter of this series is the colour index $i-K_s$ (in the following $CI$). This colour allows the most one-to-one variate-covariate relation. Figure \ref{fig:otherCI} shows the colour-magnitude diagram (CMD) $K$ vs $Y-J$ the second most one-to-one relation.
+
+
+\begin{figure}[htbp]
+\begin{center}
+%\includegraphics[width=\textwidth]{}
+\caption{$K$ vs $Y-J$ CMD for the Pleiades candidate members of \citet{Bouy2015}}.
+\label{fig:otherCI}
+\end{center}
+\end{figure}
+
+\subsection{Data preprocessing}
+ Since both photometry and proper motions carry crucial information for the disentanglement of the cluster population, we restrict the data set to objects with proper motions and at least two observed values in any of our four CMDs: $Y,J,H,K_s$ vs $CI$. This restriction excludes 22 candidate members of \citet{Bouy2015}, which have only one observed value in the photometry. Furthermore, we restrict the lower limit ($CI =0.8$) of the colour index to the value of the brightest cluster member. We do not expect to find new bluer members in the bright part of the CMDs. We set the upper limit ($CI=8$) of the colour index at one magnitude above the colour index of the reddest known cluster member, thus allowing for new discoveries. Due to the sensitivity limits of the DR2 survey in $i$ and $K_s$ bands, objects with $CI>8$ have $K_s$ magnitudes $\geq 16$ mag. These objects are incompatible with the cluster sequence and therefore we discard them a priori as cluster members.
+
+Our current computational constraints and the costly computations associated to our methodology (described throughout this Sect.), prevent its application to the entire data set. However, since the precision of our methodology, as that of any statistical analysis, increases with the number of independent observations, we find that a size of $10^5$ source for our data is a reasonable compromise. Although a smaller data set produces faster results, it also renders a less precise model of the field (in the area around the cluster) and therefore, a more contaminated model of the cluster. For these reasons, we restrict our data set to the $10^5$ objects with highest membership probabilities according to \citet{Bouy2015}. Of this resulting data set, the majority ($\approx$98\%) are field objects with cluster membership probabilities around zero. Thus, the probability of leaving out a cluster member is negligible. For the remaining of the objects in the Pleiades DANCe DR2, we assign membership probabilities \emph{a posteriori}, once the cluster model is constructed.
+
+
+
