@@ -30,29 +30,31 @@
 \contentsline {subsection}{\numberline {3.3.2}The generative model}{20}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}The field population}{22}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}The cluster population}{25}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Priors}{29}{section.3.4}
-\contentsline {section}{\numberline {3.5}Sampling the posterior distribution}{30}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}PSO}{33}{subsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.1.1}The charged PSO}{33}{subsubsection.3.5.1.1}
-\contentsline {subsection}{\numberline {3.5.2}MCMC}{33}{subsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.2.1}Generalities}{33}{subsubsection.3.5.2.1}
-\contentsline {subsubsection}{\numberline {3.5.2.2}Flavours}{33}{subsubsection.3.5.2.2}
-\contentsline {subsubsection}{\numberline {3.5.2.3}Convergence}{33}{subsubsection.3.5.2.3}
-\contentsline {subsubsection}{\numberline {3.5.2.4}The evidence}{33}{subsubsection.3.5.2.4}
-\contentsline {section}{\numberline {3.6}Codes}{33}{section.3.6}
-\contentsline {subsubsection}{\numberline {3.6.0.5}The modified charged PSO}{33}{subsubsection.3.6.0.5}
-\contentsline {subsubsection}{\numberline {3.6.0.6}Improvements of emcee}{33}{subsubsection.3.6.0.6}
-\contentsline {subsubsection}{\numberline {3.6.0.7}The GMM with missing values}{33}{subsubsection.3.6.0.7}
-\contentsline {subsection}{\numberline {3.6.1}Parallel implementations}{33}{subsection.3.6.1}
-\contentsline {chapter}{\numberline {4}Results}{34}{chapter.4}
-\contentsline {section}{\numberline {4.1}Performance of the classifier}{34}{section.4.1}
-\contentsline {section}{\numberline {4.2}Velocity distribution}{34}{section.4.2}
-\contentsline {section}{\numberline {4.3}Spatial distribution}{34}{section.4.3}
-\contentsline {section}{\numberline {4.4}Luminosity distribution}{34}{section.4.4}
-\contentsline {section}{\numberline {4.5}Mass distribution}{34}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}The mass-luminosity relation}{34}{subsection.4.5.1}
-\contentsline {section}{\numberline {4.6}The mass distribution on time}{34}{section.4.6}
-\contentsline {section}{\numberline {4.7}The phase space}{34}{section.4.7}
-\contentsline {section}{\numberline {4.8}Updating the previous knowledge}{34}{section.4.8}
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{35}{chapter.5}
-\contentsline {chapter}{\numberline {A}Appendix Chapter Title}{36}{appendix.A}
+\contentsline {subsubsection}{\numberline {3.3.4.1}Photometric model of equal-mass binaries and single stars}{26}{subsubsection.3.3.4.1}
+\contentsline {subsubsection}{\numberline {3.3.4.2}Proper motion model of equal-mass binaries and single stars}{30}{subsubsection.3.3.4.2}
+\contentsline {section}{\numberline {3.4}Priors}{32}{section.3.4}
+\contentsline {section}{\numberline {3.5}Sampling the posterior distribution}{35}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}PSO}{38}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}The charged PSO}{38}{subsubsection.3.5.1.1}
+\contentsline {subsection}{\numberline {3.5.2}MCMC}{38}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Generalities}{38}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}Flavours}{38}{subsubsection.3.5.2.2}
+\contentsline {subsubsection}{\numberline {3.5.2.3}Convergence}{38}{subsubsection.3.5.2.3}
+\contentsline {subsubsection}{\numberline {3.5.2.4}The evidence}{38}{subsubsection.3.5.2.4}
+\contentsline {section}{\numberline {3.6}Codes}{38}{section.3.6}
+\contentsline {subsubsection}{\numberline {3.6.0.5}The modified charged PSO}{38}{subsubsection.3.6.0.5}
+\contentsline {subsubsection}{\numberline {3.6.0.6}Improvements of emcee}{38}{subsubsection.3.6.0.6}
+\contentsline {subsubsection}{\numberline {3.6.0.7}The GMM with missing values}{38}{subsubsection.3.6.0.7}
+\contentsline {subsection}{\numberline {3.6.1}Parallel implementations}{38}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {4}Results}{39}{chapter.4}
+\contentsline {section}{\numberline {4.1}Performance of the classifier}{39}{section.4.1}
+\contentsline {section}{\numberline {4.2}Velocity distribution}{39}{section.4.2}
+\contentsline {section}{\numberline {4.3}Spatial distribution}{39}{section.4.3}
+\contentsline {section}{\numberline {4.4}Luminosity distribution}{39}{section.4.4}
+\contentsline {section}{\numberline {4.5}Mass distribution}{39}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}The mass-luminosity relation}{39}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}The mass distribution on time}{39}{section.4.6}
+\contentsline {section}{\numberline {4.7}The phase space}{39}{section.4.7}
+\contentsline {section}{\numberline {4.8}Updating the previous knowledge}{39}{section.4.8}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{40}{chapter.5}
+\contentsline {chapter}{\numberline {A}Appendix Chapter Title}{41}{appendix.A}

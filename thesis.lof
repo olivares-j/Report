@@ -3,7 +3,9 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces $K$ vs $Y-J$ CMD for the Pleiades candidate members of \citet {Bouy2015}}}{5}{figure.2.1}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces PGM representing the parametric inference of a normal distribution.}}{18}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalised mean (left panel) and variance (right panel) of each parameter in our model, as functions of iterations. The normalisation values are the mean and variance of the ensemble of particles positions at the last iteration. Red lines show one and two sigma levels of these normalisation values.}}{32}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Prior distribution of fraction parameters. From top left to bottom right, the distributions of field fraction ($\pi $), equal mass binaries fraction ($1-\pi _{CB}$), and the cluster ($\pi _{Cs}$) and equal-mass binaries ($\pi _{Bs}$) fractions in their proper motion GMM, respectively.}}{34}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces CMD $K_s$ vs. $i-K_s$ showing a sample of the prior for the coefficients in the splines series. Also shown the brown-dwarfs we add from \citet {Faherty2012} sample, and the cluster sequence (dashed line) found after fitting the splines to the brown-dwarfs and candidate members below the equal-mass binaries sequence.}}{35}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Normalised mean (left panel) and variance (right panel) of each parameter in our model, as functions of iterations. The normalisation values are the mean and variance of the ensemble of particles positions at the last iteration. Red lines show one and two sigma levels of these normalisation values.}}{37}{figure.3.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

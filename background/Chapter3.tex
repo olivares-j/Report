@@ -97,6 +97,7 @@ The likelihood of the data $p(\mathbf{D}|\mathbf{\theta},M)$, is a probability d
 
 Almost always we assume that the distribution of measurements of one object is independent from the measured value of another object.  It means that the collection of measurements we made about for example, the length of a pencil, is independent of the measured length of a pen. This assumption, however, does not always holds. Imagine for example, that we were conducting a statistical analysis on the length of the objects used to define our unit of length. In this case, the statistical distribution of any object is conditioned on the unit of measurement, which in turn is conditioned on the distribution of measurements of the rest of the objects. Therefore, the probability distributions of objects are not independent of themselves\footnote{This happens for example in satellite surveys for which their system of reference is defined by their own measurements. To avoid this issue their reference systems are anchored on independent measurements.}. That said, if the data are independent from each other, then
 \begin{equation}
+\label{eq:independence}
  p(\mathbf{D}) = \prod_{n=1}^N p(d_n), \ \ n=\{1,2,...,N\}
 \end{equation}
 
@@ -207,7 +208,7 @@ I made a remark of a point that may seem obvious but it is important to remember
 
 \subsection{The generative model}
 \label{subsect:generative-model}
-Since the objective of this work is the statistical study of NYOC we must separate them from the field population. To perform this separation, we use the data, which as always, is uncertain. Therefore, the separation is also uncertain. As mentioned in Chapter \ref{Chap1}, given the current set of variables, the cluster and the field are entangled. To probabilistically disentangle them, we must provide probabilistic models for both populations. These models are the likelihoods. With these likelihoods and prior probabilities for the cluster and field model, we are able to compute the membership probability (Eq. \ref{eq:prob}) of each object in our data set to the cluster model. This model is assumed to represent the cluster population. First, this model must be learnt from the data.  
+Since the objective of this work is the statistical study of NYOC we must separate them from the field population. To perform this separation, we use the data, which as always, is uncertain. Therefore, the separation is also uncertain. As mentioned in Chapter \ref{chapter:Pleiades}, under the current set of variables, the cluster and the field are entangled. To probabilistically disentangle them, we must provide probabilistic models for both populations. These models are the likelihoods. With these likelihoods and prior probabilities for the cluster and field model, we are able to compute the membership probability (Eq. \ref{eq:prob}) of each object in our data set to the cluster model. This model is assumed to represent the cluster population. First, this model must be learnt from the data.  
 
 The learning process demands a set of $N$ binary integers $\mathbf{q}$, one $q_n$ for each object. Each of these two possible values represent one of the two mutually exclusive possibilities: the object belongs to the cluster ($q_n=1$) or to the field population ($q_n=0$). Let $\theta$ and $p_c$ be the parameters and model of the cluster. Also, $\phi$ and $p_f$ the parameters and model of the field. Then, the likelihood of the data is,
 
@@ -252,15 +253,18 @@ A GMM is a probability distribution resulting from the linear combination of $M$
 p_{GMM}(x|\boldsymbol{\pi},\boldsymbol{\mu},\boldsymbol{\Sigma})=\sum_{m=1}^M \pi_m \cdot \mathcal{N}(\boldsymbol{\mu}_m,\boldsymbol{\Sigma}_m)
 \end{equation}
 
+Notice that the number of gaussians in the mixture is no formally speaking a parameter, but rather it implies a collection of parameters. The number of these parameters increases quadratically with the number of gaussians. 
+
 According to \citet{Bouy2015}, the number of Pleiades candidate members in their data set is 2109. This means that the number of field objects dominates. Thus, it can be assumed that any reclassification of candidate members will have a negligible impact on this figures. Therefore, it seems reasonable to assume that the GMM describing the field population can be fixed during the process of cluster parameters inference. Let me elaborate on this assumption.
 
-The field objects of \citet{Bouy2015} are those whose cluster membership probability is lower than 0.75. These are $\approx98,000$ objects. These authors selected this probability threshold based on the analysis that \citet{Sarro2014} made of their methodology when applied to synthetic data. \citet{Sarro2014} report, at probability threshold $p=0.75$ contamination and true positive rates of $\approx 8\%$ and $ \approx96\%$ respectively. Therefore the number of hypothetically misclassified objects,$12\%$ of the cluster members, $\approx 258 $, is negligible compared to the size of the data set ($100,000$ objects, the restricted sample). It represents a negligible fraction ($ \lesssim0.26$\%). Furthermore, under the assumption that the work of \citet{Sarro2014} is correct, the miss classified objects concentrate on cluster membership probabilities near the classification threshold. Therefore, they will also group in an area of the physical "boundary" between the cluster and the field (I call it physical because it is on the observable variables and not in the probability threshold)). This is the area of highest entanglement. It does not meant that misclassified objects will not lay in the core of the cluster (objects with high membership probabilities). It means that the occurrence of these cases will be lower.  This physical "boundary" will correspond, in proper motions space to a halo around the cluster centre. In photometry, however, this boundary will run all along the cluster sequence in the CMDs. All previous assumption are there to justify that the negligible fraction of hypothetical misclassified is not concentrated in the physical space. 
+The field objects of \citet{Bouy2015} are those whose cluster membership probability is lower than 0.75. There are $\sim 98,000$ of these objects. These authors selected this probability threshold based on the analysis that \citet{Sarro2014} made of their methodology when applied to synthetic data. \citet{Sarro2014} report, at probability threshold $p=0.75$ contamination and true positive rates of $\approx 8\%$ and $ \approx96\%$ respectively. Therefore the number of hypothetically misclassified objects,$12\%$ of the cluster members, $\approx 258 $, is negligible compared to the size of the data set ($100,000$ objects, the restricted sample). It represents a negligible fraction ($ \lesssim0.26$\%). Furthermore, under the assumption that the work of \citet{Sarro2014} is correct, the miss classified objects concentrate on cluster membership probabilities near the classification threshold. Therefore, they will also group in an area of the physical "boundary" between the cluster and the field (I call it physical because it is on the observable variables and not in the probability threshold)). This is the area of highest entanglement. It does not meant that misclassified objects will not lay in the core of the cluster (objects with high membership probabilities). It means that the occurrence of these cases will be lower.  This physical "boundary" will correspond, in proper motions space to a halo around the cluster centre. In photometry, however, this boundary will run all along the cluster sequence in the CMDs. All previous assumption are there to justify that the negligible fraction of hypothetical misclassified is not concentrated in the physical space. 
 
 Therefore, if the misclassified objects are a few and spread over the space, their contribution to the parameters of the GMM describing the field population can be neglected. Thus, the parameters of the GMM remain fixed and out of the inference process. 
 
 The number of gaussians in each GMM was found using the Bayesian Information criterion \cite[BIC,][]{Schwarz1978}. The BIC is a model selection criteria that aims at avoiding over fitting. It represents a compromise between the likelihood, $\mathcal{L}$, of the $n$ data points, and the number of parameters, $k$. This is,
 
 \begin{equation}
+\label{eq:BIC}
 BIC = \ln{n}\cdot k - 2 \ln{\mathcal{L}}
 \end{equation}
 
@@ -288,63 +292,229 @@ Similarly to what it was assumed for the field population, for the cluster popul
 
 Unresolved multiple systems have an impact on proper motion. From an astrophysical point of view, in stellar clusters, massive objects fall towards the centre of the gravitational potential in a higher rate than less massive ones due to stellar encounters (reference needed). From an astronomical point of view, an unresolved binary system shifts the photo centre of its images when compared to that of a single object. For the previous reasons, we model the EMB as an independent population in the proper motions, and pair this model to its photometric parallel 0.75 displaced model. This statistical model allows a comparison of the EBM population with that of the rest of the cluster. We call all non EMB objects single stars. Although this is an abuse of the terminology because there are binaries and multiple systems with different mass ratios, it keeps the text more readable.
 
-\emph{Photometric model of equal-mass binaries and single stars}
+\subsubsection{Photometric model of equal-mass binaries and single stars}
 
 To model the cluster sequence in the CMDs, both for single and EMB, we use cubic splines for each of the $YJHK_s$ vs $CI$ CMDs. This assumption roots on the fitting properties of splines. I tried several polynomial bases (Laguerre, Hermite, Chebyshev) but no matter the order, they were not able to fit the sequence, particularly in the region around $CI \approx 3$, where the slope is higher. Despite their flexibility, these splines require more parameters than common polynomials. If represented in terms of B-splines series, in addition to the coefficients of the series, they require the specification of points called knots. These knots represent the starting and ending points of the spline sections. By definition, a basis spline (B-spline) of order $n$ is a piece wise polynomial function of order $n$ in the interval $t_0 \leq x \leq t_n$. The boundary and internal points $\mathbf{t}$ are called knots. In particular, for a given set of knots, there is only one B-spline, thus the name basis spline. Thus, any spline function of order $n$ can be represented as a series of b-splines. In particular, any cubic spline can be represented as,
 
 \begin{equation}
-S_3(CI,\mathbf{t}) = \sum_i \beta_i\cdot B_{i,3}(CI,\mathbf{t}).
+S_3(CI,\boldsymbol{\beta},\mathbf{t}) = \sum_i \beta_i\cdot B_{i,3}(CI,\mathbf{t}).
 \end{equation}
-Where $B_{i,n}$ are given by the Cox-de Boor recursive formula. For more details on splines and the Cox-de Boor formula see \citet{deBoor1978}.
+Where $B_{i,n}$ are given by the Cox-de Boor recursive formula and $\boldsymbol{\beta}$ the coefficients of the series. For more details on splines and the Cox-de Boor formula see \citet{deBoor1978}.
+
+
 
 Despite their fitting properties, B-splines have an issue when inferring simultaneously their coefficients and knots: there is multi modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi modality, I decided to keep the knots fixed throughout inference. This decision, although reduces the flexibility of the splines, allows a still better fit than common polynomials. To obtain the ML estimate of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the best truncation value for the spline series. It uses the BIC to select among different models. In order to obtain these figures, I used the candidate members of \citet{Bouy2015}. The BIC indicates that seven coefficients is the best number with knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the BIC. 
 
-As I mentioned in the introduction to this Section, we assume that the observed photometric quantities are drawn from a probability distribution resulting from the convolution of the observed uncertainties, with the \emph{true} quantities. Here comes an expiation. I recognise that the model is far from perfect and that there are several astrophysical phenomena that it could not address. Either because I do not have the knowledge or because they are too complicated to model. These phenomena include but are not limited to age, metallicity and distance dispersions, unresolved systems (other than EMB), variability, transits, etc. So, instead of modelling them I assume that all of them, even the unknown, contribute to an intrinsic photometric dispersion. Given the large and unknown sources contributing to this intrinsic dispersion, we can safely assume that it is gaussian, in fact multivariate gaussian. But most importantly, we distinguish this dispersion from the photometric uncertainty of individual measurements. If we were to assume no \emph{true} intrinsic dispersion, then any deviation from the \emph{true} quantities should have to be explained \emph{only} by the observational uncertainty. 
+As I mentioned in the introduction to this Section, we assume that the observed photometric quantities are drawn from a probability distribution resulting from the convolution of the observed uncertainties, with the \emph{true} quantities. Here comes an expiation. I recognise that the model is far from perfect and that there are several astrophysical phenomena that does not address. Either because I do not have the knowledge or because they are too complicated to model. These phenomena include but are not limited to age, metallicity and distance dispersions, unresolved systems (other than EMB), variability, transits, etc. So, instead of modelling them I assume that all of them, even the unknown, contribute to an intrinsic photometric dispersion. Given the large and unknown sources contributing to this intrinsic dispersion, we can safely assume that it is multivariate gaussian, whose parameters we infer from the data.
+We assume that it describes the intrinsic dispersion of both cluster and EMB sequences. But most importantly, we distinguish this dispersion from the photometric uncertainty of individual measurements. If we were to assume no \emph{true} intrinsic dispersion, then any deviation from the \emph{true} quantities should have to be explained \emph{only} by the observational uncertainty. 
 
-The splines model the mean of the \emph{true} photometric quantities. They are the mean of the multivariate gaussian distribution that models the \emph{true} photometry. The covariance matrix of this distribution represents the width of the intrinsic dispersion. These \emph{true} photometric quantities and their mean are dictated by the parameters. 
+In this multivariate gaussian modelling the intrinsic dispersion. The splines model the mean of the \emph{true} photometric quantities, both for the cluster sequence, $\boldsymbol{t}_{ph;Cs}$, and the EMB, $\boldsymbol{t}_{ph;Bs}$. The covariance matrix, $\Sigma_{clus}$, represents the width of the intrinsic dispersion. Covariance matrices are symmetric and positive semi-definite. Therefore, from the 25 entries in this $5\times 5$ matrix, only 15 are different. We use the Cholesky decomposition to obtain a triangular matrix whose  parameters we infer from the data.
 
-Since the splines are parametrised by the true $CI$ of each object, we have more parameters than objects \footnote{Although this sounds crazy, the rules of probability calculus do not discard this possibility.}. This \emph{true} $CI$ is unknown even if its observed value is not missing. To solve this problem (it is a computational problem!) we marginalise these nuisance parameters (See Eq.eq:examplemarginal) . To marginalise these $CI$ we need a measure or prior. We provide a prior, in a hierarchical way, (thus the name Bayesian Hierarchical model) and then marginalise the parameter. This marginalisation lefts behind a precise estimate of the parameters of the prior distribution. To this estimate all objects contributed, paradoxically also those with a missing $CI$. This is the force of the BHM.
-
-We model the prior for the \emph{true} $CI$ distributions as a truncated ($0.8\leq CI \leq8$) univariate GMM with five components whose parameters are also inferred from the data. We chose five components as BIC suggested. I applied BIC to the results found using the EM algorithm and the candidate members of \citet{Bouy2015}. I tested higher values but the posterior distribution did not changed much, thus I preferred the BIC value.
+ Thus, the mean \emph{true} photometry is
 
 \begin{align}
- p(\mathbf{d}_{ph}| \boldsymbol{\theta}_c,\mathbf{u}_{ph})&=\int p(\mathbf{d}_{ph},CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot dCI \nonumber \\ 
- &=\int p(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot p(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot dCI .
- \label{eq:examplemarginal}
+\boldsymbol{t}_{ph;Cs}&= \{CI,Y,J,H,K_s\}\nonumber \\
+\boldsymbol{t}_{ph;Bs}&=\{CI,Y-0.75,J-0.75,H-0.75,K_s-0.75\} \nonumber
+\end{align}
+where
+\begin{align}
+Y &=\mathcal{S}_Y(CI,\beta_Y) \nonumber \\
+J &=\mathcal{S}_J(CI,\beta_J)\nonumber \\
+ H &=\mathcal{S}_H(CI,\beta_H) \nonumber \\
+ K_s &=\mathcal{S}_{K_s}(CI,\beta_{K_s})  \nonumber 
+\end{align}
+and $\beta_{Y,J,H,K_s}$ denote the coefficients of all the splines (a $4\times7$ matrix),by simplicity I call it $\boldsymbol{\beta}$.
+
+Since the photometry of the EMB is a linear transformation, $T_{Bs}$, of the mean \emph{true} photometry of cluster sequence, no extra parameters are required. Therefore, 
+
+\begin{align}
+\boldsymbol{t}_{ph;Cs} &= \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}) \label{eq:trueph_Cs}\\
+\boldsymbol{t}_{ph;Bs} &=T_{Bs}( \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})).
+\label{eq:trueph_Bs}
 \end{align}
 
-In the previous equation, $\mathbf{d}_{ph}$, $\mathbf{u}_{ph}$ and, $\boldsymbol{\theta}_c$ correspond to the photometric measurements,   standard photometric uncertainties, and the cluster parameters, respectively. The term $p(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph})$ corresponds to the multivariate gaussian associated with the intrinsic dispersion of the cluster. The $CI$ dictates the \emph{true} photometric quantities by means of the splines. The term $p(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})$ correspond to the truncated GMM which we use as a measure for the \emph{true} $CI$. Appendix \ref{app:generativemodel} contains more details on this marginalisation and the probability distribution involved on it.
+The cluster and EMB likelihoods of an object with photometric measurements $\mathbf{d}_{ph}$ and standard uncertainties $\mathbf{u}_{ph}$ are:
+\begin{align}
+\label{eq:lik-seq}
+ p_{Cs}(\mathbf{d}_{ph}| CI, \boldsymbol{\beta},\Sigma_{clus},\mathbf{u}_{ph})={\mathcal{N}}(\mathbf{d}_{ph}|\boldsymbol{t}_{ph;Cs}, \mathbf{u}_{ph}+\Sigma_{clus}),\nonumber \\
+p_{Bs}(\mathbf{d}_{ph}| CI, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph})={\mathcal{N}}(\mathbf{d}_{ph}|\boldsymbol{t}_{ph;Bs}, \mathbf{u}_{ph}+\Sigma_{clus}),
+\end{align}
+where $\boldsymbol{t}_{ph;Cs}$ and $\boldsymbol{t}_{ph;Bs}$ are given by Equations \ref{eq:trueph_Cs} and \ref{eq:trueph_Bs}, respectively.
 
-We use the observed $CI$ and magnitudes to reduce the computing time of the marginalisation integral by avoiding regions in which the argument is almost zero (i.e. far away from the measured values). The process is the following: first, we compare the observed photometry to the true one (i.e. the cluster sequence given by the splines) and find the closest point, $p$, using the Mahalanobis metric. This metric uses the sum of the observational uncertainty with the intrinsic dispersion of the cluster sequence as covariance matrix. To define the limits of the marginalisation integral, we use a ball of 3.5 Mahalanobis distances around point $p$. Contributions outside this ball are negligible ($< 4\times10^{-4}$).
+Since the splines are parametrised by the true $CI$ of each object, we have more parameters than objects \footnote{Although this sounds crazy, the rules of probability calculus do not discard this possibility.}. This \emph{true} $CI$ is unknown even if its observed value is not missing. We solve this problem (it is a computational problem!) by marginalising these nuisance parameters (See Eq. \ref{eq:clmarginalps} and \ref{eq:clmarginalpb}). To marginalise these $CI$ we need a measure or prior. We provide a prior, in a hierarchical way, (thus the name Bayesian Hierarchical model) and then marginalise the parameter. This marginalisation lefts behind a precise estimate of the parameters of the prior distribution. To this estimate all objects contributed, paradoxically also those with a missing $CI$. This is the force of the BHM.
 
-Since we model the true photometric quantities of the equal-mass binaries with a parallel sequence displaced 0.75 magnitudes into the bright side (twice the luminosity implies an increase of 0.75 in magnitudes), the only extra parameter needed is the fraction of equal-mass binaries to the total of cluster members.
+We model the prior for the \emph{true} $CI$  as a truncated ($0.8\leq CI \leq8$) univariate GMM with five components whose parameters are also inferred from the data. We chose five components as BIC suggested. I applied BIC to the results found using the EM algorithm and the candidate members of \citet{Bouy2015}. I tested higher values but the posterior distribution did not changed much, thus I preferred the BIC value.
 
-\emph{Proper motion model of equal-mass binaries and single stars}
+ This GMM is 
 
-We model the proper motions of equal-mass binaries and single stars with a GMM whose parameters are inferred as part of the hierarchical model. The number of gaussians, however, remains fixed throughout inference. Following the BIC criterium, we select four and two gaussians for single and equal-mass binaries, respectively. Furthermore, we also assume that the gaussians in the proper motions GMM share the same mean, one for single stars and one for equal-mass binaries (which need not be equal).
+\begin{equation}
+\label{eq:colordist}
+p_{CI}(CI|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI})= \sum_{i=1}^5 \pi_{CI,i} \cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}).
+\end{equation}
+
+In this last Equation, the symbol $\mathcal{N}_t$ stands for the truncated ($0.8<CI<8$) univariate normal distribution.
+
+Then, the marginalisation of $CI$ runs as follows:
+\begin{align}
+\label{eq:clmarginalps}
+ p_{Cs}(\mathbf{d}_{ph}| \boldsymbol{\theta}_c,\mathbf{u}_{ph})&=\int p_{Cs}(\mathbf{d}_{ph},CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph}) \cdot dCI \nonumber \\
+ &=\int p_{Cs}(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph}) \cdot p_{Cs}(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot dCI 
+\end{align}
+\begin{align}
+\label{eq:clmarginalpb}
+p_{Bs}(\mathbf{d}_{ph}| \boldsymbol{\theta}_c,\mathbf{u}_{ph})&=\int p_{Bs}(\mathbf{d}_{ph},CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot dCI \nonumber \\
+ &=\int p_{Bs}(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot p_{Bs}(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot dCI.
+\end{align}
+In these Equations, $\theta_c$ stands for all cluster parameters related to photometry, and the first and second terms of the integrals in the last equalities correspond to Equations \ref{eq:lik-seq} and \ref{eq:colordist}, respectively. The distribution of $CI$ depends only on $\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}$, thus, the cluster and equal-mass binaries likelihoods of datum $\mathbf{d}_{ph}$ are 
+\begin{align}
+\label{eq:lik-seq2}
+ &p_{Cs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI},\boldsymbol{\beta},\Sigma_{clus},\mathbf{u}_{ph}) \nonumber \\
+ &=\int{\mathcal{N}}(\mathbf{d}_{ph}|\boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}), \mathbf{u}_{ph}+\Sigma_{clus}) \nonumber \\
+ &\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot dCI\nonumber \\
+&p_{Bs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph})\nonumber \\
+&=\int{\mathcal{N}}(\mathbf{d}_{ph}|T_{Bs}( \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})), \mathbf{u}_{ph}+\Sigma_{clus}) \nonumber \\ &\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot dCI.
+\end{align}
+
+The observed $CI$ and magnitudes help us  to reduce the computing time of the marginalisation integral. We use them to discard  regions of the marginalisation integral in which the argument is almost zero (i.e. far from the measured values). Although we allow the nuisance parameter to have all its possible values, the data, through the likelihood, gives us information about the parameter distribution. To use this information, we proceed as follows: first, we compare the observed photometry to the true one (i.e. the cluster sequence given by the splines) in a grid of 300 points uniformly distributed in the domain of $CI$, then, we find the point, $p$, from the grid which is  the closest to the observed photometry. To compute distance we use the Mahalanobis metric. This metric takes into account the observational uncertainty $\mathbf{u}$ and the intrinsic dispersion of the cluster sequence, $\Sigma_{clus}$. To define the limits of the marginalisation integral, we use a ball of 3.5 Mahalanobis distances around point $p$. Contributions outside this ball are negligible ($< 4\times10^{-4}$).
+
+\subsubsection{Proper motion model of equal-mass binaries and single stars}
+As mentioned before, we assume that the cluster population has two, mutually exclusive, groups: single and EMB stars.
+We model the proper motions of these two subpopulations with GMM, one model for each population. If the cluster is virialised (see Chapter \ref{chap:pleiades}), we can assume that is velocity distribution is almost Maxwellian (Maxwell-Boltzman distribution). Therefore a GMM is a reasonable assumption. Furthermore, in a virialised system we expect radial symmetry. Thus we assume that the gaussians within the GMM share the same mean, However we allow a independent means for single and EMB GMM. The assumption of radial symmetry may be a weak one in the presence of the galactic potential. The galactic potential can perturb the cluster and deviate its velocity distribution from radial symmetry. Nevertheless, since we model the covariance matrix of the GMM as full covariance matrices, departures from the radial symmetry can still be perfectly model by the different eigen-vectors of these matrices.
+
+
+We infer the parameter of these GMM as part of our Bayesian hierarchical model. However we set a priori the number of gaussians in each GMM. Not doing so will demand a technique in which the model parameters can be augmented. Although such techniques already exit, they are still under computational development \cite[see][for a review of reversible jump MCMC]{Fan2011}.
+
+Using the EM for GMM and the proper motions of the candidate members of \citet{Bouy2015} I obtained the ML estimates for the GMM likelihood. I did this for configurations of GMM ranging from one to five components. Using the BIC criterium (Eq. \ref{eq:BIC}), I selected four and two gaussians for single and EMB GMM, respectively. Since covariance matrices are always symmetric, only three parameters are needed to fully specify the covariance matrix of these bivariate normal distributions.
+
+Thus, the cluster (subindex $Cs$) and EMB (subindex $Bs$) likelihoods of an object with proper motions measurements $\mathbf{d}_{pm}$ and uncertainties $\mathbf{u}_{pm}$ are
+
+\begin{align}
+p_{Cs}(\mathbf{d}_{pm}| \boldsymbol{\pi}_{Cs}, \boldsymbol{\mu}_{Cs},\boldsymbol{\Sigma}_{Cs},\mathbf{u}_{pm})
+&= \sum_{i=1}^4\pi_{Cs,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{Cs},\Sigma_{Cs,i}+\mathbf{u}_{pm}) \nonumber\\
+p_{Bs}(\mathbf{d}_{pm}| \boldsymbol{\pi}_{Bs}, \boldsymbol{\mu}_{Bs},\boldsymbol{\Sigma}_{Bs},\mathbf{u}_{pm})
+&= \sum_{i=1}^2\pi_{Bs,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{Bs},\Sigma_{Bs,i}+\mathbf{u}_{pm}).
+\label{eq:lik-pm}
+\end{align}
+
+Finally, combining the proper motions and photometric models, the total cluster likelihood of an object with measurement $\mathbf{d}$ and uncertainties $\mathbf{u}$ is
+
+\begin{align}
+p_c(\mathbf{d}|\boldsymbol{\theta}_c,\mathbf{u})&=\pi_{CB}\cdot p_{Cs}(\mathbf{d}_{pm}| \boldsymbol{\pi}_{Cs}, \boldsymbol{\mu}_{Cs},\boldsymbol{\Sigma}_{Cs},\mathbf{u}_{pm}) \nonumber \\ &\cdot  p_{Cs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI},\boldsymbol{\beta},\Sigma_{clus},\mathbf{u}_{ph})\nonumber\\
+&+(1-\pi_{CB})\cdot p_{Bs}(\mathbf{d}_{pm}| \boldsymbol{\pi}_{Bs}, \boldsymbol{\mu}_{Bs},\boldsymbol{\Sigma}_{Bs},\mathbf{u}_{pm}) \nonumber \\
+&\cdot  p_{Bs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph}),
+\end{align}
+
+where $\pi_{CB}$ is the parameter representing the amplitude of single cluster sequence stars in the single-EMB mixture model. The photometric and proper motions likelihoods are given by Equations \ref{eq:lik-seq2} and \ref{eq:lik-pm}, respectively.
+ 
 \section{Priors}
-\label{subsect:priors}
-In a Bayesian framework, each parameter in the generative model has a prior, even if it is uniform or improper. The priors we assume are intended to fall in the category of weakly informative priors. A weakly informative prior, following \citet{Gelman2006}, is that in which "the information it does provide is intentionally weaker than whatever actual prior knowledge is available". We chose this kind of priors because they show better properties regarding the regularisation and stability of the posterior computation \cite[see][for examples of this kind of priors]{Gelman2008,Chung2013}. We group priors into three main categories, those for fractions, and those for parameters in the proper motion and in the photometrical models. Here we explain the kind of distributions we use for the priors. In Appendix \ref{subsect:apppriors}, we give details on the particular parameter values we chose for these distributions.
+\label{sect:priors}
+The Bayesian formalism is characterised by the use of priors. These priors, as mentioned earlier, represent the objective and measurable way to establish believes about the distribution of values that certain parameter may have. Although the formal way to establish believes in the form of a probability distribution is objective\footnote{It is reproducible and measurable}. The believes themselves remain subjective (influenced by the sentience of the subject). 
 
-Fractions are defined for mixtures, which can be GMM or the cluster-field mixture (Eq. \ref{eq:genmod}), and quantify the contribution of each element to the mixture. Thus, they must add to one and be bounded by the $[0,1]$ interval. For priors of fractions we use the multivariate generalisation of the beta distribution: the Dirichlet distribution. %This distribution gives the probability of $n$ rival events given that each rival event has been observed $\alpha_i-1$ times ($i=\{1,2,...,n\}$), with $\boldsymbol{\alpha}$ the vector governing the Dirichlet distribution.
+In the following I describe the information used to establish both the family of the prior distribution as well as its hyperparameters. The priors we assume are intended to fall, in most of the cases, in the category of weakly informative priors. A weakly informative prior provides weaker information than the one actually available \citet{Gelman2006}. This kind of priors show better computational performance when compared to non-informative priors. Examples of these can be found in the works of \citet{Gelman2008} and \citet{Chung2015}. 
 
-We set the priors of means and covariance matrices in the proper motions GMM as bivariate normal and Half--t distributions, respectively. See \citet{Huang2013} for the advantageous properties of the Half--t distribution.
+I group priors into three main categories. Fractions in general, and those concerning: proper motions and photometric models. 
 
-Photometric priors include three categories, those concerning the \emph{true} $CI$, the splines coefficients, and the cluster sequence intrinsic dispersion. For the priors of the means and variances of the true $CI$ GMM, we use the uniform and Half--Cauchy distributions, respectively. For the coefficients in the spline series we set the priors as univariate normal distributions. Finally, we use the multivariate Half--t distribution as a prior for the covariance matrix modelling the intrinsic dispersion of the cluster sequence.
+Fractions are defined for mixtures. The mixtures in the model are the GMMs, the cluster-field, and the single-EMB mixtures. At each mixture, the fractions or amplitudes quantify the contribution of each element to the mixture. If each element in the mixture is itself a probability distribution, then the fractions must add to one and be bounded by the $[0,1]$ interval. We choose the Dirichlet distribution since it is the multivariate generalisation of the beta distribution. It has support in $[0,1]$ for each entry, and is parametrised by $\boldsymbol{\alpha}$. This distribution gives the probability of $n$ rival events given that each rival event has been observed $\alpha_i-1$ times ($i=\{1,2,...,n\}$).
 
+The mean and variance of the Dirichlet distribution are given by,
+
+\begin{equation}
+E[x_k]=\frac{\alpha_k}{\sum_k \alpha_k},
+\end{equation}
+
+\begin{equation}
+Var[x_k]=\frac{-\alpha_k\cdot (\alpha_k -\sum_k \alpha_k)}{(\sum_k \alpha_k)^2 \cdot (1+\sum_k \alpha_k)}.
+\end{equation}
+
+For the field-cluster mixture we set the hyper-parameters to $\boldsymbol{\alpha}=\{9.8,0.2\}$. We expect a mean 98\% of field objects and a 2\% of cluster objects with little variance. These figures correspond to the fraction of field and cluster candidate members found by \citet{Bouy2015}. 
+For the single-EMB mixture we use an hyper-parameter value, $\boldsymbol{\alpha}_{CB}=\{8,2\}$. We expect a mean 20\% of EMB, as suggested by \citet{Bouy2015}. 
+For fractions in the proper motions GMM, hyper-parameter are $\boldsymbol{\alpha}_{Cs}=\{1,1,5,5\}$ and $\boldsymbol{\alpha}_{Bs}=\{1.2,8.8\}$. These values induce fraction distributions whose means are similar to the fractions recovered after fitting a GMM to the \citet{Bouy2015} candidate members. 
+For the fraction in the GMM of the $CI$ distribution, the hyper-parameter were set all to 1, ($\boldsymbol{\alpha}_{CI}=\{1,1,1,1,1\}$), which results in equal means and large variances for all of them.
+
+In the previous cases, with exception of the cluster-field mixture, the hyper parameters were chosen to have larger variances. Fig.  \ref{figure:priors} shows the distribution associated to these hyper-parameters.
+
+The narrow variance in the cluster-field mixture expresses our prior belief about the number (fraction) of candidate members within our large data set. I believe this figure is small.
+
+\begin{figure*}[htbp]
+\begin{center}
+%\includegraphics[page=1,width=8cm]{figs/priors.pdf}
+%\includegraphics[page=2,width=8cm]{figs/priors.pdf}\\
+%\includegraphics[page=3,width=8cm]{figs/priors.pdf}
+%\includegraphics[page=4,width=8cm]{figs/priors.pdf}
+\caption{Prior distribution of fraction parameters. From top left to bottom right, the distributions of field fraction ($\pi$), equal mass binaries fraction ($1-\pi_{CB}$), and the cluster ($\pi_{Cs}$) and equal-mass binaries ($\pi_{Bs}$) fractions in their proper motion GMM, respectively.}
+\label{figure:priors}
+\end{center}
+\end{figure*}
+
+
+For the priors of mean parameters in the proper motions GMM, both of single and EMB, we choose the bivariate normal distribution. We set the hyper-parameters of this bivariate normal to the MLE found after fitting a bivariate normal to the candidate members of \citet{Bouy2015}. These values are $\boldsymbol{\mu}_{\mu_{pm}}=\{16.30,-39.62\}$ and $\Sigma_{\mu_{pm}}=\{\{36.84,1.18\},\{1.18,40.71\}\}$. 
+
+As prior for the covariance matrices of both single and EMB proper motions GMM we use the Half--$t(\nu,\mathbf{A})$ distribution. With $\nu$ an scalar and $\mathbf{A}$ a vector of dimension equal to that of the space. As shown by \citet{Huang2013} this family distribution leads to more accurate estimation of covariance matrices than the traditional Inverse-Wishart distribution. Particularly, the marginal correlation correlation parameters, $\rho$ have the following distribution,
+
+\begin{equation}
+p(\rho) \propto (1-\rho^2)^{\frac{\nu}{2}-1}
+\end{equation}
+while the standard deviation term $\sigma_k$ associated to entry $k$ is distributed according to Half--$t(\nu,A_k)$. We set the hyper-parameter to $\nu=3$ and $\boldsymbol{A}_{pm}=\{10^5,10^5\}$. According to \citet{Huang2013}, an arbitrarily large values of $\boldsymbol{A}$ lead to arbitrarily weakly informative priors on the corresponding standard deviation terms.
+
+Photometric priors can be grouped in three categories, those concerning: (i) the \emph{true} $CI$, (ii) the splines coefficients, and (iii) the cluster sequence intrinsic dispersion. 
+
+For the means in the univariate GMM modelling $CI$ we use a uniform in the range  ($0.8\leq CI \leq8$). For the standard deviations I choose the Half--Cauchy$(0,\eta)$ distributions as suggested by \citet{Gelman2006}. I choose the arbitrarily large value of $\eta=100$..
+
+For the coefficients in the spline series we set the priors as univariate normal distributions. To find the values of the hyper-parameters, we proceed as follows. First, we remove EMB from \citet{Bouy2015} candidate members. I performed an iterative fit of the cluster sequence, such that in each iteration objects above the 0.75 magnitude were removed. In the region of $CI > 7$ no candiadte members have been found. Thus, to provide a prior we complement our list of candidate members with the brown-dwarfs from the \citet{Faherty2012} sample. Only those with the same CMD as our data set. Finally, we fit the splines, and use the coefficients of this fit as means, $\mu_{\beta}$ of the univariate normal distributions. The standard deviation terms were set to $\sigma_{\beta}=\{1,1,1,1,1,0.5,0.1\}$. These values provide a reasonable compromise between cluster sequences compatible with the previously known candidates and those far away or with exotic shapes. We show a sample of this priors in Fig. \ref{figure:priorcoefs}. This Fig. also shows the brown-dwarfs from \citet{Faherty2012} and the sequence (dashed line) we use to provide the means of the univariate normal distributions.
+
+To set the prior for the parameters of the cluster intrinsic dispersion, I choose again the Half--t$(\nu,\boldsymbol{A})$ distribution.  However, this time I use  $\boldsymbol{A}_{ph}=\{10,10,10,10,10\}$. These values are large when compared to the standard deviation terms o the observation uncertainty, thus provide a weakly informative prior on the marginal standard deviation terms of the $\Sigma_{clus}$ covariance matrix.
+
+Table \ref{table:hyperparameters} shows a summary all the hyper-parameter and their values.
+
+%\input{figs/HyperParameters.txt}
+
+\begin{figure}[htbp]
+\begin{center}
+%\resizebox{\hsize}{!}{\includegraphics[page=4]{figs/Priors_Coefs.pdf}}
+\caption{CMD $K_s$ vs. $i-K_s$ showing a sample of the prior for the coefficients in the splines series. Also shown the brown-dwarfs we add from \citet{Faherty2012} sample, and the cluster sequence (dashed line) found after fitting the splines to the brown-dwarfs and candidate members below the equal-mass binaries sequence.}
+\label{figure:priorcoefs}
+\end{center}
+\end{figure}
+
+%\input{figs/SymbolParameters.txt}
 
 \section{Sampling the posterior distribution}
-There are three possible approaches to obtain the posterior distributions of the parameters in our model: an analytical solution, a grid in parameter space, and the Markov Chain Monte Carlo (MCMC) methods. Given the size of our data set ($10^5$ objects) and the dimension of our model (85 parameters), the analytical solution and the grid approach are discarded a priori.% Also, the grid approach is impractical. It evaluates the posterior distribution $q^p$ times, with $q$ the grid points in one dimension, and $p$ the dimension of the parametric space. 
+Theoretically, there are at least three possible approaches to obtain the posterior distributions of the parameters in our model. One of these theoretical options is the analytical solution. This solution is obviously not feasible, due to our large data set. The second theoretical option consists of a grid in parameter space. The likelihood and the prior must be evaluated at each point in this grid and then multiplied. This approach is reasonable when the parametric space is of moderate dimension. It requires the evaluation of the posterior distribution $q^p$ times, with $q$ the number of grid points in one dimension, and $p$ the dimension of the parametric space. The number of parameters in our model is 85, which immediately rules out this possibility. The third and so far only feasible approach is the use of Markov Chain Monte Carlo (MCMC). Although these methods provide a solution in a reasonable time, nevertheless, the bottle neck of computing time is due to the evaluation of the likelihood, which rows linearly with the size of the data set. 
 
-The MCMC methods offer a feasible alternative to this problem. Briefly, they consist of a particle (or particles) which iteratively moves in the parameter space. Among the many MCMC methods that exist, we select the \emph{stretch} move which is an affine invariant scheme developed by \citet{Goodman2010}. It is implemented to work on parallel in the Python routine \emph{emcee} \citep{Foreman2013}. We chose \emph{emcee} due to the following properties: i) the affine invariance allows a faster convergence over common and skewed distributions \cite[see][for detail]{Goodman2010,Foreman2013}, ii) the parallel computation distributes particles over nodes of a computer cluster and thus reduces considerably the computing time, and iii) it requires the hand-tuning of only two constants: the number of particles, and $a$, the parameter of \emph{stretch} distribution \cite[see Eq. 9 of ][]{Goodman2010}. We use 170 particles (twice the number of parameters) and a value of $a=1.3$. These keep the acceptance fraction in the range $0.2 - 0.5$, as suggested by \citet{Foreman2013}.
+This Section is structured as follows. First, I introduce an heuristic technique to search for the maximum a posteriori of our target distribution: the posterior distribution of the parameters given the data. Then I will describe the MCMC techniques available in the literature. Particularly the one we chose and the reasons for which it was chosen. I will end this section with the details about the assessment of the MCMC convergence.
+
+\subsection{PSO}
+
+The likelihood of the data is the product of the individual likelihoods of each datum (Eq. \ref{eq:independece}). Therefore, the number of operations needed to evaluate the likelihood grows proportionally to the size of the data set. As I will explain in Section \ref{sect:mcmc}, the burn-in phase of MCMC techniques allows them to reach the target distribution. However, once the MCMC reaches the target distribution, the burn-in computations are discarded. Since the evaluation of the likelihood, and therefore of the posterior, is computationally expensive due to our large data set, I decided to reduce as much as possible the burn-in phase. To do so, I provide MCMC with a set of initial solutions which are close to the Maximum-A-Posteriori (MAP) of the target (posterior) distribution. These MAP solution must not be crowded on the MAP solution, otherwise MCMC will spend a lot of time in expanding this initial set of solutions.  Our objective is a representative sample of the full posterior distribution, not just an estimate of it.
+
+In Section \ref{sect:mcmc} I will show that the MCMC flavour more suitable to our objective belongs to the family of \emph{ensemble} MCMC. This flavour works with particles in the parametric space. To make the transition between the initial MAP solutions and the particle MCMC as efficient as possible I chose a MAP finder which works also with particles. The Particle Swarm Optimiser \cite[PSO,][]{Kennedy1995} provides a heuristic cheap and fast approach to the MAP solution. The PSO works with an ensemble of particles which move in through the parametric space. These particles use the collective and individual past and present information to update their position. This information is specified by the score function, which in our case is the posterior distribution. The particles update their position iteratively by means of a velocity. It has a random but restricted magnitude, however, its direction is determined by the object position and the individual and collective positions of maximum score. \citet{Kennedy1995} has a detailed description of the original algorithm, while a more efficient version is given by \citep{Clerc2002}.
+
+Although the PSO is a simple and rather efficient solution to the MAP approximation, it is far from perfect. Due to its heuristic origin, there is no theory behind its formulation, furthermore, it does not always guarantee the finding of the global maxima. A convergence guaranteed version can be found in \citet{Patel2013}. This issue does not affect our results because MCMC does guarantee the target distribution. However, it has an impact in the computing time. Also, PSO stops once the particles scores are within a user defined tolerance. If the tolerance is to large, the PSO may not converge. If the tolerance is small it may converge but deliver solutions highly concentrated around the solution. This poses a problem to the following MCMC stage. In order to explore the full posterior distribution MCMC needs more iterations to expand the initially concentrated positions. To overcome this problem I decided to use the charged PSO \citep{Blackwell2002}
+
+
+\subsubsection{The charged PSO}
+Originally designed to optimise a time varying score function, the charged PSO maintain its exploratory capabilities due to an electrostatic force that repels particles when they got closer than a certain distance \citep{Blackwell2002}. Thanks to this electrostatic force the charged PSO avoids the over-crowding of particles around local best values.
+
+The algorithm of \citet{Blackwell2002} computes distances in the entire parametric space. I find this approach unsuitable to our problem. 
+The metric of the parametric space of our problem is not isotropic, parameters have different length scales. While fraction are constrained in the $[0,1]$ interval proper motions parameters can go larger than that. The use of an isotropic metric results in a solution which is crowded in some parameters while is over dispersed in others. Therefore, I modified the charged PSO by measuring distance between particles and applying the electrostatic force independently in each parameter. In such a way, the electrostatic force plays a role only when the relative distance between particles is smaller than $10^{-10}$. I found this value heuristically.
+
+
+ 
+\subsection{MCMC}
+\subsubsection{Generalities}
+\subsubsection{Flavours}
+HMC,NUTS,Gibbs, Metropolis-Hasting, Affine invariant, stretch-move, MultiNest.
+It must be clear why we choose emcee and multinest
+\subsubsection{The evidence}
+ I will explain some of their details in Section \ref{sect:MCMC} Briefly, they consist of a particle (or particles) which iteratively moves in the parameter space. Among the many MCMC methods that exist, we select the \emph{stretch} move which is an affine invariant scheme developed by \citet{Goodman2010}. It is implemented to work on parallel in the Python routine \emph{emcee} \citep{Foreman2013}. We chose \emph{emcee} due to the following properties: i) the affine invariance allows a faster convergence over common and skewed distributions \cite[see][for detail]{Goodman2010,Foreman2013}, ii) the parallel computation distributes particles over nodes of a computer cluster and thus reduces considerably the computing time, and iii) it requires the hand-tuning of only two constants: the number of particles, and $a$, the parameter of \emph{stretch} distribution \cite[see Eq. 9 of ][]{Goodman2010}. We use 170 particles (twice the number of parameters) and a value of $a=1.3$. These keep the acceptance fraction in the range $0.2 - 0.5$, as suggested by \citet{Foreman2013}.
+ 
+ 
+ The charged PSO does not warrant the finding of the global maximum of the score function \cite[see][and references therein]{Blackwell2002}. Therefore, we iteratively run PSO and 50 iterations of \emph{emcee} (with the same number of particles as the PSO) until the relative difference between means of consecutive iterations is lower than $10^{-7}$. The iterations of \emph{emcee} guarantee the spreading of the PSO solution without losing the information gained. After convergence of the PSO-\emph{emcee} scheme, we run \emph{emcee} with 175 walkers, until convergence. Neither scheme, PSO alone or PSO-\emph{emcee}, guarantees to find the global maximum and their solution could be biased. However, we use them to obtain a fast estimate of the global maximum, or at least, of points in its vicinity. Nevertheless, the final \emph{emcee} run, during the burning phase, erases any dependance on these initial solutions.
  
 We use \emph{CosmoHammer} \citep{Akeret2013}, a front-end of \emph{emcee}, to control the input and output of data and parameters, as well as the hybrid parallel computing. We run it on a 80 CPUs (cores) computer cluster with 3.5 GHz processors. However, instead of using OpenMP as \citep{Akeret2013} did, we use the \emph{multiprocessing} package of python to distribute the computing of the likelihood among cores in each cluster node. 
 
-Since the evaluation of the likelihood is computationally expensive (it takes approximately 30 days to run in the previously described computer cluster), we proceed similarly to \citet{Akeret2013}. We provide \emph{emcee} with an optimised set of values of the posterior distribution. These values can be thought of as a ball around the maximum-a-posteriori (MAP) solution. We find them with a modified version of the Charged Particle Swarm Optimiser (PSO) of \citet{Blackwell2002}. It avoids the over-crowding of particles around local best values. The charged version retains the PSO exploratory property by repelling particles that come closer than a certain user specified distance to each other. The repelling force mimics an electrostatic force, thus the name charged PSO. 
+\subsubsection{Convergence}
 
-The modification that we introduce to the charged PSO relates only to the measuring of distance between particles. The algorithm of \citet{Blackwell2002} computes these distances in the entire parametric space. We find this approach unsuitable for our problem. In it, parameters have different length scales (for example, fractions and proper motions). Therefore, we measure distance between particles and apply the electrostatic force independently in each parameter. Thus, the electrostatic force comes into action only when the relative distance between particles is smaller than $10^{-10}$. We chose this value heuristically.
-
-The PSO does not warrant the finding of the global maximum of the score function \cite[see][and references therein]{Blackwell2002, Clerc2002}. Therefore, we iteratively run PSO and 50 iterations of \emph{emcee} (with the same number of particles as the PSO) until the relative difference between means of consecutive iterations is lower than $10^{-7}$. The iterations of \emph{emcee} guarantee the spreading of the PSO solution without losing the information gained. After convergence of the PSO-\emph{emcee} scheme, we run \emph{emcee} with 175 walkers, until convergence. Neither scheme, PSO alone or PSO-\emph{emcee}, guarantees to find the global maximum and their solution could be biased. However, we use them to obtain a fast estimate of the global maximum, or at least, of points in its vicinity. Nevertheless, the final \emph{emcee} run, during the burning phase, erases any dependance on these initial solutions.
 
 Convergence to the target distribution occurs when each parameter enters into the stationary equilibrium, or normal state. The Central Limit Theorem ensures that this state exists. See \citet{Roberts2004} for guaranteeing conditions and \citet{Goodman2010} for \emph{irreducibility} of the \emph{emcee} stretch move. The stationary or normal state is reached when, in at least 95\% of the iterations, the sample mean is bounded by two standard deviations of the sample, and the variance by the two standard deviation of the variance \footnote{
 $sd(\sigma^2)=\sigma^2 \sqrt{\kappa/n + 2/(n-1)}$ with $\kappa$ the kurtosis and $n$ the sample size.
@@ -359,23 +529,8 @@ $sd(\sigma^2)=\sigma^2 \sqrt{\kappa/n + 2/(n-1)}$ with $\kappa$ the kurtosis and
 
 Once all parameters have entered the equilibrium state, we stop \emph{emcee} by using the criterium of \citet{Gong2016} \footnote{Implemented in the R package \emph{mcmcse} \citep{mcmcse}}. We chose this criterium because it was developed for high-dimensional problems and tested on Hierarchical Bayesian Models. In this criterium, the MCMC chain stops once its "effective sample size" (ESS, the size that an independent and identically distributed sample must have to provide the same inference) is larger than a minimum sample size computed using the required accuracy, $\upsilon$, for each parameter confidence interval $(1-\delta)$100\%. Our \emph{emcee} run stops once the ESS of the ensemble of walkers is greater than the minimum sample size needed for the required accuracy $\upsilon = 0.05$ on the 68\% confidence interval ($\delta = 0.32$) of each parameter.
 
-
 Description of the techniques used to obtain samples from the posterior distribution.
-
 History and used versions.
-
-\subsection{PSO}
-\subsubsection{The charged PSO}
-
-
-\subsection{MCMC}
-\subsubsection{Generalities}
-\subsubsection{Flavours}
-HMC,NUTS,Gibbs, Metropolis-Hasting, Affine invariant, stretch-move, MultiNest.
-It must be clear why we choose emcee and multinest
-\subsubsection{Convergence}
-\subsubsection{The evidence}
-
 
 \section{Codes}
 \label{sect:code}
