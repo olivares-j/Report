@@ -523,11 +523,21 @@ p(\theta_{n})\cdot p_t(\theta_{n-1}|\theta_n)=p(\theta_{n-1})\cdot p_t(\theta_n 
 \end{equation}
 
 Thus MCMC are Markov chains that satisfy the detailed balance and had their invariant distribution as the target distribution. 
-The variety of MCMC algorithms arises from efficiency in which they arrive to the target distribution.
-   
+The variety of MCMC algorithms arises from the efficiencies in which they arrive to the target distribution.
+
 \subsubsection{Flavours}
-HMC,NUTS,Gibbs, Metropolis-Hasting, Affine invariant, stretch-move, MultiNest.
-It must be clear why we choose emcee and multinest
+In this section I will review four of the MCMC categories: Metropolis-Hasting (MH), Hybrid Monte Carlo (HMC), ensemble samplers, and Nested Sampling. The MH category comprises the classic MH algorithm but also contain particular cases like the Gibbs sampler \citep{Geman1984}. I describe MH only for completeness and explanatory reasons. For the other three categories I will focus the particular cases of Hamiltonian Monte Carlo, for (HMC), affine invariant for ensemble samplers, and MultiNest for Nested Sampling. These three had properties which make them suitable for my objective.
+
+By far, the most popular MCMC algorithm is Metropolis-Hastings \citep{Metropolis1953,Hastings1970}. Given the original, $\theta_o$, and proposed, $\theta_p$ positions of the Markov chain, which live in the state space, the chain moves from $\theta_o$ to $\theta_p$ with acceptance probability
+
+\begin{equation}
+\mathcal{A}(\theta_p|\theta_o)=min\left\{1,\frac{p(\theta_p)\cdot q(\theta_o|\theta_p)}{p(\theta_o)\cdot g(\theta_p|\theta_o)}\right\}.
+\end{equation}
+Where $q$ is the transition probability. Since the algorithm allows rejection, it is aperiodic, and to ensure irreducibility, the support of $q$ must include that of $p$ \citep{Andrieu2003}. The popularity of MH lies in its simplicity. Nevertheless it requires a careful tuning of the transition probability. 
+
+The Hybrid Monte Carlo algorithms use additional information about the target distribution to improve the acceptance ratio. Here, I focus only on Hamiltonian Monte Carlo  
+ 
+
 \subsubsection{The evidence}
  I will explain some of their details in Section \ref{sect:MCMC} Briefly, they consist of a particle (or particles) which iteratively moves in the parameter space. Among the many MCMC methods that exist, we select the \emph{stretch} move which is an affine invariant scheme developed by \citet{Goodman2010}. It is implemented to work on parallel in the Python routine \emph{emcee} \citep{Foreman2013}. We chose \emph{emcee} due to the following properties: i) the affine invariance allows a faster convergence over common and skewed distributions \cite[see][for detail]{Goodman2010,Foreman2013}, ii) the parallel computation distributes particles over nodes of a computer cluster and thus reduces considerably the computing time, and iii) it requires the hand-tuning of only two constants: the number of particles, and $a$, the parameter of \emph{stretch} distribution \cite[see Eq. 9 of ][]{Goodman2010}. We use 170 particles (twice the number of parameters) and a value of $a=1.3$. These keep the acceptance fraction in the range $0.2 - 0.5$, as suggested by \citet{Foreman2013}.
  

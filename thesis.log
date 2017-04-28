@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  28 APR 2017 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  28 APR 2017 19:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -991,11 +991,11 @@ LaTeX Warning: Reference `sect:mcmc' on page 36 undefined on input line 488.
 
 LaTeX Warning: Reference `sect:mcmc' on page 37 undefined on input line 490.
 
-[37] [38]
+[37] [38] [39]
 
-LaTeX Warning: Reference `sect:MCMC' on page 39 undefined on input line 532.
+LaTeX Warning: Reference `sect:MCMC' on page 40 undefined on input line 542.
 
-[39] [40]) (./background/Chapter4.tex [41] [42]
+[40] [41]) (./background/Chapter4.tex [42]
 Chapter 4.
 ) (./conclusions/conclusions.tex [43
 
@@ -1025,13 +1025,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 23319 strings out of 493109
- 406393 string characters out of 6135003
- 652809 words of memory out of 5000000
- 26314 multiletter control sequences out of 15000+600000
+ 23328 strings out of 493109
+ 406570 string characters out of 6135003
+ 652963 words of memory out of 5000000
+ 26323 multiletter control sequences out of 15000+600000
  17639 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,56p,3237b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,56p,3237b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
@@ -1052,7 +1052,7 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 14/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (52 pages, 324379 bytes).
+Output written on thesis.pdf (52 pages, 326916 bytes).
 PDF statistics:
  256 PDF objects out of 1000 (max. 8388607)
  180 compressed objects within 2 object streams

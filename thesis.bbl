@@ -1,4 +1,4 @@
-\begin{thebibliography}{101}
+\begin{thebibliography}{104}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{cit(????)}]{cite-key}
@@ -220,6 +220,9 @@ Gelman, A. \& Hill, J. 2007, Data Analysis Using Regression and
 Gelman, A., Jakulin, A., Pittau, M.~G., \& Su, Y.-S. 2008, Ann. Appl. Stat., 2,
   1360
 
+\bibitem[{Geman \& Geman(1984)}]{Geman1984}
+Geman, S. \& Geman, D. 1984, IEEE Trans. Pattern Anal. Mach. Intell., 6, 721
+
 \bibitem[{Gong \& Flegal(2016)}]{Gong2016}
 Gong, L. \& Flegal, J.~M. 2016, Journal of Computational and Graphical
   Statistics, 25, 684
@@ -247,6 +250,9 @@ Gupta, A.~K., Gonz{\'{a}}lez-Farias, G., \& Dominguez-Molina, J. 2004, Journal
 \bibitem[{{Hand} \& {Yu}(2001)}]{Hand2001}
 {Hand}, D.~J. \& {Yu}, K. 2001, International Statistical Review / Revue
   Internationale de Statistique, 69, 385
+
+\bibitem[{Hastings(1970)}]{Hastings1970}
+Hastings, W.~K. 1970, Biometrika, 57, 97
 
 \bibitem[{{Hogg} {et~al.}(2010{\natexlab{a}}){Hogg}, {Bovy}, \&
   {Lang}}]{Hogg2010a}
@@ -312,6 +318,11 @@ Liu, Z., Chen, Y., Tian, S., \& Xu, Z. 2015, Journal of Information and
 \bibitem[{McMichael(1996)}]{McMichael1996}
 McMichael, D.~W. 1996, in in Proc. Fourth International Symposium on Signal
   Processing and its Applications (ISSPA, 377--378
+
+\bibitem[{Metropolis {et~al.}(1953)Metropolis, Rosenbluth, Rosenbluth, Teller,
+  \& Teller}]{Metropolis1953}
+Metropolis, N., Rosenbluth, A.~W., Rosenbluth, M.~N., Teller, A.~H., \& Teller,
+  E. 1953, The Journal of Chemical Physics, 21, 1087
 
 \bibitem[{{Moraux} {et~al.}(2001){Moraux}, {Bouvier}, \&
   {Stauffer}}]{Moraux2001}
