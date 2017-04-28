@@ -502,6 +502,29 @@ The metric of the parametric space of our problem is not isotropic, parameters h
  
 \subsection{MCMC}
 \subsubsection{Generalities}
+Markov chain Monte Carlo is the generic name for a series of algorithms whose objective is the sampling of probability distributions. As their name indicates, MCMC generate a chain of Monte Carlo realisations that fulfil the Markov property. Monte Carlo realisations can be understood, broadly speaking as continuous random realisations. Since it is an iterative algorithm, the chain refers to the joint of al random Monte Carlo steps. The Markov property refers to the probabilistic independence of the steps in the chain. A Markov chain is that in which the probability of a future step depends only on the present step, and not in the past steps.
+
+\citet{Andrieu2003} provides a brief and interesting summary of the history of the MCMC methods. In the following I use their work to describe the fundaments of MCMC. For more details, see the aforementioned authors and the book of \citet{Brooks2011}.
+
+A stochastic process is defined as a sequence  $\{\theta_1,...,\theta_n\}$ of random elements from a set, where each element $\theta_i \subset \mathbb{R}^k$  with $k$ the dimension of the \emph{state space}. 
+
+A stochastic process, $\boldsymbol{\theta}=\{\theta_0,\theta_1,...,\theta_n,\theta_{n+1}\}$ is called a Markov chain if
+\begin{equation}
+p(\theta_{n+1} | \theta_0,\theta_1,...\theta_n) = p(\theta_{n+1} |\theta_n). \nonumber
+\end{equation}
+
+A Markov chain has two important distributions, the initial distribution and the transition distribution. The initial distribution is the marginal distribution of $\theta_0$, it is $p(\theta_0)$. The transition distribution is the conditional probability $p(\theta_{n+1} |\theta_n)$. This last one is called stationary or homogeneous if it does not depend on $n$.
+
+If this transition is irreducible and aperiodic, then there is an invariant or equilibrium distribution to which the chain converge in spite of the initial distribution. Aperiodic means that the chain does not make loops. It is irreducible if the probability of exploring all other states is not zero.
+
+If we want to have $p(\theta)$ as the invariant distribution, then it suffices that the transition distribution $p_t(\cdot | \cdot)$ satisfies the detailed balance condition,
+\begin{equation}
+p(\theta_{n})\cdot p_t(\theta_{n-1}|\theta_n)=p(\theta_{n-1})\cdot p_t(\theta_n | \theta_{n-1})
+\end{equation}
+
+Thus MCMC are Markov chains that satisfy the detailed balance and had their invariant distribution as the target distribution. 
+The variety of MCMC algorithms arises from efficiency in which they arrive to the target distribution.
+   
 \subsubsection{Flavours}
 HMC,NUTS,Gibbs, Metropolis-Hasting, Affine invariant, stretch-move, MultiNest.
 It must be clear why we choose emcee and multinest

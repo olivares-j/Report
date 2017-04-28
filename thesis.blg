@@ -8,45 +8,45 @@ Warning--empty year in cite-key; set to ????
 Warning--no book title in cite-key
 Warning--empty pages in Smyth1998
 Warning--empty journal in Stoneking2014
-You've used 99 entries,
+You've used 101 entries,
             2947 wiz_defined-function locations,
-            1305 strings with 23269 characters,
-and the built_in function-call counts, 47099 in all, are:
-= -- 3956
-> -- 3436
+            1317 strings with 23583 characters,
+and the built_in function-call counts, 48052 in all, are:
+= -- 4029
+> -- 3516
 < -- 58
-+ -- 1156
-- -- 1038
-* -- 3850
-:= -- 8588
-add.period$ -- 99
-call.type$ -- 99
-change.case$ -- 741
-chr.to.int$ -- 102
-cite$ -- 106
-duplicate$ -- 1918
-empty$ -- 2794
-format.name$ -- 1323
-if$ -- 9387
++ -- 1184
+- -- 1062
+* -- 3936
+:= -- 8764
+add.period$ -- 101
+call.type$ -- 101
+change.case$ -- 757
+chr.to.int$ -- 104
+cite$ -- 108
+duplicate$ -- 1955
+empty$ -- 2852
+format.name$ -- 1353
+if$ -- 9572
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 83
-newline$ -- 301
-num.names$ -- 400
-pop$ -- 822
+missing$ -- 85
+newline$ -- 307
+num.names$ -- 408
+pop$ -- 842
 preamble$ -- 1
-purify$ -- 735
+purify$ -- 751
 quote$ -- 0
-skip$ -- 1673
+skip$ -- 1703
 stack$ -- 0
-substring$ -- 2071
+substring$ -- 2099
 swap$ -- 98
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 867
+type$ -- 882
 warning$ -- 5
-while$ -- 393
+while$ -- 400
 width$ -- 0
-write$ -- 987
+write$ -- 1007
 (There were 5 warnings)

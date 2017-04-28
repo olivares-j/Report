@@ -1,4 +1,4 @@
-\begin{thebibliography}{99}
+\begin{thebibliography}{101}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{cit(????)}]{cite-key}
@@ -26,6 +26,11 @@ Akeret, J., Seehars, S., Amara, A., Refregier, A., \& Csillaghy, A. 2013,
 \bibitem[{{Anderes} {et~al.}(2015){Anderes}, {Wandelt}, \&
   {Lavaux}}]{Anderes2015}
 {Anderes}, E., {Wandelt}, B.~D., \& {Lavaux}, G. 2015, \apj, 808, 152
+
+\bibitem[{Andrieu {et~al.}(2003)Andrieu, de~Freitas, Doucet, \&
+  Jordan}]{Andrieu2003}
+Andrieu, C., de~Freitas, N., Doucet, A., \& Jordan, M.~I. 2003, Machine
+  Learning, 50, 5
 
 \bibitem[{Azzalini(1996)}]{Azzalini1996}
 Azzalini, A. 1996, Biometrika, 83, 715
@@ -85,6 +90,11 @@ Blackwell, T. \& Bentley, P. 2002, in Proceedeings of the 4th Annual Conference
 \bibitem[{Bovy {et~al.}(2011)Bovy, Hogg, \& Roweis}]{Bovy2011}
 Bovy, J., Hogg, D.~W., \& Roweis, S.~T. 2011, The Annals of Applied Statistics,
   5, 1657
+
+\bibitem[{Brooks {et~al.}(2011)Brooks, Gelman, Jones, \& Meng}]{Brooks2011}
+Brooks, S., Gelman, A., Jones, G., \& Meng, X. 2011, Handbook of Markov Chain
+  Monte Carlo, Chapman \& Hall/CRC Handbooks of Modern Statistical Methods (CRC
+  Press)
 
 \bibitem[{{Buchner} {et~al.}(2014){Buchner}, {Georgakakis}, {Nandra}, {Hsu},
   {Rangel}, {Brightman}, {Merloni}, {Salvato}, {Donley}, \&
