@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  28 APR 2017 19:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  1 MAY 2017 23:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -852,6 +852,9 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 119.
 
 LaTeX Warning: Label `property:3' multiply defined.
 
+
+LaTeX Warning: Label `eq:PSOacc' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
@@ -960,14 +963,14 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
 
 LaTeX Warning: Reference `chapter:Pleiades' on page 20 undefined on input line 
-211.
+212.
 
 [20] [21] [22] [23] [24]
 
-LaTeX Warning: Reference `appendix:A' on page 25 undefined on input line 285.
+LaTeX Warning: Reference `appendix:A' on page 25 undefined on input line 286.
 
 [25] [26] [27] [28] [29] [30] [31] [32] [33] [34]
-Overfull \hbox (16.7353pt too wide) in paragraph at lines 465--466
+Overfull \hbox (16.7353pt too wide) in paragraph at lines 466--467
 \OT1/cmr/m/n/12 again the Half--t$(\OML/cmm/m/it/12 ^^W; []\OT1/cmr/m/n/12 )$ d
 is-tri-bu-tion. How-ever, this time I use $[][] = \OMS/cmsy/m/n/12 f\OT1/cmr/m/
 n/12 10\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 10\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 
@@ -977,39 +980,84 @@ S/cmsy/m/n/12 g$\OT1/cmr/m/n/12 .|
 
 
 LaTeX Warning: Reference `table:hyperparameters' on page 35 undefined on input 
-line 467.
+line 468.
 
 [35]
 
 LaTeX Warning: Reference `eq:independece' on page 36 undefined on input line 48
-8.
+9.
 
 
-LaTeX Warning: Reference `sect:mcmc' on page 36 undefined on input line 488.
+LaTeX Warning: Reference `sect:mcmc' on page 36 undefined on input line 489.
 
 [36]
 
-LaTeX Warning: Reference `sect:mcmc' on page 37 undefined on input line 490.
+LaTeX Warning: Reference `sect:mcmc' on page 37 undefined on input line 491.
 
 [37] [38] [39]
 
-LaTeX Warning: Reference `sect:MCMC' on page 40 undefined on input line 542.
+Package natbib Warning: Citation `Duane1987' on page 40 undefined on input line
+ 537.
 
-[40] [41]) (./background/Chapter4.tex [42]
+
+Package natbib Warning: Citation `Neal1996' on page 40 undefined on input line 
+537.
+
+
+Package natbib Warning: Citation `Duane1987' on page 40 undefined on input line
+ 537.
+
+
+Package natbib Warning: Citation `Stan' on page 40 undefined on input line 537.
+
+
+[40]
+
+Package natbib Warning: Citation `Skilling2004' on page 41 undefined on input l
+ine 569.
+
+
+Package natbib Warning: Citation `Skilling2006' on page 41 undefined on input l
+ine 569.
+
+[41]
+
+Package natbib Warning: Citation `Feroz2008' on page 42 undefined on input line
+ 575.
+
+[42] [43]
+
+LaTeX Warning: Reference `' on page 44 undefined on input line 604.
+
+[44]
+
+LaTeX Warning: Reference `eq:marinalisation' on page 45 undefined on input line
+ 606.
+
+[45]
+
+LaTeX Warning: Reference `fig:emceeDANCe' on page 46 undefined on input line 63
+1.
+
+[46]) (./background/Chapter4.tex [47]
 Chapter 4.
-) (./conclusions/conclusions.tex [43
+) (./conclusions/conclusions.tex [48
 
 ]
 Chapter 5.
-) (./appendix/app1.tex [44
+) (./appendix/app1.tex [49
 
 ]
 Appendix A.
-) (./thesis.bbl [45
+) (./thesis.bbl [50
 
-] [46
+] [51
 
-] [47] [48] [49] [50] [51]) [52]
+] [52] [53] [54] [55] [56])
+
+Package natbib Warning: There were undefined citations.
+
+[57]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
  (./thesis.aux)
@@ -1025,37 +1073,38 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 23328 strings out of 493109
- 406570 string characters out of 6135003
- 652963 words of memory out of 5000000
- 26323 multiletter control sequences out of 15000+600000
+ 23341 strings out of 493109
+ 406734 string characters out of 6135003
+ 653175 words of memory out of 5000000
+ 26336 multiletter control sequences out of 15000+600000
  17639 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,13n,56p,3237b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (52 pages, 326916 bytes).
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (57 pages, 353239 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
+ 276 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
