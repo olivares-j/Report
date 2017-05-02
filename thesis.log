@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  1 MAY 2017 23:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  2 MAY 2017 16:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1011,53 +1011,45 @@ Package natbib Warning: Citation `Duane1987' on page 40 undefined on input line
 Package natbib Warning: Citation `Stan' on page 40 undefined on input line 537.
 
 
-[40]
-
-Package natbib Warning: Citation `Skilling2004' on page 41 undefined on input l
-ine 569.
-
-
-Package natbib Warning: Citation `Skilling2006' on page 41 undefined on input l
-ine 569.
-
-[41]
+[40] [41]
 
 Package natbib Warning: Citation `Feroz2008' on page 42 undefined on input line
  575.
 
-[42] [43]
-
-LaTeX Warning: Reference `' on page 44 undefined on input line 604.
-
-[44]
+[42] [43] [44]
 
 LaTeX Warning: Reference `eq:marinalisation' on page 45 undefined on input line
  606.
 
 [45]
 
-LaTeX Warning: Reference `fig:emceeDANCe' on page 46 undefined on input line 63
-1.
+Package natbib Warning: Citation `Dempster1977' on page 46 undefined on input l
+ine 640.
 
-[46]) (./background/Chapter4.tex [47]
+[46] [47]
+
+Package natbib Warning: Citation `Lin2006' on page 48 undefined on input line 6
+76.
+
+[48] [49]) (./background/Chapter4.tex [50]
 Chapter 4.
-) (./conclusions/conclusions.tex [48
+) (./conclusions/conclusions.tex [51
 
 ]
 Chapter 5.
-) (./appendix/app1.tex [49
+) (./appendix/app1.tex [52
 
 ]
 Appendix A.
-) (./thesis.bbl [50
+) (./thesis.bbl [53
 
-] [51
+] [54
 
-] [52] [53] [54] [55] [56])
+] [55] [56] [57] [58] [59])
 
 Package natbib Warning: There were undefined citations.
 
-[57]
+[60]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
  (./thesis.aux)
@@ -1073,10 +1065,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 23341 strings out of 493109
- 406734 string characters out of 6135003
- 653175 words of memory out of 5000000
- 26336 multiletter control sequences out of 15000+600000
+ 23347 strings out of 493109
+ 406858 string characters out of 6135003
+ 653435 words of memory out of 5000000
+ 26342 multiletter control sequences out of 15000+600000
  17639 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,13n,56p,3237b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1101,10 +1093,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (57 pages, 353239 bytes).
+Output written on thesis.pdf (60 pages, 362454 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
+ 285 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

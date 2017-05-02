@@ -5,7 +5,7 @@ This chapter provides a general introduction to probability theory and its appli
 
 In the following Sections I will describe in detail the assumptions I made to model the data and to select the prior distributions. The two final Sections of this Chapter focus on: the practical issues related to the sampling of the cluster distributions, and the description of details and assumptions embed in the codes I developed.
 
-Partial results of the presented work have been submitted at \citet{Olivares2017}.
+Partial results of the present work have been submitted at \citet{Olivares2017}.
 
 \section{Introduction to probability theory.}
  
@@ -577,7 +577,7 @@ An improved version of the original algorithm was implemented in \emph{MultiNest
 \subsubsection{Implementation and convergence}
 To sample the posterior distribution in our problem, we chose \emph{emcee} due to the following properties: i) the affine invariance allows a faster convergence over common and skewed distributions \cite[see][for detail]{Goodman2010,Foreman2013}, ii) the parallel computation distributes particles over nodes of a computer cluster and thus reduces considerably the computing time, and iii) it requires the hand-tuning of only two constants: the number of particles, and the parameter $a$ of the $g(z)$ distribution. I choose a particle to parameters ratio o two, this is 170 particles. This is the minimum recommended by \citet{Foreman2013} that allows a reasonable computing time. After trial and error, I fixed the value of parameter $a=1.3$. As mentioned by \citet{Goodman2010} this parameter can be tuned to improve performance of the sampler. The chosen value keeps the acceptance fraction in the range $0.2-0.5$ as suggested by \citet{Foreman2013}.
 
-I use a modified version of \emph{CosmoHammer} \citep{Akeret2013}, a front-end of \emph{emcee}. This enables us to control the input and output of data and parameters, as well as the hybrid parallel computing. For this last one, instead of using OpenMP as \citep{Akeret2013} did, we use the \emph{multiprocessing} package of python. It  distributes the computing of the likelihood among cores in each cluster node. I run this code on a 80 CPUs (cores) computer cluster with 3.5 GHz processors.
+I use a modified version of \emph{CosmoHammer} \citep{Akeret2013}, a front-end of \emph{emcee}. See section \ref{sect:HHPC} for more details. 
 
 As mentioned earlier, the PSO does not guarantee the finding of the global maximum of the score function. Therefore, I decide to implement an iterative approach that minimises the risk of PSO to get stuck in a local maxima. To do so I iteratively run PSO and 50 iterations of \emph{emcee} (with the same number of particles as the PSO) until the relative difference between means of consecutive iterations was lower than $10^{-7}$. The iterations of \emph{emcee} spread the PSO solution without moving away from the maximum. 
  
@@ -601,7 +601,7 @@ Once all parameters have entered the equilibrium state, we stop \emph{emcee} sam
 \label{sect:code}
 This Section sets out the details about the code I develop to perform the computation described throughout this chapter. First, I give a brief chronological description of the model development. Later, I will describe the details on the implementation of:, the charged PSO, the modified \emph{emcee}, and the GMM used to describe the field population. Finally, I will end the this Section detailing the hybrid high performance computing code developed to minimise the computing time of the BHM.
 
-The first version of the Bayesian Hierarchical Model was implemented by \'Angel Berihuete in the package Stan \citep{}. It comprised a Bayesian model of the ML model of \citet{Sarro2014}. The proper motions were modelled using a single mixture of gaussians. The photometry was modelled with a Chebyshev polynomial parametrised with the length along the sequence. This length was found using a principal curve analysis. Later, I included the EMB and uncertainties both in proper motion and in photometry, and the width of the sequence modelled as the multivariate gaussian. We realised that the principal curve analysis is not compatible with the deconvolution methodology. The principal curve analysis is driven by the elements with higher variance. We decided to parametrise the polynomials with the true colour, a nuisance parameter that was marginalised with the aid of a prior. For this prior we introduced the colour distribution. Previous to the introduction of the marginalisation of the nuisance parameters, the model worked fine on samples of a few thousands of stars. One the marginalisation was introduced the model increased the amount of computing time rendering it useless for higher data sizes. At this point we decided to port the existing code into python in order to use the parallel \emph{emcee}. \emph{emcee} proved to be of greater use. Due to its parallelisation capabilities we were able to increase the data size from 2000 to 10,000 objects. Since the computing of the likelihood was the highest computational challenge, I developed my own routines to perform it on parallel (see Section \ref{} below). However, \emph{CosmoHammer} \citep{Akeret2013} turn out to be more efficient in distributing the loads. I ported the code into \emph{CosmoHammer} and modified this last one to better suit our needs. Despite the Hybrid-HPC, the computing of the likelihood of $10^5$ seemed unreachable. At this point I performed two tasks, the first was to strip the code of all auxiliary libraries calls, and the vectorisation of the operations. Since the parameters of the field were held fixed, the field likelihood was computed externally for each object. The code was then fed with the data, the field likelihood, and the auxiliary computations reduced at minimum. These reduction included for example, the Cholesky decompositions and matrix inversions of the uncertainty. Thus, instead of doing these computation inside the code, the code was fed with the appropriate values.
+The first version of the Bayesian Hierarchical Model was implemented by \'Angel Berihuete in the package Stan \citep{}. It comprised a Bayesian model of the ML model of \citet{Sarro2014}. The proper motions were modelled using a single mixture of gaussians. The photometry was modelled with a Chebyshev polynomial parametrised with the length along the sequence. This length was found using a principal curve analysis. Later, I included the EMB and uncertainties both in proper motion and in photometry, and the width of the sequence modelled as the multivariate gaussian. We realised that the principal curve analysis is not compatible with the deconvolution methodology. The principal curve analysis is driven by the elements with higher variance. We decided to parametrise the polynomials with the true colour, a nuisance parameter that was marginalised with the aid of a prior. For this prior we introduced the colour distribution. Previous to the introduction of the marginalisation of the nuisance parameters, the model worked fine on samples of a few thousands of stars. One the marginalisation was introduced the model increased the amount of computing time rendering it useless for higher data sizes. At this point we decided to port the existing code into python in order to use the parallel \emph{emcee}. \emph{emcee} proved to be of great use. Due to its parallelisation capabilities we were able to increase the data size from 2000 to 10,000 objects. Since the computing of the likelihood was the highest computational challenge, I developed my own routines to perform it on parallel. However, \emph{CosmoHammer} \citep{Akeret2013} turn out to be more efficient in distributing the loads. I ported the code into \emph{CosmoHammer} and modified this last one to better suit our needs. Despite the Hybrid-HPC, the computing of the likelihood of $10^5$ seemed unreachable. At this point I performed two tasks, the first was to strip the code of all auxiliary libraries calls, and the vectorisation of the operations. Since the parameters of the field were held fixed, the field likelihood was computed externally for each object. The code was then fed with the data, the field likelihood, and the auxiliary computations reduced at minimum. These reduction included for example, the Cholesky decompositions and matrix inversions of the uncertainty. Thus, instead of doing these computation inside the code, the code was fed with the appropriate values.
 
 Introducing PSO and later the charged PSO reduced the computing time.  At this point we were able to compute the first $10^5$ run, which however did not converged in reasonable time. Once the approximation of the marginalisation integral (Eq. \ref{eq:marinalisation}) was introduced the computing time reduced far more. Finally, the tuning of the parameter allowed us to increase the acceptance fraction, and reach convergence within 4 weeks of full computing time in a 80 cores computer cluster. It is indeed a very long time, however it is reasonable compared with our original estimates of approximately 2 years\footnote{Today, the DANCe team is working on a GPU version of the code which is expected to compute the same amount of calculations in a couple of days.}.
 
@@ -629,11 +629,92 @@ The modification I introduced in \emph{emcee}, although very simple, improved th
 To allow the parallelisation, \citet{Foreman2013} divide the ensemble of particles in two ensembles. In the original version, the particles in one ensemble use one and the same particle in complementary ensemble to compute their positions according to Eq. \ref{eq:stretchmove}. In the modified versions, particles from one ensemble update their positions using a particle from the complementary ensemble, however, this particle is chosen randomly at each iteration. 
 
 Figure \ref{fig:emceeDANCe} compares the mixing and acceptance fractions of the original and modified versions of \emph{emcee}. In a private communication with David Foreman, he mentioned that a similar modification was already introduced in a beta version of \emph{emcee}.
-
-
+\begin{figure}[htbp]
+\begin{center}
+%\includegraphics[width=\textwidth]{}
+\caption{Comparison between the log posterior evaluations of the original emcee version (left) and the modified one (right). }
+\label{fig:emceeDANCe}
+\end{center}
+\end{figure}
 \subsection{GMM for the field population}
-\subsection{Parallel implementations}
-However, since MPI (Message Passing Interface) was already used by \emph{emcee} to distribute the the particles across cores. I realised a hybrid approach was necessary. In this hybrid HPC approach, \emph{emcee} particles were distributed in nodes while objects were distributed across cores in a node. 
-Description of the implementation. MPI, python stan, etc.
-explain in detail the difficulties faced at implementing the different codes in the different servers.
+As mentioned earlier in this Chapter, the field population is modelled by means of two independent photometric and proper motion distributions. The MLE of the parameters of these distributions were found using the EM algorithm.  The conventional EM algorithm for GMM \citep{Dempster1977} for a mixture of $M$ gaussians goes as follows. Given a set of parameters $\theta=\{w_i,\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i\}_{i=1}^M$, were $w_i$,$\boldsymbol{\mu}_i$, and $\boldsymbol{\Sigma}_i$ are the fraction, mean and covariance matrix of gaussian component $i$, the likelihood of the data is,
+
+\begin{equation}
+p(\{\mathbf{y}_n\}_{n=1}^N|\theta)=\prod_{n=1}^N {\sum_{i=1} ^M {w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}}.
+\end{equation}
+
+To solve the problem, the EM algorithm requires  a set of $N$ variables, $z$, of $M$ dimension are introduced. The variable $z_{n,i}$ represent the probability that observation $y_n$ was drawn from gaussian $i$. Therefore,
+
+\begin{equation}
+1=\sum_{i=1}^M z_{n,i}
+\end{equation}
+
+These $z$ latent variables are found as
+\begin{equation}
+z_{n,i}= \frac{w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}{\sum_{i=1}^M w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}
+\end{equation}
+
+The EM works, as its name indicates, by maximising the expected value of the likelihood.
+\begin{equation}
+E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\sum_{i=1} ^M {z_{n,i}\cdot w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}}.
+\end{equation}
+
+The previous expectation is maximal when,
+\begin{align}
+w_i &= \frac{1}{N} \sum_{n=1}^N z_{n,i}, \\
+\boldsymbol{\mu}_i &= \frac{1}{\sum_{n=1}^N z_{n,i}} \sum_{n=1}^N z_{n,i}\cdot \mathbf{y}_n\\
+\boldsymbol{\Sigma}_i &= \frac{1}{\sum_{n=1}^N z_{n,i}} \sum_{n=1}^N z_{n,i}\cdot (\mathbf{y}_n - \boldsymbol{\mu}_i)\times(\mathbf{y}_n-\boldsymbol{\mu}_i)^T
+\end{align}
+
+The modified version of the GMM, which includes a uniform distribution, is now a particular case of the GMM. This can be viewed as a gaussian distribution with fixed parameters and a constant probability $c$ given by the uniform distribution. The new expectation is then,
+\begin{equation}
+E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\left[z_{n,0}\cdot w_0 \cdot c + \sum_{i=1} ^M {z_{n,i}\cdot w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}\right]}.
+\end{equation}
+
+The maximisation step remains identical except for the indices. There are now $M+1$ fractions $w_i$, with $i=0,1,...,M$, and the means and covariances run from $i=1,...,M$.
+
+Regarding the photometric GMM of the field. Since photometry has missing values, we use the EM algorithm of \citet{McMichael1996}. This algorithm was developed to obtain the MLE of data with missing values. A more recent version has been developed by \citet{Lin2006}, however, this assumes that the missing data is randomly distributed (missing at random). As mentioned earlier, the missing values in the photometry are not randomly distributed.
+
+In \citet{McMichael1996} algorithm, there is a set of $N$ gain matrices, one for each datum. Each $M_n$ matrix is an identity matrix in which the rows of the corresponding missing value have been deleted. Thus, the expected value of the likelihood is now,
+
+\begin{equation}
+E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\sum_{i=1} ^M {z_{n,i}\cdot w_i\cdot \mathcal{N}(\mathbf{y}_n|M_n \boldsymbol{\mu}_i,M_n\boldsymbol{\Sigma}_i M_n)}}.
+\end{equation}
+
+The maximisation step is now,
+
+\begin{align}
+w_i &= \frac{1}{N} \sum_{n=1}^N z_{n,i}, \\
+\boldsymbol{\mu}_i &= \frac{ \sum_{n=1}^N z_{n,i}\cdot H_n \mathbf{y}_n}{\sum_{n=1}^N z_{n,i} H_n M_n}
+\end{align}
+with 
+\begin{equation}
+H_i=M_i^T(M\Sigma_i M^T)^{-1}
+\end{equation}
+
+The maximisation step has no analytical solution for the covariance matrix, therefore, a modified steepest descent is used
+
+\begin{equation}
+\Sigma_i \leftarrow \Sigma_i + \frac{\rho}{2}\cdot \Sigma_i\Delta_i\Sigma_i,
+\end{equation}
+with  and $\Delta_i$ given by
+
+\begin{equation}
+\Delta_i=  \frac{1}{\sum_{n=1}^N z_{n,i}}\cdot \sum_{n=1}^N z_{n,i} \cdot \left[H_n(\mathbf{y}_n -  M_n \boldsymbol{\mu}_i) \times  (\mathbf{y}_n -  M_n \boldsymbol{\mu}_i)^TH_n^T - H_nI\right]
+\end{equation}
+ 
+ The algorithm preserves the monotonic convergence of the conventional EM, and returns positive definite matrices provided that $\rho < 2$. For details and validation see \citet{McMichael1996}.
+
+\subsection{Hybrid-HPC implementations}
+\label{sect:HHPC}
+As I outlined at the beginning of this section, the parallel computing approach was an unavoidable step. Once the code was ported to python and \emph{CosmoHammer}, I modified this last one to better fit our needs. The modifications were mainly on the management of input and output files and the python \emph{multiprocessing} package for the computing of our likelihood. Also, I striped some of its original functions to reduce memory usage and implemented some others, like the use of initial positions for the particles.
+
+In our Hybrid-HPC (HHPC) approach, the particles of \emph{emcee} are distributed on the nodes of the computing cluster. Then, each core in the node computes the likelihood of one fraction of the objects in the data set. For the cluster at the Centre of Astrobiology
+\footnote{Villanueva de la ca\~nada, Madrid,Spain.}(CAB) I used a configuration of 6 nodes each with 12 cores. For the cluster at the University of C\'adiz, I used a configuration of 5 nodes each with 16 cores. Particles were distributed among the six nodes using MPI while each core computes the likelihood of one 12th of the total number of objects in the data set.
+
+However, the HHPC approach was not the best solution at the CIMENT clusters of the University of Grenoble Alpes. At this cluster (Froggy) the HHPC continuously render errors of communication. For this reason, I implemented a only MPI version of the code. In this version, the multithreading approach is left aside. Instead, the totality of the available cores is fully dedicated to the computing of the likelihood. Each of the $n$ cores computes the likelihood of one $n$th of the objects in the data set. Once the likelihood of all particles has been computed, the master evaluates the new positions of the particles.
+
+I finish this chapter with a brief description of the difficulties faced on the development and testing of the BHM code. As the code evolved in complexity, my computational skills were compelled to evolve as well. I started by learning R and solving some toy problems on it. Later, when the dimensionality of the posterior increased I learned \emph{Stan}. When the data set increased in size, we faced the parallelisation, so I learned Python and MPI. Once these versions were operable, I was forced to deal with libraries, from the common, numpy, scipy and numba, to the linking of modules and libraries. Finally, when dealing with several clusters I learned the queue languages Condor, slurm and OAR. Currently, the DANCe team has developed a GPU implementation of the BHM code.  
+
+
 
