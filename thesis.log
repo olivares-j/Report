@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  15 MAY 2017 05:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  15 MAY 2017 13:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -974,75 +974,83 @@ LaTeX Warning: Reference `Stauffer2007' on page 8 undefined on input line 90.
 
 [8]
 
-LaTeX Warning: Reference `sect:classifier' on page 9 undefined on input line 94
+LaTeX Warning: Reference `sect:classifier' on page 9 undefined on input line 96
 .
 
 
-LaTeX Warning: Reference `fig:tfpr' on page 9 undefined on input line 94.
+LaTeX Warning: Reference `fig:tfpr' on page 9 undefined on input line 96.
 
 
-LaTeX Warning: Reference `fig:tfpr' on page 9 undefined on input line 94.
+LaTeX Warning: Reference `fig:tfpr' on page 9 undefined on input line 96.
 
 [9]
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 102.
+LaTeX Warning: Reference `' on page 10 undefined on input line 104.
 
 
-LaTeX Warning: Reference `figure:CvsI' on page 10 undefined on input line 102.
+LaTeX Warning: Reference `figure:CvsI' on page 10 undefined on input line 104.
 
 [10]
 
 LaTeX Warning: Reference `figure:probabilities' on page 11 undefined on input l
-ine 120.
+ine 122.
 
 
 LaTeX Warning: Reference `figure:probabilities' on page 11 undefined on input l
-ine 120.
+ine 122.
 
 
 LaTeX Warning: Reference `figure:probabilities' on page 11 undefined on input l
-ine 128.
+ine 130.
 
 
 LaTeX Warning: Reference `figure:probabilities' on page 11 undefined on input l
-ine 128.
+ine 130.
 
 
 Package natbib Warning: Citation `Stauffer2007' on page 11 undefined on input l
-ine 140.
+ine 142.
 
 [11] [12] [13]
 
-LaTeX Warning: Reference `eq:colordist' on page 14 undefined on input line 159.
+LaTeX Warning: Reference `eq:colordist' on page 14 undefined on input line 161.
 
 
 
-LaTeX Warning: Reference `eq:lik-seq' on page 14 undefined on input line 167.
+LaTeX Warning: Reference `eq:lik-seq' on page 14 undefined on input line 169.
 
 
-LaTeX Warning: Reference `eq:colordist' on page 14 undefined on input line 167.
+LaTeX Warning: Reference `eq:colordist' on page 14 undefined on input line 169.
 
 
-[14] [15]
+[14]
 
-LaTeX Warning: Reference `sect:discussion' on page 16 undefined on input line 1
-91.
+Package natbib Warning: Citation `Adams2002' on page 15 undefined on input line
+ 184.
 
-[16]
+[15] [16] [17]
 
-LaTeX Warning: Reference `subsubsect:luminosity' on page 17 undefined on input 
-line 208.
+LaTeX Warning: Reference `sect:luminosity' on page 18 undefined on input line 2
+20.
 
 
-LaTeX Warning: Reference `subsubsect:luminosity' on page 17 undefined on input 
-line 210.
+LaTeX Warning: Reference `sect:luminosity' on page 18 undefined on input line 2
+22.
 
-[17]
-Overfull \hbox (11.44139pt too wide) in paragraph at lines 217--231
+
+LaTeX Warning: Reference `sect:evidence' on page 18 undefined on input line 224
+.
+
+[18]
+Overfull \hbox (11.44139pt too wide) in paragraph at lines 229--243
  [] |
  []
 
-[18] [19] [20]) (./thesis.bbl [21])
+
+LaTeX Warning: Reference `sect:mass-luminosity' on page 19 undefined on input l
+ine 249.
+
+[19] [20]) (./thesis.bbl [21])
 
 Package natbib Warning: There were undefined citations.
 
@@ -1064,13 +1072,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 22944 strings out of 493109
- 399779 string characters out of 6135003
- 647466 words of memory out of 5000000
- 25966 multiletter control sequences out of 15000+600000
+ 22947 strings out of 493109
+ 399825 string characters out of 6135003
+ 647542 words of memory out of 5000000
+ 25969 multiletter control sequences out of 15000+600000
  14667 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,56p,3237b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,56p,3237b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -1084,7 +1092,7 @@ l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (22 pages, 192242 bytes).
+Output written on thesis.pdf (22 pages, 193747 bytes).
 PDF statistics:
  130 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
