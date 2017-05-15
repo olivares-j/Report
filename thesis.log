@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  12 MAY 2017 12:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  15 MAY 2017 05:20
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -945,71 +945,108 @@ LaTeX Warning: Reference `sect:PleiadesDANCe' on page 1 undefined on input line
 
 ]
 
-LaTeX Warning: Reference `chap:BHM' on page 2 undefined on input line 15.
+LaTeX Warning: Reference `chap:BHM' on page 2 undefined on input line 16.
 
 [2]
 
 LaTeX Warning: Reference `sect:pleiadesdataset' on page 3 undefined on input li
-ne 25.
+ne 26.
 
-[3] [4] [5] [6] [7]
+[3] [4] [5]
 
-LaTeX Warning: Reference `subsect:analysis' on page 8 undefined on input line 7
-4.
+LaTeX Warning: Reference `sect:pleiadesdataset' on page 6 undefined on input li
+ne 51.
+
+[6] [7]
+
+LaTeX Warning: Reference `sect:pleiades' on page 8 undefined on input line 90.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 8 undefined on input li
+ne 90.
+
+
+Package natbib Warning: Citation `Lodieu2012' on page 8 undefined on input line
+ 90.
+
+
+LaTeX Warning: Reference `Stauffer2007' on page 8 undefined on input line 90.
 
 [8]
 
-LaTeX Warning: Reference `figure:CvsI' on page 9 undefined on input line 78.
+LaTeX Warning: Reference `sect:classifier' on page 9 undefined on input line 94
+.
+
+
+LaTeX Warning: Reference `fig:tfpr' on page 9 undefined on input line 94.
+
+
+LaTeX Warning: Reference `fig:tfpr' on page 9 undefined on input line 94.
 
 [9]
 
-LaTeX Warning: Reference `figure:probabilities' on page 10 undefined on input l
-ine 94.
+LaTeX Warning: Reference `' on page 10 undefined on input line 102.
 
 
-LaTeX Warning: Reference `figure:probabilities' on page 10 undefined on input l
-ine 94.
+LaTeX Warning: Reference `figure:CvsI' on page 10 undefined on input line 102.
+
+[10]
+
+LaTeX Warning: Reference `figure:probabilities' on page 11 undefined on input l
+ine 120.
 
 
-LaTeX Warning: Reference `figure:probabilities' on page 10 undefined on input l
-ine 102.
+LaTeX Warning: Reference `figure:probabilities' on page 11 undefined on input l
+ine 120.
 
 
-LaTeX Warning: Reference `figure:probabilities' on page 10 undefined on input l
-ine 102.
-
-[10] [11]
-
-LaTeX Warning: Reference `eq:colordist' on page 12 undefined on input line 127.
+LaTeX Warning: Reference `figure:probabilities' on page 11 undefined on input l
+ine 128.
 
 
-
-LaTeX Warning: Reference `eq:lik-seq' on page 12 undefined on input line 135.
-
-
-LaTeX Warning: Reference `eq:colordist' on page 12 undefined on input line 135.
+LaTeX Warning: Reference `figure:probabilities' on page 11 undefined on input l
+ine 128.
 
 
-[12]
+Package natbib Warning: Citation `Stauffer2007' on page 11 undefined on input l
+ine 140.
 
-LaTeX Warning: Reference `sect:discussion' on page 13 undefined on input line 1
-59.
+[11] [12] [13]
 
-[13] [14]
-
-LaTeX Warning: Reference `subsubsect:luminosity' on page 15 undefined on input 
-line 176.
+LaTeX Warning: Reference `eq:colordist' on page 14 undefined on input line 159.
 
 
-LaTeX Warning: Reference `subsubsect:luminosity' on page 15 undefined on input 
-line 178.
 
-[15]
-Overfull \hbox (11.44139pt too wide) in paragraph at lines 185--199
+LaTeX Warning: Reference `eq:lik-seq' on page 14 undefined on input line 167.
+
+
+LaTeX Warning: Reference `eq:colordist' on page 14 undefined on input line 167.
+
+
+[14] [15]
+
+LaTeX Warning: Reference `sect:discussion' on page 16 undefined on input line 1
+91.
+
+[16]
+
+LaTeX Warning: Reference `subsubsect:luminosity' on page 17 undefined on input 
+line 208.
+
+
+LaTeX Warning: Reference `subsubsect:luminosity' on page 17 undefined on input 
+line 210.
+
+[17]
+Overfull \hbox (11.44139pt too wide) in paragraph at lines 217--231
  [] |
  []
 
-[16] [17]) (./thesis.bbl [18]) [19
+[18] [19] [20]) (./thesis.bbl [21])
+
+Package natbib Warning: There were undefined citations.
+
+[22
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
@@ -1021,16 +1058,19 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 397.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 22938 strings out of 493109
- 399723 string characters out of 6135003
- 647462 words of memory out of 5000000
- 25960 multiletter control sequences out of 15000+600000
+ 22944 strings out of 493109
+ 399779 string characters out of 6135003
+ 647466 words of memory out of 5000000
+ 25966 multiletter control sequences out of 15000+600000
  14667 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,56p,3237b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,56p,3237b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -1044,10 +1084,10 @@ l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (19 pages, 187725 bytes).
+Output written on thesis.pdf (22 pages, 192242 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
