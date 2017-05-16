@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  15 MAY 2017 18:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  16 MAY 2017 05:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1039,34 +1039,29 @@ Package natbib Warning: Citation `Adams2002' on page 16 undefined on input line
 LaTeX Warning: Reference `sect:luminosity' on page 18 undefined on input line 2
 31.
 
+[18]
 
-LaTeX Warning: Reference `sect:luminosity' on page 18 undefined on input line 2
+LaTeX Warning: Reference `sect:luminosity' on page 19 undefined on input line 2
 33.
 
-[18]
 
 LaTeX Warning: Reference `sect:evidence' on page 19 undefined on input line 235
 .
 
-
+[19]
 Overfull \hbox (11.44139pt too wide) in paragraph at lines 242--256
  [] |
  []
 
 
-LaTeX Warning: Reference `sect:mass-luminosity' on page 19 undefined on input l
+LaTeX Warning: Reference `sect:mass-luminosity' on page 20 undefined on input l
 ine 260.
 
-[19] [20]
-
-LaTeX Warning: Reference `fig:PDSMFtest' on page 21 undefined on input line 292
-.
-
-[21]) (./thesis.bbl [22])
+[20] [21]) (./thesis.bbl [22] [23])
 
 Package natbib Warning: There were undefined citations.
 
-[23
+[24
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
@@ -1086,11 +1081,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
 Here is how much of TeX's memory you used:
  22950 strings out of 493109
  399861 string characters out of 6135003
- 647733 words of memory out of 5000000
+ 647752 words of memory out of 5000000
  25972 multiletter control sequences out of 15000+600000
  14667 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,56p,3237b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,56p,3237b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -1104,10 +1099,10 @@ l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (23 pages, 196370 bytes).
+Output written on thesis.pdf (24 pages, 197272 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 136 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
