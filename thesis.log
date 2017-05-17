@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  16 MAY 2017 05:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  17 MAY 2017 07:47
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -848,7 +848,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 119.
 )
-(./thesis.aux)
+(./thesis.aux
+
+LaTeX Warning: Label `fig:Stauffer1' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
@@ -1016,52 +1020,166 @@ ine 141.
 Package natbib Warning: Citation `Stauffer2007' on page 12 undefined on input l
 ine 153.
 
-[12] [13]
+[12]
 
-LaTeX Warning: Reference `eq:colordist' on page 14 undefined on input line 172.
-
-
-[14]
-
-LaTeX Warning: Reference `eq:lik-seq' on page 15 undefined on input line 180.
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 155.
 
 
-LaTeX Warning: Reference `eq:colordist' on page 15 undefined on input line 180.
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 155.
 
 
-[15]
+Package natbib Warning: Citation `Staufer2007' on page 13 undefined on input li
+ne 157.
 
-Package natbib Warning: Citation `Adams2002' on page 16 undefined on input line
- 195.
+
+Package natbib Warning: Citation `Staufer2007' on page 13 undefined on input li
+ne 157.
+
+
+LaTeX Warning: Reference `fig:Stauffer4' on page 13 undefined on input line 157
+.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 157.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 157.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 157.
+
+<./background/Figures/Stauffer2Bouy_PM.pdf, id=51, 851.18pt x 431.6125pt>
+File: ./background/Figures/Stauffer2Bouy_PM.pdf Graphic file (type pdf)
+
+<use ./background/Figures/Stauffer2Bouy_PM.pdf>
+Package pdftex.def Info: ./background/Figures/Stauffer2Bouy_PM.pdf used on inpu
+t line 161.
+(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
+
+<./background/Figures/Stauffer2Bouy_CMD.pdf, id=52, 851.18pt x 431.6125pt>
+File: ./background/Figures/Stauffer2Bouy_CMD.pdf Graphic file (type pdf)
+
+<use ./background/Figures/Stauffer2Bouy_CMD.pdf>
+Package pdftex.def Info: ./background/Figures/Stauffer2Bouy_CMD.pdf used on inp
+ut line 162.
+(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 163.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 163.
+
+<./background/Figures/Stauffer5Bouy_PM.pdf, id=53, 851.18pt x 431.6125pt>
+File: ./background/Figures/Stauffer5Bouy_PM.pdf Graphic file (type pdf)
+
+<use ./background/Figures/Stauffer5Bouy_PM.pdf>
+Package pdftex.def Info: ./background/Figures/Stauffer5Bouy_PM.pdf used on inpu
+t line 169.
+(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
+
+<./background/Figures/Stauffer5Bouy_CMD.pdf, id=54, 851.18pt x 431.6125pt>
+File: ./background/Figures/Stauffer5Bouy_CMD.pdf Graphic file (type pdf)
+
+<use ./background/Figures/Stauffer5Bouy_CMD.pdf>
+Package pdftex.def Info: ./background/Figures/Stauffer5Bouy_CMD.pdf used on inp
+ut line 170.
+(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 171.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 171.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 176.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 176.
+
+
+Package natbib Warning: Citation `Staufer2007' on page 13 undefined on input li
+ne 178.
+
+
+Package natbib Warning: Citation `Stauffer2007' on page 13 undefined on input l
+ine 178.
+
+[13] [14 <./background/Figures/Stauffer2Bouy_PM.pdf> <./background/Figures/Stau
+ffer2Bouy_CMD.pdf>] [15 <./background/Figures/Stauffer5Bouy_PM.pdf> <./backgrou
+nd/Figures/Stauffer5Bouy_CMD.pdf>]
+
+Package natbib Warning: Citation `Stauffer2007' on page 16 undefined on input l
+ine 180.
+
+
+LaTeX Warning: Reference `tab:params' on page 16 undefined on input line 186.
+
+
+LaTeX Warning: Reference `sect:model' on page 16 undefined on input line 186.
+
+
+Package natbib Warning: Citation `Gelman2006' on page 16 undefined on input lin
+e 191.
 
 [16] [17]
 
-LaTeX Warning: Reference `sect:luminosity' on page 18 undefined on input line 2
-31.
+LaTeX Warning: Reference `eq:colordist' on page 18 undefined on input line 224.
+
 
 [18]
 
-LaTeX Warning: Reference `sect:luminosity' on page 19 undefined on input line 2
-33.
+LaTeX Warning: Reference `eq:lik-seq' on page 19 undefined on input line 232.
 
 
-LaTeX Warning: Reference `sect:evidence' on page 19 undefined on input line 235
-.
+LaTeX Warning: Reference `eq:colordist' on page 19 undefined on input line 232.
+
 
 [19]
-Overfull \hbox (11.44139pt too wide) in paragraph at lines 242--256
+
+Package natbib Warning: Citation `Adams2002' on page 20 undefined on input line
+ 247.
+
+[20] [21]
+
+LaTeX Warning: Reference `sect:luminosity' on page 22 undefined on input line 2
+83.
+
+[22]
+
+LaTeX Warning: Reference `sect:luminosity' on page 23 undefined on input line 2
+85.
+
+
+LaTeX Warning: Reference `sect:evidence' on page 23 undefined on input line 287
+.
+
+[23]
+Overfull \hbox (11.44139pt too wide) in paragraph at lines 294--308
  [] |
  []
 
 
-LaTeX Warning: Reference `sect:mass-luminosity' on page 20 undefined on input l
-ine 260.
+LaTeX Warning: Reference `sect:mass-luminosity' on page 24 undefined on input l
+ine 312.
 
-[20] [21]) (./thesis.bbl [22] [23])
+[24] [25]) (./thesis.bbl [26])
 
 Package natbib Warning: There were undefined citations.
 
-[24
+[27
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
@@ -1074,18 +1192,18 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 397.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 22950 strings out of 493109
- 399861 string characters out of 6135003
- 647752 words of memory out of 5000000
- 25972 multiletter control sequences out of 15000+600000
+ 22978 strings out of 493109
+ 400801 string characters out of 6135003
+ 648162 words of memory out of 5000000
+ 25995 multiletter control sequences out of 15000+600000
  14667 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,56p,3237b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,56p,3237b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -1099,10 +1217,10 @@ l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (24 pages, 197272 bytes).
+Output written on thesis.pdf (27 pages, 284972 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 183 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

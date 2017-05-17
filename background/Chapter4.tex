@@ -151,8 +151,60 @@ Summarising, the discrepancies between our individual membership probabilities a
 \end{center}
 \end{figure*}
 \subsubsection{Candidate members from \citet{Stauffer2007}}.
-Here I would like to make a broad comparison of our list of members with that of Stauffer. I would do this for completeness.
-The comparison must be done in terms of proper motions and photometry. If any other observable was taken into account the comparison is unfair. Nevertheless, this comparison is also important in the sense that the extra info can give some hints on possible improvements on the proper motions and photometric distributions
+
+\citet{Stauffer2007} published two list of candidate members. The first one contains 1417 objects compiled from the literature (their Table 2). These objects were classified as candidate members by several authors along modern astronomy. As \citet{Stauffer2007} mention, this list is inhomogeneous, incomplete and certainly includes non members. Their second list contains 55 candidate members  (their Table 5) found using infrared photometry, and proper motions.
+
+Cross matching these two lists with the candidate members of\citet{Bouy2015}, shows that only 1288 of the 1417 objects on \citet{Staufer2007} Table 2 were classified by \citet{Bouy2015} as candidate members. From these, 1132 objects come from the DANce survey and the rest from Tycho+DANCe, see Appendix B of \citet{Bouy2015}. Also, only 34 of the 55 new candidate members of  \citet{Staufer2007} were classified by \citet{Bouy2015} as candidate members. In Figures \ref{fig:Stauffer1} - \ref{fig:Stauffer4} I show the candidate members of \citet{Stauffer2007}, and \citet{Bouy2015}. As mentioned by \citet{Stauffer2007}, many of the candidate members in their Table 2 are most probably non members. These objects lay far from the locus of the rest of the candidates. Similarly, the majority of the rejected candidates of \citet{Stauffer2007}, 15 of those in their Table 5, lay far from the cluster proper motion and photometric loci.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\textwidth]{./background/Figures/Stauffer2Bouy_PM.pdf}
+\includegraphics[width=\textwidth]{./background/Figures/Stauffer2Bouy_CMD.pdf}
+\caption{Comparison between proper motions (top) and $K$ vs $i-K$ CMD of the candidate members compiled by \citet{Stauffer2007} (red) and those of \citet{Bouy2015}(blue), the common candidates are shown within green squares. }
+\label{fig:Stauffer1}
+\end{center}
+\end{figure}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=\textwidth]{./background/Figures/Stauffer5Bouy_PM.pdf}
+\includegraphics[width=\textwidth]{./background/Figures/Stauffer5Bouy_CMD.pdf}
+\caption{Comparison between proper motions (top) and $K$ vs $i-K$ CMD of the new candidate members of \citet{Stauffer2007} (red) and those of \citet{Bouy2015}(blue), the common candidates are shown within green squares. }
+\label{fig:Stauffer1}
+\end{center}
+\end{figure}
+ 
+Concerning our list of candidate members, after cross matching the lists, we recover 1139 of the candidate members from Table 2 of  \citet{Stauffer2007}. Seven more than \citet{Bouy2015}. Also, we recover the same 34 candidates that \citet{Bouy2015} recovered from the new candidates of \citet{Stauffer2007} (from their Table5). 
+
+I have already mentioned that the Table 2 of \citet{Staufer2007} is an exhaustive compilation of Pleiades members. This list contains objects that authors from the literature classified as Pleiades members even when the membership probability was as low as 0.1 \citep{Stauffer2007}. Therefore, I will not analyse in detail the $\sim 300$ rejected objects. It suffices to mention that we recover an slightly larger (seven) number of candidates than \citet{Bouy2015}.
+
+On the other hand, the list of new candidate members of \citet{Stauffer2007} deserves further attention and a more detailed comparison.
+From the 21 rejected objects, 14 of them lay below the cluster photometric sequence and  far from the proper motion locus. The remaining seven have membership probabilities near our probability threshold. XXXXX CHECK THIS XXXX 
+ 
+\section{The statistical distributions of the Pleiades cluster.}
+Once the objective probability threshold has been established and the results of the classification analysed and compared with the literature. Now I present the results of the statistical distributions that describe the cluster population. These distributions result directly or indirectly from the posterior distribution of the parameters in our model. Here I summarise these parametric posterior distributions, together with some of their correlations. Also, I present and analysis on the way these posterior distribution help us to update our prior knowledge.
+
+In Table \ref{tab:params} I summarise the posterior distribution of the parameters in our model. I use as statistic and uncertainty the mode and the 16th and 84th percentiles, respectively. The parameter names correspond to those given in Sect. \ref{sect:model}. 
+
+%\input{figs/TableParameters.txt}
+
+\subsection{Updating the previous knowledge}
+As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the bare values and the correlations among them. The values indicate, for example, that the number of  GMM modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian went both to near zero values. A better model would be that in which no computing power will be lost in inferring negligible parameters.
+
+Another simple inspection tells us that our prior for the cluster field fraction is narrow and its mode lay far from that of the posterior distribution. Although this is not wrong since the prior clearly allow this value, this prior must be made wider.  Clearly our prior knowledge underestimated the expected number of cluster members.   
+
+Another useful tool to inspect these posterior distributions is the correlation they show with themselves. In Figure \ref{fig:correlations} I show the correlation matrix of all the parameters in our model. This Fig. shows elements that could be considered to improve our model. 
+For example, the large correlation shown by the high order coefficients of the spline series may indicate that we can save some of these parameters.   
+
+\begin{figure}[htbp]
+\begin{center}
+%\includegraphics[width=\textwidth]{./background/Figures/Correlations.pdf}
+\caption{Correlation matrix of parameters in our model. The colour code indicates the value of the correlation coefficient.}
+\label{fig:correlations}
+\end{center}
+\end{figure}
+
+In the following Sections, I use the distributions of the parameters in our model to derive the statistical distributions that describe the cluster population. Some of these distributions have as parameters those inferred in the model, however, other, like the mass distribution require more elaborated derivations.  
+
 \section{Velocity distribution}
 I must work on it. Here I must transform the bivariate proper motions distributions into a univariate velocity distributions using the distance and assuming spherical symmetry. This distribution will give us some hints to improve the proper motions model. It will be interesting to fit a model, maxwellian for example and see how well it fits. If more models are available we can try to find the best one in terms of Bayesian model selection. 
 \section{Spatial distribution}
@@ -293,4 +345,6 @@ Figure \ref{fig:PDSMFtest} shows the cumulative distribution functions (CDFs) of
 
 The previous tests show that there is enough evidence to claim for differences among the PDSMFs of these three clusters and from IMFs and Pleiades PDSMF. Thus suggesting that these differences may have an origin on dynamical effects associated with age and relaxation. Nevertheless, to claim for reliable evidence supporting these differences the census of the Trapezium and Hyades must be done using the same methods. Also, the uncertainties must be properly establish both for the other PDSMFs and for the mass-luminosity relation from which all these PDSMF are derived. 
 
-\section{Updating the previous knowledge}
+
+
+
