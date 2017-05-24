@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  17 MAY 2017 12:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  24 MAY 2017 02:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -937,254 +937,14 @@ Chapter 1.
 
 
 ]
+[2] [3]
 
-LaTeX Warning: Reference `Chapter2:Sect:DR2' on page 2 undefined on input line 
-38.
+LaTeX Warning: Reference `Chapter2:Sect:DR2' on page 4 undefined on input line 
+54.
 
-[2] [3]) (./background/Chapter4.tex [4]
-Chapter 2.
+[4] [5]) (./thesis.bbl [6] [7
 
-LaTeX Warning: Reference `chap:BHM' on page 5 undefined on input line 4.
-
-[5
-
-]
-
-LaTeX Warning: Reference `chap:BHM' on page 6 undefined on input line 16.
-
-[6] [7] [8]
-
-LaTeX Warning: Reference `fig:tfpr' on page 9 undefined on input line 45.
-
-
-LaTeX Warning: Reference `fig:tfpr' on page 9 undefined on input line 47.
-
-[9]
-
-LaTeX Warning: Reference `fig:tfpr' on page 10 undefined on input line 61.
-
-[10]
-
-LaTeX Warning: Reference `figure:IncVsCom' on page 11 undefined on input line 7
-3.
-
-
-LaTeX Warning: Reference `fig:tfpr' on page 11 undefined on input line 73.
-
-
-LaTeX Warning: Reference `figure:IncVsCom' on page 11 undefined on input line 7
-3.
-
-[11]
-
-LaTeX Warning: Reference `fig:ROC' on page 12 undefined on input line 89.
-
-[12]
-
-LaTeX Warning: Reference `figure:HM-SBB' on page 13 undefined on input line 105
-.
-
-[13]
-
-LaTeX Warning: Reference `figure:HM-SBB' on page 14 undefined on input line 107
-.
-
-
-LaTeX Warning: Reference `sect:classifier' on page 14 undefined on input line 1
-07.
-
-
-LaTeX Warning: Reference `fig:tfpr' on page 14 undefined on input line 107.
-
-
-LaTeX Warning: Reference `fig:tfpr' on page 14 undefined on input line 107.
-
-
-LaTeX Warning: Reference `figure:HM-SBB' on page 14 undefined on input line 109
-.
-
-
-LaTeX Warning: Reference `figure:newones' on page 14 undefined on input line 11
-1.
-
-
-LaTeX Warning: Reference `figure:rejecteds' on page 14 undefined on input line 
-111.
-
-
-LaTeX Warning: Reference `figure:newones' on page 14 undefined on input line 11
-3.
-
-[14]
-
-LaTeX Warning: Reference `figure:rejecteds' on page 15 undefined on input line 
-115.
-
-
-LaTeX Warning: Reference `figure:rejectedsCOLORS' on page 15 undefined on input
- line 115.
-
-
-LaTeX Warning: Reference `figure:rejectedsCOLORS' on page 15 undefined on input
- line 115.
-
-
-LaTeX Warning: Reference `figure:rejectedsCOLORS' on page 15 undefined on input
- line 115.
-
-
-LaTeX Warning: Reference `sect:missing' on page 15 undefined on input line 115.
-
-
-[15]
-
-LaTeX Warning: Reference `figure:HM-SBB' on page 16 undefined on input line 119
-.
-
-
-LaTeX Warning: Reference `figure:probabilities' on page 16 undefined on input l
-ine 133.
-
-
-LaTeX Warning: Reference `figure:probabilities' on page 16 undefined on input l
-ine 133.
-
-
-LaTeX Warning: Reference `figure:probabilities' on page 16 undefined on input l
-ine 141.
-
-
-LaTeX Warning: Reference `figure:probabilities' on page 16 undefined on input l
-ine 141.
-
-[16]
-
-LaTeX Warning: Reference `fig:Stauffer1' on page 17 undefined on input line 157
-.
-
-
-LaTeX Warning: Reference `fig:Stauffer2' on page 17 undefined on input line 157
-.
-
-<./background/Figures/Stauffer2Bouy_PM.pdf, id=64, 851.18pt x 431.6125pt>
-File: ./background/Figures/Stauffer2Bouy_PM.pdf Graphic file (type pdf)
-
-<use ./background/Figures/Stauffer2Bouy_PM.pdf>
-Package pdftex.def Info: ./background/Figures/Stauffer2Bouy_PM.pdf used on inpu
-t line 161.
-(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
-
-<./background/Figures/Stauffer2Bouy_CMD.pdf, id=65, 851.18pt x 431.6125pt>
-File: ./background/Figures/Stauffer2Bouy_CMD.pdf Graphic file (type pdf)
-
-<use ./background/Figures/Stauffer2Bouy_CMD.pdf>
-Package pdftex.def Info: ./background/Figures/Stauffer2Bouy_CMD.pdf used on inp
-ut line 162.
-(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
-
-<./background/Figures/Stauffer5Bouy_PM.pdf, id=66, 851.18pt x 431.6125pt>
-File: ./background/Figures/Stauffer5Bouy_PM.pdf Graphic file (type pdf)
-
-<use ./background/Figures/Stauffer5Bouy_PM.pdf>
-Package pdftex.def Info: ./background/Figures/Stauffer5Bouy_PM.pdf used on inpu
-t line 169.
-(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
-
-<./background/Figures/Stauffer5Bouy_CMD.pdf, id=67, 851.18pt x 431.6125pt>
-File: ./background/Figures/Stauffer5Bouy_CMD.pdf Graphic file (type pdf)
-
-<use ./background/Figures/Stauffer5Bouy_CMD.pdf>
-Package pdftex.def Info: ./background/Figures/Stauffer5Bouy_CMD.pdf used on inp
-ut line 170.
-(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
- [17] [18 <./background/Figures/Stauffer2Bouy_PM.pdf> <./background/Figures/Sta
-uffer2Bouy_CMD.pdf>] [19 <./background/Figures/Stauffer5Bouy_PM.pdf> <./backgro
-und/Figures/Stauffer5Bouy_CMD.pdf>]
-
-LaTeX Warning: Reference `tab:params' on page 20 undefined on input line 186.
-
-
-LaTeX Warning: Reference `sect:model' on page 20 undefined on input line 186.
-
-[20]
-
-LaTeX Warning: Reference `fig:correlations' on page 21 undefined on input line 
-195.
-
-[21]
-
-LaTeX Warning: Reference `eq:colordist' on page 22 undefined on input line 225.
-
-
-[22]
-
-LaTeX Warning: Reference `eq:lik-seq' on page 23 undefined on input line 233.
-
-
-LaTeX Warning: Reference `eq:colordist' on page 23 undefined on input line 233.
-
-
-[23]
-
-LaTeX Warning: Reference `figure:completeness' on page 24 undefined on input li
-ne 250.
-
-[24]
-
-LaTeX Warning: Reference `figure:Luminosities' on page 25 undefined on input li
-ne 262.
-
-
-LaTeX Warning: Reference `sect:comparisonBouy' on page 25 undefined on input li
-ne 266.
-
-[25]
-
-LaTeX Warning: Reference `sect:luminosity' on page 26 undefined on input line 2
-85.
-
-[26]
-
-LaTeX Warning: Reference `fig:MassFunction' on page 27 undefined on input line 
-287.
-
-
-LaTeX Warning: Reference `sect:luminosity' on page 27 undefined on input line 2
-87.
-
-
-LaTeX Warning: Reference `tab:fitPDSMF' on page 27 undefined on input line 289.
-
-
-
-LaTeX Warning: Reference `sect:modelselection' on page 27 undefined on input li
-ne 289.
-
-
-LaTeX Warning: Reference `fig:MassFunction' on page 27 undefined on input line 
-291.
-
-[27]
-Overfull \hbox (11.44139pt too wide) in paragraph at lines 296--310
- [] |
- []
-
-
-LaTeX Warning: Reference `sect:mass-luminosity' on page 28 undefined on input l
-ine 314.
-
-[28]
-
-LaTeX Warning: Reference `fig:PDSMFcomparison' on page 29 undefined on input li
-ne 327.
-
-
-LaTeX Warning: Reference `fig:PDSMFtest' on page 29 undefined on input line 346
-.
-
-[29]) (./thesis.bbl [30] [31
-
-] [32] [33] [34] [35] [36] [37]) [38]
+]) [8]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
  (./thesis.aux)
@@ -1194,36 +954,27 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 397.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
  ) 
 Here is how much of TeX's memory you used:
- 23276 strings out of 493109
- 406253 string characters out of 6135003
- 649274 words of memory out of 5000000
- 26290 multiletter control sequences out of 15000+600000
- 14667 words of font info for 57 fonts, out of 8000000 for 9000
+ 22910 strings out of 493109
+ 399518 string characters out of 6135003
+ 641580 words of memory out of 5000000
+ 25940 multiletter control sequences out of 15000+600000
+ 12205 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,56p,3237b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (38 pages, 303124 bytes).
+ 64i,11n,56p,3237b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (8 pages, 95840 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
+ 62 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
