@@ -1,5 +1,10 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
+  {Beichman}}]{Adams2001}
+{Adams}, J.~D., {Stauffer}, J.~R., {Monet}, D.~G., {Skrutskie}, M.~F., \&
+  {Beichman}, C.~A. 2001, \aj, 121, 2053
 
 \bibitem[{{Astraatmadja} \&
   {Bailer-Jones}(2016{\natexlab{a}})}]{2016ApJ...832..137A}
@@ -22,6 +27,12 @@
   {Bouvier}, {Cuillandre}, {Berihuete}, {Olivares}, \& {Beletsky}}]{Bouy2015}
 {Bouy}, H., {Bertin}, E., {Sarro}, L.~M., {et~al.} 2015, \aap, 577, A148
 
+\bibitem[{{Converse} \& {Stahler}(2008)}]{Converse2008}
+{Converse}, J.~M. \& {Stahler}, S.~W. 2008, \apj, 678, 431
+
+\bibitem[{{Converse} \& {Stahler}(2010)}]{Converse2010}
+{Converse}, J.~M. \& {Stahler}, S.~W. 2010, \mnras, 405, 666
+
 \bibitem[{{Galli} {et~al.}(2017){Galli}, {Moraux}, {Bouy}, {Bouvier},
   {Olivares}, \& {Teixeira}}]{Galli2017}
 {Galli}, P.~A.~B., {Moraux}, E., {Bouy}, H., {et~al.} 2017, \aap, 598, A48
@@ -32,6 +43,15 @@
 
 \bibitem[{{Guthrie}(1987)}]{Guthrie1987}
 {Guthrie}, B.~N.~G. 1987, \qjras, 28, 289
+
+\bibitem[{{King}(1962)}]{King1962}
+{King}, I. 1962, \aj, 67, 471
+
+\bibitem[{{Limber}(1961)}]{Limber1961}
+{Limber}, D.~N. 1961, \apj, 134, 537
+
+\bibitem[{{Limber}(1962)}]{Limber1962}
+{Limber}, I.~D.~N. 1962, \apj, 135, 16
 
 \bibitem[{{Lutz} \& {Kelker}(1973)}]{Lutz1973}
 {Lutz}, T.~E. \& {Kelker}, D.~H. 1973, \pasp, 85, 573
@@ -47,6 +67,21 @@ Olivares, J. \& et~al. 2017{\natexlab{a}}, submitted to {\aa}
 \bibitem[{Olivares \& et~al.(2017{\natexlab{b}})}]{Olivares2017b}
 Olivares, J. \& et~al. 2017{\natexlab{b}}, in preparation
 
+\bibitem[{{Perryman} {et~al.}(1997){Perryman}, {Lindegren}, {Kovalevsky},
+  {Hoeg}, {Bastian}, {Bernacca}, {Cr{\'e}z{\'e}}, {Donati}, {Grenon},
+  {Grewing}, {van Leeuwen}, {van der Marel}, {Mignard}, {Murray}, {Le Poole},
+  {Schrijver}, {Turon}, {Arenou}, {Froeschl{\'e}}, \&
+  {Petersen}}]{1997A&A...323L..49P}
+{Perryman}, M.~A.~C., {Lindegren}, L., {Kovalevsky}, J., {et~al.} 1997, \aap,
+  323, L49
+
+\bibitem[{{Pinfield} {et~al.}(1998){Pinfield}, {Jameson}, \&
+  {Hodgkin}}]{Pinfield1998}
+{Pinfield}, D.~J., {Jameson}, R.~F., \& {Hodgkin}, S.~T. 1998, \mnras, 299, 955
+
+\bibitem[{{Raboud} \& {Mermilliod}(1998)}]{Raboud1998}
+{Raboud}, D. \& {Mermilliod}, J.-C. 1998, \aap, 329, 101
+
 \bibitem[{Sarro {et~al.}(2014)Sarro, Bouy, Berihuete, Bertin, Moraux, Bouvier,
   Cuillandre, Barrado, \& Solano}]{Sarro2014}
 Sarro, L.~M., Bouy, H., Berihuete, A., {et~al.} 2014, Astronomy {\&}
@@ -57,10 +92,19 @@ Sarro, L.~M., Bouy, H., Berihuete, A., {et~al.} 2014, Astronomy {\&}
 {Soderblom}, D.~R., {Nelan}, E., {Benedict}, G.~F., {et~al.} 2005, \aj, 129,
   1616
 
+\bibitem[{{Stauffer} {et~al.}(2007){Stauffer}, {Hartmann}, {Fazio}, {Allen},
+  {Patten}, {Lowrance}, {Hurt}, {Rebull}, {Cutri}, {Ramirez}, {Young}, {Rieke},
+  {Gorlova}, {Muzerolle}, {Slesnick}, \& {Skrutskie}}]{Stauffer2007}
+{Stauffer}, J.~R., {Hartmann}, L.~W., {Fazio}, G.~G., {et~al.} 2007, \apjs,
+  172, 663
+
 \bibitem[{{Stauffer} {et~al.}(1998){Stauffer}, {Schultz}, \&
   {Kirkpatrick}}]{Stauffer1998}
 {Stauffer}, J.~R., {Schultz}, G., \& {Kirkpatrick}, J.~D. 1998, \apjl, 499,
   L199
+
+\bibitem[{{Trumpler}(1921)}]{Trumpler1921}
+{Trumpler}, R.~J. 1921, Lick Observatory Bulletin, 10, 110
 
 \bibitem[{{van Leeuwen}(1999)}]{1999A&A...341L..71V}
 {van Leeuwen}, F. 1999, \aap, 341, L71
