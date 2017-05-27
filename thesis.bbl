@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{31}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -53,6 +53,9 @@
 \bibitem[{{Limber}(1962)}]{Limber1962}
 {Limber}, I.~D.~N. 1962, \apj, 135, 16
 
+\bibitem[{{Loktin}(2006)}]{2006ARep...50..714L}
+{Loktin}, A.~V. 2006, Astronomy Reports, 50, 714
+
 \bibitem[{{Lutz} \& {Kelker}(1973)}]{Lutz1973}
 {Lutz}, T.~E. \& {Kelker}, D.~H. 1973, \pasp, 85, 573
 
@@ -79,6 +82,9 @@ Olivares, J. \& et~al. 2017{\natexlab{b}}, in preparation
   {Hodgkin}}]{Pinfield1998}
 {Pinfield}, D.~J., {Jameson}, R.~F., \& {Hodgkin}, S.~T. 1998, \mnras, 299, 955
 
+\bibitem[{{Pritchard}(1884)}]{1884MNRAS..44..355P}
+{Pritchard}, C. 1884, \mnras, 44, 355
+
 \bibitem[{{Raboud} \& {Mermilliod}(1998)}]{Raboud1998}
 {Raboud}, D. \& {Mermilliod}, J.-C. 1998, \aap, 329, 101
 
@@ -102,6 +108,9 @@ Sarro, L.~M., Bouy, H., Berihuete, A., {et~al.} 2014, Astronomy {\&}
   {Kirkpatrick}}]{Stauffer1998}
 {Stauffer}, J.~R., {Schultz}, G., \& {Kirkpatrick}, J.~D. 1998, \apjl, 499,
   L199
+
+\bibitem[{{Titus}(1938)}]{1938AJ.....47...25T}
+{Titus}, J. 1938, \aj, 47, 25
 
 \bibitem[{{Trumpler}(1921)}]{Trumpler1921}
 {Trumpler}, R.~J. 1921, Lick Observatory Bulletin, 10, 110
