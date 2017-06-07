@@ -1,10 +1,27 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{45}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
-\bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
-  {Beichman}}]{Adams2001}
+\bibitem[{{Adams} {et~al.}(2001{\natexlab{a}}){Adams}, {Stauffer}, {Monet},
+  {Skrutskie}, \& {Beichman}}]{Adams2001}
 {Adams}, J.~D., {Stauffer}, J.~R., {Monet}, D.~G., {Skrutskie}, M.~F., \&
-  {Beichman}, C.~A. 2001, \aj, 121, 2053
+  {Beichman}, C.~A. 2001{\natexlab{a}}, \aj, 121, 2053
+
+\bibitem[{{Adams} {et~al.}(2001{\natexlab{b}}){Adams}, {Stauffer}, {Monet},
+  {Skrutskie}, \& {Beichman}}]{2001AJ....121.2053A}
+{Adams}, J.~D., {Stauffer}, J.~R., {Monet}, D.~G., {Skrutskie}, M.~F., \&
+  {Beichman}, C.~A. 2001{\natexlab{b}}, \aj, 121, 2053
+
+\bibitem[{{Adams}(1904)}]{1904ApJ....19..338A}
+{Adams}, W.~S. 1904, \apj, 19
+
+\bibitem[{{Allard}(2014)}]{2014IAUS..299..271A}
+{Allard}, F. 2014, in IAU Symposium, Vol. 299, Exploring the Formation and
+  Evolution of Planetary Systems, ed. M.~{Booth}, B.~C. {Matthews}, \& J.~R.
+  {Graham}, 271--272
+
+\bibitem[{{Allard} {et~al.}(2013){Allard}, {Homeier}, \&
+  {Freytag}}]{2013MmSAI..84.1053A}
+{Allard}, F., {Homeier}, D., \& {Freytag}, B. 2013, \memsai, 84, 1053
 
 \bibitem[{{Astraatmadja} \&
   {Bailer-Jones}(2016{\natexlab{a}})}]{2016ApJ...832..137A}
@@ -19,6 +36,11 @@
 \bibitem[{{Bailer-Jones}(2015)}]{2015PASP..127..994B}
 {Bailer-Jones}, C.~A.~L. 2015, \pasp, 127, 994
 
+\bibitem[{{Baraffe} {et~al.}(1998){Baraffe}, {Chabrier}, {Allard}, \&
+  {Hauschildt}}]{1998A&A...337..403B}
+{Baraffe}, I., {Chabrier}, G., {Allard}, F., \& {Hauschildt}, P.~H. 1998, \aap,
+  337, 403
+
 \bibitem[{{Blaauw}(1964)}]{1964IAUS...20...50B}
 {Blaauw}, A. 1964, in IAU Symposium, Vol.~20, The Galaxy and the Magellanic
   Clouds, ed. F.~J. {Kerr}, 50
@@ -26,6 +48,11 @@
 \bibitem[{{Bouy} {et~al.}(2015){Bouy}, {Bertin}, {Sarro}, {Barrado}, {Moraux},
   {Bouvier}, {Cuillandre}, {Berihuete}, {Olivares}, \& {Beletsky}}]{Bouy2015}
 {Bouy}, H., {Bertin}, E., {Sarro}, L.~M., {et~al.} 2015, \aap, 577, A148
+
+\bibitem[{{Chabrier}(2005)}]{Chabrier2005}
+{Chabrier}, G. 2005, in Astrophysics and Space Science Library, Vol. 327, The
+  Initial Mass Function 50 Years Later, ed. E.~{Corbelli}, F.~{Palla}, \&
+  H.~{Zinnecker}, 41
 
 \bibitem[{{Converse} \& {Stahler}(2008)}]{Converse2008}
 {Converse}, J.~M. \& {Stahler}, S.~W. 2008, \apj, 678, 431
@@ -44,14 +71,32 @@
 \bibitem[{{Guthrie}(1987)}]{Guthrie1987}
 {Guthrie}, B.~N.~G. 1987, \qjras, 28, 289
 
+\bibitem[{{Hambly} \& {Jameson}(1991)}]{Hambly1991}
+{Hambly}, N.~C. \& {Jameson}, R.~F. 1991, \mnras, 249, 137
+
+\bibitem[{{Hertzsprung}(1947)}]{Hertzsprung1947}
+{Hertzsprung}, E. 1947, Annalen van de Sterrewacht te Leiden, 19, A1
+
+\bibitem[{{Johnson} \& {Mitchell}(1958)}]{Johnson1958}
+{Johnson}, H.~L. \& {Mitchell}, R.~I. 1958, \apj, 128, 31
+
+\bibitem[{{Jones}(1970)}]{1970AJ.....75..563J}
+{Jones}, B.~F. 1970, \aj, 75, 563
+
 \bibitem[{{King}(1962)}]{King1962}
 {King}, I. 1962, \aj, 67, 471
+
+\bibitem[{{Lee} \& {Sung}(1995)}]{1995JKAS...28...45L}
+{Lee}, S.-W. \& {Sung}, H. 1995, Journal of Korean Astronomical Society, 28, 45
 
 \bibitem[{{Limber}(1961)}]{Limber1961}
 {Limber}, D.~N. 1961, \apj, 134, 537
 
 \bibitem[{{Limber}(1962)}]{Limber1962}
 {Limber}, I.~D.~N. 1962, \apj, 135, 16
+
+\bibitem[{{Lodieu} {et~al.}(2012){Lodieu}, {Deacon}, \& {Hambly}}]{Lodieu2012}
+{Lodieu}, N., {Deacon}, N.~R., \& {Hambly}, N.~C. 2012, \mnras, 422, 1495
 
 \bibitem[{{Loktin}(2006)}]{2006ARep...50..714L}
 {Loktin}, A.~V. 2006, Astronomy Reports, 50, 714
@@ -115,10 +160,17 @@ Sarro, L.~M., Bouy, H., Berihuete, A., {et~al.} 2014, Astronomy {\&}
 \bibitem[{{Trumpler}(1921)}]{Trumpler1921}
 {Trumpler}, R.~J. 1921, Lick Observatory Bulletin, 10, 110
 
+\bibitem[{{van Leeuwen}(1980)}]{1980IAUS...85..157V}
+{van Leeuwen}, F. 1980, in IAU Symposium, Vol.~85, Star Clusters, ed. J.~E.
+  {Hesser}, 157--162
+
 \bibitem[{{van Leeuwen}(1999)}]{1999A&A...341L..71V}
 {van Leeuwen}, F. 1999, \aap, 341, L71
 
 \bibitem[{{van Leeuwen}(2009)}]{2009A&A...497..209V}
 {van Leeuwen}, F. 2009, \aap, 497, 209
+
+\bibitem[{{Woolley}(1956)}]{1956MNRAS.116..296W}
+{Woolley}, R.~V.~D.~R. 1956, \mnras, 116, 296
 
 \end{thebibliography}
