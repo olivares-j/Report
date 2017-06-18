@@ -98,7 +98,7 @@ In machine learning and data mining is sometimes useful to analyse the performan
 
  
 \subsection{Comparison with the literature}
-In Chap. \ref{chap:pleiades} I mentioned that the most important works on the Pleiades members are those of \citet{Stauffer2007,Lodieu2012,Sarro2014,Bouy2015}. In this section I will compare the list of candidate I members found with the most recent study of the Pleiades members, that of \citet{Bouy2015}. Later, for the sake of completeness, I will compare my list of candidate members with the compilation made by \citet{Stauffer2007}.  
+In Chapter \ref{chap:pleiades}, I mentioned that the most important works on the Pleiades members are those of \citet{Stauffer2007,Lodieu2012,Sarro2014,Bouy2015}. In this section I will compare the list of candidate I members found with the most recent study of the Pleiades members, that of \citet{Bouy2015}. Later, for the sake of completeness, I will compare my list of candidate members with the compilation made by \citet{Stauffer2007}.  
 
 \subsubsection{Candidate members from \citet{Bouy2015}}
 \label{sect:comparisonBouy}
@@ -130,7 +130,7 @@ Summarising, the discrepancies between our individual membership probabilities a
  \begin{figure*}[htbp]
 \begin{center}
 %\resizebox{\hsize}{!}{\includegraphics[page=1]{figs/NewOnes.pdf}\includegraphics[page=5]{figs/NewOnes.pdf}}
-\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the new candidate members found in this work. Captions as in Fig. \ref{figure:probabilities}.}
+\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the new candidate members found in this work. XXXXX.}
 \label{figure:newones}
 \end{center}
 \end{figure*}
@@ -138,7 +138,7 @@ Summarising, the discrepancies between our individual membership probabilities a
  \begin{figure*}[htbp]
 \begin{center}
 %\resizebox{\hsize}{!}{\includegraphics[page=1]{figs/Rejecteds.pdf}\includegraphics[page=5]{figs/Rejecteds.pdf}}
-\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the rejected candidate members of \citet{Bouy2015}. Captions as in Fig. \ref{figure:probabilities}.}
+\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the rejected candidate members of \citet{Bouy2015}. Captions as in Fig. \ref{figure:newones}.}
 \label{figure:rejecteds}
 \end{center}
 \end{figure*}
@@ -150,7 +150,7 @@ Summarising, the discrepancies between our individual membership probabilities a
 \label{figure:rejectedsCOLORS}
 \end{center}
 \end{figure*}
-\subsubsection{Candidate members from \citet{Stauffer2007}}.
+\subsubsection{Candidate members from \citet{Stauffer2007}}
 
 \citet{Stauffer2007} published two list of candidate members. The first one contains 1417 objects compiled from the literature (their Table 2). These objects were classified as candidate members by several authors along modern astronomy. As \citet{Stauffer2007} mention, this list is inhomogeneous, incomplete and certainly includes non members. Their second list contains 55 candidate members  (their Table 5) found using infrared photometry, and proper motions.
 
@@ -183,9 +183,10 @@ From the 21 rejected objects, 14 of them lay below the cluster photometric seque
 \section{The statistical distributions of the Pleiades cluster.}
 Once the objective probability threshold has been established and the results of the classification analysed and compared with the literature. Now I present the results of the statistical distributions that describe the cluster population. These distributions result directly or indirectly from the posterior distribution of the parameters in our model. Here I summarise these parametric posterior distributions, together with some of their correlations. Also, I present and analysis on the way these posterior distribution help us to update our prior knowledge.
 
-In Table \ref{tab:params} I summarise the posterior distribution of the parameters in our model. I use as statistic and uncertainty the mode and the 16th and 84th percentiles, respectively. The parameter names correspond to those given in Sect. \ref{sect:model}. 
+In Table \ref{tab:params} I summarise the posterior distribution of the parameters in our model. I use as statistic and uncertainty the mode and the 16th and 84th percentiles, respectively. The parameter names correspond to those given in Sect. \ref{sect:priors}. 
 
-%\input{figs/TableParameters.txt}
+
+%\input{background/Tables/TableParameters.txt}
 
 \subsection{Updating the prior knowledge}
 As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the bare values and the correlations among them. The values indicate, for example, that the number of  GMM modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian went both to near zero values. A better model would be that in which no computing power will be lost in inferring negligible parameters.

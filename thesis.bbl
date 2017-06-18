@@ -1,4 +1,4 @@
-\begin{thebibliography}{145}
+\begin{thebibliography}{146}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{cit(????)}]{cite-key}
@@ -143,6 +143,11 @@ Brooks, S., Gelman, A., Jones, G., \& Meng, X. 2011, Handbook of Markov Chain
 \bibitem[{{Cardelli} {et~al.}(1989){Cardelli}, {Clayton}, \&
   {Mathis}}]{Cardelli1989}
 {Cardelli}, J.~A., {Clayton}, G.~C., \& {Mathis}, J.~S. 1989, \apj, 345, 245
+
+\bibitem[{Carpenter {et~al.}(2017)Carpenter, Gelman, Hoffman, Lee, Goodrich,
+  Betancourt, Brubaker, Guo, Li, \& Riddell}]{Stan}
+Carpenter, B., Gelman, A., Hoffman, M., {et~al.} 2017, Journal of Statistical
+  Software, Articles, 76, 1
 
 \bibitem[{{Chabrier}(2003)}]{Chabrier2003}
 {Chabrier}, G. 2003, \pasp, 115, 763

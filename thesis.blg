@@ -3,52 +3,51 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: aa.bst
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "Stan"
 Warning--I didn't find a database entry for ""
 Warning--to sort, need editor or key in cite-key
 Warning--empty year in cite-key; set to ????
 Warning--no book title in cite-key
 Warning--empty pages in Smyth1998
 Warning--empty journal in Stoneking2014
-You've used 145 entries,
+You've used 146 entries,
             2947 wiz_defined-function locations,
-            1595 strings with 30677 characters,
-and the built_in function-call counts, 67428 in all, are:
-= -- 5678
-> -- 4770
+            1600 strings with 30940 characters,
+and the built_in function-call counts, 68173 in all, are:
+= -- 5735
+> -- 4862
 < -- 91
-+ -- 1604
-- -- 1436
-* -- 5469
-:= -- 12334
-add.period$ -- 145
-call.type$ -- 145
-change.case$ -- 1055
-chr.to.int$ -- 146
-cite$ -- 152
-duplicate$ -- 2787
-empty$ -- 4059
-format.name$ -- 1836
-if$ -- 13435
++ -- 1635
+- -- 1466
+* -- 5539
+:= -- 12477
+add.period$ -- 146
+call.type$ -- 146
+change.case$ -- 1069
+chr.to.int$ -- 147
+cite$ -- 153
+duplicate$ -- 2805
+empty$ -- 4083
+format.name$ -- 1868
+if$ -- 13578
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 125
-newline$ -- 439
-num.names$ -- 588
-pop$ -- 1140
+missing$ -- 126
+newline$ -- 442
+num.names$ -- 592
+pop$ -- 1154
 preamble$ -- 1
-purify$ -- 1049
+purify$ -- 1063
 quote$ -- 0
-skip$ -- 2444
+skip$ -- 2457
 stack$ -- 0
-substring$ -- 3038
+substring$ -- 3053
 swap$ -- 138
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1275
+type$ -- 1284
 warning$ -- 5
-while$ -- 580
+while$ -- 584
 width$ -- 0
-write$ -- 1446
-(There were 7 warnings)
+write$ -- 1456
+(There were 6 warnings)
