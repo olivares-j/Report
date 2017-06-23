@@ -5,6 +5,8 @@ In this Chapter I present the results of applying the methodology explained in C
 
 \section{Performance of the classifier}
 \label{sect:classifier}
+
+THE TPR AND CR OF SARRO ARE NOT DIRECTLY COMPARABLE WITH THOSE OF BHM. SOFTEN THE COMPARISONS.
 As mentioned earlier, the main objective of the methodology of the BHM is the statistical characterisation of the NYOC populations. As a by product, it also obtains individual membership probability distributions. Using these last ones, we are able to directly classify objects into cluster and field members, providing that an objective probability threshold has been established. The aim of this section is to explain the procedure to find the objective threshold by means of synthetic data. As any other measured property, this classification has an uncertainty, thus, the purpose of this section is also to quantify this uncertainty. 
 
 That said, in order to properly characterise our classifier, I test it over synthetic data sets that resemble the real data. An ideal test to our classifier will be to apply it over well known dataset in which tags of cluster and field members were already present. However, if we may have access to these tags, a classifier may not be needed. The Pleiades cluster being \emph{the} most studied cluster in history, it is the  NYOC with most of these tags. This is the reason for which we decided to benchmark our methodology on it. Nevertheless, the problem of the synthetic data remains since the low-mass end of the cluster still is \emph{terra ignota}. To over come this issue, we decided to create synthetic data sets under the assumption that our cluster and field models resemble the real data.  We are aware that these models are far from perfect, but so far it is the best we can do. 
@@ -17,7 +19,7 @@ One further consideration. The synthetic analysis requires at least three runs: 
 
 These $10^4$ objects are "closer" to the cluster in the sense of membership probability than the remaining 9$\times 10^4$ objects. Therefore, the field probability density rendered by this sample, compared to that of the larger $10^5$ sample, has the following properties: it is more concentrated and has larger values near the cluster region. Since the $10^5$ sample is largely dominated by the field population, its density peaks far form the cluster proper motion and photometric sequences. Densities are normalised, thus more of the density mass of this large sample is far from the cluster region. 
 
-Given the previous considerations, we assume that results obtained on the smaller $10^4$ sample are more contaminated, and have lower recovery rates than those obtained on the larger and more distant $10^5$ sample. On the one hand, the higher contamination rate results from the larger concentration of the field density around the cluster region.  On the other hand, the lower recovery rates arises from the higher values of the field probability density. In simple words, when we define the field in a more restricted region around the cluster, both populations become more entangled, thus they become more difficult to separate. Therefore, we assume that the results obtained on the smaller $10^4$ sample represent upper and lower limits to the contamination and recovery rates of the larger $10^5$ sample, respectively.
+CHANGE THIS PARAGRAPH. THE ASSUMPTIONS MEDE HERE ARE NOT ENTIRELY VALID. IT IS BETTER TO SAY THAT WE ASSUME THE CR AND TPR OF THE 10ˆ4 SAMPLE WILL BE RAOUGHLY THE SAME IN THE 10ˆ5 GIVEN THE OBSERVED PRBABILITIES OF THE CONTAMINANTS. Given the previous considerations, we assume that results obtained on the smaller $10^4$ sample are more contaminated, and have lower recovery rates than those obtained on the larger and more distant $10^5$ sample. On the one hand, the higher contamination rate results from the larger concentration of the field density around the cluster region.  On the other hand, the lower recovery rates arises from the higher values of the field probability density. In simple words, when we define the field in a more restricted region around the cluster, both populations become more entangled, thus they become more difficult to separate. Therefore, we assume that the results obtained on the smaller $10^4$ sample represent upper and lower limits to the contamination and recovery rates of the larger $10^5$ sample, respectively.
 
 Briefly, to create the synthetic data set, the procedure is the following. First, using the methodology of the previous Chapter, I obtain a sample of the posterior distribution of the parameters given the $10^4$ real data set. Then, I chose the particle with highest posterior probability as the MAP estimate of the posterior distribution. Using this particle positions I generate five synthetic data sets of $10^4$ objects each. Then, I tag these objects according to their parent population: cluster or field. Then, using the synthetically observed values I estimate their uncertainties and missing value patterns (more details  below). Finally, I run the model over these five synthetic samples and compare the measured tags with the true ones as function of the probability threshold.
 
@@ -56,6 +58,11 @@ In simple words, what can be observed from the previous analysis is that our met
 
 Nonetheless, we stress the fact that the previous comparison is not straight forward. The following reasons must be born in mind. First, \citet{Sarro2014} infer their cluster model using only non-missing-value objects, later they apply that model to objects with and without missing values. Second, their synthetic data set and ours are essentially different. They are constructed with different generative models, different number of elements, and different missing value patterns. 
 
+EXPLAIN THE PARAGRAPH WITH MORE DETAIL
+
+SEARCH AND REPLACE DATASET -> DATA SET.
+
+COMPLETE AND INCOMPLETE OBSERVABLES? VECTOR OF OBSERVATIONS.
 Now, I describe the procedure to set an objective probability threshold. This probability threshold, although not needed to obtain the distribution of the cluster population, is needed however to objectively classify an object. Since real data contain missing values, there is no need to establish this threshold for the non-missing values case. There are different approaches to establish this probability threshold, however I only use the approach of maximum accuracy (ACC). 
 
 Figure \ref{fig:tfpr} shows the ACC and the PPV of our classifier when applied on synthetic data with missing values. The lines and the grey regions depict, respectively, the mean and the maximum deviations of the five synthetic data set results. We use these last ones as the uncertainty of our estimates. The mean of the highest accuracy, ACC=$96.5\pm0.1$\%, happens at probability threshold $p_t = 0.84$. At this threshold the CR is $4.3\pm0.2$\%, the TPR is $90.0\pm0.05$\%, the ACC is , and the PPV is $95.6\pm0.2$\%. 
@@ -100,15 +107,22 @@ In machine learning and data mining is sometimes useful to analyse the performan
 \subsection{Comparison with the literature}
 In Chapter \ref{chap:pleiades}, I mentioned that the most important works on the Pleiades members are those of \citet{Stauffer2007,Lodieu2012,Sarro2014,Bouy2015}. In this section I will compare the list of candidate I members found with the most recent study of the Pleiades members, that of \citet{Bouy2015}. Later, for the sake of completeness, I will compare my list of candidate members with the compilation made by \citet{Stauffer2007}.  
 
+IS ALL THIS SECTIONING REQUIRED.
+
+REJECTED CANDIDATES? OF WHOM? BY WHOM? AVOID CONFUSSION.
 \subsubsection{Candidate members from \citet{Bouy2015}}
 \label{sect:comparisonBouy}
 The methodology of this work, although essentially different from that of \citet{Bouy2015}, the fact that both share the data set and use the same observables, allows a direct comparison between them. When using their objective probability thresholds, as shown by Fig. \ref{figure:HM-SBB}, both methodologies agree on the outstanding $99.6$\% of the classified objects. Concerning the candidate members, they also agree on $\approx 90\%$ of them. Nevertheless, the discrepancies are worthy of discussion.
 
 The rejected candidates of \citet{Bouy2015} (lower right box of Fig. \ref{figure:HM-SBB}) amount to 12\% of their total number of candidate members. This value is 4.7\% higher than the contamination rate reported by \citet{Sarro2014}: $7.3\pm1.4$\%. I will not reject a priori these objects as candidate members because, as mentioned in Sect. \ref{sect:classifier}, our methodology recovers 4\% less members when compared to that of \citet{Sarro2014}(see Fig. \ref{fig:tfpr}). The majority, $85\%$, of these objects have missing values, which indicates that these objects require future follow up. Even the 37 completely observed and rejected candidates can not be discarded as true members due to the fact that our methodology losses 6\% of the true cluster members (see Fig. \ref{fig:tfpr}).  
 
-On the other hand, our new candidates (upper left box of Fig. \ref{figure:HM-SBB} ) amount to 10\% of \citet{Bouy2015} candidates. This figure is higher than the $4.3\pm0.2$\% CR reported on the previous Section. Thus, it indicates that up to $\sim6\%$ of these objects can be true cluster members. From these objects, one half have completely observed values, thus 3\% of our new candidates are completely observed objects. This last figure agrees perfectly well with the 3\% of non recovered members reported by \citet{Sarro2014}. 
+CHANGE THIS PARAGRAPH. THE SAMPLES ARE NOT THE SAME THUS 10\% IS MEANINGLESS.On the other hand, our new candidates (upper left box of Fig. \ref{figure:HM-SBB} ) amount to 10\% of \citet{Bouy2015} candidates. This figure is higher than the $4.3\pm0.2$\% CR reported on the previous Section. Thus, it indicates that up to $\sim6\%$ of these objects can be true cluster members. From these objects, one half have completely observed values, thus 3\% of our new candidates are completely observed objects. This last figure agrees perfectly well with the 3\% of non recovered members reported by \citet{Sarro2014}. 
 
 In Figs. \ref{figure:newones} and \ref{figure:rejecteds} I show the proper motions and $K_s$ vs $i-K_s$ CMD projection spaces of our new candidates and the rejected ones  of \citet{Bouy2015}. In the following I elaborate on their properties.
+
+UNITS WITHIN MATHEMATICAL EXPERSSION.
+
+MEDIAN SYMBOL? SUBINICES? CHANGE ALSO IN THE PAPER.
 
 The new candidate members have proper motions uncertainties whose median, $\overline{\mu_{\alpha,\delta}}=\{1.33,1.33\} \ \ mas/yr$, is two times larger than those of the candidate members in common with \citet{Bouy2015}, median $\overline{\mu_{\alpha,\delta}}=\{0.65,0.65\} \ \ mas/yr$. Also, as shown by Fig. \ref{figure:newones}, the majority of the new candidate members, 148, have probabilities lower than 0.95, are located in a halo around the locus of the cluster proper motions, and on top of the cluster sequence in the $K_s$ vs $i-K_s$ CMD. On the contrary, the new candidates with probabilities higher than 0.95, which are 39, lay in the centre of the cluster proper motions and fall above the cluster sequence in the $K_s$ vs $i-K_s$ CMD. Thus, I hypothesise that: i) Objects whose photometry is compatible with the cluster sequence but are in the proper motions halo, have higher membership probabilities in our methodology due to the increased flexibility of the cluster proper motions model: it now has four gaussians instead of the two of \citet{Bouy2015}. And ii) objects near the centre of the cluster proper motions but located above the cluster photometric sequence sequence, are multiple systems \cite[probably triple systems which can amount to 4\% of the population][]{Duquennoy1991} with an increased membership probability due to our more flexible photometric model of the cluster and equal-mass binaries sequences.
 
@@ -151,6 +165,8 @@ Summarising, the discrepancies between our individual membership probabilities a
 \end{center}
 \end{figure*}
 \subsubsection{Candidate members from \citet{Stauffer2007}}
+
+REFER AS LIST I AND LIST II AVOID CONFUSION.
 
 \citet{Stauffer2007} published two list of candidate members. The first one contains 1417 objects compiled from the literature (their Table 2). These objects were classified as candidate members by several authors along modern astronomy. As \citet{Stauffer2007} mention, this list is inhomogeneous, incomplete and certainly includes non members. Their second list contains 55 candidate members  (their Table 5) found using infrared photometry, and proper motions.
 
@@ -223,7 +239,9 @@ To derive the $J,H,K_s$ magnitude distributions I start with the colour index, $
 
 In the following, I exemplify the process of derivation on the $K_s$ band. Similar transformations apply to the rest of the bands. 
 To obtain the distribution of $K_s$ for the cluster objects, I take the colour index $CI$ as a nuisance parameter, later I marginalise it. Thus, 
+REMOVE CI FROM PCI IT IS OBVIUS.
 
+MARGINALISATION OF CI OVER CI OBSERVED.
 \begin{align}
 p(K_s | \boldsymbol{\theta}_c) & = \int p(K_s,CI | \boldsymbol{\theta}_c) \cdot dCI =  \int p(K_s | CI ,\boldsymbol{\theta}_c) \cdot p(CI|\boldsymbol{\theta}_c)\cdot dCI. \nonumber
 \end{align}

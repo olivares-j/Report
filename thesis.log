@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  22 JUN 2017 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  23 JUN 2017 17:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -158,11 +158,11 @@ Package: usebib 2012/04/13 v1.0a Reusing bib files
 ) (./biblio.bib)
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 78.
+less on input line 81.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 80.
+less on input line 83.
 
 (./definitions.tex
 (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -882,21 +882,21 @@ LaTeX Warning: Label `eq:PSOacc' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Info: Redefining \microtypecontext on input line 115.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Info: Redefining \microtypecontext on input line 118.
 
 
 Package microtype Warning: `draft' option active.
@@ -938,23 +938,23 @@ e
 ))
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count173
-LaTeX Font Info:    Try loading font information for U+msa on input line 115.
+LaTeX Font Info:    Try loading font information for U+msa on input line 118.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 115.
+LaTeX Font Info:    Try loading font information for U+msb on input line 118.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.47998pt on input line 115.
+Package xypdf Info: Line width: 0.47998pt on input line 118.
 \AtBeginShipoutBox=\box49
 
 
 Package hyperref Warning: Draft mode on.
 
-Package hyperref Info: Link coloring ON on input line 115.
+Package hyperref Info: Link coloring ON on input line 118.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -963,9 +963,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count174
 )
-LaTeX Info: Redefining \ref on input line 115.
-LaTeX Info: Redefining \pageref on input line 115.
-LaTeX Info: Redefining \nameref on input line 115.
+LaTeX Info: Redefining \ref on input line 118.
+LaTeX Info: Redefining \pageref on input line 118.
+LaTeX Info: Redefining \nameref on input line 118.
 
 (./introduction/introduction.tex
 Chapter 1.
@@ -988,191 +988,177 @@ nput line 9.
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-[2]) (./background/Chapter2.tex [3]
+])
+(./background/Chapter2.tex [2]
 Chapter 2.
-[4
+[3
 
-] [5] [6]
-<background/Figures/F13_Galli2017.pdf, id=34, 252.00171pt x 225.09496pt>
+] [4]
+<background/Figures/F13_Galli2017.pdf, id=28, 252.00171pt x 225.09496pt>
 File: background/Figures/F13_Galli2017.pdf Graphic file (type pdf)
 
 <use background/Figures/F13_Galli2017.pdf>
 Package pdftex.def Info: background/Figures/F13_Galli2017.pdf used on input lin
-e 33.
-(pdftex.def)             Requested size: 159.26947pt x 142.26378pt.
+e 34.
+(pdftex.def)             Requested size: 254.83116pt x 227.62204pt.
 
-<background/Figures/Parallax_GaiaCol2017.pdf, id=35, 361.35pt x 361.35pt>
+<background/Figures/Parallax_GaiaCol2017.pdf, id=29, 361.35pt x 361.35pt>
 File: background/Figures/Parallax_GaiaCol2017.pdf Graphic file (type pdf)
 
 <use background/Figures/Parallax_GaiaCol2017.pdf>
 Package pdftex.def Info: background/Figures/Parallax_GaiaCol2017.pdf used on in
-put line 38.
-(pdftex.def)             Requested size: 142.26578pt x 142.26378pt.
- [7 <./background/Figures/F13_Galli2017.pdf> <./background/Figures/Parallax_Gai
-aCol2017.pdf>] [8]
-<background/Figures/F1_Converse2010.pdf, id=110, 206.39175pt x 171.59598pt>
+put line 40.
+(pdftex.def)             Requested size: 227.62413pt x 227.62204pt.
+ [5] [6 <./background/Figures/F13_Galli2017.pdf> <./background/Figures/Parallax
+_GaiaCol2017.pdf>] [7]
+<background/Figures/F1_Converse2010.pdf, id=107, 206.39175pt x 171.59598pt>
 File: background/Figures/F1_Converse2010.pdf Graphic file (type pdf)
 
 <use background/Figures/F1_Converse2010.pdf>
 Package pdftex.def Info: background/Figures/F1_Converse2010.pdf used on input l
-ine 68.
-(pdftex.def)             Requested size: 171.113pt x 142.26378pt.
+ine 71.
+(pdftex.def)             Requested size: 205.33308pt x 170.71652pt.
 
-<background/Figures/F8_Adams2001.pdf, id=111, 252.01744pt x 244.36813pt>
+<background/Figures/F8_Adams2001.pdf, id=108, 252.01744pt x 244.36813pt>
 File: background/Figures/F8_Adams2001.pdf Graphic file (type pdf)
 
 <use background/Figures/F8_Adams2001.pdf>
 Package pdftex.def Info: background/Figures/F8_Adams2001.pdf used on input line
- 73.
-(pdftex.def)             Requested size: 146.72011pt x 142.26378pt.
- [9]
+ 76.
+(pdftex.def)             Requested size: 176.0649pt x 170.71652pt.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¶ in font cmr12!
- [10 <./background/Figures/F1_Converse2010.pdf> <./background/Figures/F8_Adams2
-001.pdf>] [11]
-<background/Figures/F11_Galli2017.pdf, id=231, 251.95209pt x 248.81186pt>
+ [8 <./background/Figures/F1_Converse2010.pdf> <./background/Figures/F8_Adams20
+01.pdf>]
+<background/Figures/F11_Galli2017.pdf, id=222, 251.95209pt x 248.81186pt>
 File: background/Figures/F11_Galli2017.pdf Graphic file (type pdf)
 
 <use background/Figures/F11_Galli2017.pdf>
 Package pdftex.def Info: background/Figures/F11_Galli2017.pdf used on input lin
-e 99.
-(pdftex.def)             Requested size: 419.16621pt x 413.96153pt.
- [12 <./background/Figures/F11_Galli2017.pdf>]
-<background/Figures/F2_Trumpler1921.pdf, id=322, 229.09422pt x 159.77231pt>
+e 102.
+(pdftex.def)             Requested size: 455.24408pt x 449.59222pt.
+ [9]
+<background/Figures/F2_Trumpler1921.pdf, id=226, 229.09422pt x 159.77231pt>
 File: background/Figures/F2_Trumpler1921.pdf Graphic file (type pdf)
 
 <use background/Figures/F2_Trumpler1921.pdf>
 Package pdftex.def Info: background/Figures/F2_Trumpler1921.pdf used on input l
-ine 111.
-(pdftex.def)             Requested size: 419.16621pt x 292.36823pt.
-
-<background/Figures/F3_Johnson1958.pdf, id=323, 255.89432pt x 162.2371pt>
+ine 114.
+(pdftex.def)             Requested size: 455.24408pt x 317.5325pt.
+ [10 <./background/Figures/F11_Galli2017.pdf>]
+<background/Figures/F3_Johnson1958.pdf, id=317, 255.89432pt x 162.2371pt>
 File: background/Figures/F3_Johnson1958.pdf Graphic file (type pdf)
 
 <use background/Figures/F3_Johnson1958.pdf>
 Package pdftex.def Info: background/Figures/F3_Johnson1958.pdf used on input li
-ne 123.
+ne 126.
 (pdftex.def)             Requested size: 359.0266pt x 227.62204pt.
 
-<background/Figures/F9_Lodieu2012.pdf, id=324, 221.0267pt x 225.92645pt>
+<background/Figures/F9_Lodieu2012.pdf, id=318, 221.0267pt x 225.92645pt>
 File: background/Figures/F9_Lodieu2012.pdf Graphic file (type pdf)
 
 <use background/Figures/F9_Lodieu2012.pdf>
 Package pdftex.def Info: background/Figures/F9_Lodieu2012.pdf used on input lin
-e 143.
+e 146.
 (pdftex.def)             Requested size: 222.68883pt x 227.62204pt.
- [13]
-<background/Figures/F8_Bouy2015.pdf, id=329, 504.21866pt x 281.27414pt>
+
+<background/Figures/F8_Bouy2015.pdf, id=319, 504.21866pt x 281.27414pt>
 File: background/Figures/F8_Bouy2015.pdf Graphic file (type pdf)
 
 <use background/Figures/F8_Bouy2015.pdf>
 Package pdftex.def Info: background/Figures/F8_Bouy2015.pdf used on input line 
-154.
-(pdftex.def)             Requested size: 419.16621pt x 233.83943pt.
- [14 <./background/Figures/F2_Trumpler1921.pdf>] [15 <./background/Figures/F3_J
-ohnson1958.pdf>]
-<background/Figures/F11_Hambly1991.pdf, id=363, 257.66653pt x 191.70651pt>
+157.
+(pdftex.def)             Requested size: 455.24408pt x 253.96841pt.
+ [11 <./background/Figures/F2_Trumpler1921.pdf>] [12 <./background/Figures/F3_J
+ohnson1958.pdf> <./background/Figures/F9_Lodieu2012.pdf>] [13 <./background/Fig
+ures/F8_Bouy2015.pdf>]
+<background/Figures/F11_Hambly1991.pdf, id=449, 257.66653pt x 191.70651pt>
 File: background/Figures/F11_Hambly1991.pdf Graphic file (type pdf)
 
 <use background/Figures/F11_Hambly1991.pdf>
 Package pdftex.def Info: background/Figures/F11_Hambly1991.pdf used on input li
-ne 170.
+ne 173.
 (pdftex.def)             Requested size: 305.94286pt x 227.62204pt.
- [16 <./background/Figures/F9_Lodieu2012.pdf>] [17 <./background/Figures/F8_Bou
-y2015.pdf>] [18 <./background/Figures/F11_Hambly1991.pdf>]
-<background/Figures/F9b_Lodieu2012.pdf, id=481, 219.95515pt x 227.21075pt>
+ [14 <./background/Figures/F11_Hambly1991.pdf>]
+<background/Figures/F9b_Lodieu2012.pdf, id=469, 219.95515pt x 227.21075pt>
 File: background/Figures/F9b_Lodieu2012.pdf Graphic file (type pdf)
 
 <use background/Figures/F9b_Lodieu2012.pdf>
 Package pdftex.def Info: background/Figures/F9b_Lodieu2012.pdf used on input li
-ne 195.
+ne 198.
 (pdftex.def)             Requested size: 220.35735pt x 227.62204pt.
 
-<background/Figures/F9_Bouy2015.pdf, id=482, 507.19308pt x 335.7382pt>
+<background/Figures/F9_Bouy2015.pdf, id=470, 507.19308pt x 335.7382pt>
 File: background/Figures/F9_Bouy2015.pdf Graphic file (type pdf)
 
 <use background/Figures/F9_Bouy2015.pdf>
 Package pdftex.def Info: background/Figures/F9_Bouy2015.pdf used on input line 
-203.
+206.
 (pdftex.def)             Requested size: 343.86516pt x 227.62204pt.
- [19 <./background/Figures/F9b_Lodieu2012.pdf>] [20 <./background/Figures/F9_Bo
+ [15] [16 <./background/Figures/F9b_Lodieu2012.pdf> <./background/Figures/F9_Bo
 uy2015.pdf>]
-<background/Figures/F1_Bouy2013.pdf, id=573, 506.26294pt x 507.44553pt>
+<background/Figures/F1_Bouy2013.pdf, id=560, 506.26294pt x 507.44553pt>
 File: background/Figures/F1_Bouy2013.pdf Graphic file (type pdf)
 
 <use background/Figures/F1_Bouy2013.pdf>
 Package pdftex.def Info: background/Figures/F1_Bouy2013.pdf used on input line 
-243.
-(pdftex.def)             Requested size: 419.16621pt x 420.14986pt.
+246.
+(pdftex.def)             Requested size: 455.24408pt x 456.31734pt.
 
-Overfull \hbox (16.24483pt too wide) in paragraph at lines 252--272
- [] |
- []
-
-
-Overfull \hbox (24.09323pt too wide) in paragraph at lines 279--299
- [] |
- []
-
-<background/Figures/F12_Bouy2013.pdf, id=574, 497.92714pt x 264.21912pt>
+<background/Figures/F12_Bouy2013.pdf, id=561, 497.92714pt x 264.21912pt>
 File: background/Figures/F12_Bouy2013.pdf Graphic file (type pdf)
 
 <use background/Figures/F12_Bouy2013.pdf>
 Package pdftex.def Info: background/Figures/F12_Bouy2013.pdf used on input line
- 305.
+ 308.
 (pdftex.def)             Requested size: 428.98396pt x 227.62204pt.
-
-Overfull \hbox (9.81775pt too wide) in paragraph at lines 305--306
- [] |
- []
-
-[21] [22 <./background/Figures/F1_Bouy2013.pdf>] [23]
-<background/Figures/CIs.pdf, id=601, page=1, 505.89pt x 505.89pt>
+ [17] [18 <./background/Figures/F1_Bouy2013.pdf>] [19 <./background/Figures/F12
+_Bouy2013.pdf>]
+<background/Figures/CIs.pdf, id=611, page=1, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 1>
 Package pdftex.def Info: background/Figures/CIs.pdf, page1 used on input line 3
-23.
+26.
 (pdftex.def)             Requested size: 227.62523pt x 227.62204pt.
 
-<background/Figures/CIs.pdf, id=602, page=2, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=612, page=2, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 2>
 Package pdftex.def Info: background/Figures/CIs.pdf, page2 used on input line 3
-32.
-(pdftex.def)             Requested size: 142.26576pt x 142.26378pt.
+35.
+(pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=603, page=3, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=613, page=3, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 3>
 Package pdftex.def Info: background/Figures/CIs.pdf, page3 used on input line 3
-37.
-(pdftex.def)             Requested size: 142.26576pt x 142.26378pt.
+40.
+(pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=604, page=4, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=614, page=4, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 4>
 Package pdftex.def Info: background/Figures/CIs.pdf, page4 used on input line 3
-42.
-(pdftex.def)             Requested size: 142.26576pt x 142.26378pt.
+45.
+(pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=605, page=5, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=615, page=5, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 5>
 Package pdftex.def Info: background/Figures/CIs.pdf, page5 used on input line 3
-47.
-(pdftex.def)             Requested size: 142.26576pt x 142.26378pt.
- [24 <./background/Figures/F12_Bouy2013.pdf>] [25 <./background/Figures/CIs.pdf
->] [26] [27 <./background/Figures/CIs.pdf> <./background/Figures/CIs.pdf> <./ba
-ckground/Figures/CIs.pdf> <./background/Figures/CIs.pdf>]) (./background/Chapte
-r3.tex [28]
+50.
+(pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
+ [20 <./background/Figures/CIs.pdf>]
+[21 <./background/Figures/CIs.pdf> <./background/Figures/CIs.pdf> <./background
+/Figures/CIs.pdf> <./background/Figures/CIs.pdf>] [22])
+(./background/Chapter3.tex [23]
 Chapter 3.
-[29
+[24
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
@@ -1181,77 +1167,85 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
- [30]
-[31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45]
-[46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]
+ [25]
+[26] [27] [28] [29] [30] [31] [32]
+<background/Figures/BGMM.png, id=684, 1089.06876pt x 1027.84pt>
+File: background/Figures/BGMM.png Graphic file (type png)
 
-LaTeX Warning: Reference `table:hyperparameters' on page 58 undefined on input 
-line 489.
+<use background/Figures/BGMM.png>
+Package pdftex.def Info: background/Figures/BGMM.png used on input line 210.
+(pdftex.def)             Requested size: 241.17456pt x 227.62204pt.
+ [33] [34 <./background/Figures/BGMM.png>]
+[35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]
 
-[58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72])
-(./background/Chapter4.tex [73]
+LaTeX Warning: Reference `table:hyperparameters' on page 47 undefined on input 
+line 502.
+
+[47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58])
+(./background/Chapter4.tex [59]
 Chapter 4.
-[74
+[60
 
-] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85]
-<./background/Figures/Stauffer2Bouy_PM.pdf, id=866, 851.18pt x 431.6125pt>
+]
+Missing character: There is no Ë in font cmr12!
+Missing character: There is no † in font cmr12!
+Missing character: There is no Ë in font cmr12!
+Missing character: There is no † in font cmr12!
+ [61] [62] [63] [64] [65] [66] [67] [68] [69]
+<./background/Figures/Stauffer2Bouy_PM.pdf, id=812, 851.18pt x 431.6125pt>
 File: ./background/Figures/Stauffer2Bouy_PM.pdf Graphic file (type pdf)
 
 <use ./background/Figures/Stauffer2Bouy_PM.pdf>
 Package pdftex.def Info: ./background/Figures/Stauffer2Bouy_PM.pdf used on inpu
-t line 161.
-(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
+t line 177.
+(pdftex.def)             Requested size: 455.24408pt x 230.84784pt.
 
-<./background/Figures/Stauffer2Bouy_CMD.pdf, id=867, 851.18pt x 431.6125pt>
+<./background/Figures/Stauffer2Bouy_CMD.pdf, id=813, 851.18pt x 431.6125pt>
 File: ./background/Figures/Stauffer2Bouy_CMD.pdf Graphic file (type pdf)
 
 <use ./background/Figures/Stauffer2Bouy_CMD.pdf>
 Package pdftex.def Info: ./background/Figures/Stauffer2Bouy_CMD.pdf used on inp
-ut line 162.
-(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
+ut line 178.
+(pdftex.def)             Requested size: 455.24408pt x 230.84784pt.
 
-<./background/Figures/Stauffer5Bouy_PM.pdf, id=868, 851.18pt x 431.6125pt>
+<./background/Figures/Stauffer5Bouy_PM.pdf, id=814, 851.18pt x 431.6125pt>
 File: ./background/Figures/Stauffer5Bouy_PM.pdf Graphic file (type pdf)
 
 <use ./background/Figures/Stauffer5Bouy_PM.pdf>
 Package pdftex.def Info: ./background/Figures/Stauffer5Bouy_PM.pdf used on inpu
-t line 169.
-(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
+t line 185.
+(pdftex.def)             Requested size: 455.24408pt x 230.84784pt.
 
-<./background/Figures/Stauffer5Bouy_CMD.pdf, id=869, 851.18pt x 431.6125pt>
+<./background/Figures/Stauffer5Bouy_CMD.pdf, id=815, 851.18pt x 431.6125pt>
 File: ./background/Figures/Stauffer5Bouy_CMD.pdf Graphic file (type pdf)
 
 <use ./background/Figures/Stauffer5Bouy_CMD.pdf>
 Package pdftex.def Info: ./background/Figures/Stauffer5Bouy_CMD.pdf used on inp
-ut line 170.
-(pdftex.def)             Requested size: 419.16621pt x 212.55229pt.
- [86] [87 <./background/Figures/Stauffer2Bouy_PM.pdf> <./background/Figures/Sta
-uffer2Bouy_CMD.pdf>] [88 <./background/Figures/Stauffer5Bouy_PM.pdf> <./backgro
+ut line 186.
+(pdftex.def)             Requested size: 455.24408pt x 230.84784pt.
+ [70] [71 <./background/Figures/Stauffer2Bouy_PM.pdf> <./background/Figures/Sta
+uffer2Bouy_CMD.pdf>] [72 <./background/Figures/Stauffer5Bouy_PM.pdf> <./backgro
 und/Figures/Stauffer5Bouy_CMD.pdf>]
 
-LaTeX Warning: Reference `tab:params' on page 89 undefined on input line 186.
+LaTeX Warning: Reference `tab:params' on page 73 undefined on input line 202.
 
-[89] [90] [91] [92] [93] [94] [95] [96]
-Overfull \hbox (11.44139pt too wide) in paragraph at lines 301--315
- [] |
- []
-
-[97] [98]) (./conclusions/conclusions.tex [99]
+[73] [74] [75] [76] [77] [78] [79] [80]) (./conclusions/conclusions.tex
+[81]
 Chapter 5.
-) (./thesis.bbl [100
+) (./thesis.bbl [82
 
-] [101
+] [83
 
-] [102] [103] [104] [105] [106] [107])
+] [84] [85] [86] [87] [88])
 
 Package natbib Warning: There were undefined citations.
 
-[108]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 403.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 403.
+[89]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 403.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 403.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 406.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 406.
 
 
 LaTeX Warning: There were undefined references.
@@ -1259,16 +1253,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 403.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
  ) 
 Here is how much of TeX's memory you used:
- 24978 strings out of 493109
- 443435 string characters out of 6135003
- 701302 words of memory out of 5000000
- 27947 multiletter control sequences out of 15000+600000
+ 24984 strings out of 493109
+ 443573 string characters out of 6135003
+ 701329 words of memory out of 5000000
+ 27951 multiletter control sequences out of 15000+600000
  18285 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,75p,3237b,659s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,75p,3237b,679s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
@@ -1299,10 +1293,10 @@ pe1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw
 utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (108 pages, 4861397 bytes).
+Output written on thesis.pdf (89 pages, 4903172 bytes).
 PDF statistics:
- 1053 PDF objects out of 1200 (max. 8388607)
- 745 compressed objects within 8 object streams
+ 990 PDF objects out of 1000 (max. 8388607)
+ 701 compressed objects within 8 object streams
  0 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
