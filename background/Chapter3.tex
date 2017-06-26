@@ -191,15 +191,19 @@ Furthermore, their hierarchy (levels) must stop at some point. There are at leas
 
 Although in BHM the parameters values of the prior distributions are inferred from data, the user of the model has the important task of specifying the family of distributions to be used for the priors. Selecting these families continues to be an active area of research. Common options include conjugate, objective, non-informative, and weakly informative priors. 
 
-Conjugate priors are those in which the posterior distribution turns out to be in the same family as the prior one, they are called the conjugate of the likelihood. Objective or default priors are supposed to be the default choice in the absence of any other information. Weakly and non-informative informative priors, as their names indicate, provide intentionally weaker information or no information at all for the prior. 
+Conjugate priors are those in which the posterior distribution turns out to be in the same family as the prior one, they are called the conjugate of the likelihood. Objective or default priors are supposed to be the default choice in the absence of any other information. 
+Weakly and non-informative informative priors, as their names indicate, provide intentionally weaker information or no information at all for the prior. 
 
-Objective and non-informative priors are discarded since for the Pleiades (one of the most studied cluster in the literature) there is already sensible information that  should be used. Conjugate priors do not necessarily agree with the previous information. Thus, whenever possible, I choose the weakly informative priors. These are the option recommended by \citet{Gelman2006,Huang2013,Chung2015}. Despite the family of prior distribution that we choose, we must always analyse the prior distribution in terms of the posterior, and check if this last make sense \cite[][ Chap. 6]{Gelman2006,Gelman2013}.
+Objective and non-informative priors are discarded since for the Pleiades (one of the most studied cluster in the literature) there is already sensible information that  should be used. Conjugate priors do not necessarily agree with the previous information. Thus, whenever possible, I choose the weakly informative priors. These are the option recommended by \citet{Gelman2006,Gelman2008,Huang2013} and \citet{Chung2015}, since they show better computational performance when compared to non-informative priors. Despite the family of prior distribution that we choose, we must always analyse the prior distribution in terms of the posterior, and check if this last make sense \cite[][ Chap. 6]{Gelman2006,Gelman2013}.
+
+
 \subsection{Examples}
 Since BHM usually need more parameters than standard techniques, its use was restricted until modern and faster computers were widely available. The concept of BHM was already present in the 1960s, however, it was not until  the 1970s that they were used to infer parameters of normal distributions and linear models \cite[see][for an historical perspective of BHM]{Good1980}. In modern days, BHM have a wide range of applications. Just to cite some examples, \citet{Gelman2007} use them in the social sciences, \citet{Fei2005} applies them for vision recognition and, \citet{Diard2008} for robot navigation.
 
 The BHM are also widely applied in astrophysics. Although, originally its use was mainly in the domain of inference of cosmological parameters \cite[see for example the works of][]{Feeney2013,March2014,Anderes2015,Shariff2016,Alsing2017}, they were rapidly adopted in other domains. For example, they have been used to study the eccentricity distribution of binary stars \citet{Hogg2010}, the Cepheids \citep{Barnes2004} and RR Lyrae distances \citep{Jefferys2007}, the chemical composition \citep{Wolfgang2015} and albedos of exoplanets \citep{Demory2014}, extinction maps \citep{Sale2012}, stellar parameters \citep{Shkedy2007}, and the present day mass distribution \citep{Tapiador2017}.
 
 \subsection{Graphical representation.}
+\label{sect:PGM}
 In general, BHM have large number of parameters that, together with the relations among them tend to obscure its understanding. To aid in this understanding, a graphical representation is always useful. Probabilistically Graphical Models (PGM) provide the background to graphically depict the BHM. PGM are graphs that portray the conditional relation among the elements in a probabilistic model. These elements could be constants or stochastic variables that interact by means of conditional relations, which could be deterministic or stochastic. 
 
 In PGM, stochastic variables are represented with circles while constants with squares. If the variable is known, as in the case of the data, it is represented with a filled symbol, otherwise with an empty symbol. Stochastic and deterministic relations are depicted with solid and dashed lines, respectively. If there is no line between two given elements, it indicates that they are assumed to be independent. Variables that repeat together, as in the case of the data, are grouped within a plate. The number of repetitions is indicated in one corner of the plate. For more details on PGM see for example the book of \citet{Koller2009}. 
@@ -236,12 +240,31 @@ From the statistical perspective, important aspects of missing values are, i) th
 In the DANCe DR2, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not random (uniform). Missing values occur with higher probability at the faintest and brightest ends of the photometric distributions, see Figure \ref{fig:NAsKs}. This is a crucial aspect for the statistical analysis. If missing values were randomly distributed, then, any statistical analysis derived using only objects with completely observed vectors will be unbiased. This will occur because the objects with completely observed vectors will be a random sample of the data set. Since this is not the case in the DANCe DR2, to avoid biases, objects with missing values must be incorporated in the data set and properly treated. 
 
 \begin{figure}[ht!]
-\begin{center}
-%\includegraphics[width=\textwidth]{}
-\caption{$K_s$ probability distribution of objects with missing values in any band except $K_s$.}
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[page=1,height=6cm]{background/Figures/MissingDistribution.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=2,height=6cm]{background/Figures/MissingDistribution.pdf}
+        \caption{}
+        \label{} 
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=3,height=6cm]{background/Figures/MissingDistribution.pdf}
+        \caption{}
+        \label{} 
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=4,height=6cm]{background/Figures/MissingDistribution.pdf}
+        \caption{}
+        \label{} 
+    \end{subfigure}
+\caption{Probability distributions of objects with missing values. The vast majority of objects with missing values are located at the faint end of the magnitude distributions.}
 \label{fig:NAsKs}
-\end{center}
 \end{figure}
+
 
 
 
@@ -480,18 +503,30 @@ p_c(\mathbf{d}|\boldsymbol{\theta}_c,\mathbf{u})&=\pi_{CB}\cdot p_{Cs}(\mathbf{d
 \end{align}
 
 where $\pi_{CB}$ is the parameter representing the amplitude of single cluster sequence stars in the single-EMB mixture model. The photometric and proper motions likelihoods are given by Equations \ref{eq:lik-seq2} and \ref{eq:lik-pm}, respectively.
+
+Finally, before ending this Section, I present a summary of the symbols of the parameters in the BHM (Table \ref{table:symbols_parameters}), together with its graphical representation in the form of a PGM (Fig. \ref{fig:PGMBHM}).
+\input{background/Tables/SymbolParameters.txt}
+
+
+\begin{figure}[ht!]
+  \begin{center}
+  \resizebox{\textwidth}{!}{\input{background/Figures/Hierarchical_ClusterStars.tex}}
+  \end{center}
+  \caption{Probabilistic graphical model representing the BHM. The left grey plates show the field model. The middle yellow plate shows the node where the likelihood is computed for each datum, $\boldsymbol{d}$. The right plates describe the relations among parameters in the cluster model. The photometric cluster model (red) is on top, while the proper motions cluster (blue) and equal-mass binaries (green) are at the bottom left and right, respectively. See Section \ref{sect:PGM} for more details.}
+  \label{fig:PGMBHM}
+\end{figure}
  
 \section{Priors}
 \label{sect:priors}
 The Bayesian formalism is characterised by the use of priors. These priors, as mentioned earlier, represent the objective (measurable and reproducible) way to establish beliefs about the distribution of values that certain parameter may have. 
 
-In the following I describe the information used to establish both the family of the prior distribution as well as its hyperparameters. The priors we assume are intended to fall, in most of the cases, in the category of weakly informative priors. A weakly informative prior provides weaker information than the one actually available \citet{Gelman2006}. This kind of priors show better computational performance when compared to non-informative priors. Examples of these can be found in the works of \citet{Gelman2008} and \citet{Chung2015}. 
+In the following, I describe the information used to establish both the family of the prior distribution as well as its hyper-parameters (the parameters at the top hierarchy of the BHM). As mentioned before, these families are chosen to fall, whenever possible, in the category of weakly informative priors. 
 
-I group priors into three main categories. Fractions in general, and those concerning: proper motions and photometric models. 
+The priors in the BHM can be grouped into three main categories. The first one correspond to priors for parameters representing fractions in mixture models. The second and third categories correspond to parameters in the proper motions and photometric models. 
 
-Fractions are defined for mixtures. The mixtures in the model are the GMMs, the cluster-field, and the single-EMB mixtures. At each mixture, the fractions or amplitudes quantify the contribution of each element to the mixture. If each element in the mixture is itself a probability distribution, then the fractions must add to one and be bounded by the $[0,1]$ interval. We choose the Dirichlet distribution since it is the multivariate generalisation of the beta distribution. It has support in $[0,1]$ for each entry, and is parametrised by $\boldsymbol{\alpha}$. This distribution gives the probability of $n$ rival events given that each rival event has been observed $\alpha_i-1$ times ($i=\{1,2,...,n\}$).
+In the BHM, there are different types of mixtures: the GMMs of the proper motions, the cluster-field mixture, and the singles-EMB mixture. At each mixture, the fractions or amplitudes quantify the contribution of each element in the mixture to the probability distribution. Fractions must add to one and be bounded by the $[0,1]$ interval.  We choose the Dirichlet distribution to be the family of all fraction parameters. This decision roots in the fact that this distribution is the multivariate generalisation of the beta distribution. This last one is commonly used to model the probability of success of an event.
 
-The mean and variance of the Dirichlet distribution are given by,
+The Dirichlet distribution has support in $[0,1]$ for each entry, and is parametrised by $\boldsymbol{\alpha}$. This distribution gives the probability of $n$ rival events given that each rival event has been observed $\alpha_i-1$ times ($i=\{1,2,...,n\}$). The mean and variance of the Dirichlet distribution are given by,
 
 \begin{equation}
 E[x_k]=\frac{\alpha_k}{\sum_k \alpha_k},
@@ -501,87 +536,99 @@ E[x_k]=\frac{\alpha_k}{\sum_k \alpha_k},
 Var[x_k]=\frac{-\alpha_k\cdot (\alpha_k -\sum_k \alpha_k)}{(\sum_k \alpha_k)^2 \cdot (1+\sum_k \alpha_k)}.
 \end{equation}
 
-For the field-cluster mixture we set the hyper-parameters to $\boldsymbol{\alpha}=\{9.8,0.2\}$. We expect a mean 98\% of field objects and a 2\% of cluster objects with little variance. These figures correspond to the fraction of field and cluster candidate members found by \citet{Bouy2015}. 
+For the field-cluster mixture we set the hyper-parameters to $\boldsymbol{\alpha}=\{9.8,0.2\}$. We expect a mean 98\% of field objects and a 2\% of cluster objects with little variance. These figures correspond to the existent prior knowledge, this is the fraction of field and cluster candidate members found by \citet{Bouy2015}. 
 For the single-EMB mixture we use an hyper-parameter value, $\boldsymbol{\alpha}_{CB}=\{8,2\}$. We expect a mean 20\% of EMB, as suggested by \citet{Bouy2015}. 
-For fractions in the proper motions GMM, hyper-parameter are $\boldsymbol{\alpha}_{Cs}=\{1,1,5,5\}$ and $\boldsymbol{\alpha}_{Bs}=\{1.2,8.8\}$. These values induce fraction distributions whose means are similar to the fractions recovered after fitting a GMM to the \citet{Bouy2015} candidate members. 
-For the fraction in the GMM of the $CI$ distribution, the hyper-parameter were set all to 1, ($\boldsymbol{\alpha}_{CI}=\{1,1,1,1,1\}$), which results in equal means and large variances for all of them.
+For fractions in the proper motions GMM, hyper-parameter are $\boldsymbol{\alpha}_{Cs}=\{1,1,5,5\}$ and $\boldsymbol{\alpha}_{Bs}=\{1.2,8.8\}$. These values induce fraction distributions whose means are similar to the fractions recovered after fitting a GMM to the  candidate members of \citet{Bouy2015}. 
+For the fraction in the GMM of the $CI$ distribution, the hyper-parameter were set all to 1, ($\boldsymbol{\alpha}_{CI}=\{1,1,1,1,1\}$), which results in equal means and large variances for all of them. 
 
-In the previous cases, with exception of the cluster-field mixture, the hyper parameters were chosen to have larger variances. Fig.  \ref{figure:priors} shows the distribution associated to these hyper-parameters.
+In the previous cases, with exception of the cluster-field mixture, the hyper parameters were chosen to have larger variances. Fig. \ref{figure:priors} shows the distribution associated to these hyper-parameters.
 
-The narrow variance in the cluster-field mixture expresses our prior belief about the number (fraction) of candidate members within our large data set. I believe this figure is small.
+The narrow variance in the cluster-field mixture expresses our prior belief about the number (fraction) of candidate members within our large data set.
 
-\begin{figure*}[htbp]
-\begin{center}
-%\includegraphics[page=1,width=8cm]{figs/priors.pdf}
-%\includegraphics[page=2,width=8cm]{figs/priors.pdf}\\
-%\includegraphics[page=3,width=8cm]{figs/priors.pdf}
-%\includegraphics[page=4,width=8cm]{figs/priors.pdf}
-\caption{Prior distribution of fraction parameters. From top left to bottom right, the distributions of field fraction ($\pi$), equal mass binaries fraction ($1-\pi_{CB}$), and the cluster ($\pi_{Cs}$) and equal-mass binaries ($\pi_{Bs}$) fractions in their proper motion GMM, respectively.}
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \includegraphics[page=1,height=9cm,width=\textwidth]{background/Figures/Priors.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=2,height=9cm,width=\textwidth]{background/Figures/Priors.pdf}
+        \caption{}
+        \label{} 
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=3,height=9cm,width=\textwidth]{background/Figures/Priors.pdf}
+        \caption{}
+        \label{} 
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=4,height=9cm,width=\textwidth]{background/Figures/Priors.pdf}
+        \caption{}
+        \label{} 
+    \end{subfigure}
+\caption{Prior distributions of fraction parameters. Distributions of: (a) The field fraction $\pi$, (b) The EMB fraction, $1-\pi_{CB}$, (c) the proper motions cluster fractions, $\pi_{Cs}$, and (d) the proper motions equal-mass binaries fractions $\pi_{Bs}$.}
 \label{figure:priors}
-\end{center}
-\end{figure*}
+\end{figure}
 
+For the priors of mean parameters in the proper motions GMM, both of single and EMB, we choose the bivariate normal distribution. We set the hyper-parameters of this bivariate normal to those found after fitting a bivariate normal to the candidate members of \citet{Bouy2015}. These values are $\boldsymbol{\mu}_{\mu_{pm}}=\{16.30,-39.62\}$ and $\Sigma_{\mu_{pm}}=\{\{36.84,1.18\},\{1.18,40.71\}\}$. 
 
-For the priors of mean parameters in the proper motions GMM, both of single and EMB, we choose the bivariate normal distribution. We set the hyper-parameters of this bivariate normal to the MLE found after fitting a bivariate normal to the candidate members of \citet{Bouy2015}. These values are $\boldsymbol{\mu}_{\mu_{pm}}=\{16.30,-39.62\}$ and $\Sigma_{\mu_{pm}}=\{\{36.84,1.18\},\{1.18,40.71\}\}$. 
-
-As prior for the covariance matrices of both single and EMB proper motions GMM we use the Half--$t(\nu,\mathbf{A})$ distribution. With $\nu$ an scalar and $\mathbf{A}$ a vector of dimension equal to that of the space. As shown by \citet{Huang2013} this family distribution leads to more accurate estimation of covariance matrices than the traditional Inverse-Wishart distribution. Particularly, the marginal correlation correlation parameters, $\rho$ have the following distribution,
+As prior for the covariance matrices of both single and EMB proper motions GMM we use the Half--$t(\nu,\mathbf{A})$ distribution. It is parametrised by an scalar $\nu$ and a vector $\mathbf{A}$. As shown by \citet{Huang2013} this family distribution leads to more accurate estimation of covariance matrices than the traditional Inverse-Wishart distribution. Particularly, the marginal correlation correlation parameters, $\rho$ have the following distribution,
 
 \begin{equation}
-p(\rho) \propto (1-\rho^2)^{\frac{\nu}{2}-1}
+p(\rho) \propto (1-\rho^2)^{\frac{\nu}{2}-1}.
 \end{equation}
-while the standard deviation term $\sigma_k$ associated to entry $k$ is distributed according to Half--$t(\nu,A_k)$. We set the hyper-parameter to $\nu=3$ and $\boldsymbol{A}_{pm}=\{10^5,10^5\}$. According to \citet{Huang2013}, an arbitrarily large values of $\boldsymbol{A}$ lead to arbitrarily weakly informative priors on the corresponding standard deviation terms.
 
-Photometric priors can be grouped in three categories, those concerning: (i) the \emph{true} $CI$, (ii) the splines coefficients, and (iii) the cluster sequence intrinsic dispersion. 
+The standard deviation term $\sigma_k$, associated to entry $k$, is distributed according to Half--$t(\nu,A_k)$. We set the hyper-parameter to $\nu=3$ and $\boldsymbol{A}_{pm}=\{10^5,10^5\}$. According to \citet{Huang2013}, an arbitrarily large values of $\boldsymbol{A}$ lead to arbitrarily weakly informative priors on the corresponding standard deviation terms.
 
-For the means in the univariate GMM modelling $CI$ we use a uniform in the range  ($0.8\leq CI \leq8$). For the standard deviations I choose the Half--Cauchy$(0,\eta)$ distributions as suggested by \citet{Gelman2006}. I choose the arbitrarily large value of $\eta=100$..
+Concerning the photometric priors, they can be grouped in three categories: (i) priors for the the \emph{true} $CI$, (ii) priors for the splines coefficients, and (iii) priors for the cluster sequence intrinsic dispersion. 
 
-\sloppy
-For the coefficients in the spline series we set the priors as univariate normal distributions. To find the values of the hyper-parameters, we proceed as follows. First, we remove EMB from \citet{Bouy2015} candidate members. I performed an iterative fit of the cluster sequence, such that in each iteration objects above the 0.75 magnitude were removed. In the region of $CI > 7$ no candidate members have been found. Thus, to provide a prior we complement our list of candidate members with the brown-dwarfs from the \citet{Faherty2012} sample. Only those with the same CMD as our data set. Finally, we fit the splines, and use the coefficients of this fit as means, $\mu_{\beta}$ of the univariate normal distributions. The standard deviation terms were set to $\sigma_{\beta}=\{1,1,1,1,1,0.5,0.1\}$. These values provide a reasonable compromise between cluster sequences compatible with the previously known candidates and those far away or with exotic shapes. We show a sample of this priors in Fig. \ref{figure:priorcoefs}. This Fig. also shows the brown-dwarfs from \citet{Faherty2012} and the sequence (dashed line) we use to provide the means of the univariate normal distributions.
+For the means in the univariate GMM modelling the \emph{true} $CI$ I choose a uniform distribution in the range  ($0.8\leq CI \leq8$). For the standard deviations I choose the Half--Cauchy$(0,\eta)$ distributions as suggested by \citet{Gelman2006}. The value of $\eta$ is set to an arbitrarily large value. In this case I chose $\eta=100$.
 
-To set the prior for the parameters of the cluster intrinsic dispersion, I choose again the Half--t$(\nu,\boldsymbol{A})$ distribution.  However, this time I use  $\boldsymbol{A}_{ph}=\{10,10,10,10,10\}$. These values are large when compared to the standard deviation terms o the observation uncertainty, thus provide a weakly informative prior on the marginal standard deviation terms of the $\Sigma_{clus}$ covariance matrix.
+For the coefficients in the spline series we set the priors as univariate normal distributions. To find the mean and variance of these distributions we proceed as follows. First, we remove the EMB from the list of candidate members of \citet{Bouy2015}. To do this, I performed an iterative fit of the cluster sequence, at each iteration I removed those objects whose photometry was  as bright as that of the EMB. In the region of $CI > 7$ there are no candidate members of \citet{Bouy2015} and of any other source. Thus, to provide a prior we complement our list of candidate members with the brown-dwarfs from the \citet{Faherty2012} sample. We chose only those objects observed in the same photometric bands of our data set. Finally, we fit the splines, and use the coefficients of this fit as the means, $\mu_{\beta}$ of the univariate normal distributions. The standard deviation terms were set to $\sigma_{\beta}=\{1,1,1,1,1,0.5,0.1\}$. These values provide a reasonable compromise between cluster sequences compatible with the previously known candidates, and those far away or with exotic shapes. We show a sample of this priors in Fig. \ref{figure:priorcoefs}. This Fig. also shows the brown-dwarfs from \citet{Faherty2012} and the sequence (dashed line) we use to provide the means of the univariate normal distributions.
+
+To set the prior for the parameters of the cluster intrinsic dispersion, $\Sigma_{clus}$, I choose again the Half--t$(\nu,\boldsymbol{A})$ distribution.  However, this time I use  $\boldsymbol{A}_{ph}=\{10,10,10,10,10\}$. These values are large when compared to the standard deviation terms of the observed uncertainties. Therefore, this values provide a weakly informative prior on the marginal standard deviation terms of the $\Sigma_{clus}$ covariance matrix.
 
 Table \ref{table:hyperparameters} shows a summary all the hyper-parameter and their values.
 
-%\input{figs/HyperParameters.txt}
+\input{background/Tables/HyperParameters.txt}
 
-\begin{figure}[htbp]
+\begin{figure}[ht!]
 \begin{center}
-%\resizebox{\hsize}{!}{\includegraphics[page=4]{figs/Priors_Coefs.pdf}}
-\caption{CMD $K_s$ vs. $i-K_s$ showing a sample of the prior for the coefficients in the splines series. Also shown the brown-dwarfs we add from \citet{Faherty2012} sample, and the cluster sequence (dashed line) found after fitting the splines to the brown-dwarfs and candidate members below the equal-mass binaries sequence.}
+\includegraphics[page=4,width=\textwidth]{background/Figures/Priors_Coefs.pdf}
+\caption{CMD $K_s$ vs. $i-K_s$ showing a sample (100 elements) of the prior for the coefficients in the splines series. Also shown are the brown-dwarfs from \citet{Faherty2012} sample (red dots), the cluster sequence (dashed line) used as mean for the priors, the candidate members of \citet{Bouy2015} (blue triangles), and a sample of the field (grey dots).}
 \label{figure:priorcoefs}
 \end{center}
 \end{figure}
 
-%\input{figs/SymbolParameters.txt}
-
 \section{Sampling the posterior distribution}
-Theoretically, there are at least three possible approaches to obtain the posterior distributions of the parameters in our model. One of these theoretical options is the analytical solution. This solution is obviously not feasible, due to our large data set. The second theoretical option consists of a grid in parameter space. The likelihood and the prior must be evaluated at each point in this grid and then multiplied. This approach is reasonable when the parametric space is of moderate dimension. It requires the evaluation of the posterior distribution $q^p$ times, with $q$ the number of grid points in one dimension, and $p$ the dimension of the parametric space. The number of parameters in our model is 85, which immediately rules out this possibility. The third and so far only feasible approach is the use of Markov Chain Monte Carlo (MCMC). Although these methods provide a solution in a reasonable time, nevertheless, the bottle neck of computing time is due to the evaluation of the likelihood, which rows linearly with the size of the data set. 
 
-This Section is structured as follows. First, I introduce an heuristic technique to search for the maximum a posteriori of our target distribution: the posterior distribution of the parameters given the data. Then I will describe the MCMC techniques available in the literature. Particularly the one we chose and the reasons for which it was chosen. I will end this section with the details about the assessment of the MCMC convergence.
+Theoretically, there are at least three possible approaches to obtain the posterior distributions of the parameters in our model. One of these options is the analytical approach. Analytically computing the likelihood of our large data set is not feasible, thus I discard this approach. The second option is the use of a grid in the parametric space. The likelihood and the prior must be evaluated at each point in this grid and then multiplied. This approach is reasonable when the parametric space is of moderate dimension ($\leq 5$). It requires the evaluation of the posterior distribution $q^p$ times, with $q$ the number of grid points in one dimension, and $p$ the dimension of the parametric space. The number of parameters in our model is 85, which immediately rules out this possibility. The third and so far only feasible approach is the use of Markov Chain Monte Carlo (MCMC) methods. Although these methods provide a solution in a reasonable time, nevertheless, the bottle neck of computing time is due to the evaluation of the likelihood, which grows linearly with the size of the data set. 
+
+This Section is structured as follows. First, I introduce an heuristic technique to perform a fast search of the maximum a posteriori of our target distribution. Then, I describe the MCMC techniques available in the literature. Particularly I focus the one technique we chose, and in the reasons for which it was chosen. The section ends with details about the assessment of the MCMC convergence.
 
 \subsection{PSO}
 
-The likelihood of the data is the product of the individual likelihoods of each datum (Eq. \ref{eq:lik_datum}). Therefore, the number of operations needed to evaluate the likelihood grows proportionally to the size of the data set. As I will explain in Section \ref{sect:MCMC}, the burn-in phase of MCMC techniques allows them to reach the target distribution. However, once the MCMC reaches the target distribution, the burn-in computations are discarded. Since the evaluation of the likelihood, and therefore of the posterior, is computationally expensive due to our large data set, I decided to reduce as much as possible the burn-in phase. To do so, I provide MCMC with a set of initial solutions which are close to the Maximum-A-Posteriori (MAP) of the target (posterior) distribution. These MAP solution must not be crowded on the MAP solution, otherwise MCMC will spend a lot of time in expanding this initial set of solutions.  Our objective is a representative sample of the full posterior distribution, not just an estimate of it.
+The likelihood of the data is the product of the individual likelihoods of each datum (Eq. \ref{eq:lik_datum}). Therefore, the number of operations needed to evaluate the likelihood grows proportionally to the size of the data set. As I will explain in Section \ref{sect:MCMC}, the burn-in phase of MCMC techniques allows them to reach the target distribution. However, once the MCMC reaches this target distribution, the burn-in computations are discarded. Since the evaluation of the likelihood, and therefore of the posterior, is computationally expensive, I decided to reduce as much as possible the burn-in phase. To do so, I provide MCMC with a set of initial solutions which are close to the Maximum-A-Posteriori (MAP) of the target (posterior) distribution. These near-MAP solutions must not be too crowded on the MAP, otherwise MCMC will spend time in expanding them to reach the entire distribution. Here, there is a trade off between the crowdedness of the solutions and its proximity to the MAP. Since we aim at obtaining a representative sample of the posterior distribution and not just an estimate of it, then the initial set of solution for the MCMC must be carefully chosen to minimise the computing time. This section provides the details of this procedure. 
 
-In Section \ref{sect:MCMC}, I will show that the MCMC flavour more suitable to our objective belongs to the family of \emph{ensemble} MCMC. This flavour works with particles in the parametric space. To make the transition between the initial MAP solutions and the particle MCMC as efficient as possible I chose a MAP finder which works also with particles. The Particle Swarm Optimiser \cite[PSO,][]{Kennedy1995} provides a heuristic cheap and fast approach to the MAP solution. The PSO works with an ensemble of particles which move in through the parametric space. These particles use the collective and individual past and present information to update their position. This information is specified by the score function, which in our case is the posterior distribution. The particles update their position iteratively by means of a velocity. It has a random but restricted magnitude, however, its direction is determined by the object position and the individual and collective positions of maximum score. \citet{Kennedy1995} has a detailed description of the original algorithm, while a more efficient version is given by \citep{Clerc2002}.
+In Section \ref{sect:MCMC}, I will also show that the MCMC flavour more suitable to our objective belongs to the family of \emph{ensemble} MCMC. This flavour works with particles in the parametric space. To make the transition between the initial MAP solutions and the  MCMC particles as efficient as possible, I chose a MAP finder which works also with particles: the Particle Swarm Optimiser \cite[PSO,][]{Kennedy1995}. I provides a heuristic cheap and fast approach to the MAP solution. The PSO works with an ensemble of particles which move through the parametric space. These particles use the collective and individual past and present information to update their position. This information is specified by the score function, which in our case is the posterior distribution. The particles update their position iteratively by means of their velocity. This velocity has a random but restricted magnitude, however, its direction is determined by the particle position, and the individual and collective positions with maximum score. \citet{Kennedy1995} has a detailed description of the original algorithm, while a more efficient version is given by \citep{Clerc2002}.
 
-Although the PSO is a simple and rather efficient solution to the MAP approximation, it is far from perfect. Due to its heuristic origin, there is no theory behind its formulation, furthermore, it does not always guarantee the finding of the global maxima. A convergence guaranteed version can be found in \citet{Patel2013}. This issue does not affect our results because MCMC does guarantee the target distribution. However, it has an impact in the computing time. Also, PSO stops once the particles scores are within a user defined tolerance. If the tolerance is too large, the PSO may not converge. If the tolerance is small it may converge but deliver solutions highly concentrated around the solution. This poses a problem to the following MCMC stage. In order to explore the full posterior distribution MCMC needs more iterations to expand the initially concentrated positions. To overcome this problem I decided to use the charged PSO \citep{Blackwell2002}
+Although the PSO is a simple and rather efficient solution to the MAP approximation, it is far from perfect. Due to its heuristic origin, there is no theory behind its formulation. Furthermore, it does not always guarantee the finding of the global maximum \cite[for a convergence guaranteed version see][]{Patel2013}. Although,  this issue does not affect our results (as we will see MCMC does guarantee the finding of the target distribution), it impacts the computing time. If the global maximum is not find in the PSO stage, then the MCMC will take longer to arrive to the target distribution. 
 
+On the other hand, the PSO stops its computations once the mean of the particles scores lays within a user defined tolerance. If this tolerance is too high, the PSO may stops far from the MAP. If it is too small, it may converge to the MAP but deliver solutions highly concentrated around it. This poses a problem to the following MCMC stage. For it to explore the full posterior distribution, the MCMC will need more iterations, thus more time, to expand the initially concentrated positions. The optimal value for the relative tolerance is $10^-7$. I found this after trial and error.  
 
-\subsubsection{The charged PSO}
-Originally designed to optimise a time varying score function, the charged PSO maintain its exploratory capabilities due to an electrostatic force that repels particles when they got closer than a certain distance \citep{Blackwell2002}. Thanks to this electrostatic force the charged PSO avoids the over-crowding of particles around local best values.
+To overcome the problem of crowdedness, I decided to use the charged PSO \citep{Blackwell2002}. Originally designed to optimise a time varying score function, the charged PSO maintain its exploratory capabilities due to an electrostatic force that repels particles when they got closer than a certain distance \citep{Blackwell2002}. Thanks to this electrostatic force the charged PSO avoids the over-crowding of particles around local best values.
 
-The algorithm of \citet{Blackwell2002} computes distances in the entire parametric space. I find this approach unsuitable to our problem, thus I modified it. This modified version is described in more details on Section \ref{sect:chargedPSO}. 
+The algorithm of \citet{Blackwell2002} computes distances in the entire parametric space. I find this approach unsuitable to our problem, thus I modified it. This modified version, together with the values chosen for its parameters is described in more details on Section \ref{sect:chargedPSO}. 
 
- 
 \subsection{MCMC}
 \label{sect:MCMC}
 \subsubsection{Generalities}
-Markov chain Monte Carlo is the generic name for a series of algorithms whose objective is the sampling of probability distributions. As their name indicates, MCMC generate a chain of Monte Carlo realisations that fulfil the Markov property. Monte Carlo realisations can be understood, broadly speaking as continuous random realisations. Since it is an iterative algorithm, the chain refers to the joint of al random Monte Carlo steps. The Markov property refers to the probabilistic independence of the steps in the chain. A Markov chain is that in which the probability of a future step depends only on the present step, and not in the past steps.
+Markov chain Monte Carlo (MCMC) is the generic name for a series of algorithms whose objective is the sampling of probability distributions. As their name indicates, the MCMC generates a chain (or a group of them) of Monte Carlo realisations that fulfil the Markov property. Monte Carlo realisations can be understood, broadly speaking as continuous random realisations. Since it is an iterative algorithm, the chain is a process that refers to the joint of all random Monte Carlo steps. The Markov property indicates the probabilistic independence between steps in the chain that are separated more than one iteration. Thus, in a Markov chain, the probability of a future step depends only on the present step, and not in the past steps.
 
 \citet{Andrieu2003} provides a brief and interesting summary of the history of the MCMC methods. In the following I use their work to describe the fundaments of MCMC. For more details, see the aforementioned authors and the book of \citet{Brooks2011}.
 
-A stochastic process is defined as a sequence  $\{\theta_1,...,\theta_n\}$ of random elements from a set, where each element $\theta_i \subset \mathbb{R}^k$  with $k$ the dimension of the \emph{state space}. 
+A stochastic process is defined as a sequence  $\{\theta_1,...,\theta_n\}$ of random elements. On it each element $\theta_i \subset \mathbb{R}^k$,  with $k$ the dimension of the \emph{state space}. 
 
 A stochastic process, $\boldsymbol{\theta}=\{\theta_0,\theta_1,...,\theta_n,\theta_{n+1}\}$ is called a Markov chain if
 \begin{equation}
@@ -590,41 +637,42 @@ p(\theta_{n+1} | \theta_0,\theta_1,...\theta_n) = p(\theta_{n+1} |\theta_n). \no
 
 A Markov chain has two important distributions, the initial distribution and the transition distribution. The initial distribution is the marginal distribution of $\theta_0$, it is $p(\theta_0)$. The transition distribution is the conditional probability $p(\theta_{n+1} |\theta_n)$. This last one is called stationary or homogeneous if it does not depend on $n$.
 
-If this transition is irreducible and aperiodic, then there is an invariant or equilibrium distribution to which the chain converge in spite of the initial distribution. Aperiodic means that the chain does not make loops. It is irreducible if the probability of exploring all other states is not zero.
+If this transition is irreducible and aperiodic, then there is an \emph{invariant} or \emph{equilibrium} distribution to which the chain converges to, in spite of the initial distribution. Here, aperiodic means that the chain does not make loops, whereas it is irreducible if the probability of exploring all other states is not zero.
 
 If we want to have $p(\theta)$ as the invariant distribution, then it suffices that the transition distribution $p_t(\cdot | \cdot)$ satisfies the detailed balance condition,
 \begin{equation}
-p(\theta_{n})\cdot p_t(\theta_{n-1}|\theta_n)=p(\theta_{n-1})\cdot p_t(\theta_n | \theta_{n-1})
+\label{eq:detailedbalance}
+p(\theta_{n})\cdot p_t(\theta_{n-1}|\theta_n)=p(\theta_{n-1})\cdot p_t(\theta_n | \theta_{n-1}).
 \end{equation}
 
-Thus MCMC are Markov chains that satisfy the detailed balance and had their invariant distribution as the target distribution. 
-The variety of MCMC algorithms arises from the efficiencies in which they arrive to the target distribution.
+Thus MCMC are Markov chains that satisfy the detailed balance condition, and had their invariant distribution as the target distribution. 
+The large variety of MCMC algorithms arises from the efficiencies in which they arrive to the target distribution.
 
-In the following I will review three of the MCMC categories: Metropolis-Hasting (MH), Hamiltonian Monte Carlo (HMC), and affine invariant samplers. The MH category comprises the classic MH algorithm but also contain particular cases like the Gibbs sampler \citep{Geman1984}. I describe MH only for completeness and explanatory reasons. Later, I will focus on the particular cases of Hamiltonian Monte Carlo, for (HMC), affine invariant for ensemble samplers. Finally, I will briefly describe Nested Sampling, an algorithm that uses MCMC to numerically compute the Bayesian evidence while simultaneously samples the posterior distribution. 
+In the following I will review three of the MCMC categories: Metropolis-Hasting (MH), Hamiltonian Monte Carlo (HMC), and affine invariant samplers. The MH category comprises the classic MH algorithm but also contain particular cases like the Gibbs sampler \citep{Geman1984}. I describe MH only for completeness and explanatory reasons. Later, I will focus on the particular cases of Hamiltonian Monte Carlo, for (HMC), affine invariant for ensemble samplers. Finally, I will briefly describe Nested Sampling, an algorithm that uses MCMC to numerically compute the Bayesian evidence and simultaneously samples the posterior distribution. 
 \subsubsection{Metropolis-Hastings}
-By far, the most popular MCMC algorithm is Metropolis-Hastings \citep{Metropolis1953,Hastings1970}. Given the current, $\theta$, and proposed, $\hat{\theta}$ positions of the Markov chain, which live in the state space, the chain moves from $\theta$ to $\hat{\theta}$ with acceptance probability
+By far, the most popular MCMC algorithm is Metropolis-Hastings \citep{Metropolis1953,Hastings1970}. Once the Markov chain has been initialised in the state space, given the current, $\theta$, and the proposed, $\hat{\theta}$, positions, the chain moves from $\theta$ to $\hat{\theta}$ with acceptance probability:
 
 \begin{equation}
-\mathcal{A}(\hat{\theta}|\theta)=min\left\{1,\frac{p(\hat{\theta})\cdot q(\theta|\hat{\theta})}{p(\theta)\cdot g(\hat{\theta}|\theta)}\right\}.
+\mathcal{A}(\hat{\theta}|\theta)=min\left\{1,\frac{p(\hat{\theta})\cdot q(\theta|\hat{\theta})}{p(\theta)\cdot q(\hat{\theta}|\theta)}\right\}.
 \end{equation}
-Where $q$ is the transition probability. Since the algorithm allows rejection, it is aperiodic, and to ensure irreducibility, the support of $q$ must include that of $p$ \citep{Andrieu2003}. The popularity of MH lies in its simplicity. Nevertheless it requires a careful tuning of the transition probability. 
+Where $q$ is the transition probability. Since the algorithm allows rejection, it is aperiodic, and to ensure irreducibility, the support of $q$ must include that of $p$ \citep{Andrieu2003}. The popularity of MH lies in its simplicity. Nevertheless it requires a careful tuning of the transition probability. Usually, this probability is given by a normal distribution. It works well for relatively low dimensions of the parametric space ($\leq 5$). However, once the dimension goes higher, the MH algorithm spend a great amount of time in tuning the parameters of this multivariate normal, particularly of its covariance matrix.
 
 \subsubsection{Hamiltonian Monte Calro}
-The Hamiltonian Monte Carlo algorithms \citep{Duane1987,Neal1996}, as they name suggests\footnote{Originally called Hybrid Monte Carlo by \citep{Duane1987}}, use Hamiltonian dynamics to express the target distribution as the potential distribution of a hamiltonian system. In such systems total energy is the sum of the potential and kinetic energies. The potential distribution depends only on position, whereas the kinetic one on momentum. To this end, HMC introduces a momentum to fictitious particles to use their positions as a sample of the target distribution. To update the particles positions, HMC uses the Hamilton equations. They contain information about the gradient of the potential. Once HMC has tuned the momentum distribution, the proposed positions are more likely in terms of the target distribution. Therefore, using the information about the gradient of the target distribution, HMC is able to improve the acceptance ratio of the proposed steps. A detailed description of HMC can be found in Chapter 5 of \citet{Brooks2011}. The package \emph{Stan} \citep{Stan} provides an efficient implementation of HMC.
+The Hamiltonian Monte Carlo algorithms \citep{Duane1987,Neal1996}, as they name suggests\footnote{Originally called Hybrid Monte Carlo by \citep{Duane1987}}, use Hamiltonian dynamics to express the target distribution as the potential distribution of a hamiltonian system of particles. In such systems the total energy is the sum of the potential and kinetic energies. The potential distribution depends only on position, whereas the kinetic one on momentum. HMC introduces a momentum to the particles in order to use their positions as a sample of the target distribution. To update the particles positions, HMC uses the Hamilton equations, which contain information about the gradient of the potential. Once HMC has tuned the momentum distribution, the proposed positions are more likely in terms of the target distribution. Therefore, using the information about the gradient of the target distribution, HMC is able to improve the acceptance ratio of the proposed steps. A detailed description of HMC can be found in Chapter 5 of \citet{Brooks2011}. The package \emph{Stan} \citep{Stan} provides an efficient implementation of HMC.
 
 \subsubsection{Affine invariant}
 Affine invariant MCMC samplers use many particles, (ensemble), to sample the target distribution with a performance that is independent of its shape in the parametric space. Affine invariant MCMC do not need to tune the transition distribution, for this reason, these samplers are faster than standard MCMC \citep{Goodman2010}. In the following I use the derivation of \citet{Goodman2010}.
 
 
-An ensemble $\boldsymbol{\theta}$ is a set of $L$ particles $\theta_l \subset \mathbb{R}^k$ living in state space $\mathbb{R}^{kL}$. These particles are independently drawn from the target distribution $\pi$. Therefore,
+An ensemble $\boldsymbol{\theta}$, consists of a set of $L$ particles $\theta_l \subset \mathbb{R}^k$ living in state space $\mathbb{R}^{kL}$. These particles are independently drawn from the target distribution $\pi$. Therefore,
 
 \begin{equation}
 \Pi(\boldsymbol{\theta})=\pi(\theta_1)\cdot\pi(\theta_2)...\pi(\theta_L).\nonumber 
 \end{equation}
 
-Thus, an ensemble MCMC is a Markov chain in the state space of ensembles, more properly, in the state space of the sequence $\boldsymbol{\theta}(1),\boldsymbol{\theta}_(2),...\boldsymbol{\theta}(t)$. An ensemble MCMC preserves the equilibrium distribution without the individual particles sequence, $\theta_1(1),\theta_1(2),...\theta_1(t)$, being Markov or even independent.
+Thus, an ensemble MCMC is a Markov chain in the state space of ensembles, more properly, in the state space of the sequence $\boldsymbol{\theta}(1),\boldsymbol{\theta}_(2),...\boldsymbol{\theta}(t)$. An ensemble MCMC preserves the equilibrium distribution without the individual particles sequence, $\theta_1(1),\theta_1(2),...\theta_1(t)$, being Markov or even independent. However, to update the particles positions, the detailed balance condition (Eq. \ref{eq:detailedbalance}) must be fulfilled. \citet{Goodman2010} use partial resampling to ensure this. On it, the transition probability preserves the target (invariant) distribution if the single particle steps preserve the conditional distribution of the particle position given the complementary ensemble (the rest of the particles). Using the affine invariant \emph{stretch move}, these authors are able to define a Markov chain, in the state space of ensembles, that satisfies the detailed balance condition. 
 
-To update the particles positions, the detailed balance must be fulfilled. \citet{Goodman2010} use partial resampling to ensure this. The transition preserves the target distribution if the single particle move preserves the conditional distribution of the particle given the complementary ensemble (the rest of the particles). Using the affine invariant \emph{stretch move}, they are able to define a Markov chain (in the state space of ensembles) that satisfies the detailed balance. The stretch move $\theta_k(t) \rightarrow \hat{\theta}$, defined as,
+The stretch move $\theta_k(t) \rightarrow \hat{\theta}$, defined as,
 \begin{equation}
 \label{eq:stretchmove}
 \hat{\theta}= \theta_j(t) + z\cdot(\theta_k(t)-\theta_j(t)),\nonumber 
@@ -633,58 +681,86 @@ where $\theta_j(t)$ is the current position of a particle in the complementary e
 \begin{equation}
 g(\frac{1}{z})= z\cdot g(z).\nonumber 
 \end{equation}
-Finally, \citet{Goodman2010} define their affine invariant MCMC using $g(z) \propto 1/z, z\in[1/a,a]$ and zero otherwise, together with acceptance probability,
+Finally, \citet{Goodman2010} define their affine invariant MCMC using the following distribution for $g(z)$,
+
+\begin{equation}
+g(z) \propto \left\{ \begin{array}{rcl}         \frac{1}{\sqrt{z}} & \mbox{for}&  z\in[1/a,a] \\ 
+         0  & \mbox{for} &  z\notin[1/a,a]                \end{array}\right.
+\label{eq:gz}
+\end{equation} 
+and the acceptance probability,
 
 \begin{equation}
 \mathcal{A}(\hat{\theta}|\theta)=min\left\{1,z^{n-1}\cdot \frac{p(\hat{\theta})}{p(\theta)}\right\}.
-\end{equation}
-The parameter $a>1$ improve the performance the performance of the sampler  \citep{Goodman2010}.
+\end{equation} 
 
-One of the greatest advantages of  ensemble samplers is its possibility of parallelisation. Since they work with particles, this particles can be distributed among cores in a computer cluster, therefore reducing considerably the computing time. \citet{Foreman2013} implemented the affine invariant stretch move of \citet{Goodman2010} in the Python package \emph{emcee}. 
+The parameter $a$, which must be grater than one, improves the performance of the sampler \citep{Goodman2010}.
+
+One of the great advantages of ensemble samplers MCMC is its possibility of parallelisation. Since they work with particles, these particles can be distributed among cores in a computer cluster, therefore reducing the computing time when compared to non ensemble MCMC. \citet{Foreman2013} implemented the affine invariant stretch move of \citet{Goodman2010} in the Python package \emph{emcee}. 
 \subsubsection{Nested sampling}
-Nested sampling \citep{Skilling2004,Skilling2006} is an algorithm designed to numerically integrate the evidence (Eq. \ref{eq:evidence2}). As a by product it delivers also a sample of the posterior distribution. It samples the prior and use these particles to compute integral. The integral is the sum of the likelihood, $L_i$ of each particle times a weight, $w_i$. This weight is a proxy of the volume of the prior covered by the updated position of the particle, $w_i = \exp(-(i-1)/N) - \exp(-i/N)$. Particles update their position only when their likelihood is the minimum from the group of particles. In this way,
+Nested sampling \citep{Skilling2004,Skilling2006} is an algorithm designed to numerically integrate the evidence (Eq. \ref{eq:evidence2}). As a by product it also delivers a sample of the posterior distribution. To compute the evidence integral,  it uses particles positions sampled from the prior. Then, the integral is the sum of the likelihood, $L_i$, of each particle times a weight, $w_i$. This weight is a proxy for the volume of the prior covered by the updated position of the particle. This weight is given by $w_i = \exp(-(i-1)/N) - \exp(-i/N)$. Finally, the particles update their position only when their likelihood is the minimum of the group of particles. In this way,
 
 \begin{equation}
 z \leftarrow \sum_i w_i\cdot L_i
 \end{equation}
 
-An improved version of the original algorithm was implemented in \emph{MultiNest} \citep{Feroz2009}. This version allows the sampling and computing of evidence in multimodal posteriors.
+An improved version of the original algorithm was implemented in \emph{MultiNest} \citep{Feroz2009}. This version allows the sampling and computing of evidence in the even more difficult multimodal posteriors. 
 
-\subsubsection{Implementation and convergence}
-To sample the posterior distribution in our problem, we chose \emph{emcee} due to the following properties: i) the affine invariance allows a faster convergence over common and skewed distributions \cite[see][for detail]{Goodman2010,Foreman2013}, ii) the parallel computation distributes particles over nodes of a computer cluster and thus reduces considerably the computing time, and iii) it requires the hand-tuning of only two constants: the number of particles, and the parameter $a$ of the $g(z)$ distribution. I choose a particle to parameters ratio of two, this means 170 particles. This is the minimum recommended by \citet{Foreman2013} that allows a reasonable computing time. After trial and error, I fixed the value of parameter $a=1.3$. As mentioned by \citet{Goodman2010} this parameter can be tuned to improve performance of the sampler. The chosen value keeps the acceptance fraction in the range $0.2-0.5$ as suggested by \citet{Foreman2013}.
+\subsection{Implementation and convergence: PSO and MCMC}
+To sample the posterior distribution in our problem, we chose \emph{emcee} due to the following properties: i) the affine invariance allows a faster convergence over common and skewed distributions \cite[see][for details]{Goodman2010,Foreman2013}, ii) it runs on parallel by distributing particles over nodes of a computer cluster, this reduces considerably the computing time, and iii) it requires the hand-tuning of only two constants: the number of particles, and the parameter $a$ of the $g(z)$ distribution(Eq. \ref{eq:gz}). I choose a ratio of particles to parameters of two, it results in 170 particles. This is the minimum ratio recommended by \citet{Foreman2013}, which still allows a reasonable computing time. After trial and error, I fix the value of parameter $a$ to $a=1.3$. As mentioned by \citet{Goodman2010} this parameter can be tuned to improve performance of the sampler. This value keeps the acceptance fraction in the range $0.2-0.5$, as recommended by \citet{Foreman2013}.
 
-I use a modified version of \emph{CosmoHammer} \citep{Akeret2013}, a front-end of \emph{emcee}. See section \ref{sect:HHPC} for more details. 
+As a front-end of \emph{emcee}, and to handle the input and output of data, I use a modified version of \emph{CosmoHammer} \citep{Akeret2013}, (the next Section provides the details of these modifications). 
 
-As mentioned earlier, the PSO does not guarantee the finding of the global maximum of the score function. Therefore, I decide to implement an iterative approach that minimises the risk of PSO to get stuck in a local maxima. To do so I iteratively run PSO and 50 iterations of \emph{emcee} (with the same number of particles as the PSO) until the relative difference between means of consecutive iterations was lower than $10^{-7}$. The iterations of \emph{emcee} spread the PSO solution without moving away from the maximum. 
+As mentioned earlier, the PSO does not guarantee the finding of the global maximum of the score function. Therefore, I implement an iterative approach that minimises the risk of PSO to get stuck in local maxima. To do so, I iteratively run PSO and 50 iterations of \emph{emcee} (with the same number of particles as the PSO) until the relative difference between means of consecutive iterations is lower than $10^{-7}$. The iterations of \emph{emcee} spread the PSO solution without moving it away from the target dstribution. 
  
-Neither scheme, PSO alone or PSO-\emph{emcee}, guarantees to find the global maximum and their solution could be biased. However, we use them to obtain a fast estimate of the global maximum, or at least, of points in its vicinity. If the initial solution provided by this scheme is indeed biased, the final \emph{emcee} run, during the burning phase, erases any dependance on these initial solutions. After convergence of the PSO-\emph{emcee} scheme, we run \emph{emcee} until convergence.  
+Neither scheme, PSO alone or PSO-\emph{emcee}, guarantees to finding of the global maximum. The solution this scheme provides could indeed be biased. However, we use them to obtain a fast estimate of the global maximum, or at least, of points in its vicinity. If the initial solution provided by this scheme is indeed biased, the final \emph{emcee} run erases, during the burning phase, any dependance on the biased initial solutions. After the convergence of the PSO-\emph{emcee} scheme, I run \emph{emcee} until it converges.  
  
 Convergence to the target distribution occurs when each parameter enters into the stationary equilibrium, or normal state. The Central Limit Theorem ensures that this state exists. See \citet{Roberts2004} for guaranteeing conditions and \citet{Goodman2010} for \emph{irreducibility} of the \emph{emcee} stretch move. The stationary or normal state is reached when, in at least 95\% of the iterations, the sample mean is bounded by two standard deviations of the sample, and the variance by the two standard deviation of the variance \footnote{
 $sd(\sigma^2)=\sigma^2 \sqrt{\kappa/n + 2/(n-1)}$ with $\kappa$ the kurtosis and $n$ the sample size.
-}; see Fig. \ref{convergence}.
-\begin{figure*}[htbp]
-\begin{center}
-%\resizebox{\hsize}{!}{\includegraphics{figs/AllMeanParticles.pdf}\includegraphics[]{figs/AllVarParticles.pdf}}
-\caption{Normalised mean (left panel) and variance (right panel) of each parameter in our model, as functions of iterations. The normalisation values are the mean and variance of the ensemble of particles positions at the last iteration. Red lines show one and two sigma levels of these normalisation values.}
-\label{convergence}
-\end{center}
-\end{figure*}
+}; see Fig. \ref{fig:convergence}.
 
-Once all parameters have entered the equilibrium state, we stop \emph{emcee} sampling using the criterium of \citet{Gong2016} \footnote{Implemented in the R package \emph{mcmcse} \citep{mcmcse}}. We chose this criterium because it was developed for high-dimensional problems and tested on Hierarchical Bayesian Models. In this criterium, the MCMC chain stops once its "effective sample size" (ESS, the size that an independent and identically distributed sample must have to provide the same inference) is larger than a minimum sample size computed using the required accuracy, $\upsilon$, for each parameter confidence interval $(1-\delta)$100\%. Our \emph{emcee} run stops once the ESS of the ensemble of walkers is greater than the minimum sample size needed for the required accuracy $\epsilon = 0.05$ on the 68\% confidence interval ($\delta = 0.32$) of each parameter.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{\textwidth}
+    \centering
+        \includegraphics[height=10cm]{background/Figures/AllMeanParticles.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \begin{subfigure}[t]{\textwidth}
+    \centering
+      \includegraphics[height=10cm]{background/Figures/AllVarParticles.pdf}
+        \caption{}
+        \label{} 
+    \end{subfigure}
+\caption{Normalised mean (a) and variance (b) of each parameter in BHM model as functions of iterations. The normalisation values are the mean and variance of the ensemble of particles positions at the last iteration. Red lines show one and two sigma levels of these normalisation values. Only shown the last 2000 iterations previous to stopping the algorithm.}
+\label{fig:convergence}
+\end{figure}
+
+
+Once all parameters have entered the equilibrium state, I stop the \emph{emcee} sampling once the criterium of \citet{Gong2016} \footnote{Implemented in the R package \emph{mcmcse} \citep{mcmcse}} is fulfilled. We chose this criterium because it was developed for high-dimensional problems and tested on Hierarchical Bayesian Models, as in the present work. In this criterium, the MCMC chain stops once its effective sample size (ESS) is larger than a minimum sample size. This minimum is computed using the required accuracy, $\upsilon$, for each parameter confidence interval $(1-\delta)$100\%. The ESS is the size that an independent and identically distributed sample must have to provide the desired accuracy on the parametric inference. 
+
+The \emph{emcee} run stops once the ESS of the ensemble of walkers is greater than the minimum sample size needed for the required accuracy $\epsilon = 0.05$ on the 68\% confidence interval ($\delta = 0.32$) of each parameter.
 
 
 \section{Codes}
 \label{sect:code}
-This Section sets out the details about the code I develop to perform the computation described throughout this chapter. First, I give a brief chronological description of the model development. Later, I will describe the details on the implementation of the charged PSO, the modified \emph{emcee}, and the GMM used to describe the field population. Finally, I will end this Section detailing the hybrid high performance computing code developed to minimise the computing time of the BHM.
+This Section sets out the details about the code I developed to perform the computation described throughout this chapter. First, I give a brief chronological description of the model development. Later, I will describe the details on the implementation of the charged PSO, the modified \emph{emcee}, and the GMM used to describe the field population. Finally, I will end this Section detailing the hybrid high performance computing (Hybrid-HPC) code developed to minimise the computing time of the posterior distribution in the BHM.
 
-The first version of the Bayesian Hierarchical Model was implemented by \'Angel Berihuete in the package \emph{Stan} \citep{Stan}. It comprised a Bayesian model of the ML model of \citet{Sarro2014}. The proper motions were modelled using a single mixture of gaussians. The photometry was modelled with a Chebyshev polynomial parametrised with the length along the sequence. This length was found using a principal curve analysis. Later, I included the EMB and uncertainties both in proper motion and in photometry, and the width of the sequence modelled as the multivariate gaussian. We realised that the principal curve analysis is not compatible with the deconvolution methodology. The principal curve analysis is driven by the elements with higher variance. We decided to parametrise the polynomials with the true colour, a nuisance parameter that was marginalised with the aid of a prior. For this prior we introduced the colour distribution. Previous to the introduction of the marginalisation of the nuisance parameters, the model worked fine on samples of a few thousands of stars. One the marginalisation was introduced the model increased the amount of computing time rendering it useless for higher data sizes. At this point we decided to port the existing code into python in order to use the parallel \emph{emcee}. \emph{emcee} proved to be of great use. Due to its parallelisation capabilities we were able to increase the data size from 2000 to 10,000 objects. Since the computing of the likelihood was the highest computational challenge, I developed my own routines to perform it on parallel. However, \emph{CosmoHammer} \citep{Akeret2013} turn out to be more efficient in distributing the loads. I ported the code into \emph{CosmoHammer} and modified this last one to better suit our needs. Despite the Hybrid-HPC, the computing of the likelihood of $10^5$ seemed unreachable. At this point I performed two tasks, the first was to strip the code of all auxiliary libraries calls, and the vectorisation of the operations. Since the parameters of the field were held fixed, the field likelihood was computed externally for each object. The code was then fed with the data, the field likelihood, and the auxiliary computations reduced at minimum. These reduction included for example, the Cholesky decompositions and matrix inversions of the uncertainty. Thus, instead of doing these computation inside the code, the code was fed with the appropriate values.
+The first version of the Bayesian Hierarchical Model was implemented by \'Angel Berihuete in the package \emph{Stan} \citep{Stan}. It comprised a Bayesian model of the ML model of \citet{Sarro2014}. The proper motions were modelled using a single mixture of gaussians. The photometry was modelled with a Chebyshev polynomial parametrised by the length along the sequence. This length was found using a principal curve analysis and lacked physical interpretation.
 
-Introducing PSO and later the charged PSO reduced the computing time.  At this point we were able to compute the first $10^5$ run, which however did not converged in reasonable time. Once the approximation to the marginalisation integrals (Eqs. \ref{eq:clmarginalps} and \ref{eq:clmarginalpb}) were introduced, the computing time reduced far more. Finally, the tuning of the parameter allowed us to increase the acceptance fraction, and reach convergence within 4 weeks of full computing time in a 80 cores computer cluster. It is indeed a very long time, however it is reasonable compared with our original estimates of approximately 2 years\footnote{Today, the DANCe team is working on a GPU version of the code which is expected to compute the same amount of calculations in a couple of days.}.
+I took this version and modified in the following aspects. I included the photometric and proper motions EMB sequence, the uncertainties both in proper motion and in photometry, and the width of the sequence modelled as the multivariate gaussian. Then, we realised that the principal curve analysis is not compatible with the deconvolution methodology. The principal curve analysis is driven by the elements with higher variance. Thus, we decided to parametrise the polynomials with the true colour, a more interpretable nuisance parameter that was later marginalised with the aid of a prior. For this prior we introduced the colour distribution as a GMM. 
+
+Previous to the introduction of the marginalisation of the nuisance parameters, the model worked fine on samples of a few hundreds of stars. Once the marginalisation was introduced, the computing time of the model increased dramatically, rendering its application to higher data sizes unpractical. At this point we decided to port the existing \emph{Stan} code into \emph
+{Python}\footnote{https://www.python.org} so that we can work with the parallel \emph{emcee} code. \emph{emcee} proved to be of great use. Due to its parallelisation capabilities we were able to increase the data size from 2000 to 10,000 objects. Since the computing of the likelihood was the highest computational challenge, I developed my own routines to perform it on parallel. However, \emph{CosmoHammer} \citep{Akeret2013} turn out to be more efficient in distributing the parallel loads. I ported the BHM code into \emph{CosmoHammer} and modified this last one. The modifications ranged from data files and log entries, to the introduction of priors and the handling of an Hybrid-HPC scheme using both MPI and multithreading. Despite the Hybrid-HPC scheme, the computing of the likelihood of a data set with $10^5$ objects seemed unreachable. At this point, I performed two tasks, the first was to strip the code of all auxiliary libraries calls, and the second was the vectorisation of the majority of the operations. Since the parameters of the field were held fixed, the field likelihood was computed externally for each object. The code was then fed with the data, the field likelihood, and the auxiliary computations reduced at minimum. Among the reduced computation there are, for example, the Cholesky decompositions and matrix inversions of the covariance matrices of the uncertainty. Instead of doing these computation inside the code, the code was fed with the precomputed values. This further reduced the computing time.
+
+Introducing PSO and later the charged PSO reduced even further the computing time.  At this point the code was able to run on a data set with $10^5$ objects. However, convergence of the MCMC still required several weeks of computations. Once the approximation to the marginalisation integral (Eqs. \ref{eq:clmarginalps} and \ref{eq:clmarginalpb}) was introduced, the computing time reduced far more. Finally, the tuning of the \emph{emcee} parameters allowed us to increase the acceptance fraction, and reach convergence within for weeks of full computing time with a 80 cores computer cluster. It is indeed a very long time, however it is reasonable compared with our original estimates of approximately 2 years of computing time.\footnote{Today, the DANCe team is working on a GPU version of the code which is expected to compute the same amount of calculations in a couple of days.}.
 
 \subsection{The modified charged PSO}
 \label{sect:chargedPSO}
-As explained before, the charged PSO of \citet{Blackwell2002} was inappropriate to our objective. The metric of the parametric space of our problem is not isotropic, parameters have different length scales. For example, while fraction are constrained in the $[0,1]$ interval proper motions parameters can go far larger than that. Therefore, the use of an isotropic metric results in a solution which is crowded in some parameters while is over dispersed in others. 
-To solve this issue, I modified the charged PSO by measuring distance between particles and applying the electrostatic force independently in each parameter. In such a way, the electrostatic force plays a role only when the relative distance between particles is smaller than $10^{-10}$. I found this value heuristically.
+As explained before, the charged PSO of \citet{Blackwell2002} was inappropriate to our objective. The metric of the parametric space of our problem is not isotropic, parameters have different length scales. For example, while fraction are constrained in the $[0,1]$ interval, proper motions parameters are allowed in the range of proper motion measurements $[-99,99]\,mas\cdot yr^{-1}$. Therefore, the use of an isotropic metric results in a solution which is crowded in some parameters while is over dispersed in others. 
+To solve this issue, I modified the charged PSO by measuring distance between particles and applying the electrostatic force independently on each parameter. In such a way, the electrostatic force plays a role only when the relative distance between particles is smaller than $10^{-10}$. I found this value heuristically.
 
 In the original version of  \citet{Blackwell2002}, each particle is subject to the acceleration,
 \begin{equation}
@@ -698,20 +774,22 @@ In the modified version, the distance is measured independently in each dimensio
 \label{eq:PSOacc}
 \mathbf{a}=\sum_{i\neq j} \frac{q_i \cdot q_j }{r_{ij}^2} \cdot \mathbf{r}_{ij}, \ \ \ \  10^{-50} < \frac{r_{ij}}{r_{eq}} < \epsilon
 \end{equation}
-and it is now applied over each dimension of the parametric space. The distance $r_{eq}$ is that at which the velocity caused by the acceleration equals the mean velocity caused by the common PSO. $\epsilon$ is a free parameter set, heuristically, to $10^{-10}$.
+and it is now applied over each dimension of the parametric space. The distance $r_{eq}$ is that at which the velocity caused by the acceleration equals the mean velocity caused by the common PSO. $\epsilon$ is a free parameter, which as said previously was set heuristically to $10^{-10}$.
 
 \subsection{Improvements of emcee}
 The modification I introduced in \emph{emcee}, although very simple, improved the acceptance fraction and mixing of the particles.
 To allow the parallelisation, \citet{Foreman2013} divide the ensemble of particles in two ensembles. In the original version, the particles in one ensemble use one and the same particle in complementary ensemble to compute their positions according to Eq. \ref{eq:stretchmove}. In the modified versions, particles from one ensemble update their positions using a particle from the complementary ensemble, however, this particle is chosen randomly at each iteration. 
 
-Figure \ref{fig:emceeDANCe} compares the mixing and acceptance fractions of the original and modified versions of \emph{emcee}. In a private communication with David Foreman, he mentioned that a similar modification was already introduced in a beta version of \emph{emcee}.
-\begin{figure}[htbp]
-\begin{center}
-%\includegraphics[width=\textwidth]{}
-\caption{Comparison between the log posterior evaluations of the original emcee version (left) and the modified one (right). }
-\label{fig:emceeDANCe}
-\end{center}
-\end{figure}
+In a private communication with David Foreman, the developer of \emph{emcee}, he mentions that a similar modification was already introduced in a beta version of \emph{emcee} code.
+
+%Figure \ref{fig:emceeDANCe} compares the mixing and acceptance fractions of the original and modified versions of \emph{emcee}.
+%\begin{figure}[htbp]
+%\begin{center}
+%%\includegraphics[width=\textwidth]{}
+%\caption{Comparison between the log posterior evaluations of the original emcee version (left) and the modified one (right). }
+%\label{fig:emceeDANCe}
+%\end{center}
+%\end{figure}
 \subsection{GMM for the field population}
 As mentioned earlier in this Chapter, the field population is modelled by means of two independent photometric and proper motion distributions. The MLE of the parameters of these distributions were found using the EM algorithm.  The conventional EM algorithm for GMM \citep{Dempster1977} for a mixture of $M$ gaussians goes as follows. Given a set of parameters $\theta=\{w_i,\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i\}_{i=1}^M$, were $w_i$,$\boldsymbol{\mu}_i$, and $\boldsymbol{\Sigma}_i$ are the fraction, mean and covariance matrix of gaussian component $i$, the likelihood of the data is,
 
@@ -719,18 +797,18 @@ As mentioned earlier in this Chapter, the field population is modelled by means 
 p(\{\mathbf{y}_n\}_{n=1}^N|\theta)=\prod_{n=1}^N {\sum_{i=1} ^M {w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}}.
 \end{equation}
 
-To solve the problem, the EM algorithm requires  a set of $N$ variables, $z$, of $M$ dimension are introduced. The variable $z_{n,i}$ represent the probability that observation $y_n$ was drawn from gaussian $i$. Therefore,
+To solve the problem, the EM algorithm requires  a set of $N$ variables, $\{\boldsymbol{z}_n\}_{n=1}^N$, of dimension $M$. The variable $z_{n,i}$ represent the probability that observation $y_n$ was drawn from gaussian $i$. Therefore,
 
 \begin{equation}
-1=\sum_{i=1}^M z_{n,i}
+1=\sum_{i=1}^M z_{n,i}.
 \end{equation}
 
-These $z$ latent variables are found as
+These $\boldsymbol{z}$ latent variables are found as
 \begin{equation}
-z_{n,i}= \frac{w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}{\sum_{i=1}^M w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}
+z_{n,i}= \frac{w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}{\sum_{i=1}^M w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}.
 \end{equation}
 
-The EM works, as its name indicates, by maximising the expected value of the likelihood.
+The EM works, as its name indicates, by maximising the expected value of the likelihood. This last is given by
 \begin{equation}
 E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\sum_{i=1} ^M {z_{n,i}\cdot w_i\cdot \mathcal{N}(\mathbf{y}_n|\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i)}}.
 \end{equation}
@@ -738,8 +816,8 @@ E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\sum_{i=1} ^M {z_{n,i}\cdot
 The previous expectation is maximal when,
 \begin{align}
 w_i &= \frac{1}{N} \sum_{n=1}^N z_{n,i}, \\
-\boldsymbol{\mu}_i &= \frac{1}{\sum_{n=1}^N z_{n,i}} \sum_{n=1}^N z_{n,i}\cdot \mathbf{y}_n\\
-\boldsymbol{\Sigma}_i &= \frac{1}{\sum_{n=1}^N z_{n,i}} \sum_{n=1}^N z_{n,i}\cdot (\mathbf{y}_n - \boldsymbol{\mu}_i)\times(\mathbf{y}_n-\boldsymbol{\mu}_i)^T
+\boldsymbol{\mu}_i &= \frac{1}{\sum_{n=1}^N z_{n,i}} \sum_{n=1}^N z_{n,i}\cdot \mathbf{y}_n,\\
+\boldsymbol{\Sigma}_i &= \frac{1}{\sum_{n=1}^N z_{n,i}} \sum_{n=1}^N z_{n,i}\cdot (\mathbf{y}_n - \boldsymbol{\mu}_i)\times(\mathbf{y}_n-\boldsymbol{\mu}_i)^T.
 \end{align}
 
 The modified version of the GMM, which includes a uniform distribution, is now a particular case of the GMM. This can be viewed as a gaussian distribution with fixed parameters and a constant probability $c$ given by the uniform distribution. The new expectation is then,
@@ -749,9 +827,9 @@ E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\left[z_{n,0}\cdot w_0 \cdo
 
 The maximisation step remains identical except for the indices. There are now $M+1$ fractions $w_i$, with $i=0,1,...,M$, and the means and covariances run from $i=1,...,M$.
 
-Regarding the photometric GMM of the field. Since photometry has missing values, we use the EM algorithm of \citet{McMichael1996}. This algorithm was developed to obtain the MLE of data with missing values. A more recent version has been developed by \citet{Lin2006}, however, this assumes that the missing data is randomly distributed (missing at random). As mentioned earlier, the missing values in the photometry are not randomly distributed.
+Regarding the photometric GMM of the field. Since photometry has missing values, we use the EM algorithm of \citet{McMichael1996}. This algorithm was developed to obtain the MLE of data with missing values. A more recent version has been developed by \citet{Lin2006}, however, this assumes that the missing data is randomly distributed (missing at random). However,  as mentioned earlier, the missing values in the photometry of the DANCE DR2 are not randomly distributed.
 
-In \citet{McMichael1996} algorithm, there is a set of $N$ gain matrices, one for each datum. Each $M_n$ matrix is an identity matrix in which the rows of the corresponding missing value have been deleted. Thus, the expected value of the likelihood is now,
+In the algorithm of \citet{McMichael1996}, there is a set of $N$ gain matrices, one for each datum. Each $M_n$ matrix is an identity matrix in which the rows of the corresponding missing value have been deleted. Thus, the expected value of the likelihood is now,
 
 \begin{equation}
 E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\sum_{i=1} ^M {z_{n,i}\cdot w_i\cdot \mathcal{N}(\mathbf{y}_n|M_n \boldsymbol{\mu}_i,M_n\boldsymbol{\Sigma}_i M_n)}}.
@@ -776,21 +854,21 @@ The maximisation step has no analytical solution for the covariance matrix, ther
 with  and $\Delta_i$ given by
 
 \begin{equation}
-\Delta_i=  \frac{1}{\sum_{n=1}^N z_{n,i}}\cdot \sum_{n=1}^N z_{n,i} \cdot \left[H_n(\mathbf{y}_n -  M_n \boldsymbol{\mu}_i) \times  (\mathbf{y}_n -  M_n \boldsymbol{\mu}_i)^TH_n^T - H_nI\right]
+\Delta_i=  \frac{1}{\sum_{n=1}^N z_{n,i}}\cdot \sum_{n=1}^N z_{n,i} \cdot \left[H_n(\mathbf{y}_n -  M_n \boldsymbol{\mu}_i) \times  (\mathbf{y}_n -  M_n \boldsymbol{\mu}_i)^TH_n^T - H_nI\right].
 \end{equation}
  
- The algorithm preserves the monotonic convergence of the conventional EM, and returns positive definite matrices provided that $\rho < 2$. For details and validation see \citet{McMichael1996}.
+ This algorithm preserves the monotonic convergence of the conventional EM, and returns positive definite matrices provided that $\rho < 2$. For details and validation of this algorithm see \citet{McMichael1996}.
 
 \subsection{Hybrid-HPC implementations}
 \label{sect:HHPC}
-As I outlined at the beginning of this section, the parallel computing approach was an unavoidable step. Once the code was ported to python and \emph{CosmoHammer}, I modified this last one to better fit our needs. The modifications were mainly on the management of input and output files and the python \emph{multiprocessing} package for the computing of our likelihood. Also, I striped some of its original functions to reduce memory usage and implemented some others, like the use of initial positions for the particles.
+As I outlined before, the parallel computing approach was an unavoidable step. Once the code was ported to \emph{Python} and \emph{CosmoHammer}, I modified this last one to better fit our needs. The modifications were mainly on the management of input and output files and the python \emph{multiprocessing} package for the multithreading computing of likelihood. Also, I striped some of its original functions to reduce memory usage and implemented some others, like the use of initial positions for the particles.
 
-In our Hybrid-HPC (HHPC) approach, the particles of \emph{emcee} are distributed on the nodes of the computing cluster. Then, each core in the node computes the likelihood of one fraction of the objects in the data set. For the cluster at the Centre of Astrobiology
-\footnote{Villanueva de la ca\~nada, Madrid,Spain.}(CAB) I used a configuration of 6 nodes each with 12 cores. For the cluster at the University of C\'adiz, I used a configuration of 5 nodes each with 16 cores. Particles were distributed among the six nodes using MPI while each core computes the likelihood of one 12th of the total number of objects in the data set.
+In the Hybrid-HPC approach, the particles of \emph{emcee} are distributed on the nodes of the computing cluster by means of the MPI protocol. Then, each core in the node computes the likelihood of one fraction of the objects in the data set. This Hybrid-HPC code was implemented and tested in different computing cluster architectures. For the cluster at the Centre of Astrobiology (CAB, Villanueva de la ca\~nada, Madrid,Spain), I used a configuration of 6 nodes each with 12 cores. For the cluster at the University of C\'adiz, (Andaluc\'i
+a, Spain) I used a configuration of 5 nodes each with 16 cores.
 
-However, the HHPC approach was not the best solution at the CIMENT clusters of the University of Grenoble Alpes. At this cluster (Froggy) the HHPC continuously render errors of communication. For this reason, I implemented a only MPI version of the code. In this version, the multithreading approach is left aside. Instead, the totality of the available cores is fully dedicated to the computing of the likelihood. Each of the $n$ cores computes the likelihood of one $n$th of the objects in the data set. Once the likelihood of all particles has been computed, the master evaluates the new positions of the particles.
+However, the  Hybrid-HPC approach was not the best solution at the CIMENT clusters of the University of Grenoble Alpes. At this cluster (I used Froggy), the code continuously render errors of communication. For this reason, I implemented a only-MPI version of the code. In this version, the multithreading approach is left aside. Instead, the totality of the available cores is fully dedicated to the computing of the likelihood. Each of the $n$ cores computes the likelihood of one $n$th of the objects in the data set. Once the likelihood of all particles has been computed, the master node evaluates the new positions of the particles.
 
-I finish this chapter with a brief description of the difficulties faced on the development and testing of the BHM code. As the code evolved in complexity, my computational skills were compelled to evolve as well. I started by learning R and solving some toy problems on it. Later, when the dimensionality of the posterior increased I learned \emph{Stan}. When the data set increased in size, we faced the parallelisation, so I learned Python and MPI. Once these versions were operable, I was forced to deal with libraries, from the common, numpy, scipy and numba, to the linking of modules and libraries. Finally, when dealing with several clusters I learned the queue languages Condor, slurm and OAR. Currently, the DANCe team has developed a GPU implementation of the BHM code.  
+I finish this chapter with a brief description of the difficulties faced on the development and testing of the BHM code. As the code evolved in complexity, my computational skills were compelled to evolve as well. I started by learning R and solving some toy problems on it. Later, when the dimensionality of the posterior increased I learned \emph{Stan}. When the data set increased in size, we faced the parallelisation, so I learned Python and MPI. Once these versions were operable, I was forced to deal with libraries, from the common, numpy, scipy and numba, to the linking of modules and libraries. Finally, when dealing with several clusters I learned the queue languages Condor, slurm and OAR. Currently, I am working on the improvement (memory allocation and data distribution) of GPU implementation of the BHM code.  
 
 
 
