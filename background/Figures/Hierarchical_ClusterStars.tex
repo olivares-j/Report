@@ -1,0 +1,199 @@
+
+%\documentclass[12pt]{amsart}
+%\usepackage{bm}
+%\usepackage{color}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\usepackage{tikz}
+%\usetikzlibrary{arrows,arrows.meta,shapes,decorations.pathmorphing,positioning,intersections,calc,backgrounds}
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{marginalized}=[black, {Circle[color=black,length=3pt]-latex[]}]
+%\tikzstyle{con} = [thick, dashed, draw, angle 90 reversed-angle 90 reversed]
+%\tikzset{
+%    box1/.style={%
+%        draw=black, thick,
+%        rectangle,
+%        rounded corners,
+%        minimum height=4cm,
+%        minimum width=4cm
+%    },
+%    snake arrow/.style=
+%{->,
+%decorate,
+%decoration={snake,amplitude=.4mm,segment length=2mm,post length=1mm}}
+%}
+%
+%
+%% See the ``Article customise'' template for come common customisations
+%
+%%%% BEGIN DOCUMENT
+%\begin{document}
+%\begin{figure}[tb]
+%  \begin{center}
+%  \resizebox{0.9\linewidth}{!}{
+\begin{tikzpicture}[>=stealth', node distance = 1cm, every node/.style={rectangle,fill=white}]
+
+%############### Principal block ###################
+% Variables 
+\node[draw, fill = gray!20, circle, label={[name=x_i_lab,xshift=-10pt,yshift=3pt]below:$\boldsymbol{d}$}] (x_i) at (0,0) {$[7]$};
+\node[draw, circle, label={[name=pi_lab,xshift=-10pt,yshift=3pt]below:$\pi$}] (pi) [above = of x_i] {$[1]$};
+\node[draw, fill = gray!20, label={[name= alpha_lab]above:$\boldsymbol{\alpha}$}] (alpha) [above = of pi] {$[2]$};
+
+% relations
+\path[line] (alpha) -> (pi);
+\draw[marginalized] (pi) -- (x_i);
+% plates
+\begin{pgfonlayer}{background}
+\node (rect) at (x_i) [xshift = 0pt, yshift = -3pt, draw, rounded corners, thick, minimum width=50pt, 
+minimum height=50pt, line width=1pt, fill=yellow!90!blue, fill opacity=0.3] (rect1) {};
+\end{pgfonlayer}
+\node[anchor=south east,inner sep=5pt, fill = none] at (rect1.south east) {$N$};
+
+%############# NON-MEMBERS ##############################
+\node[draw, fill = gray!20, label={[name = mu_nm_pm_lab,xshift=-10pt,yshift=2pt]below:$\boldsymbol{\mu}_{pm}^{nm}$}] (mu_nm_pm) [left = of x_i,xshift=-120pt,yshift=100pt] {$[2]$};
+
+\node[draw, fill = gray!20, label={[name = sg_nm_pm_lab,xshift=-10pt,yshift=2pt]below:$\Sigma_{pm}^{nm}$}] (sg_nm_pm) [right = of mu_nm_pm,yshift=0pt] {$[2,2]$};
+\node[draw, fill = gray!20, label={[name = pi_nm_pm_lab,xshift=-10pt,yshift=2pt]below:$\pi_{pm}^{nm}$}] (pi_nm_pm) [right = of sg_nm_pm,yshift=0pt] {$[M_{pm}]$};
+
+\node[draw, fill = gray!20, label={[name = mu_nm_phot_lab,xshift=-10pt,yshift=2pt]below:$\boldsymbol{\mu}_{ph}^{nm}$}] (mu_nm_phot) [left = of x_i,xshift=-120pt,yshift=-60pt] {$[5]$};
+
+\node[draw, fill = gray!20, label={[name = sg_nm_phot_lab,xshift=-10pt,yshift=2pt]below:$\Sigma_{ph}^{nm}$}] (sg_nm_phot) [right = of mu_nm_phot,yshift=0pt] {$[5,5]$};
+\node[draw, fill = gray!20, label={[name = pi_nm_phot_lab,xshift=-10pt,yshift=2pt]below:$\pi_{ph}^{nm}$}] (pi_nm_phot) [right = of sg_nm_phot,yshift=0pt] {$[M_{ph}]$};
+
+\begin{pgfonlayer}{background}
+\node (rect) at (mu_nm_pm) [xshift = 30pt, yshift = -4pt, draw, rounded corners, thick, minimum width=110pt, 
+minimum height=50pt, line width=1pt, fill=gray!20, fill opacity=0.5] (rect2) {};
+\end{pgfonlayer}
+\node[anchor=south east,inner sep=5pt, fill = none] at (rect2.south east) {$M_{pm}$};
+
+\begin{pgfonlayer}{background}
+\node (rect) at (mu_nm_phot) [xshift = 30pt, yshift = -4pt, draw, rounded corners, thick, minimum width=110pt, 
+minimum height=50pt, line width=1pt, fill=gray!20, fill opacity=0.5] (rect2) {};
+\end{pgfonlayer}
+\node[anchor=south east,inner sep=5pt, fill = none] at (rect2.south east) {$M_{ph}$};
+
+\draw [->,name path=curve] (mu_nm_pm) to [out = -90, in = 180, looseness=1] (x_i);
+\draw [->,name path=curve] (sg_nm_pm) to [out = -90, in = 180, looseness=1] (x_i);
+\draw [->,name path=curve] (pi_nm_pm) to [out = -90, in = 180, looseness=1] (x_i);
+
+\draw [->,name path=curve] (mu_nm_phot) to [out = 90, in = 180, looseness=1] (x_i);
+\draw [->,name path=curve] (sg_nm_phot) to [out = 90, in = 180, looseness=1] (x_i);
+\draw [->,name path=curve] (pi_nm_phot) to [out = 90, in = 180, looseness=1] (x_i);
+%############# MEMBERS ##############################
+% photometry block
+\node[draw, circle, label={[name = t_phot_lab,xshift=-10pt,yshift=3pt]below:$$}] (t_phot) [right = of x_i,xshift=100pt,yshift=25] {$\boldsymbol{t}_{ph}$};
+\node[draw, circle, label={[name = idx_clr_lab,xshift=-10pt,yshift=3pt]below:$$}] (idx_clr)  [above = of t_phot]  {$CI$};
+\node[draw, circle, label={[name = sg_phot_lab,xshift=-10pt,yshift=3pt]below:$\Sigma_{clus}$}] (sg_phot) [left = of idx_clr,xshift=10pt] {$[15]$};
+\node[draw, circle, label={[name = pi_phot_lab,xshift=-10pt,yshift=3pt]below:$\pi_{CB}$}] (pi_phot) [below= of x_i, xshift=0pt,yshift=-0pt] {$[1]$};
+\node[draw, circle, label={[name = beta_lab,xshift=-10pt,yshift=3pt]below:$\boldsymbol{\beta}$}] (beta) [right = of idx_clr] {$[4,7]$};
+\node[draw, circle, label={[name = mu_clr_lab,xshift=-10pt,yshift=3pt]below:$\mu_{CI}$}] (mu_clr) [above = of idx_clr] {$[1]$};
+\node[draw, circle, label={[name = pi_clr_lab,xshift=-10pt,yshift=3pt]below:$\pi_{CI}$}] (pi_clr)  [left = of mu_clr]  {$[4]$};
+\node[draw, circle, label={[name = sigma_clr_lab,xshift=-5pt,yshift=3pt]below:$\sigma_{CI}$}] (sigma_clr) [right = of mu_clr ]{$[1]$};
+
+\draw (idx_clr)  node[fill=none,minimum size=16pt,draw] {};
+
+\node[draw, fill = gray!20, label={[name = mu_beta_lab]above:$\boldsymbol{\mu}_{\beta}$}] (mu_beta) [right = of beta]{$[4,7]$};
+\node[draw, fill = gray!20, label={[name = sg_beta_lab]above:$\boldsymbol{\sigma}_{\beta}$}] (sg_beta) [above = of mu_beta] {$[7]$};
+\node[draw, fill = gray!20, label=below:$\boldsymbol{\alpha}_{CB}$] (alpha_phot) [below=of pi_phot] {$[2]$};
+\node[draw, fill = gray!20, label={[name = alpha_clr_0_lab]above:$\boldsymbol{\alpha}_{CI}$}] (alpha_clr_0) [above = of pi_clr] {$[5]$};
+\node[draw, fill = gray!20, label={[name = rg_clr_lab]above:$rg_{CI}$}] (rg_clr) [above = of mu_clr,xshift=0pt] {$[2]$};
+\node[draw, fill = gray!20, label={[name = eta_clr_lab]above:$\eta$}] (eta_clr) [above = of sigma_clr,xshift=0pt] {$[1]$};
+\node[draw, fill = gray!20, label={[name = nu_phot_lab]above:$\nu$}] (nu_phot) [left = of sg_phot,yshift=0pt] {$[1]$};
+\node[draw, fill = gray!20, label={[name = A_phot_lab]above:$\boldsymbol{A}_{ph}$}] (A_phot) [above = of nu_phot,yshift=0pt] {$[5]$};
+\begin{pgfonlayer}{background}
+\node (rect) at (idx_clr) [xshift = 0pt, yshift = 25pt, draw, rounded corners, thick, minimum width=170pt,
+ minimum height=120pt, line width=1pt, fill=black!20!red, fill opacity=0.5] (rect4) {};
+\end{pgfonlayer}
+
+\begin{pgfonlayer}{background}
+\node (rect) at (mu_clr) [xshift = 30pt, yshift = -5pt, draw, rounded corners, thick, minimum width=100pt,
+ minimum height=60pt, line width=1pt, fill=none] (rect5) {};
+\end{pgfonlayer}
+\node[anchor=south east,inner sep=5pt, fill=none] at (rect5.south east) {$5$};
+
+
+\path [line,dashed] (idx_clr) -> (t_phot);
+\path [line,dashed] (beta) -> (t_phot);
+\path[line] (mu_clr) -> (idx_clr);
+\path[line] (sigma_clr) -> (idx_clr);
+\draw[marginalized] (pi_clr) to (idx_clr);
+\path[line] (mu_beta) -> (beta);
+\path[line] (sg_beta) -> (beta);
+\path[line] (alpha_clr_0) -> (pi_clr);
+\path[line] (rg_clr) -> (mu_clr);
+\path[line] (eta_clr) -> (sigma_clr);
+\path[line] (alpha_phot) -> (pi_phot);
+\path[line] (A_phot) -> (sg_phot);
+\path[line] (nu_phot) -> (sg_phot);
+
+\draw [marginalized,name path=curve] (pi_phot) to [out = 0, in = 0, looseness=2] (x_i);
+\draw [name path=curve] (t_phot) to [out=180,in=0, looseness=1.0]  (x_i);
+\draw [name path=curve] (sg_phot) to [out = 270, in = 0, looseness=1.0] (x_i);
+
+% propermotion block
+%----singles --------
+\node[draw, circle, label={[name = pi_pm_lab,xshift=-10pt,yshift=3pt]below:$\boldsymbol{\pi}_{Cs}$}] (pi_cs) [below= of t_phot,xshift=-55pt]{$[3]$};
+\node[draw, circle, label={[name=mu_pm_lab,xshift=-10pt,yshift=3pt]below:$\boldsymbol{\mu}_{Cs}$}] (mu_cs) [below= of pi_cs] {$[2]$};
+\node[draw, circle, label={[name = sigma_pm_lab,xshift=-10pt,yshift=3pt]below:$\Sigma_{Cs}$}] (sigma_cs) [below = of mu_cs] {$[3]$};
+
+\begin{pgfonlayer}{background}
+\node (rect) at (sigma_cs) [xshift = 0pt, yshift = -0pt, draw, rounded corners, thick, minimum width=50pt,
+ minimum height=55pt, line width=1pt, fill=none] (rect3) {};
+\end{pgfonlayer}
+\node[anchor=south east,inner sep=5pt, fill = none] at (rect3.south east) {$4$};
+
+\begin{pgfonlayer}{background}
+\node (rect) at (mu_cs) [xshift = 0pt, yshift = -10pt, draw, rounded corners, thick, minimum width=60pt,
+ minimum height=170pt, line width=1pt, fill=gray!50!blue,fill opacity=0.3] (rect3) {};
+\end{pgfonlayer}
+%-------binaries -----------
+\node[draw, circle, label={[name = pi_pm_lab,xshift=-10pt,yshift=3pt]below:$\boldsymbol{\pi}_{Bs}$}] (pi_bs) [below= of t_phot,xshift=55pt]{$[1]$};
+\node[draw, circle, label={[name=mu_pm_lab,xshift=-10pt,yshift=3pt]below:$\boldsymbol{\mu}_{Bs}$}] (mu_bs) [below= of pi_bs] {$[2]$};
+\node[draw, circle, label={[name = sigma_pm_lab,xshift=-10pt,yshift=3pt]below:$\Sigma_{Bs}$}] (sigma_bs) [below = of mu_bs] {$[3]$};
+
+\begin{pgfonlayer}{background}
+\node (rect) at (sigma_bs) [xshift = 0pt, yshift = -0pt, draw, rounded corners, thick, minimum width=50pt,
+ minimum height=55pt, line width=1pt, fill=none] (rect3) {};
+\end{pgfonlayer}
+\node[anchor=south east,inner sep=5pt, fill = none] at (rect3.south east) {$2$};
+
+\begin{pgfonlayer}{background}
+\node (rect) at (mu_bs) [xshift = 0pt, yshift = -10pt, draw, rounded corners, thick, minimum width=60pt,
+ minimum height=170pt, line width=1pt, fill=green!50!blue,fill opacity=0.3] (rect3) {};
+\end{pgfonlayer}
+%-------- hyper parameters
+
+
+\node[draw, fill = gray!20, label={[name = mu_pm_lab]below:$\boldsymbol{\mu}_{\mu_{pm}}$}] (mu_pm) [below= of t_phot,yshift=-34pt] {$[2]$};
+\node[draw, fill = gray!20, label={[name = sg_pm_lab]below:$\Sigma_{\mu_{pm}}$}] (sg_pm) [below = of mu_pm,yshift=15pt] {$[2,2]$};
+
+\node[draw, fill = gray!20, label={[name = nu_pm_lab]below:$\nu$}] (nu_pm) [below = of sg_pm,yshift=10pt] {$[1]$};
+\node[draw, fill = gray!20, label={[name = A_pm_lab]below:$\boldsymbol{A}_{pm}$}] (A_pm) [below = of nu_pm,yshift=15pt] {$[2]$};
+
+
+\node[draw, fill = gray!20, label=below:$\boldsymbol{\alpha}_{Cs}$] (alpha_cs) [right=of pi_cs,xshift=-10pt,yshift=5pt] {$[4]$};
+\node[draw, fill = gray!20, label=below:$\boldsymbol{\alpha}_{Bs}$] (alpha_bs) [left=of pi_bs,xshift=10pt,yshift=5pt] {$[2]$};
+ 
+\draw [marginalized,name path=curve] (pi_cs) to [out = 150, in = 0, looseness=1] (x_i);
+\draw [name path=curve] (mu_cs) to [out = 120, in = 0, looseness=0.8] (x_i);
+\draw [name path=curve] (sigma_cs) to [out = 120, in = 0, looseness=0.9] (x_i);
+
+\draw [marginalized,name path=curve] (pi_bs) to [out = 150, in = 0, looseness=1] (x_i);
+\draw [name path=curve] (mu_bs) to [out = 60, in = 0, looseness=1.5] (x_i);
+\draw [name path=curve] (sigma_bs) to [out = 70, in = 0, looseness=2] (x_i);
+
+\path[line] (alpha_cs) -> (pi_cs);
+\path[line] (mu_pm) -> (mu_cs);
+\path[line] (sg_pm) -> (mu_cs);
+\path[line] (A_pm) -> (sigma_cs);
+\path[line] (nu_pm) -> (sigma_cs);
+
+\path[line] (alpha_bs) -> (pi_bs);
+\path[line] (mu_pm) -> (mu_bs);
+\path[line] (sg_pm) -> (mu_bs);
+\path[line] (A_pm) -> (sigma_bs);
+\path[line] (nu_pm) -> (sigma_bs);
+
+\end{tikzpicture}
+%}\end{center}
+%\end{figure}
+%\end{document}
