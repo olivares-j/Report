@@ -306,12 +306,13 @@ $K_s$[mag]&1.40e-02& 5.75e-02& 8.17e-02& 1.32e-01& 3.88e+01&1.04e-01\\
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics[height=8cm]{background/Figures/F12_Bouy2013.pdf}
-\caption{Proper motion uncertainty as a function of the photometric magnitude in the $i$ band.Reproduced from Figure 12 of \citet{Bouy2013},\textit{\usebibentry{Bouy2013}{title}}, \usebibentry{Bouy2013}{journal}, \usebibentry{Bouy2013}{volume}.}
+\caption{Proper motion uncertainty as a function of the photometric magnitude in the $i$ band. Reproduced from Figure 12 of \citet{Bouy2013},\textit{\usebibentry{Bouy2013}{title}}, \usebibentry{Bouy2013}{journal}, \usebibentry{Bouy2013}{volume}.}
 \label{fig:pmuncert}
 \end{center}
 \end{figure}
 
 \subsection{Selection of observables}
+\label{sect:RF-2}
 \sloppy
 As mentioned earlier, the Pleiades DANCe DR2 contains the positions $R.A.$,$Dec.$, proper motions, $\mu_{R.A.},\mu_{Dec.}$, and photometric $ugrizYJHK_s$ bands, of almost 2 million sources on the vicinity of the Pleiades clusters. Although these 13 observables carry information valuable to discriminate cluster members from field objects, not all of them discriminate in the same amount. \citet{Sarro2014} used important analysis with random forest to select the observables that were the most discriminants. They obtain that the AM, RF-2, and RF-3 reference sets containing the observables $\mu_{R.A.},\mu_{Dec.}$ proper motions, and photometric bands $rizYJHK_s$ were the most discriminants. However, these authors later excluded the $r$ band because most of objects in their training set do not have this band. Since most of the missing values in the $r$ band occur at the faint end, their resulting training set was bised towards the bright end. In a subsequent analysis using roughly the same methodology, \citet{Bouy2015} worked only the RF-2, which excludes also the $z$ band.
 

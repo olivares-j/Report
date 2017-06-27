@@ -10,15 +10,15 @@ Database file #1: biblio.bib
 Warning--I didn't find a database entry for ""
 You've used 124 entries,
             2947 wiz_defined-function locations,
-            1485 strings with 27107 characters,
-and the built_in function-call counts, 57692 in all, are:
-= -- 4864
+            1486 strings with 27101 characters,
+and the built_in function-call counts, 57696 in all, are:
+= -- 4865
 > -- 4032
 < -- 82
 + -- 1355
 - -- 1213
-* -- 4658
-:= -- 10549
+* -- 4659
+:= -- 10550
 add.period$ -- 124
 call.type$ -- 124
 change.case$ -- 895
@@ -27,17 +27,17 @@ cite$ -- 124
 duplicate$ -- 2394
 empty$ -- 3504
 format.name$ -- 1552
-if$ -- 11516
+if$ -- 11517
 int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 108
 newline$ -- 376
 num.names$ -- 507
-pop$ -- 959
+pop$ -- 957
 preamble$ -- 1
 purify$ -- 891
 quote$ -- 0
-skip$ -- 2118
+skip$ -- 2119
 stack$ -- 0
 substring$ -- 2643
 swap$ -- 124
@@ -48,5 +48,5 @@ type$ -- 1089
 warning$ -- 0
 while$ -- 505
 width$ -- 0
-write$ -- 1242
+write$ -- 1243
 (There was 1 error message)

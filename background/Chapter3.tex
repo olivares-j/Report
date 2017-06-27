@@ -512,7 +512,7 @@ Finally, before ending this Section, I present a summary of the symbols of the p
   \begin{center}
   \resizebox{\textwidth}{!}{\input{background/Figures/Hierarchical_ClusterStars.tex}}
   \end{center}
-  \caption{Probabilistic graphical model representing the BHM. The left grey plates show the field model. The middle yellow plate shows the node where the likelihood is computed for each datum, $\boldsymbol{d}$. The right plates describe the relations among parameters in the cluster model. The photometric cluster model (red) is on top, while the proper motions cluster (blue) and equal-mass binaries (green) are at the bottom left and right, respectively. See Section \ref{sect:PGM} for more details.}
+  \caption{Probabilistic graphical model representing the BHM. The left grey plates show the field model. The middle yellow plate shows the node where the likelihood is computed for each datum, $\boldsymbol{d}$. The right plates describe the relations among parameters in the cluster model. The photometric cluster model (red) is on top, while the proper motions cluster (blue) and equal-mass binaries (green) are at the bottom left and right, respectively. See Section \ref{sect:PGM} for more details. Reproduced from Figure 19 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
   \label{fig:PGMBHM}
 \end{figure}
  
@@ -684,8 +684,10 @@ g(\frac{1}{z})= z\cdot g(z).\nonumber
 Finally, \citet{Goodman2010} define their affine invariant MCMC using the following distribution for $g(z)$,
 
 \begin{equation}
-g(z) \propto \left\{ \begin{array}{rcl}         \frac{1}{\sqrt{z}} & \mbox{for}&  z\in[1/a,a] \\ 
-         0  & \mbox{for} &  z\notin[1/a,a]                \end{array}\right.
+g(z) \propto \left\{ \begin{array}{rcl}
+         \frac{1}{\sqrt{z}} & \mbox{for}&  z\in[1/a,a] \\ 
+         0  & \mbox{for} &  z\notin[1/a,a]
+                \end{array}\right.
 \label{eq:gz}
 \end{equation} 
 and the acceptance probability,
