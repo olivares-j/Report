@@ -101,97 +101,107 @@ In statistical science, particularly in machine learining, is sometimes useful t
  
 \section{Comparison with the literature}
 \label{sect:memberscomparison}
-In Chapter \ref{chap:pleiades}, I mentioned that the most important works on the Pleiades members are those of \citet{Stauffer2007,Lodieu2012,Sarro2014,Bouy2015}. In this section I will compare the list of candidate I members found with the most recent study of the Pleiades members, that of \citet{Bouy2015}. Later, for the sake of completeness, I will compare my list of candidate members with the compilation made by \citet{Stauffer2007}.  
 
-IS ALL THIS SECTIONING REQUIRED.
+The BHM methodology, described in Chapter \ref{chap:BHM}, is applied to the Pleiades DANCe RDR2. Then, I compare the recovered membership probabilities with those reported in the literature. The first comparison I present is that of our candidate members with those in the two lists of candidate members of \citet{Stauffer2007}. Then, I proceed to compare our membership probabilities with those found by \citet{Bouy2015}. Finally, I compare a list of high probable candidate members I got from a private communication with Jerome Bouvier. This list of candidate members is XXX in XXX
 
-REJECTED CANDIDATES? OF WHOM? BY WHOM? AVOID CONFUSSION.
 
 \subsection{Candidate members from \citet{Stauffer2007}}
 
-REFER AS LIST I AND LIST II AVOID CONFUSION.
+\citet{Stauffer2007} published two list of candidate members. The first one contains 1417 objects compiled from the literature (see Table 2 of the mentioned work). These objects were classified as candidate members by several authors. As \citet{Stauffer2007} mention, this list is inhomogeneous, incomplete and certainly includes non members. I refer to this list as ST1. Their second list contains 55 candidate members (see Table 5 of the mentioned work). \citet{Stauffer2007} found these members using infrared photometry and proper motions. I refer to this list as ST2.
 
-\citet{Stauffer2007} published two list of candidate members. The first one contains 1417 objects compiled from the literature (their Table 2). These objects were classified as candidate members by several authors along modern astronomy. As \citet{Stauffer2007} mention, this list is inhomogeneous, incomplete and certainly includes non members. Their second list contains 55 candidate members  (their Table 5) found using infrared photometry, and proper motions.
+Cross matching \footnote{ Using the service http://cdsxmatch.u-strasbg.fr/xmatch, within 1 arcsec radius.} the previous two lists with the the Pleiades DANCe DR2 catalogue \citep{Bouy2015}, I find that only 1384 and 54 of the ST1 and ST2 lists have a counter part in the Pleiades DANCe DR2 catalogue, respectively. 
 
-Cross matching these two lists with the candidate members of\citet{Bouy2015}, shows that only 1288 of the 1417 objects on \citet{Stauffer2007} Table 2 were classified by \citet{Bouy2015} as candidate members. From these, 1132 objects come from the DANce survey and the rest from Tycho+DANCe, see Appendix B of \citet{Bouy2015}. Also, only 34 of the 55 new candidate members of  \citet{Stauffer2007} were classified by \citet{Bouy2015} as candidate members. In Figures \ref{fig:Stauffer1} - \ref{fig:Stauffer2} I show the candidate members of \citet{Stauffer2007}, and \citet{Bouy2015}. As mentioned by \citet{Stauffer2007}, many of the candidate members in their Table 2 are most probably non members. These objects lay far from the locus of the rest of the candidates. Similarly, the majority of the rejected candidates of \citet{Stauffer2007}, 15 of those in their Table 5, lay far from the cluster proper motion and photometric loci.
+Concerning our list of candidate members, after cross matching it with the two lists of \citet{Stauffer2007}, ST1 and ST2, I recover 1146 and 34 of the candidate members, respectively. Compared to the candidate members of \citet{Bouy2015}, our BHM recovers 28 more candidate members in ST1 and the same in ST2.
 
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{./background/Figures/Stauffer2Bouy_PM.pdf}
-\includegraphics[width=\textwidth]{./background/Figures/Stauffer2Bouy_CMD.pdf}
-\caption{Comparison between proper motions (top) and $K$ vs $i-K$ CMD of the candidate members compiled by \citet{Stauffer2007} (red) and those of \citet{Bouy2015}(blue), the common candidates are shown within green squares. }
-\label{fig:Stauffer1}
-\end{center}
+As mentioned before, the ST1 list is an exhaustive compilation of Pleiades members. It contains objects that were classified, at some point in history, as Pleiades candidate members, even when their membership probability are as low as 0.1 \citep{Stauffer2007}. For this reason I will not analyse the details of 238 rejected objects of ST1. It suffices to show that these rejected objects lay far from the cluster photometric or proper motions loci, as shown in Fig. \ref{fig:ST1}.
+
+On the other hand, from the 20 objects in ST2 that are rejected by the BHM, 18 of them lay below the cluster photometric sequence and far from the proper motion locus, see Fig. \ref{fig:ST2}. The remaining two (DANCe IDs: J034552.57+235145.9 and J034543.47+233851.5), although have observed photometric vectors compatible with the clusters sequence, their proper motions still are far from the cluster centre (these are the two objects located at the far right in Fig. \ref{fig:ST1}).
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+       \includegraphics[width=\textwidth]{background/Figures/ST1_pm.eps}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+     \includegraphics[width=\textwidth]{background/Figures/ST1_ph.eps}
+        \caption{}
+    \end{subfigure}
+\caption{Proper motions (a) and $K$ vs $i-K$ CMD (b) of the ST1 candidate members in the DANCe DR2 catalogue (black). Also shown, the objects classified as candidate members  in the BHM (grey), and in both ST1 and BHM (blue).}
+\label{fig:ST1}
 \end{figure}
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{./background/Figures/Stauffer5Bouy_PM.pdf}
-\includegraphics[width=\textwidth]{./background/Figures/Stauffer5Bouy_CMD.pdf}
-\caption{Comparison between proper motions (top) and $K$ vs $i-K$ CMD of the new candidate members of \citet{Stauffer2007} (red) and those of \citet{Bouy2015}(blue), the common candidates are shown within green squares. }
-\label{fig:Stauffer2}
-\end{center}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+       \includegraphics[width=\textwidth]{background/Figures/ST2_pm.eps}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+     \includegraphics[width=\textwidth]{background/Figures/ST2_ph.eps}
+        \caption{}
+    \end{subfigure}
+\caption{Proper motions (a) and $K$ vs $i-K$ CMD (b) of the ST2 candidate members in the DANCe DR2 catalogue (black). Also shown, the objects classified as candidate members in the BHM (grey), and in  both ST2 and BHM (blue).}
+\label{fig:ST2}
 \end{figure}
- 
-Concerning our list of candidate members, after cross matching the lists, we recover 1139 of the candidate members from Table 2 of  \citet{Stauffer2007}. Seven more than \citet{Bouy2015}. Also, we recover the same 34 candidates that \citet{Bouy2015} recovered from the new candidates of \citet{Stauffer2007} (from their Table5). 
 
-I have already mentioned that the Table 2 of \citet{Stauffer2007} is an exhaustive compilation of Pleiades members. This list contains objects that authors from the literature classified as Pleiades members even when the membership probability was as low as 0.1 \citep{Stauffer2007}. Therefore, I will not analyse in detail the $\sim 300$ rejected objects. It suffices to mention that we recover an slightly larger (seven) number of candidates than \citet{Bouy2015}.
-
-On the other hand, the list of new candidate members of \citet{Stauffer2007} deserves further attention and a more detailed comparison.
-From the 21 rejected objects, 14 of them lay below the cluster photometric sequence and  far from the proper motion locus. The remaining seven have membership probabilities near our probability threshold. XXXXX CHECK THIS XXXX 
 \subsection{Candidate members from \citet{Bouy2015}}
 \label{sect:comparisonBouy}
-The methodology of this work, although essentially different from that of \citet{Bouy2015}, the fact that both share the data set and use the same observables, allows a direct comparison between them. When using their objective probability thresholds, as shown by Fig. \ref{figure:HM-SBB}, both methodologies agree on the outstanding $99.6$\% of the classified objects. Concerning the candidate members, they also agree on $\approx 90\%$ of them. Nevertheless, the discrepancies are worthy of discussion.
 
-The rejected candidates of \citet{Bouy2015} (lower right box of Fig. \ref{figure:HM-SBB}) amount to 12\% of their total number of candidate members. This value is 4.7\% higher than the contamination rate reported by \citet{Sarro2014}: $7.3\pm1.4$\%. I will not reject a priori these objects as candidate members because, as mentioned in Sect. \ref{sect:classifier}, our methodology recovers 4\% less members when compared to that of \citet{Sarro2014}(see Fig. \ref{fig:tfpr}). The majority, $85\%$, of these objects have missing values, which indicates that these objects require future follow up. Even the 37 completely observed and rejected candidates can not be discarded as true members due to the fact that our methodology losses 6\% of the true cluster members (see Fig. \ref{fig:tfpr}).  
+The fact that the work of \citet{Bouy2015} and the present one use the same DANCe DR2 data set (although our model is constructed on the RDR2), allow me to directly compare the membership probabilities of both works. Furthermore, this comparison can be extended to all objects in the data set and not just to the candidate members of the Pleiades cluster. Since \citet{Bouy2015} reported only an statistic of the membership probability distributions, to do a fair comparison, I summarise the membership probability distributions recovered by the BHM with the mode.
 
-CHANGE THIS PARAGRAPH. THE SAMPLES ARE NOT THE SAME THUS 10\% IS MEANINGLESS.On the other hand, our new candidates (upper left box of Fig. \ref{figure:HM-SBB} ) amount to 10\% of \citet{Bouy2015} candidates. This figure is higher than the $4.3\pm0.2$\% CR reported on the previous Section. Thus, it indicates that up to $\sim6\%$ of these objects can be true cluster members. From these objects, one half have completely observed values, thus 3\% of our new candidates are completely observed objects. This last figure agrees perfectly well with the 3\% of non recovered members reported by \citet{Sarro2014}. 
+Using the optimal probability threshold of 0.84 to classify the cluster members, we can see that, as shown by Fig. \ref{fig:BHMBouy}, both methodologies agree on the outstanding $99.6$\% of the classified objects. Concerning just the candidate members, the agreement is still high, $\sim 90\%$. In the following I discuss the 10\% discrepancies.
 
-In Figs. \ref{figure:newones} and \ref{figure:rejecteds} I show the proper motions and $K_s$ vs $i-K_s$ CMD projection spaces of our new candidates and the rejected ones  of \citet{Bouy2015}. In the following I elaborate on their properties.
+\begin{figure}[ht!]
+\begin{center}
+\resizebox{\textwidth}{!}{\includegraphics{background/Figures/HBMvsBouy.pdf}}
+\caption{Mode of the membership probabilities recovered by the BHM compared to those of \citet{Bouy2015}. The lines show the 0.75 and $p_t=0.84$ probability thresholds used in both works. The numbers indicate our new candidate members (top left), the ones we rejected (bottom right), and the common ones (top right). Reproduced from Figure 11 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
+\label{fig:BHMBouy}
+\end{center}
+\end{figure}
 
-UNITS WITHIN MATHEMATICAL EXPERSSION.
+The candidate members of \citet{Bouy2015} that the BHM rejects, which I call the rejected ones, are shown in lower right box of Fig. \ref{fig:BHMBouy}. They amount to 12\% and 12.5\% of total number of candidate members recovered by \citet{Bouy2015} and the present work, respectively. The 12\% figure is 4.7\% higher than the contamination rate (CR) reported by \citet{Sarro2014} ($7.3\pm1.4$\%). It indicates that some true cluster members must be within the rejected objects. Also, the 12.5\% figure is 2.5\% higher than the 10\% loss rate of the BHM (TPR=90\%, see Section \ref{sect:classifier}), which indicates that some contaminants must be within the rejected objects.
 
-MEDIAN SYMBOL? SUBINICES? CHANGE ALSO IN THE PAPER.
+Now, I analyse these objects with further detail. As it is shown in Figs. \ref{fig:rejecteds} and \ref{fig:rejectedsCOLORS}, the rejected objects have proper motions uncertainties with median $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{3.15,3.19\} \,mas\cdot yr^{-1}$. This value is more than four times larger than that of the common candidate members (those objects classified as members by both works, see top right corner of Fig. \ref{fig:BHMBouy}). Among these objects, those with a relatively high membership probability occur mostly at the middle of the cluster photometric sequence (green squares of Fig. \ref{fig:rejectedsCOLORS}). On the other hand, those with lower membership probabilities occur at the bright and faint ends (blue and red triangles of Fig. \ref{fig:rejectedsCOLORS}, respectively). Furthermore, the proper motions uncertainties of the rejected objects at the bright, middle and faint ends of the cluster photometric sequence, have medians of $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{4.0,4.2\}  \,mas\cdot yr^{-1}$, $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{2.4,2.4\}\,mas\cdot yr^{-1}$ and $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{3.4,3.4\}\,mas\cdot yr^{-1}$, respectively. These figures are approximately 6, 4 and 5 times larger, respectively, than those of the candidates in common. These large uncertainties produce a proportional spread of the cluster likelihood. This could reduce the membership probability of these objects.
 
-The new candidate members have proper motions uncertainties whose median, $\overline{\mu_{\alpha,\delta}}=\{1.33,1.33\} \ \ mas/yr$, is two times larger than those of the candidate members in common with \citet{Bouy2015}, median $\overline{\mu_{\alpha,\delta}}=\{0.65,0.65\} \ \ mas/yr$. Also, as shown by Fig. \ref{figure:newones}, the majority of the new candidate members, 148, have probabilities lower than 0.95, are located in a halo around the locus of the cluster proper motions, and on top of the cluster sequence in the $K_s$ vs $i-K_s$ CMD. On the contrary, the new candidates with probabilities higher than 0.95, which are 39, lay in the centre of the cluster proper motions and fall above the cluster sequence in the $K_s$ vs $i-K_s$ CMD. Thus, I hypothesise that: i) Objects whose photometry is compatible with the cluster sequence but are in the proper motions halo, have higher membership probabilities in our methodology due to the increased flexibility of the cluster proper motions model: it now has four gaussians instead of the two of \citet{Bouy2015}. And ii) objects near the centre of the cluster proper motions but located above the cluster photometric sequence sequence, are multiple systems \cite[probably triple systems which can amount to 4\% of the population][]{Duquennoy1991} with an increased membership probability due to our more flexible photometric model of the cluster and equal-mass binaries sequences.
+Furthermore, the bright and faint regions of the cluster photometric sequence coincide with those where objects with missing entries are more frequent (see Fig. \ref{fig:NAsKs}). I stress the fact that the model of \citet{Bouy2015} was constructed using only objects with fully observed vectors of measurements, which represent less than 1\% of the number of objects used by the BHM. Using only fully observed objects, underestimates the field density in the regions where the missing values are more frequent. Underestimating the field likelihood increases the cluster to field likelihood ratio. Therefore it increases also the cluster membership probabilities. This may explain the relatively high membership probabilities reported by \citet{Bouy2015} compared to those of the BHM, particularly in the faint region of the photometric cluster sequence. 
 
-The rejected candidates of \citet{Bouy2015}, as it is shown in Figs. \ref{figure:rejecteds} and \ref{figure:rejectedsCOLORS}, have proper motions uncertainties with median $\overline{\mu_{\alpha,\delta}}=\{3.15,3.19\} \ \ mas/yr$. This value is more than four times larger than that of the candidates in common with our members. Also, these objects are distributed along the cluster sequence. Among these objects, those with a relatively high membership probability occur mostly at the middle of the cluster sequence (green squares of Fig. \ref{figure:rejectedsCOLORS}) while those with lower membership probabilities occur at the bright and faint ends (blue and red triangles of Fig. \ref{figure:rejectedsCOLORS}, respectively). These last regions coincide with those where the missing values happen the most. We stress the fact that \citet{Sarro2014} and later \citet{Bouy2015} construct their models using only completely observed objects (i.e. those without missing values). For their field models both authors use a sample of $\approx 20,000$ objects. Proceeding in that way, as explained in Sect. \ref{sect:missing}, underestimates the field density, particularly in the regions where the missing values are more frequent. Underestimating the field likelihood increases in the cluster field likelihood ratio, therefore it increases also the cluster membership probabilities. Furthermore, the proper motions uncertainties of objects at the bright middle and faint ends, have medians of $\overline{\mu_{\alpha,\delta}}=\{4.0,4.2\} \ \ mas/yr$, $\overline{\mu_{\alpha,\delta}}=\{2.4,2.4\} \ \ mas/yr$ and $\overline{\mu_{\alpha,\delta}}=\{3.4,3.4\} \ \ mas/yr$, respectively. These figures are approximately 6, 4 and 5 times larger, respectively, than those of the candidates in common. These large uncertainties produce a proportional spread of the likelihood distribution thus further reducing the membership probability.
+Therefore, I consider that both previous phenomena, the large proper motion uncertainties of the rejected objects together with the underestimated field likelihood in \citet{Bouy2015} model, are responsible for the relatively lower BHM membership probabilities of the rejected objects. However, these objects can not be discarded as potential true cluster members. To discard this possibility lower proper motion uncertainties and fewer missing values are needed. Future steps will be taken to try to solve this issue.
 
-I consider that both the large proper motion uncertainties and field likelihoods are responsible for the diminished membership probabilities of \citet{Bouy2015} rejected candidates. However, these rejected candidate members cannot be discarded as potential members. Indeed, at the probability threshold of maximum accuracy, $p_t=0.84$, the TPR is just $90.0\pm0.05$\%. It means that there are still 10\% of true members within the rejected candidates. To rule out the possibility that these objects are indeed members we need lower proper motion uncertainties and fewer missing values. Future steps will be taken to try to solve this issue.
-
-Summarising, the discrepancies between our individual membership probabilities and those reported by \citet{Bouy2015} arise from subtle but important differences. The first of them is the more formal treatment of missing values in our methodology and its inclusion in the field model. Taking into account the missing values has two main consequences. The first of them is that, the new photometric model of the field diminished membership probabilities, particularly in the regions where missing values happen the most. Second, the use of missing values in the construction of the cluster model allow us to include the information of good candidate members that were otherwise discarded a priori. The second difference is the higher flexibility of our cluster model, it allows us to increase the membership probability of the previously discarded candidates. Furthermore, as shown by the red squares in the upper left corner of Fig. \ref{figure:HM-SBB}, the higher flexibility of our cluster model allow us to include as new candidate members previously rejected objects with complete (non-missing) values.  
+ \begin{figure}[ht!]
+\begin{center}
+\resizebox{\textwidth}{!}{\includegraphics[page=1]{background/Figures/Rejecteds.pdf}\includegraphics[page=5]{background/Figures/Rejecteds.pdf}}
+\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the candidate members of \citet{Bouy2015} rejected by the BHM. Reproduced from Figure 13 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
+\label{fig:rejecteds}
+\end{center}
+\end{figure}
 
 \begin{figure}[htbp]
 \begin{center}
-%\resizebox{\hsize}{!}{\includegraphics{figs/HBMvsBouy.pdf}}
-\caption{Recovered membership probabilities compared to those of \citet{Bouy2015}. Lines show the 0.75 and $p_t=0.84$ probability thresholds used in both works. The numbers indicate the new candidate members (top left), rejected candidate members (bottom right), and common candidate members (top right).}
-\label{figure:HM-SBB}
+\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/RejectedsCOLORS.pdf}\includegraphics[page=5]{background/Figures/RejectedsCOLORS.pdf}}
+\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right)showing the candidate members of \citet{Bouy2015} rejected by the BHM. The colours and shapes are a proxy for their $K_s$ magnitude.Reproduced from Figure 14 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
+\label{fig:rejectedsCOLORS}
+\end{center}
+\end{figure}
+
+On the other hand, the new candidates members found by the BHM, shown in the upper left box of Fig. \ref{fig:BHMBouy}, amount to 10\% of the \citet{Bouy2015} candidate members. This figure is higher than the $\sim 3.5\%$ of missing rate (1-TPR) reported by \citet{Sarro2014}. Also, these new candidates amount to 9.6\% of the BHM recovered candidate members. This value is larger than the 4.3\% CR reported in Section \ref{sect:classifier}. These two larger figures may indicate that some truly new discoveries may be within these list of new candidate members. In Figs. \ref{fig:newones} I show the proper motions and $K_s$ vs $i-K_s$ CMD of these new candidates members.
+
+The new candidate members have proper motions uncertainties whose median, $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{1.33,1.33\} \,mas\cdot yr^{-1}$, is two times larger than those of the candidate members in common with \citet{Bouy2015}, which have median $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{0.65,0.65\} \,mas\cdot yr^{-1}$. Also, as shown by Fig. \ref{fig:newones}, the majority of the new candidate members, 148, have probabilities lower than 0.95, are located in a halo around the locus of the cluster proper motions, and on top of the cluster photometric sequence in the $K_s$ vs $i-K_s$ CMD. On the contrary, the new candidate members with probabilities higher than 0.95, which are 39, lay in the centre of the cluster proper motions and fall above the cluster sequence in the $K_s$ vs $i-K_s$ CMD. Thus, I hypothesise that: i) Objects whose photometry is compatible with the cluster sequence but are in the proper motions halo, have higher membership probabilities in our methodology due to the increased flexibility of the cluster proper motions model: it now has four gaussians instead of the two of \citet{Bouy2015}. And ii) objects near the centre of the cluster proper motions but located above the cluster photometric sequence sequence, are multiple systems \cite[probably triple systems which can amount to 4\% of the population][]{Duquennoy1991} with an increased membership probability due to our more flexible photometric model of the cluster and equal-mass binaries sequences.
+
+ \begin{figure}[ht]
+\begin{center}
+\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/NewOnes.pdf}\includegraphics[page=5]{background/Figures/NewOnes.pdf}}
+\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the new candidate members found in this work. Reproduced from Figure 12 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
+\label{fig:newones}
 \end{center}
 \end{figure}
 
 
- \begin{figure*}[htbp]
-\begin{center}
-%\resizebox{\hsize}{!}{\includegraphics[page=1]{figs/NewOnes.pdf}\includegraphics[page=5]{figs/NewOnes.pdf}}
-\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the new candidate members found in this work. XXXXX.}
-\label{figure:newones}
-\end{center}
-\end{figure*}
-
- \begin{figure*}[htbp]
-\begin{center}
-%\resizebox{\hsize}{!}{\includegraphics[page=1]{figs/Rejecteds.pdf}\includegraphics[page=5]{figs/Rejecteds.pdf}}
-\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the rejected candidate members of \citet{Bouy2015}. Captions as in Fig. \ref{figure:newones}.}
-\label{figure:rejecteds}
-\end{center}
-\end{figure*}
-
-\begin{figure*}[htbp]
-\begin{center}
-%\resizebox{\hsize}{!}{\includegraphics[page=1]{figs/RejectedsCOLORS.pdf}\includegraphics[page=5]{figs/RejectedsCOLORS.pdf}}
-\caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the rejected candidate members of \citet{Bouy2015}. The colours and shapes are a proxy for their $K_s$ magnitude.}
-\label{figure:rejectedsCOLORS}
-\end{center}
-\end{figure*}
+Summarising, the discrepancies between the BHM membership probabilities and those reported by \citet{Bouy2015} arise from subtle but important differences. The first difference is the treatment of object with missing entries. Although  \citet{Bouy2015} report membership probabilities for this kind of objects, their field and cluster models were constructed discarding them. This may have biased their results. Taking into account objects with missing entries has two consequences. First, the photometric model is more accurate than a model that discard objects with missinng entries , particularly in the regions where these objects are more frequent. Second, the use of objects with missing entries in the construction of the cluster model allow us to include the information of good candidate members that were otherwise discarded a priori. A second difference with the model of \citet{Bouy2015}, is the higher flexibility of our cluster model. It allows us to increase the membership probability of the previously discarded candidates. 
 
  
 \section{The statistical distributions of the Pleiades cluster.}
