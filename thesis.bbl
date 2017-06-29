@@ -1,4 +1,4 @@
-\begin{thebibliography}{124}
+\begin{thebibliography}{125}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -391,7 +391,7 @@ Neal, R.~M. 1996, Bayesian Learning for Neural Networks (Secaucus, NJ, USA:
 
 \bibitem[{Olivares {et~al.}(2017)Olivares, Sarro, Moraux, Berihuete, \&
   Bouy}]{Olivares2017}
-Olivares, J., Sarro, L., Moraux, E., Berihuete, A., \& Bouy, H. 2017, \aa,
+Olivares, J., Sarro, L., Moraux, E., Berihuete, A., \& Bouy, H. 2017, \aap,
   submitted
 
 \bibitem[{Patel {et~al.}(2013)Patel, Sharma, \& Gupta}]{Patel2013}
@@ -423,6 +423,12 @@ Patel, P.~K., Sharma, V., \& Gupta, K. 2013, International Journal of Computer
 
 \bibitem[{{Raboud} \& {Mermilliod}(1998)}]{Raboud1998}
 {Raboud}, D. \& {Mermilliod}, J.-C. 1998, \aap, 329, 101
+
+\bibitem[{{Rebull} {et~al.}(2016){Rebull}, {Stauffer}, {Bouvier}, {Cody},
+  {Hillenbrand}, {Soderblom}, {Valenti}, {Barrado}, {Bouy}, {Ciardi},
+  {Pinsonneault}, {Stassun}, {Micela}, {Aigrain}, {Vrba}, {Somers},
+  {Christiansen}, {Gillen}, \& {Collier Cameron}}]{Rebull2016}
+{Rebull}, L.~M., {Stauffer}, J.~R., {Bouvier}, J., {et~al.} 2016, \aj, 152, 113
 
 \bibitem[{Roberts \& Rosenthal(2004)}]{Roberts2004}
 Roberts, G.~O. \& Rosenthal, J.~S. 2004, Probability Surveys, 1, 20

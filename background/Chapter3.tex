@@ -447,7 +447,7 @@ We model the prior of the \emph{true} $CI$ as a truncated ($0.8\leq CI \leq8$) u
 
 \begin{equation}
 \label{eq:colordist}
-p_{CI}(CI|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI})= \sum_{i=1}^5 \pi_{CI,i} \cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}).
+p(CI|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI})= \sum_{i=1}^5 \pi_{CI,i} \cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}).
 \end{equation}
 
 In this last Equation, the symbol $\mathcal{N}_t$ stands for the truncated ($0.8<CI<8$) univariate normal distribution.
@@ -536,7 +536,7 @@ E[x_k]=\frac{\alpha_k}{\sum_k \alpha_k},
 Var[x_k]=\frac{-\alpha_k\cdot (\alpha_k -\sum_k \alpha_k)}{(\sum_k \alpha_k)^2 \cdot (1+\sum_k \alpha_k)}.
 \end{equation}
 
-For the field-cluster mixture we set the hyper-parameters to $\boldsymbol{\alpha}=\{9.8,0.2\}$. We expect a mean 98\% of field objects and a 2\% of cluster objects with little variance. These figures correspond to the existent prior knowledge, this is the fraction of field and cluster candidate members found by \citet{Bouy2015}. 
+For the field-cluster mixture we set the hyper-parameters to $\boldsymbol{\alpha}=\{98,2\}$. We expect a mean 98\% of field objects and a 2\% of cluster objects with little variance. These figures correspond to the existent prior knowledge, this is the fraction of field and cluster candidate members found by \citet{Bouy2015}. 
 For the single-EMB mixture we use an hyper-parameter value, $\boldsymbol{\alpha}_{CB}=\{8,2\}$. We expect a mean 20\% of EMB, as suggested by \citet{Bouy2015}. 
 For fractions in the proper motions GMM, hyper-parameter are $\boldsymbol{\alpha}_{Cs}=\{1,1,5,5\}$ and $\boldsymbol{\alpha}_{Bs}=\{1.2,8.8\}$. These values induce fraction distributions whose means are similar to the fractions recovered after fitting a GMM to the  candidate members of \citet{Bouy2015}. 
 For the fraction in the GMM of the $CI$ distribution, the hyper-parameter were set all to 1, ($\boldsymbol{\alpha}_{CI}=\{1,1,1,1,1\}$), which results in equal means and large variances for all of them. 
@@ -567,7 +567,7 @@ The narrow variance in the cluster-field mixture expresses our prior belief abou
         \caption{}
         \label{} 
     \end{subfigure}
-\caption{Prior distributions of fraction parameters. Distributions of: (a) The field fraction $\pi$, (b) The EMB fraction, $1-\pi_{CB}$, (c) the proper motions cluster fractions, $\pi_{Cs}$, and (d) the proper motions equal-mass binaries fractions $\pi_{Bs}$.}
+\caption{Kernel density of $10^4$ realisations of the prior distributions of fraction parameters. Distributions of: (a) The field fraction $\pi$, (b) The EMB fraction, $1-\pi_{CB}$, (c) the proper motions cluster fractions, $\pi_{Cs}$, and (d) the proper motions equal-mass binaries fractions $\pi_{Bs}$.}
 \label{figure:priors}
 \end{figure}
 
@@ -700,6 +700,7 @@ The parameter $a$, which must be grater than one, improves the performance of th
 
 One of the great advantages of ensemble samplers MCMC is its possibility of parallelisation. Since they work with particles, these particles can be distributed among cores in a computer cluster, therefore reducing the computing time when compared to non ensemble MCMC. \citet{Foreman2013} implemented the affine invariant stretch move of \citet{Goodman2010} in the Python package \emph{emcee}. 
 \subsubsection{Nested sampling}
+\label{sect:NestedSampling}
 Nested sampling \citep{Skilling2004,Skilling2006} is an algorithm designed to numerically integrate the evidence (Eq. \ref{eq:evidence2}). As a by product it also delivers a sample of the posterior distribution. To compute the evidence integral,  it uses particles positions sampled from the prior. Then, the integral is the sum of the likelihood, $L_i$, of each particle times a weight, $w_i$. This weight is a proxy for the volume of the prior covered by the updated position of the particle. This weight is given by $w_i = \exp(-(i-1)/N) - \exp(-i/N)$. Finally, the particles update their position only when their likelihood is the minimum of the group of particles. In this way,
 
 \begin{equation}

@@ -102,14 +102,14 @@ In statistical science, particularly in machine learining, is sometimes useful t
 \section{Comparison with the literature}
 \label{sect:memberscomparison}
 
-The BHM methodology, described in Chapter \ref{chap:BHM}, is applied to the Pleiades DANCe RDR2. Then, I compare the recovered membership probabilities with those reported in the literature. The first comparison I present is that of our candidate members with those in the two lists of candidate members of \citet{Stauffer2007}. Then, I proceed to compare our membership probabilities with those found by \citet{Bouy2015}. Finally, I compare a list of high probable candidate members I got from a private communication with Jerome Bouvier. This list of candidate members is XXX in XXX
+The BHM methodology, described in Chapter \ref{chap:BHM}, is applied to the Pleiades DANCe RDR2. Then, I compare the recovered membership probabilities with those reported in the literature. The first comparison I present is that of our candidate members with those in the two lists of candidate members of \citet{Stauffer2007}. Then, I proceed to compare our membership probabilities with those found by \citet{Bouy2015}. Finally, I compare the candidate members recovered by the BHM with those found by \citet{Rebull2016}. These authors obtain their list of candidates based on photometric variability. This observable is not present in our set of observables, for this reason this comparison represent an extra source of external validation.  
 
 
 \subsection{Candidate members from \citet{Stauffer2007}}
 
 \citet{Stauffer2007} published two list of candidate members. The first one contains 1417 objects compiled from the literature (see Table 2 of the mentioned work). These objects were classified as candidate members by several authors. As \citet{Stauffer2007} mention, this list is inhomogeneous, incomplete and certainly includes non members. I refer to this list as ST1. Their second list contains 55 candidate members (see Table 5 of the mentioned work). \citet{Stauffer2007} found these members using infrared photometry and proper motions. I refer to this list as ST2.
 
-Cross matching \footnote{ Using the service http://cdsxmatch.u-strasbg.fr/xmatch, within 1 arcsec radius.} the previous two lists with the the Pleiades DANCe DR2 catalogue \citep{Bouy2015}, I find that only 1384 and 54 of the ST1 and ST2 lists have a counter part in the Pleiades DANCe DR2 catalogue, respectively. 
+Cross matching (at CDS\footnote{ Using the service http://cdsxmatch.u-strasbg.fr/xmatch}, within 1 arcsec radius) the previous two lists with the the Pleiades DANCe DR2 catalogue \citep{Bouy2015}, I find that only 1384 and 54 of the ST1 and ST2 lists have a counter part in the Pleiades DANCe DR2 catalogue, respectively. 
 
 Concerning our list of candidate members, after cross matching it with the two lists of \citet{Stauffer2007}, ST1 and ST2, I recover 1146 and 34 of the candidate members, respectively. Compared to the candidate members of \citet{Bouy2015}, our BHM recovers 28 more candidate members in ST1 and the same in ST2.
 
@@ -203,104 +203,182 @@ The new candidate members have proper motions uncertainties whose median, $\tild
 
 Summarising, the discrepancies between the BHM membership probabilities and those reported by \citet{Bouy2015} arise from subtle but important differences. The first difference is the treatment of object with missing entries. Although  \citet{Bouy2015} report membership probabilities for this kind of objects, their field and cluster models were constructed discarding them. This may have biased their results. Taking into account objects with missing entries has two consequences. First, the photometric model is more accurate than a model that discard objects with missinng entries , particularly in the regions where these objects are more frequent. Second, the use of objects with missing entries in the construction of the cluster model allow us to include the information of good candidate members that were otherwise discarded a priori. A second difference with the model of \citet{Bouy2015}, is the higher flexibility of our cluster model. It allows us to increase the membership probability of the previously discarded candidates. 
 
+\subsection{Candidate members from \citet{Rebull2016}}
+\label{sect:comparisonRebull}
+
+After cross matching (at CDS with a 0.5 arcsec radius) the list of candidate members from \citet{Rebull2016} (their Table 2, here after RT1) with the DANCe DR2, I find that 758 out of the 759 objects have a counter part in the DANCE DR2 catalogue. The 91\% of these objects (690 of them) are candidate members in the BHM. Under the assumption that the candidate members in RT1 are indeed true members, which may not be true, the ratio of recovered members is even better than the $TPR=90\pm0.2\%$ reported in Section \ref{sect:classifier}. These objects are shown in Fig. \ref{fig:RT1}.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+       \includegraphics[width=\textwidth]{background/Figures/RT1_pm.eps}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+     \includegraphics[width=\textwidth]{background/Figures/RT1_ph.eps}
+        \caption{}
+    \end{subfigure}
+\caption{Proper motions (a) and $K$ vs $i-K$ CMD (b) of the RT1 candidate members in the DANCe DR2 catalogue (black). Also shown, the objects classified as candidate members  in the BHM (grey), and in both RT1 and BHM (blue).}
+\label{fig:RT1}
+\end{figure}
+
+On the other hand, after cross matching (at CDS with a 0.5 arcsec radius)  the list of 154 objects that \citet{Rebull2016} classify as non members (their Table 6, here after RT2) with the DANCe DR2, I find that all these objects have a counter part on the DANCe DR2. The 21\% of objects in the RT2 list (33 of them) were classified as candidate members in the BHM. This is a value five times larger than the CR reported in Section \ref{sect:classifier}(CR=4.3\%). However, we can not assume that the RT2 list comprises only non members. First, this objects were at some point classified as members by other authors \cite[Appendix B of][]{Rebull2016}. Second, not all of these objects have periods \cite[only 20\% according to][]{Rebull2016}. From the 33 objects classified as candidate members by the BHM, only nine of them have periods. It means that for the remaining 24 candidate members, these authors used other criteria to discard them as members. In any case, the high rate of BHM candidate members found in this RT2 list may indicate that the criteria used by \citet{Rebull2016} are too restrictive. As can be seen in Fig. \ref{fig:RT2}, these 33 objects have proper motions and photometric measurements consistent with those of the cluster. In order to clarify the status of these 33 objects, further information is still needed.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+       \includegraphics[width=\textwidth]{background/Figures/RT2_pm.eps}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+     \includegraphics[width=\textwidth]{background/Figures/RT2_ph.eps}
+        \caption{}
+    \end{subfigure}
+\caption{Proper motions (a) and $K$ vs $i-K$ CMD (b) of the RT2 in the DANCe DR2 catalogue (black). Also shown, the objects classified as candidate members in the BHM (grey), and those classified as non members in the RT2 and as candidate members in the BHM (blue).}
+\label{fig:RT2}
+\end{figure}
  
 \section{The statistical distributions of the Pleiades cluster.}
-Once the objective probability threshold has been established and the results of the classification analysed and compared with the literature. Now I present the results of the statistical distributions that describe the cluster population. These distributions result directly or indirectly from the posterior distribution of the parameters in our model. Here I summarise these parametric posterior distributions, together with some of their correlations. Also, I present and analysis on the way these posterior distribution help us to update our prior knowledge.
+Now, I present the results of the statistical distributions that describe the cluster population, which are the main objective of the present work. These distributions result directly or indirectly from the posterior distribution of the parameters in our model. Indirectly means that I use them as parameters of other function (e.g. the mass distribution). Since we have 85 parameters in the BHM, I only discuss posterior distributions of some of these parameters, particularly those related with the velocity, luminosity and mass distributions. Nevertheless, in Table \ref{tab:parameters}, I summarise the posterior distribution of the parameters in our model using the mode, also I use the 16th and 84th percentiles as a proxy for the uncertainty. The parameter names in this Table correspond to those given in Section \ref{sect:priors} (at Table \ref{table:symbols_parameters}). 
 
-In Table \ref{tab:params} I summarise the posterior distribution of the parameters in our model. I use as statistic and uncertainty the mode and the 16th and 84th percentiles, respectively. The parameter names correspond to those given in Sect. \ref{sect:priors}. 
+Also, for the sake of completeness, in Fig. \ref{fig:correlations} I depict the values the correlation coefficients among the 85 parameters in the BHM. As can be seen from this Figure, the larger correlations appear among parameters describing the true $CI$ distribution, and  among these and almost the rest of the parameters. This is expected since the true $CI$ is key parameter in the BHM. It is also interesting to notice that there is a strong correlation among the coefficients of the splines series modelling different magnitudes. For example, there is a strong correlation among the fourth coefficients of the splines. These correlations are expected since the shape of the cluster sequence is similar in the four CMD.  
 
+\input{background/Tables/TableParameters.txt}
 
-%\input{background/Tables/TableParameters.txt}
-
-\section{Updating the prior knowledge}
-As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the bare values and the correlations among them. The values indicate, for example, that the number of  GMM modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian went both to near zero values. A better model would be that in which no computing power will be lost in inferring negligible parameters.
-
-Another simple inspection tells us that our prior for the cluster field fraction is narrow and its mode lay far from that of the posterior distribution. Although this is not wrong since the prior clearly allow this value, this prior must be made wider.  Clearly our prior knowledge underestimated the expected number of cluster members.   
-
-Another useful tool to inspect these posterior distributions is the correlation they show with themselves. In Figure \ref{fig:correlations} I show the correlation matrix of all the parameters in our model. This Fig. shows elements that could be considered to improve our model. 
-For example, the large correlation shown by the high order coefficients of the spline series may indicate that we can save some of these parameters.   
-
-\begin{figure}[htbp]
+\begin{figure}[ht!]
 \begin{center}
-%\includegraphics[width=\textwidth]{./background/Figures/Correlations.pdf}
-\caption{Correlation matrix of parameters in our model. The colour code indicates the value of the correlation coefficient.}
+\includegraphics[page=1,width=1.1\textwidth]{background/Figures/Correlations.pdf}
+\caption{Correlation matrix of the posterior distributions of the parameters in the BHM. The colour code indicates the value of the correlation coefficient. Parameter names are the same as those in Table \ref{tab:parameters}.}
 \label{fig:correlations}
 \end{center}
 \end{figure}
 
-In the following Sections, I use the distributions of the parameters in our model to derive the statistical distributions that describe the cluster population. Some of these distributions have as parameters those inferred in the model, however, other, like the mass distribution require more elaborated derivations.  
+\section{Updating the prior knowledge}
+As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the statistics reported in Table \ref{tab:parameters}. These values indicate, for example, that the number of  GMM modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian are both to near zero values. Probably, a better model would be that in which the parameters of these extra gaussian will not be part of the model. Ideally, I should chose between these two models based on the evidence they show (see Section \ref{sect:evidence}). To my knowledge, the only reliable approach to compute the evidence of a model inferred using MCMC, is by means of Nested Sampling (see Section \ref{sect:NestedSampling}). However, running the BHM in the \emph{MultiNest} package lays beyond our current computational resources.
 
-Discuss how to deal with future clusters in which we will not have Bouy2015 for the priors.
-
-IS BIC a good approximation, what can be done in the future?
+Another example of inspection of the posterior is the following. In a past run of the BHM on the RDR2, I realised that the prior distribution for the parameter modelling field fraction was too narrow. Although the maximum of the posterior distribution was allowed by this prior (by definition), the prior density at this MAP was negligible. Therefore, I updated the prior distribution to a distribution with a larger variance. Thus, I weaken the prior information.
 
 \section{Velocity distribution}
-I must work on it. Here I must transform the bivariate proper motions distributions into a univariate velocity distributions using the distance and assuming spherical symmetry. This distribution will give us some hints to improve the proper motions model. It will be interesting to fit a model, maxwellian for example and see how well it fits. If more models are available we can try to find the best one in terms of Bayesian model selection. 
+The bivariate proper motions distributions of both single and EMB is directly recovered by the BHM by means of the posterior distributions of the parameters in the GMM modelling these populations.
+These bivariate distributions are depicted in Fig, \ref{fig:PM}.
+
+The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos(\delta)$ and $\mu_{\delta}$ components, are shown in Figs. \ref{fig:PMCs} and \ref{fig:PMBs}. Also, I show in this Figs. the densities in the same proper motions projections of the candidate members of \citet{Bouy2015}, and those found by BHM, which have membership probabilities grater than 0.84. Interestingly, the densities rendered by both samples of members are almost identical. Nevertheless, the density resulting from the sample of the posterior distributions of the parameters in the GMMs, differ from the kernel density estimations of the corresponding populations. This difference results from the distinct populations of the two distributions. The BHM finds the posterior distribution of its parameters using the likelihood of all the objects in the data set. The contribution that individual objects have to the total cluster likelihood can be thought to be proportional to their cluster membership probability. Therefore, the observed difference results from those objects whose cluster membership probability is lower than 0.84. The expected number of cluster members in the probability range 0-0.84 amounts to the non negligible value of $\sim 1100$ objects. These objects contaminate the posterior distribution of the parameters in the BHM with an expected value of 5.3\% (see Section \ref{sect:classifier}). Nevertheless, within them also lays a 10\% of true cluster members (as estimated in Section \ref{sect:classifier}). Discarding these true cluster members from the statistical analysis will render it biased. Instead, we decided to include these 10\% possible true cluster members at the small price of a 5.3\% of contamination.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[page=2,width=\textwidth]{background/Figures/MembersModel.pdf}
+\caption{Proper motion distributions recovered by the BHM. The dashed and dot-dashed ellipses represent the mode of 100 samples (orange lines) from the posterior covariance matrices in the cluster and EMB GMMs, respectively. Reproduced from Figure 8 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
+\label{fig:PM}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+       \includegraphics[page=2,width=\textwidth]{background/Figures/Cs_members.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+     \includegraphics[page=3,width=\textwidth]{background/Figures/Cs_members.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the GMM modelling the single stars (orange spaghetti lines), the kernel density estimation of the BHM candidate members classified as single stars (those whose cluster membership probability is higher than 0.84 and EMB membership probability is lower than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies below the EMB sequence (blue line).}
+\label{fig:PMCs}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+       \includegraphics[page=2,width=\textwidth]{background/Figures/Bs_members.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+     \includegraphics[page=3,width=\textwidth]{background/Figures/Bs_members.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the GMM modelling the EMB stars (orange spaghetti lines), the kernel density estimation of the BHM candidate members classified as EMB stars (those whose cluster membership probability is higher than 0.84 and EMB membership probability is higher than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies near the EMB sequence (blue line).}
+\label{fig:PMBs}
+\end{figure}
+
 \section{Spatial distribution}
 To include
 \section{Luminosity distribution}
 \label{sect:luminosity}
-This Section describes the process by which the apparent $J,H$, and $K_s$ magnitude distributions are obtained and then transformed into the absolute magnitude distributions. Later, I present  these distributions and compare them with those found by \citet{Bouy2015}. Also I will compare them with the ones resulted from only the high membership probability objects.
+This Section describes the process to obtain the $J,H$, and $K_s$ absolute magnitude distributions from the posterior distributions of the parameters in the BHM. Later, I compare them to those found by \citet{Bouy2015}, particularly in the $K_s$ band. As in the previous section, I also compare these distributions with those resulting from the kernel density estimates of the candidate members of the BHM.
+
 \subsection{Derivation of the magnitude distributions}
 \label{subsect:deriveluminosity}
-To derive the $J,H,K_s$ magnitude distributions I start with the colour index, $CI$, distribution. This last one, is described by an univariate GMM whose parameters are inferred in the model. Since we also model the EMB, their fraction and photometric sequence are taken into account. 
+To derive the $J,H,K_s$ magnitude distributions, I first transform the true $CI$ distribution into the $J,H,K_s$ apparent magnitude distributions. In this transformation, the fractions of EMB must be taken into account. To do this, the magnitude distributions of both single and EMB populations are mixed according to their fractions. In the following paragraphs, I describe the process to obtain the $K_s$ apparent magnitude. This process is similar for the rest of the bands. 
 
-In the following, I exemplify the process of derivation on the $K_s$ band. Similar transformations apply to the rest of the bands. 
-To obtain the distribution of $K_s$ for the cluster objects, I take the colour index $CI$ as a nuisance parameter, later I marginalise it. Thus, 
-REMOVE CI FROM PCI IT IS OBVIUS.
+Since we aim at the probability distribution of $K_s$, and it depends on the true $CI$, I use this as a nuisance parameter that I later marginalise. Thus, 
 
-MARGINALISATION OF CI OVER CI OBSERVED.
 \begin{align}
 p(K_s | \boldsymbol{\theta}_c) & = \int p(K_s,CI | \boldsymbol{\theta}_c) \cdot dCI =  \int p(K_s | CI ,\boldsymbol{\theta}_c) \cdot p(CI|\boldsymbol{\theta}_c)\cdot dCI. \nonumber
 \end{align}
-The term $p(K_s | CI ,\boldsymbol{\theta}_c)$ corresponds to the GMM modelling the distribution of $CI$ (Eq. \ref{eq:colordist}), while $p(K_s | CI ,\boldsymbol{\theta}_c)$ is the probability of $K_s$ given the $CI$, and the cluster parameters $\boldsymbol{\theta}_c$. The EMB are included with an amplitude equal to their fraction, ($1-\pi_{CB}$). Thus,
+
+The term $p(K_s | CI ,\boldsymbol{\theta}_c)$ represents the probability of $K_s$ given the true $CI$ and the cluster parameters $\boldsymbol{\theta}_c$. It is given by Eq. \ref{eq:lik-seq}. The second term, $p(CI|\boldsymbol{\theta}_c)$ corresponds to the GMM modelling the distribution of the true $CI$, it is given by Eq. \ref{eq:colordist}. 
+
+We include the EMB  distribution with an amplitude equal to their fraction, $1-\pi_{CB}$. Thus,
 
 \begin{align}
-p(K_s | \boldsymbol{\theta}_c) & =  \int \left[\pi_{CB}\cdot p_{Cs}(K_s| CI, \boldsymbol{\theta}_c) + (1-\pi_{CB})\cdot p_{Bs}(K_s| CI, \boldsymbol{\theta}_c)\right]\nonumber \\& \cdot p_{CI}(CI|\boldsymbol{\theta}_c)\cdot dCI. \nonumber \\
-& =   \pi_{CB} \int p_{Cs}(K_s| CI, \boldsymbol{\theta}_c) \cdot p_{CI}(CI|\boldsymbol{\theta}_c) dCI \nonumber \\
-&+ (1-\pi_{CB})\int p_{Bs}(K_s| CI, \boldsymbol{\theta}_c) \cdot p_{CI}(CI|\boldsymbol{\theta}_c)\cdot  dCI. \nonumber \\
+p(K_s | \boldsymbol{\theta}_c) & =  \int \left[\pi_{CB}\cdot p_{Cs}(K_s| CI, \boldsymbol{\theta}_c) + (1-\pi_{CB})\cdot p_{Bs}(K_s| CI, \boldsymbol{\theta}_c)\right]\nonumber \\& \cdot p(CI|\boldsymbol{\theta}_c)\cdot dCI. \nonumber \\
+& =   \pi_{CB} \int p_{Cs}(K_s| CI, \boldsymbol{\theta}_c) \cdot p(CI|\boldsymbol{\theta}_c) dCI \nonumber \\
+&+ (1-\pi_{CB})\int p_{Bs}(K_s| CI, \boldsymbol{\theta}_c) \cdot p(CI|\boldsymbol{\theta}_c)\cdot  dCI. \nonumber \\
 \end{align}
 
-In this equation, $Cs$ and $Bs$ stand for cluster and EMB sequences, respectively. The terms inside the integrals correspond to Equations \ref{eq:lik-seq} and \ref{eq:colordist}. However, since here I want to derive only the distribution of $K_s$, I marginalise the rest of the bands. Also, the integration limits must change to those of the truncated colour distribution ($CI_{min}=0.8, CI_{max}=8$). Hence,
+In this equation, $Cs$ and $Bs$ are the subindices used to distinguish the probability of $K_s$ under the cluster and EMB photometric models, respectively. These probabilities are defined for the vector of photometric measurements, $\boldsymbol{d}_{ph}$ (see Eq. \ref{eq:lik-seq}). Since we are interested only in the distribution of $K_s$ (by now), we marginalise the rest of the photometric entries,including the observed $CI$ (I use a tilde over the observed quantities). Also, the integration limits must change to those of the truncated true colour distribution ($CI_{min}=0.8, CI_{max}=8$). Hence,
 
 \begin{align}
 &p(K_s | \boldsymbol{\theta}_c)  =   \pi_{CB} \int_{CI_{min}}^{CI_{max}}\left[ \left[\sum_{i=1}^5 \pi_{CI,i} \cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i})\right]\right. \nonumber \\
-&\cdot  \left.\int_{\tilde{Y},\tilde{J},\tilde{H}}\mathcal{N}(\{CI,\tilde{Y},\tilde{J},\tilde{H},K_s\}|\boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}),\Sigma_{clus})~d\tilde{Y}~d\tilde{J}~d\tilde{H}\right] \cdot dCI \nonumber \\
+&\cdot  \left.\int_{\tilde{CI},\tilde{Y},\tilde{J},\tilde{H}}\mathcal{N}(\{\tilde{CI},\tilde{Y},\tilde{J},\tilde{H},K_s\}|\boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}),\Sigma_{clus})~d\tilde{CI}~d\tilde{Y}~d\tilde{J}~d\tilde{H}\right] \cdot dCI \nonumber \\
 & + (1-\pi_{CB}) \int_{CI_{min}}^{CI_{max}}\left[\left[\sum_{i=1}^5 \pi_{CI,i} \cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i})\right]\right.\nonumber\\
-&\cdot \left. \int_{\tilde{Y},\tilde{J},\tilde{H}}\mathcal{N}(\{CI,\tilde{Y},\tilde{J},\tilde{H},K_s\}|T_{Bs}(\boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})),\Sigma_{clus})~d\tilde{Y}~d\tilde{J}~d\tilde{H}\right]\cdot dCI. \nonumber 
+&\cdot \left. \int_{\tilde{CI},\tilde{Y},\tilde{J},\tilde{H}}\mathcal{N}(\{\tilde{CI},\tilde{Y},\tilde{J},\tilde{H},K_s\}|T_{Bs}(\boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})),\Sigma_{clus})~d\tilde{CI}~d\tilde{Y}~d\tilde{J}~d\tilde{H}\right]\cdot dCI. \nonumber 
 \end{align}
 
-The derivations of the $J$ and $H$ magnitude distributions are similar to the procedure described for $K_s$. It is worth of notice that, the derivation process takes into account the EMB and the systems (binaries or multiples) which could have different mass ratios. Therefore, we call them the system magnitude distributions. 
+The derivations of the $J$ and $H$ magnitude distributions are similar. Since this process takes into account the unresolved EMB and the so called single stars, which in fact could be binaries with low mass ratios, then I call these distributions the apparent system magnitude distributions. 
 
-The previous magnitude distributions, together with the parallax and extinction of the cluster, allows us to obtain the system luminosity distributions. Here, I assume that the parallax is normally distributed with mean, 7.44 mas, and standard deviation 0.42 mas \citep{Galli2017}. This parallax distribution is then convolved with the magnitude distributions to obtain the absolute magnitude distributions. Finally, I deredden them employing the canonical value of extinction: $A_v=0.12$ \citep{Guthrie1987}. This last values were transformed into the $J,H,K_s$ extinctions using the extinction law of \citet{Cardelli1989}.
+The previous distributions, together with the parallax and extinction of the cluster, are used to obtain the luminosity distributions, more properly the absolute system magnitude distributions. I assume that the distribution of parallaxes of the Pleiades members is normally distributed with mean, $7.44\,mas$, and standard deviation $0.42\,mas$ \citep{Galli2017}. Then, to obtain the absolute magnitude distributions, I subtract this parallax distribution, by means of a convolution, to the $J,H,K_s$ magnitude distributions. Finally, I deredden the previous distributions employing the canonical value of extinction for the Pleiades: $A_v=0.12\,mag$ \citep{Guthrie1987}. This last values were transformed into the $J,H,K_s$ extinctions using the extinction law of \citet{Cardelli1989}.
 
-Our methodology prescribes the \emph{true} photometric quantities based on the \emph{true} colour index $CI$. Therefore, the completeness limits of this $CI$ dictate those of the photometric bands. The upper completeness limits that \citet{Bouy2015} estimate for $i$ and $K_s$ are $i\approx23$ mag and $K_s\approx18$ mag (see their appendix A). As these authors mention, due to the heterogeneous origins of the DANCe DR2 survey, the completeness is not homogeneous over its entire area. To overcome this issue, they identified a region, the inner three degrees of the cluster, with homogeneous spatial and depth coverage. Then, they restricted their analysis to this region. 
+The completeness limits of the derived luminosity distributions are acquired as follows. Since the BHM methodology prescribes the \emph{true} photometric quantities based on the \emph{true} colour index $CI$. Then, the completeness limits of the $CI$ distribution dictate those of the luminosity distributions. 
 
-Restricting the sample means that good candidate members are not taken into account. Furthermore, if any dynamical process has been set on the cluster such that the mass distribution of its members is not uniform in the space, then restricting the sample could introduce a bias. One of such dynamical process is mass segregation, which, as suggested by \citet{Adams2001} may have happen in the Pleiades. 
+\citet{Bouy2015} mention that, due to the heterogeneous origins of the DANCe DR2 survey, the spatial coverage and sensitivity of the survey is also not homogeneous. To remedy this issue, they identify a region with complete spatial coverage, the inner three degrees of the cluster (see Fig. \ref{fig:originDANCeDR2}). Then, they restricted their photometric analysis to this spatially complete region. 
 
-Instead of restricting the sample, I assume that the UKIDSS survey, which is the most profound of the DANCe catalogue, provides the homogeneous spatial coverage at faint magnitudes, thus providing the lower limit to the completeness. Then, for the bright end of the survey, I quote conservative completeness limits. Figure \ref{figure:completeness} shows the $K_s$ and $i$ density  for all sources in the Pleiades DANCe DR2. The upper completeness limits correspond to the point with maximum density, $i=21.4$ mag, $K_s=18.1$ mag. The density at bright magnitudes shows a sharp decline, probably due to saturation. Therefore, I choose $i=13.2$ mag and $K_s=11.0$ mag as the lower completeness limits.
+Restricting their sample of candidate members to this inner region results in a sample of candidate members that is spatially biased. If any dynamical process has been set on the cluster such that the mass distribution of its members is not uniformly distributed in the space, then an spatial cut in a sample of candidate members will result in a bias on the mass distribution. One of such dynamical process is the mass segregation, which, as suggested by \citet{Adams2001} may have happen in the Pleiades cluster. 
 
-The $CI$ completeness interval is then defined as that of all the points, along the cluster sequence in the $K_s$ vs. $i-K_s$ CMD, for which $i$ and $K_s$ are bounded by their upper and lower completeness limits, respectively. This results in a completeness interval for $i-K_s$ of  $2.7<i-K_s<5.6$ mag. With this completeness interval and the cluster sequence (the splines), we derive the completeness intervals for the $J,H,K_s$. Finally, these intervals were transformed to absolute magnitudes and deredden. 
+Thus, to avoid such biases, I assume that the UKIDSS survey, which is the most profound from among the contributions to the DANCe DR2 catalogue, provides the homogeneous spatial and sensitivity coverage at faint magnitudes (see Fig. \ref{fig:originDANCeDR2}). This survey thus provides the upper completeness limits, which are essentially those reported in the Appendix A of \citet{Bouy2015}, $i\sim23$ mag and $K_s\sim18$ mag.
+
+Since we are interested in the completeness limits of the $CI$, and this equals $i -K_s$, then its completeness limits are defined by those of $i$ and $K_s$ together. In Fig. \ref{fig:completeness}, I show the $K_s$ and $i$ kernel density estimate computed using all sources in the Pleiades DANCe DR2. As can be seen from this Figure, the point with maximum density, which corresponds to $i=21.4$ mag and $K_s=18.1$ mag, should be used to set the upper completeness limits. Notice that, due to the use of the two dimensional density, the upper completeness limit in $i$ is reduced with respect to that of the univariate $i$ distribution. This density shows a sharp decline at bright magnitudes, probably due to saturation of the detectors. To be conservative, I chose $i=13.2$ mag and $K_s=11.0$ mag as the lower completeness limits.
+
 \begin{figure}[htbp]
 \begin{center}
-%\resizebox{\hsize}{!}{\includegraphics{figs/Density-Kvsi.pdf}}
-\caption{Density of all DANCe DR2 sources in $K_s$ vs $i$ magnitudes. Lines show our completeness limits, $13.2<i<21.4$ mag and $11<K_s<18.1$ mag. The grey area is considered incomplete.}
-\label{figure:completeness}.
+\resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/Density-Kvsi.pdf}}
+\caption{Density of all DANCe DR2 sources in $K_s$ and $i$ magnitudes. Lines show the chosen completeness limits, $13.2<i<21.4$ mag and $11<K_s<18.1$ mag. The grey area is considered incomplete. Reproduced from Figure 9 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
+\label{fig:completeness}.
 \end{center}
 \end{figure}
 
+The $CI$ completeness interval is then defined as that of all the points, along the cluster sequence in the $K_s$ vs. $i-K_s$ CMD, for which $i$ and $K_s$ are bounded by their upper and lower completeness limits, respectively. This results in a completeness interval of  $2.7<CI<5.6$ mag. With it, and the cluster sequence (the splines), I derive the completeness intervals for the $J,H,K_s$ bands. Finally, I transform these intervals to absolute magnitudes and deredden them. 
 
-In Fig. \ref{figure:Luminosities}, I plot the $J,H,K_s$ luminosity distributions together with their completeness limits, hereafter I call these distributions the continuous BHM. For the sake of comparison I also show the following luminosity distributions. The luminosity distributions of objects whose mode of membership probability is greater than our probability threshold $p_t=0.84$, I call these distributions the discrete BHM. Also, I plot the luminosity distribution resulting from the candidate members of \citet{Bouy2015}, I call it discrete Bouy. Since the discrete luminosity distributions, both Bouy and BHM, relay on the individual object magnitudes, and many of these objects have missing values, I impute them using the nearest euclidean neighbour. 
+The luminosity distributions of the $J,H,K_s$ bands, together with their completeness limits are shown in Fig. \ref{fig:Luminosities}. I call them model BHM. For the sake of comparison, I also show the following luminosity distributions. First, the luminosity distributions of objects classified as candidate members in the BHM. I call these the discrete BHM distributions. Also, I plot the luminosity distribution resulting from the candidate members of \citet{Bouy2015}, I call them the discrete Bouy. Since the discrete luminosity distributions, both Bouy and BHM, relay on the magnitudes of the individual candidate members, and many of these objects have missing value entries, then I impute their missing entries using those of the nearest euclidean neighbour. 
 
-The difference between the continuous BHM  and discrete BHM distributions comes essentially from the objects used to obtain them. The continuous one uses all objects proportionally to their cluster membership probability while the discrete BHM uses only the high probability candidate members ($p>p_t$). Since the discrete BHM is not a random sample of the continuous BHM, therefore their distributions does not need to be exactly alike. In addition, the missing values in the continuous BHM case were marginalised, while in the discrete BHM were imputed.
+The difference between the luminosity distributions derived using the posterior distribution of the parameters in the BHM and discrete BHM distributions, comes as well from the fact that the candidate members are not a random sample of the cluster population. As explained before, the luminosity distributions derived from the parameters in the model take into account all objects proportionally to their cluster membership probability. The discrete BHM uses only the high probability candidate members, thus they may be biased by the probability threshold. In addition, the missing value entries of al the objects in the model BHM distributions are marginalised, while in the discrete B
+HM they are imputed.
  
-On the other hand, the differences between the discrete distributions, BHM and that of \citet{Bouy2015}, arise mainly at the bright and faint ends ($K_s\approx 4$ mag and $K_s\approx11$ mag). We argue that the origin of these differences lay in our new candidate members and in the rejected ones of \citet{Bouy2015}, as it is discussed in Sect. \ref{sect:comparisonBouy}.
+On the other hand, the differences between the discrete distributions, the BHM and that of \citet{Bouy2015}, arise mainly at the bright and faint ends ($K_s\approx 4$ mag and $K_s\approx11$ mag). I hypothesise that the origin of these differences lay in the different list of candidate members. As it has been discussed, the model of \citet{Bouy2015} is constructed only based in fully observed objects. The regions where the objects with missing entries happen more frequently is in the bright and faint regions. Therefore, the observed differences in the luminosity distributions may arise from the incomplete treatment that those authors made of objects with missing entries.
 
 \begin{figure}[htbp]
 \begin{center}
-%\resizebox{\hsize}{!}{\includegraphics{figs/absolute_JHK-log.pdf}}
-\caption{Luminosity functions from $J,H,K_s$ (orange). Also shown the regions of incompleteness and the luminosity functions computed from: the candidate members of \citet{Bouy2015} (dot-dashed blue line), and our candidate members, ($p_{84\%}>p_t$, dashed black line).}
-\label{figure:Luminosities}.
+\resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/absolute_JHK-log.pdf}}
+\caption{Luminosity distribution of $J,H,K_s$ bands (orange spagetti lines). Also shown: the regions of incompleteness, and, the luminosity distributions computed from: the candidate members of \citet{Bouy2015} (dot-dashed blue line), and our candidate members, ($p_{84\%}>p_t$, dashed black line). Reproduced from Figure 10 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
+\label{fig:Luminosities}.
 \end{center}
 \end{figure}
 
