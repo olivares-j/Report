@@ -1,4 +1,4 @@
-\begin{thebibliography}{125}
+\begin{thebibliography}{127}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -91,6 +91,10 @@ Blackwell, T. \& Bentley, P. 2002, in Proceedeings of the 4th Annual Conference
 \bibitem[{{Bouy} {et~al.}(2015){Bouy}, {Bertin}, {Sarro}, {Barrado}, {Moraux},
   {Bouvier}, {Cuillandre}, {Berihuete}, {Olivares}, \& {Beletsky}}]{Bouy2015}
 {Bouy}, H., {Bertin}, E., {Sarro}, L.~M., {et~al.} 2015, \aap, 577, A148
+
+\bibitem[{{Bressan} {et~al.}(2012){Bressan}, {Marigo}, {Girardi}, {Salasnich},
+  {Dal Cero}, {Rubele}, \& {Nanni}}]{Bressan2012}
+{Bressan}, A., {Marigo}, P., {Girardi}, L., {et~al.} 2012, \mnras, 427, 127
 
 \bibitem[{Brooks {et~al.}(2011)Brooks, Gelman, Jones, \& Meng}]{Brooks2011}
 Brooks, S., Gelman, A., Jones, G., \& Meng, X. 2011, Handbook of Markov Chain
@@ -480,6 +484,10 @@ Spiriti, S., Eubank, R., Smith, P.~W., \& Young, D. 2013, Journal of
   {Kirkpatrick}}]{Stauffer1998}
 {Stauffer}, J.~R., {Schultz}, G., \& {Kirkpatrick}, J.~D. 1998, \apjl, 499,
   L199
+
+\bibitem[{{Takeda} {et~al.}(2017){Takeda}, {Hashimoto}, \&
+  {Honda}}]{Takeda2017}
+{Takeda}, Y., {Hashimoto}, O., \& {Honda}, S. 2017, \pasj, 69, 1
 
 \bibitem[{{Tapiador} {et~al.}(2017){Tapiador}, {Berihuete}, {Sarro}, {Julbe},
   \& {Huedo}}]{Tapiador2017}

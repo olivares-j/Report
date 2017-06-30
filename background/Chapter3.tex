@@ -8,13 +8,14 @@ In the Sections ahead I also provide the details on the assumptions I make to mo
 Partial results of the work presented here have been submitted to the Journal A\&A as \citet{Olivares2017}. Thus, in the following, whenever I use the pronoun \emph{we}, it refers to the authors of \citet{Olivares2017}. However, I use the pronoun I to emphasis that the particular idea or task was done by me.
 
 \section{Introduction to probability theory.}
+\label{sect:introprobability}
  
 Uncertainty and probability are closely entangled. Every measurement has an associated uncertainty, otherwise is not a complete measurement \footnote{Upper and lower limits are examples of incomplete measurements.}. The term uncertainty must not be confused with the term error, which refers to the difference between the measured value of the quantity and its \emph{true} value\footnote{The true value is that which ideally results when the uncertainty tends to zero.} \citep{GUM2008}. It is commonly agreed that the uncertainty of a measurement can be expressed in a probabilistic basis \citep{GUM2008}. It means that whenever we measure a quantity, lets say $a$, the distribution of the repeated measurements of $a$, follows a probability distribution function (pdf, throughout the text I refer to it as a probability distribution or simply a distribution), $p(a)$. This $p(a)$, as any other (statistical) pdf,  satisfies the following properties:
 
 \begin{enumerate}[label=\textbf{Property \arabic*}]
 \item  It has units, those of the inverse of $a$. \label{property:1}
 \item $p(a) \geq 0$. \label{property:3}
-\item $1=\int_a p(a) da$. \label{property:3}
+\item $1=\int_a p(a) \mathrm{d}a$. \label{property:3}
 \end{enumerate}
 
 These properties hold regardless of the dimension of $a$. It means that the joint probability distribution of the uncertainties of all measured quantities of an object is also a probability distribution. Furthermore, they also hold for conditional probability distributions. Let's imagine that we measure the positions, projected in the plane of sky (the plane perpendicular to the line of sight), of one star. The measurements are conditioned on the magnitude, or brightness, of the object we measure. If the object is too bright, like the sun, it saturates the detector and that renders the measurement useless. On the other hand, if the object is too faint, there are not enough photons to trigger a detection. So, the stellar positions in the sky, which we can call $a$ and $b$ because they are two dimensions, follow a conditioned probability distribution, with the magnitude, $c$, the conditional variable. Therefore, $p(a,b|c)$ must also satisfy:
@@ -22,7 +23,7 @@ These properties hold regardless of the dimension of $a$. It means that the join
 \begin{itemize}
 \item It has units of $a^{-1} b^{-1}$.
 \item $p(a,b|c)\geq0$.
-\item $1=\int_a \int_b p(a,b|c)da\cdot db$.
+\item $1=\int_a \int_b p(a,b|c)\mathrm{d}a\cdot \mathrm{d}b$.
 \end{itemize}
 
 The link between joint and conditioned probabilities is given by the following symmetric definition:
@@ -48,19 +49,34 @@ then $a$ and $b$ are say to be \emph{independent}. An alternative option is to s
 \ref{property:3} establishes that the amount\footnote{Which could be infinite, like in Dirac's delta.} of probability distribution $p(a)$ spread over the volume of the support of $a$ adds to one. This Property allows the \emph{marginalisation} of any \emph{nuisance} variable. Let's imagine that someone gives us the probability distribution $p(a,b)$, where $a$ and $b$ are the positions of some star in the plane of the sky. If we are interested in, let's say, the mean value of $a$, we first must get rid of $b$. For it, we \emph{marginalise} it out in the following way,
 \begin{align}
 \label{eq:marginalisation}
-p(a)=\int_b p(a,b)\cdot db.
+p(a)=\int_b p(a,b)\cdot \mathrm{d}b.
 \end{align}
 
 Then we compute the \emph{expected value} of $a$, $E(a)$, which is identified with the mean of $a$ once we have drawn many realisations from its probability distribution. To compute it, we add all the possible values of $a$ weighted by their probability. This is,
 
 \begin{align}
 \label{eq:expectation}
-E(a)=\int_a a\cdot p(a)\cdot da.
+E(a)=\int_a a\cdot p(a)\cdot \mathrm{d}a.
 \end{align}
 
 Once again, these last two equations (\ref{eq:marginalisation} and \ref{eq:expectation}) hold if the distributions are conditioned on any other measurement. For example, the magnitude of the object, as we did before. 
 
-It is important to recall that the term measurement, and its unavoidable uncertainty, refer not just to directly measured quantities, like the photons (counts) and pixels in a CCD, but also to indirect measurements. Stellar magnitudes and positions in the sky, for example, are indirect measurements derived from the direct measurement of photons, pixels and telescope arrangements. This generalisation also applies to the measurement of parameters in any physical or statistical model, like the one I will describe in the following Sections.
+It is important to recall that the term measurement, and its unavoidable uncertainty, refer not just to directly measured quantities, like the photons (counts) and pixels in a CCD, but also to indirect measurements. Stellar magnitudes and positions in the sky, for example, are indirect measurements derived from the direct measurement of photons, pixels and telescope arrangements. This generalisation also applies to the measurement of parameters in any physical or statistical model.% like the one I will describe in the following Sections.
+
+I end this Section with a brief description of the procedure that is generally applied when we want to transform a probability distribution into another probability distribution, given a nonlinear transformation \cite[for more details see page 18 and 19 of][]{Bishop2006}. 
+
+Let  $f$ be a probability distribution on $x\subset\mathbb{R}$, with support on $a<x<b$, then
+
+\begin{equation}
+\int_a^b f(x) \mathrm{d}x = 1 \nonumber
+\end{equation}
+
+Let $y=g(x)$ be the nonlinear transformation, with $g$ a function of $x$ with inverse $g^{-1}$, continuous and with continuous derivative, so that $x=g^{-1}(y)$, with $y\subset \mathbb{R}$. Then, the following is true,
+
+\begin{equation}
+\label{eq:transformdistribution}
+\int_a^b f(x) \mathrm{d}x = \int_{g(a)}^{g(b)} f(g^{-1}(y))\cdot \left|\frac{\mathrm{d}g^{-1}(y)}{\mathrm{d}y}\right|\cdot \mathrm{d}y.
+\end{equation}
 
 \subsection{Bayes theorem}
 The definition of conditioned probability (Eq. \ref{eq:conditioned}) leads to Bayes' theorem:
@@ -70,17 +86,17 @@ p(a|b,c) = \frac{p(b|a,c)\cdot p(a|c)}{p(b|c)}.
 Integrating on $a$ we find that,
 \begin{align}
 \label{eq:evidence}
-p(b|c) \cdot \int_a p(a|b,c)\cdot da = \int_a p(b|a,c) \cdot p(a|c) \cdot da \nonumber \\
-Z \equiv p(b|c) = \int_a p(b|a,c) \cdot p(a|c) \cdot da.
+p(b|c) \cdot \int_a p(a|b,c)\cdot \mathrm{d}a = \int_a p(b|a,c) \cdot p(a|c) \cdot \mathrm{d}a \nonumber \\
+Z \equiv p(b|c) = \int_a p(b|a,c) \cdot p(a|c) \cdot \mathrm{d}a.
 \end{align}
-In this last equation $Z$ refers to what is known as the \emph{evidence}. This Eq. illustrates that $p(b|c)$ is a normalisation constant which can be evaluated once $p(b|a,c)$ and $p(a|c)$ are known. This turns out to be very useful, since as we will see on the following Sections, it tells us that to obtain p(a|b,c) we need just a sample of it, that can be later normalised to obtain a proper probability distribution.
+In this last equation $Z$ refers to what is known as the \emph{evidence}. This Eq. illustrates that $p(b|c)$ is a normalisation constant which can be evaluated once $p(b|a,c)$ and $p(a|c)$ are known. This turns out to be very useful, since as we will see on the following Sections, it tells us that to obtain $p(a|b,c)$ we need just a sample of it, that can be later normalised to obtain a proper probability distribution.
 
 \subsubsection{Models and parametric inference}
 In a broad sense, models are representation or abstraction of the \emph{a priori} knowledge some one has about something. Sometimes this knowledge is also shared by others. Models are everywhere in our daily life: from the words we speak every day, to the evolution of the species and the general relativity; from a kid's drawing to cosmological models. In science, however, we restrict the concept of model to a mathematical representation of the relations (the \emph{a priori} knowledge) among the entities that the model attempts to describe. These entities include the observables (i.e. the data), and the parameters, if the model is parametric. In this later case, the observables can be reproduced by means of the parameters. Thus, a parametric model can be thought of as a function which relates parameters and observables in a mathematical way. 
 
 The act of finding the parameters that reproduce the observables is called parametric inference. This last can focus either on the entire probability distribution of the parameters, or just on some statistics about it (e.g. the maximum a posteriori, also known as MAP, or the mean and variance).
 
-The proper way to obtain the entire probability distribution of the parameters in a model, given the data, is through Bayes' theorem. Thus it is called Bayesian inference. Another example of parametric inference is the maximum likelihood approach. Where the likelihood, which is seen as a function of the parameters, is maximised. Despite that it properly obtains the parameters that reproduce the data, it does not return their probability distribution. Formally, the likelihood is a probability distribution on the data, and just a function on the parameters. Thus for us to obtain the probability of the parameters we must multiply this likelihood times the priors and normalise it. THis is what Bayes' theorem does.
+The proper way to obtain the entire probability distribution of the parameters in a model, given the data, is through Bayes' theorem. Thus it is called Bayesian inference. Another example of parametric inference is the maximum likelihood approach. Where the likelihood, which is seen as a function of the parameters, is maximised. Despite that it properly obtains the parameters that reproduce the data, it does not return their probability distribution. Formally, the likelihood is a probability distribution on the data, and just a function on the parameters. Thus for us to obtain the probability of the parameters we must multiply this likelihood times the priors and normalise it. This is what Bayes' theorem does.
 
 In this context, Bayes' theorem is:
 \begin{equation}
@@ -145,7 +161,7 @@ When comparing a linear model to a quadratic one in which the constant term has 
 One of the great advantages of the Bayesian methodology is that it incorporates directly Ockham's principle. Suppose that we want to compare two models, $M_1$ and $M_2$, which we assume describe the data set, $\mathbf{D}$. Each model has prior probabilities, $p(M_k)$ and likelihoods $p(\mathbf{D}|M_k)$ (with $k=1,2$). Notice that now, I use Bayes' theorem for models and not for parameters within a model. So, the prior probabilities of the models reflect our beliefs about the fixed assumptions within each model. On the other hand, the likelihood of the data given the model, is related to the parameters (the free assumptions) and their prior probabilities, both within a model. This likelihood of the data given the model corresponds to the \emph{evidence} of the model (Eq. \ref{eq:evidence}). This evidence in terms of the model parameters, $\theta_k$, is now
 
  \begin{equation}
-p(\mathbf{D}|M_k)=\int_{\theta_k} p(\mathbf{D}|\theta_k,M_K)\cdot p(\theta_k|M_k)\cdot d\theta_k. \label{eq:evidence2}
+p(\mathbf{D}|M_k)=\int_{\theta_k} p(\mathbf{D}|\theta_k,M_K)\cdot p(\theta_k|M_k)\cdot \mathrm{d}\theta_k. \label{eq:evidence2}
 \end{equation}
 Bayes' theorem applied to models, instead of individual parameters as done before, tells us that
 \begin{equation}
@@ -274,7 +290,7 @@ In terms of probability, there is no distinction between missing values and para
 
 \begin{equation}
 \label{eq:marginalmiss}
-p(\mathbf{d}|\mathbf{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i}= NA,...,d_n\}|\mathbf{\theta})\cdot dx_{i}.
+p(\mathbf{d}|\mathbf{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i}= NA,...,d_n\}|\mathbf{\theta})\cdot \mathrm{d}x_{i}.
 \end{equation}
 
 Throughout this work, missing values are marginalised in this way.
@@ -306,10 +322,10 @@ p(\mathbf{q}|\pi)= \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)}.
 The marginalisation runs as
 
 \begin{align}
-p(\mathbf{D}|\pi,\theta,\phi)&=\int_{\mathbf{q}} p(\mathbf{D},\mathbf{q}|\pi,\theta,\phi)\cdot d\mathbf{q} \nonumber \\
-&=\int_{\mathbf{q}} p(\mathbf{D}|\mathbf{q},\pi,\theta,\phi)\cdot p(\mathbf{q}|\pi)\cdot d\mathbf{q} \nonumber \\
-&=\int_{\mathbf{q}} \prod_{n=1}^N {p_c(\mathbf{d}_n|\theta)}^{q_n}\cdot {p_f(\mathbf{d}_n|\phi)}^{(1-q_n)}\cdot \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)}\cdot d\mathbf{q} \nonumber \\
-&=\int_{\mathbf{q}} \prod_{n=1}^N \left[(1-\pi)\cdot p_c(\mathbf{d}_n|\theta)\right]^{q_n}\cdot \left[\pi\cdot p_f(\mathbf{d}_n|\phi)\right]^{(1-q_n)}\cdot d\mathbf{q} \nonumber \\
+p(\mathbf{D}|\pi,\theta,\phi)&=\int_{\mathbf{q}} p(\mathbf{D},\mathbf{q}|\pi,\theta,\phi)\cdot \mathrm{d}\mathbf{q} \nonumber \\
+&=\int_{\mathbf{q}} p(\mathbf{D}|\mathbf{q},\pi,\theta,\phi)\cdot p(\mathbf{q}|\pi)\cdot \mathrm{d}\mathbf{q} \nonumber \\
+&=\int_{\mathbf{q}} \prod_{n=1}^N {p_c(\mathbf{d}_n|\theta)}^{q_n}\cdot {p_f(\mathbf{d}_n|\phi)}^{(1-q_n)}\cdot \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)}\cdot \mathrm{d}\mathbf{q} \nonumber \\
+&=\int_{\mathbf{q}} \prod_{n=1}^N \left[(1-\pi)\cdot p_c(\mathbf{d}_n|\theta)\right]^{q_n}\cdot \left[\pi\cdot p_f(\mathbf{d}_n|\phi)\right]^{(1-q_n)}\cdot \mathrm{d}\mathbf{q} \nonumber \\
 &=\prod_{n=1}^N (1-\pi)\cdot p_c(\mathbf{d}_n|\theta) + \pi\cdot p_f(\mathbf{d}_n|\phi).
 \end{align}
 This last equality is a rather complicated derivation which can be found on \citet{Press1997} and in \citet{Hogg2010a} for $p_c$ and $p_f$ in the exponential family. Also, a general derivation of this expression is given by \citet{Jaynes2003}. He obtains it assuming individual unknown probabilities $p_n$ instead of $q_n$ and marginalising over them by the aid of a prior.
@@ -338,7 +354,7 @@ Notice that the number of gaussians in the mixture is not formally speaking a pa
 
 According to \citet{Bouy2015}, the number of Pleiades candidate members in the DANCe DR2 data set is 2010 (going up to 2109 in the combined Tycho-DANCe DR2). It means that the number of field objects dominates (99.9\%) the DR2 data set. Even in our restricted $10^5$ data set, RDR2 (see Sect. \ref{sect:RDR2}), the field still dominates with a 0.98 fraction. Thus, it can be assumed that any new classification of candidate members will have a negligible impact on this figure. Therefore, it seems reasonable to assume that the GMM describing the field population can be frozen (fixed) during the process of cluster parameters inference. Let me elaborate on this assumption.
 
-The objects that \citet{Bouy2015} classified as field are those whose cluster membership probabilities are lower than 0.75. This probability threshold corresponds to the one found by \citet{Sarro2014} after analysing the performance of their methodology when applied to synthetic data sets. In \citet{Sarro2014} the authors report that, at probability threshold $p=0.75$, the contamination and true positive rates are $\approx 8\%$ and $ \approx96\%$ respectively. Assuming that these values are correct, the number of hypothetically misclassified objects is $12\%$ of the cluster members, thus $\approx 241 $ objects. This value is negligible compared to the size of the data set ($10^5$ objects in the RDR2). It represents the negligible fraction of $ \lesssim0.0024$. 
+The objects that \citet{Bouy2015} classified as field are those whose cluster membership probabilities are lower than 0.75. This probability threshold corresponds to the one found by \citet{Sarro2014} after analysing the performance of their methodology when applied to synthetic data sets. In \citet{Sarro2014} the authors report that, at probability threshold $p=0.75$, the contamination and true positive rates are $\sim 8\%$ and $ \sim96\%$ respectively. Assuming that these values are correct, the number of hypothetically misclassified objects is $12\%$ of the cluster members, thus $\sim 241 $ objects. This value is negligible compared to the size of the data set ($10^5$ objects in the RDR2). It represents the negligible fraction of $ \lesssim0.0024$. 
 
 It can be further assumed that these hypothetically misclassified objects are spread in the observables space. Indeed, these misclassified can be thought to have membership probabilities near the classification threshold. Thus, they lay in the entanglement region which corresponds, in proper motions, to a halo around the cluster centre, and in photometry, to a region around the cluster sequence.
 
@@ -385,7 +401,7 @@ For the sake of simplicity, in the following whenever I refer to the photometric
 
 \subsubsection{Photometric model of equal-mass binaries and single stars}
 
-The cluster photometric sequences, both for single and EMB, are modelled with cubic splines, one for each of the $YJHK_s$ vs $CI$ CMDs. I choose the spline series due to their fitting properties. I tried several polynomial bases (Laguerre, Hermite, Chebyshev) but in spite of the order, they were not able to fit the sequence, particularly in the region around $CI \approx 3$, where the slope is higher. 
+The cluster photometric sequences, both for single and EMB, are modelled with cubic splines, one for each of the $YJHK_s$ vs $CI$ CMDs. I choose the spline series due to their fitting properties. I tried several polynomial bases (Laguerre, Hermite, Chebyshev) but in spite of the order, they were not able to fit the sequence, particularly in the region around $CI \sim 3$, where the slope is higher. 
 
 Despite their superior flexibility, spline series require more parameters than common polynomials. In addition to the coefficients of the series, they require the specification of points called knots. These knots represent the starting and ending points of the spline sections. 
 
@@ -455,22 +471,22 @@ In this last Equation, the symbol $\mathcal{N}_t$ stands for the truncated ($0.8
 Then, the marginalisation of $CI$ runs as follows:
 \begin{align}
 \label{eq:clmarginalps}
- p_{Cs}(\mathbf{d}_{ph}| \boldsymbol{\theta}_c,\mathbf{u}_{ph})&=\int p_{Cs}(\mathbf{d}_{ph},CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph}) \cdot dCI \nonumber \\
- &=\int p_{Cs}(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph}) \cdot p_{Cs}(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot dCI 
+ p_{Cs}(\mathbf{d}_{ph}| \boldsymbol{\theta}_c,\mathbf{u}_{ph})&=\int p_{Cs}(\mathbf{d}_{ph},CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph}) \cdot \mathrm{d}CI \nonumber \\
+ &=\int p_{Cs}(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph}) \cdot p_{Cs}(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot \mathrm{d}CI 
 \end{align}
 \begin{align}
 \label{eq:clmarginalpb}
-p_{Bs}(\mathbf{d}_{ph}| \boldsymbol{\theta}_c,\mathbf{u}_{ph})&=\int p_{Bs}(\mathbf{d}_{ph},CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot dCI \nonumber \\
- &=\int p_{Bs}(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot p_{Bs}(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot dCI.
+p_{Bs}(\mathbf{d}_{ph}| \boldsymbol{\theta}_c,\mathbf{u}_{ph})&=\int p_{Bs}(\mathbf{d}_{ph},CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot \mathrm{d}CI \nonumber \\
+ &=\int p_{Bs}(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot p_{Bs}(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot \mathrm{d}CI.
 \end{align}
 In these Equations, $\theta_c$ stands for all cluster parameters related to photometry, and the first and second terms of the integrals in the last equalities correspond to Equations \ref{eq:lik-seq} and \ref{eq:colordist}, respectively. The distribution of $CI$ depends only on $\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}$, thus, the cluster and equal-mass binaries likelihoods of datum $\mathbf{d}_{ph}$ are 
 \begin{align}
 \label{eq:lik-seq2}
  &p_{Cs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI},\boldsymbol{\beta},\Sigma_{clus},\mathbf{u}_{ph}) \nonumber \\
  &=\int{\mathcal{N}}(\mathbf{d}_{ph}|\boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}), \mathbf{u}_{ph}+\Sigma_{clus}) \nonumber \\
- &\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot dCI\nonumber \\
+ &\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot \mathrm{d}CI\nonumber \\
 &p_{Bs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph})\nonumber \\
-&=\int{\mathcal{N}}(\mathbf{d}_{ph}|T_{Bs}( \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})), \mathbf{u}_{ph}+\Sigma_{clus}) \nonumber \\ &\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot dCI.
+&=\int{\mathcal{N}}(\mathbf{d}_{ph}|T_{Bs}( \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})), \mathbf{u}_{ph}+\Sigma_{clus}) \nonumber \\ &\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot \mathrm{d}CI.
 \end{align}
 
 The observed $CI$ and magnitudes help us  to reduce the computing time of the marginalisation integral. We use them to discard  regions of the integral in which the argument is almost zero (i.e. far from the measured values). Although we allow the nuisance parameters $CI$s to have all their possible values, the data, by means of the likelihood, give us information about the distribution of these individual nuisance parameters. To use this information, we proceed as follows. First, we compare the observed photometry to the true one (i.e. the cluster sequence given by the splines). For it we use a grid of 300 points uniformly distributed in the domain of $CI$ ($0.8<CI<8$). Then, we find the point, $p$, of the grid that is  the closest to the vector of the observed photometry.  Distance is computed under  the Mahalanobis metric. This metric takes into account the observational uncertainty, $\mathbf{u}_{ph}$, and the intrinsic dispersion of the cluster sequence, $\Sigma_{clus}$. Finally, the limits of the marginalisation integral  are defined as those given by a ball of 3.5 Mahalanobis distances around point $p$. Contributions outside this ball are negligible to the integral ($< 4\times10^{-4}$).
@@ -571,7 +587,7 @@ The narrow variance in the cluster-field mixture expresses our prior belief abou
 \label{figure:priors}
 \end{figure}
 
-For the priors of mean parameters in the proper motions GMM, both of single and EMB, we choose the bivariate normal distribution. We set the hyper-parameters of this bivariate normal to those found after fitting a bivariate normal to the candidate members of \citet{Bouy2015}. These values are $\boldsymbol{\mu}_{\mu_{pm}}=\{16.30,-39.62\}$ and $\Sigma_{\mu_{pm}}=\{\{36.84,1.18\},\{1.18,40.71\}\}$. 
+For the priors of mean parameters in the proper motions GMM, both of single and EMB, we choose the bivariate normal distribution. We set the hyper-parameters of this bivariate normal to those found after fitting a bivariate normal to the candidate members of \citet{Bouy2015}. These values are $\boldsymbol{\mu}_{\mu_{pm}}=\{16.30,-39.62\}\mathrm{mas\cdot yr^{-1}}$ and $\Sigma_{\mu_{pm}}=\{\{36.84,1.18\},\{1.18,40.71\}\}\mathrm{mas^2\cdot yr^{-2}}$. 
 
 As prior for the covariance matrices of both single and EMB proper motions GMM we use the Half--$t(\nu,\mathbf{A})$ distribution. It is parametrised by an scalar $\nu$ and a vector $\mathbf{A}$. As shown by \citet{Huang2013} this family distribution leads to more accurate estimation of covariance matrices than the traditional Inverse-Wishart distribution. Particularly, the marginal correlation correlation parameters, $\rho$ have the following distribution,
 
@@ -579,15 +595,15 @@ As prior for the covariance matrices of both single and EMB proper motions GMM w
 p(\rho) \propto (1-\rho^2)^{\frac{\nu}{2}-1}.
 \end{equation}
 
-The standard deviation term $\sigma_k$, associated to entry $k$, is distributed according to Half--$t(\nu,A_k)$. We set the hyper-parameter to $\nu=3$ and $\boldsymbol{A}_{pm}=\{10^5,10^5\}$. According to \citet{Huang2013}, an arbitrarily large values of $\boldsymbol{A}$ lead to arbitrarily weakly informative priors on the corresponding standard deviation terms.
+The standard deviation term $\sigma_k$, associated to entry $k$, is distributed according to Half--$t(\nu,A_k)$. We set the hyper-parameter to $\nu=3$ and $\boldsymbol{A}_{pm}=\{10^5,10^5\}\mathrm{mas^2\cdot yr^{-2}}$. According to \citet{Huang2013}, an arbitrarily large values of $\boldsymbol{A}$ lead to arbitrarily weakly informative priors on the corresponding standard deviation terms.
 
 Concerning the photometric priors, they can be grouped in three categories: (i) priors for the the \emph{true} $CI$, (ii) priors for the splines coefficients, and (iii) priors for the cluster sequence intrinsic dispersion. 
 
-For the means in the univariate GMM modelling the \emph{true} $CI$ I choose a uniform distribution in the range  ($0.8\leq CI \leq8$). For the standard deviations I choose the Half--Cauchy$(0,\eta)$ distributions as suggested by \citet{Gelman2006}. The value of $\eta$ is set to an arbitrarily large value. In this case I chose $\eta=100$.
+For the means in the univariate GMM modelling the \emph{true} $CI$ I choose a uniform distribution in the range  ($0.8\leq CI \leq8$). For the standard deviations I choose the Half--Cauchy$(0,\eta)$ distributions as suggested by \citet{Gelman2006}. The value of $\eta$ is set to an arbitrarily large value. In this case I chose $\eta=100\,\mathrm{mag}^2$.
 
-For the coefficients in the spline series we set the priors as univariate normal distributions. To find the mean and variance of these distributions we proceed as follows. First, we remove the EMB from the list of candidate members of \citet{Bouy2015}. To do this, I performed an iterative fit of the cluster sequence, at each iteration I removed those objects whose photometry was  as bright as that of the EMB. In the region of $CI > 7$ there are no candidate members of \citet{Bouy2015} and of any other source. Thus, to provide a prior we complement our list of candidate members with the brown-dwarfs from the \citet{Faherty2012} sample. We chose only those objects observed in the same photometric bands of our data set. Finally, we fit the splines, and use the coefficients of this fit as the means, $\mu_{\beta}$ of the univariate normal distributions. The standard deviation terms were set to $\sigma_{\beta}=\{1,1,1,1,1,0.5,0.1\}$. These values provide a reasonable compromise between cluster sequences compatible with the previously known candidates, and those far away or with exotic shapes. We show a sample of this priors in Fig. \ref{figure:priorcoefs}. This Fig. also shows the brown-dwarfs from \citet{Faherty2012} and the sequence (dashed line) we use to provide the means of the univariate normal distributions.
+For the coefficients in the spline series we set the priors as univariate normal distributions. To find the mean and variance of these distributions we proceed as follows. First, we remove the EMB from the list of candidate members of \citet{Bouy2015}. To do this, I performed an iterative fit of the cluster sequence, at each iteration I removed those objects whose photometry was  as bright as that of the EMB. In the region of $CI > 7$ there are no candidate members of \citet{Bouy2015} and of any other source. Thus, to provide a prior we complement our list of candidate members with the brown-dwarfs from the \citet{Faherty2012} sample. We chose only those objects observed in the same photometric bands of our data set. Finally, we fit the splines, and use the coefficients of this fit as the means, $\mu_{\beta}$ of the univariate normal distributions. The standard deviation terms were set to $\sigma_{\beta}=\{1,1,1,1,1,0.5,0.1\}\,\mathrm{mag}^2$. These values provide a reasonable compromise between cluster sequences compatible with the previously known candidates, and those far away or with exotic shapes. We show a sample of this priors in Fig. \ref{figure:priorcoefs}. This Fig. also shows the brown-dwarfs from \citet{Faherty2012} and the sequence (dashed line) we use to provide the means of the univariate normal distributions.
 
-To set the prior for the parameters of the cluster intrinsic dispersion, $\Sigma_{clus}$, I choose again the Half--t$(\nu,\boldsymbol{A})$ distribution.  However, this time I use  $\boldsymbol{A}_{ph}=\{10,10,10,10,10\}$. These values are large when compared to the standard deviation terms of the observed uncertainties. Therefore, this values provide a weakly informative prior on the marginal standard deviation terms of the $\Sigma_{clus}$ covariance matrix.
+To set the prior for the parameters of the cluster intrinsic dispersion, $\Sigma_{clus}$, I choose again the Half--t$(\nu,\boldsymbol{A})$ distribution.  However, this time I use  $\boldsymbol{A}_{ph}=\{10,10,10,10,10\}\,\mathrm{mag}^2$. These values are large when compared to the standard deviation terms of the observed uncertainties. Therefore, this values provide a weakly informative prior on the marginal standard deviation terms of the $\Sigma_{clus}$ covariance matrix.
 
 Table \ref{table:hyperparameters} shows a summary all the hyper-parameter and their values.
 
@@ -762,7 +778,7 @@ Introducing PSO and later the charged PSO reduced even further the computing tim
 
 \subsection{The modified charged PSO}
 \label{sect:chargedPSO}
-As explained before, the charged PSO of \citet{Blackwell2002} was inappropriate to our objective. The metric of the parametric space of our problem is not isotropic, parameters have different length scales. For example, while fraction are constrained in the $[0,1]$ interval, proper motions parameters are allowed in the range of proper motion measurements $[-99,99]\,mas\cdot yr^{-1}$. Therefore, the use of an isotropic metric results in a solution which is crowded in some parameters while is over dispersed in others. 
+As explained before, the charged PSO of \citet{Blackwell2002} was inappropriate to our objective. The metric of the parametric space of our problem is not isotropic, parameters have different length scales. For example, while fraction are constrained in the $[0,1]$ interval, proper motions parameters are allowed in the range of proper motion measurements $[-99,99]\,\mathrm{mas\cdot yr^{-1}}$. Therefore, the use of an isotropic metric results in a solution which is crowded in some parameters while is over dispersed in others. 
 To solve this issue, I modified the charged PSO by measuring distance between particles and applying the electrostatic force independently on each parameter. In such a way, the electrostatic force plays a role only when the relative distance between particles is smaller than $10^{-10}$. I found this value heuristically.
 
 In the original version of  \citet{Blackwell2002}, each particle is subject to the acceleration,
