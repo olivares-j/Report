@@ -1,4 +1,4 @@
-\begin{thebibliography}{127}
+\begin{thebibliography}{141}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -327,11 +327,25 @@ Kennedy, J. \& Eberhart, R. 1995, in Neural Networks, 1995. Proceedings., IEEE
 Koller, D. \& Friedman, N. 2009, Probabilistic Graphical Models: Principles and
   Techniques, Adaptive computation and machine learning (MIT Press)
 
+\bibitem[{{Kordopatis} {et~al.}(2013){Kordopatis}, {Gilmore}, {Steinmetz},
+  {Boeche}, {Seabroke}, {Siebert}, {Zwitter}, {Binney}, {de Laverny},
+  {Recio-Blanco}, {Williams}, {Piffl}, {Enke}, {Roeser}, {Bijaoui}, {Wyse},
+  {Freeman}, {Munari}, {Carrillo}, {Anguiano}, {Burton}, {Campbell}, {Cass},
+  {Fiegert}, {Hartley}, {Parker}, {Reid}, {Ritter}, {Russell}, {Stupar},
+  {Watson}, {Bienaym{\'e}}, {Bland-Hawthorn}, {Gerhard}, {Gibson}, {Grebel},
+  {Helmi}, {Navarro}, {Conrad}, {Famaey}, {Faure}, {Just}, {Kos}, {Matijevi{\v
+  c}}, {McMillan}, {Minchev}, {Scholz}, {Sharma}, {Siviero}, {de Boer}, \& {{\v
+  Z}erjal}}]{2013AJ....146..134K}
+{Kordopatis}, G., {Gilmore}, G., {Steinmetz}, M., {et~al.} 2013, \aj, 146, 134
+
 \bibitem[{{Lada} \& {Lada}(2003)}]{2003ARA&A..41...57L}
 {Lada}, C.~J. \& {Lada}, E.~A. 2003, \araa, 41, 57
 
 \bibitem[{{Lee} \& {Sung}(1995)}]{1995JKAS...28...45L}
 {Lee}, S.-W. \& {Sung}, H. 1995, Journal of Korean Astronomical Society, 28, 45
+
+\bibitem[{{Limber}(1960)}]{Limber1960}
+{Limber}, D.~N. 1960, \apj, 131, 168
 
 \bibitem[{{Limber}(1961)}]{Limber1961}
 {Limber}, D.~N. 1961, \apj, 134, 537
@@ -344,6 +358,9 @@ Lin, T., Lee, J., \& Ho, H. 2006, WOS:000236696400015
 
 \bibitem[{Lindstrom(1999)}]{Lindstrom1999}
 Lindstrom, M. 1999, Journal of Computational and Graphical Statistics, 8, 333
+
+\bibitem[{{Liu} {et~al.}(1991){Liu}, {Janes}, \& {Bania}}]{1991ApJ...377..141L}
+{Liu}, T., {Janes}, K.~A., \& {Bania}, T.~M. 1991, \apj, 377, 141
 
 \bibitem[{{Lodieu} {et~al.}(2012){Lodieu}, {Deacon}, \& {Hambly}}]{Lodieu2012}
 {Lodieu}, N., {Deacon}, N.~R., \& {Hambly}, N.~C. 2012, \mnras, 422, 1495
@@ -363,6 +380,10 @@ Lindstrom, M. 1999, Journal of Computational and Graphical Statistics, 8, 333
 {March}, M.~C., {Karpenka}, N.~V., {Feroz}, F., \& {Hobson}, M.~P. 2014,
   \mnras, 437, 3298
 
+\bibitem[{{Martin} {et~al.}(1996){Martin}, {Rebolo}, \&
+  {Zapatero-Osorio}}]{1996ApJ...469..706M}
+{Martin}, E.~L., {Rebolo}, R., \& {Zapatero-Osorio}, M.~R. 1996, \apj, 469, 706
+
 \bibitem[{McMichael(1996)}]{McMichael1996}
 McMichael, D.~W. 1996, in in Proc. Fourth International Symposium on Signal
   Processing and its Applications (ISSPA, 377--378
@@ -372,10 +393,26 @@ McMichael, D.~W. 1996, in in Proc. Fourth International Symposium on Signal
 {Melis}, C., {Reid}, M.~J., {Mioduszewski}, A.~J., {Stauffer}, J.~R., \&
   {Bower}, G.~C. 2014, Science, 345, 1029
 
+\bibitem[{{Mermilliod}(1979)}]{1979BICDS..16....2M}
+{Mermilliod}, J.-C. 1979, Bulletin d'Information du Centre de Donnees
+  Stellaires, 16, 2
+
+\bibitem[{{Mermilliod} {et~al.}(1997){Mermilliod}, {Bratschi}, \&
+  {Mayor}}]{1997A&A...320...74M}
+{Mermilliod}, J.-C., {Bratschi}, P., \& {Mayor}, M. 1997, \aap, 320, 74
+
+\bibitem[{{Mermilliod} {et~al.}(2009){Mermilliod}, {Mayor}, \&
+  {Udry}}]{2009A&A...498..949M}
+{Mermilliod}, J.-C., {Mayor}, M., \& {Udry}, S. 2009, \aap, 498, 949
+
 \bibitem[{Metropolis {et~al.}(1953)Metropolis, Rosenbluth, Rosenbluth, Teller,
   \& Teller}]{Metropolis1953}
 Metropolis, N., Rosenbluth, A.~W., Rosenbluth, M.~N., Teller, A.~H., \& Teller,
   E. 1953, The Journal of Chemical Physics, 21, 1087
+
+\bibitem[{{Moraux} {et~al.}(2001){Moraux}, {Bouvier}, \&
+  {Stauffer}}]{2001A&A...367..211M}
+{Moraux}, E., {Bouvier}, J., \& {Stauffer}, J.~R. 2001, \aap, 367, 211
 
 \bibitem[{{Moraux} {et~al.}(2003){Moraux}, {Bouvier}, {Stauffer}, \&
   {Cuillandre}}]{2003A&A...400..891M}
@@ -437,6 +474,10 @@ Patel, P.~K., Sharma, V., \& Gupta, K. 2013, International Journal of Computer
 \bibitem[{Roberts \& Rosenthal(2004)}]{Roberts2004}
 Roberts, G.~O. \& Rosenthal, J.~S. 2004, Probability Surveys, 1, 20
 
+\bibitem[{{Rosvick} {et~al.}(1992){Rosvick}, {Mermilliod}, \&
+  {Mayor}}]{1992A&A...255..130R}
+{Rosvick}, J.~M., {Mermilliod}, J.-C., \& {Mayor}, M. 1992, \aap, 255, 130
+
 \bibitem[{{Sale}(2012)}]{Sale2012}
 {Sale}, S.~E. 2012, \mnras, 427, 2119
 
@@ -465,6 +506,9 @@ Schwarz, G. 1978, Ann. Statist., 6, 461
 \bibitem[{Skilling(2006)}]{Skilling2006}
 Skilling, J. 2006, Bayesian Anal., 1, 833
 
+\bibitem[{{Smith} \& {Struve}(1944)}]{1944ApJ...100..360S}
+{Smith}, B. \& {Struve}, O. 1944, \apj, 100, 360
+
 \bibitem[{{Soderblom} {et~al.}(2005){Soderblom}, {Nelan}, {Benedict},
   {McArthur}, {Ramirez}, {Spiesman}, \& {Jones}}]{2005AJ....129.1616S}
 {Soderblom}, D.~R., {Nelan}, E., {Benedict}, G.~F., {et~al.} 2005, \aj, 129,
@@ -480,6 +524,10 @@ Spiriti, S., Eubank, R., Smith, P.~W., \& Young, D. 2013, Journal of
 {Stauffer}, J.~R., {Hartmann}, L.~W., {Fazio}, G.~G., {et~al.} 2007, \apjs,
   172, 663
 
+\bibitem[{{Stauffer} {et~al.}(1994){Stauffer}, {Liebert}, {Giampapa},
+  {Macintosh}, {Reid}, \& {Hamilton}}]{1994AJ....108..160S}
+{Stauffer}, J.~R., {Liebert}, J., {Giampapa}, M., {et~al.} 1994, \aj, 108, 160
+
 \bibitem[{{Stauffer} {et~al.}(1998){Stauffer}, {Schultz}, \&
   {Kirkpatrick}}]{Stauffer1998}
 {Stauffer}, J.~R., {Schultz}, G., \& {Kirkpatrick}, J.~D. 1998, \apjl, 499,
@@ -493,6 +541,12 @@ Spiriti, S., Eubank, R., Smith, P.~W., \& Young, D. 2013, Journal of
   \& {Huedo}}]{Tapiador2017}
 {Tapiador}, D., {Berihuete}, A., {Sarro}, L.~M., {Julbe}, F., \& {Huedo}, E.
   2017, Astronomy and Computing, 19, 1
+
+\bibitem[{{Terndrup} {et~al.}(2000){Terndrup}, {Stauffer}, {Pinsonneault},
+  {Sills}, {Yuan}, {Jones}, {Fischer}, \&
+  {Krishnamurthi}}]{2000AJ....119.1303T}
+{Terndrup}, D.~M., {Stauffer}, J.~R., {Pinsonneault}, M.~H., {et~al.} 2000,
+  \aj, 119, 1303
 
 \bibitem[{{Thies} \& {Kroupa}(2007)}]{Thies2007}
 {Thies}, I. \& {Kroupa}, P. 2007, \apj, 671, 767
@@ -512,6 +566,13 @@ Spiriti, S., Eubank, R., Smith, P.~W., \& Young, D. 2013, Journal of
 
 \bibitem[{{van Leeuwen}(2009)}]{2009A&A...497..209V}
 {van Leeuwen}, F. 2009, \aap, 497, 209
+
+\bibitem[{{Wells}(1924)}]{1924PhDT.........1W}
+{Wells}, A.~E. 1924, PhD thesis, THE UNIVERSITY OF MICHIGAN.
+
+\bibitem[{{Wheeler}(2009)}]{2009AAS...21340702W}
+{Wheeler}, C. 2009, in Bulletin of the American Astronomical Society, Vol.~41,
+  American Astronomical Society Meeting Abstracts \#213, 202
 
 \bibitem[{{Wolfgang} \& {Lopez}(2015)}]{Wolfgang2015}
 {Wolfgang}, A. \& {Lopez}, E. 2015, \apj, 806, 183

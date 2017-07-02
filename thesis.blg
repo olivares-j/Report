@@ -7,45 +7,45 @@ White space in argument---line 25 of file thesis.aux
  :                                2004ApJ...605..800L;2005A&A...435..611J,2009MNRAS.392..590B,2009MNRAS.392.1363B,2009MNRAS.397..232B}
 I'm skipping whatever remains of this command
 Database file #1: biblio.bib
-You've used 127 entries,
+You've used 141 entries,
             2947 wiz_defined-function locations,
-            1501 strings with 27945 characters,
-and the built_in function-call counts, 59936 in all, are:
-= -- 5037
-> -- 4301
-< -- 82
-+ -- 1445
-- -- 1300
-* -- 4869
-:= -- 10974
-add.period$ -- 127
-call.type$ -- 127
-change.case$ -- 936
-chr.to.int$ -- 131
-cite$ -- 127
-duplicate$ -- 2449
-empty$ -- 3580
-format.name$ -- 1646
-if$ -- 11951
+            1586 strings with 31460 characters,
+and the built_in function-call counts, 68291 in all, are:
+= -- 5703
+> -- 5144
+< -- 88
++ -- 1726
+- -- 1567
+* -- 5601
+:= -- 12539
+add.period$ -- 141
+call.type$ -- 141
+change.case$ -- 1081
+chr.to.int$ -- 145
+cite$ -- 141
+duplicate$ -- 2711
+empty$ -- 3945
+format.name$ -- 1946
+if$ -- 13589
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 111
-newline$ -- 385
-num.names$ -- 519
-pop$ -- 997
+missing$ -- 123
+newline$ -- 427
+num.names$ -- 575
+pop$ -- 1143
 preamble$ -- 1
-purify$ -- 932
+purify$ -- 1077
 quote$ -- 0
-skip$ -- 2164
+skip$ -- 2388
 stack$ -- 0
-substring$ -- 2700
-swap$ -- 124
-text.length$ -- 11
+substring$ -- 2974
+swap$ -- 132
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1116
+type$ -- 1242
 warning$ -- 0
-while$ -- 517
+while$ -- 572
 width$ -- 0
-write$ -- 1273
+write$ -- 1413
 (There was 1 error message)
