@@ -5,6 +5,8 @@
 %% easily spot "overfull boxes" in the output. Use the second
 %% line for the final version.
 \documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+
 % \documentclass[12pt,letterpaper]{report}
 % \documentclass[12pt]{article}
 
@@ -27,7 +29,7 @@
 
 %% Sectional units up to subsubsections are numbered. To number
 %% subsections, but not subsubsections, decrease this counter to 2.
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{2}
 
 % Setting a gap between page number and text block
 
@@ -351,28 +353,29 @@
 %  \vspace{.25in}
 %}
 %\end{center}
-%\addcontentsline{toc}{section}{Abstract}
-%\input{abstract}
-%\newpage
+\addcontentsline{toc}{section}{Abstract}
+\input{abstract}
+\input{abstractFR}
+\newpage
 
 %%%% Table of Contents %%%%%%%%%%%%
-%\tableofcontents
-% \clearpage
-% \pagestyle{headings}
+\tableofcontents
+ \clearpage
+ \pagestyle{headings}
 
 %%%%% List of Figures %%%%%%%%%%%%%
 %% Comment out the following two lines if your thesis does not
 %% contain any figures. The list of figures contains only
 %% those figures included withing the "figure" environment.
-%\listoffigures\addcontentsline{toc}{section}{\listfigurename}
-%\newpage
+\listoffigures\addcontentsline{toc}{section}{\listfigurename}
+\newpage
 
 %%%%% List of Tables %%%%%%%%%%%%%
 %% Comment out the following two lines if your thesis does not
 %% contain any tables. The list of tables contains only
 %% those tables included withing the "table" environment.
-%\listoftables\addcontentsline{toc}{section}{\listtablename}
-%\newpage
+\listoftables\addcontentsline{toc}{section}{\listtablename}
+\newpage
 
 %%%%% Body of thesis starts %%%%%%%%%%%%
 \pagenumbering{arabic} % switches page numbering to arabic: 1, 2, 3, etc.

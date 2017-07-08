@@ -1,60 +1,67 @@
-\contentsline {section}{List of Figures}{iii}{chapter*.2}
-\contentsline {section}{List of Tables}{iv}{chapter*.3}
+\contentsline {section}{Abstract}{i}{Doc-Start}
+\contentsline {section}{List of Figures}{xi}{chapter*.2}
+\contentsline {section}{List of Tables}{xii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}The DANCe project}{1}{section.1.1}
+\contentsline {section}{\numberline {1.1}The DANCe project}{2}{section.1.1}
 \contentsline {chapter}{\numberline {2}The Pleiades as a benchmark}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Generalities}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}The distance controversy}{4}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Spatial Distribution}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}Velocity Distribution}{4}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Radial Velocity}{4}{subsection.2.3.1}
-\contentsline {section}{\numberline {2.4}Luminosity Distribution}{4}{section.2.4}
-\contentsline {section}{\numberline {2.5}Mass Distribution}{4}{section.2.5}
-\contentsline {section}{\numberline {2.6}The current dynamical scenario}{4}{section.2.6}
-\contentsline {section}{\numberline {2.7}The Pleiades DANCe DR2.}{4}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Particularities of the Pleiades DANCe DR2}{4}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Selection of variables}{4}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Data preprocessing}{5}{subsection.2.7.3}
-\contentsline {chapter}{\numberline {3}Bayesian formalism}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction to probability theory.}{7}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Bayes theorem}{10}{subsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.1.1}Models and parametric inference}{11}{subsubsection.3.1.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Model Selection}{13}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Membership probability}{16}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Bayesian hierarchical Models}{16}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Generalities}{16}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Examples}{17}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Graphical representation.}{18}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Modelling the data}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Missing values}{19}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}The generative model}{20}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}The field population}{22}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}The cluster population}{25}{subsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.4.1}Photometric model of equal-mass binaries and single stars}{26}{subsubsection.3.3.4.1}
-\contentsline {subsubsection}{\numberline {3.3.4.2}Proper motion model of equal-mass binaries and single stars}{30}{subsubsection.3.3.4.2}
-\contentsline {section}{\numberline {3.4}Priors}{32}{section.3.4}
-\contentsline {section}{\numberline {3.5}Sampling the posterior distribution}{35}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}PSO}{38}{subsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.1.1}The charged PSO}{38}{subsubsection.3.5.1.1}
-\contentsline {subsection}{\numberline {3.5.2}MCMC}{38}{subsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.2.1}Generalities}{38}{subsubsection.3.5.2.1}
-\contentsline {subsubsection}{\numberline {3.5.2.2}Flavours}{38}{subsubsection.3.5.2.2}
-\contentsline {subsubsection}{\numberline {3.5.2.3}Convergence}{38}{subsubsection.3.5.2.3}
-\contentsline {subsubsection}{\numberline {3.5.2.4}The evidence}{38}{subsubsection.3.5.2.4}
-\contentsline {section}{\numberline {3.6}Codes}{38}{section.3.6}
-\contentsline {subsubsection}{\numberline {3.6.0.5}The modified charged PSO}{38}{subsubsection.3.6.0.5}
-\contentsline {subsubsection}{\numberline {3.6.0.6}Improvements of emcee}{38}{subsubsection.3.6.0.6}
-\contentsline {subsubsection}{\numberline {3.6.0.7}The GMM with missing values}{38}{subsubsection.3.6.0.7}
-\contentsline {subsection}{\numberline {3.6.1}Parallel implementations}{38}{subsection.3.6.1}
-\contentsline {chapter}{\numberline {4}Results}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Performance of the classifier}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Velocity distribution}{39}{section.4.2}
-\contentsline {section}{\numberline {4.3}Spatial distribution}{39}{section.4.3}
-\contentsline {section}{\numberline {4.4}Luminosity distribution}{39}{section.4.4}
-\contentsline {section}{\numberline {4.5}Mass distribution}{39}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}The mass-luminosity relation}{39}{subsection.4.5.1}
-\contentsline {section}{\numberline {4.6}The mass distribution on time}{39}{section.4.6}
-\contentsline {section}{\numberline {4.7}The phase space}{39}{section.4.7}
-\contentsline {section}{\numberline {4.8}Updating the previous knowledge}{39}{section.4.8}
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{40}{chapter.5}
-\contentsline {chapter}{\numberline {A}Appendix Chapter Title}{41}{appendix.A}
+\contentsline {section}{\numberline {2.2}The distance to the Pleiades}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Measuring distances}{3}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Projected spatial distribution}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}Velocity Distribution}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Luminosity Distribution}{10}{section.2.5}
+\contentsline {section}{\numberline {2.6}Mass Distribution}{12}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Total mass of the cluster}{17}{subsection.2.6.1}
+\contentsline {section}{\numberline {2.7}The Pleiades DANCe DR2}{19}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Selection of observables}{20}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Data preprocessing}{22}{subsection.2.7.2}
+\contentsline {chapter}{\numberline {3}Bayesian formalism}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction to probability theory.}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Bayes theorem}{28}{subsection.3.1.1}
+\contentsline {subsubsection}{Models and parametric inference}{28}{section*.23}
+\contentsline {subsection}{\numberline {3.1.2}Model Selection}{31}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Membership probability}{33}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Bayesian hierarchical Models}{34}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Generalities}{34}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Examples}{35}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Graphical representation.}{36}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}The BHM for the DANCe Pleiades data set}{37}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Missing values}{37}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}The generative model}{39}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}The field population}{40}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}The cluster population}{43}{subsection.3.3.4}
+\contentsline {subsubsection}{Photometric model of equal-mass binaries and single stars}{44}{section*.27}
+\contentsline {subsubsection}{Proper motion model of equal-mass binaries and single stars}{48}{section*.28}
+\contentsline {section}{\numberline {3.4}Priors}{50}{section.3.4}
+\contentsline {section}{\numberline {3.5}Sampling the posterior distribution}{54}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}PSO}{55}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}MCMC}{56}{subsection.3.5.2}
+\contentsline {subsubsection}{Generalities}{56}{section*.34}
+\contentsline {subsubsection}{Metropolis-Hastings}{57}{section*.35}
+\contentsline {subsubsection}{Hamiltonian Monte Calro}{58}{section*.36}
+\contentsline {subsubsection}{Affine invariant}{58}{section*.37}
+\contentsline {subsubsection}{Nested sampling}{59}{section*.38}
+\contentsline {subsection}{\numberline {3.5.3}Implementation and convergence: PSO and MCMC}{60}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Codes}{61}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}The modified charged PSO}{63}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Improvements of emcee}{63}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}GMM for the field population}{64}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Hybrid-HPC implementations}{66}{subsection.3.6.4}
+\contentsline {chapter}{\numberline {4}Results}{70}{chapter.4}
+\contentsline {section}{\numberline {4.1}Performance of the classifier}{70}{section.4.1}
+\contentsline {section}{\numberline {4.2}Comparison with the literature}{79}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Candidate members from \citet {Stauffer2007}}{80}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Candidate members from \citet {Bouy2015}}{80}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Candidate members from \citet {Rebull2016}}{85}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}The statistical distributions of the Pleiades cluster.}{87}{section.4.3}
+\contentsline {section}{\numberline {4.4}Updating the prior knowledge}{90}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Comparing prior values}{92}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Proper motions distribution}{92}{section.4.5}
+\contentsline {section}{\numberline {4.6}Spatial distribution}{92}{section.4.6}
+\contentsline {section}{\numberline {4.7}Luminosity distribution}{92}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{93}{subsection.4.7.1}
+\contentsline {section}{\numberline {4.8}Mass distribution}{98}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{98}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Present day system mass distribution}{100}{subsection.4.8.2}
+\contentsline {section}{\numberline {4.9}The mass distribution on time}{104}{section.4.9}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{110}{chapter.5}

@@ -1,29 +1,33 @@
 %!TEX root = ../thesis.tex
 \chapter{Bayesian formalism}
 \label{chap:BHM}
-This chapter provides a general introduction to probability theory and its application to parametric inference. The objective of this work is to infer the probability distributions of the cluster properties (e.g. luminosity and velocity). Bayes' theorem provides the proper probabilistic framework for the inference of the parameters governing these distributions. The Bayesian framework demands, though, the setting up of prior beliefs about the parameters values. Thus, later in this chapter, I  describe the reason why the Bayesian Hierarchical Models are the least subjective approach to settle down the priors. Once the posterior distribution of the parameters in the model has been analytically described, I proceed to describe the MCMC techniques and the particular one I use to sample the posterior distribution. 
+This chapter provides a general introduction to probability theory and its application to parametric inference. The objective of this work is to infer the probability distributions of the cluster properties (e.g. luminosity and velocity). Bayes' theorem provides the proper probabilistic framework for the inference of the parameters governing these distributions. The Bayesian framework demands, though, the setting up of prior beliefs about the parameters values. Thus, later in this chapter, I  describe the reason why the Bayesian Hierarchical Models are the least subjective to establish priors. Once the posterior distribution of the parameters in the model has been analytically described, I proceed to describe the MCMC techniques and the particular one I use to sample the posterior distribution. 
 
-In the Sections ahead I also provide the details on the assumptions I make to model the data (i.e. the likelihood), and to choose the parameters of the prior distributions. The two final sections focus on the practical issues related to the sampling of the posterior distributions, and the description of the codes I developed.
+In the Sections ahead I also provide the details on the assumptions I make to model the data, and to choose the parameters of the prior distributions. The two final sections focus on the practical issues related to the sampling of the posterior distributions, and the description of the codes I adopted and/or developed.
 
-Partial results of the work presented here have been submitted to the Journal A\&A as \citet{Olivares2017}. Thus, in the following, whenever I use the pronoun \emph{we}, it refers to the authors of \citet{Olivares2017}. However, I use the pronoun I to emphasis that the particular idea or task was done by me.
+\textbf{Partial results of the work presented here have been submitted to the journal A\&A as \citet{Olivares2017}. In the following, I use both pronouns \emph{we} and \emph{I} to refer the investigation done by collaborators of the DANCe team (see Chapter 1)}.
 
 \section{Introduction to probability theory.}
 \label{sect:introprobability}
  
-Uncertainty and probability are closely entangled. Every measurement has an associated uncertainty, otherwise is not a complete measurement \footnote{Upper and lower limits are examples of incomplete measurements.}. The term uncertainty must not be confused with the term error, which refers to the difference between the measured value of the quantity and its \emph{true} value\footnote{The true value is that which ideally results when the uncertainty tends to zero.} \citep{GUM2008}. It is commonly agreed that the uncertainty of a measurement can be expressed in a probabilistic basis \citep{GUM2008}. It means that whenever we measure a quantity, lets say $a$, the distribution of the repeated measurements of $a$, follows a probability distribution function (pdf, throughout the text I refer to it as a probability distribution or simply a distribution), $p(a)$. This $p(a)$, as any other (statistical) pdf,  satisfies the following properties:
+Uncertainty and probability are closely entangled. Every measurement has an associated uncertainty, otherwise is not a complete measurement \footnote{Upper and lower limits are examples of incomplete measurements.}. The term uncertainty must not be confused with the term error, which refers to the difference between the measured value of the quantity and its \emph{true} value\footnote{The true value is that which ideally results when the uncertainty tends to zero.} \citep{GUM2008}. It is commonly agreed that the uncertainty of a measurement can be expressed in a probabilistic basis \citep{GUM2008}. It means that whenever we measure a quantity, $a$ for example, then the distribution of the repeated measurements of $a$, follows a probability distribution function, $p(a)$. Formally, if $a$ is a discrete variable, then its probability distribution is called probability mass function (PMF). On the other hand, if $a$ is continuous, then its probability distribution  is called probability density function (PDF). Throughout the text, I refer to the probability distribution function of a random variable as its probability distribution or simply its distribution.
+
+Any probability distribution satisfies the following properties:
 
 \begin{enumerate}[label=\textbf{Property \arabic*}]
 \item  It has units, those of the inverse of $a$. \label{property:1}
-\item $p(a) \geq 0$. \label{property:3}
-\item $1=\int_a p(a) \mathrm{d}a$. \label{property:3}
+\item $p(a) \geq 0 \ \ \forall \ \ a\in S_a$, with $S_a$ the support of $a$. \label{property:3}
+\item $1=\int_{S_a} p(a) \mathrm{d}a$. \label{property:3}
 \end{enumerate}
 
-These properties hold regardless of the dimension of $a$. It means that the joint probability distribution of the uncertainties of all measured quantities of an object is also a probability distribution. Furthermore, they also hold for conditional probability distributions. Let's imagine that we measure the positions, projected in the plane of sky (the plane perpendicular to the line of sight), of one star. The measurements are conditioned on the magnitude, or brightness, of the object we measure. If the object is too bright, like the sun, it saturates the detector and that renders the measurement useless. On the other hand, if the object is too faint, there are not enough photons to trigger a detection. So, the stellar positions in the sky, which we can call $a$ and $b$ because they are two dimensions, follow a conditioned probability distribution, with the magnitude, $c$, the conditional variable. Therefore, $p(a,b|c)$ must also satisfy:
+If $a$ is a discrete variable, then the integral, in the last property, change to the sum of all possible values of $p(a)$.
+
+These properties hold regardless of the dimension of $a$. Furthermore, they also hold for conditional probability distributions. A conditional probability distribution results from the knowledge about the particular value of one or several variables of the probability distribution. For example, be $p(\alpha,\delta,\tau)$ the joint probability distribution of sky positions $\alpha,\delta$ and time $\tau$ of an object. Then, at the particular moment $\tau=\tau_0$ (with $\tau_0 \in S_{\tau}$) the object will have a probability distribution for its sky positions given by the conditional probability distribution $p(\alpha,\delta|\tau_0)$. Since, $p(\alpha,\delta|\tau_0)$ is still a probability distribution on $\alpha$ and $\delta$, it must also satisfy:
 
 \begin{itemize}
-\item It has units of $a^{-1} b^{-1}$.
-\item $p(a,b|c)\geq0$.
-\item $1=\int_a \int_b p(a,b|c)\mathrm{d}a\cdot \mathrm{d}b$.
+\item It has units of $\alpha^{-1} \delta^{-1}$.
+\item $p(\alpha,\delta|\tau_0)\geq0 \ \ \forall \ \ \alpha\in S_{\alpha}, \delta\in S_{\delta}$. %with $S_{\alpha}$ and $S_{\delta}$ the supports of $\alpha$ and $\delta$, respectively.
+\item $1=\int_{S_{\alpha}} \int_{S_{\delta}} p(\alpha,\delta|\tau_0)\mathrm{d}\alpha\cdot \mathrm{d}\delta$.
 \end{itemize}
 
 The link between joint and conditioned probabilities is given by the following symmetric definition:
@@ -46,24 +50,31 @@ p(a,b)=p(a)\cdot p(b),
 \end{align}
 then $a$ and $b$ are say to be \emph{independent}. An alternative option is to say that $a$ and $b$ are \emph{independent} if the conditional probability of $a$ on $b$ is $p(a|b)=p(a)$.
 
-\ref{property:3} establishes that the amount\footnote{Which could be infinite, like in Dirac's delta.} of probability distribution $p(a)$ spread over the volume of the support of $a$ adds to one. This Property allows the \emph{marginalisation} of any \emph{nuisance} variable. Let's imagine that someone gives us the probability distribution $p(a,b)$, where $a$ and $b$ are the positions of some star in the plane of the sky. If we are interested in, let's say, the mean value of $a$, we first must get rid of $b$. For it, we \emph{marginalise} it out in the following way,
+\textbf{
+\ref{property:3} establishes that the amount of probability density\footnote{Which could be infinite, like in Dirac's delta.} (or mass if $a$ is discrete) spread over the volume of the support, adds to one, thus keeping the integrals of PDFs bounded. Two important operations using these bounded integrals are the following.
+}
+
+\textbf{
+The \emph{marginalisation} of \emph{nuisance} parameters. These are parameters that, although are necessary in the model, lack interest for the research. The classical example of a nuisance parameters is the standard deviation, $\sigma$ of a normal distribution when the interest lays solely in the mean, $\mu$. This nuisance parameter can be marginalised from the joint PDF of the parameters, $p(\mu,\sigma)$, in the following way,
+}
 \begin{align}
 \label{eq:marginalisation}
-p(a)=\int_b p(a,b)\cdot \mathrm{d}b.
+p(\mu)=\int_0^{\infty} p(\mu,\sigma)\cdot \mathrm{d}\sigma.
 \end{align}
 
-Then we compute the \emph{expected value} of $a$, $E(a)$, which is identified with the mean of $a$ once we have drawn many realisations from its probability distribution. To compute it, we add all the possible values of $a$ weighted by their probability. This is,
+The computing of \emph{expected values}. The expected value of $a$, $E(a)$, corresponds to the mean of $a$ once we have drawn many realisations from its probability distribution. To compute it, we add all the possible values of $a$ weighted by their probability. This is,
 
 \begin{align}
 \label{eq:expectation}
 E(a)=\int_a a\cdot p(a)\cdot \mathrm{d}a.
 \end{align}
 
-Once again, these last two equations (\ref{eq:marginalisation} and \ref{eq:expectation}) hold if the distributions are conditioned on any other measurement. For example, the magnitude of the object, as we did before. 
+Once again, these last two equations (\ref{eq:marginalisation} and \ref{eq:expectation}) hold if the distributions are conditioned on any other measurement.
 
 It is important to recall that the term measurement, and its unavoidable uncertainty, refer not just to directly measured quantities, like the photons (counts) and pixels in a CCD, but also to indirect measurements. Stellar magnitudes and positions in the sky, for example, are indirect measurements derived from the direct measurement of photons, pixels and telescope arrangements. This generalisation also applies to the measurement of parameters in any physical or statistical model.% like the one I will describe in the following Sections.
 
-I end this Section with a brief description of the procedure that is generally applied when we want to transform a probability distribution into another probability distribution, given a nonlinear transformation \cite[for more details see page 18 and 19 of][]{Bishop2006}. 
+{\color{red}
+I end this Section with a brief description of the procedure that is generally applied when we want to transform a probability distribution into another probability distribution, under a nonlinear transformation \cite[for more details see page 18 and 19 of][]{Bishop2006}. 
 
 Let  $f$ be a probability distribution on $x\subset\mathbb{R}$, with support on $a<x<b$, then
 
@@ -77,7 +88,7 @@ Let $y=g(x)$ be the nonlinear transformation, with $g$ a function of $x$ with in
 \label{eq:transformdistribution}
 \int_a^b f(x) \mathrm{d}x = \int_{g(a)}^{g(b)} f(g^{-1}(y))\cdot \left|\frac{\mathrm{d}g^{-1}(y)}{\mathrm{d}y}\right|\cdot \mathrm{d}y.
 \end{equation}
-
+}
 \subsection{Bayes theorem}
 The definition of conditioned probability (Eq. \ref{eq:conditioned}) leads to Bayes' theorem:
 \begin{equation}
@@ -87,65 +98,93 @@ Integrating on $a$ we find that,
 \begin{align}
 \label{eq:evidence}
 p(b|c) \cdot \int_a p(a|b,c)\cdot \mathrm{d}a = \int_a p(b|a,c) \cdot p(a|c) \cdot \mathrm{d}a \nonumber \\
-Z \equiv p(b|c) = \int_a p(b|a,c) \cdot p(a|c) \cdot \mathrm{d}a.
+p(b|c) = \int_a p(b|a,c) \cdot p(a|c) \cdot \mathrm{d}a.
 \end{align}
-In this last equation $Z$ refers to what is known as the \emph{evidence}. This Eq. illustrates that $p(b|c)$ is a normalisation constant which can be evaluated once $p(b|a,c)$ and $p(a|c)$ are known. This turns out to be very useful, since as we will see on the following Sections, it tells us that to obtain $p(a|b,c)$ we need just a sample of it, that can be later normalised to obtain a proper probability distribution.
+This Equation illustrates that $p(b|c)$ is a normalisation constant which can be evaluated once $p(b|a,c)$ and $p(a|c)$ are known. This turns out to be very useful, since it tells us that $p(a|b,c) \propto p(b|a,c) \cdot p(a|c)$.
 
 \subsubsection{Models and parametric inference}
-In a broad sense, models are representation or abstraction of the \emph{a priori} knowledge some one has about something. Sometimes this knowledge is also shared by others. Models are everywhere in our daily life: from the words we speak every day, to the evolution of the species and the general relativity; from a kid's drawing to cosmological models. In science, however, we restrict the concept of model to a mathematical representation of the relations (the \emph{a priori} knowledge) among the entities that the model attempts to describe. These entities include the observables (i.e. the data), and the parameters, if the model is parametric. In this later case, the observables can be reproduced by means of the parameters. Thus, a parametric model can be thought of as a function which relates parameters and observables in a mathematical way. 
+In a broad sense, models are representations or abstractions of the knowledge someone has about something. Sometimes this knowledge is also shared by others. Models are everywhere in our daily life: from the words we speak every day, to the evolution of the species and the general relativity; from a kid's drawing to cosmological models. In science, however, the concept of model is restricted to a mathematical representation of the relations (the knowledge) among the entities that the model attempts to describe: the observables (i.e. the data). If the model contains variables that through the different values they take reproduce in some extent the observables, then model is called parametric and the variables the parameters. 
 
-The act of finding the parameters that reproduce the observables is called parametric inference. This last can focus either on the entire probability distribution of the parameters, or just on some statistics about it (e.g. the maximum a posteriori, also known as MAP, or the mean and variance).
+\textbf{Parametric statistical models, like the ones I use in this work, assume that the underlying population of interest, from which the observed data is just a sample, can be described by parametric probability distribution functions. The act of finding the parameters governing these distributions is called parametric inference. This last can focus either on the entire PDFs of the parameters, or just on some summary of them (e.g. the maximum a posteriori, also known as MAP, or the mean and variance).}
 
-The proper way to obtain the entire probability distribution of the parameters in a model, given the data, is through Bayes' theorem. Thus it is called Bayesian inference. Another example of parametric inference is the maximum likelihood approach. Where the likelihood, which is seen as a function of the parameters, is maximised. Despite that it properly obtains the parameters that reproduce the data, it does not return their probability distribution. Formally, the likelihood is a probability distribution on the data, and just a function on the parameters. Thus for us to obtain the probability of the parameters we must multiply this likelihood times the priors and normalise it. This is what Bayes' theorem does.
+The proper way to obtain the entire probability distribution of the parameters in a model, given the data, is through Bayes' theorem. Thus it is called Bayesian inference. Another example of parametric inference is the maximum likelihood approach, where the likelihood, which is seen as a function of the parameters, is maximised. Despite that it obtains the parameter values that make the model to resemble the data, it does not return their probability distribution. Formally, the likelihood is a probability distribution for the data, and just a function of the parameters. Thus, to obtain the probability distribution of the parameters, the likelihood must be multiplied by the priors and the product normalised. This is what Bayes' theorem does.
 
 In this context, Bayes' theorem is:
 \begin{equation}
 p(\mathbf{\theta}|\mathbf{D},\mathcal{M}) = \frac{p(\mathbf{D}|\mathbf{\theta},\mathcal{M})\cdot p(\mathbf{\theta}|\mathcal{M})}{p(\mathbf{D}|\mathcal{M})}.
 \end{equation}
-where $\mathbf{\theta},\mathbf{D}$ and $\mathcal{M}$ correspond, respectively, to the parameters in the model, the data which the model tries 
-to describe, and the the model itself. 
+where $\mathbf{\theta},\mathbf{D}$ and $\mathcal{M}$ correspond, respectively, to the parameters in the model, the data which the model tries to describe, and the model itself. 
 
-The term on the left is called the posterior probability distribution of the parameters, $\mathbf{\theta}$ given the data $\mathbf{D}$ and the model $\mathcal{M}$. In the right side, the two terms in the numerator are called \emph{likelihood}, $p(\mathbf{D}|\mathbf{\theta},\mathcal{M})$ and \emph{prior}, $p(\mathbf{\theta}|\mathcal{M})$. As mentioned earlier, the denominator, $p(\mathbf{D}|\mathcal{M})$, is called the \emph{evidence}. 
+The term on the \textbf{left-hand side} is called the posterior probability distribution of the parameters, $\mathbf{\theta}$ given the data $\mathbf{D}$, and the model $\mathcal{M}$. On the right hand side, the two terms in the numerator are called the \emph{likelihood} for the data, $p(\mathbf{D}|\mathbf{\theta},\mathcal{M})$ and the \emph{prior} of the parameters, $p(\mathbf{\theta}|\mathcal{M})$. The denominator, $p(\mathbf{D}|\mathcal{M})$, is called the \emph{evidence}, and results from
 
-Formally, the likelihood and the prior are probability distributions on the data $\mathbf{D}$ and the parameters $\mathbf{\theta}$, respectively. However, for the posterior to be a probability distribution on the parameters, it only suffices that the product of the likelihood times the prior does not vanish everywhere or be negative anywhere\footnote{See Property 2. Although negative probabilities may have sense in quantum mechanics. See for example \citet{1942RSPSA.180....1D}}. If these are not probability distributions, they are called \emph{improper} priors or \emph{improper} likelihoods. In the extreme case that their product vanishes everywhere, which may be the case if the prior is terribly specified or if the likelihood does not take proper account of extreme data, the posterior will not be a probability distribution due to a division by zero. Nevertheless, it makes no sense to try to estimate the parameters of a model with zero evidence.
+\begin{equation}
+\label{eq:evidence}
+Z \equiv p(\mathbf{D}|\mathcal{M}) = \int_{\mathbf{\theta}} p(\mathbf{D}|\mathbf{\theta},\mathcal{M})\cdot p(\mathbf{\theta}|\mathcal{M})\cdot \mathrm{d}\mathbf{\theta}
+\end{equation} 
+
+Formally, the likelihood and the prior are probability distributions for the data $\mathbf{D}$ and of parameters $\mathbf{\theta}$, respectively. However, for the posterior to be a probability distribution of the parameters, it only suffices that the product of the likelihood times the prior does not vanish everywhere or be negative anywhere\footnote{See Property 2. Although negative probabilities may have sense in quantum mechanics. See for example \citet{1942RSPSA.180....1D}}. If these are not probability distributions, they are called \emph{improper} priors or \emph{improper} likelihoods. In the extreme case that their product vanishes everywhere, which may be the case if the prior is terribly specified or if the likelihood does not take proper account of extreme data, the posterior will not be a probability distribution due to a division by zero. Nevertheless, it makes no sense to try to estimate the parameters of a model with zero evidence.
 
 %Whenever we have a model $M$, we have also the \emph{a priori} knowledge used to construct it. Actually, it can be classified in two kinds of prior information. One refers to the prior information conveyed in the model, which I call $M$. This is the information that the creator of the model uses to establish the relations among the elements of the model: variables. The second kind of prior, $p(\mathbf{\theta}|M)$ refers to the statement the user of the model made of his/her beliefs about the probability distribution of the parameter values. This is indeed subjective. However, it is, in my opinion, less subjective than the former, $M$, prior information. At least in this last kind, the subjectivity is expressed objectively in a probabilistic, and therefore measurable way.
 %
 %The likelihood of the data $p(\mathbf{D}|\mathbf{\theta},M)$, is a probability distribution on the data, $\mathbf{D}$. However, it is a function on the parameters, $\mathbf{\theta}$, which corresponds to the function $f$ of Eq. \ref{eq:model}. This function is not necessarily a probability distribution on the parameters. 
 
-As mentioned before, the likelihood is the probability distribution of the data given the parameters, regardless the size of the data set. Almost always the data set is a collection of measurements of several objects, but it could also be made of just one object. Thus, to obtain the likelihood of the data based on that of the individual objects, some assumption must be made. 
+As mentioned before, the likelihood is a probability distribution for the data, given the parameters, regardless of the size of it. Almost always the data is a collection of measurements of several objects, but it could also be made up of just one object. The collection of measurements of one or several quantities of a single object follows a probability distribution, which is usually summarised by two statistics. It is often assumed that this probability distribution is normal (univariate or multivariate), which then is summarised by the mean and the standard deviation. These two are commonly known as the datum and its uncertainty, respectively. A data set is then composed of the collection of summary statistics of one or several objects. To compute the likelihood for this collection of statistics (i.e. the data), some assumption must be made. 
 
-When measuring the properties of individual objects in a collection of them, almost always it is assumed that measurements, and therefore their probability distributions, are independent within objects of the collection. For example, if we were to measure the weight of a group of persons, we usually assume that the pdf of the weight of one person, is independent of that of another person. This assumption, however, does not always holds. Imagine for example, that we were conducting a statistical analysis on the length of the objects used to define our unit of length. In this case, the statistical distribution of the length of any object depends on the unit of measurement, which in turn is depends on the distribution of measured lengths of the rest of the objects. Therefore, the individual probability distributions of the length of the objects are not independent within them\footnote{This happens for example in satellite surveys for which their system of reference is defined by their own measurements. To avoid this issue their reference systems are anchored on independent measurements.}. 
+When measuring the properties of objects, it is often assumed that the probability distribution obtained from the collection of measurements of a single object, is independent from that of another object. For example, if we were to measure the weight of a group of persons, we usually assume that the PDF of the weight of one person, is independent of that of another person. It means that measuring the weight of one person has no effect at all in the weight of another person.
 
-If we assume that the probability distribution of the measured value, $d$, of a collection of $N$ objects are independent within them, then
+{\color{red}
+An example were this assumption does not hold is the following. GIVE GAIA EXAMPLE OF STELLAR POSITIONS
+}
+
+Let $\mathbf{D}$ be the data, i.e. the collection of statistics of the $N$ objects, and $p_n(d_n)$ be the probability distribution rendered by several measurements of object $n$. If these $\{p_n(d_n)\}_{n=1}^N$ are assumed to be independent, then
 \begin{equation}
 \label{eq:independence}
- p(\mathbf{D}) = \prod_{n=1}^N p_n(d_n), \ \ n=\{1,2,...,N\}
+ p(\mathbf{D}) = \prod_{n=1}^N p_n(d_n), \ \ n=\{1,2,...,N\},
 \end{equation}
 
  with $p_n$ explicitly stating that the individual probability distributions are distinct. 
  
- Thus, the likelihood of the data, $p(\mathbf{D}|\mathbf{\theta},M)$ can be expressed as,
+Similarly, if the likelihood of the data, $p(\mathbf{D}|\mathbf{\theta},M)$ is assumed to be independent for each object, then
 
 \begin{equation}
 \label{eq:lik_datum}
- p(\mathbf{D}|\mathbf{\theta},M) = \prod_{n=1}^N p_n(d_n|\mathbf{\theta},M), \ \ n=\{1,2,...,N\}.
+ p(\mathbf{D}|\mathbf{\theta},M) = \prod_{n=1}^N p(d_n|\mathbf{\theta},M), \ \ n=\{1,2,...,N\}.
 \end{equation}
 
-The term $p_n(d_n|\mathbf{\theta},M)$ is the likelihood of datum $d_n$. This is also called the \emph{generative} model, since it  contains the necessary information to generate the data\footnote{It may also contain the uncertainty process that transform the \emph{true} data into the noisy observations.}.
+The term $p(d_n|\mathbf{\theta},M)$ is the likelihood of datum $d_n$. This is also called the \emph{generative} model, since it contains the necessary information to generate the data\footnote{It may also contain the uncertainty process that transform the \emph{true} value into the noisy observations.}. 
+{\color{red}
+To take into account the uncertainty process for object $n$, we model the datum $d_n$ as resulting from the true value, $x_n$ rendered by the model, plus another random variable given by the uncertainty process, $e_n$. Assuming that both of them are normally distributed, then
 
-To summarise, Bayes' theorem can be interpreted as the probabilistic way to update knowledge. To me, it embodies the process of knowledge improvement once we recognise that knowledge is uncertain, which in my perspective, is always uncertain. Even when its uncertainty is negligible under the current evidence that supports it. Bayes' theorem helps us to update our prior knowledge once we multiply it by the likelihood of the data. Then, the posterior probabilities, became our new knowledge. 
+\begin{align}
+d_n = & x_n + e_n \nonumber \\
+p(x_n|\mathbf{\theta},M)= &\mathcal{N}(x_n|\mathbf{\theta},M)\nonumber\\
+p(e_n)= &\mathcal{N}(e_n|0,\sigma_n^2)\nonumber\\
+\end{align}
+with, $d_n$ and $\sigma_n^2$ the mean and variance of the PDF of the measured quantity for object $n$.
+Then the sum of these two normally distributed random variables is another normally distributed random variable\footnote{This is an axiom of the arithmetics of random variables. Also, the addition of two random variables is given by the convolution of their PDF.}. Thus,
 
-Furthermore, the Bayes' theorem also provides the objective way to compare two models or hypothesis, and update the a priori knowledge used to construct them. This is called model selection, which I  briefly explain in the next section.
+\begin{equation}
+p(d_n|\mathbf{\theta},M) = \mathcal{N}(d_n|\mathbf{\theta},M,\sigma_n^2).
+\end{equation}
+Therefore,
+
+\begin{equation}
+%\label{eq:lik_datum}
+p(\mathbf{D}|\mathbf{\theta},M) = \prod_{n=1}^N p(d_n|\mathbf{\theta},M,\sigma_n^2), \ \ n=\{1,2,...,N\}.
+\end{equation}
+}
+Bayes' theorem can be interpreted as the probabilistic way to update the state of knowledge. To me, it embodies the process of knowledge improvement once we recognise that knowledge is uncertain. Even when its uncertainty is negligible under the evidence that supports it. Bayes' theorem helps us update our prior beliefs once we multiply it by the likelihood of the data. Then, the posterior probabilities, become our new state of knowledge. 
+
+Furthermore, Bayes' theorem also provides the objective way to compare two models or hypothesis, and update the a priori knowledge used to construct them. This is called model selection, which I  briefly explain in the next section.
 
 \subsection{Model Selection}
 \label{sect:modelselection}
 
-Whenever we have a data set and two or more models that attempt to describe this data, the most straightforward thing to do is to compare these models. Almost always, we want to select the \emph{best} model. Obviously the term \emph{best} depends on the objective of research. For example, let's imagine that our data set consists of the positions of an object as function of time. If we were interested in reproducing exactly the same points in the data set, the \emph{best} model will be a polynomial with degree equal to the number of points. This polynomial will pass trough all these points. However, once we recognise the unavoidable uncertainty of the data, we realise that an exact representation of the data may be of no use since it fits also the noise of the data. 
+Whenever we have a data set and two or more models that attempt to describe these data, the most straightforward thing to do is to compare these models. Almost always, we want to select the \emph{best} model. Obviously the term \emph{best} depends on the objective of the research. For example, imagine that our data set consists of the positions of an object as function of time. If we were interested in reproducing exactly the same points in the data set, the \emph{best} model would be a polynomial with degree equal to the number of points. This polynomial will pass through all the points. However, once we recognise the unavoidable uncertainty of the data, we realise that an exact representation of the data may be of no use since it fits also the noise. 
 
-In general, we are interested in the predictive capabilities of a model, its ability to predict future observations rather than to replicate the ones we currently have. Thus, an exact representation of the observed data (an over-fitted model as in the previous example), will poorly describe any new data set. In this sense, an over-fitted model \emph{memorises} the data rather than \emph{learns} from it.
+In general, we are interested in the predictive capabilities of a model, its ability to predict future observations rather than to replicate the ones we currently have. Thus, an exact representation of the observed data (an over-fitted model as in the previous example), will poorly describe any new data. In this sense, an over-fitted model \emph{memorises} the data rather than \emph{learns} from it.
 
-A model that \emph{learns} from the data is that which recovers the \emph{true} underlying relation embedded in the data. This \emph{true} underlying relation is the one that produces the \emph{true} data. The observed data results once the uncertainty process is added. 
+A model that \emph{learns} from the data is that which recovers the \emph{true} underlying relation embedded in the data. This \emph{true} underlying relation is the one that produces the \emph{true} data. The observed data results once the uncertainty is added. 
 
 Nevertheless, we still need to select among different learning models.  
 
@@ -158,12 +197,12 @@ Here, hypotheses can be identified with models. Thus, this principle tells us we
 
 When comparing a linear model to a quadratic one in which the constant term has been fixed, we see that they have the same number of free parameters, two, but clearly the second one has an extra fixed assumption. Therefore, choosing the model with fewer free parameters does not necessarily means choosing the model with the fewest assumptions.
 
-One of the great advantages of the Bayesian methodology is that it incorporates directly Ockham's principle. Suppose that we want to compare two models, $M_1$ and $M_2$, which we assume describe the data set, $\mathbf{D}$. Each model has prior probabilities, $p(M_k)$ and likelihoods $p(\mathbf{D}|M_k)$ (with $k=1,2$). Notice that now, I use Bayes' theorem for models and not for parameters within a model. So, the prior probabilities of the models reflect our beliefs about the fixed assumptions within each model. On the other hand, the likelihood of the data given the model, is related to the parameters (the free assumptions) and their prior probabilities, both within a model. This likelihood of the data given the model corresponds to the \emph{evidence} of the model (Eq. \ref{eq:evidence}). This evidence in terms of the model parameters, $\theta_k$, is now
+One of the great advantages of the Bayesian methodology is that it incorporates directly Ockham's principle. Suppose that we want to compare two models, $M_1$ and $M_2$, which we assume describe the data set, $\mathbf{D}$. Each model has prior probabilities, $p(M_k)$ and likelihoods $p(\mathbf{D}|M_k)$ (with $k=1,2$). Notice that now, I use Bayes' theorem for models and not for parameters within a model. So, the prior probabilities of the models reflect our beliefs about the fixed assumptions within each model. On the other hand, the likelihood of the data, given the model, is related to the parameters (the free assumptions) and their prior probabilities, both within a model. This likelihood of the data given the model corresponds to the \emph{evidence} of the model (Eq. \ref{eq:evidence}). This evidence, written in terms of the model parameters, $\theta_k$, is now
 
  \begin{equation}
 p(\mathbf{D}|M_k)=\int_{\theta_k} p(\mathbf{D}|\theta_k,M_K)\cdot p(\theta_k|M_k)\cdot \mathrm{d}\theta_k. \label{eq:evidence2}
 \end{equation}
-Bayes' theorem applied to models, instead of individual parameters as done before, tells us that
+Bayes' theorem applied to models, instead of individual parameters as illustrated above, tells us that
 \begin{equation}
 p(M_k|\mathbf{D})=\frac{p(\mathbf{D}|M_k)\cdot p(M_k)}{p(\mathbf{D})},
 \end{equation}
@@ -179,11 +218,11 @@ This ratio provides an objective measure of how better the model $M_1$ is when c
 
 Even when the priors for the models are set alike, the evidences themselves (Eq. \ref{eq:evidence2}) embody Ockham's principle. The evidence is the integral, in parametric space, of the prior times the likelihood, with the likelihood acting as a weight to the priors.  Then, the larger the number of parameters (free assumptions) is, the greater the volume over which the integral must be carried on, and the most spread the prior probability gets. Thus, unless the likelihood increases as well, the evidence is smaller in models with larger number of parameters.
 
-As explained in this section, the paramount importance of Bayes' theorem comes from the fact that it is the proper probabilistic way to update knowledge based on evidence.
+As explained in this section, the paramount importance of Bayes' theorem comes from the fact that it is the proper probabilistic way to update knowledge based on the \textbf{statistical} evidence.
 
 \subsection{Membership probability}
 
-In the previous Section we obtained the probability of two competing models $M_1$ and $M_2$ given the data $\mathbf{D}$. In this Section, I describe a similar problem: the probability of two competing models given the likelihood of a single datum, $\mathbf{d}$. It also can be interpreted as the probability that the datum $\mathbf{d}$ was generated by model $M_k$. This probability is commonly known as the membership probability of the datum $\mathbf{d}$ to belong to model or class, $M_k$ ($k=1,2$). 
+In the previous Section we \textbf{derived} the ratio of the probabilities of two competing models $M_1$ and $M_2$, given the data $\mathbf{D}$. In this Section, I describe a similar problem: the probability of two competing models given the two likelihoods for a single datum, $\mathbf{d}$. It also can be interpreted as the probability that the datum $\mathbf{d}$ was generated by model $M_k$. This probability is commonly known as the membership probability of the datum $\mathbf{d}$ to belong to model or class, $M_k$ ($k=1,2$). 
 
 Bayes' theorem for this particular case is,
 
@@ -196,54 +235,67 @@ where $p(\mathbf{d}|M_k)$ is the likelihood of datum $\mathbf{d}$ and, $p(M_k)$ 
 \section{Bayesian hierarchical Models}
 \label{sect:BHM}
 \subsection{Generalities}
-Th Bayesian formalism requires the establishment of priors. As mentioned before, priors represent the \emph{a priori} belifes the user of the model has about the possible values that parameters of the model can take. This is indeed subjective. This subjectivity is the main source of criticism from the non-bayesian community \footnote{See \citet{Gelman2012} for a discussion on the ethical use of prior information}. 
+The Bayesian formalism requires the establishment of priors. These represent the beliefs the user of the model has about the possible values that parameters of the model can take \textbf{before new data are observed}. This is indeed subjective. This subjectivity is the main source of criticism from the non-Bayesian community \footnote{See \citet{Gelman2012} for a discussion on the ethical use of prior information}. 
 
-Bayesian hierarchical models, in the following (BHM), are classified within the Empirical Bayes methods. On these methods, the prior distributions are inferred from the data rather than being directly specified, as it is done in common Bayesian methods. Particularly, in BHM the priors are specified by parametric distributions whose parameters are also drawn from a parametric distribution in a hierarchical fashion. For this reason, hierarchical models are also called multilevel models. A fully-BHM is that in which the parameters at the higher hierarchy are drawn from a non-parametric distribution. In a non fully-BHM the settlement of parameters stops at some level. These end-level parameters are called hyper-parameters.
+Bayesian hierarchical models, in the following BHM, are classified within the Empirical Bayes methods. On these methods, the prior distributions are inferred from the data rather than being directly specified, as it is done in common Bayesian methods. In BHM the priors are specified by parametric distributions whose parameters are also drawn from another parametric distribution in a hierarchical fashion. For this reason, hierarchical models are also called multilevel models. A full-BHM is that in which the parameters at the higher hierarchy \textbf{level} are drawn from a non-parametric distribution. In a non full-BHM the settlement of parameters stops at some level. These end-level parameters are called hyper-parameters.
 
-Given their properties, the BHM represent the most objective way to the establishment of prior distributions \citep{Gelman2006}. Regardless of the level of the BHM, for it to be effective, the family, or class, of prior distributions must be carefully chosen. These families must allow the \emph{true} value of the parameter of interest \citep{Morris1983}. If the likelihood is not fully allowed by the prior (for example when the likelihood, as a function of the parameters, has a maximum outside the domain of a truncated prior.), then the inferred posterior could be biased. For this reason, inspecting and updating the prior knowledge is an important step in any Bayesian study.
+Given their properties, BHMs represent the most objective way to the establishment of prior distributions \citep{Gelman2006}. Regardless of the level of the BHM, for it to be effective, the family, or class, of prior distributions must be carefully chosen. These families must allow the \emph{true} value of the parameter of interest \citep{Morris1983}. If the likelihood \textbf{parametric support} is not fully contained in the prior (for example when the likelihood, as a function of the parameters, has a maximum outside the domain of a truncated prior), then the inferred posterior \textbf{can} be biased. For this reason, inspecting the prior knowledge is an important step in any Bayesian study.
 
-Despite their theoretical advantages, BHM are difficult to evaluate since they require far more parameters than standard Bayesian methods.
-Furthermore, their hierarchy (levels) must stop at some point. There are at least two approaches to stop this hierarchy. The first one is to use a non parametric distribution for the parameters at the higher level. This renders, as previously said, a fully-BHM. However, it has the inconvenience that to use a non-parametric distribution we must have certain a priori knowledge about it, which, most of the time is not the case. Another more practical alternative is to give a point estimate, usually the mean or the mode, for the distribution of the parameter at the top of the hierarchy.  
+Despite their theoretical advantages, BHMs are difficult to evaluate since they require far more parameters than standard Bayesian methods.
+Furthermore, their hierarchy (levels) must stop at some point. There are at least two approaches to stop this hierarchy. The first one uses a non-parametric distribution for the parameters at the higher level. This renders, as previously noted, a full-BHM. \textbf{However, it demands an a priori knowledge of the non-parametric distribution, which, most of the time, is not the case.} The second option is to give a point estimate, usually the mean or the mode, for the distribution of the parameter at the top of the hierarchy.  
 
-Although in BHM the parameters values of the prior distributions are inferred from data, the user of the model has the important task of specifying the family of distributions to be used for the priors. Selecting these families continues to be an active area of research. Common options include conjugate, objective, non-informative, and weakly informative priors. 
+{\color{red}
+Although in BHMs the parameters of the prior distributions are inferred from data, the user of the model has the important task of specifying the family of distributions to be used for them. Selecting these families continues to be an active area of research. The most common approaches are the following.
 
-Conjugate priors are those in which the posterior distribution turns out to be in the same family as the prior one, they are called the conjugate of the likelihood. Objective or default priors are supposed to be the default choice in the absence of any other information. 
-Weakly and non-informative informative priors, as their names indicate, provide intentionally weaker information or no information at all for the prior. 
+\begin{itemize}
+\item Conjugate priors. In this kind of priors the posterior distribution, which results of the product of the prior times the likelihood, is also in the same family distribution of the prior. 
 
-Objective and non-informative priors are discarded since for the Pleiades (one of the most studied cluster in the literature) there is already sensible information that  should be used. Conjugate priors do not necessarily agree with the previous information. Thus, whenever possible, I choose the weakly informative priors. These are the option recommended by \citet{Gelman2006,Gelman2008,Huang2013} and \citet{Chung2015}, since they show better computational performance when compared to non-informative priors. Despite the family of prior distribution that we choose, we must always analyse the prior distribution in terms of the posterior, and check if this last make sense \cite[][ Chap. 6]{Gelman2006,Gelman2013}.
+\item Objective or default priors. These priors are used when there is insufficient information  for the prior. These are supposed to be the default choice in the absence of any other information.
 
+\item Non-informative priors. This kind of priors intentionally discards all information on the phenomenon.
+
+\item Weakly informative priors. These provide intentionally weaker information than what actually is. 
+\end{itemize}
+
+From the previous options, I chose the weakly-informative approach. These are recommended by \citet{Gelman2006,Gelman2008,Huang2013} and \citet{Chung2015}, since they show better computational performance when compared to non-informative priors.
+
+The objective and non-informative approaches are discarded since for the Pleiades, which is one of the most studied cluster in the literature, there is already reliable information that should be used. Finally, conjugate priors do not always agree with the previous knowledge. 
+
+Whatever family used for the prior distribution, we must always analyse the priors in terms of the posterior distribution, and check if the late makes sense \cite[][ Chap. 6]{Gelman2006,Gelman2013}.
+}
 
 \subsection{Examples}
-Since BHM usually need more parameters than standard techniques, its use was restricted until modern and faster computers were widely available. The concept of BHM was already present in the 1960s, however, it was not until  the 1970s that they were used to infer parameters of normal distributions and linear models \cite[see][for an historical perspective of BHM]{Good1980}. In modern days, BHM have a wide range of applications. Just to cite some examples, \citet{Gelman2007} use them in the social sciences, \citet{Fei2005} applies them for vision recognition and, \citet{Diard2008} for robot navigation.
+Since BHMs usually need more parameters than standard techniques, its use was restricted until fast computers were widely available. The concept of BHM was already present in the 1960s. However, it was not until  the 1970s that they were used to infer parameters of normal distributions and linear models \cite[see][for an historical perspective of BHMs]{Good1980}. In modern days, BHMs have a wide range of applications. Just to cite some examples, \citet{Gelman2007} use them in the social sciences, \citet{Fei2005} applies them for vision recognition and, \citet{Diard2008} for robot navigation.
 
-The BHM are also widely applied in astrophysics. Although, originally its use was mainly in the domain of inference of cosmological parameters \cite[see for example the works of][]{Feeney2013,March2014,Anderes2015,Shariff2016,Alsing2017}, they were rapidly adopted in other domains. For example, they have been used to study the eccentricity distribution of binary stars \citet{Hogg2010}, the Cepheids \citep{Barnes2004} and RR Lyrae distances \citep{Jefferys2007}, the chemical composition \citep{Wolfgang2015} and albedos of exoplanets \citep{Demory2014}, extinction maps \citep{Sale2012}, stellar parameters \citep{Shkedy2007}, and the present day mass distribution \citep{Tapiador2017}.
+BHMs are also widely applied in astrophysics. Although, originally its use was mainly in the domain of inference of cosmological parameters \cite[see for example the works of][]{Feeney2013,March2014,Anderes2015,Shariff2016,Alsing2017}, they were rapidly adopted in other domains. For example, they have been used to study the eccentricity distribution of binary stars \citet{Hogg2010}, the Cepheids \citep{Barnes2004} and RR Lyrae distances \citep{Jefferys2007}, the chemical composition \citep{Wolfgang2015} and albedos of exoplanets \citep{Demory2014}, extinction maps \citep{Sale2012}, stellar parameters \citep{Shkedy2007}, and the present day mass distribution \citep{Tapiador2017}.
 
 \subsection{Graphical representation.}
 \label{sect:PGM}
-In general, BHM have large number of parameters that, together with the relations among them tend to obscure its understanding. To aid in this understanding, a graphical representation is always useful. Probabilistically Graphical Models (PGM) provide the background to graphically depict the BHM. PGM are graphs that portray the conditional relation among the elements in a probabilistic model. These elements could be constants or stochastic variables that interact by means of conditional relations, which could be deterministic or stochastic. 
+Probabilistic Graphical Models (PGM) provide the background to graphically depict BHMs. PGMs are graphs that portray the conditional relations among the elements in a probabilistic model. These elements can be constants or stochastic variables that interact by means of conditional relations, which can in turn be deterministic or stochastic. 
 
-In PGM, stochastic variables are represented with circles while constants with squares. If the variable is known, as in the case of the data, it is represented with a filled symbol, otherwise with an empty symbol. Stochastic and deterministic relations are depicted with solid and dashed lines, respectively. If there is no line between two given elements, it indicates that they are assumed to be independent. Variables that repeat together, as in the case of the data, are grouped within a plate. The number of repetitions is indicated in one corner of the plate. For more details on PGM see for example the book of \citet{Koller2009}. 
+In PGMs, stochastic variables are represented with circles and constants with squares. If the variable is known, as in the case of the data, it is represented with a filled symbol, otherwise with an empty symbol. Stochastic and deterministic relations are depicted with solid and dashed lines, respectively. If there is no line between two given elements, it indicates that they are assumed to be independent. Variables that repeat together, as in the case of the data, are grouped within a plate. The number of repetitions is indicated in one corner of the plate. For more details on PGMs see for example the book of \citet{Koller2009}. 
 
-To exemplify the use of PGM, Figure \ref{fig:pgmGMM} shows the PGM for the BHM that infer of the parameters in a Gaussian Mixture Model. In this model the parameters are the means $\mu_k$, variances $\sigma_k^2$ and fractions $\phi$ of each of the $K$ gaussian distributions in the mixture. Then $\mu_0,\sigma_0^2,\lambda,\nu$ and $\beta$ are the hyper-parameters, while $x_i$ represent the data, and $z_i$ the categorical latent variable that indicates the parent gaussian for datum $x_i$.
+To exemplify the use of PGMs, Figure \ref{fig:pgmGMM} shows the PGM for the BHM that infers the parameters in a Gaussian Mixture Model. In this model the parameters are the means $\mu_k$, variances $\sigma_k^2$ and fractions $\phi_k$ of each of the $K$ gaussian distributions in the mixture. Then $\mu_0,\sigma_0^2,\lambda,\nu$ and $\beta$ are the hyper-parameters, while $x_i$ represent the data, and $z_i$ the categorical latent variable that indicates the parent gaussian for datum $x_i$. The squiggly line ending in T indicates that $z_i$ is switch, which selects the gaussian at which $x_i$ belongs.
 
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics[height=8cm]{background/Figures/BGMM.png}
-\caption{PGM representing the parametric inference of a Gaussian Mixture, see text for details. Figure by Benwing /CC BY}
+\caption{PGM representing the parametric inference of a Gaussian Mixture, see text for details. Figure by Benwing, license: CC BY-3.0}
 \label{fig:pgmGMM}
 \end{center}
 \end{figure}
 
-\section{Modelling the data}
+\section{The BHM for the DANCe Pleiades data set}
 \label{sect:datamodelling}
-Creating a model is a complex task. As previously mentioned, a model is the mathematical representation of the knowledge about certain phenomenon. In this work my objective is the statistical modelling of the DANCe data related to Nearby Young Open Clusters ( NYOC), particularly the one of the Pleiades (see Section \ref{sect:DR2}).
+%The objective of this work is the statistical modelling of the DANCe data set of Nearby Young Open Clusters (NYOC), particularly the one of the Pleiades cluster (see Section \ref{sect:DR2}). 
 
-Modelling a data set demands the gathering and arranging of the \emph{a priori} knowledge on the phenomenon. This knowledge comprises that of the data set , the NYOC: the Pleiades open cluster (Chapter \ref{chap:pleiades}), the statistical techniques that may help to attain the objective, and the computational resources at hand. I collect this knowledge from three main sources: the standard references (e.g. articles and books), my colleagues and experts on the field (\emph{knowledge elicitation}), and my self.
+Creating a model is a complex task. As previously mentioned, a model is a mathematical representation of the knowledge about a certain phenomenon. Thus, a model demands the gathering and arranging of the \emph{a priori} knowledge of the phenomenon as well as the gathering process of its associated data set. 
 
-The structuring of the a priori knowledge and later creation the model is an iterative and continuous process.  In this Section, I describe a snapshot of this process: the state of the model once the article \citet{Olivares2017} was submitted. Later in Section \ref{sect:code}, I will give a brief description of the chronological development of the model.
+The current understanding of the Pleiades cluster together with the description of the DANCe DR2 data set are summarised in Chapter \ref{chap:pleiades}. 
 
-In this section I will explain the statistical procedure to deal with one of the crucial aspects of the Pleiades DANCe DR2 data set: the missing values. Also, I will describe how the relevant knowledge about Pleiades cluster population and the empirical one of the field are embedded in the generative model of the data.
+Once the \emph{a priori} knowledge has bee gathered, the creation of the model becomes an iterative and continuous process. Assembling the knowledge into a coherent system demands continuous iterations of decision making, test, and analysis of preliminary results. This Section provides a snapshot of this process: the state of the model once the article \citet{Olivares2017} was submitted.
 
+Section \ref{sect:missing} explains the statistical procedure to deal with one of the crucial aspects of the Pleiades DANCe DR2 data set: objects with missing values in their measurement vector. Later, Section \ref{sect:generative-model} provides details of how the relevant knowledge about the Pleiades cluster and field populations are embedded in the generative model of the data.
 \subsection{Missing values}
 \label{sect:missing}
 
@@ -253,7 +305,7 @@ From the physical perspective, they occur due to faint or bright sources that pr
 
 From the statistical perspective, important aspects of missing values are, i) the probability distribution of the sources in which they occur, and ii) if they originate due to censoring or truncation. 
 
-In the DANCe DR2, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not random (uniform). Missing values occur with higher probability at the faintest and brightest ends of the photometric distributions, see Figure \ref{fig:NAsKs}. This is a crucial aspect for the statistical analysis. If missing values were randomly distributed, then, any statistical analysis derived using only objects with completely observed vectors will be unbiased. This will occur because the objects with completely observed vectors will be a random sample of the data set. Since this is not the case in the DANCe DR2, to avoid biases, objects with missing values must be incorporated in the data set and properly treated. 
+In the DANCe DR2, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not \textbf{uniform}. Missing values occur with higher probability at the faintest and brightest ends of the photometric distributions, see Figure \ref{fig:NAsKs}. This is a crucial aspect for the statistical analysis. If missing values were \textbf{uniformly} distributed, then, any statistical analysis derived using only objects with completely observed vectors would be unbiased. This will occur because the objects with completely observed vectors would be a random sample of the data set. \textbf{Since this is not the case in the DANCe DR2, objects with missing values must be incorporated in the data set and properly treated to avoid biases.} 
 
 \begin{figure}[ht!]
     \centering
@@ -284,51 +336,47 @@ In the DANCe DR2, missing values occur only in the photometric measurements (see
 
 
 
-Truncation occurs when the data set does not contain record, nor of the measured value neither of the number of measurements, when the measured quantity lies outside certain limits. On the other hand,  censoring happens when the data set contains only partial information about the actual value of the measured quantity. Basically,  censoring happens when the value lies outside the upper or lower limits of the measuring instrument, and these limits become the only available record of the measurement. Currently, the DANCe DR2 does not provide upper or lower limits for the censored data. Although these limits could also be inferred from the data, the  heterogeneous origin of the DANCE DR2 prohibits this task. Furthermore, the missing values in the DANCE DR2 data set do not occur only because of censoring. Indeed, cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures are just some examples of potential sources of missing values. The statistical treatment of missing values originating from all these sources lies beyond the scope of this work. However, there is a general way to deal with missing values despite their origin.
+\textbf{Truncation occurs when the data set does not contain records, neither of the measured value nor of the number of measurements, for objects whose measured quantity lies outside certain limits}. On the other hand, censoring happens when the data set contains only partial information about the actual value of the measured quantity. Basically,  censoring happens when the value lies outside the upper or lower limits of the measuring instrument, and these limits become the only available record of the measurement. Currently, the DANCe DR2 does not provide upper or lower limits for the censored data. Although these limits could also be inferred from the data, the heterogeneous origin of the DANCe DR2 prohibits this task. Furthermore, the missing values in the DANCe DR2 data set do not occur only because of censoring. Indeed, cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures are just some examples of potential sources of missing values. The statistical treatment of missing values originating from all these sources lies beyond the scope of this work. However, there is a general way to deal with missing values \textbf{whatever} their origin.
 
-In terms of probability, there is no distinction between missing values and parameters. Therefore, we can marginalise missing values as we do with any other nuisance parameter. If the vector of measurements $\mathbf{d}$ has a missing value in entry $i$, then $x_{i} = NA$ , and $\mathbf{d}=\{x_1,x_2,...,NA,...,x_n\}$, with $n$ the dimension of $\mathbf{d}$. Thus, the marginalised likelihood of this datum, given model parameters $\mathbf{\theta}$ is
+In terms of probability, there is no distinction between missing values and parameters. Therefore, we can marginalise missing values as we do with any other nuisance parameter. If the vector of measurements $\mathbf{d}$ has a missing value in entry $i$, then $x_{i} = NA$ , and $\mathbf{d}=\{x_1,x_2,...,x_{i-1},NA,x_{i+1}...,x_n\}$, with $n$ the dimension of $\mathbf{d}$. Thus, the marginalised likelihood of this datum, given model parameters $\mathbf{\theta}$ is
 
 \begin{equation}
 \label{eq:marginalmiss}
-p(\mathbf{d}|\mathbf{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i}= NA,...,d_n\}|\mathbf{\theta})\cdot \mathrm{d}x_{i}.
+p(\mathbf{d}|\mathbf{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i-1},x_{i}= NA,x_{i+1},...,d_n\}|\mathbf{\theta})\cdot \mathrm{d}x_{i}.
 \end{equation}
 
-Throughout this work, missing values are marginalised in this way.
+Throughout this work, missing entries are marginalised in the previous way whenever present.
 
 %I made a remark of a point that may seem obvious but it is important to remember. Let $p(a)$ be a probability distribution, $A$ a random sample of $n$ points from it, and $p_A(a)$ the empirical probability distribution of $A$. Let $B$ be a non-random sample of $p(a)$ with $n$ elements, and empirical probability distribution $p_B(a)$. In the limit of $n\rightarrow \infty$, $p_A(a)=p(a)$ however $p_B(a)\neq p(a)$. Therefore, $p_A(a)\neq p_B(a)$. Similarly, in data with missing values, if the missing value pattern is not random, the distribution of the completely observed data (with non-missing values) differs from that of all the data. In \citet{Olivares2017} we show this subtle but important difference in the case of the DANCe data set. 
 
 \subsection{The generative model}
-\label{subsect:generative-model}
-The objective of this work is the statistical study of NYOC, in particular the Pleiades cluster. Since the Pleiades data is mixed with that of the field, to achieve the objective, cluster and field populations must be disentangled. The probabilistic disentanglement of them, demands probabilistic models for each population. These models correspond to the are the field and cluster likelihoods. With these and the prior distributions, I am able to reach the objective: the posterior distributions of the parameters in the cluster model. 
-
-In addition, cluster membership probability distributions (Eq. \ref{eq:prob}) can be computed for each object in the data set. Using these membership probability distributions together with a probability threshold, individual objects are separated into cluster and field populations.
+\label{sect:generative-model}
+\textbf{In the Pleiades DANCe DR2 data set, cluster stars are mixed with field sources. Thus, cluster and field populations must be disentangled to achieve the objective of this work. The probabilistic disentanglement of them, requires probabilistic models for each population, i.e. their likelihoods. The true values of these two likelihoods, field and cluster, are given by parametric relations embodying the state of knowledge of NYOC.  Using these likelihoods, individual cluster membership probability PDFs are computed (by means of Eq. \ref{eq:prob}) for each object in the data set. These PDFs together with a probability classification threshold,  allow individual objects to be separated into cluster and field populations.}
 
 The inference process demands a set of $N$ binary integers $\mathbf{q}$, one $q_n$ for each object. The two possible values of these binary integers represent one of the two mutually exclusive possibilities: the object belongs to the cluster ($q_n=1$) or to the field population ($q_n=0$). 
 
-Let $\theta$ and $\phi$ be the parameters of the cluster and field models, and $p_c$ and $p_f$ their likelihoods, respectively. Then, the likelihood of the data is,
+Let $\boldsymbol{\theta}$ and $\boldsymbol{\phi}$ be the parameters of the cluster and field models, and $p_c$ and $p_f$ their likelihoods, respectively. Then, the likelihood of the data, $\mathbf{D}$, is,
 
 \begin{equation}
-p(\mathbf{D}|\mathbf{q},\theta,\phi)= \prod_{n=1}^N {p_c(\mathbf{d}_n|\theta)}^{q_n}\cdot {p_f(\mathbf{d}_n|\phi)}^{(1-q_n)}.
+p(\mathbf{D}|\mathbf{q},\boldsymbol{\theta},\boldsymbol{\phi})= \prod_{n=1}^N {p_c(\mathbf{d}_n|\boldsymbol{\theta})}^{q_n}\cdot {p_f(\mathbf{d}_n|\boldsymbol{\phi})}^{(1-q_n)}.
 \end{equation}
 
-The inference of these $N$ binary integers will demand a computing power that is outside the current possibilities. Thus, instead of inferring them I marginalise them. 
-
-I marginalise these $\mathbf{q}$ using a prior probability, which is set in terms of a new and unique parameter $\pi$. It represent the \emph{prior} probability that an object belongs to the field. Thus, the prior probability of $\mathbf{q}$ is
+The inference of these $N$ binary integers will demand a computing power that is outside the current possibilities. Thus, instead of inferring them, I marginalise them using a prior probability, which is set in terms of a new and unique parameter $\boldsymbol{\pi}$. It represents the \emph{prior} probability that an object belongs to the field. Thus, the prior probability of $\mathbf{q}$ is
 
 \begin{equation}
 p(\mathbf{q}|\pi)= \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)}.
 \end{equation}
 
-The marginalisation runs as
+Since $\mathbf{q}$ represents the $2^N$ possible ways to combine the binary variables $q_n$, then the marginalisation over all these possible states is,
 
 \begin{align}
-p(\mathbf{D}|\pi,\theta,\phi)&=\int_{\mathbf{q}} p(\mathbf{D},\mathbf{q}|\pi,\theta,\phi)\cdot \mathrm{d}\mathbf{q} \nonumber \\
-&=\int_{\mathbf{q}} p(\mathbf{D}|\mathbf{q},\pi,\theta,\phi)\cdot p(\mathbf{q}|\pi)\cdot \mathrm{d}\mathbf{q} \nonumber \\
-&=\int_{\mathbf{q}} \prod_{n=1}^N {p_c(\mathbf{d}_n|\theta)}^{q_n}\cdot {p_f(\mathbf{d}_n|\phi)}^{(1-q_n)}\cdot \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)}\cdot \mathrm{d}\mathbf{q} \nonumber \\
-&=\int_{\mathbf{q}} \prod_{n=1}^N \left[(1-\pi)\cdot p_c(\mathbf{d}_n|\theta)\right]^{q_n}\cdot \left[\pi\cdot p_f(\mathbf{d}_n|\phi)\right]^{(1-q_n)}\cdot \mathrm{d}\mathbf{q} \nonumber \\
+p(\mathbf{D}|\pi,\theta,\phi)&=\sum_{\mathbf{q}} p(\mathbf{D},\mathbf{q}|\pi,\theta,\phi)\cdot \mathrm{\Delta}\mathbf{q} \nonumber\\
+&=\sum_{\mathbf{q}} p(\mathbf{D}|\mathbf{q},\pi,\theta,\phi)\cdot p(\mathbf{q}|\pi)\cdot \mathrm{\Delta}\mathbf{q} \nonumber \\
+&=\sum_{\mathbf{q}} \prod_{n=1}^N {p_c(\mathbf{d}_n|\theta)}^{q_n}\cdot {p_f(\mathbf{d}_n|\phi)}^{(1-q_n)}\cdot \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)}\cdot \mathrm{\Delta}\mathbf{q} \nonumber \\
+&=\sum_{\mathbf{q}} \prod_{n=1}^N \left[(1-\pi)\cdot p_c(\mathbf{d}_n|\theta)\right]^{q_n}\cdot \left[\pi\cdot p_f(\mathbf{d}_n|\phi)\right]^{(1-q_n)}\cdot \mathrm{\Delta}\mathbf{q} \nonumber \\
 &=\prod_{n=1}^N (1-\pi)\cdot p_c(\mathbf{d}_n|\theta) + \pi\cdot p_f(\mathbf{d}_n|\phi).
 \end{align}
-This last equality is a rather complicated derivation which can be found on \citet{Press1997} and in \citet{Hogg2010a} for $p_c$ and $p_f$ in the exponential family. Also, a general derivation of this expression is given by \citet{Jaynes2003}. He obtains it assuming individual unknown probabilities $p_n$ instead of $q_n$ and marginalising over them by the aid of a prior.
+This last equality is a rather complicated derivation which can be found in \citet{Press1997}, and in \citet{Hogg2010a} for $p_c$ and $p_f$ in the exponential family. Also, a general derivation of this expression is given by \citet{Jaynes2003}. He obtains it assuming individual unknown probabilities $p_n$ instead of $q_n$ and marginalising over them with the aid of a prior.
 
 Thus, the \emph{generative model} or likelihood of the datum $\mathbf{d_n}$  is
 
@@ -339,72 +387,88 @@ p(\mathbf{d}_n | \pi,\boldsymbol{\theta}_c,\boldsymbol{\theta}_f,\mathbf{u}_n)=\
 
 where $\boldsymbol{\theta}_f$ and $\boldsymbol{\theta}_c$ indicate the cluster and field parameters, while $\mathbf{u}_n$ refers to the datum uncertainty. The probabilities $p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n)$ and $p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)$ are the field and cluster models, respectively. These models are explained in detail in the next two sections.
 
-In the following, I assume that the observed quantities, even if they contain missing values, resulted from the convolution\footnote{The addition of two stochastic variables is analogous to the convolution of their probability distributions.} of the \emph{true} quantities with a source of uncertainty. This last could be different for each object, thus resulting in different individual uncertainties. It means that the DANCE DR2 data is modelled allowing for its intrinsic heteroscedaticity. Although these uncertainties are not assumed to have the same values, I do assume that they have the same shape. Thus, I assume that uncertainties in our data set belong to the multivariate normal family.  This assumption is standard practice and is also supported by the large and heterogeneous origins of the DANCe DR2 data set. 
+In the following, I assume that the observed quantities, even if they contain missing values, resulted from the convolution\footnote{The addition of two stochastic variables is analogous to the convolution of their probability distributions.} of the \emph{true} quantities with a source of uncertainty. The latter could be different for each object, thus resulting in different individual uncertainties. It means that the DANCe DR2 data set is modelled allowing for its intrinsic heteroscedaticity. Although these uncertainties are not assumed to have the same values, I do assume that they have the same shape. Thus, I assume that uncertainties in our data set belong to the multivariate normal family.  This assumption is standard practice and is also supported by the large and heterogeneous origins of the DANCe DR2 data set. 
 
 \subsection{The field population}
-To model the field population, I assume that the joint seven-dimension probability distribution of the field can be factorised into the probability distributions of proper motion and photometry. Thus, the field likelihood of the proper motion and the photometry are assumed to be independent, at least conditioned on their parameters. Also, I assume that both distributions are described by Gaussian Mixture Models (GMM). The flexibility of GMM to fit a variety of distribution geometries make them a suitable model to describe the field density of the heterogeneous DANCe DR2 data. 
+To model the field population, I assume that the joint seven-dimensional probability distribution of the field can be factorised into the probability distributions of proper motions and photometry. Thus, the field likelihood of the proper motions and the photometry are assumed to be independent. Also, I assume that both distributions are described by Gaussian Mixture Models (GMM). The flexibility of GMMs to fit a variety of distribution geometries makes them a suitable model to describe the field density of the heterogeneous DANCe DR2 data set. 
 
-A GMM is a probability distribution resulting from the linear combination of $M$ gaussian distributions, $\pi_m\cdot \mathcal{N}(\boldsymbol{\mu}_m,\boldsymbol{\Sigma}_m)$, with $m=1,2,...,M$. Where $\pi_m$ is the amplitude or fraction of the $m$th gaussian. These $m$ fractions must add to one. Thus, the probability distribution resulting from a GMM is
-
+\textbf{A GMM is a probability distribution resulting from the linear combination of $M$ Gaussian distributions, }
 \begin{equation}
-p_{GMM}(x|\boldsymbol{\pi},\boldsymbol{\mu},\boldsymbol{\Sigma})=\sum_{m=1}^M \pi_m \cdot \mathcal{N}(\boldsymbol{\mu}_m,\boldsymbol{\Sigma}_m).
+p_{GMM}(x|\boldsymbol{\pi},\boldsymbol{\mu},\boldsymbol{\Sigma})=\sum_{m=1}^M \pi_m \cdot \mathcal{N}(\boldsymbol{\mu}_m,\boldsymbol{\Sigma}_m),
 \end{equation}
+\textbf{where $\pi_m$ is the amplitude of the $m$th Gaussian, $\boldsymbol{\mu}_m$ its mean and, $\boldsymbol{\Sigma}_m$ its covariance matrix. The $m$ amplitudes or fractions must add to one. }
 
-Notice that the number of gaussians in the mixture is not formally speaking a parameter, but rather it implies a collection of parameters. The number of these parameters increases quadratically with the number of gaussians. 
+\textbf{Notice that the number of Gaussians in the mixture is not formally speaking a parameter, but rather it implies a collection of parameters. The number of these parameters increases linearly with the number of Gaussians and quadratically with the dimension.} 
 
-According to \citet{Bouy2015}, the number of Pleiades candidate members in the DANCe DR2 data set is 2010 (going up to 2109 in the combined Tycho-DANCe DR2). It means that the number of field objects dominates (99.9\%) the DR2 data set. Even in our restricted $10^5$ data set, RDR2 (see Sect. \ref{sect:RDR2}), the field still dominates with a 0.98 fraction. Thus, it can be assumed that any new classification of candidate members will have a negligible impact on this figure. Therefore, it seems reasonable to assume that the GMM describing the field population can be frozen (fixed) during the process of cluster parameters inference. Let me elaborate on this assumption.
+According to \citet{Bouy2015}, the number of Pleiades candidate members in the DANCe DR2 data set is 2010 (going up to 2109 in the combined Tycho-DANCe DR2) from a total of 1,972,245 sources . It means that the number of field objects dominates (99.9\%) the DR2 data set. Even in our restricted $10^5$ objects data set, RDR2 (see Sect. \ref{sect:RDR2}), the field still dominates with a 0.98 fraction. Thus, it can be assumed that any classification of candidate members will have a negligible impact on this figure. Therefore, it seems reasonable to assume that the GMM describing the field population can be frozen (fixed) during the process of cluster parameters inference. I elaborate more on this assumption.
 
-The objects that \citet{Bouy2015} classified as field are those whose cluster membership probabilities are lower than 0.75. This probability threshold corresponds to the one found by \citet{Sarro2014} after analysing the performance of their methodology when applied to synthetic data sets. In \citet{Sarro2014} the authors report that, at probability threshold $p=0.75$, the contamination and true positive rates are $\sim 8\%$ and $ \sim96\%$ respectively. Assuming that these values are correct, the number of hypothetically misclassified objects is $12\%$ of the cluster members, thus $\sim 241 $ objects. This value is negligible compared to the size of the data set ($10^5$ objects in the RDR2). It represents the negligible fraction of $ \lesssim0.0024$. 
 
+\textbf{The objects that \citet{Bouy2015} classified as belonging to the field are those whose cluster membership probabilities are lower than 0.75. This probability threshold corresponds to the one found by \citet{Sarro2014} after analysing the performance of their methodology when applied to synthetic data sets. In \citet{Sarro2014} the authors report that, at a probability threshold $p=0.75$, the contamination and true positive rates are $\sim 8\%$ and $ \sim96\%$ respectively. Assuming that these values are correct, the real number of field objects would change by approximately 4\% of the cluster members (adding the 8\% of contaminants and subtracting the 4\% of missed members), thus $\sim 80$ objects. This value is negligible compared to the size of the data set ($10^5$ objects in the RDR2). It represents the negligible fraction of $ 8\times10^{-4}$. }
+
+{\color{blue}
 It can be further assumed that these hypothetically misclassified objects are spread in the observables space. Indeed, these misclassified can be thought to have membership probabilities near the classification threshold. Thus, they lay in the entanglement region which corresponds, in proper motions, to a halo around the cluster centre, and in photometry, to a region around the cluster sequence.
-
+}
 %Furthermore, under the assumption that the work of \citet{Sarro2014} is correct, the misclassified objects concentrate on cluster membership probabilities near the classification threshold. Therefore, they will also group in an area of the physical "boundary" between the cluster and the field (I call it physical because it is on the observable variables and not in the probability threshold). This is the area of highest entanglement. It does not mean that misclassified objects will not lay in the core of the cluster (objects with high membership probabilities). It means that the occurrence of these cases will be lower.  This physical "boundary" will correspond, in proper motions space to a halo around the cluster centre. In photometry, however, this boundary will run all along the cluster sequence in the CMDs. All previous assumptions are there to justify that the negligible fraction of hypothetical misclassified  objects is not concentrated in the physical space. 
 
-If the misclassified objects are a few and spread over the observable space, then their contribution to the parameters of the GMM describing the field population can be neglected. Thus, the parameters of the GMM remain fixed and out of the inference process. 
+If the misclassified objects are a few and spread over the observable space, then their contribution to the parameters of the GMM describing the field population can be neglected. Thus, the parameters of the GMM can remain fixed and out of the inference process. 
 
-The previous assumption is of paramount importance due to practical reasons. If I were to simultaneously infer the parameters of both cluster and field models, the required computing time will be excessive. The number of parameters in the field GMM goes up to $\sim 300$, more than twice that of the cluster model (85 parameters). Instead, I first fit the parameters of the field GMM using the field objects in the RDR2 (the $\sim 98,000$ objects with membership probabilities below 0.75) and then I keep this parameters fixed in the inference process.   
+The previous assumption is of paramount importance due to practical reasons. If I were to simultaneously infer the parameters of both cluster and field models, \textbf{even only those of the field proper motions GMM}, the required computing time would be excessive. The number of parameters in the field GMM goes up to $\sim 300$, more than twice that of the cluster model (85 parameters). \textbf{Even inferring only the 42 parameters of the field proper motions GMM would represent, at least, a 50\% increase in the computing time}. Instead, I first fit the parameters of the field GMM using the field objects in the RDR2 (the $\sim 98,000$ objects with membership probabilities below 0.75) and then I keep these parameters fixed in the inference process.   
 
-The number of gaussians for the proper motions and photometric GMM is found using the Bayesian Information Criterion \cite[BIC,][]{Schwarz1978}. The BIC is a model selection criterium that aims at avoiding over fitting. It represents a compromise between the likelihood, $\mathcal{L}$, of the $n$ data points, and the number of parameters, $k$. This is,
+The number of gaussians for the proper motions and photometric GMM is found using the Bayesian Information Criterion \cite[BIC,][]{Schwarz1978}. The BIC is a model selection criterium that aims at avoiding over-fitting. It represents a compromise between the likelihood, $\mathcal{L}$, of the $n$ data points, and the number of parameters, $k$. This is,
 
 \begin{equation}
 \label{eq:BIC}
 BIC = \ln{n}\cdot k - 2 \ln{\mathcal{L}}.
 \end{equation}
 
-To estimate the parameters of the GMM we use the Expectation Maximisation (EM) algorithm. However, the missing values in the photometry prevent the use of the standard from of the algorithm \cite[see for example Chapter 9 of][]{Bishop2006}.
-Instead, I estimated these parameters with the modified version of the EM algorithm for GMM found by \citet{McMichael1996}. On this version, objects with missing values also contribute to estimate the maximum-likelihood (ML) parameters. I applied this algorithm to GMM whose number of components ranged from 1 to 20. The optimal number of gaussians suggested by the BIC is 14. 
+To estimate the parameters of the GMM we use the Expectation Maximisation (EM) algorithm. However, the missing values in the photometry prevent the use of the standard form of the algorithm \cite[see for example Chapter 9 of][]{Bishop2006}.
+Instead, I estimated these parameters with the modified version of the EM algorithm for GMM found by \citet{McMichael1996} \textbf{and rediscovered by me}. On this version, objects with missing values also contribute to estimate the maximum-likelihood (ML) parameters. I applied this algorithm to GMM whose number of components ranged from 1 to 20. The optimal number of gaussians suggested by the BIC is 14. 
 
-In the case of proper motions, since they do not contain missing values, I computed the GMM parameters with the standard EM algorithm. However, the BIC favours models with large variances,  large number of components, and small fractions. Since the proper motions distribution of field objects resembles a bivariate normal, the GMM suggested by BIC was contrary to our expectations. Therefore, we decided to add a uniform distribution to the mixture of Gaussians. This uniform distribution was intended to remove the large variance and small fraction components of the GMM. I changed the EM algorithm to properly account for this modification. The BIC applied to this new mixture of distributions renders more reasonable results. This modification improves the likelihood and reduces the number of parameters. The number of gaussians suggested by the BIC for this new mixture is 7, plus the uniform distribution. 
+\textbf{In the case of proper motions, since they do not contain missing values, I computed the GMM parameters with the standard EM algorithm. The BIC finds a model with 15 components, the majority of them with large variances and small fractions (see Fig. \ref{fig:fpmGMM}). These small-fraction Gaussians fit an extended component of the proper motions distributions, which is clearly non-Gaussian. For this reason, we decided modify the mixture of Gaussians by adding a uniform distribution $\mathcal{U}(\textbf{d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})$, with $S_{\mu_{\alpha}}$ and $S_{\mu_{\delta}}$ the support of the proper motions in Right Ascension and Declination, respectively (see Table \ref{tab:DR2properties}). I changed the EM algorithm to properly account for this modification. The BIC applied to this new mixture renders more reasonable results (see Fig. \ref{fig:fpmMMM}), with an eight components mixture distribution: seven Gaussians plus the uniform. This modification improves the GMM while simultaneously reduces the number of parameters.}
 
-Finally, the field likelihood $p_f(\mathbf{d}|\boldsymbol{\theta}_f,\mathbf{u})$ of an object with measurements $\mathbf{d}$, given the field parameters, $\boldsymbol{\theta}_f$,  and the standard uncertainties $\mathbf{u}$ of datum $\mathbf{d}$, is
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[page=3,width=\textwidth]{background/Figures/GMM-PM-BIC=15.pdf}
+        \caption{}
+        \label{fig:fpmGMM}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=3,width=\textwidth]{background/Figures/GMM-PM-BIC2-U+7G.pdf}
+        \caption{}
+        \label{fig:fpmMMM} 
+    \end{subfigure}
+\caption{Gaussian (a) and Modified (b) Mixture Models fitted to the proper motions of the field objects in the RDR2 data set (density in grey scale). The crosses and ellipses indicate the means and the one-$\sigma$ covariance matrices, respectively. The colour code indicates the fraction or amplitude in the mixture. Uniform distribution not shown in (b)}
+\label{fig:GMMvsMMM}
+\end{figure}
+
+Finally, the field likelihood $p_f(\mathbf{d}|\boldsymbol{\theta}_f,\mathbf{u})$ of an object with measurements $\mathbf{d}$, given its standard uncertainties $\mathbf{u}$ and the field parameters, $\boldsymbol{\theta}_f$, is
 \begin{align}
-p_f(\mathbf{d}|\boldsymbol{\theta}_f,\mathbf{u})=&\left[ c\cdot\pi_{f,pm,0} + \nonumber \right. \\
-&\left. \sum \limits_{i=1}^{7}\pi_{f,pm,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{f,pm,i},\boldsymbol{\Sigma}_{f,pm,i}+\mathbf{u}_{pm})\right] \nonumber \\ 
-&\cdot \left[ \sum \limits_{i=1}^{14}\pi_{f,ph,i}\cdot \mathcal{N}(\mathbf{d}_{ph} | \boldsymbol{\mu}_{f,ph,i},\boldsymbol{\Sigma}_{f,ph,i}+\mathbf{u}_{ph})\right].
+p_f(\mathbf{d}|\boldsymbol{\theta}_f,\mathbf{u})=&\left[\pi_{f,pm,0}\cdot\mathcal{U}(\textbf{d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})+  \sum \limits_{i=1}^{7}\pi_{f,pm,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{f,pm,i},\boldsymbol{\Sigma}_{f,pm,i}+\mathbf{u}_{pm})\right]\cdot  \nonumber \\ 
+&\left[ \sum \limits_{i=1}^{14}\pi_{f,ph,i}\cdot \mathcal{N}(\mathbf{d}_{ph} | \boldsymbol{\mu}_{f,ph,i},\boldsymbol{\Sigma}_{f,ph,i}+\mathbf{u}_{ph})\right].
 \label{eq:field}
 \end{align}
-In this equation, $\boldsymbol{\pi}_f,\boldsymbol{\mu}_f,\boldsymbol{\Sigma}_f$ represent, respectively, the fractions, means and covariance matrices of the GMM. The first and second brackets represent the proper motion and photometric models, respectively. The first term of the proper motion model is the uniform distribution. In it, $c$ is a constant determined by the inverse of the product of the proper motions ranges (see Table \ref{tab:DR2properties}), and $\pi_{f,pm,0}$ is the fraction of this uniform distribution. The second term in the same bracket is the mixture of gaussians with means $\boldsymbol{\mu}_{f,pm}$ and covariance matrices $\boldsymbol{\Sigma}_{f,pm} +\mathbf{u}_{pm}$. 
-
-%I refer the interested reader to Appendix \ref{appendix:A}, which contains specific details of the GMM presented in this section.
+The first and second brackets represent the proper motion (subindex $pm$) and photometric (subindex $ph$) models, respectively, with $\boldsymbol{\pi}_f,\boldsymbol{\mu}_f,\boldsymbol{\Sigma}_f$ their fractions, means and covariance matrices, respectively. \textbf{ The first term of the proper motion model is the uniform distribution, with $\pi_{f,pm,0}$ its fraction}. The uncertainty process is convolved (see Section \ref{sect:introprobability}) with the assumed models using the individual proper motions ($\mathbf{u}_{pm}$) and photometric ($\mathbf{u}_{ph}$) uncertainties. 
 
 \subsection{The cluster population}
 \label{subsect:cluster}
-Similarly to what I assume for the field population model, I also assume that the cluster model or likelihood can be factorised in the product of the proper motions distribution times the photometric distribution. Thus, I assume these two models are independent. 
+Similarly to what I assume for the field population model, I also assume that the cluster model or likelihood can be factorised into the product of the proper motions distribution times the photometric distribution. Thus, I assume these two models are independent. 
 
-It is known that unresolved systems of stars (groups of stars that, given the spatial resolution of the telescope, are seen as an individual object) have an increased brightness proportional to the multiplicity of the system. In particular, if an unresolved system is made of two equally luminous objects, then its magnitude is 0.752 times brighter than that of an individual object. This happens on equal mass binaries.
+It is known that unresolved systems of stars (groups of stars that, given the spatial resolution of the telescope, are seen as an individual object) have an increased brightness proportional to the multiplicity of the system. In particular, if an unresolved system is made of two equally luminous objects, then its magnitude is 0.752 times brighter than that of an individual object. This happens for equal mass binaries.
 
-Since the pioneer work of \citet{Trumpler1921}, we know that some of the Pleiades members are double systems. Recently, \citet{Sarro2014} show evidence that this double systems lay in an equal-mass binaries (EMB) sequence. Those authors model this displaced sequence assuming that the number of objects on it is 20\% of the total number of members. In the present work, we also model objects is this displaced EMB sequence. However, we do not assume that its proportion is fixed, we infer it from the data. 
+Since the pioneer work of \citet{Trumpler1921}, we know that some of the Pleiades members are double systems. Recently, \citet{Sarro2014} show evidence that some of these double systems lay in an equal-mass binaries (EMB) sequence. Those authors model this EMB sequence assuming that its number of objects is 20\% of the total number of cluster members. In the present work, we also model objects is this displaced EMB sequence  but we do not assume that its proportion is fixed; we infer it from the data. 
 
-Unresolved multiple systems, and particularly binary systems have an impact on the cluster proper motions distribution. From an astrophysical point of view, in stellar clusters, the massive objects fall towards the centre of the gravitational potential in a rate higher than that of the less massive ones. This behaviour arises from stellar encounters in which the energy exchange results in the less massive objects gaining speed and the massive ones losing it. From an astronomical point of view, an unresolved system shifts the photo centre of its images when compared to that of a single object. Given the previous considerations, we decide to model the EMB as an independent population in the proper motions. Furthermore, we pair this proper motions model to its photometric one. This more comprehensive statistical model allow us to directly compare the kinematic and photometric properties of the EBM population with those of the rest of the cluster. 
+Unresolved multiple systems, and particularly binary systems have an impact on the cluster proper motions distribution. In stellar clusters, the massive objects are expected to fall towards the centre of the gravitational potential at a rate higher than that of the less massive ones \citep{Binney?}. This behaviour arises from stellar encounters in which the energy exchange results in the less massive objects gaining speed and the massive ones losing it. From an astronomical point of view, an unresolved system shifts the photo-centre of its images when compared to that of a single object. Given the previous considerations, we decide to model the EMB as an independent population in the proper motions. Furthermore, we pair this proper motions model to its photometric counterpart. This more comprehensive statistical model allows us to directly compare the kinematic and photometric properties of the EMB population with those of the rest of the cluster. 
 
-For the sake of simplicity, in the following whenever I refer to the photometric or proper motions model of the EMB I call it the EMB sequence model (with the subindex $Bs$). I refer to the model of the rest of the stars as the cluster sequence model or simply single stars. Although this is an abuse of the terminology, because there are binaries and multiple systems with different mass ratios, it keeps the text more readable.
+For the sake of simplicity, in the following whenever I refer to the photometric or proper motions model of the EMBs, I call it the EMB sequence model (with the subindex $Bs$). I refer to the model of the rest of the stars as the cluster sequence model or simply single stars. Despite that this is an abuse of the terminology, because there are binaries and multiple systems with different mass ratios, it keeps the text more readable.
 
 \subsubsection{Photometric model of equal-mass binaries and single stars}
 
-The cluster photometric sequences, both for single and EMB, are modelled with cubic splines, one for each of the $YJHK_s$ vs $CI$ CMDs. I choose the spline series due to their fitting properties. I tried several polynomial bases (Laguerre, Hermite, Chebyshev) but in spite of the order, they were not able to fit the sequence, particularly in the region around $CI \sim 3$, where the slope is higher. 
+The cluster photometric sequences, both for single and EMB stars, are modelled with cubic splines, one for each of the $Y,J,H,K_s$ vs $CI$ CMDs. I choose the spline series due to their fitting properties. I tried several polynomial bases (monic, Laguerre, Hermite, Chebyshev) but in spite of the order, they were not able to fit the sequence, particularly in the region around $CI \sim 3$, where the slope is higher. 
 
-Despite their superior flexibility, spline series require more parameters than common polynomials. In addition to the coefficients of the series, they require the specification of points called knots. These knots represent the starting and ending points of the spline sections. 
-
+{\color{blue}
+Despite their superior flexibility, spline series require more parameters than polynomials. In addition to the coefficients of the series, they require the specification of points called knots. These knots represent the starting and ending points of the spline sections. 
+}
 Any spline function can be represented in terms of basis-splines or B-splines. By definition, a B-spline of order $n$ is a piece wise polynomial function of order $n$ in the interval $t_0 \leq x \leq t_n$. The boundary and internal points, $\mathbf{t}=\{t_0,t_1,...,t_n\}$ represent the knots. For a given set of knots, there is one and only one B-spline representation of the spline, thus the name basis spline.  In particular, any cubic spline can be represented as,
 
 \begin{equation}
@@ -625,7 +689,7 @@ This Section is structured as follows. First, I introduce an heuristic technique
 
 \subsection{PSO}
 
-The likelihood of the data is the product of the individual likelihoods of each datum (Eq. \ref{eq:lik_datum}). Therefore, the number of operations needed to evaluate the likelihood grows proportionally to the size of the data set. As I will explain in Section \ref{sect:MCMC}, the burn-in phase of MCMC techniques allows them to reach the target distribution. However, once the MCMC reaches this target distribution, the burn-in computations are discarded. Since the evaluation of the likelihood, and therefore of the posterior, is computationally expensive, I decided to reduce as much as possible the burn-in phase. To do so, I provide MCMC with a set of initial solutions which are close to the Maximum-A-Posteriori (MAP) of the target (posterior) distribution. These near-MAP solutions must not be too crowded on the MAP, otherwise MCMC will spend time in expanding them to reach the entire distribution. Here, there is a trade off between the crowdedness of the solutions and its proximity to the MAP. Since we aim at obtaining a representative sample of the posterior distribution and not just an estimate of it, then the initial set of solution for the MCMC must be carefully chosen to minimise the computing time. This section provides the details of this procedure. 
+The likelihood of the data is the product of the individual likelihoods of each datum (Eq. \ref{eq:lik_datum}). Therefore, the number of operations needed to evaluate the likelihood grows proportionally to the size of the data. As I will explain in Section \ref{sect:MCMC}, the burn-in phase of MCMC techniques allows them to reach the target distribution. However, once the MCMC reaches this target distribution, the burn-in computations are discarded. Since the evaluation of the likelihood, and therefore of the posterior, is computationally expensive, I decided to reduce as much as possible the burn-in phase. To do so, I provide MCMC with a set of initial solutions which are close to the Maximum-A-Posteriori (MAP) of the target (posterior) distribution. These near-MAP solutions must not be too crowded on the MAP, otherwise MCMC will spend time in expanding them to reach the entire distribution. Here, there is a trade off between the crowdedness of the solutions and its proximity to the MAP. Since we aim at obtaining a representative sample of the posterior distribution and not just an estimate of it, then the initial set of solution for the MCMC must be carefully chosen to minimise the computing time. This section provides the details of this procedure. 
 
 In Section \ref{sect:MCMC}, I will also show that the MCMC flavour more suitable to our objective belongs to the family of \emph{ensemble} MCMC. This flavour works with particles in the parametric space. To make the transition between the initial MAP solutions and the  MCMC particles as efficient as possible, I chose a MAP finder which works also with particles: the Particle Swarm Optimiser \cite[PSO,][]{Kennedy1995}. I provides a heuristic cheap and fast approach to the MAP solution. The PSO works with an ensemble of particles which move through the parametric space. These particles use the collective and individual past and present information to update their position. This information is specified by the score function, which in our case is the posterior distribution. The particles update their position iteratively by means of their velocity. This velocity has a random but restricted magnitude, however, its direction is determined by the particle position, and the individual and collective positions with maximum score. \citet{Kennedy1995} has a detailed description of the original algorithm, while a more efficient version is given by \citep{Clerc2002}.
 
@@ -772,7 +836,7 @@ The first version of the Bayesian Hierarchical Model was implemented by \'Angel 
 I took this version and modified in the following aspects. I included the photometric and proper motions EMB sequence, the uncertainties both in proper motion and in photometry, and the width of the sequence modelled as the multivariate gaussian. Then, we realised that the principal curve analysis is not compatible with the deconvolution methodology. The principal curve analysis is driven by the elements with higher variance. Thus, we decided to parametrise the polynomials with the true colour, a more interpretable nuisance parameter that was later marginalised with the aid of a prior. For this prior we introduced the colour distribution as a GMM. 
 
 Previous to the introduction of the marginalisation of the nuisance parameters, the model worked fine on samples of a few hundreds of stars. Once the marginalisation was introduced, the computing time of the model increased dramatically, rendering its application to higher data sizes unpractical. At this point we decided to port the existing \emph{Stan} code into \emph
-{Python}\footnote{https://www.python.org} so that we can work with the parallel \emph{emcee} code. \emph{emcee} proved to be of great use. Due to its parallelisation capabilities we were able to increase the data size from 2000 to 10,000 objects. Since the computing of the likelihood was the highest computational challenge, I developed my own routines to perform it on parallel. However, \emph{CosmoHammer} \citep{Akeret2013} turn out to be more efficient in distributing the parallel loads. I ported the BHM code into \emph{CosmoHammer} and modified this last one. The modifications ranged from data files and log entries, to the introduction of priors and the handling of an Hybrid-HPC scheme using both MPI and multithreading. Despite the Hybrid-HPC scheme, the computing of the likelihood of a data set with $10^5$ objects seemed unreachable. At this point, I performed two tasks, the first was to strip the code of all auxiliary libraries calls, and the second was the vectorisation of the majority of the operations. Since the parameters of the field were held fixed, the field likelihood was computed externally for each object. The code was then fed with the data, the field likelihood, and the auxiliary computations reduced at minimum. Among the reduced computation there are, for example, the Cholesky decompositions and matrix inversions of the covariance matrices of the uncertainty. Instead of doing these computation inside the code, the code was fed with the precomputed values. This further reduced the computing time.
+{Python}\footnote{https://www.python.org} so that we can work with the parallel \emph{emcee} code. \emph{emcee} proved to be of great use. Due to its parallelisation capabilities we were able to increase the data size from 2000 to 10,000 objects. Since the computing of the likelihood was the highest computational challenge, I developed my own routines to perform it on parallel. However, \emph{CosmoHammer} \citep{Akeret2013} turn out to be more efficient in distributing the parallel loads. I ported the BHM code into \emph{CosmoHammer} and modified this last one. The modifications ranged from data files and log entries, to the introduction of priors and the handling of an Hybrid-HPC scheme using both MPI and multithreading. Despite the Hybrid-HPC scheme, the computing of the likelihood of a data set with $10^5$ objects seemed unreachable. At this point, I performed two tasks, the first was to strip the code of all auxiliary libraries calls, and the second was the vectorisation of the majority of the operations. Since the parameters of the field were held fixed, the field likelihood was computed externally for each object. The code was then fed with the data set, the field likelihood, and the auxiliary computations reduced at minimum. Among the reduced computation there are, for example, the Cholesky decompositions and matrix inversions of the covariance matrices of the uncertainty. Instead of doing these computation inside the code, the code was fed with the precomputed values. This further reduced the computing time.
 
 Introducing PSO and later the charged PSO reduced even further the computing time.  At this point the code was able to run on a data set with $10^5$ objects. However, convergence of the MCMC still required several weeks of computations. Once the approximation to the marginalisation integral (Eqs. \ref{eq:clmarginalps} and \ref{eq:clmarginalpb}) was introduced, the computing time reduced far more. Finally, the tuning of the \emph{emcee} parameters allowed us to increase the acceptance fraction, and reach convergence within for weeks of full computing time with a 80 cores computer cluster. It is indeed a very long time, however it is reasonable compared with our original estimates of approximately 2 years of computing time.\footnote{Today, the DANCe team is working on a GPU version of the code which is expected to compute the same amount of calculations in a couple of days.}.
 
@@ -846,7 +910,7 @@ E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\left[z_{n,0}\cdot w_0 \cdo
 
 The maximisation step remains identical except for the indices. There are now $M+1$ fractions $w_i$, with $i=0,1,...,M$, and the means and covariances run from $i=1,...,M$.
 
-Regarding the photometric GMM of the field. Since photometry has missing values, we use the EM algorithm of \citet{McMichael1996}. This algorithm was developed to obtain the MLE of data with missing values. A more recent version has been developed by \citet{Lin2006}, however, this assumes that the missing data is randomly distributed (missing at random). However,  as mentioned earlier, the missing values in the photometry of the DANCE DR2 are not randomly distributed.
+Regarding the photometric GMM of the field. Since photometry has missing values, we use the EM algorithm of \citet{McMichael1996}. This algorithm was developed to obtain the MLE of data sets containing objects with missing values. A more recent version has been developed by \citet{Lin2006}, however, this assumes that the missing entries are randomly distributed (missing at random). However,  as mentioned earlier, the missing values in the photometry of the DANCE DR2 are not randomly distributed.
 
 In the algorithm of \citet{McMichael1996}, there is a set of $N$ gain matrices, one for each datum. Each $M_n$ matrix is an identity matrix in which the rows of the corresponding missing value have been deleted. Thus, the expected value of the likelihood is now,
 

@@ -158,7 +158,7 @@ Using the optimal probability threshold of 0.84 to classify the cluster members,
 
 \begin{figure}[ht!]
 \begin{center}
-\resizebox{\textwidth}{!}{\includegraphics{background/Figures/HBMvsBouy.pdf}}
+\resizebox{\textwidth}{!}{\includegraphics{background/Figures/BHM/BHMvsBouy.pdf}}
 \caption{Mode of the membership probabilities recovered by the BHM compared to those of \citet{Bouy2015}. The lines show the 0.75 and $p_t=0.84$ probability thresholds used in both works. The numbers indicate our new candidate members (top left), the ones we rejected (bottom right), and the common ones (top right). Reproduced from Figure 11 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
 \label{fig:BHMBouy}
 \end{center}
@@ -174,7 +174,7 @@ Therefore, I consider that both previous phenomena, the large proper motion unce
 
  \begin{figure}[ht!]
 \begin{center}
-\resizebox{\textwidth}{!}{\includegraphics[page=1]{background/Figures/Rejecteds.pdf}\includegraphics[page=5]{background/Figures/Rejecteds.pdf}}
+\resizebox{\textwidth}{!}{\includegraphics[page=1]{background/Figures/BHM/Rejecteds.pdf}\includegraphics[page=5]{background/Figures/Rejecteds.pdf}}
 \caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the candidate members of \citet{Bouy2015} rejected by the BHM. Reproduced from Figure 13 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
 \label{fig:rejecteds}
 \end{center}
@@ -182,7 +182,7 @@ Therefore, I consider that both previous phenomena, the large proper motion unce
 
 \begin{figure}[htbp]
 \begin{center}
-\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/RejectedsCOLORS.pdf}\includegraphics[page=5]{background/Figures/RejectedsCOLORS.pdf}}
+\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/BHM/RejectedsCOLORS.pdf}\includegraphics[page=5]{background/Figures/RejectedsCOLORS.pdf}}
 \caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right)showing the candidate members of \citet{Bouy2015} rejected by the BHM. The colours and shapes are a proxy for their $K_s$ magnitude.Reproduced from Figure 14 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
 \label{fig:rejectedsCOLORS}
 \end{center}
@@ -194,7 +194,7 @@ The new candidate members have proper motions uncertainties whose median, $\tild
 
  \begin{figure}[ht]
 \begin{center}
-\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/NewOnes.pdf}\includegraphics[page=5]{background/Figures/NewOnes.pdf}}
+\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/BHM/NewOnes.pdf}\includegraphics[page=5]{background/Figures/NewOnes.pdf}}
 \caption{Proper motion (left) and $K_s$ vs. $i-K_s$ CMD (right) showing the new candidate members found in this work. Reproduced from Figure 12 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
 \label{fig:newones}
 \end{center}
@@ -251,7 +251,7 @@ Also, for the sake of completeness, in Fig. \ref{fig:correlations} I depict the 
 
 \begin{figure}[ht!]
 \begin{center}
-\includegraphics[page=1,width=1.1\textwidth]{background/Figures/Correlations.pdf}
+\includegraphics[page=1,width=1.1\textwidth]{background/Figures/BHM/Correlations.pdf}
 \caption{Correlation matrix of the posterior distributions of the parameters in the BHM. The colour code indicates the value of the correlation coefficient. Parameter names are the same as those in Table \ref{tab:parameters}.}
 \label{fig:correlations}
 \end{center}
@@ -264,7 +264,7 @@ Another example of inspection of the posterior is the following. In a past run o
 \subsection{Comparing prior values}
 
 
-\section{Velocity distribution}
+\section{Proper motions distribution}
 The bivariate proper motions distributions of both single and EMB is directly recovered by the BHM by means of the posterior distributions of the parameters in the GMM modelling these populations.
 These bivariate distributions are depicted in Fig, \ref{fig:PM}.
 
@@ -272,7 +272,7 @@ The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos
 
 \begin{figure}[ht!]
 \begin{center}
-\includegraphics[page=2,width=\textwidth]{background/Figures/MembersModel.pdf}
+\includegraphics[page=2,width=\textwidth]{background/Figures/BHM/MembersModel.pdf}
 \caption{Proper motion distributions recovered by the BHM. The dashed and dot-dashed ellipses represent the mode of 100 samples (orange lines) from the posterior covariance matrices in the cluster and EMB GMMs, respectively. Reproduced from Figure 8 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
 \label{fig:PM}
 \end{center}
@@ -282,12 +282,12 @@ The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos
     \centering
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-       \includegraphics[page=2,width=\textwidth]{background/Figures/Cs_members.pdf}
+       \includegraphics[page=2,width=\textwidth]{background/Figures/BHM/Cs_members.pdf}
         \caption{}
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-     \includegraphics[page=3,width=\textwidth]{background/Figures/Cs_members.pdf}
+     \includegraphics[page=3,width=\textwidth]{background/Figures/BHM/Cs_members.pdf}
         \caption{}
     \end{subfigure}
 \caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the GMM modelling the single stars (orange spaghetti lines), the kernel density estimation of the BHM candidate members classified as single stars (those whose cluster membership probability is higher than 0.84 and EMB membership probability is lower than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies below the EMB sequence (blue line).}
@@ -298,12 +298,12 @@ The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos
     \centering
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-       \includegraphics[page=2,width=\textwidth]{background/Figures/Bs_members.pdf}
+       \includegraphics[page=2,width=\textwidth]{background/Figures/BHM/Bs_members.pdf}
         \caption{}
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
-     \includegraphics[page=3,width=\textwidth]{background/Figures/Bs_members.pdf}
+     \includegraphics[page=3,width=\textwidth]{background/Figures/BHM/Bs_members.pdf}
         \caption{}
     \end{subfigure}
 \caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the GMM modelling the EMB stars (orange spaghetti lines), the kernel density estimation of the BHM candidate members classified as EMB stars (those whose cluster membership probability is higher than 0.84 and EMB membership probability is higher than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies near the EMB sequence (blue line).}
@@ -378,7 +378,7 @@ On the other hand, the differences between the discrete distributions, the BHM a
 
 \begin{figure}[htbp]
 \begin{center}
-\resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/absolute_JHK-log.pdf}}
+\resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/BHM/absolute_JHK-log.pdf}}
 \caption{Luminosity distribution of $J,H,K_s$ bands (orange spaghetti lines). Also shown: the regions of incompleteness, and, the luminosity distributions computed from: the candidate members of \citet{Bouy2015} (dot-dashed blue line), and our candidate members, ($p_{84\%}>p_t$, dashed black line). Reproduced from Figure 10 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
 \label{fig:Luminosities}.
 \end{center}
@@ -416,17 +416,25 @@ Figure \ref{fig:splineML} shows the spline fit to the mass-luminosity relations 
 
 \subsection{Present day system mass distribution}
 
-The mass distribution is independently obtained for the $J,H,K_s$ luminosity distributions by means of the mass-luminosity relations described in the previous section. Since the luminosity functions of Sect. \ref{sect:luminosity} correspond to the luminosity of systems (single stars unresolved binaries and multiple systems), then, the derived mass function corresponds to the Present Day System Mass Distribution (PDSMD).  Figure \ref{fig:MassFunction} shows the logarithmic PDSMD ($\xi_L$) for the $J,H,K_s$ bands normalised on the completeness limits of the DANCe survey. The logarithmic representation of the mass distribution is a transformation from the natural variable of mass into the logarithm of 10 scale. It is customary to represent the mass distribution in this scale.
+The mass distribution is independently obtained for the $J,H,K_s$ luminosity distributions by means of the mass-luminosity relations described in the previous section. Since the luminosity functions of Sect. \ref{sect:luminosity} correspond to the luminosity of systems (single stars unresolved binaries and multiple systems), then, the derived mass function corresponds to the Present Day System Mass Distribution (PDSMD).  Figure \ref{fig:MassDistribution} shows the logarithmic PDSMD ($\xi_L$) for the $J,H,K_s$ bands normalised on the completeness limits of the DANCe survey. The logarithmic representation of the mass distribution is a transformation from the natural variable of mass into the logarithm of 10 scale. It is customary to represent the mass distribution in this scale.
 
-For the sake of comparison, Figure \ref{fig:MassFunction} also shows the three-slope power-law function of \citet{Bouy2015}, and the Initial Mass Functions (IMF) of \citet{Thies2007} and \citet{Chabrier2005}. The standard uncertainties in \citet{Chabrier2005} IMF are those reported in \citet{Chabrier2003}. 
+\begin{figure}[htbp]
+\begin{center}
+\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/BHM/MassDistribution.pdf}}
+\caption{Normalised logarithmic PDSMD in $J,H,K_s$ band. Also shown the completeness limits computed in previous section and transformed with the mass-luminosity realtion.}
+\label{fig:ModelMassFunction}.
+\end{center}
+\end{figure}
+
+For the sake of comparison, Figure \ref{fig:ModelMassFunction} shows the PDSMD ($\xi_L$) for the $K_s$ band of the previous Figure, together with the three-slope power-law function of \citet{Bouy2015}, and the Initial Mass Functions (IMF) of \citet{Thies2007} and \citet{Chabrier2005}. The standard uncertainties in \citet{Chabrier2005} IMF are those reported in \citet{Chabrier2003}. 
 
 This Figure shows that the PDSMDs derived from the BHM compare well, at least in the completeness interval, with the one proposed by \citet{Bouy2015}. The discrepancies between these two, particularly above $0.3 \mathrm{M_{\odot}} (-0.5 < \log \mathrm{M/M_{\odot}})$, may have its origin on the following aspects.
 
 The PDSMF of \citet{Bouy2015} is computed using only their candidate members within the central three degree region of the Pleiades DANCe DR2. First, their list of candidate members is not the same as those found by the BHM. Second, the PDSMD derived from the BHM uses all objects in the data set, not just the high membership probability candidates. Third, as mentioned in Section \ref{sect:luminosity}, the cut to the central three degree region may have biased the derived PDSMF of \citet{Bouy2015}. Therefore, the lack of objects that it shows, particularly in the mass range $0.3 - 0.7 \mathrm{M_{\odot}}$ ($-0.5 < \log \mathrm{M/M_{\odot}} < -0.2$) may come from the objects that \citet{Bouy2015} did not include in the analysis: those lying outside the inner three degree region. 
 
-To obtain the power-law model that is shown on Fig. \ref{fig:MassFunction} (as the black solid line), the procedure is the following. 
+To obtain the power-law model that is shown on Fig. \ref{fig:ModelMassFunction} (as the black solid line), the procedure is the following. 
 
-First, I select three competing models: a log-normal function (like that of \citet{Chabrier2003,Chabrier2005}), and two power-law functions of the form $m^{-\alpha}$ with two and three power-law segments. Second, from a 100 sample distribution of the PDSMD in the $K_s$ band (the ones shown as spaghetti lines in Fig. \ref{fig:MassFunction}) I compute the mean distribution. This is, at each of the 200 points grid spanning the completeness interval, I obtain the mean of the probabilities given by the 100 distributions. With this mean distribution I draw a $10^4$ synthetic sample of masses. Third, using \emph{PyMultiNest}\footnote{A Python wrapper to the \emph{MultiNest} program that uses the Nested Sampling algorithm (see Sect. \ref{sect:NestedSampling})} \citep{Buchner2014}, I infer the parameters of the three models given the masses of the synthetic sample. Table \ref{tab:fitPDSMD} gives the MAP of the parameters in each model together with its evidence (see Sect. \ref{sect:modelselection}). Judging by these evidences, the best model is the two segment power-law. 
+First, I select three competing models: a log-normal function (like that of \citet{Chabrier2003,Chabrier2005}), and two power-law functions of the form $m^{-\alpha}$ with two and three power-law segments. Second, from a 100 sample distribution of the PDSMD in the $K_s$ band (the ones shown as spaghetti lines in Fig. \ref{fig:ModelMassFunction}) I compute the mean distribution. This is, at each of the 200 points grid spanning the completeness interval, I obtain the mean of the probabilities given by the 100 distributions. With this mean distribution I draw a $10^4$ synthetic sample of masses. Third, using \emph{PyMultiNest}\footnote{A Python wrapper to the \emph{MultiNest} program that uses the Nested Sampling algorithm (see Sect. \ref{sect:NestedSampling})} \citep{Buchner2014}, I infer the parameters of the three models given the masses of the synthetic sample. Table \ref{tab:fitPDSMD} gives the MAP of the parameters in each model together with its evidence (see Sect. \ref{sect:modelselection}). Judging by these evidences, the best model is the two segment power-law. 
 
 The two segment power-law model agrees with the three segment model of \citet{Bouy2015}. However, there are still differences, particularly at the low and high mass ends. Nevertheless, it is in clear discrepancy with the IMFs of \citet{Chabrier2005},  \cite[$m_c=0.25_{-0.016}^{+0.021}$ and $\sigma=0.55_{-0.01}^{+0.05}$, the uncertainties are those reported by][for single objects]{Chabrier2003} and of \citet{Thies2007}. 
 
@@ -459,9 +467,9 @@ Finally, I notice that, as mentioned in Sect. \ref{sect:mass-luminosity}, the un
 
 \begin{figure}[htbp]
 \begin{center}
-\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/MassDistribution.pdf}}
-\caption{Normalised logarithmic PDSMD in $J,H,K_s$ bands. Also shown the IMFs of \citet{Chabrier2005} (blue dotted line) and  \citet{Thies2007} (turquoise long-dashed line), and power-law models found here (black solid line, see text) and by \citet{Bouy2015} (blue dashed line).}
-\label{fig:MassFunction}.
+\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/BHM/ModelsMassDistribution.pdf}}
+\caption{Normalised logarithmic PDSMD in $K_s$ band. Also shown the IMFs of \citet{Chabrier2005} (blue dotted line) and  \citet{Thies2007} (turquoise long-dashed line), and power-law models found here (black solid line, see text) and by \citet{Bouy2015} (blue dashed line).}
+\label{fig:ModelMassFunction}.
 \end{center}
 \end{figure}
 

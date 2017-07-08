@@ -1,7 +1,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Pleiades DANCe DR2 properties}}{4}{table.2.1}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Survey, and derived tidal radius for recent studies in the literature. \relax }}{8}{table.caption.6}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Summary of the Pleiades DANCe DR2.\relax }}{19}{table.caption.17}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Uncertainties of the Pleiades DANCe DR2.\relax }}{19}{table.caption.18}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Membership probabilities of the 22 excluded candidate members of \citet {Bouy2015}.\relax }}{23}{table.caption.22}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Parameters names, symbols, and priors.\relax }}{67}{table.caption.29}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Hyper-parameters for different blocks of the Hierarchical Bayesian Model. The upper and middle blocks correspond, respectively, to hyper-parameters of the proper motions and photometric models. The lower block to hyper-parameters shared by both models.\relax }}{68}{table.caption.32}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Mode, 16 and 84 percentiles of each parameter posterior distribution.}}{88}{table.4.1}
+\contentsline {table}{\numberline {4.1}{\ignorespaces continued.}}{89}{table.4.1}
+\contentsline {table}{\numberline {4.1}{\ignorespaces continued.}}{90}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Parameters and evidence of models fitted to the PDSMD\relax }}{104}{table.caption.60}
 \addvspace {10\p@ }
