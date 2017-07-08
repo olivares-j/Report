@@ -82,7 +82,7 @@ Let  $f$ be a probability distribution on $x\subset\mathbb{R}$, with support on 
 \int_a^b f(x) \mathrm{d}x = 1 \nonumber
 \end{equation}
 
-Let $y=g(x)$ be the nonlinear transformation, with $g$ a function of $x$ with inverse $g^{-1}$, continuous and with continuous derivative, so that $x=g^{-1}(y)$, with $y\subset \mathbb{R}$. Then, the following is true,
+Let $y=g(x)$ be the nonlinear transformation, with $g$ a function of $x$ with inverse $g^{-1}$, continuous and with continuous derivative\footnote{It can be continuous by parts, resulting in a continuous by parts PDF, e.g. a $n$ power-law distribution.}, so that $x=g^{-1}(y)$, with $y\subset \mathbb{R}$. Then, the following is true,
 
 \begin{equation}
 \label{eq:transformdistribution}
@@ -103,6 +103,7 @@ p(b|c) = \int_a p(b|a,c) \cdot p(a|c) \cdot \mathrm{d}a.
 This Equation illustrates that $p(b|c)$ is a normalisation constant which can be evaluated once $p(b|a,c)$ and $p(a|c)$ are known. This turns out to be very useful, since it tells us that $p(a|b,c) \propto p(b|a,c) \cdot p(a|c)$.
 
 \subsubsection{Models and parametric inference}
+\label{sect:parametric_inference}
 In a broad sense, models are representations or abstractions of the knowledge someone has about something. Sometimes this knowledge is also shared by others. Models are everywhere in our daily life: from the words we speak every day, to the evolution of the species and the general relativity; from a kid's drawing to cosmological models. In science, however, the concept of model is restricted to a mathematical representation of the relations (the knowledge) among the entities that the model attempts to describe: the observables (i.e. the data). If the model contains variables that through the different values they take reproduce in some extent the observables, then model is called parametric and the variables the parameters. 
 
 \textbf{Parametric statistical models, like the ones I use in this work, assume that the underlying population of interest, from which the observed data is just a sample, can be described by parametric probability distribution functions. The act of finding the parameters governing these distributions is called parametric inference. This last can focus either on the entire PDFs of the parameters, or just on some summary of them (e.g. the maximum a posteriori, also known as MAP, or the mean and variance).}
@@ -111,22 +112,22 @@ The proper way to obtain the entire probability distribution of the parameters i
 
 In this context, Bayes' theorem is:
 \begin{equation}
-p(\mathbf{\theta}|\mathbf{D},\mathcal{M}) = \frac{p(\mathbf{D}|\mathbf{\theta},\mathcal{M})\cdot p(\mathbf{\theta}|\mathcal{M})}{p(\mathbf{D}|\mathcal{M})}.
+p(\boldsymbol{\theta}|\mathbf{D},\mathcal{M}) = \frac{p(\mathbf{D}|\boldsymbol{\theta},\mathcal{M})\cdot p(\boldsymbol{\theta}|\mathcal{M})}{p(\mathbf{D}|\mathcal{M})}.
 \end{equation}
-where $\mathbf{\theta},\mathbf{D}$ and $\mathcal{M}$ correspond, respectively, to the parameters in the model, the data which the model tries to describe, and the model itself. 
+where $\boldsymbol{\theta},\mathbf{D}$ and $\mathcal{M}$ correspond, respectively, to the parameters in the model, the data which the model tries to describe, and the model itself. 
 
-The term on the \textbf{left-hand side} is called the posterior probability distribution of the parameters, $\mathbf{\theta}$ given the data $\mathbf{D}$, and the model $\mathcal{M}$. On the right hand side, the two terms in the numerator are called the \emph{likelihood} for the data, $p(\mathbf{D}|\mathbf{\theta},\mathcal{M})$ and the \emph{prior} of the parameters, $p(\mathbf{\theta}|\mathcal{M})$. The denominator, $p(\mathbf{D}|\mathcal{M})$, is called the \emph{evidence}, and results from
+The term on the \textbf{left-hand side} is called the posterior probability distribution of the parameters, $\boldsymbol{\theta}$ given the data $\mathbf{D}$, and the model $\mathcal{M}$. On the right hand side, the two terms in the numerator are called the \emph{likelihood} for the data, $p(\mathbf{D}|\boldsymbol{\theta},\mathcal{M})$ and the \emph{prior} of the parameters, $p(\boldsymbol{\theta}|\mathcal{M})$. The denominator, $p(\mathbf{D}|\mathcal{M})$, is called the \emph{evidence}, and results from
 
 \begin{equation}
 \label{eq:evidence}
-Z \equiv p(\mathbf{D}|\mathcal{M}) = \int_{\mathbf{\theta}} p(\mathbf{D}|\mathbf{\theta},\mathcal{M})\cdot p(\mathbf{\theta}|\mathcal{M})\cdot \mathrm{d}\mathbf{\theta}
+Z \equiv p(\mathbf{D}|\mathcal{M}) = \int_{\boldsymbol{\theta}} p(\mathbf{D}|\boldsymbol{\theta},\mathcal{M})\cdot p(\boldsymbol{\theta}|\mathcal{M})\cdot \mathrm{d}\boldsymbol{\theta}
 \end{equation} 
 
-Formally, the likelihood and the prior are probability distributions for the data $\mathbf{D}$ and of parameters $\mathbf{\theta}$, respectively. However, for the posterior to be a probability distribution of the parameters, it only suffices that the product of the likelihood times the prior does not vanish everywhere or be negative anywhere\footnote{See Property 2. Although negative probabilities may have sense in quantum mechanics. See for example \citet{1942RSPSA.180....1D}}. If these are not probability distributions, they are called \emph{improper} priors or \emph{improper} likelihoods. In the extreme case that their product vanishes everywhere, which may be the case if the prior is terribly specified or if the likelihood does not take proper account of extreme data, the posterior will not be a probability distribution due to a division by zero. Nevertheless, it makes no sense to try to estimate the parameters of a model with zero evidence.
+Formally, the likelihood and the prior are probability distributions for the data $\mathbf{D}$ and of parameters $\boldsymbol{\theta}$, respectively. However, for the posterior to be a probability distribution of the parameters, it only suffices that the product of the likelihood times the prior does not vanish everywhere or be negative anywhere\footnote{See Property 2. Although negative probabilities may have sense in quantum mechanics. See for example \citet{1942RSPSA.180....1D}}. If these are not probability distributions, they are called \emph{improper} priors or \emph{improper} likelihoods. In the extreme case that their product vanishes everywhere, which may be the case if the prior is terribly specified or if the likelihood does not take proper account of extreme data, the posterior will not be a probability distribution due to a division by zero. Nevertheless, it makes no sense to try to estimate the parameters of a model with zero evidence.
 
-%Whenever we have a model $M$, we have also the \emph{a priori} knowledge used to construct it. Actually, it can be classified in two kinds of prior information. One refers to the prior information conveyed in the model, which I call $M$. This is the information that the creator of the model uses to establish the relations among the elements of the model: variables. The second kind of prior, $p(\mathbf{\theta}|M)$ refers to the statement the user of the model made of his/her beliefs about the probability distribution of the parameter values. This is indeed subjective. However, it is, in my opinion, less subjective than the former, $M$, prior information. At least in this last kind, the subjectivity is expressed objectively in a probabilistic, and therefore measurable way.
+%Whenever we have a model $M$, we have also the \emph{a priori} knowledge used to construct it. Actually, it can be classified in two kinds of prior information. One refers to the prior information conveyed in the model, which I call $M$. This is the information that the creator of the model uses to establish the relations among the elements of the model: variables. The second kind of prior, $p(\boldsymbol{\theta}|M)$ refers to the statement the user of the model made of his/her beliefs about the probability distribution of the parameter values. This is indeed subjective. However, it is, in my opinion, less subjective than the former, $M$, prior information. At least in this last kind, the subjectivity is expressed objectively in a probabilistic, and therefore measurable way.
 %
-%The likelihood of the data $p(\mathbf{D}|\mathbf{\theta},M)$, is a probability distribution on the data, $\mathbf{D}$. However, it is a function on the parameters, $\mathbf{\theta}$, which corresponds to the function $f$ of Eq. \ref{eq:model}. This function is not necessarily a probability distribution on the parameters. 
+%The likelihood of the data $p(\mathbf{D}|\boldsymbol{\theta},M)$, is a probability distribution on the data, $\mathbf{D}$. However, it is a function on the parameters, $\boldsymbol{\theta}$, which corresponds to the function $f$ of Eq. \ref{eq:model}. This function is not necessarily a probability distribution on the parameters. 
 
 As mentioned before, the likelihood is a probability distribution for the data, given the parameters, regardless of the size of it. Almost always the data is a collection of measurements of several objects, but it could also be made up of just one object. The collection of measurements of one or several quantities of a single object follows a probability distribution, which is usually summarised by two statistics. It is often assumed that this probability distribution is normal (univariate or multivariate), which then is summarised by the mean and the standard deviation. These two are commonly known as the datum and its uncertainty, respectively. A data set is then composed of the collection of summary statistics of one or several objects. To compute the likelihood for this collection of statistics (i.e. the data), some assumption must be made. 
 
@@ -136,43 +137,53 @@ When measuring the properties of objects, it is often assumed that the probabili
 An example were this assumption does not hold is the following. GIVE GAIA EXAMPLE OF STELLAR POSITIONS
 }
 
-Let $\mathbf{D}$ be the data, i.e. the collection of statistics of the $N$ objects, and $p_n(d_n)$ be the probability distribution rendered by several measurements of object $n$. If these $\{p_n(d_n)\}_{n=1}^N$ are assumed to be independent, then
+Let $\mathbf{D}$ be the data, i.e. the collection of statistics of the $N$ objects, and $p_n(\mathbf{d}_n)$ be the probability distribution rendered by several measurements of object $n$. If these $\{p_n(\mathbf{d}_n)\}_{n=1}^N$ are assumed to be independent, then
 \begin{equation}
 \label{eq:independence}
- p(\mathbf{D}) = \prod_{n=1}^N p_n(d_n), \ \ n=\{1,2,...,N\},
+ p(\mathbf{D}) = \prod_{n=1}^N p_n(\mathbf{d}_n),
 \end{equation}
 
  with $p_n$ explicitly stating that the individual probability distributions are distinct. 
  
-Similarly, if the likelihood of the data, $p(\mathbf{D}|\mathbf{\theta},M)$ is assumed to be independent for each object, then
+Similarly, if the likelihood of the data, $p(\mathbf{D}|\boldsymbol{\theta},M)$ is assumed to be independent for each object, then
 
 \begin{equation}
 \label{eq:lik_datum}
- p(\mathbf{D}|\mathbf{\theta},M) = \prod_{n=1}^N p(d_n|\mathbf{\theta},M), \ \ n=\{1,2,...,N\}.
+ p(\mathbf{D}|\boldsymbol{\theta},M) = \prod_{n=1}^N p(\mathbf{d}_n|\boldsymbol{\theta},M).
 \end{equation}
 
-The term $p(d_n|\mathbf{\theta},M)$ is the likelihood of datum $d_n$. This is also called the \emph{generative} model, since it contains the necessary information to generate the data\footnote{It may also contain the uncertainty process that transform the \emph{true} value into the noisy observations.}. 
+The term $p(\mathbf{d}_n|\boldsymbol{\theta},M)$ is the likelihood of datum $\mathbf{d}_n$. This is also called the \emph{generative} model, since it contains the necessary information to generate the data. 
+
 {\color{red}
-To take into account the uncertainty process for object $n$, we model the datum $d_n$ as resulting from the true value, $x_n$ rendered by the model, plus another random variable given by the uncertainty process, $e_n$. Assuming that both of them are normally distributed, then
+To take into account the uncertainty process for object $n$, we model the datum $\mathbf{d}_n$ as resulting from the addition of the true value, $\mathbf{x}_n$, which is given by the model, with a random variable, $\mathbf{e}_n$, given by the uncertainty process. This is
+\begin{equation}
+\mathbf{d}_n = \mathbf{x}_n + \mathbf{e}_n. \nonumber
+\end{equation}
 
+In general, if the model does not contain any intrinsic dispersion, then its likelihood can be thought of as a Dirac $\delta$ function, which is centred at the \emph{true} value $\mathbf{x}_n$. Then, it can be added (i.e. convolved\footnote{The addition of two random variables results in another random variable. This is analogous  to the convolution, dennoted $*$, of their PDFs.}) to the distribution of the uncertainty process. However, it is customary to also include an intrinsic dispersion in the model to account for over-simplistic assumptions or underestimated uncertainties. 
+
+In particular, it can be assumed that both the uncertainty process of datum $\mathbf{d}_n$, and the likelihood of the model are normally distributed with variances $\boldsymbol{\Sigma}_n^2$ and $\boldsymbol{\Sigma}^2$, respectively, 
 \begin{align}
-d_n = & x_n + e_n \nonumber \\
-p(x_n|\mathbf{\theta},M)= &\mathcal{N}(x_n|\mathbf{\theta},M)\nonumber\\
-p(e_n)= &\mathcal{N}(e_n|0,\sigma_n^2)\nonumber\\
+p(\mathbf{e}_n|\mathbf{\Sigma}_n^2)= &\mathcal{N}(\mathbf{e}_n|0,\boldsymbol{\Sigma}_n^2), \nonumber\\
+p(x_n|\boldsymbol{\theta},M,\mathbf{\Sigma}^2)= &\mathcal{N}(\mathbf{x}_n|\boldsymbol{\theta},M,\boldsymbol{\Sigma}^2).\nonumber
 \end{align}
-with, $d_n$ and $\sigma_n^2$ the mean and variance of the PDF of the measured quantity for object $n$.
-Then the sum of these two normally distributed random variables is another normally distributed random variable\footnote{This is an axiom of the arithmetics of random variables. Also, the addition of two random variables is given by the convolution of their PDF.}. Thus,
+Formally, $\boldsymbol{\Sigma}^2$ is part of the set of model parameters, $\boldsymbol{\theta}$, but I explicitly leave it outside to exemplify the process. 
+
+Then the addition of these two normally distributed random variables results in another normally distributed random variable\footnote{The convolution of two Gaussian PDFs is another Gaussian PDF.}. Thus,
 
 \begin{equation}
-p(d_n|\mathbf{\theta},M) = \mathcal{N}(d_n|\mathbf{\theta},M,\sigma_n^2).
+p(\mathbf{x}_n|\boldsymbol{\theta},M,\boldsymbol{\Sigma}^2)*p(\mathbf{e}_n|\boldsymbol{\Sigma}_n^2) = \mathcal{N}(\mathbf{d}_n|\boldsymbol{\theta},M,\boldsymbol{\Sigma}_n^2+\boldsymbol{\Sigma}^2).
 \end{equation}
-Therefore,
+
+Therefore, Eq. \ref{eq:lik_datum}, can be expressed in general as,
 
 \begin{equation}
-%\label{eq:lik_datum}
-p(\mathbf{D}|\mathbf{\theta},M) = \prod_{n=1}^N p(d_n|\mathbf{\theta},M,\sigma_n^2), \ \ n=\{1,2,...,N\}.
+\label{eq:lik_generativemodel}
+p(\mathbf{D}|\boldsymbol{\theta},M) = \prod_{n=1}^N p(\mathbf{d}_n|\boldsymbol{\theta},M,\mathbf{u}_n),
 \end{equation}
+where $\mathbf{u}_n$ is the uncertainty of datum $\mathbf{d}_n$.
 }
+
 Bayes' theorem can be interpreted as the probabilistic way to update the state of knowledge. To me, it embodies the process of knowledge improvement once we recognise that knowledge is uncertain. Even when its uncertainty is negligible under the evidence that supports it. Bayes' theorem helps us update our prior beliefs once we multiply it by the likelihood of the data. Then, the posterior probabilities, become our new state of knowledge. 
 
 Furthermore, Bayes' theorem also provides the objective way to compare two models or hypothesis, and update the a priori knowledge used to construct them. This is called model selection, which I  briefly explain in the next section.
@@ -280,12 +291,12 @@ To exemplify the use of PGMs, Figure \ref{fig:pgmGMM} shows the PGM for the BHM 
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics[height=8cm]{background/Figures/BGMM.png}
-\caption{PGM representing the parametric inference of a Gaussian Mixture, see text for details. Figure by Benwing, license: CC BY-3.0}
+\caption{PGM representing the parametric inference of a Gaussian Mixture, see text for details. Figure by Benwing, license: Creative Commons BY-3.0}
 \label{fig:pgmGMM}
 \end{center}
 \end{figure}
 
-\section{The BHM for the DANCe Pleiades data set}
+\section{The BHM for the Pleiades DANCe data set}
 \label{sect:datamodelling}
 %The objective of this work is the statistical modelling of the DANCe data set of Nearby Young Open Clusters (NYOC), particularly the one of the Pleiades cluster (see Section \ref{sect:DR2}). 
 
@@ -338,11 +349,11 @@ In the DANCe DR2, missing values occur only in the photometric measurements (see
 
 \textbf{Truncation occurs when the data set does not contain records, neither of the measured value nor of the number of measurements, for objects whose measured quantity lies outside certain limits}. On the other hand, censoring happens when the data set contains only partial information about the actual value of the measured quantity. Basically,  censoring happens when the value lies outside the upper or lower limits of the measuring instrument, and these limits become the only available record of the measurement. Currently, the DANCe DR2 does not provide upper or lower limits for the censored data. Although these limits could also be inferred from the data, the heterogeneous origin of the DANCe DR2 prohibits this task. Furthermore, the missing values in the DANCe DR2 data set do not occur only because of censoring. Indeed, cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures are just some examples of potential sources of missing values. The statistical treatment of missing values originating from all these sources lies beyond the scope of this work. However, there is a general way to deal with missing values \textbf{whatever} their origin.
 
-In terms of probability, there is no distinction between missing values and parameters. Therefore, we can marginalise missing values as we do with any other nuisance parameter. If the vector of measurements $\mathbf{d}$ has a missing value in entry $i$, then $x_{i} = NA$ , and $\mathbf{d}=\{x_1,x_2,...,x_{i-1},NA,x_{i+1}...,x_n\}$, with $n$ the dimension of $\mathbf{d}$. Thus, the marginalised likelihood of this datum, given model parameters $\mathbf{\theta}$ is
+In terms of probability, there is no distinction between missing values and parameters. Therefore, we can marginalise missing values as we do with any other nuisance parameter. If the vector of measurements $\mathbf{d}$ has a missing value in entry $i$, then $x_{i} = NA$ , and $\mathbf{d}=\{x_1,x_2,...,x_{i-1},NA,x_{i+1}...,x_n\}$, with $n$ the dimension of $\mathbf{d}$. Thus, the marginalised likelihood of this datum, given model parameters $\boldsymbol{\theta}$ is
 
 \begin{equation}
 \label{eq:marginalmiss}
-p(\mathbf{d}|\mathbf{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i-1},x_{i}= NA,x_{i+1},...,d_n\}|\mathbf{\theta})\cdot \mathrm{d}x_{i}.
+p(\mathbf{d}|\boldsymbol{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i-1},x_{i}= NA,x_{i+1},...,d_n\}|\boldsymbol{\theta})\cdot \mathrm{d}x_{i}.
 \end{equation}
 
 Throughout this work, missing entries are marginalised in the previous way whenever present.
@@ -387,7 +398,7 @@ p(\mathbf{d}_n | \pi,\boldsymbol{\theta}_c,\boldsymbol{\theta}_f,\mathbf{u}_n)=\
 
 where $\boldsymbol{\theta}_f$ and $\boldsymbol{\theta}_c$ indicate the cluster and field parameters, while $\mathbf{u}_n$ refers to the datum uncertainty. The probabilities $p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n)$ and $p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)$ are the field and cluster models, respectively. These models are explained in detail in the next two sections.
 
-In the following, I assume that the observed quantities, even if they contain missing values, resulted from the convolution\footnote{The addition of two stochastic variables is analogous to the convolution of their probability distributions.} of the \emph{true} quantities with a source of uncertainty. The latter could be different for each object, thus resulting in different individual uncertainties. It means that the DANCe DR2 data set is modelled allowing for its intrinsic heteroscedaticity. Although these uncertainties are not assumed to have the same values, I do assume that they have the same shape. Thus, I assume that uncertainties in our data set belong to the multivariate normal family.  This assumption is standard practice and is also supported by the large and heterogeneous origins of the DANCe DR2 data set. 
+In the following, I assume that the observed quantities, even if they contain missing values, resulted from the convolution of likelihood, given the \emph{true} quantities, with the uncertainty process (see Section \ref{sect:parametric_inference}). The latter could be different for each object, thus resulting in different individual uncertainties. It means that the DANCe DR2 data set is modelled allowing for its intrinsic heteroscedaticity. Although these uncertainties are not assumed to have the same values, I do assume that they have the same shape. Thus, I assume that uncertainties in our data set belong to the multivariate normal family.  This assumption is standard practice and is also supported by the large and heterogeneous origins of the DANCe DR2 data set. 
 
 \subsection{The field population}
 To model the field population, I assume that the joint seven-dimensional probability distribution of the field can be factorised into the probability distributions of proper motions and photometry. Thus, the field likelihood of the proper motions and the photometry are assumed to be independent. Also, I assume that both distributions are described by Gaussian Mixture Models (GMM). The flexibility of GMMs to fit a variety of distribution geometries makes them a suitable model to describe the field density of the heterogeneous DANCe DR2 data set. 
@@ -462,68 +473,68 @@ Unresolved multiple systems, and particularly binary systems have an impact on t
 
 For the sake of simplicity, in the following whenever I refer to the photometric or proper motions model of the EMBs, I call it the EMB sequence model (with the subindex $Bs$). I refer to the model of the rest of the stars as the cluster sequence model or simply single stars. Despite that this is an abuse of the terminology, because there are binaries and multiple systems with different mass ratios, it keeps the text more readable.
 
-\subsubsection{Photometric model of equal-mass binaries and single stars}
+\subsubsection{Photometric model of single and EMB stars}
 
 The cluster photometric sequences, both for single and EMB stars, are modelled with cubic splines, one for each of the $Y,J,H,K_s$ vs $CI$ CMDs. I choose the spline series due to their fitting properties. I tried several polynomial bases (monic, Laguerre, Hermite, Chebyshev) but in spite of the order, they were not able to fit the sequence, particularly in the region around $CI \sim 3$, where the slope is higher. 
 
 {\color{blue}
 Despite their superior flexibility, spline series require more parameters than polynomials. In addition to the coefficients of the series, they require the specification of points called knots. These knots represent the starting and ending points of the spline sections. 
 }
-Any spline function can be represented in terms of basis-splines or B-splines. By definition, a B-spline of order $n$ is a piece wise polynomial function of order $n$ in the interval $t_0 \leq x \leq t_n$. The boundary and internal points, $\mathbf{t}=\{t_0,t_1,...,t_n\}$ represent the knots. For a given set of knots, there is one and only one B-spline representation of the spline, thus the name basis spline.  In particular, any cubic spline can be represented as,
+Any spline function can be represented in terms of basis-splines or B-splines. By definition, a B-spline of order $n$ is a piece-wise polynomial function of order $n$ in the interval $t_0 \leq x \leq t_n$. The boundary and internal points, $\mathbf{t}=\{t_0,t_1,...,t_n\}$ represent the knots. For a given set of knots, there is one and only one B-spline representation of the spline, thus the name basis spline.  In particular, any cubic spline can be represented as,
 
 \begin{equation}
 S_3(CI,\boldsymbol{\beta},\mathbf{t}) = \sum_i \beta_i\cdot B_{i,3}(CI,\mathbf{t}).
 \end{equation}
 Where $B_{i,n}$ are the B-splines given by the Cox-de Boor recursive formula, and $\boldsymbol{\beta}$ are the coefficients of the series. For more details on splines and the Cox-de Boor formula see \citet{deBoor1978}.
 
+Despite their fitting properties, B-splines have \textbf{present a problem} when inferring simultaneously their coefficients and knots: there is multi modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi-modality, I decided to keep the knots fixed throughout the inference. Although this decision reduces the flexibility of the splines, it allows a still better fit than that of the tested polynomials. To obtain the maximum-likelihood (ML) estimate of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the BIC to select among compeating models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The BIC indicates that seven coefficients is the best number of components for the B-spline series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the BIC. Since the knot at 3.22 is repeated it means that the resulting spline has lost a degree of continuity. \textbf{Thus the spline derivative is continuos only by parts, and when used to transform distributions, the resulting ones will also be continuous by parts.}
 
+{\color{blue}
+As I mentioned in the introduction to this Section, we assume that the observed photometric quantities are drawn from a distribution resulting from the convolution of the observed uncertainties, with the likelihood, given the \emph{true} quantities. We also assume that the model has an intrinsic dispersion that addresses photometric variations resulting from astrophysical phenomena not treated by our model (see Section \ref{sect:parametric_inference}). These phenomena include, but are not limited to, age, metallicity and distance dispersions, unresolved systems (other than EMB), variability, and transits. If we were to assume no \emph{true} intrinsic dispersion, then any deviation from the \emph{true} quantities should have to be explained \emph{only} by the observational uncertainties. Thus it would result in an over-simplistic model, which would underestimate the likelihood of hypothetical true cluster members. 
 
-Despite their fitting properties, B-splines have an issue when inferring simultaneously their coefficients and knots: there is multi modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi modality, I decided to keep the knots fixed throughout the inference. This decision, although reduces the flexibility of the splines, allows a still better fit than that of the tested polynomials. To obtain the ML estimate of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the BIC to select among compeating models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The BIC indicates that seven coefficients is the best number of components for the B-spline series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the BIC. Since the knot at 3.22 is repeated it means that the resulting spline has lost a degree of continuity in this knot, its derivative is not continuous here.
+This photometric dispersion shows an skewed distribution \cite[see Figure X of][which I reproduce in Fig. \ref{}]{}, which we model with a multivariate skewed normal distribution \cite[CSN,][]{}. Despite the fact that the CSN requires only five parameters more than a multivariate normal distribution, the computing of its density takes $\sim$ 50\% more CPU time than that of the multivariate normal distribution (MND). Due to computational constrains, we decided to postpone the results of the CSN until our computational resources allow it. 
 
-As I mentioned in the introduction to this Section, we assume that the observed photometric quantities are drawn from a probability distribution resulting from the convolution of the observed uncertainties, with the \emph{true} quantities. Here comes an expiation. I recognise that the model is far from perfect and that there are several astrophysical phenomena that it does not addresses. Either because I do not have the knowledge or because they are too complicated to model. These phenomena include, but are not limited to, age, metallicity and distance dispersions, unresolved systems (other than EMB), variability, and transits. Instead of independently modelling each one of them, I assume that all, even those that I ignore, contribute to the model in the shape of an intrinsic photometric dispersion. Given the large and heterogeneous origins of these phenomena, we can safely assume that its total contribution has the shape of a multivariate normal distribution. The parameters of this distribution can be inferred from the data as well.
+Instead of using the CSN, we model the intrinsic photometric  dispersion of both the cluster and EMB sequences with a MND. It has has five dimensions corresponding to our photometric reference set: $CI,Y,J,H,K_s$. The B-splines model the \emph{true} photometric quantities, both for the cluster sequence, $\mathbf{t}_{ph;Cs}$, and the EMB, $\mathbf{t}_{ph;Bs}$. The latter is displaced 0.75 into the bright side of the cluster sequence. In the following, the matrix $\Sigma_{clus}$, represents the covariance matrix of this MND. By definition, covariance matrices are symmetric and positive semi-definite. Therefore, from the 25 entries in $\Sigma_{clus}$, only 15 are unique. These are also inferred from the data set.
+}
 
-We assume that this multivariate gaussian describes both the dispersion of the cluster and EMB sequences. Most importantly, we distinguish this dispersion from the photometric uncertainty of individual measurements. If we were to assume no \emph{true} intrinsic dispersion, then any deviation from the \emph{true} quantities should have to be explained \emph{only} by the observational uncertainty. 
-
-In our photometric model of the cluster, photometric observations are drawn from a multivariate normal distribution with five dimensions corresponding to our photometric reference set: $CI,Y,J,H,K_s$. The B-splines model the mean of the \emph{true} photometric quantities, both for the cluster sequence, $\boldsymbol{t}_{ph;Cs}$, and the EMB, $\boldsymbol{t}_{ph;Bs}$. This later one is displaced 0.75 into the bright side of the cluster sequence. The matrix, $\Sigma_{clus}$, represents the covariance matrix of the multivariate normal distribution that models the intrinsic dispersion. Covariance matrices are symmetric and positive semi-definite. Therefore, from the 25 entries in this $5\times 5$ $\Sigma_{clus}$ matrix, only 15 are unique. These are the ones we infer from the data.
-
-Thus, the mean \emph{true} photometry is given by,
+Thus, the \emph{true} photometry is given by,
 
 \begin{align}
-\boldsymbol{t}_{ph;Cs}&= \{CI,Y,J,H,K_s\},\nonumber \\
-\boldsymbol{t}_{ph;Bs}&=\{CI,Y-0.75,J-0.75,H-0.75,K_s-0.75\}, \nonumber
+\mathbf{t}_{ph;Cs}&= \{CI,Y,J,H,K_s\},\nonumber \\
+\mathbf{t}_{ph;Bs}&=\{CI,Y-0.75,J-0.75,H-0.75,K_s-0.75\}, \nonumber
 \end{align}
 where
 \begin{align}
-Y &=\mathcal{S}_Y(CI,\beta_Y), \nonumber \\
-J &=\mathcal{S}_J(CI,\beta_J),\nonumber \\
- H &=\mathcal{S}_H(CI,\beta_H), \nonumber \\
- K_s &=\mathcal{S}_{K_s}(CI,\beta_{K_s}),  \nonumber 
+Y &=\mathcal{S}_Y(CI,\hat{\beta}_Y), \nonumber \\
+J &=\mathcal{S}_J(CI,\hat{\beta}_J),\nonumber \\
+ H &=\mathcal{S}_H(CI,\hat{\beta}_H), \nonumber \\
+ K_s &=\mathcal{S}_{K_s}(CI,\hat{\beta}_{K_s}),  \nonumber 
 \end{align}
-and $\beta_{Y,J,H,K_s}$ denote the coefficients of all the splines (a $4\times7$ matrix), which  I call $\boldsymbol{\beta}$ for the sake of simplicity.
+with $\hat{\beta}_{i}, i\in\{Y,J,H,K_s\}$ the vectors of seven coefficients of the B-splines for the $Y,J,H,K_s$ bands.  For the sake of simplicity I denote this $4\times7$ coefficients matrix as $\boldsymbol{\beta}$.
 
 Since the photometry of the EMB is a linear transformation, $T_{Bs}$, of the mean \emph{true} photometry of cluster sequence, no extra parameters are required. Therefore, 
 
 \begin{align}
-\boldsymbol{t}_{ph;Cs} &= \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}) \label{eq:trueph_Cs}\\
-\boldsymbol{t}_{ph;Bs} &=T_{Bs}( \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})).
+\mathbf{t}_{ph;Cs} &= \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}) \label{eq:trueph_Cs}\\
+\mathbf{t}_{ph;Bs} &=T_{Bs}( \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})).
 \label{eq:trueph_Bs}
 \end{align}
 
 Thus, cluster and EMB likelihoods of an object with photometric measurements $\mathbf{d}_{ph}$, and standard uncertainties $\mathbf{u}_{ph}$, are:
 \begin{align}
 \label{eq:lik-seq}
- p_{Cs}(\mathbf{d}_{ph}| CI, \boldsymbol{\beta},\Sigma_{clus},\mathbf{u}_{ph})={\mathcal{N}}(\mathbf{d}_{ph}|\boldsymbol{t}_{ph;Cs}, \mathbf{u}_{ph}+\Sigma_{clus}),\nonumber \\
-p_{Bs}(\mathbf{d}_{ph}| CI, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph})={\mathcal{N}}(\mathbf{d}_{ph}|\boldsymbol{t}_{ph;Bs}, \mathbf{u}_{ph}+\Sigma_{clus}),
+ p_{Cs}(\mathbf{d}_{ph}| CI, \boldsymbol{\beta},\Sigma_{clus},\mathbf{u}_{ph})={\mathcal{N}}(\mathbf{d}_{ph}|\mathbf{t}_{ph;Cs}, \mathbf{u}_{ph}+\Sigma_{clus}),\nonumber \\
+p_{Bs}(\mathbf{d}_{ph}| CI, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph})={\mathcal{N}}(\mathbf{d}_{ph}|\mathbf{t}_{ph;Bs}, \mathbf{u}_{ph}+\Sigma_{clus}),
 \end{align}
-where $\boldsymbol{t}_{ph;Cs}$ and $\boldsymbol{t}_{ph;Bs}$ are given by Equations \ref{eq:trueph_Cs} and \ref{eq:trueph_Bs}, respectively.
+where $\mathbf{t}_{ph;Cs}$ and $\mathbf{t}_{ph;Bs}$ are given by Equations \ref{eq:trueph_Cs} and \ref{eq:trueph_Bs}, respectively.
 
-Since the splines are parametrised by the true $CI$ of each object, we have more parameters than objects in our data set \footnote{Although this sounds crazy, the rules of probability calculus do not discard this possibility.}. This \emph{true} $CI$ is unknown even if its observed value is not missing. We solve this problem (it is a computational problem!) by marginalising these nuisance parameters (See Eq. \ref{eq:clmarginalps} and \ref{eq:clmarginalpb}). 
+Since the splines are parametrised by the true $CI$ of each object, we have more parameters than objects in our data set \footnote{Although this sounds crazy, the rules of probability calculus do not discard this possibility.}. This \emph{true} $CI$ is unknown even if its observed value is not missing. We solve this problem (it is a computational problem!) by marginalising these nuisance parameters. 
 
-To marginalise these $CI$s we need a prior, which we provide in a hierarchical way (thus the name Bayesian Hierarchical model). This marginalisation leaves behind a precise estimate of the parameters of the prior distribution. Paradoxically, all objects, even those without a measurement of the $CI$ contribute to this estimate. Here lays the force of the BHM.
+To marginalise these $CI$s we need a prior, which we provide in a hierarchical way (thus the name Bayesian Hierarchical model). This marginalisation leaves behind a precise estimate of the parameters of the prior distribution. Paradoxically, all objects, even those without a measurement of the $CI$, contribute to this estimate. Here laies the force of the BHM.
 
-We model the prior of the \emph{true} $CI$ as a truncated ($0.8\leq CI \leq8$) univariate GMM with five components, whose parameters are also inferred from the data. We chose five components as suggested by BIC. I applied BIC to the results found using the standard EM algorithm for univariate GMM applied to the candidate members of \citet{Bouy2015}. I tested with larger number of components in the mixture, but the posterior distribution did not changed, thus indicating that the BIC value was a proper assumption.
+\textbf{We model the prior of the \emph{true} $CI$ as a truncated ($0.8\leq CI \leq8$) univariate GMM with five components, whose parameters are also inferred from the data. We chose five components as suggested by the BIC computed from the EM algorithm for GMM applied to the candidate members of \citet{Bouy2015}. I tested larger number of components in the mixture (up to ten), but the posterior distribution did not changed significantly, thus indicating that the BIC value was a proper assumption.}
 
- Thus, the GMM modelling the prior of the \emph{true} $CI$ is 
+ The GMM modelling the prior of the \emph{true} $CI$ is 
 
 \begin{equation}
 \label{eq:colordist}
@@ -543,28 +554,27 @@ Then, the marginalisation of $CI$ runs as follows:
 p_{Bs}(\mathbf{d}_{ph}| \boldsymbol{\theta}_c,\mathbf{u}_{ph})&=\int p_{Bs}(\mathbf{d}_{ph},CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot \mathrm{d}CI \nonumber \\
  &=\int p_{Bs}(\mathbf{d}_{ph}|CI, \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot p_{Bs}(CI| \boldsymbol{\theta}_c,\mathbf{u}_{ph})\cdot \mathrm{d}CI.
 \end{align}
-In these Equations, $\theta_c$ stands for all cluster parameters related to photometry, and the first and second terms of the integrals in the last equalities correspond to Equations \ref{eq:lik-seq} and \ref{eq:colordist}, respectively. The distribution of $CI$ depends only on $\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}$, thus, the cluster and equal-mass binaries likelihoods of datum $\mathbf{d}_{ph}$ are 
+In these Equations, $\boldsymbol{\theta}_c$ stands for all cluster parameters related to photometry, and the first and second terms of the integrals in the last equalities correspond to Equations \ref{eq:lik-seq} and \ref{eq:colordist}, respectively. The distribution of $CI$ depends only on $\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}$, thus, the cluster and equal-mass binaries likelihoods of datum $\mathbf{d}_{ph}$ are 
 \begin{align}
 \label{eq:lik-seq2}
  &p_{Cs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI},\boldsymbol{\beta},\Sigma_{clus},\mathbf{u}_{ph}) \nonumber \\
- &=\int{\mathcal{N}}(\mathbf{d}_{ph}|\boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}), \mathbf{u}_{ph}+\Sigma_{clus}) \nonumber \\
- &\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot \mathrm{d}CI\nonumber \\
+ &=\int{\mathcal{N}}(\mathbf{d}_{ph}|\boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta}), \mathbf{u}_{ph}+\Sigma_{clus})\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot \mathrm{d}CI\nonumber \\
 &p_{Bs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph})\nonumber \\
-&=\int{\mathcal{N}}(\mathbf{d}_{ph}|T_{Bs}( \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})), \mathbf{u}_{ph}+\Sigma_{clus}) \nonumber \\ &\cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot \mathrm{d}CI.
+&=\int{\mathcal{N}}(\mathbf{d}_{ph}|T_{Bs}( \boldsymbol{\mathcal{S}}(CI, \boldsymbol{\beta})), \mathbf{u}_{ph}+\Sigma_{clus}) \cdot \sum_{i=1}^5 \pi_{CI,i}\cdot \mathcal{N}_t(CI| \mu_{CI,i},\sigma_{CI,i}) \cdot \mathrm{d}CI.
 \end{align}
 
-The observed $CI$ and magnitudes help us  to reduce the computing time of the marginalisation integral. We use them to discard  regions of the integral in which the argument is almost zero (i.e. far from the measured values). Although we allow the nuisance parameters $CI$s to have all their possible values, the data, by means of the likelihood, give us information about the distribution of these individual nuisance parameters. To use this information, we proceed as follows. First, we compare the observed photometry to the true one (i.e. the cluster sequence given by the splines). For it we use a grid of 300 points uniformly distributed in the domain of $CI$ ($0.8<CI<8$). Then, we find the point, $p$, of the grid that is  the closest to the vector of the observed photometry.  Distance is computed under  the Mahalanobis metric. This metric takes into account the observational uncertainty, $\mathbf{u}_{ph}$, and the intrinsic dispersion of the cluster sequence, $\Sigma_{clus}$. Finally, the limits of the marginalisation integral  are defined as those given by a ball of 3.5 Mahalanobis distances around point $p$. Contributions outside this ball are negligible to the integral ($< 4\times10^{-4}$).
+The observed $CI$ and magnitudes help us  to reduce the computing time of the marginalisation integral. We use them to discard  regions of the integral in which the argument is almost zero (i.e. far from the measured values). Although we allow the nuisance parameters $CI$s to have all their possible values, the data, by means of the likelihood, give us information about the distribution of these individual nuisance parameters. To use this information, we proceed as follows. First, we compare the observed photometry to the true one (i.e. the cluster sequence given by the splines). For it we use a grid of 300 points uniformly distributed in the domain of $CI$ ($0.8<CI<8$). Then, we find the point, $p$, of the grid that is closest to the vector of the observed photometry.  Distance is computed under  the Mahalanobis metric. This metric takes into account the observational uncertainty, $\mathbf{u}_{ph}$, and the intrinsic dispersion of the cluster sequence, $\Sigma_{clus}$. Finally, the limits of the marginalisation integral  are defined as those given by a ball of 3.5 Mahalanobis distances around point $p$. Contributions outside this ball are negligible to the integral ($< 4\times10^{-4}$).
 
-\subsubsection{Proper motion model of equal-mass binaries and single stars}
+\subsubsection{Proper motion model of EMB and single stars}
 As mentioned before, we assume that the cluster population has two subpopulations: single and EMB stars.
-We model the proper motions of these two subpopulations with independent GMM. If the cluster is virialised (see Chapter \ref{chap:pleiades}), we can assume that its velocity distribution is almost Maxwellian (Maxwell-Boltzman distribution). Therefore a GMM is a reasonable assumption. Furthermore, in the absence of external forces, a virialised system is expected to have spherical symmetry both in its spatial and velocity distributions. Thus we can safely assume that the gaussians within each GMM are concentric, thus they share the same mean. However we allow independent means for both single and EMB subpopulations. The assumption of spherical symmetry may be a weak one in the presence of the galactic potential. It can perturb the cluster and deviate its spatial and velocity distribution from spherical symmetry. Furthermore, the ellipticity of the spatial distribution, which has been reported to be no negligible \cite[$\epsilon=0.17$, according to ][]{Raboud1998}, can due to projection effects further deviate the observed velocity distribution profile from spherical symmetry. Nevertheless, since we model the covariance matrices of the GMM of both single and EMB, as full covariance matrices, any departure from the spherical symmetry in the velocity distribution can still be perfectly modelled by the non diagonal entries of these matrices.
+We model the proper motions of these two subpopulations with independent GMM. If the cluster is virialised (see Chapter \ref{chap:pleiades}), we can assume that\textbf{ the distribution of its velocity modulus} is almost Maxwellian (Maxwell-Boltzman distribution). Therefore a GMM is a reasonable \textbf{approximation}. Furthermore, in the absence of external forces, a virialised system is expected to have spherical symmetry both in its spatial and velocity distributions. Thus we can safely assume that the gaussians within each GMM are concentric, thus they share the same mean. However we allow independent means for both single and EMB subpopulations. The assumption of spherical symmetry may be a weak one in the presence of the galactic potential. It can perturb the cluster and deviate its spatial and velocity distribution from spherical symmetry. Furthermore, the ellipticity of the spatial distribution, which has been reported to be no-negligible \cite[$\epsilon=0.17$, according to ][]{Raboud1998}, can be due to projection effects that further deviate the observed velocity distribution profile from spherical symmetry. Nevertheless, since we model the covariance matrices of the GMM of both single and EMB, as full covariance matrices, any departure from the spherical symmetry in the velocity distribution can still be modelled by the non-diagonal entries of these matrices.
 
 
-We infer the parameters of these GMMs as part of our Bayesian hierarchical model. However we a priori set the number of gaussians in each GMM. Not doing so will demand a technique in which the model parameters can be augmented. Although such techniques already exist, they are still under computational development \cite[see][for a review of reversible jump MCMC]{Fan2011}.
+We infer the parameters of these GMMs as part of our Bayesian hierarchical model. However we set a priori the number of gaussians in each GMM. Not doing so will demand a technique in which the model parameters can be augmented. Although such techniques already exist, they are still under computational development \cite[see][for a review of reversible jump MCMC]{Fan2011}.
 
-Using the EM for GMM and the proper motions of the candidate members of \citet{Bouy2015}, I obtained the ML estimates for the GMM likelihoods. I did this for configurations of GMM ranging from one to five components. The BIC (Eq. \ref{eq:BIC}) suggested four and two gaussians for cluster and EMB GMM, respectively. Since covariance matrices are always symmetric, only three parameters are needed to fully specify the covariance matrices of these bivariate normal distributions.
+Using the EM algorithm for GMM and the proper motions of the candidate members of \citet{Bouy2015}, I obtained the ML estimates for the GMM likelihoods. I did this for configurations of GMM ranging from one to five components. The BIC (Eq. \ref{eq:BIC}) suggested four and two components for the cluster and EMB GMMs, respectively. Since covariance matrices are always symmetric, only three parameters are needed to fully specify the covariance matrices of these bivariate normal distributions.
 
-Thus, the cluster (subindex $Cs$) and EMB (subindex $Bs$) likelihoods of an object with proper motions measurements $\mathbf{d}_{pm}$, and uncertainties $\mathbf{u}_{pm}$, are
+The cluster (subindex $Cs$) and EMB (subindex $Bs$) likelihoods of an object with proper motions measurements $\mathbf{d}_{pm}$, and uncertainties $\mathbf{u}_{pm}$, are
 
 \begin{align}
 p_{Cs}(\mathbf{d}_{pm}| \boldsymbol{\pi}_{Cs}, \boldsymbol{\mu}_{Cs},\boldsymbol{\Sigma}_{Cs},\mathbf{u}_{pm})
@@ -582,9 +592,9 @@ p_c(\mathbf{d}|\boldsymbol{\theta}_c,\mathbf{u})&=\pi_{CB}\cdot p_{Cs}(\mathbf{d
 &\cdot  p_{Bs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph}),
 \end{align}
 
-where $\pi_{CB}$ is the parameter representing the amplitude of single cluster sequence stars in the single-EMB mixture model. The photometric and proper motions likelihoods are given by Equations \ref{eq:lik-seq2} and \ref{eq:lik-pm}, respectively.
+where $\pi_{CB}$ is the parameter representing the proportion or fraction of single cluster sequence stars in the single-EMB mixture model. The photometric and proper motions likelihoods are given by Equations \ref{eq:lik-seq2} and \ref{eq:lik-pm}, respectively.
 
-Finally, before ending this Section, I present a summary of the symbols of the parameters in the BHM (Table \ref{table:symbols_parameters}), together with its graphical representation in the form of a PGM (Fig. \ref{fig:PGMBHM}).
+Finally, before ending this Section, I present a summary of the symbols used to represent the parameters in the BHM (Table \ref{table:symbols_parameters}), together with its graphical representation in the form of a PGM (Fig. \ref{fig:PGMBHM}).
 \input{background/Tables/SymbolParameters.txt}
 
 
