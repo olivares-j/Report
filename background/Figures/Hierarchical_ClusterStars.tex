@@ -49,27 +49,28 @@ minimum height=50pt, line width=1pt, fill=yellow!90!blue, fill opacity=0.3] (rec
 \node[anchor=south east,inner sep=5pt, fill = none] at (rect1.south east) {$N$};
 
 %############# NON-MEMBERS ##############################
-\node[draw, fill = gray!20, label={[name = mu_nm_pm_lab,xshift=-10pt,yshift=2pt]below:$\boldsymbol{\mu}_{pm}^{nm}$}] (mu_nm_pm) [left = of x_i,xshift=-120pt,yshift=100pt] {$[2]$};
+\node[draw, fill = gray!20, label={[name = mu_nm_pm_lab,xshift=0pt,yshift=2pt]above:$\boldsymbol{\mu}_{f,pm}$}] (mu_nm_pm) [left = of x_i,xshift=-120pt,yshift=100pt] {$[2]$};
 
-\node[draw, fill = gray!20, label={[name = sg_nm_pm_lab,xshift=-10pt,yshift=2pt]below:$\Sigma_{pm}^{nm}$}] (sg_nm_pm) [right = of mu_nm_pm,yshift=0pt] {$[2,2]$};
-\node[draw, fill = gray!20, label={[name = pi_nm_pm_lab,xshift=-10pt,yshift=2pt]below:$\pi_{pm}^{nm}$}] (pi_nm_pm) [right = of sg_nm_pm,yshift=0pt] {$[M_{pm}]$};
+\node[draw, fill = gray!20, label={[name = sg_nm_pm_lab,xshift=0pt,yshift=2pt]above:$\Sigma_{f,pm}$}] (sg_nm_pm) [right = of mu_nm_pm,yshift=0pt] {$[2,2]$};
+\node[draw, fill = gray!20, label={[name = pi_nm_pm_lab,xshift=0pt,yshift=0pt]above:$\pi_{f,pm}$}] (pi_nm_pm) [right = of sg_nm_pm,xshift=5pt,yshift=0pt] {[8]};
 
-\node[draw, fill = gray!20, label={[name = mu_nm_phot_lab,xshift=-10pt,yshift=2pt]below:$\boldsymbol{\mu}_{ph}^{nm}$}] (mu_nm_phot) [left = of x_i,xshift=-120pt,yshift=-60pt] {$[5]$};
+\node[draw, fill = gray!20, label={[name = mu_nm_phot_lab,xshift=0pt,yshift=2pt]below:$\boldsymbol{\mu}_{f,ph}$}] (mu_nm_phot) [left = of x_i,xshift=-120pt,yshift=-60pt] {$[5]$};
 
-\node[draw, fill = gray!20, label={[name = sg_nm_phot_lab,xshift=-10pt,yshift=2pt]below:$\Sigma_{ph}^{nm}$}] (sg_nm_phot) [right = of mu_nm_phot,yshift=0pt] {$[5,5]$};
-\node[draw, fill = gray!20, label={[name = pi_nm_phot_lab,xshift=-10pt,yshift=2pt]below:$\pi_{ph}^{nm}$}] (pi_nm_phot) [right = of sg_nm_phot,yshift=0pt] {$[M_{ph}]$};
+\node[draw, fill = gray!20, label={[name = sg_nm_phot_lab,xshift=0pt,yshift=2pt]below:$\Sigma_{f,ph}$}] (sg_nm_phot) [right = of mu_nm_phot,yshift=0pt] {$[5,5]$};
+\node[draw, fill = gray!20, label={[name = pi_nm_phot_lab,xshift=0pt,yshift=0pt]below:$\pi_{f,ph}$}] (pi_nm_phot) [right = of sg_nm_phot,xshift=5pt,yshift=0pt] {[14]};
 
-\begin{pgfonlayer}{background}
-\node (rect) at (mu_nm_pm) [xshift = 30pt, yshift = -4pt, draw, rounded corners, thick, minimum width=110pt, 
-minimum height=50pt, line width=1pt, fill=gray!20, fill opacity=0.5] (rect2) {};
-\end{pgfonlayer}
-\node[anchor=south east,inner sep=5pt, fill = none] at (rect2.south east) {$M_{pm}$};
 
 \begin{pgfonlayer}{background}
-\node (rect) at (mu_nm_phot) [xshift = 30pt, yshift = -4pt, draw, rounded corners, thick, minimum width=110pt, 
+\node (rect) at (mu_nm_pm) [xshift = 35pt, yshift = 5pt, draw, rounded corners, thick, minimum width=110pt, 
 minimum height=50pt, line width=1pt, fill=gray!20, fill opacity=0.5] (rect2) {};
 \end{pgfonlayer}
-\node[anchor=south east,inner sep=5pt, fill = none] at (rect2.south east) {$M_{ph}$};
+\node[anchor=south east,inner sep=5pt, fill = none] at (rect2.south east) {7};
+
+\begin{pgfonlayer}{background}
+\node (rect) at (mu_nm_phot) [xshift = 35pt, yshift = -4pt, draw, rounded corners, thick, minimum width=110pt, 
+minimum height=50pt, line width=1pt, fill=gray!20, fill opacity=0.5] (rect2) {};
+\end{pgfonlayer}
+\node[anchor=south east,inner sep=5pt, fill = none] at (rect2.south east) {14};
 
 \draw [->,name path=curve] (mu_nm_pm) to [out = -90, in = 180, looseness=1] (x_i);
 \draw [->,name path=curve] (sg_nm_pm) to [out = -90, in = 180, looseness=1] (x_i);
@@ -83,7 +84,7 @@ minimum height=50pt, line width=1pt, fill=gray!20, fill opacity=0.5] (rect2) {};
 \node[draw, circle, label={[name = t_phot_lab,xshift=-10pt,yshift=3pt]below:$$}] (t_phot) [right = of x_i,xshift=100pt,yshift=25] {$\boldsymbol{t}_{ph}$};
 \node[draw, circle, label={[name = idx_clr_lab,xshift=-10pt,yshift=3pt]below:$$}] (idx_clr)  [above = of t_phot]  {$CI$};
 \node[draw, circle, label={[name = sg_phot_lab,xshift=-10pt,yshift=3pt]below:$\Sigma_{clus}$}] (sg_phot) [left = of idx_clr,xshift=10pt] {$[15]$};
-\node[draw, circle, label={[name = pi_phot_lab,xshift=-10pt,yshift=3pt]below:$\pi_{CB}$}] (pi_phot) [below= of x_i, xshift=0pt,yshift=-0pt] {$[1]$};
+\node[draw, circle, label={[name = pi_phot_lab,xshift=-15pt,yshift=3pt]below:$\pi_{CB}$}] (pi_phot) [below= of x_i, xshift=0pt,yshift=-0pt] {$[1]$};
 \node[draw, circle, label={[name = beta_lab,xshift=-10pt,yshift=3pt]below:$\boldsymbol{\beta}$}] (beta) [right = of idx_clr] {$[4,7]$};
 \node[draw, circle, label={[name = mu_clr_lab,xshift=-10pt,yshift=3pt]below:$\mu_{CI}$}] (mu_clr) [above = of idx_clr] {$[1]$};
 \node[draw, circle, label={[name = pi_clr_lab,xshift=-10pt,yshift=3pt]below:$\pi_{CI}$}] (pi_clr)  [left = of mu_clr]  {$[4]$};

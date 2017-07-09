@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {2.2}The distance to the Pleiades}{3}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Measuring distances}{3}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3}Projected spatial distribution}{5}{section.2.3}
-\contentsline {section}{\numberline {2.4}Velocity Distribution}{9}{section.2.4}
+\contentsline {section}{\numberline {2.4}Velocity Distribution}{8}{section.2.4}
 \contentsline {section}{\numberline {2.5}Luminosity Distribution}{10}{section.2.5}
-\contentsline {section}{\numberline {2.6}Mass Distribution}{14}{section.2.6}
+\contentsline {section}{\numberline {2.6}Mass Distribution}{12}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Total mass of the cluster}{17}{subsection.2.6.1}
 \contentsline {section}{\numberline {2.7}The Pleiades DANCe DR2}{19}{section.2.7}
 \contentsline {subsection}{\numberline {2.7.1}Selection of observables}{20}{subsection.2.7.1}
@@ -20,33 +20,33 @@
 \contentsline {subsection}{\numberline {3.1.1}Bayes theorem}{28}{subsection.3.1.1}
 \contentsline {subsubsection}{Models and parametric inference}{28}{section*.23}
 \contentsline {subsection}{\numberline {3.1.2}Model Selection}{31}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Membership probability}{34}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.3}Membership probability}{33}{subsection.3.1.3}
 \contentsline {section}{\numberline {3.2}Bayesian hierarchical Models}{34}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Generalities}{34}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Examples}{36}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Examples}{35}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Graphical representation.}{36}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}The BHM for the Pleiades DANCe data set}{37}{section.3.3}
+\contentsline {section}{\numberline {3.3}The BHM for the Pleiades DANCe data set}{36}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Missing values}{37}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}The generative model}{39}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}The field population}{41}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}The cluster population}{44}{subsection.3.3.4}
-\contentsline {subsubsection}{Photometric model of single and EMB stars}{45}{section*.27}
-\contentsline {subsubsection}{Proper motion model of EMB and single stars}{49}{section*.28}
+\contentsline {subsubsection}{Photometric model of single and EMB stars}{44}{section*.27}
+\contentsline {subsubsection}{Proper motion model of EMB and single stars}{48}{section*.28}
 \contentsline {section}{\numberline {3.4}Priors}{50}{section.3.4}
-\contentsline {section}{\numberline {3.5}Sampling the posterior distribution}{54}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}PSO}{54}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.5}Sampling the posterior distribution}{55}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}PSO}{56}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}MCMC}{57}{subsection.3.5.2}
 \contentsline {subsubsection}{Generalities}{57}{section*.34}
-\contentsline {subsubsection}{Metropolis-Hastings}{58}{section*.35}
-\contentsline {subsubsection}{Hamiltonian Monte Calro}{58}{section*.36}
+\contentsline {subsubsection}{Metropolis-Hastings}{59}{section*.35}
+\contentsline {subsubsection}{Hamiltonian Monte Calro}{59}{section*.36}
 \contentsline {subsubsection}{Affine invariant}{59}{section*.37}
-\contentsline {subsubsection}{Nested sampling}{60}{section*.38}
-\contentsline {subsection}{\numberline {3.5.3}Implementation and convergence: PSO and MCMC}{60}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Codes}{61}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}The modified charged PSO}{63}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Improvements of emcee}{64}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}GMM for the field population}{64}{subsection.3.6.3}
-\contentsline {subsection}{\numberline {3.6.4}Hybrid-HPC implementations}{66}{subsection.3.6.4}
+\contentsline {subsubsection}{Nested sampling}{61}{section*.38}
+\contentsline {subsection}{\numberline {3.5.3}Implementation and convergence: PSO and MCMC}{61}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Codes}{64}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}The modified charged PSO}{65}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Improvements of emcee}{66}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}GMM for the field population}{66}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Hybrid-HPC implementations}{68}{subsection.3.6.4}
 \contentsline {chapter}{\numberline {4}Results}{71}{chapter.4}
 \contentsline {section}{\numberline {4.1}Performance of the classifier}{71}{section.4.1}
 \contentsline {section}{\numberline {4.2}Comparison with the literature}{81}{section.4.2}
