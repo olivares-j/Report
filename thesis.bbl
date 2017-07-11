@@ -1,4 +1,4 @@
-\begin{thebibliography}{141}
+\begin{thebibliography}{144}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -70,6 +70,10 @@ Andrieu, C., de~Freitas, N., Doucet, A., \& Jordan, M.~I. 2003, Machine
   {Bromm}}]{2003MNRAS.339..577B}
 {Bate}, M.~R., {Bonnell}, I.~A., \& {Bromm}, V. 2003, \mnras, 339, 577
 
+\bibitem[{{Binney} \& {Tremaine}(2008)}]{Binney2008}
+{Binney}, J. \& {Tremaine}, S. 2008, {Galactic Dynamics: Second Edition}
+  (Princeton University Press)
+
 \bibitem[{Bishop(2006)}]{Bishop2006}
 Bishop, C. 2006, Pattern Recognition and Machine Learning, Information Science
   and Statistics (Springer)
@@ -83,6 +87,10 @@ Blackwell, T. \& Bentley, P. 2002, in Proceedeings of the 4th Annual Conference
   on Genetic and Evolutionary Computations, ed. W.~Langdon, E.~Cantu-Paz,
   K.~Mathias, R.~Roy, \& D.~Davis (San Francisco, CA, USA: Morgan kaufmann
   Publishers Inc.), 19--26
+
+\bibitem[{{Boss}(1910)}]{1910pgcs.book.....B}
+{Boss}, L. 1910, {Preliminary General Catalogue of 6188 stars for the eopoch
+  1900}
 
 \bibitem[{{Bouy} {et~al.}(2013){Bouy}, {Bertin}, {Moraux}, {Cuillandre},
   {Bouvier}, {Barrado}, {Solano}, \& {Bayo}}]{Bouy2013}
@@ -505,6 +513,9 @@ Schwarz, G. 1978, Ann. Statist., 6, 461
 
 \bibitem[{Skilling(2006)}]{Skilling2006}
 Skilling, J. 2006, Bayesian Anal., 1, 833
+
+\bibitem[{{Smart} \& {Green}(1977)}]{Smart1977}
+{Smart}, W.~M. \& {Green}, E.~b.~R.~M. 1977, {Textbook on Spherical Astronomy}
 
 \bibitem[{{Smith} \& {Struve}(1944)}]{1944ApJ...100..360S}
 {Smith}, B. \& {Struve}, O. 1944, \apj, 100, 360
