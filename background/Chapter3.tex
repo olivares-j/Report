@@ -74,7 +74,7 @@ Once again, these last two equations (\ref{eq:marginalisation} and \ref{eq:expec
 It is important to recall that the term measurement, and its unavoidable uncertainty, refer not just to directly measured quantities, like the photons (counts) and pixels in a CCD, but also to indirect measurements. Stellar magnitudes and positions in the sky, for example, are indirect measurements derived from the direct measurement of photons, pixels and telescope arrangements. This generalisation also applies to the measurement of parameters in any physical or statistical model.% like the one I will describe in the following Sections.
 
 {\color{red}
-I end this Section with a brief description of the procedure that is generally applied when we want to transform a probability distribution into another probability distribution, under a nonlinear transformation \cite[for more details see page 18 and 19 of][]{Bishop2006}. 
+This Section ends with a brief description of the procedure that is generally applied when we want to transform a probability distribution into another probability distribution, under a nonlinear transformation \cite[for more details see for example][pages 18 and 19]{Bishop2006}. 
 
 Let  $f$ be a probability distribution on $x\subset\mathbb{R}$, with support on $a<x<b$, then
 
@@ -134,7 +134,7 @@ As mentioned before, the likelihood is a probability distribution for the data, 
 When measuring the properties of objects, it is often assumed that the probability distribution obtained from the collection of measurements of a single object, is independent from that of another object. For example, if we were to measure the weight of a group of persons, we usually assume that the PDF of the weight of one person, is independent of that of another person. It means that measuring the weight of one person has no effect at all in the weight of another person.
 
 {\color{red}
-An example were this assumption does not hold is the following. GIVE GAIA EXAMPLE OF STELLAR POSITIONS
+In this work it is always assumed that the PDFs of the measured quantities of individual objects are independent within objects. Nevertheless, in the following, I give an example where this assumption may not be entirely right. Obtaining stellar positions in celestial coordinates often requires what is called an astrometric solution. This solution is a map from the raw data, like pixel positions in the detectors and observing epoch, to the celestial coordinates (e.g. right ascension and declination). This astrometric solution often needs a large collections of measurements of the same objects, so that the it can be robustly estimated. Since this mapping is computed from the data (e.g. using maximum-likelihood estimates) and then applied to the same data, then it is common to observe correlations among the uncertainties of different objects \cite[see for example][]{2010IAUS..261..320H,2017A&A...601A..19G}. If the correlation in the uncertainties is significative, then their PDFs may not be independent\footnote{Independence means uncorrelated, however, uncorrelated does not imply independence.}.  
 }
 
 Let $\mathbf{D}$ be the data, i.e. the collection of statistics of the $N$ objects, and $p_n(\mathbf{d}_n)$ be the probability distribution rendered by several measurements of object $n$. If these $\{p_n(\mathbf{d}_n)\}_{n=1}^N$ are assumed to be independent, then
@@ -255,7 +255,7 @@ Given their properties, BHMs represent the most objective way to the establishme
 Despite their theoretical advantages, BHMs are difficult to evaluate since they require far more parameters than standard Bayesian methods.
 Furthermore, their hierarchy (levels) must stop at some point. There are at least two approaches to stop this hierarchy. The first one uses a non-parametric distribution for the parameters at the higher level. This renders, as previously noted, a full-BHM. \textbf{However, it demands an a priori knowledge of the non-parametric distribution, which, most of the time, is not the case.} The second option is to give a point estimate, usually the mean or the mode, for the distribution of the parameter at the top of the hierarchy.  
 
-{\color{red}
+{\color{blue}
 Although in BHMs the parameters of the prior distributions are inferred from data, the user of the model has the important task of specifying the family of distributions to be used for them. Selecting these families continues to be an active area of research. The most common approaches are the following.
 
 \begin{itemize}
@@ -490,10 +490,19 @@ Despite their fitting properties, B-splines \textbf{present a problem} when infe
 {\color{blue}
 As I mentioned in the introduction to this Section, we assume that the observed photometric quantities are drawn from a distribution resulting from the convolution of the observed uncertainties, with the likelihood, given the \emph{true} quantities. We also assume that the model has an intrinsic dispersion that addresses photometric variations resulting from astrophysical phenomena not treated by our model (see Section \ref{sect:parametric_inference}). These phenomena include, but are not limited to, age, metallicity and distance dispersions, unresolved systems (other than EMB), variability, and transits. If we were to assume no \emph{true} intrinsic dispersion, then any deviation from the \emph{true} quantities should have to be explained \emph{only} by the observational uncertainties. Thus it would result in an over-simplistic model, which would underestimate the likelihood of hypothetical true cluster members. 
 
-This photometric dispersion shows an skewed distribution \cite[see Figure X of][which I reproduce in Fig. \ref{}]{}, which we model with a multivariate skewed normal distribution \cite[CSN,][]{}. Despite the fact that the CSN requires only five parameters more than a multivariate normal distribution, the computing of its density takes $\sim$ 50\% more CPU time than that of the multivariate normal distribution (MND). Due to computational constrains, we decided to postpone the results of the CSN until our computational resources allow it. 
+This photometric dispersion shows an skewed distribution \cite[see Figure 2 of][which I reproduce in Fig. \ref{fig:luminosity_dispersion}]{2008ASPC..384..200H}, which we model with a multivariate skewed normal distribution \cite[CSN, see for example][]{Gonzalez-Farias2004,Gupta2004}. Despite the fact that the CSN requires only five parameters more than a multivariate normal distribution, the computing of its density takes $\sim$ 50\% more CPU time than that of the multivariate normal distribution (MND). Due to computational constrains, we decided to postpone the results of the CSN until our computational resources allow it. 
 
 Instead of using the CSN, we model the intrinsic photometric  dispersion of both the cluster and EMB sequences with a MND. It has has five dimensions corresponding to our photometric reference set: $CI,Y,J,H,K_s$. The B-splines model the \emph{true} photometric quantities, both for the cluster sequence, $\mathbf{t}_{ph;Cs}$, and the EMB, $\mathbf{t}_{ph;Bs}$. The latter is displaced 0.75 into the bright side of the cluster sequence. In the following, the matrix $\Sigma_{clus}$, represents the covariance matrix of this MND. By definition, covariance matrices are symmetric and positive semi-definite. Therefore, from the 25 entries in $\Sigma_{clus}$, only 15 are unique. These are also inferred from the data set.
 }
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{background/Figures/F2_Hillenbrand2008.pdf}
+\caption{Histogram of luminosity dispersion for young clusters. Reproduced from Figure 2 of \citet{2008ASPC..384..200H}, \textit{\usebibentry{2008ASPC..384..200H}{title}}, \usebibentry{2008ASPC..384..200H}{journal}, \usebibentry{2008ASPC..384..200H}{volume}.}
+\label{fig:luminosity_dispersion}
+\end{center}
+\end{figure}
+
 
 Thus, the \emph{true} photometry is given by,
 
@@ -654,7 +663,7 @@ For the fraction in the GMM of the $CI$ distribution, the hyper-parameter were s
         \label{} 
     \end{subfigure}
 \caption{Kernel density of $10^4$ realisations of the prior distributions of fraction parameters. Distributions of: (a) The field fraction $\pi$, (b) The EMB fraction, $1-\pi_{CB}$, (c) the proper motions cluster fractions, $\pi_{Cs}$, and (d) the proper motions equal-mass binaries fractions $\pi_{Bs}$.}
-\label{figure:priors}choose
+\label{figure:priors}
 \end{figure}
 
 \textbf{For the priors of the  means in the proper motions GMM}, both of single stars and EMB, we choose the bivariate normal distribution. We set the hyper-parameters of this bivariate normal to those found after fitting a bivariate normal to the candidate members of \citet{Bouy2015}. These values are
@@ -802,17 +811,20 @@ and the acceptance probability,
 One of the great advantages of MCMC ensemble samplers  is its possibility of parallelisation. Since they work with particles, these particles can be distributed among cores in a computer cluster, therefore reducing the computing time when compared to non ensemble MCMC. \citet{Foreman2013} implemented the affine invariant stretch move of \citet{Goodman2010} in the Python package \emph{emcee}. 
 \subsubsection{Nested sampling}
 \label{sect:NestedSampling}
-Nested sampling \citep{Skilling2004,Skilling2006} is an algorithm designed to numerically integrate the evidence (Eq. \ref{eq:evidence2}). As a by-product, it also delivers a sample of the posterior distribution. To compute the evidence integral,  it uses particles positions sampled from the prior. Then, the integral is the sum of the likelihood, $L_i$, of each particle times a weight $w_i$. This weight is a proxy for the volume of the prior covered by the updated position of the particle. This weight is given by 
-\begin{equation}
-w_i = e^{-\frac{(i-1)}{N}} - e^{-\frac{i}{N}}.\nonumber 
-\end{equation}
-Finally, the particles update their position only when their likelihood is the minimum of the group of particles. In this way,
+Nested sampling \citep{Skilling2004,Skilling2006} is an algorithm designed to numerically integrate the evidence (Eq. \ref{eq:evidence2}). As a by-product, it also delivers a sample of the posterior distribution. 
 
+\textbf{To compute the evidence integral, it uses $N$ particles whose positions, in the parametric space, are sampled from the prior. Then, at each subsequent step $i$ the algorithm computes the likelihoods of the $N$ particles. The particle with lowest likelihood is stored as $x_i$ together with its likelihood $L_{i}$. The weight $w_i$ is computed as}
 \begin{equation}
-z \leftarrow \sum_i w_i\cdot L_i
+w_i = e^{-\frac{(i-1)}{N}} - e^{-\frac{i}{N}}. \nonumber 
 \end{equation}
-{\color{red}Give more details}
-An improved version of the original algorithm was implemented in \emph{MultiNest} \citep{Feroz2009}. This version allows the sampling and computing of evidence in the even more difficult multimodal posteriors. 
+\textbf{The particle $x_i$ is replaced with a new draw from the prior, on the condition that its likelihood is greater than $L_i$. }
+
+\textbf{Once certain number of iterations have been done, the evidence integral is approximated by 
+}\begin{equation}
+z \leftarrow \sum_i w_i\cdot L_i.
+\end{equation}
+
+\textbf{The original algorithm was designed to compute the evidence of a unimodal distribution. However, an improved version of the original algorithm was implemented in \emph{MultiNest} \citep{Feroz2009}. This version allows the sampling and computing of evidence in the even more difficult multimodal posteriors.  }
 
 \subsection{Implementation and convergence: PSO and MCMC}
 To sample the posterior distribution in our problem, we choose \emph{emcee} due to the following properties: i) the affine invariance allows a faster convergence over common and skewed distributions \cite[see][for details]{Goodman2010,Foreman2013}, ii) it can be run in parallel by distributing particles over the nodes of a computer cluster, which reduces considerably the computing time; and iii) it requires the hand-tuning of only two constants: the number of particles, and the parameter $a$ of the $g(z)$ distribution(Eq. \ref{eq:gz}). I choose a ratio of particles to parameters of two, that results in 170 particles. This is the minimum ratio recommended by \citet{Foreman2013}, which still allows a reasonable computing time. After trial and error, I fix the value of the $a$ parameter to $a=1.3$. As mentioned by \citet{Goodman2010}, this parameter can be tuned to improve performance of the sampler. This value keeps the acceptance fraction in the range $0.2-0.5$, as recommended by \citet{Foreman2013}.
@@ -858,8 +870,7 @@ This Section sets out the details about the code I developed to perform the comp
 
 The first version of the Bayesian Hierarchical Model was implemented by \'Angel Berihuete in the package \emph{Stan} \citep{Stan}. It comprised a Bayesian model of the ML model of \citet{Sarro2014}. The proper motions were modelled using a single mixture of gaussians. The photometry was modelled with a Chebyshev polynomial parametrised by the length along the sequence. This length was found using a principal curve analysis and lacked physical interpretation.
 
-{\color{red}EXPLAIN
-I took this version and modified it in the following aspects. I included the photometric and proper motions EMB sequence, the uncertainties both in proper motion and in the photometry, and the width of the sequence modelled as the multivariate gaussian. Then, we realised that the principal curve analysis is not compatible with the deconvolution methodology. The principal curve analysis is driven by the elements with higher variance. HOW DOES THIS SOLVE THE PROBLEM?Thus, we decided to parametrise the polynomials with the true colour, a more interpretable nuisance parameter that was later marginalised with the aid of a prior. For this prior we introduced the colour distribution as a GMM. }
+I took this version and modified it in the following aspects. I included the photometric and proper motions EMB sequence, the uncertainties both in proper motion and in the photometry, and the width of the sequence modelled as the multivariate gaussian. Then, we realised that the principal curve analysis is not compatible with the deconvolution methodology. \textbf{The principal curve analysis finds the dominant curve in the observed data, and not the \emph{true} underlying relation that generates the observed data once the individual noise process for each object is accounted for. For this reason, the principal curve analysis is affected by individual uncertainties \cite[see][for the negative impact of heteroscedastic data on the related principal component analysis]{Huang2016}. Instead, we decided to model the intrinsic \emph{true} underlying photometric relation with polynomials. We use as parameter for these polynomials the \emph{true} colour $CI$, which is a more interpretable parameter than the distance along the principal curve, which was used in the previous version. Since we have one \emph{true} $CI$ for each object, the number of parameters is equal to the number of objects. We marginalised all these nuisance parameters with the aid of a prior. For this prior we introduced a probability distribution modelled by a GMM.}
 
 Previous to the introduction of the marginalisation of the nuisance parameters, the model worked fine on samples of a few hundreds of stars. Once the marginalisation was introduced, the computing time of the model increased dramatically, rendering its application to higher data sizes impractical. At this point we decided to port the existing \emph{Stan} code into \emph
 {Python}\footnote{https://www.python.org} so that we could work with the parallel \emph{emcee} code. \emph{emcee} proved to be of great use. Due to its parallelisation capabilities we were able to increase the data size from 2000 to 10,000 objects. Since the computing of the likelihood was the highest computational challenge, I developed my own routines to perform it in parallel. However, \emph{CosmoHammer} \citep{Akeret2013} turned out to be more efficient in distributing the parallel loads. I ported the BHM code into \emph{CosmoHammer} and modified the latter. The modifications ranged from data files and log entries to the introduction of priors and the handling of a Hybrid-HPC scheme using both MPI and multithreading. Despite the Hybrid-HPC scheme, the computing of the likelihood of a data set with $10^5$ objects seemed unreachable. At this point, I performed two tasks: the first was to strip the code of all auxiliary libraries calls, and the second was the vectorisation of the majority of the operations. Since the parameters of the field were held fixed, the field likelihood was computed externally for each object. The code was then fed with the data set, the field likelihood, and all the auxiliary computations reduced to a minimum. Among the reduced computation there are, for example, the Cholesky decompositions and matrix inversions of the covariance matrices of the uncertainty. Instead of doing these computation inside the code, the code was fed with the precomputed values. This further reduced the computing time.

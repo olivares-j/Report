@@ -1,4 +1,4 @@
-\begin{thebibliography}{144}
+\begin{thebibliography}{148}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -256,12 +256,22 @@ Geman, S. \& Geman, D. 1984, IEEE Trans. Pattern Anal. Mach. Intell., 6, 721
 Gong, L. \& Flegal, J.~M. 2016, Journal of Computational and Graphical
   Statistics, 25, 684
 
+\bibitem[{Gonz{\'{a}}lez-Farias {et~al.}(2004)Gonz{\'{a}}lez-Farias,
+  Dominguez-Molina, \& Gupta}]{Gonzalez-Farias2004}
+Gonz{\'{a}}lez-Farias, G., Dominguez-Molina, A., \& Gupta, A.~K. 2004, Journal
+  of Statistical Planning and Inference, 126, 521
+
 \bibitem[{Good(1980)}]{Good1980}
 Good, I.~J. 1980, Trabajos de Estadistica Y de Investigacion Operativa, 31, 489
 
 \bibitem[{Goodman \& Weare(2010)}]{Goodman2010}
 Goodman, J. \& Weare, J. 2010, Communications in Applied Mathematics and
   Computational Science, 5, 65
+
+\bibitem[{Gupta {et~al.}(2004)Gupta, Gonz{\'{a}}lez-Farias, \&
+  Dominguez-Molina}]{Gupta2004}
+Gupta, A.~K., Gonz{\'{a}}lez-Farias, G., \& Dominguez-Molina, J. 2004, Journal
+  of Multivariate Analysis, 89, 181
 
 \bibitem[{{Guthrie}(1987)}]{Guthrie1987}
 {Guthrie}, B.~N.~G. 1987, \qjras, 28, 289
@@ -274,6 +284,12 @@ Hastings, W.~K. 1970, Biometrika, 57, 97
 
 \bibitem[{{Hertzsprung}(1947)}]{Hertzsprung1947}
 {Hertzsprung}, E. 1947, Annalen van de Sterrewacht te Leiden, 19, A1
+
+\bibitem[{{Hillenbrand} {et~al.}(2008){Hillenbrand}, {Bauermeister}, \&
+  {White}}]{2008ASPC..384..200H}
+{Hillenbrand}, L.~A., {Bauermeister}, A., \& {White}, R.~J. 2008, in 14th
+  Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun, ed. G.~{van
+  Belle}, Vol. 384, 200
 
 \bibitem[{{Hodgkin} \& {Jameson}(2000)}]{2000ASPC..198...59H}
 {Hodgkin}, S.~T. \& {Jameson}, R.~F. 2000, in Astronomical Society of the
@@ -289,6 +305,13 @@ Hastings, W.~K. 1970, Biometrika, 57, 97
   {Bovy}}]{Hogg2010}
 {Hogg}, D.~W., {Myers}, A.~D., \& {Bovy}, J. 2010{\natexlab{b}}, \apj, 725,
   2166
+
+\bibitem[{{Holl} {et~al.}(2010){Holl}, {Hobbs}, \&
+  {Lindegren}}]{2010IAUS..261..320H}
+{Holl}, B., {Hobbs}, D., \& {Lindegren}, L. 2010, in IAU Symposium, Vol. 261,
+  Relativity in Fundamental Astronomy: Dynamics, Reference Frames, and Data
+  Analysis, ed. S.~A. {Klioner}, P.~K. {Seidelmann}, \& M.~H. {Soffel},
+  320--324
 
 \bibitem[{Huang \& Wand(2013)}]{Huang2013}
 Huang, A. \& Wand, M.~P. 2013, Bayesian Analysis, 8, 439
