@@ -1,10 +1,75 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{170}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
+  {Beichman}}]{Adams2001}
+{Adams}, J.~D., {Stauffer}, J.~R., {Monet}, D.~G., {Skrutskie}, M.~F., \&
+  {Beichman}, C.~A. 2001, \aj, 121, 2053
+
+\bibitem[{{Adams}(1904)}]{1904ApJ....19..338A}
+{Adams}, W.~S. 1904, \apj, 19
+
+\bibitem[{Akeret {et~al.}(2013)Akeret, Seehars, Amara, Refregier, \&
+  Csillaghy}]{Akeret2013}
+Akeret, J., Seehars, S., Amara, A., Refregier, A., \& Csillaghy, A. 2013,
+  Astronomy and Computing, 2, 27
+
+\bibitem[{{Allard}(2014)}]{2014IAUS..299..271A}
+{Allard}, F. 2014, in IAU Symposium, Vol. 299, Exploring the Formation and
+  Evolution of Planetary Systems, ed. M.~{Booth}, B.~C. {Matthews}, \& J.~R.
+  {Graham}, 271--272
+
+\bibitem[{{Allard} {et~al.}(2013){Allard}, {Homeier}, \&
+  {Freytag}}]{2013MmSAI..84.1053A}
+{Allard}, F., {Homeier}, D., \& {Freytag}, B. 2013, \memsai, 84, 1053
+
+\bibitem[{{Allard} {et~al.}(2012){Allard}, {Homeier}, {Freytag}, \&
+  {Sharp}}]{Allard2012}
+{Allard}, F., {Homeier}, D., {Freytag}, B., \& {Sharp}, C.~M. 2012, in EAS
+  Publications Series, Vol.~57, EAS Publications Series, ed. C.~{Reyl{\'e}},
+  C.~{Charbonnel}, \& M.~{Schultheis}, 3--43
+
+\bibitem[{{Alsing} {et~al.}(2017){Alsing}, {Heavens}, \& {Jaffe}}]{Alsing2017}
+{Alsing}, J., {Heavens}, A., \& {Jaffe}, A.~H. 2017, \mnras, 466, 3272
+
+\bibitem[{{Anderes} {et~al.}(2015){Anderes}, {Wandelt}, \&
+  {Lavaux}}]{Anderes2015}
+{Anderes}, E., {Wandelt}, B.~D., \& {Lavaux}, G. 2015, \apj, 808, 152
+
+\bibitem[{Andrieu {et~al.}(2003)Andrieu, de~Freitas, Doucet, \&
+  Jordan}]{Andrieu2003}
+Andrieu, C., de~Freitas, N., Doucet, A., \& Jordan, M.~I. 2003, Machine
+  Learning, 50, 5
+
+\bibitem[{{Astraatmadja} \&
+  {Bailer-Jones}(2016{\natexlab{a}})}]{2016ApJ...832..137A}
+{Astraatmadja}, T.~L. \& {Bailer-Jones}, C.~A.~L. 2016{\natexlab{a}}, \apj,
+  832, 137
+
+\bibitem[{{Astraatmadja} \&
+  {Bailer-Jones}(2016{\natexlab{b}})}]{2016ApJ...833..119A}
+{Astraatmadja}, T.~L. \& {Bailer-Jones}, C.~A.~L. 2016{\natexlab{b}}, \apj,
+  833, 119
+
+\bibitem[{{Bailer-Jones}(2015)}]{2015PASP..127..994B}
+{Bailer-Jones}, C.~A.~L. 2015, \pasp, 127, 994
 
 \bibitem[{{Ballesteros-Paredes} {et~al.}(2015){Ballesteros-Paredes},
   {Hartmann}, {P{\'e}rez-Goytia}, \& {Kuznetsova}}]{2015MNRAS.452..566B}
 {Ballesteros-Paredes}, J., {Hartmann}, L.~W., {P{\'e}rez-Goytia}, N., \&
   {Kuznetsova}, A. 2015, \mnras, 452, 566
+
+\bibitem[{{Baraffe} {et~al.}(1998){Baraffe}, {Chabrier}, {Allard}, \&
+  {Hauschildt}}]{1998A&A...337..403B}
+{Baraffe}, I., {Chabrier}, G., {Allard}, F., \& {Hauschildt}, P.~H. 1998, \aap,
+  337, 403
+
+\bibitem[{{Barnes} {et~al.}(2004){Barnes}, {Moffett}, {Jefferys}, \&
+  {Forestell}}]{Barnes2004}
+{Barnes}, III, T.~G., {Moffett}, T.~J., {Jefferys}, W.~H., \& {Forestell},
+  A.~D. 2004, in Astronomical Society of the Pacific Conference Series, Vol.
+  310, IAU Colloq. 193: Variable Stars in the Local Group, ed. D.~W. {Kurtz} \&
+  K.~R. {Pollard}, 95
 
 \bibitem[{{Bate}(2009{\natexlab{a}})}]{2009MNRAS.392..590B}
 {Bate}, M.~R. 2009{\natexlab{a}}, \mnras, 392, 590
@@ -19,8 +84,64 @@
   {Bromm}}]{2003MNRAS.339..577B}
 {Bate}, M.~R., {Bonnell}, I.~A., \& {Bromm}, V. 2003, \mnras, 339, 577
 
+\bibitem[{{Binney} \& {Tremaine}(2008)}]{Binney2008}
+{Binney}, J. \& {Tremaine}, S. 2008, {Galactic Dynamics: Second Edition}
+  (Princeton University Press)
+
+\bibitem[{Bishop(2006)}]{Bishop2006}
+Bishop, C. 2006, Pattern Recognition and Machine Learning, Information Science
+  and Statistics (Springer)
+
+\bibitem[{{Blaauw}(1964)}]{1964IAUS...20...50B}
+{Blaauw}, A. 1964, in IAU Symposium, Vol.~20, The Galaxy and the Magellanic
+  Clouds, ed. F.~J. {Kerr}, 50
+
+\bibitem[{Blackwell \& Bentley(2002)}]{Blackwell2002}
+Blackwell, T. \& Bentley, P. 2002, in Proceedeings of the 4th Annual Conference
+  on Genetic and Evolutionary Computations, ed. W.~Langdon, E.~Cantu-Paz,
+  K.~Mathias, R.~Roy, \& D.~Davis (San Francisco, CA, USA: Morgan kaufmann
+  Publishers Inc.), 19--26
+
+\bibitem[{{Boss}(1910)}]{1910pgcs.book.....B}
+{Boss}, L. 1910, {Preliminary General Catalogue of 6188 stars for the eopoch
+  1900}
+
+\bibitem[{{Bouy} {et~al.}(2013){Bouy}, {Bertin}, {Moraux}, {Cuillandre},
+  {Bouvier}, {Barrado}, {Solano}, \& {Bayo}}]{Bouy2013}
+{Bouy}, H., {Bertin}, E., {Moraux}, E., {et~al.} 2013, \aap, 554, A101
+
+\bibitem[{{Bouy} {et~al.}(2015){Bouy}, {Bertin}, {Sarro}, {Barrado}, {Moraux},
+  {Bouvier}, {Cuillandre}, {Berihuete}, {Olivares}, \& {Beletsky}}]{Bouy2015}
+{Bouy}, H., {Bertin}, E., {Sarro}, L.~M., {et~al.} 2015, \aap, 577, A148
+
+\bibitem[{{Bressan} {et~al.}(2012){Bressan}, {Marigo}, {Girardi}, {Salasnich},
+  {Dal Cero}, {Rubele}, \& {Nanni}}]{Bressan2012}
+{Bressan}, A., {Marigo}, P., {Girardi}, L., {et~al.} 2012, \mnras, 427, 127
+
+\bibitem[{Brooks {et~al.}(2011)Brooks, Gelman, Jones, \& Meng}]{Brooks2011}
+Brooks, S., Gelman, A., Jones, G., \& Meng, X. 2011, Handbook of Markov Chain
+  Monte Carlo, Chapman \& Hall/CRC Handbooks of Modern Statistical Methods (CRC
+  Press)
+
+\bibitem[{{Buchner} {et~al.}(2014){Buchner}, {Georgakakis}, {Nandra}, {Hsu},
+  {Rangel}, {Brightman}, {Merloni}, {Salvato}, {Donley}, \&
+  {Kocevski}}]{Buchner2014}
+{Buchner}, J., {Georgakakis}, A., {Nandra}, K., {et~al.} 2014, \aap, 564, A125
+
+\bibitem[{{Cardelli} {et~al.}(1989){Cardelli}, {Clayton}, \&
+  {Mathis}}]{Cardelli1989}
+{Cardelli}, J.~A., {Clayton}, G.~C., \& {Mathis}, J.~S. 1989, \apj, 345, 245
+
+\bibitem[{Carpenter {et~al.}(2017)Carpenter, Gelman, Hoffman, Lee, Goodrich,
+  Betancourt, Brubaker, Guo, Li, \& Riddell}]{Stan}
+Carpenter, B., Gelman, A., Hoffman, M., {et~al.} 2017, Journal of Statistical
+  Software, Articles, 76, 1
+
 \bibitem[{{Carpenter}(2000)}]{2000AJ....120.3139C}
 {Carpenter}, J.~M. 2000, \aj, 120, 3139
+
+\bibitem[{{Cartwright} \& {Whitworth}(2012)}]{2012MNRAS.423.1018C}
+{Cartwright}, A. \& {Whitworth}, A.~P. 2012, \mnras, 423, 1018
 
 \bibitem[{{Chabrier}(2003)}]{Chabrier2003}
 {Chabrier}, G. 2003, \pasp, 115, 763
@@ -30,15 +151,267 @@
   Initial Mass Function 50 Years Later, ed. E.~{Corbelli}, F.~{Palla}, \&
   H.~{Zinnecker}, 41
 
+\bibitem[{Chung {et~al.}(2015)Chung, Gelman, Rabe-Hesketh, Liu, \&
+  Dorie}]{Chung2015}
+Chung, Y., Gelman, A., Rabe-Hesketh, S., Liu, J., \& Dorie, V. 2015, Journal of
+  Educational and Behavioral Statistics, 40, 136
+
+\bibitem[{Clerc \& Kennedy(2002)}]{Clerc2002}
+Clerc, M. \& Kennedy, J. 2002, Trans. Evol. Comp, 6, 58
+
+\bibitem[{{Converse} \& {Stahler}(2008)}]{Converse2008}
+{Converse}, J.~M. \& {Stahler}, S.~W. 2008, \apj, 678, 431
+
+\bibitem[{{Converse} \& {Stahler}(2010)}]{Converse2010}
+{Converse}, J.~M. \& {Stahler}, S.~W. 2010, \mnras, 405, 666
+
+\bibitem[{De~Boor(1978)}]{deBoor1978}
+De~Boor, C. 1978, A practical guide to splines / Carl de Boor (Springer-Verlag
+  New York), xxiv, 392 p. :
+
+\bibitem[{{de Marchi} \& {Paresce}(2001)}]{2001AGM....18S0551D}
+{de Marchi}, G. \& {Paresce}, F. 2001, in Astronomische Gesellschaft Meeting
+  Abstracts, Vol.~18, Astronomische Gesellschaft Meeting Abstracts, ed. E.~R.
+  {Schielicke}
+
+\bibitem[{{Demory}(2014)}]{Demory2014}
+{Demory}, B.-O. 2014, \apjl, 789, L20
+
+\bibitem[{Dempster {et~al.}(1977)Dempster, Laird, \& Rubin}]{Dempster1977}
+Dempster, A.~P., Laird, N.~M., \& Rubin, D.~B. 1977, JOURNAL OF THE ROYAL
+  STATISTICAL SOCIETY, SERIES B, 39, 1
+
+\bibitem[{Diard \& Bessiere(2008)}]{Diard2008}
+Diard, J. \& Bessiere, P. 2008, Probabilistic reasoning and decision making in
+  sensory-motor systems, 153
+
+\bibitem[{{Dirac}(1942)}]{1942RSPSA.180....1D}
+{Dirac}, P.~A.~M. 1942, Proceedings of the Royal Society of London Series A,
+  180, 1
+
+\bibitem[{Duane {et~al.}(1987)Duane, Kennedy, Pendleton, \& Roweth}]{Duane1987}
+Duane, S., Kennedy, A.~D., Pendleton, B.~J., \& Roweth, D. 1987, Physics
+  Letters B, 195, 216
+
+\bibitem[{{Duquennoy} \& {Mayor}(1991)}]{Duquennoy1991}
+{Duquennoy}, A. \& {Mayor}, M. 1991, \aap, 248, 485
+
+\bibitem[{{Faherty} {et~al.}(2012){Faherty}, {Burgasser}, {Walter}, {Van der
+  Bliek}, {Shara}, {Cruz}, {West}, {Vrba}, \&
+  {Anglada-Escud{\'e}}}]{Faherty2012}
+{Faherty}, J.~K., {Burgasser}, A.~J., {Walter}, F.~M., {et~al.} 2012, \apj,
+  752, 56
+
+\bibitem[{Fan \& Sisson(2011)}]{Fan2011}
+Fan, Y. \& Sisson, S. 2011, Handbook of Markov Chain Monte Carlo, 67
+
+\bibitem[{{Feeney} {et~al.}(2013){Feeney}, {Johnson}, {McEwen}, {Mortlock}, \&
+  {Peiris}}]{Feeney2013}
+{Feeney}, S.~M., {Johnson}, M.~C., {McEwen}, J.~D., {Mortlock}, D.~J., \&
+  {Peiris}, H.~V. 2013, \prd, 88, 043012
+
+\bibitem[{Fei-Fei \& Perona(2005)}]{Fei2005}
+Fei-Fei, L. \& Perona, P. 2005, in Computer Vision and Pattern Recognition,
+  2005. CVPR 2005. IEEE Computer Society Conference on, Vol.~2, Ieee, 524--531
+
+\bibitem[{Feroz {et~al.}(2009)Feroz, Hobson, \& Bridges}]{Feroz2009}
+Feroz, F., Hobson, M.~P., \& Bridges, M. 2009, Monthly Notices of the Royal
+  Astronomical Society, 398, 1601
+
+\bibitem[{Flegal {et~al.}(2016)Flegal, Hughes, \& Vats}]{mcmcse}
+Flegal, J.~M., Hughes, J., \& Vats, D. 2016, mcmcse: Monte Carlo Standard
+  Errors for MCMC, Riverside, CA and Minneapolis, MN, r package version 1.2-1
+
+\bibitem[{Foreman-Mackey {et~al.}(2013)Foreman-Mackey, Hogg, Lang, \&
+  Goodman}]{Foreman2013}
+Foreman-Mackey, D., Hogg, D.~W., Lang, D., \& Goodman, J. 2013, Publications of
+  the Astronomical Society of the Pacific, 125, 306
+
+\bibitem[{Franklin(2002)}]{Franklin2002}
+Franklin, J. 2002, The Science of Conjecture: Evidence and Probability Before
+  Pascal, A Johns Hopkins paperback (Johns Hopkins University Press)
+
+\bibitem[{{Gaia Collaboration} {et~al.}(2016){Gaia Collaboration}, {Prusti},
+  {de Bruijne}, {Brown}, {Vallenari}, {Babusiaux}, {Bailer-Jones}, {Bastian},
+  {Biermann}, {Evans}, \& et~al.}]{2016A&A...595A...1G}
+{Gaia Collaboration}, {Prusti}, T., {de Bruijne}, J.~H.~J., {et~al.} 2016,
+  \aap, 595, A1
+
+\bibitem[{{Gaia Collaboration} {et~al.}(2017){Gaia Collaboration}, {van
+  Leeuwen}, {Vallenari}, {Jordi}, {Lindegren}, {Bastian}, {Prusti}, {de
+  Bruijne}, {Brown}, {Babusiaux}, \& et~al.}]{2017A&A...601A..19G}
+{Gaia Collaboration}, {van Leeuwen}, F., {Vallenari}, A., {et~al.} 2017, \aap,
+  601, A19
+
+\bibitem[{{Galli} {et~al.}(2017){Galli}, {Moraux}, {Bouy}, {Bouvier},
+  {Olivares}, \& {Teixeira}}]{Galli2017}
+{Galli}, P.~A.~B., {Moraux}, E., {Bouy}, H., {et~al.} 2017, \aap, 598, A48
+
+\bibitem[{{Gatewood} {et~al.}(2000){Gatewood}, {de Jonge}, \&
+  {Han}}]{2000ApJ...533..938G}
+{Gatewood}, G., {de Jonge}, J.~K., \& {Han}, I. 2000, \apj, 533, 938
+
+\bibitem[{Gelman(2006)}]{Gelman2006}
+Gelman, A. 2006, Bayesian Analysis, 1, 515
+
+\bibitem[{Gelman(2012)}]{Gelman2012}
+Gelman, A. 2012, CHANCE, 25, 52
+
+\bibitem[{{Gelman} {et~al.}(2013){Gelman}, {Carlin}, {Stern}, {Dunson},
+  {Vehtari}, \& {Rubin}}]{Gelman2013}
+{Gelman}, A., {Carlin}, J., {Stern}, H., {et~al.} 2013, Bayesian Data Analysis,
+  third edition edn. (CRC)
+
+\bibitem[{Gelman \& Hill(2007)}]{Gelman2007}
+Gelman, A. \& Hill, J. 2007, Data Analysis Using Regression and
+  Multilevel/Hierarchical Models, Analytical Methods for Social Research
+  (Cambridge University Press)
+
+\bibitem[{Gelman {et~al.}(2008)Gelman, Jakulin, Pittau, \& Su}]{Gelman2008}
+Gelman, A., Jakulin, A., Pittau, M.~G., \& Su, Y.-S. 2008, Ann. Appl. Stat., 2,
+  1360
+
+\bibitem[{Geman \& Geman(1984)}]{Geman1984}
+Geman, S. \& Geman, D. 1984, IEEE Trans. Pattern Anal. Mach. Intell., 6, 721
+
+\bibitem[{Gong \& Flegal(2016)}]{Gong2016}
+Gong, L. \& Flegal, J.~M. 2016, Journal of Computational and Graphical
+  Statistics, 25, 684
+
+\bibitem[{Gonz{\'{a}}lez-Farias {et~al.}(2004)Gonz{\'{a}}lez-Farias,
+  Dominguez-Molina, \& Gupta}]{Gonzalez-Farias2004}
+Gonz{\'{a}}lez-Farias, G., Dominguez-Molina, A., \& Gupta, A.~K. 2004, Journal
+  of Statistical Planning and Inference, 126, 521
+
+\bibitem[{Good(1980)}]{Good1980}
+Good, I.~J. 1980, Trabajos de Estadistica Y de Investigacion Operativa, 31, 489
+
+\bibitem[{Goodman \& Weare(2010)}]{Goodman2010}
+Goodman, J. \& Weare, J. 2010, Communications in Applied Mathematics and
+  Computational Science, 5, 65
+
+\bibitem[{Gupta {et~al.}(2004)Gupta, Gonz{\'{a}}lez-Farias, \&
+  Dominguez-Molina}]{Gupta2004}
+Gupta, A.~K., Gonz{\'{a}}lez-Farias, G., \& Dominguez-Molina, J. 2004, Journal
+  of Multivariate Analysis, 89, 181
+
+\bibitem[{{Guthrie}(1987)}]{Guthrie1987}
+{Guthrie}, B.~N.~G. 1987, \qjras, 28, 289
+
+\bibitem[{{Hambly} \& {Jameson}(1991)}]{Hambly1991}
+{Hambly}, N.~C. \& {Jameson}, R.~F. 1991, \mnras, 249, 137
+
+\bibitem[{Hastings(1970)}]{Hastings1970}
+Hastings, W.~K. 1970, Biometrika, 57, 97
+
+\bibitem[{{Hertzsprung}(1947)}]{Hertzsprung1947}
+{Hertzsprung}, E. 1947, Annalen van de Sterrewacht te Leiden, 19, A1
+
+\bibitem[{{Hillenbrand} {et~al.}(2008){Hillenbrand}, {Bauermeister}, \&
+  {White}}]{2008ASPC..384..200H}
+{Hillenbrand}, L.~A., {Bauermeister}, A., \& {White}, R.~J. 2008, in 14th
+  Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun, ed. G.~{van
+  Belle}, Vol. 384, 200
+
+\bibitem[{{Hodgkin} \& {Jameson}(2000)}]{2000ASPC..198...59H}
+{Hodgkin}, S.~T. \& {Jameson}, R.~F. 2000, in Astronomical Society of the
+  Pacific Conference Series, Vol. 198, Stellar Clusters and Associations:
+  Convection, Rotation, and Dynamos, ed. R.~{Pallavicini}, G.~{Micela}, \&
+  S.~{Sciortino}, 59
+
+\bibitem[{{Hogg} {et~al.}(2010{\natexlab{a}}){Hogg}, {Bovy}, \&
+  {Lang}}]{Hogg2010a}
+{Hogg}, D.~W., {Bovy}, J., \& {Lang}, D. 2010{\natexlab{a}}, ArXiv e-prints
+
+\bibitem[{{Hogg} {et~al.}(2010{\natexlab{b}}){Hogg}, {Myers}, \&
+  {Bovy}}]{Hogg2010}
+{Hogg}, D.~W., {Myers}, A.~D., \& {Bovy}, J. 2010{\natexlab{b}}, \apj, 725,
+  2166
+
+\bibitem[{{Holl} {et~al.}(2010){Holl}, {Hobbs}, \&
+  {Lindegren}}]{2010IAUS..261..320H}
+{Holl}, B., {Hobbs}, D., \& {Lindegren}, L. 2010, in IAU Symposium, Vol. 261,
+  Relativity in Fundamental Astronomy: Dynamics, Reference Frames, and Data
+  Analysis, ed. S.~A. {Klioner}, P.~K. {Seidelmann}, \& M.~H. {Soffel},
+  320--324
+
+\bibitem[{Huang \& Wand(2013)}]{Huang2013}
+Huang, A. \& Wand, M.~P. 2013, Bayesian Analysis, 8, 439
+
+\bibitem[{{Jameson} {et~al.}(2002){Jameson}, {Dobbie}, {Hodgkin}, \&
+  {Pinfield}}]{2002MNRAS.335..853J}
+{Jameson}, R.~F., {Dobbie}, P.~D., {Hodgkin}, S.~T., \& {Pinfield}, D.~J. 2002,
+  \mnras, 335, 853
+
 \bibitem[{{Jappsen} {et~al.}(2005){Jappsen}, {Klessen}, {Larson}, {Li}, \& {Mac
   Low}}]{2005A&A...435..611J}
 {Jappsen}, A.-K., {Klessen}, R.~S., {Larson}, R.~B., {Li}, Y., \& {Mac Low},
   M.-M. 2005, \aap, 435, 611
 
+\bibitem[{Jaynes(2003)}]{Jaynes2003}
+Jaynes, E. 2003, Probability Theory: The Logic of Science (Cambridge University
+  Press)
+
+\bibitem[{JCGM(2008)}]{GUM2008}
+JCGM. 2008, JCGM 100: Evaluation of Measurement Data - Guide to the Expression
+  of Uncertainty in Measurement, Tech. rep., Joint Committee for Guides in
+  Metrology
+
+\bibitem[{{Jefferys} {et~al.}(2007){Jefferys}, {Jefferys}, {Barnes}, \&
+  {Dambis}}]{Jefferys2007}
+{Jefferys}, T.~R., {Jefferys}, W.~H., {Barnes}, III, T.~G., \& {Dambis}, A.
+  2007, in Astronomical Society of the Pacific Conference Series, Vol. 371,
+  Statistical Challenges in Modern Astronomy IV, ed. G.~J. {Babu} \& E.~D.
+  {Feigelson}, 433
+
+\bibitem[{{Johnson} \& {Mitchell}(1958)}]{Johnson1958}
+{Johnson}, H.~L. \& {Mitchell}, R.~I. 1958, \apj, 128, 31
+
+\bibitem[{{Jones}(1970)}]{1970AJ.....75..563J}
+{Jones}, B.~F. 1970, \aj, 75, 563
+
+\bibitem[{Kass \& Raftery(1995)}]{Kaas1995}
+Kass, R.~E. \& Raftery, A.~E. 1995, Journal of the American Statistical
+  Association, 90, 773
+
+\bibitem[{Kennedy \& Eberhart(1995)}]{Kennedy1995}
+Kennedy, J. \& Eberhart, R. 1995, in Neural Networks, 1995. Proceedings., IEEE
+  International Conference on, Vol.~4, 1942--1948 vol.4
+
 \bibitem[{{Kennicutt}(1998)}]{1998ASPC..142....1K}
 {Kennicutt}, Jr., R.~C. 1998, in Astronomical Society of the Pacific Conference
   Series, Vol. 142, The Stellar Initial Mass Function (38th Herstmonceux
   Conference), ed. G.~{Gilmore} \& D.~{Howell}, 1
+
+\bibitem[{{King}(1962)}]{King1962}
+{King}, I. 1962, \aj, 67, 471
+
+\bibitem[{Koller \& Friedman(2009)}]{Koller2009}
+Koller, D. \& Friedman, N. 2009, Probabilistic Graphical Models: Principles and
+  Techniques, Adaptive computation and machine learning (MIT Press)
+
+\bibitem[{{Kordopatis} {et~al.}(2013){Kordopatis}, {Gilmore}, {Steinmetz},
+  {Boeche}, {Seabroke}, {Siebert}, {Zwitter}, {Binney}, {de Laverny},
+  {Recio-Blanco}, {Williams}, {Piffl}, {Enke}, {Roeser}, {Bijaoui}, {Wyse},
+  {Freeman}, {Munari}, {Carrillo}, {Anguiano}, {Burton}, {Campbell}, {Cass},
+  {Fiegert}, {Hartley}, {Parker}, {Reid}, {Ritter}, {Russell}, {Stupar},
+  {Watson}, {Bienaym{\'e}}, {Bland-Hawthorn}, {Gerhard}, {Gibson}, {Grebel},
+  {Helmi}, {Navarro}, {Conrad}, {Famaey}, {Faure}, {Just}, {Kos}, {Matijevi{\v
+  c}}, {McMillan}, {Minchev}, {Scholz}, {Sharma}, {Siviero}, {de Boer}, \& {{\v
+  Z}erjal}}]{2013AJ....146..134K}
+{Kordopatis}, G., {Gilmore}, G., {Steinmetz}, M., {et~al.} 2013, \aj, 146, 134
+
+\bibitem[{{Kroupa}(2001)}]{2001MNRAS.322..231K}
+{Kroupa}, P. 2001, \mnras, 322, 231
+
+\bibitem[{{Kroupa}(2002)}]{2002Sci...295...82K}
+{Kroupa}, P. 2002, Science, 295, 82
+
+\bibitem[{{Kroupa} {et~al.}(2013){Kroupa}, {Weidner}, {Pflamm-Altenburg},
+  {Thies}, {Dabringhausen}, {Marks}, \& {Maschberger}}]{2013pss5.book..115K}
+{Kroupa}, P., {Weidner}, C., {Pflamm-Altenburg}, J., {et~al.} 2013, {The
+  Stellar and Sub-Stellar Initial Mass Function of Simple and Composite
+  Populations}, ed. T.~D. {Oswalt} \& G.~{Gilmore}, 115
 
 \bibitem[{{Kuznetsova} {et~al.}(2015){Kuznetsova}, {Hartmann}, \&
   {Ballesteros-Paredes}}]{2015ApJ...815...27K}
@@ -48,6 +421,101 @@
 \bibitem[{{Lada} \& {Lada}(2003)}]{2003ARA&A..41...57L}
 {Lada}, C.~J. \& {Lada}, E.~A. 2003, \araa, 41, 57
 
+\bibitem[{{Lee} \& {Sung}(1995)}]{1995JKAS...28...45L}
+{Lee}, S.-W. \& {Sung}, H. 1995, Journal of Korean Astronomical Society, 28, 45
+
+\bibitem[{{Limber}(1960)}]{Limber1960}
+{Limber}, D.~N. 1960, \apj, 131, 168
+
+\bibitem[{{Limber}(1961)}]{Limber1961}
+{Limber}, D.~N. 1961, \apj, 134, 537
+
+\bibitem[{{Limber}(1962)}]{Limber1962}
+{Limber}, I.~D.~N. 1962, \apj, 135, 16
+
+\bibitem[{Lin {et~al.}(2006)Lin, Lee, \& Ho}]{Lin2006}
+Lin, T., Lee, J., \& Ho, H. 2006, WOS:000236696400015
+
+\bibitem[{Lindstrom(1999)}]{Lindstrom1999}
+Lindstrom, M. 1999, Journal of Computational and Graphical Statistics, 8, 333
+
+\bibitem[{{Liu} {et~al.}(1991){Liu}, {Janes}, \& {Bania}}]{1991ApJ...377..141L}
+{Liu}, T., {Janes}, K.~A., \& {Bania}, T.~M. 1991, \apj, 377, 141
+
+\bibitem[{{Lodieu} {et~al.}(2012){Lodieu}, {Deacon}, \& {Hambly}}]{Lodieu2012}
+{Lodieu}, N., {Deacon}, N.~R., \& {Hambly}, N.~C. 2012, \mnras, 422, 1495
+
+\bibitem[{{Lodieu} {et~al.}(2007){Lodieu}, {Dobbie}, {Deacon}, {Hodgkin},
+  {Hambly}, \& {Jameson}}]{2007MNRAS.380..712L}
+{Lodieu}, N., {Dobbie}, P.~D., {Deacon}, N.~R., {et~al.} 2007, \mnras, 380, 712
+
+\bibitem[{{Loktin}(2006)}]{2006ARep...50..714L}
+{Loktin}, A.~V. 2006, Astronomy Reports, 50, 714
+
+\bibitem[{{Lutz} \& {Kelker}(1973)}]{Lutz1973}
+{Lutz}, T.~E. \& {Kelker}, D.~H. 1973, \pasp, 85, 573
+
+\bibitem[{{Luyten}(1939)}]{1939POMin...7....1L}
+{Luyten}, W.~J. 1939, Publications of the Astronomical Observatory University
+  of Minnesota, 7, 121
+
+\bibitem[{{Luyten}(1941)}]{1941NYASA..42..201L}
+{Luyten}, W.~J. 1941, Annals of the New York Academy of Sciences, 42, 201
+
+\bibitem[{{March} {et~al.}(2014){March}, {Karpenka}, {Feroz}, \&
+  {Hobson}}]{March2014}
+{March}, M.~C., {Karpenka}, N.~V., {Feroz}, F., \& {Hobson}, M.~P. 2014,
+  \mnras, 437, 3298
+
+\bibitem[{{Martin} {et~al.}(1996){Martin}, {Rebolo}, \&
+  {Zapatero-Osorio}}]{1996ApJ...469..706M}
+{Martin}, E.~L., {Rebolo}, R., \& {Zapatero-Osorio}, M.~R. 1996, \apj, 469, 706
+
+\bibitem[{McMichael(1996)}]{McMichael1996}
+McMichael, D.~W. 1996, in in Proc. Fourth International Symposium on Signal
+  Processing and its Applications (ISSPA, 377--378
+
+\bibitem[{{Melis} {et~al.}(2014){Melis}, {Reid}, {Mioduszewski}, {Stauffer}, \&
+  {Bower}}]{2014Sci...345.1029M}
+{Melis}, C., {Reid}, M.~J., {Mioduszewski}, A.~J., {Stauffer}, J.~R., \&
+  {Bower}, G.~C. 2014, Science, 345, 1029
+
+\bibitem[{{Mermilliod}(1979)}]{1979BICDS..16....2M}
+{Mermilliod}, J.-C. 1979, Bulletin d'Information du Centre de Donnees
+  Stellaires, 16, 2
+
+\bibitem[{{Mermilliod} {et~al.}(1997){Mermilliod}, {Bratschi}, \&
+  {Mayor}}]{1997A&A...320...74M}
+{Mermilliod}, J.-C., {Bratschi}, P., \& {Mayor}, M. 1997, \aap, 320, 74
+
+\bibitem[{{Mermilliod} {et~al.}(2009){Mermilliod}, {Mayor}, \&
+  {Udry}}]{2009A&A...498..949M}
+{Mermilliod}, J.-C., {Mayor}, M., \& {Udry}, S. 2009, \aap, 498, 949
+
+\bibitem[{Metropolis {et~al.}(1953)Metropolis, Rosenbluth, Rosenbluth, Teller,
+  \& Teller}]{Metropolis1953}
+Metropolis, N., Rosenbluth, A.~W., Rosenbluth, M.~N., Teller, A.~H., \& Teller,
+  E. 1953, The Journal of Chemical Physics, 21, 1087
+
+\bibitem[{{Miller} \& {Scalo}(1979)}]{1979ApJS...41..513M}
+{Miller}, G.~E. \& {Scalo}, J.~M. 1979, \apjs, 41, 513
+
+\bibitem[{{Moraux} {et~al.}(2001){Moraux}, {Bouvier}, \&
+  {Stauffer}}]{2001A&A...367..211M}
+{Moraux}, E., {Bouvier}, J., \& {Stauffer}, J.~R. 2001, \aap, 367, 211
+
+\bibitem[{{Moraux} {et~al.}(2003){Moraux}, {Bouvier}, {Stauffer}, \&
+  {Cuillandre}}]{2003A&A...400..891M}
+{Moraux}, E., {Bouvier}, J., {Stauffer}, J.~R., \& {Cuillandre}, J.-C. 2003,
+  \aap, 400, 891
+
+\bibitem[{{Moraux} {et~al.}(2004){Moraux}, {Kroupa}, \&
+  {Bouvier}}]{2004A&A...426...75M}
+{Moraux}, E., {Kroupa}, P., \& {Bouvier}, J. 2004, \aap, 426, 75
+
+\bibitem[{Morris(1983)}]{Morris1983}
+Morris, C.~N. 1983, Journal of the American Statistical Association, 78, 47
+
 \bibitem[{{Mulders} {et~al.}(2015){Mulders}, {Pascucci}, \&
   {Apai}}]{2015ApJ...814..130M}
 {Mulders}, G.~D., {Pascucci}, I., \& {Apai}, D. 2015, \apj, 814, 130
@@ -55,16 +523,180 @@
 \bibitem[{{Narayanan} \& {Dav{\'e}}(2012)}]{2012MNRAS.423.3601N}
 {Narayanan}, D. \& {Dav{\'e}}, R. 2012, \mnras, 423, 3601
 
+\bibitem[{Neal(1996)}]{Neal1996}
+Neal, R.~M. 1996, Bayesian Learning for Neural Networks (Secaucus, NJ, USA:
+  Springer-Verlag New York, Inc.)
+
 \bibitem[{{Offner} {et~al.}(2014){Offner}, {Clark}, {Hennebelle}, {Bastian},
   {Bate}, {Hopkins}, {Moraux}, \& {Whitworth}}]{Offner2014}
 {Offner}, S.~S.~R., {Clark}, P.~C., {Hennebelle}, P., {et~al.} 2014, Protostars
   and Planets VI, 53
 
+\bibitem[{Olivares {et~al.}(2017)Olivares, Sarro, Moraux, Berihuete, \&
+  Bouy}]{Olivares2017}
+Olivares, J., Sarro, L., Moraux, E., Berihuete, A., \& Bouy, H. 2017, \aap,
+  submitted
+
+\bibitem[{Patel {et~al.}(2013)Patel, Sharma, \& Gupta}]{Patel2013}
+Patel, P.~K., Sharma, V., \& Gupta, K. 2013, International Journal of Computer
+  Applications, 73
+
+\bibitem[{{Perryman} {et~al.}(1997){Perryman}, {Lindegren}, {Kovalevsky},
+  {Hoeg}, {Bastian}, {Bernacca}, {Cr{\'e}z{\'e}}, {Donati}, {Grenon},
+  {Grewing}, {van Leeuwen}, {van der Marel}, {Mignard}, {Murray}, {Le Poole},
+  {Schrijver}, {Turon}, {Arenou}, {Froeschl{\'e}}, \&
+  {Petersen}}]{1997A&A...323L..49P}
+{Perryman}, M.~A.~C., {Lindegren}, L., {Kovalevsky}, J., {et~al.} 1997, \aap,
+  323, L49
+
+\bibitem[{{Pinfield} {et~al.}(1998){Pinfield}, {Jameson}, \&
+  {Hodgkin}}]{Pinfield1998}
+{Pinfield}, D.~J., {Jameson}, R.~F., \& {Hodgkin}, S.~T. 1998, \mnras, 299, 955
+
 \bibitem[{{Porras} {et~al.}(2003){Porras}, {Christopher}, {Allen}, {Di
   Francesco}, {Megeath}, \& {Myers}}]{2003AJ....126.1916P}
 {Porras}, A., {Christopher}, M., {Allen}, L., {et~al.} 2003, \aj, 126, 1916
 
+\bibitem[{{Press}(1997)}]{Press1997}
+{Press}, W.~H. 1997, in Unsolved Problems in Astrophysics, ed. J.~N. {Bahcall}
+  \& J.~P. {Ostriker}, 49--60
+
+\bibitem[{{Pritchard}(1884)}]{1884MNRAS..44..355P}
+{Pritchard}, C. 1884, \mnras, 44, 355
+
+\bibitem[{{Raboud} \& {Mermilliod}(1998)}]{Raboud1998}
+{Raboud}, D. \& {Mermilliod}, J.-C. 1998, \aap, 329, 101
+
+\bibitem[{{Rebull} {et~al.}(2016){Rebull}, {Stauffer}, {Bouvier}, {Cody},
+  {Hillenbrand}, {Soderblom}, {Valenti}, {Barrado}, {Bouy}, {Ciardi},
+  {Pinsonneault}, {Stassun}, {Micela}, {Aigrain}, {Vrba}, {Somers},
+  {Christiansen}, {Gillen}, \& {Collier Cameron}}]{Rebull2016}
+{Rebull}, L.~M., {Stauffer}, J.~R., {Bouvier}, J., {et~al.} 2016, \aj, 152, 113
+
+\bibitem[{Roberts \& Rosenthal(2004)}]{Roberts2004}
+Roberts, G.~O. \& Rosenthal, J.~S. 2004, Probability Surveys, 1, 20
+
+\bibitem[{{Rosvick} {et~al.}(1992){Rosvick}, {Mermilliod}, \&
+  {Mayor}}]{1992A&A...255..130R}
+{Rosvick}, J.~M., {Mermilliod}, J.-C., \& {Mayor}, M. 1992, \aap, 255, 130
+
+\bibitem[{{Sale}(2012)}]{Sale2012}
+{Sale}, S.~E. 2012, \mnras, 427, 2119
+
+\bibitem[{{Salpeter}(1955)}]{Salpeter1955}
+{Salpeter}, E.~E. 1955, \apj, 121, 161
+
+\bibitem[{Sarro {et~al.}(2014)Sarro, Bouy, Berihuete, Bertin, Moraux, Bouvier,
+  Cuillandre, Barrado, \& Solano}]{Sarro2014}
+Sarro, L.~M., Bouy, H., Berihuete, A., {et~al.} 2014, Astronomy {\&}
+  Astrophysics, 14
+
+\bibitem[{Schwarz(1978)}]{Schwarz1978}
+Schwarz, G. 1978, Ann. Statist., 6, 461
+
+\bibitem[{{Shariff} {et~al.}(2016){Shariff}, {Dhawan}, {Jiao}, {Leibundgut},
+  {Trotta}, \& {van Dyk}}]{Shariff2016}
+{Shariff}, H., {Dhawan}, S., {Jiao}, X., {et~al.} 2016, \mnras, 463, 4311
+
+\bibitem[{{Shkedy} {et~al.}(2007){Shkedy}, {Decin}, {Molenberghs}, \&
+  {Aerts}}]{Shkedy2007}
+{Shkedy}, Z., {Decin}, L., {Molenberghs}, G., \& {Aerts}, C. 2007, \mnras, 377,
+  120
+
+\bibitem[{{Skilling}(2004)}]{Skilling2004}
+{Skilling}, J. 2004, in American Institute of Physics Conference Series, Vol.
+  735, American Institute of Physics Conference Series, ed. R.~{Fischer},
+  R.~{Preuss}, \& U.~V. {Toussaint}, 395--405
+
+\bibitem[{Skilling(2006)}]{Skilling2006}
+Skilling, J. 2006, Bayesian Anal., 1, 833
+
+\bibitem[{{Smart} \& {Green}(1977)}]{Smart1977}
+{Smart}, W.~M. \& {Green}, E.~b.~R.~M. 1977, {Textbook on Spherical Astronomy}
+
+\bibitem[{{Smith} \& {Struve}(1944)}]{1944ApJ...100..360S}
+{Smith}, B. \& {Struve}, O. 1944, \apj, 100, 360
+
+\bibitem[{{Soderblom} {et~al.}(2005){Soderblom}, {Nelan}, {Benedict},
+  {McArthur}, {Ramirez}, {Spiesman}, \& {Jones}}]{2005AJ....129.1616S}
+{Soderblom}, D.~R., {Nelan}, E., {Benedict}, G.~F., {et~al.} 2005, \aj, 129,
+  1616
+
+\bibitem[{Spiriti {et~al.}(2013)Spiriti, Eubank, Smith, \& Young}]{Spiriti2013}
+Spiriti, S., Eubank, R., Smith, P.~W., \& Young, D. 2013, Journal of
+  Statistical Computation and Simulation, 83, 1020
+
+\bibitem[{{Stauffer} {et~al.}(2007){Stauffer}, {Hartmann}, {Fazio}, {Allen},
+  {Patten}, {Lowrance}, {Hurt}, {Rebull}, {Cutri}, {Ramirez}, {Young}, {Rieke},
+  {Gorlova}, {Muzerolle}, {Slesnick}, \& {Skrutskie}}]{Stauffer2007}
+{Stauffer}, J.~R., {Hartmann}, L.~W., {Fazio}, G.~G., {et~al.} 2007, \apjs,
+  172, 663
+
+\bibitem[{{Stauffer} {et~al.}(1994){Stauffer}, {Liebert}, {Giampapa},
+  {Macintosh}, {Reid}, \& {Hamilton}}]{1994AJ....108..160S}
+{Stauffer}, J.~R., {Liebert}, J., {Giampapa}, M., {et~al.} 1994, \aj, 108, 160
+
+\bibitem[{{Stauffer} {et~al.}(1998){Stauffer}, {Schultz}, \&
+  {Kirkpatrick}}]{Stauffer1998}
+{Stauffer}, J.~R., {Schultz}, G., \& {Kirkpatrick}, J.~D. 1998, \apjl, 499,
+  L199
+
+\bibitem[{{Takeda} {et~al.}(2017){Takeda}, {Hashimoto}, \&
+  {Honda}}]{Takeda2017}
+{Takeda}, Y., {Hashimoto}, O., \& {Honda}, S. 2017, \pasj, 69, 1
+
+\bibitem[{{Tapiador} {et~al.}(2017){Tapiador}, {Berihuete}, {Sarro}, {Julbe},
+  \& {Huedo}}]{Tapiador2017}
+{Tapiador}, D., {Berihuete}, A., {Sarro}, L.~M., {Julbe}, F., \& {Huedo}, E.
+  2017, Astronomy and Computing, 19, 1
+
+\bibitem[{{Terndrup} {et~al.}(2000){Terndrup}, {Stauffer}, {Pinsonneault},
+  {Sills}, {Yuan}, {Jones}, {Fischer}, \&
+  {Krishnamurthi}}]{2000AJ....119.1303T}
+{Terndrup}, D.~M., {Stauffer}, J.~R., {Pinsonneault}, M.~H., {et~al.} 2000,
+  \aj, 119, 1303
+
 \bibitem[{{Thies} \& {Kroupa}(2007)}]{Thies2007}
 {Thies}, I. \& {Kroupa}, P. 2007, \apj, 671, 767
+
+\bibitem[{{Thies} \& {Kroupa}(2008)}]{2008MNRAS.390.1200T}
+{Thies}, I. \& {Kroupa}, P. 2008, \mnras, 390, 1200
+
+\bibitem[{{Titus}(1938)}]{1938AJ.....47...25T}
+{Titus}, J. 1938, \aj, 47, 25
+
+\bibitem[{{Trumpler}(1921)}]{Trumpler1921}
+{Trumpler}, R.~J. 1921, Lick Observatory Bulletin, 10, 110
+
+\bibitem[{{van Leeuwen}(1980)}]{1980IAUS...85..157V}
+{van Leeuwen}, F. 1980, in IAU Symposium, Vol.~85, Star Clusters, ed. J.~E.
+  {Hesser}, 157--162
+
+\bibitem[{{van Leeuwen}(1999)}]{1999A&A...341L..71V}
+{van Leeuwen}, F. 1999, \aap, 341, L71
+
+\bibitem[{{van Leeuwen}(2009)}]{2009A&A...497..209V}
+{van Leeuwen}, F. 2009, \aap, 497, 209
+
+\bibitem[{{van Rhijn}(1925)}]{1925PGro...38D...1V}
+{van Rhijn}, P.~J. 1925, Publications of the Kapteyn Astronomical Laboratory
+  Groningen, 38
+
+\bibitem[{{van Rhijn}(1936)}]{1936PGro...47....1V}
+{van Rhijn}, P.~J. 1936, Publications of the Kapteyn Astronomical Laboratory
+  Groningen, 47, 1
+
+\bibitem[{{Wells}(1924)}]{1924PhDT.........1W}
+{Wells}, A.~E. 1924, PhD thesis, THE UNIVERSITY OF MICHIGAN.
+
+\bibitem[{{Wheeler}(2009)}]{2009AAS...21340702W}
+{Wheeler}, C. 2009, in Bulletin of the American Astronomical Society, Vol.~41,
+  American Astronomical Society Meeting Abstracts \#213, 202
+
+\bibitem[{{Wolfgang} \& {Lopez}(2015)}]{Wolfgang2015}
+{Wolfgang}, A. \& {Lopez}, E. 2015, \apj, 806, 183
+
+\bibitem[{{Woolley}(1956)}]{1956MNRAS.116..296W}
+{Woolley}, R.~V.~D.~R. 1956, \mnras, 116, 296
 
 \end{thebibliography}

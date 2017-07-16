@@ -8,22 +8,51 @@ Astrophysicists, like archeologists and palaeontologists, can not willingly repr
 
 The objective of this work is the construction, test and validation of an statistical tool, an intelligent system specifically, that given the data of carefully designed observations of an stellar cluster, recovers the statistical distributions of its population. In particular, it delivers the luminosity distribution, which can be transformed into the mass distribution, given an evolutionary model and cluster age. The mass distribution is the fundamental product of the star formation process. It contains the fingerprints of the early phases of star formation and subsequent cluster evolution.
 
-An homogeneous and precise mass distribution inventory for clusters of diverse ages and forming environments will allow the astrophysical community to test the current theories of the star formation process. In particular, it will allow to solve the questions about universality of the initial mass distribution (function) and the role play by the physical properties of the cluster environment.    
+An homogeneous and precise mass distribution inventory for clusters of diverse ages and forming environments will allow the astrophysical community to test the current theories of the star formation process. In particular, it will allow to solve the questions about universality of the initial mass function (IMF, see next Section) and the role play by the physical properties of the cluster environment.    
 
-The remaining of this Chapter is structured as follows. In Section \ref{sect:IMD}, I describe the importance of the initial mass distribution and some of its current models. In Section \ref{sect:numerical_simulations}, I report the current developments of the numerical simulations of cluster formation. In Section \ref{sect:DANCeproject}, I describe the project DANCe and its carefully designed observations of stellar clusters; the ones used in this work. In Section \ref{sect:current_methodologies}, I comment on the current methodologies for the analysis of star clusters and associations. Finally in Section \ref{sect:newtool}, I briefly describe the methodology adopted for this new statistical tool, and the advantages over the previous works. 
+The remaining of this Chapter is structured as follows. In Section \ref{sect:IMF}, I describe the importance of the initial mass distribution and some of its current models. In Section \ref{sect:numerical_simulations}, I report the current developments of the numerical simulations of cluster formation. In Section \ref{sect:DANCeproject}, I describe the project DANCe and its carefully designed observations of stellar clusters; the ones used in this work. In Section \ref{sect:current_methodologies}, I comment on the current methodologies for the analysis of star clusters and associations. Finally in Section \ref{sect:newtool}, I briefly describe the methodology adopted for this new statistical tool, and the advantages over the previous works. 
 
-\section{The initial distribution of masses}
-\label{sect:IMD}
+\section{The initial mass function of stellar clusters}
+\label{sect:IMF}
 
-The measuring and understanding of the initial mass distribution is a central topic in the study of star formation. It is also essential in other areas of astrophysics, from planetary formation, where it appears that the mass of the host star plays an important role in the formation of the planetary system \cite[see for example][]{2015ApJ...814..130M}, to galactic evolution \citep{1998ASPC..142....1K} and cosmology \cite[see for example][]{2012MNRAS.423.3601N}. 
+In his seminal work \citep{Salpeter1955}, Edwin Salpeter defined the \emph{original mass function}, $\xi(M)$, as
 
-The theories that predict the origin of the initial mass distribution can be categorised into deterministic and stochastic \citep{Offner2014}. The former postulate that stellar masses are deterministically inherited from the initial core masses via accretion from the gas reservoir of the parent molecular cloud. Thus, the initial mass distribution can be directly mapped from the distribution of initial core masses, and the understanding of the former reduces to that of the latter. On the other hand, stochastic models postulate that the stellar masses are independent of the initial core masses. Among these models, there are those proposing that stellar masses are determined by dynamical interactions and contest for gas. For more details see \citet{Offner2014} and references therein. 
+\begin{equation}
+\rm{d}N= \xi(M)\rm{d}(\log_{10} M) \frac{\rm{d}t}{T_0},
+\end{equation}
+where $\rm{d}N$ is the number of stars in the mass range $\rm{d}M$ created in the time interval $\rm{d}t$ per cubic parsec, and $T_0$ is the age of the galaxy. Following \citet{Chabrier2003}, at the observed time $t$, the mass function (MF) is
 
-  The observational studies of the initial mass distribution are conditioned on the ages of the stellar populations under analysis, and relay deeply on the assumed processes that link the observed present-day mass distributions (PDMDs) to the initial one. While the resulting models for the initial mass distribution are always analytical functions of the mass, the observed PDMDs are commonly expressed with points, histograms or kernel density estimations\footnote{KDEs are non-parametric ways to estimate a probability density function by means of an independently and identically distributed sample drawn from it.} (KDEs). In the following and for the sake of simplicity, I refer to the analytical functions of the initial mass distribution as the Initial Mass Functions (IMFs). 
+\begin{equation}
+\xi(\log_{10} M)=\frac{\rm{d}N}{\log_{10} M},
+\end{equation}
 
-The most common IMFs are the log-normal functions of Chabrier \citep{Chabrier2003,Chabrier2005}, the power-law functions of Salpeter \citep{Salpeter1955}, Miller and Scalo \citep{Miller1979}, and Kroupa \citep{Kroupa2001,Kroupa2002,Kroupa2013,Thies2007,Thies2008}. Other functional forms include the truncated exponential \citep{deMarchi2001} and the Pareto-Levy distribution \citep{Cartwright2012}. In behalve of simplicity, I will only explain the most classical ones of Chabrier and Kroupa.
+where $N$ is the stellar number density in pc$^{-3}$ and M is the mass in solar masses ($M_{\odot}$). The Initial Mass Function (IMF) is then the MF at the time of stellar formation $t=t_0$. The logarithmic transformation,
+\begin{equation}
+\xi(M)=\frac{1}{M \ln 10} \xi (\log_{10} M),
+\end{equation}
+is convenient due to the large range of masses covered by the star formation process.
 
+Notice that neither the IMF nor the MF are probability density functions (PDFs) of the mass (see Section \ref{sect:introprobability} for the definition of a PDF). Nevertheless, they can be transformed into PDFs by a normalisation constant, which can be computed by integrating them as functions of the mass over the mass domain. In this work, I will use the PDF of the mass (PDM), denoted by $\xi_L (M)$, as a proxy for the MF. Thus,
 
+\begin{equation}
+\xi_L (\log_{10} M) \propto \xi (\log_{10} M)
+\end{equation}
+
+The measuring and understanding of the IMF is a central topic in the study of star formation. It is also essential in other areas of astrophysics, from planetary formation, where it appears that the mass of the host star plays an important role in the formation of the planetary system \cite[see for example][]{2015ApJ...814..130M}, to galactic evolution \citep{1998ASPC..142....1K} and cosmology \cite[see for example][]{2012MNRAS.423.3601N}. 
+
+The theories that predict the origin of the IMF can be categorised into deterministic and stochastic \citep{Offner2014}. The former postulate that stellar masses are deterministically inherited from the initial core masses via accretion from the gas reservoir of the parent molecular cloud. Thus, the IMF can be directly mapped from the distribution of initial core masses, and the understanding of the former reduces to that of the latter. On the other hand, stochastic models postulate that the stellar masses are independent of the initial core masses. Among these models, there are those proposing that stellar masses are determined by dynamical interactions and competitive accretion. For more details see \citet{Offner2014} and references therein. 
+
+  The observational studies of the IMF are conditioned on the ages of the stellar populations under analysis (their MF at their corresponding ages), and relay deeply on the assumed processes that link the observed present-day MF to the IMF. While the resulting models for the IMF are always analytical functions of the mass, the observed MF are commonly expressed with points, histograms or kernel density estimations\footnote{KDEs are non-parametric ways to estimate a probability density function by means of an independently and identically distributed sample drawn from it.} (KDEs).
+
+The most common IMFs are the log-normal functions of Chabrier \citep{Chabrier2003,Chabrier2005}, the power-law functions of Salpeter \citep{Salpeter1955}, Miller and Scalo \citep{1979ApJS...41..513M}, and Kroupa \citep{2001MNRAS.322..231K,2002Sci...295...82K,2013pss5.book..115K,Thies2007,2008MNRAS.390.1200T}. Other functional forms include the truncated exponential \citep{2001AGM....18S0551D} and the Pareto-Levy family distribution \citep{2012MNRAS.423.1018C}. In behalf of simplicity, I will only explain the classical ones of Salpeter, Chabrier, and Kroupa.
+
+\citet{Salpeter1955} derived his famous IMF using a luminosity function resulting from the compilation of the works of \citet{1939POMin...7....1L,1941NYASA..42..201L} and \citet{1925PGro...38D...1V,1936PGro...47....1V}. Then, he transformed it into a MF using a mass-luminosity relation that he obtained after adopting a series of masses and luminosities from the literature. His MF has the form
+
+\begin{equation}
+\xi(M)=0.03 \left(\frac{M}{M_{\odot}}\right)^{-1.35},
+\end{equation}
+with $M$ in the range $0.3\,M_{\odot}$ to  $17\,M_{\odot}$.
+ 
 - The initial mass function of \citet{Chabrier2003,Chabrier2005,Thies2007}
 \citet{Chabrier2005} found this function by fitting a log-normal function to the visual luminosity distribution of the closest $8$ pc field objects.
 
@@ -44,14 +73,14 @@ Numerical simulations have proven to be of great use in the understanding of the
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{background/Figures/F10_Bate2003.pdf}
-\caption{Mass distribution resulting from the numerical simulation of \citet{2003MNRAS.339..577B}. The lines show the mass distributions of \citet{Salpeter1955}, \citet{Miller1979} and \citet{Kroupa2001}. Reproduced from Figure 10 of \citet{2003MNRAS.339..577B}}
+\caption{Mass distribution resulting from the numerical simulation of \citet{2003MNRAS.339..577B}. The lines show the mass distributions of \citet{Salpeter1955}, \citet{1979ApJS...41..513M} and \citet{2001MNRAS.322..231K}. Reproduced from Figure 10 of \citet{2003MNRAS.339..577B}}
 \label{fig:IMFBate2003}
 \end{center}
 \end{figure}
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{background/Figures/F11_Kuznetsova.pdf}
+\includegraphics[width=0.8\textwidth]{background/Figures/F11_Kuznetsova2015.pdf}
 \caption{Mass distribution resulting from the numerical simulation of \citet{2015ApJ...815...27K}. The High (solid line) and Low (dashed line) resolution simulations reach $0.05\, M_{\odot}$ and $0.15\, M_{\odot}$, respectively. Also shown the mass function of \citet{Chabrier2005} (red dashed line). Reproduced from Figure 11 of \citet{2015ApJ...815...27K}}
 \label{fig:IMFKuznetsova}
 \end{center}
