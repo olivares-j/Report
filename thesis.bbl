@@ -1,4 +1,4 @@
-\begin{thebibliography}{170}
+\begin{thebibliography}{178}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -143,8 +143,11 @@ Carpenter, B., Gelman, A., Hoffman, M., {et~al.} 2017, Journal of Statistical
 \bibitem[{{Cartwright} \& {Whitworth}(2012)}]{2012MNRAS.423.1018C}
 {Cartwright}, A. \& {Whitworth}, A.~P. 2012, \mnras, 423, 1018
 
-\bibitem[{{Chabrier}(2003)}]{Chabrier2003}
-{Chabrier}, G. 2003, \pasp, 115, 763
+\bibitem[{{Chabrier}(2003{\natexlab{a}})}]{Chabrier2003b}
+{Chabrier}, G. 2003{\natexlab{a}}, \pasp, 115, 763
+
+\bibitem[{{Chabrier}(2003{\natexlab{b}})}]{Chabrier2003a}
+{Chabrier}, G. 2003{\natexlab{b}}, \apjl, 586, L133
 
 \bibitem[{{Chabrier}(2005)}]{Chabrier2005}
 {Chabrier}, G. 2005, in Astrophysics and Space Science Library, Vol. 327, The
@@ -165,6 +168,10 @@ Clerc, M. \& Kennedy, J. 2002, Trans. Evol. Comp, 6, 58
 \bibitem[{{Converse} \& {Stahler}(2010)}]{Converse2010}
 {Converse}, J.~M. \& {Stahler}, S.~W. 2010, \mnras, 405, 666
 
+\bibitem[{{Dahn} {et~al.}(1986){Dahn}, {Liebert}, \&
+  {Harrington}}]{1986AJ.....91..621D}
+{Dahn}, C.~C., {Liebert}, J., \& {Harrington}, R.~S. 1986, \aj, 91, 621
+
 \bibitem[{De~Boor(1978)}]{deBoor1978}
 De~Boor, C. 1978, A practical guide to splines / Carl de Boor (Springer-Verlag
   New York), xxiv, 392 p. :
@@ -173,6 +180,11 @@ De~Boor, C. 1978, A practical guide to splines / Carl de Boor (Springer-Verlag
 {de Marchi}, G. \& {Paresce}, F. 2001, in Astronomische Gesellschaft Meeting
   Abstracts, Vol.~18, Astronomische Gesellschaft Meeting Abstracts, ed. E.~R.
   {Schielicke}
+
+\bibitem[{{Delfosse} {et~al.}(2000){Delfosse}, {Forveille}, {S{\'e}gransan},
+  {Beuzit}, {Udry}, {Perrier}, \& {Mayor}}]{2000A&A...364..217D}
+{Delfosse}, X., {Forveille}, T., {S{\'e}gransan}, D., {et~al.} 2000, \aap, 364,
+  217
 
 \bibitem[{{Demory}(2014)}]{Demory2014}
 {Demory}, B.-O. 2014, \apjl, 789, L20
@@ -304,6 +316,9 @@ Gupta, A.~K., Gonz{\'{a}}lez-Farias, G., \& Dominguez-Molina, J. 2004, Journal
 \bibitem[{Hastings(1970)}]{Hastings1970}
 Hastings, W.~K. 1970, Biometrika, 57, 97
 
+\bibitem[{{Henry} \& {McCarthy}(1990)}]{1990ApJ...350..334H}
+{Henry}, T.~J. \& {McCarthy}, Jr., D.~W. 1990, \apj, 350, 334
+
 \bibitem[{{Hertzsprung}(1947)}]{Hertzsprung1947}
 {Hertzsprung}, E. 1947, Annalen van de Sterrewacht te Leiden, 19, A1
 
@@ -406,6 +421,10 @@ Koller, D. \& Friedman, N. 2009, Probabilistic Graphical Models: Principles and
 
 \bibitem[{{Kroupa}(2002)}]{2002Sci...295...82K}
 {Kroupa}, P. 2002, Science, 295, 82
+
+\bibitem[{{Kroupa} {et~al.}(1991){Kroupa}, {Gilmore}, \&
+  {Tout}}]{1991MNRAS.251..293K}
+{Kroupa}, P., {Gilmore}, G., \& {Tout}, C.~A. 1991, \mnras, 251, 293
 
 \bibitem[{{Kroupa} {et~al.}(2013){Kroupa}, {Weidner}, {Pflamm-Altenburg},
   {Thies}, {Dabringhausen}, {Marks}, \& {Maschberger}}]{2013pss5.book..115K}
@@ -573,6 +592,15 @@ Patel, P.~K., Sharma, V., \& Gupta, K. 2013, International Journal of Computer
   {Christiansen}, {Gillen}, \& {Collier Cameron}}]{Rebull2016}
 {Rebull}, L.~M., {Stauffer}, J.~R., {Bouvier}, J., {et~al.} 2016, \aj, 152, 113
 
+\bibitem[{{Reid} {et~al.}(2004){Reid}, {Cruz}, {Allen}, {Mungall}, {Kilkenny},
+  {Liebert}, {Hawley}, {Fraser}, {Covey}, {Lowrance}, {Kirkpatrick}, \&
+  {Burgasser}}]{2004AJ....128..463R}
+{Reid}, I.~N., {Cruz}, K.~L., {Allen}, P., {et~al.} 2004, \aj, 128, 463
+
+\bibitem[{{Reid} {et~al.}(2002){Reid}, {Gizis}, \&
+  {Hawley}}]{2002AJ....124.2721R}
+{Reid}, I.~N., {Gizis}, J.~E., \& {Hawley}, S.~L. 2002, \aj, 124, 2721
+
 \bibitem[{Roberts \& Rosenthal(2004)}]{Roberts2004}
 Roberts, G.~O. \& Rosenthal, J.~S. 2004, Probability Surveys, 1, 20
 
@@ -590,6 +618,9 @@ Roberts, G.~O. \& Rosenthal, J.~S. 2004, Probability Surveys, 1, 20
   Cuillandre, Barrado, \& Solano}]{Sarro2014}
 Sarro, L.~M., Bouy, H., Berihuete, A., {et~al.} 2014, Astronomy {\&}
   Astrophysics, 14
+
+\bibitem[{{Scalo}(1986)}]{1986FCPh...11....1S}
+{Scalo}, J.~M. 1986, \fcp, 11, 1
 
 \bibitem[{Schwarz(1978)}]{Schwarz1978}
 Schwarz, G. 1978, Ann. Statist., 6, 461
