@@ -1,0 +1,56 @@
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Thu Feb 16 10:48:27 2017
+\begin{table*}[ht]
+\caption{Parameters names, symbols, and priors.}
+\centering
+\begin{tabular}{lcc|lcc}
+  \hline
+ Name & Symbol & Prior & Name & Symbol & Prior\\ 
+  \hline
+  Field fraction	& $\pi$        & Dirichlet($\alpha$)       & Coefficient [1,1]	& $\beta_{Y,1}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Cs fraction 		& $\pi_{CB}$   & Dirichlet($\alpha_{Cs}$)  & Coefficient [1,2] 	& $\beta_{Y,2}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Cs PM fraction 1 	& $\pi_{Cs,1}$ & Dirichlet($\alpha_{Cs}$)  & Coefficient [1,3] 	& $\beta_{Y,3}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Cs PM fraction 2 	& $\pi_{Cs,2}$ & Dirichlet($\alpha_{Cs}$)  & Coefficient [1,4] 	& $\beta_{Y,4}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Cs PM fraction 3 	& $\pi_{Cs,3}$ & Dirichlet($\alpha_{Cs}$)  & Coefficient [1,5] 	& $\beta_{Y,5}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Bs PM fraction 1 	& $\pi_{Bs,1}$ & Dirichlet($\alpha_{Bs}$)  & Coefficient [1,6] 	& $\beta_{Y,6}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Color fraction 1 	& $\pi_{CI,1}$ & Dirichlet($\alpha_{CI}$)  & Coefficient [1,7] 	& $\beta_{Y,7}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Color fraction 2 	& $\pi_{CI,2}$ & Dirichlet($\alpha_{CI}$)  & Coefficient [2,1] 	& $\beta_{J,1}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Color fraction 3 	& $\pi_{CI,3}$ & Dirichlet($\alpha_{CI}$)  & Coefficient [2,2] 	& $\beta_{J,2}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Color fraction 4 	& $\pi_{CI,4}$ & Dirichlet($\alpha_{CI}$)  & Coefficient [2,3] 	& $\beta_{J,3}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Mean color 1 		& $\mu_{CI,1}$ & Unifrom($rg_{CI}$)        & Coefficient [2,4] 	& $\beta_{J,4}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Mean color 2 		& $\mu_{CI,2}$ & Unifrom($rg_{CI}$)        & Coefficient [2,5] 	& $\beta_{J,5}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Mean color 3 		& $\mu_{CI,3}$ & Unifrom($rg_{CI}$)        & Coefficient [2,6] 	& $\beta_{J,6}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Mean color 4 		& $\mu_{CI,4}$ & Unifrom($rg_{CI}$)        & Coefficient [2,7] 	& $\beta_{J,7}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Mean color 5 		& $\mu_{CI,5}$ & Unifrom($rg_{CI}$)        & Coefficient [3,1] 	& $\beta_{H,1}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\ 
+  Variance color 1 	& $\sigma_{CI,1}$ &HalfCauchy(0,$\eta$)    & Coefficient [3,2] 	& $\beta_{H,2}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance color 2 	& $\sigma_{CI,2}$ &HalfCauchy(0,$\eta$)    & Coefficient [3,3] 	& $\beta_{H,3}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance color 3 	& $\sigma_{CI,3}$ &HalfCauchy(0,$\eta$)    & Coefficient [3,4] 	& $\beta_{H,4}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance color 4 	& $\sigma_{CI,4}$ &HalfCauchy(0,$\eta$)    & Coefficient [3,5] 	& $\beta_{H,5}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance color 5 	& $\sigma_{CI,5}$ &HalfCauchy(0,$\eta$)    & Coefficient [3,6] 	& $\beta_{H,6}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Mean PM Cs[1,1] 	& $\mu_{Cs,1}$ & Normal($\mu_{\mu_{pm}},\Sigma_{\mu_{pm}}$) &Coefficient [3,7] 	& $\beta_{H,7}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\ 
+  Mean PM Cs[1,2] 	& $\mu_{Cs,2}$ & Normal($\mu_{\mu_{pm}},\Sigma_{\mu_{pm}}$) &Coefficient [4,1] 	& $\beta_{K,1}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance Cs[1,1] 	& $\Sigma_{Cs,1,1}$ & Half-t($\nu,A_{pm}$)  & Coefficient [4,2] 	& $\beta_{K,2}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance Cs[1,2] 	& $\Sigma_{Cs,1,2}$ & Half-t($\nu,A_{pm}$)  & Coefficient [4,3] 	& $\beta_{K,3}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance Cs[1,3] 	& $\Sigma_{Cs,1,3}$ & Half-t($\nu,A_{pm}$)  & Coefficient [4,4] 	& $\beta_{K,4}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\ 
+  Variance Cs[2,1] 	& $\Sigma_{Cs,2,1}$ & Half-t($\nu,A_{pm}$)  & Coefficient [4,5] 	& $\beta_{K,5}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance Cs[2,2] 	& $\Sigma_{Cs,2,2}$ & Half-t($\nu,A_{pm}$)  & Coefficient [4,6] 	& $\beta_{K,6}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance Cs[2,3] 	& $\Sigma_{Cs,2,3}$ & Half-t($\nu,A_{pm}$)  & Coefficient [4,7] 	& $\beta_{K,7}$     & Normal($\mu_{\beta},\sigma_{\beta}$)\\
+  Variance Cs[3,1] 	& $\Sigma_{Cs,3,1}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[1] 		& $\Sigma_{clus}[1]$ & Half-t($\nu,A_{ph}$)  \\ 
+  Variance Cs[3,2] 	& $\Sigma_{Cs,3,2}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[2] 		& $\Sigma_{clus}[2]$ & Half-t($\nu,A_{ph}$)  \\  
+  Variance Cs[3,3] 	& $\Sigma_{Cs,3,3}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[3] 		& $\Sigma_{clus}[3]$ & Half-t($\nu,A_{ph}$)  \\ 
+  Variance Cs[4,1] 	& $\Sigma_{Cs,4,1}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[4] 		& $\Sigma_{clus}[4]$ & Half-t($\nu,A_{ph}$)  \\ 
+  Variance Cs[4,2] 	& $\Sigma_{Cs,4,2}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[5] 		& $\Sigma_{clus}[5]$ & Half-t($\nu,A_{ph}$)  \\  
+  Variance Cs[4,3] 	& $\Sigma_{Cs,4,3}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[6] 		& $\Sigma_{clus}[6]$ & Half-t($\nu,A_{ph}$)  \\  
+  Mean PM Bs[1,1] 	& $\mu_{Bs,1}$ & Normal($\mu_{\mu_{pm}},\Sigma_{\mu_{pm}}$)& Covariance Phot[7]& $\Sigma_{clus}[7]$ & Half-t($\nu,A_{ph}$)  \\ 
+  Mean PM Bs[1,2] 	& $\mu_{Bs,2}$ & Normal($\mu_{\mu_{pm}},\Sigma_{\mu_{pm}}$)& Covariance Phot[8]& $\Sigma_{clus}[8]$ & Half-t($\nu,A_{ph}$)  \\ 
+  Variance Bs[1,1] 	& $\Sigma_{Bs,1,1}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[9] 		& $\Sigma_{clus}[9]$ & Half-t($\nu,A_{ph}$)  \\ 
+  Variance Bs[1,2] 	& $\Sigma_{Bs,1,2}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[10] 	& $\Sigma_{clus}[10]$ & Half-t($\nu,A_{ph}$)  \\  
+  Variance Bs[1,3] 	& $\Sigma_{Bs,1,3}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[11] 	& $\Sigma_{clus}[11]$ & Half-t($\nu,A_{ph}$)  \\ 
+  Variance Bs[2,1] 	& $\Sigma_{Bs,2,1}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[12] 	& $\Sigma_{clus}[12]$ & Half-t($\nu,A_{ph}$)  \\  
+  Variance Bs[2,2] 	& $\Sigma_{Bs,2,2}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[13] 	& $\Sigma_{clus}[13]$ & Half-t($\nu,A_{ph}$)  \\  
+  Variance Bs[2,3] 	& $\Sigma_{Bs,2,3}$ & Half-t($\nu,A_{pm}$)  &Covariance Phot[14] 	& $\Sigma_{clus}[14]$ & Half-t($\nu,A_{ph}$)  \\  
+                        &                   &                       &Covariance Phot[15] 	& $\Sigma_{clus}[15]$ & Half-t($\nu,A_{ph}$)  \\ 
+   \hline
+\end{tabular}
+\label{tab:symbols_parameters}
+\end{table*}

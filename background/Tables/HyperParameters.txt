@@ -1,0 +1,32 @@
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Thu Feb 16 10:48:27 2017
+\begin{table}[H]
+\caption{Hyper-parameters for different blocks of the Hierarchical Bayesian Model. The upper and middle blocks correspond, respectively, to hyper-parameters of the proper motions and photometric models. The lower block to hyper-parameters shared by both models.}
+\centering
+\begin{tabular}{ll}
+  \hline
+Hp. & Value \\ 
+  \hline
+$\alpha_{Cs}$      & $\{1,1,5,5\}$\\
+$\alpha_{Bs}$      & $\{1.2,8.8\}$\\
+$A_{pm}$            & $\{10^5,10^5\}$\\
+$\mu_{\mu_{pm}}$    & $\{16.30,-39.62\}$\\
+$\Sigma_{\mu_{pm}}$ & $\{36.84,1.18,40.71\}$\\
+\hline
+$\alpha_{CI}$      & $\{1,1,1,1,1\}$\\
+$rg_{CI}$           & $\{0.8,8\}$\\
+$\eta$              & 100\\
+$\mu_{\beta_Y}$     & $\{7.65,11.47,10.66,16.33,16.49,21.44,22.49\}$\\
+$\mu_{\beta_J}$     & $\{7.61, 11.52, 10.20, 15.66, 15.58, 19.88, 21.16\}$\\
+$\mu_{\beta_H}$     & $\{7.63, 10.88,  9.50, 15.19, 15.04, 18.68, 20.64\}$\\ 
+$\mu_{\beta_K}$     & $\{7.55, 10.81,  9.32, 14.79, 14.62, 17.63, 20.24\}$\\
+$\sigma_{\beta}$    & $\{1,1,1,1,1,0.5,0.1\}$\\
+$A_{ph}$            & $\{10,10,10,10,10\}$\\
+\hline
+$\alpha$            & $\{98,2\}$\\
+$\alpha_{CB}$       & $\{8,2\}$ \\
+$\nu$               & 3\\
+   \hline
+\end{tabular}
+\label{table:hyperparameters}
+\end{table}

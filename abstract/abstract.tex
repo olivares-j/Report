@@ -1,0 +1,29 @@
+%!TEX root = thesis.tex
+
+%This is the abstract of your PhD thesis.
+
+The origin and evolution of stellar populations is one of the greatest challenges in modern astrophysics. It is known that the majority of the stars has its origin in stellar clusters \citep{2000AJ....120.3139C, 2003AJ....126.1916P,2003ARA&A..41...57L}. However, only less than one tenth of these clusters remains bounded after the first few hundred million years \citep{2003ARA&A..41...57L}. Ergo, the understanding of the origin and evolution of stars demands meticulous analyses of stellar clusters in these crucial ages.
+
+The project Dynamical Analysis of Nearby Clusters \cite[DANCe,][]{Bouy2013}, from which the present work is part of, provides the scientific framework for the analysis of Nearby Young Clusters (NYC) in the solar neighbourhood ($\leq 500$ pc). The DANCe carefully designed observations of the well known Pleiades cluster provide the perfect case study for the development and testing of statistical tools aiming at the analysis of the early phases of cluster evolution.
+
+The statistical tool developed here is a probabilistic intelligent system that performs Bayesian inference for the parameters governing the probability density functions (PDFs) of the cluster population (PDFCP). It has been benchmarked with the Pleiades photometric and astrometric data of the DANCe survey. As any Bayesian framework, it requires the setting up of priors. To avoid the subjectivity of these, the intelligent system establish them using the Bayesian Hierarchical Model (BHM) approach. In it, the parameters of prior distributions, which are also inferred from the data, are drawn from other distributions in a hierarchical way. 
+
+In this BHM intelligent system, the true values of the PDFCP are specified by stochastic and deterministic relations representing the state of knowledge of the NYC. To perform the parametric inference, the likelihood of the data, given these true values, accounts for the properties of the data set, especially its heteroscedasticity and missing value objects. By properly accounting for these properties, the intelligent system: i) Increases the size of the data set, with respect to previous studies working exclusively on fully observed objects, and ii) Avoids biases associated to fully observed data sets, and restrictions to low-uncertainty objects ($\sigma$-clipping procedures).
+
+The BHM returns the posterior PDFs of the parameters in the PDFCPs, particularly of the spatial, proper motions and luminosity distributions. In the BHM each object in the data set contributes to the PDFs of the parameters proportionally to its likelihood. Thus, the PDFCPs are free of biases resulting from typical high membership probability selections (sampling bias).
+
+As a by-product, the BHM also gives the PDFs of the cluster membership probability for each object in the data set. These PDFs together with an optimal probability classification threshold, which is obtained from synthetic data sets, allow the classification of objects into cluster and field populations. This by-product classifier shows excellent results when applied on synthetic data sets (with an area under the ROC curve of 0.99). From the analysis of synthetic data sets, the expected value of the contamination rate for the PDFCPs is $5.8\pm 0.2$\%. 
+
+The following are the most important astrophysical results of the BHM applied to the Pleiades cluster. First, used as a classifier, it finds $\sim 200$ new candidate members, representing $10\%$ new discoveries. Nevertheless, it shows outstanding agreement (99.6\% of the $10^5$ objects in the data set) with previous results from the literature. Second, the derived present day system mass distribution (PDSMD) is in general agreement with the previous results of \citet{Bouy2015}. 
+
+Thus, by better modelling the data set and eliminating unnecessary restrictions to it, the new intelligent system, developed and tested in the present work, represents the state of the art for the statistical analysis of NYC populations.
+
+
+
+ 
+
+
+
+
+
+
