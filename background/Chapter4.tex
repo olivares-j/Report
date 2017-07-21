@@ -258,6 +258,7 @@ Also, for the sake of completeness, in Fig. \ref{fig:correlations} I depict the 
 \end{figure}
 
 \section{Updating the prior knowledge}
+\label{sect:updating_priors}
 As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the statistics reported in Table \ref{tab:parameters}. These values indicate, for example, that the number of  GMM modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian are both to near zero values. Probably, a better model would be that in which the parameters of these extra gaussian will not be part of the model. Ideally, I should choose between these two models based on the evidence they show (see Section \ref{sect:modelselection}). To my knowledge, the only reliable approach to compute the evidence of a model inferred using MCMC, is by means of Nested Sampling (see Section \ref{sect:NestedSampling}). However, running the BHM in the \emph{MultiNest} package lies beyond our current computational resources.
 
 Another example of inspection of the posterior is the following. In a past run of the BHM on the RDR2, I realised that the prior distribution for the parameter modelling field fraction was too narrow. Although the maximum of the posterior distribution was allowed by this prior (by definition), the prior density at this MAP was negligible. Therefore, I updated the prior distribution to a distribution with a larger variance. Thus, I weaken the prior information.
@@ -409,7 +410,7 @@ Figure \ref{fig:splineML} shows the spline fit to the mass-luminosity relations 
         \caption{}
         \label{fig:der_splineML}
     \end{subfigure}
-\caption{Mass-luminosity relations from the BT-Settl models for the $J, H$ and $K_s$ bands of the 2MASS photometric system (black dots). Also shown, the splines fitted to the previous relations, and the incompleteness regions of the DANCe survey (grey areas). }
+\caption{Upper panel: Mass-luminosity relations from the BT-Settl models \citep{Allard2012} for the $J, H$ and $K_s$ bands of the \emph{2MASS} photometric system (black dots). Also shown, the splines fitted to the previous relations. Bottom panel: The derivative of the mass-luminosity relations in the upper panel. The incompleteness regions of the DANCe survey (grey areas) are shown in both panels.}
 \label{fig:ML}
 \end{figure}
 
@@ -467,7 +468,7 @@ Finally, I notice that, as mentioned in Sect. \ref{sect:mass-luminosity}, the un
 \begin{figure}[htbp]
 \begin{center}
 \resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/BHM/ModelsMassDistribution.pdf}}
-\caption{Normalised logarithmic PDSMD in $K_s$ band. Also shown the IMFs of \citet{Chabrier2005} (blue dotted line) and  \citet{Thies2007} (turquoise long-dashed line), and power-law models found here (black solid line, see text) and by \citet{Bouy2015} (blue dashed line).}
+\caption{Normalised logarithmic PDSMD in $K_s$ band. Also shown the IMFs of \citet{Chabrier2005} \cite[blue dotted line with uncertainties from][]{Chabrier2003b} and  \citet{Thies2007} (turquoise long-dashed line), and power-law models found here (black solid line, see text) and by \citet{Bouy2015} (blue dashed line).}
 \label{fig:ModelMassFunction}.
 \end{center}
 \end{figure}
