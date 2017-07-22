@@ -501,7 +501,7 @@ Instead of using the CSN, we model the intrinsic photometric  dispersion of both
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{background/Figures/F2_Hillenbrand2008.pdf}
-\caption{Histogram of luminosity dispersion for young clusters. Reproduced from Figure 2 of \citet{2008ASPC..384..200H}, \textit{\usebibentry{2008ASPC..384..200H}{title}}, \usebibentry{2008ASPC..384..200H}{journal}, \usebibentry{2008ASPC..384..200H}{volume}.}
+\caption{Histogram of luminosity dispersion for young clusters. Reproduced from Figure 2 of \citet{2008ASPC..384..200H}, \textit{\usebibentry{2008ASPC..384..200H}{Title}}, \usebibentry{2008ASPC..384..200H}{Journal}, Vol. \usebibentry{2008ASPC..384..200H}{Volume}.}
 \label{fig:luminosity_dispersion}
 \end{center}
 \end{figure}
@@ -611,40 +611,41 @@ Finally, before ending this Section, I present a summary of the symbols used to 
   \begin{center}
   \resizebox{0.8\textwidth}{!}{\input{background/Figures/Hierarchical_ClusterStars.tex}}
   \end{center}
-  \caption{Probabilistic graphical model representing the BHM. The left grey plates show the field model. The middle yellow plate shows the node where the likelihood is computed for each datum, $\boldsymbol{d}$. The right plates describe the relations among parameters in the cluster model. The photometric cluster model (red) is on top, while the proper motions cluster (blue) and equal-mass binaries (green) are at the bottom left and right, respectively. See Section \ref{sect:PGM} for more details. Reproduced from Figure 19 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{title}}, \usebibentry{Olivares2017}{journal}, \usebibentry{Olivares2017}{volume}.}
+  \caption{Probabilistic graphical model representing the BHM. The left grey plates show the field model. The middle yellow plate shows the node where the likelihood is computed for each datum, $\boldsymbol{d}$. The right plates describe the relations among parameters in the cluster model. The photometric cluster model (red) is on top, while the proper motions cluster (blue) and equal-mass binaries (green) are at the bottom left and right, respectively. See Section \ref{sect:PGM} for more details. Reproduced from Figure 19 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Journal}, Vol. \usebibentry{Olivares2017}{Volume}.}
   \label{fig:PGMBHM}
 \end{figure}
 
 \section{The methodology for the analysis of the PSD}
 \label{sect:PSDmethod}
 
-In this Section, I present the methodology applied to investigate the Projected Spatial Distribution (PSD). This analysis is independent of that of the performed by the BHM using the kinematic and photometric observables. The reasons of this decision are detailed in Section \ref{sect:RF-2}. 
+In this Section, I present the methodology applied to investigate the Projected Spatial Distribution (PSD). Although this analysis uses the cluster membership probabilities recovered by the BHM, is independent of the latter. It means that the kinematic and photometric distributions derived by the  BHM are assumed to be independent of the PSD of the cluster. Section \ref{sect:RF-2} details the reasons of this decision. 
 
-The generative model of the PSD is similar to that of Eq. \ref{eq:genmod}. However, instead of inferring the fraction of field objects in the data set (which would be similar to the estimated contamination rate on the HMPS, see Section \ref{sect:classifier}), each object contributes to the cluster model proportionally to its membership probability, $P$. Thus the generative model of the PSD for object $n$ is
+The generative model of the PSD is similar to that of the BHM ( Eq. \ref{eq:genmod}). However, instead of inferring the fraction of field objects in the data set (which would be similar to the estimated contamination rate on the HMPS, see Section \ref{sect:classifier}), each object contributes to the cluster model proportionally to its membership probability, $P$ (the ones from the BHM). Thus the generative model of the PSD for object $n$ is
 
 \begin{equation}
 \label{eq:genmodPSD}
 p(\mathbf{d}_n, P_n |\boldsymbol{\theta}_c,\boldsymbol{\theta}_f)=(1-P_n) \cdot p_f(\mathbf{d}_n|\boldsymbol{\theta}_f) + P_n\cdot p_c(\mathbf{d}_n| \boldsymbol{\theta}_c),
 \end{equation}
 
-with $\mathbf{d}_n$ its vector of observations, comprising the right ascension $\alpha$ (R.A.) and the declination $\delta$ (Dec.), and $P_n$ its cluster membership probability. The terms $p_f(\mathbf{d}_n|\boldsymbol{\theta}_f)$ and $p_c(\mathbf{d}_n|\boldsymbol{\theta}_c)$ are the field and cluster likelihood of datum $\mathbf{d}_n$ given the field, $\boldsymbol{\theta}_f$ and cluster, $\boldsymbol{\theta}_c$, parameters. Since all objects in the Pleiades DANCe DR2 have R.A. and Dec. uncertainties which are symmetric, almost identical, and negligible ($\sim 2\times10^{-6}$ deg) compared to the size of the cluster ($\sim7^{\circ}$), we can safely assume that: i) the data are independent and identically distributed, and ii) the contributions of the uncertainties to the models are negligible. 
+with $\mathbf{d}_n$ its vector of observations, comprising the right ascension $\alpha$ (R.A.) and the declination $\delta$ (Dec.), and $P_n$ its cluster membership probability. The terms $p_f(\mathbf{d}_n|\boldsymbol{\theta}_f)$ and $p_c(\mathbf{d}_n|\boldsymbol{\theta}_c)$ are the field and cluster likelihood, respectively, of the datum $\mathbf{d}_n$ given the field, $\boldsymbol{\theta}_f$ and cluster, $\boldsymbol{\theta}_c$, parameters. Since all objects in the Pleiades DANCe DR2 have R.A. and Dec. uncertainties which are symmetric, almost identical, and negligible ($\sim 2\times10^{-6}$ deg) compared to the size of the cluster ($\sim7^{\circ}$), we can safely assume that: i) the data are independent and identically distributed, and ii) the observed positions correspond to the \emph{true} ones. Thus, the uncertainties are not included in the generative model. 
 
-We would expect that the fraction of contaminants in the HPMS will be uniformly distributed in right ascension and declination because the position on the sky was explicitly removed from the calculation of membership probabilities. Except perhaps for a mild positive gradient of the density towards the Galactic centre. Hence, we model of these contaminants with a uniform spatial distribution $\mathcal{U}$. In this way, the contribution of these hypothetical contaminants will not bias our inference of the cluster parameters.
+We would expect that the fraction of contaminants in the HPMS will be uniformly distributed in right ascension and declination because the position on the sky was explicitly removed from the calculation of membership probabilities. Except perhaps for a mild positive gradient of the density towards the Galactic centre. Hence, we model these contaminants with a uniform spatial distribution $\mathcal{U}$. In this way, the contribution of these hypothetical contaminants will not bias our inference of the cluster parameters.
 
-In the following Section, I describe the two kind of PSD models that we included in our model selection analysis: those with radial symmetry, and those with luminosity segregation (a proxy for mass segregation). The former are the classical ones in the literature. The latter allow us to put a solid statistical background to the assumption of mass segregation in the Pleiades cluster \cite[see for example][]{2004A&A...426...75M, Converse2010} without relying on mass-luminosity transformations for individual objects. 
+In the following Section, I describe the kinds of PSD models that we included in our model selection analysis: those with radial symmetry, and those with luminosity segregation (a proxy for mass segregation). The former are the classical ones in the literature. The latter allow us to put a solid statistical background to the assumption of mass segregation in the Pleiades cluster \cite[see for example][]{2004A&A...426...75M, Converse2010} without relying on mass-luminosity transformations for individual objects. 
 
 \subsection{Models with radial symmetry}
-The first alternative is King profile \citep{King1962}, which has been widely used in the Pleiades (see Section \ref{}) and to describe open clusters
-\citep[see][for recent applications]{2017MNRAS.469.1330A,2017MNRAS.468.2684P}, globular clusters \citep{2017MNRAS.468.4513M} and even to study
+\label{sect:RadialModels}
+The first alternative is King profile \citep{King1962}, which has been widely used in the Pleiades (see Section \ref{sect:PSD}) and to describe open clusters
+\citep[see][for recent applications]{2017MNRAS.469.1330A,2017MNRAS.468.2684P}, globular clusters \citep{2017ApJ...840L..25M} and even to study
 galaxies \citep{2017MNRAS.466.1513R}, halo substructure \citep{2007ApJ...663..960S} and the dark matter distribution \citep{2016MNRAS.458.2848J}. 
 
 The analytical description of the surface number density of stars counts $n$ is given by
 
 \begin{equation}
-  \rho(R) = k\cdot\left(\frac{1}{\sqrt{[1+(R/R_c)^2}}-\frac{1}{\sqrt{[1+(R_t/R_c)^2]}}\right)^2
+  \rho(R) = k\cdot\left(\frac{1}{\sqrt{[1+(R/R_c)^2}}-\frac{1}{\sqrt{[1+(R_t/R_c)^2]}}\right)^2,
 \end{equation}
 
-where $R_c$ (the core radius) is a scale factor, $R_t$ is the tidal radius, and $k$ is a constant related (but not equal) to the central surface density. In the following we use $R$ instead of $r$ (as is often common in some of the articles that introduced the profile analytic expressions used here) to refer to the distance from the system centre projected on the celestial sphere. Also, we use $\rho$ to denote the surface number density of stars, and $I$ to refer to the projected surface brightness.
+where $R_c$ (the core radius) is a scale factor, $R_t$ is the tidal radius, and $k$ is a constant related (but not equal) to the central surface density. In the following we use $R$ instead of $r$ (as is often common in some of the articles that introduced the profile analytic expressions used here) to refer to the distance from the system centre projected on the celestial sphere. Also, we use $\rho$ to denote the surface number density of stars, and, $I$, to refer to the projected surface brightness.
 
 We have also considered the model proposed by \cite{EFF1987} (henceforth EFF) to describe young open clusters in the Large Magellanic Cloud. Their surface density (in star counts per solid angle) is given by
 
@@ -655,21 +656,21 @@ We have also considered the model proposed by \cite{EFF1987} (henceforth EFF) to
 
 Equation \ref{eq:eff} is introduced heuristically and hence, the two parameters $A$ and $\gamma$ have no physical meaning (although $A$ must have the same units as $R$).
 
-Finally, we analyse a more general parameterization introduced in \cite{1995AJ....110.2622L}, \cite{1996AJ....111.1889B} and \cite{Zhao1997}, where the projected mass density is given as
+Finally, we analyse a more general parameterisation introduced in \cite{1995AJ....110.2622L}, \cite{1996AJ....111.1889B} and \cite{Zhao1997}, where the projected mass density is given as
 
 \begin{equation}
   \rho(R) = \frac{k'}{(R/R_b)^{\gamma}\cdot(1+(R/R_b)^{1/\alpha})^{(\gamma-\beta)\alpha}}.
   \label{eq:zhao}
 \end{equation}
 
-Equation \ref{eq:zhao} represents a double power law with $\gamma$ being the exponent in the innermost region, $\beta$ the exponent in the outer region, $\alpha$ is the width of the transition region, $R_b$ is the so called break radius, and $k'$ is a scale constant. In purity, the aforementioned works assume this functional form for both the projected surface brightness $I$, the projected mass density $\rho$, and for the volume density $v$, although the latter two are related by integration:
+Equation \ref{eq:zhao} represents a double power law with $\gamma$ being the exponent in the innermost region, $\beta$ the exponent in the outer region, $\alpha$ is the width of the transition region, $R_b$ is the so called break radius, and $k'$ is a scale constant. In purity, the aforementioned works assume this functional form for the projected surface brightness $I$, the projected mass density $\rho$, and for the volume density $v$. Although the latter two are related by integration:
 
 \begin{equation}
   \rho(R) = \int_{0}^{\infty}v(r)\cdot {\rm d}z  
 \end{equation}
 
 where $z$ is the distance along the line of sight corresponding to a radial distance projected onto the plane of the sky $R$.
-
+{Volume}
 In this work we will assume that the analytical expression in Eq. \ref{eq:zhao} is correctly stated in terms of the number density and not of volume density.
 
 This model is a more general analytical expression that comprises many simpler models each of which represent particular choices of the model parameters. For example, the model put forward by \cite{1911MNRAS..71..460P} to describe the projected spatial density corresponds to the general model with $\alpha=1/2$, $\beta=5$ and $\gamma=0$. Several density profiles proposed to describe galaxies can be grouped by particular choices of the parameters. For example, $\alpha=1$ includes models by \cite{1997ApJ...490..493N}, \cite{1990ApJ...356..359H},\cite{1983MNRAS.202..995J}, and \cite{1999MNRAS.310.1147M}, and $\alpha=1/2, \gamma=0$ includes the aforementioned model by \cite{1911MNRAS..71..460P}, and also models by \cite{1990ApJ...361..408S} and \cite{1985MNRAS.216..273D}. King's profile, however, cannot be cast into this general model unless the tidal radius $R_t$ is fixed at infinity. This is an important difference that will nevertheless have little effect on our comparisons for reasons that will become apparent further below.
@@ -684,31 +685,31 @@ In all three cases, we need to convert the projected stellar densities (number o
 where $N$ is the total number of stars in the system. Applying Equation \ref{eq:probfromdens} to King's profile, we obtain
 
 \begin{equation}
-  p(R)=\frac{k\cdot2\pi}{N}\cdot r \cdot
-  \left(\frac{1}{\sqrt{1+(R/r_c)^2}} - \frac{1}{\sqrt{1+(r_c/r_t)^2}}\right)^2
+  p(R)=\frac{k\cdot2\pi}{N}\cdot R \cdot
+  \left(\frac{1}{\sqrt{1+(R/r_c)^2}} - \frac{1}{\sqrt{1+(r_t/r_c)^2}}\right)^2.
 \end{equation}
 
 Actually, in probabilistic inference we write this probability function as:
 
 \begin{equation}
-  p(R|r_c, r_t, k_1,\mathcal{M}_1)=k_1\cdot r \cdot
-  \left(\frac{1}{\sqrt{1+(R/r_c)^2}} - \frac{1}{\sqrt{1+(r_c/r_t)^2}}\right)^2
+  p(R|r_c, r_t, k_1,\mathcal{M}_1)=k_1\cdot R \cdot
+  \left(\frac{1}{\sqrt{1+(R/r_c)^2}} - \frac{1}{\sqrt{1+(r_t/r_c)^2}}\right)^2,
 \label{eq:probfromdens1}
 \end{equation}
 
-where we have defined a new constant $k_1=\frac{k\cdot2\pi}{N}$, and made explicit the dependence of the probability on the underlying analytical expression ($\mathcal{M}_1$), and the values of the parameter set ($k_1, r_c and r_t$). In practice $k_1$ is treated as a normalisation constant (to enforce unit integral) and there is no need to know the total number of stars in the system. This probability density for a given model and parameter set is known in the statistical jargon as {\it likelihood}.
+where we have defined a new constant $k_1=\frac{k\cdot2\pi}{N}$, and made explicit the dependence of the probability on the underlying analytical expression ($\mathcal{M}_1$), and the values of the parameter set ($k_1, r_c$, and $r_t$). In practice $k_1$ is treated as a normalisation constant (to enforce unit integral) and there is no need to know the total number of stars in the system. This PDF corresponds to the cluster model of \emph{likelihood}.
 
 Likewise, the expression for the EFF model is
 
 \begin{equation}
-  p(R|a, \gamma, k_2,\mathcal{M}_2)=k_2\cdot r \cdot (1+(R^2/a^2))^\frac{\gamma}{2}.
+  p(R|a, \gamma, k_2,\mathcal{M}_2)=k_2\cdot R \cdot (1+(R^2/a^2))^\frac{\gamma}{2}.
 \label{eq:probfromdens2}
 \end{equation}
 
 And finally, the generic model will be given by
 
 \begin{equation}
-  p(R| \alpha, \beta, \gamma, R_b, k_3,\mathcal{M}_3 ) = \frac{k_3\cdot r} {(R/R_b)^{\gamma}\cdot(1+(R/R_b)^{1/\alpha})^{(\gamma-\beta)\alpha}}.
+  p(R| \alpha, \beta, \gamma, R_b, k_3,\mathcal{M}_3 ) = \frac{k_3\cdot R} {(R/R_b)^{\gamma}\cdot(1+(R/R_b)^{1/\alpha})^{(\gamma-\beta)\alpha}}.
   \label{eq:probfromdens3}
 \end{equation}
 
@@ -721,24 +722,19 @@ In addition to the classical profiles we have tested two extensions of the King 
 
 We define the generalised King profile (hereafter GKing profile) as the classical King profile without fixing the exponents of the analytical expression. Instead of Equation \ref{eq:probfromdens1}, we have
 
-\begin{multline}
-%\begin{eqnarray}
-%\begin{split}
-  p(R|r_c, r_t, k_1,\mathcal{M}_1)=\\
-  k_1\cdot r \cdot
+\begin{equation}
+  p(R|r_c, r_t, k_1,\mathcal{M}_1)=k_1\cdot R \cdot
   \left(
   \left(1+(R/r_c)^{\frac{1}{\alpha_1}}\right)^{-\alpha_1}
   -
-  \left(1+(r_c/r_t)^{\frac{1}{\alpha_1}}\right)^{-\alpha_1}
-  \right)^{\alpha_2}\\
-%  \end{split}
+  \left(1+(r_t/r_c)^{\frac{1}{\alpha_1}}\right)^{-\alpha_1}
+  \right)^{\alpha_2}
 \label{eq:GKing}
-%\end{eqnarray}
-\end{multline}
+\end{equation}
 
-where the classical King's profile is recovered for $\alpha_1=2$ and $\alpha_2=2$.
+where the classical King's profile is recovered for $\alpha_1=0.5$ and $\alpha_2=2$. \citet{2017MNRAS.466.1513R} use a modified empirical King profile that is similar to the one presented here. However, their profile is more restrictive and requires that $\alpha_2 = \alpha_1^{-1}$  and both terms $(R/r_c)$, and $(r_t/r_c)$ will be at the power of 2.
 
-The optimized/generalized King profile (hereafter OGKing) is the GKing profile with the values of $\alpha_1$ and $\alpha_2$ fixed so as to maximise the evidence evaluated with all DANCe DR2 sources. The reasons for this will become apparent after Section \ref{sec:modelselect}, but we can write here that this choice is the most favourable for the GKing profile in the context of model selection.
+The optimised/generalised King profile (hereafter OGKing) is the GKing profile with the values of $\alpha_1$ and $\alpha_2$ fixed  so as to maximise the evidence evaluated with all DANCe DR2 sources. The reasons for this will become apparent after Section \ref{sect:PSDmodelselection}, but we can write here that this choice is the most favourable for the GKing profile in the context of model selection. These values are $\alpha_1=0.4$ and $\alpha_2=1.2$. Notice that $\alpha_1$ is very similar to the King $\alpha_1=0.5$, which indicates that the central region is almost identical to King's profile. On the other hand, $\alpha_2=1.2$ is lower than King's $\alpha_2=2$,  thus showing that the main difference comes from the outskirts of the cluster. More details will be given in Section \ref{sect:PSDresults}.
 
 Finally, the restricted/generalised profile (RGP) corresponds to the generalised profile with the value $\gamma$ fixed at 0.
 
@@ -748,170 +744,108 @@ Finally, the restricted/generalised profile (RGP) corresponds to the generalised
 % and start describing the results
 
 \subsection{Central symmetry constraint}
+\label{sect:CentreModels}
 
-So far, we have defined a set of three models (King, EFF and the
-generalised profile GP) and their extensions. Each has a different set
-of parameters.  King's model depends on two parameters ($r_c$ and
-$r_t$); EFF's model depends on two parameters ($a$ and $\gamma$); the
-generalised profile depends on four parameters ($\alpha$, $\beta$, $\gamma$
-and $R_b$).
+So far, we have defined a set of three models (King, EFF and the generalised profile GP) and their extensions. Each has a different set of parameters.  King's model depends on two parameters ($r_c$ and $r_t$); EFF's model depends on two parameters ($a$ and $\gamma$); the generalised profile depends on four parameters ($\alpha$, $\beta$, $\gamma$ and $R_b$).
 
-In reality, there are always two more parameters that do not appear
-explicitly in any of the classical analytical formulations of the
-King, EFF or generalised profiles. These are the cluster center
-coordinates from which all radial distances $r_i$ are measured. It is
-not a minor question because the problem is degenerate, and there is a
-maximum likelihood solution for each choice of the cluster center. In
-principle, one could even choose a poor cluster center estimate that
-renders the angular distribution of members asymmetric, and obtain
-a maximum likelihood fit better than those obtained with a better
-centred estimate.  The models assume central symmetry, but this can
-only be ensured approximately. There is a region of non-negligible
-extent, where the cluster center may be, and any particular choice of
-its position will influence the posterior distribution inferred. Thus,
-in order to propagate appropriately this uncertainty about the cluster
-center position in our posterior inferences, we have included the two
-cluster centre coordinates as further parameters of our models.
+In reality, there are always two more parameters that do not appear explicitly in any of the classical analytical formulations of the King, EFF or generalised profiles. These are the cluster centre coordinates from which all radial distances $R_i$ are measured. It is not a minor question because the problem is degenerate, and there is a maximum likelihood solution for each choice of the cluster centre. In principle, one could even choose a poor cluster centre estimate that renders the angular distribution of members asymmetric, and obtain a maximum likelihood fit better than those obtained with a better centred estimate.  The models assume central symmetry, but this can only be ensured approximately. There is a region of non-negligible extent, where the cluster centre may be, and any particular choice of its position will influence the posterior distribution inferred. Thus, in order to propagate appropriately this uncertainty about the cluster centre position in our posterior inferences, we have included the two cluster centre coordinates, $\alpha_c$ and $\delta_c$, and the polar angle $\eta$ as further parameters of our models. The polar angle $\eta$ ensures that the resulting symmetry does not depend on the RA and Dec. coordinate system. Furthermore, this angle will be used in the elliptical models of the next section, where the position angle is computed from the semi-major axis. Thus, the use of the same likelihood functions for the centre coordinates will allow us to perform a fair comparison of the radial models, which is the main objective of this section.
 
-The requirement of central symmetry is enforced by the inclusion of a
-multiplicative term in the likelihood. The new likelihood term is
-based on the empirical distribution function and is expressed as
+For any given choice of the cluster centre coordinates $\alpha_c,\delta_c$ and polar angle $\eta$, we calculate the radial distance, $R(\alpha_c,\delta_c)$, and the position angle $\phi(\eta)$ of each star in our data set. To avoid biases introduced by projection effects of objects located far from the cluster centre, we project each object coordinates into the plane of the sky along the line-of-sight vector \cite[see for example, Eq. 1 of][]{2006A&A...445..513V}. These projected coordinates are
+\begin{align}
+\tilde{x} =&\sin(\alpha - \alpha_c ) \cdot \cos(\delta)\nonumber\\
+\tilde{y} = &\cos(\delta_c)\cdot \sin(\delta) - \sin(\delta_c)\cdot \cos(\delta)\cdot\cos(\alpha - \alpha_c)
+\end{align}
+
+From these projected coordinates, the radial distance $R$ and the position angle $\phi$ are computed as 
+
+\begin{align}
+R=& \sqrt{\tilde{x}^2 + \tilde{y}^2},\nonumber\\
+\phi=& \arctan2 (\tilde{x},\tilde{y})
+\end{align}
+ 
+
+
+The requirement of central symmetry is enforced by the inclusion of a multiplicative term in the likelihood. For a given set of parameters values of $\alpha_c, \delta_c, \eta$ we divide the computed polar angles of individual stars into four equally spaced quadrants (with separations at $\phi=\{0,90,180,270\}^{\circ}$) and require that the number of stars in each quadrant be Poisson distributed with a mean rate given by $N_q=N_{tot}/4$. Under this model, the likelihood of any given proposal for the models parameters ($\alpha_c,\delta_c,\eta$) will be
 
 \begin{equation}
-\mathcal{L}(\bm{\phi}) = p(\bm{\phi}|\bm{\theta}) = \prod_{n=1}^{N}\mathcal{N}(\phi_n|\mu=n\cdot2\pi/N,\sigma)
+\mathcal{L}= p(N_1,N_2,N_3,N_4|\alpha_c,\delta_c,\eta) =\mathcal{P}(N_1|N_q)\cdot \mathcal{P}(N_2|N_q)\cdot \mathcal{P}(N_3|N_q)\cdot
+\mathcal{P}(N_4|N_q) 
 \end{equation}
 
-where $\bm{\phi}$ is the vector of ordered angles $\phi_n\in {0,2\pi}$
-calculated for a given centre and coordinate system (parameters
-included in the set $\bm{\theta}$); $\phi_n$ is the n-th angle in the
-vector $\bm{\phi}$, and $\sigma$ is the allowed level of departure
-from the cumulative distribution function of the uniform distribution.
-For any given choice of the cluster centre coordinates $\alpha_c$ and
-$\delta_c$ we calculate the position angle \citep[using the four-parts
-formula given in p. 12 of ]{1985spas.book.....G} of each star.
+where $N_i, i=1,2,3,4$ is the number of sources in each quadrant, and $\mathcal{P}(N_i|N_q)$ is the Poisson distribution with mean rate $N_{tot}/4$ evaluated at $N_i$.
 
+%The new likelihood term is based on the empirical distribution function and is expressed as
+%
+%\begin{equation}
+%\mathcal{L}(\bm{\phi}) = p(\bm{\phi}|\bm{\theta}) = \prod_{n=1}^{N}\mathcal{N}(\phi_n|\mu=n\cdot2\pi/N,\sigma)
+%\end{equation}
+%
+%where $\bm{\phi}$ is the vector of ordered angles $\phi_n\in {0,2\pi}$ calculated for a given centre and coordinate system (parameters included in the set $\bm{\theta}$); $\phi_n$ is the n-th angle in the vector $\bm{\phi}$, and $\sigma$ is the allowed level of departure from the cumulative distribution function of the uniform distribution. 
 
 \subsection{Models with biaxial symmetry}
+\label{sect:EllipticModels}
 
-In this Section we extend the previous models to accomodate deviations
-from radial symmetry. We do this by allowing variations of the radial
-profile that depend on the angular coordinate but still maintain
-biaxial symmetry. This can be done in many ways. In this work we focus
-in the simplest one: the analytical expression of the radial profile
-is maintained along any radial direction but the profile parameters
-($r_c$ an $r_t$ for example in the King profile) have an ellipse-like
-dependence on the angular coordinate.
+In this Section we extend the previous models to accommodate deviations from radial symmetry. We do this by allowing variations of the radial profile that depend on the angular coordinate but still maintain biaxial symmetry. This can be done in many ways. In this work we focus in the simplest one: the analytical expression of the radial profile is maintained along any radial direction but the profile parameters ($r_c$ an $r_t$ for example in the King profile) have an ellipse-like dependence on the angular coordinate.
 
-This requires the definition of a coordinate system centred at the
-cluster centred and potentially rotated from the RA-Dec system of
-axes. We thus include the angle $\delta$ between the principal axes of
-the ellipse and RA-Dec system.
+This requires the definition of a coordinate system centred at the cluster centre and potentially rotated from the RA-Dec system of axes. We use the previously included the angle $\eta$ between the principal axis of the ellipse and RA-Dec system.  It is inferred together with the rest of the model parameters.
 
 Starting with King's profile, the likelihood term now is defined as
-
-\begin{multline}
-  p(R|r_c, r_t, k_1,\mathcal{M}_1)=\\
-  k_1\cdot r \cdot
-  \left(\frac{1}{\sqrt{1+(R/r_c(\phi))^2}} - \frac{1}{\sqrt{1+(r_c(\phi)/r_t(\phi))^2}}\right)^2
+ 
+\begin{equation}
+  p(R|r_c, r_t, k_1,\mathcal{M}_1)=
+  k_1\cdot R \cdot
+  \left(\frac{1}{\sqrt{1+(R/r_c(\phi))^2}} - \frac{1}{\sqrt{1+(r_t(\phi)/r_c(\phi))^2}}\right)^2
 \label{eq:KingEll}
-\end{multline}
+\end{equation}
 
 where
 
 
 \begin{equation}
-r_c(\phi) = \frac{r_{cx}*r_{cy}}{\sqrt((r_{cx}\sin(\phi))^2+r_{cy}\cos(\phi))^2)},
+r_c(\phi) = \frac{r_{cx}\cdot r_{cy}}{\sqrt{((r_{cx}\sin(\phi))^2+r_{cy}\cos(\phi))^2)}},
 \label{eq:anglerc}
 \end{equation}
 
 \begin{equation}
-r_t(\phi) = \frac{r_{tx}*r_{ty}}{\sqrt((r_{tx}\sin(\phi))^2+r_{ty}\cos(\phi))^2)}
+r_t(\phi) = \frac{r_{tx}\cdot r_{ty}}{\sqrt{((r_{tx}\sin(\phi))^2+r_{ty}\cos(\phi))^2)}},
 \label{eq:anglert}
 \end{equation}
 
-$r_{cx}$ and $r_{cy}$ are the $r_c$ ellipse semi-axes, and $r_{tx}$
-and $r_{ty}$ are the $r_t$ ellipse semi-axes. Notice that we do not
-constrain the two ellipses to have the same aspect ratio, but they are
-co-aligned.
+with $r_{cx}$ and $r_{cy}$ are the $r_c$ ellipse semi-axes, and $r_{tx}$ and $r_{ty}$ are the $r_t$ ellipse semi-axes. Notice that we do not constrain the two ellipses to have the same aspect ratio, but they are co-aligned.
 
 The angle dependence of the OGKing profile is introduced according to
 
-\begin{multline}
-    p(R|r_c, r_t, k_1,\mathcal{M}_1)=\\
-    k_1\cdot r \cdot
+\begin{equation}
+    p(R|r_c, r_t, k_1,\mathcal{M}_1)=
+    k_1\cdot R \cdot
   \left(
   \left(1+(R/r_c(\phi))^{\frac{1}{0.4}}\right)^{-0.4}
   -
-  \left(1+(r_c(\phi)/r_t(\phi))^{\frac{1}{0.4}}\right)^{-0.4}
+  \left(1+(r_t(\phi)/r_c(\phi))^{\frac{1}{0.4}}\right)^{-0.4}
   \right)^{1.2}
-\end{multline}
+\end{equation}
 
-with $r_c(\phi)$ and $r_t(\phi)$ following the same angle dependence as
-in the classical King profile.
+with $r_c(\phi)$ and $r_t(\phi)$ following the same angle dependence as in the classical King profile.
 
 In the case of the RGP profile, the new likelihood is defined as
 
 \begin{equation}
   p(R| \alpha, \beta, \gamma=0, R_b, k_3,\mathcal{M}_3 ) = \frac
-  {k_3\cdot r} {(1+(R/R_b(\phi))^{1/\alpha})^{(-\beta)\alpha}}.
+  {k_3\cdot R} {(1+(R/R_b(\phi))^{1/\alpha})^{(-\beta)\alpha}},
   \label{eq:EllRGP}
 \end{equation}
 
-where the parameter $R_b$ follows the same elliptic angle dependence
-as defined in Equations \ref{eq:anglerc} and \ref{eq:anglert}, and we
-do not incorporate any angle dependence for the exponents $\alpha$ and
-$\beta$.
-
-
-The position angle of the semi-major axis with respect to the Right
-Ascension axis ($\eta$) is constrained using the equivalent of the
-radial symmetry likelihood term. For a given set of parameters values
-of $\alpha_c, \delta_c, \eta$ we divide the computed polar angles of
-individual stars into four quadrants and require that the number of
-stars in each quadrant be Poisson distributed with a mean rate given
-by $N_q=N_{tot}/4$. Under this model, the likelihood of any given
-proposal for the models parameters ($\alpha_c$, $\delta_c$, $\eta$)
-will be
-
-\begin{align}
-\mathcal{L} & = p(N_1,N_2,N_3,N_4|\alpha_c,\delta_c,\eta)\nonumber  \\
-& =\mathcal{P}(N_1|N_q)\cdot \mathcal{P}(N_2|N_q)\cdot \mathcal{P}(N_3|N_q)\cdot
-\mathcal{P}(N_4|N_q) s\end{align}
-
-where $N_i, i=1,2,3,4$ is the number of sources in each quadrant, and
-$\mathcal{P}(N_i|N_q)$ is the Poisson distribution with mean rate
-$N_{tot}/4$ evaluated at $N_i$.
-
+where the parameter $R_b$ follows the same elliptic angle dependence as defined in Equations \ref{eq:anglerc} and \ref{eq:anglert}, and we do not incorporate any angle dependence for the exponents $\alpha$ and $\beta$.
 
 \subsection{Models with luminosity segregation}
-In the previous Sections we have compared several alternative models
-for the spatial number density distribution of the Pleiades star
-cluster. We believe that we have shown the lack of necessity to
-generalise King's profile to relax the radial symmetry constraint, to
-at least biaxial symmetry in the form of ellipses. Finally, in this
-Section we revisit another classical model selection problem in the
-context of the Pleiades number density distribution where we hope to
-benefit from the Bayesian methodology.
-
-Here, we consider an extended version of the King profile to introduce
-a dependence of the core radius with the J magnitude. We select the J
-magnitude because it is the reddest of the magnitudes that are
-available for all candidate members. We assume that stars of the same
-mass have approximately the same magnitude and that distance
-differences (due to the 3D spatial extend of the Pleiades) average
-out. The core radius dependence with the J magnitude is modelled as
+\label{sect:SegregatedModels}
+In this Section, we consider an extended version of the King profile to introduce a dependence of the core radius with the $J$ magnitude. We select the $J$ magnitude because it is the reddest of the magnitudes that are available for all candidate members. We assume that stars of the same mass have approximately the same magnitude and that distance differences (due to the 3D spatial extend of the Pleiades) average out. The core radius dependence with the $J$ magnitude is modelled as
 
 \begin{equation}
   r_c(\phi,J) = r_c(\phi)+\kappa\cdot(J-13.5).
 \end{equation}
 
-The slope of the relationship $\kappa$ is independent of the angle
-$\phi$. Therefore, for J=13.5 (the mode of the J distribution) the
-model reduces to the elliptic profile described in Section
-\ref{sec:modelselell}. A positive value of $\kappa$ corresponds to
-smaller values of the core radius for stars brighter than J=13.5. In
-other words, it describes a system where the more massive stars are
-more concentrated than the less massive ones.
+The slope of the relationship $\kappa$ is independent of the position angle $\phi$. Therefore, for $J=13.5$ (the mode of the $J$ distribution) the model reduces to the elliptic profile described in Section \ref{sect:EllipticModels}. A positive value of $\kappa$ corresponds to smaller values of the core radius for stars brighter than $J=13.5$. In other words, it describes a system where the more massive stars are more concentrated than the less massive ones.
 
 Finally, to compare the previous models, we use the model selection methodology described in Section \ref{sect:modelselection} together with truncated uniform priors for all cluster parameters. The results of this analysis are detailed in Chapter \ref{chap:Results}.
 

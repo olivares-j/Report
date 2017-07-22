@@ -39,23 +39,23 @@
 \contentsline {subsection}{\numberline {3.4.1}Models with radial symmetry}{72}{subsection.3.4.1}
 \contentsline {subsubsection}{Extensions of the classical profiles}{75}{section*.36}
 \contentsline {subsection}{\numberline {3.4.2}Central symmetry constraint}{75}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Models with biaxial symmetry}{76}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Models with luminosity segregation}{77}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.3}Models with biaxial symmetry}{77}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Models with luminosity segregation}{78}{subsection.3.4.4}
 \contentsline {section}{\numberline {3.5}Priors}{78}{section.3.5}
 \contentsline {section}{\numberline {3.6}Sampling the posterior distribution}{83}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}PSO}{84}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}MCMC}{85}{subsection.3.6.2}
-\contentsline {subsubsection}{Generalities}{85}{section*.40}
+\contentsline {subsection}{\numberline {3.6.1}PSO}{85}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}MCMC}{86}{subsection.3.6.2}
+\contentsline {subsubsection}{Generalities}{86}{section*.40}
 \contentsline {subsubsection}{Metropolis-Hastings}{87}{section*.41}
-\contentsline {subsubsection}{Hamiltonian Monte Calro}{87}{section*.42}
-\contentsline {subsubsection}{Affine invariant}{87}{section*.43}
+\contentsline {subsubsection}{Hamiltonian Monte Calro}{88}{section*.42}
+\contentsline {subsubsection}{Affine invariant}{88}{section*.43}
 \contentsline {subsubsection}{Nested sampling}{89}{section*.44}
-\contentsline {subsection}{\numberline {3.6.3}Implementation and convergence: PSO and MCMC}{89}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Codes}{91}{section.3.7}
+\contentsline {subsection}{\numberline {3.6.3}Implementation and convergence: PSO and MCMC}{90}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Codes}{92}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}The modified charged PSO}{93}{subsection.3.7.1}
 \contentsline {subsection}{\numberline {3.7.2}Improvements of emcee}{94}{subsection.3.7.2}
 \contentsline {subsection}{\numberline {3.7.3}GMM for the field population}{94}{subsection.3.7.3}
-\contentsline {subsection}{\numberline {3.7.4}Hybrid-HPC implementations}{96}{subsection.3.7.4}
+\contentsline {subsection}{\numberline {3.7.4}Hybrid-HPC implementations}{97}{subsection.3.7.4}
 \contentsline {chapter}{\numberline {4}Results}{99}{chapter.4}
 \contentsline {section}{\numberline {4.1}Performance of the classifier}{99}{section.4.1}
 \contentsline {section}{\numberline {4.2}Comparison with the literature}{109}{section.4.2}
@@ -65,11 +65,12 @@
 \contentsline {section}{\numberline {4.3}The statistical distributions of the Pleiades cluster.}{117}{section.4.3}
 \contentsline {section}{\numberline {4.4}Updating the prior knowledge}{120}{section.4.4}
 \contentsline {section}{\numberline {4.5}Proper motions distribution}{121}{section.4.5}
-\contentsline {section}{\numberline {4.6}Spatial distribution}{122}{section.4.6}
-\contentsline {section}{\numberline {4.7}Luminosity distribution}{122}{section.4.7}
+\contentsline {section}{\numberline {4.6}Projected spatial distribution}{122}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Model selection}{124}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}Luminosity distribution}{124}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{124}{subsection.4.7.1}
 \contentsline {section}{\numberline {4.8}Mass distribution}{128}{section.4.8}
 \contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{128}{subsection.4.8.1}
 \contentsline {subsection}{\numberline {4.8.2}Present day system mass distribution}{130}{subsection.4.8.2}
-\contentsline {section}{\numberline {4.9}The mass distribution on time}{135}{section.4.9}
+\contentsline {section}{\numberline {4.9}The mass distribution on time}{134}{section.4.9}
 \contentsline {chapter}{\numberline {5}Conclusions and Future Work}{139}{chapter.5}
