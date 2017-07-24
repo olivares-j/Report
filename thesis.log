@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  22 JUL 2017 21:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  24 JUL 2017 12:39
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1542,7 +1542,7 @@ r (name{equation.1.1.1}) has been already used, duplicate ignored
                    \relax 
 l.86 \end{align}
                  [4]
-<background/Figures/F7_Thies2007.pdf, id=398, 246.97078pt x 428.9099pt>
+<background/Figures/F7_Thies2007.pdf, id=403, 246.97078pt x 428.9099pt>
 File: background/Figures/F7_Thies2007.pdf Graphic file (type pdf)
 
 <use background/Figures/F7_Thies2007.pdf>
@@ -1566,7 +1566,7 @@ ION \OT1/cmr/m/n/12 6
  []
 
 [6 <./background/Figures/F7_Thies2007.pdf>]
-<background/Figures/F10_Bate2003.pdf, id=503, 246.20882pt x 165.6062pt>
+<background/Figures/F10_Bate2003.pdf, id=508, 246.20882pt x 165.6062pt>
 File: background/Figures/F10_Bate2003.pdf Graphic file (type pdf)
 
 <use background/Figures/F10_Bate2003.pdf>
@@ -1574,7 +1574,7 @@ Package pdftex.def Info: background/Figures/F10_Bate2003.pdf used on input line
  129.
 (pdftex.def)             Requested size: 364.19664pt x 244.9872pt.
 
-<background/Figures/F11_Kuznetsova2015.pdf, id=524, 247.94771pt x 178.20999pt>
+<background/Figures/F11_Kuznetsova2015.pdf, id=529, 247.94771pt x 178.20999pt>
 File: background/Figures/F11_Kuznetsova2015.pdf Graphic file (type pdf)
 
 <use background/Figures/F11_Kuznetsova2015.pdf>
@@ -1613,7 +1613,7 @@ Chapter 2.
 [20
 
 ] [21]
-<background/Figures/F13_Galli2017.pdf, id=993, 252.00171pt x 225.09496pt>
+<background/Figures/F13_Galli2017.pdf, id=999, 252.00171pt x 225.09496pt>
 File: background/Figures/F13_Galli2017.pdf Graphic file (type pdf)
 
 <use background/Figures/F13_Galli2017.pdf>
@@ -1621,7 +1621,7 @@ Package pdftex.def Info: background/Figures/F13_Galli2017.pdf used on input lin
 e 36.
 (pdftex.def)             Requested size: 254.83116pt x 227.62204pt.
 
-<background/Figures/Parallax_GaiaCol2017.pdf, id=1002, 361.35pt x 361.35pt>
+<background/Figures/Parallax_GaiaCol2017.pdf, id=1008, 361.35pt x 361.35pt>
 File: background/Figures/Parallax_GaiaCol2017.pdf Graphic file (type pdf)
 
 <use background/Figures/Parallax_GaiaCol2017.pdf>
@@ -1630,7 +1630,7 @@ put line 42.
 (pdftex.def)             Requested size: 227.62413pt x 227.62204pt.
  [22] [23 <./background/Figures/F13_Galli2017.pdf> <./background/Figures/Parall
 ax_GaiaCol2017.pdf>] [24]
-<background/Figures/F1_Converse2010.pdf, id=1149, 206.39175pt x 171.59598pt>
+<background/Figures/F1_Converse2010.pdf, id=1154, 206.39175pt x 171.59598pt>
 File: background/Figures/F1_Converse2010.pdf Graphic file (type pdf)
 
 <use background/Figures/F1_Converse2010.pdf>
@@ -1638,7 +1638,7 @@ Package pdftex.def Info: background/Figures/F1_Converse2010.pdf used on input l
 ine 75.
 (pdftex.def)             Requested size: 205.33308pt x 170.71652pt.
 
-<background/Figures/F8_Adams2001.pdf, id=1150, 252.01744pt x 244.36813pt>
+<background/Figures/F8_Adams2001.pdf, id=1155, 252.01744pt x 244.36813pt>
 File: background/Figures/F8_Adams2001.pdf Graphic file (type pdf)
 
 <use background/Figures/F8_Adams2001.pdf>
@@ -1647,7 +1647,7 @@ Package pdftex.def Info: background/Figures/F8_Adams2001.pdf used on input line
 (pdftex.def)             Requested size: 176.0649pt x 170.71652pt.
  [25] [26 <./background/Figures/F1_Converse2010.pdf> <./background/Figures/F8_A
 dams2001.pdf>]
-<background/Figures/F11_Galli2017.pdf, id=1356, 251.95209pt x 248.81186pt>
+<background/Figures/F11_Galli2017.pdf, id=1361, 251.95209pt x 248.81186pt>
 File: background/Figures/F11_Galli2017.pdf Graphic file (type pdf)
 
 <use background/Figures/F11_Galli2017.pdf>
@@ -1655,7 +1655,7 @@ Package pdftex.def Info: background/Figures/F11_Galli2017.pdf used on input lin
 e 127.
 (pdftex.def)             Requested size: 364.19664pt x 359.67455pt.
  [27] [28 <./background/Figures/F11_Galli2017.pdf>]
-<background/Figures/F2_Trumpler1921.pdf, id=1487, 229.09422pt x 159.77231pt>
+<background/Figures/F2_Trumpler1921.pdf, id=1492, 229.09422pt x 159.77231pt>
 File: background/Figures/F2_Trumpler1921.pdf Graphic file (type pdf)
 
 <use background/Figures/F2_Trumpler1921.pdf>
@@ -1663,7 +1663,7 @@ Package pdftex.def Info: background/Figures/F2_Trumpler1921.pdf used on input l
 ine 141.
 (pdftex.def)             Requested size: 455.24408pt x 317.5325pt.
 
-<background/Figures/F3_Johnson1958.pdf, id=1499, 255.89432pt x 162.2371pt>
+<background/Figures/F3_Johnson1958.pdf, id=1504, 255.89432pt x 162.2371pt>
 File: background/Figures/F3_Johnson1958.pdf Graphic file (type pdf)
 
 <use background/Figures/F3_Johnson1958.pdf>
@@ -1671,7 +1671,7 @@ Package pdftex.def Info: background/Figures/F3_Johnson1958.pdf used on input li
 ne 151.
 (pdftex.def)             Requested size: 359.0266pt x 227.62204pt.
  [29 <./background/Figures/F2_Trumpler1921.pdf>]
-<background/Figures/F4_Limber1962.pdf, id=1545, 394.23463pt x 268.02104pt>
+<background/Figures/F4_Limber1962.pdf, id=1550, 394.23463pt x 268.02104pt>
 File: background/Figures/F4_Limber1962.pdf Graphic file (type pdf)
 
 <use background/Figures/F4_Limber1962.pdf>
@@ -1679,7 +1679,7 @@ Package pdftex.def Info: background/Figures/F4_Limber1962.pdf used on input lin
 e 161.
 (pdftex.def)             Requested size: 334.81226pt x 227.62204pt.
 
-<background/Figures/F9_Lodieu2012.pdf, id=1578, 221.0267pt x 225.92645pt>
+<background/Figures/F9_Lodieu2012.pdf, id=1583, 221.0267pt x 225.92645pt>
 File: background/Figures/F9_Lodieu2012.pdf Graphic file (type pdf)
 
 <use background/Figures/F9_Lodieu2012.pdf>
@@ -1687,7 +1687,7 @@ Package pdftex.def Info: background/Figures/F9_Lodieu2012.pdf used on input lin
 e 172.
 (pdftex.def)             Requested size: 222.68883pt x 227.62204pt.
 
-<background/Figures/F8_Bouy2015.pdf, id=1590, 504.21866pt x 281.27414pt>
+<background/Figures/F8_Bouy2015.pdf, id=1595, 504.21866pt x 281.27414pt>
 File: background/Figures/F8_Bouy2015.pdf Graphic file (type pdf)
 
 <use background/Figures/F8_Bouy2015.pdf>
@@ -1700,7 +1700,7 @@ LaTeX Warning: Text page 31 contains only floats.
 
 [31 <./background/Figures/F4_Limber1962.pdf> <./background/Figures/F9_Lodieu201
 2.pdf>] [32 <./background/Figures/F8_Bouy2015.pdf>]
-<background/Figures/F11_Hambly1991.pdf, id=1738, 257.66653pt x 191.70651pt>
+<background/Figures/F11_Hambly1991.pdf, id=1743, 257.66653pt x 191.70651pt>
 File: background/Figures/F11_Hambly1991.pdf Graphic file (type pdf)
 
 <use background/Figures/F11_Hambly1991.pdf>
@@ -1708,7 +1708,7 @@ Package pdftex.def Info: background/Figures/F11_Hambly1991.pdf used on input li
 ne 201.
 (pdftex.def)             Requested size: 305.94286pt x 227.62204pt.
  [33 <./background/Figures/F11_Hambly1991.pdf>]
-<background/Figures/F9b_Lodieu2012.pdf, id=1839, 219.95515pt x 227.21075pt>
+<background/Figures/F9b_Lodieu2012.pdf, id=1844, 219.95515pt x 227.21075pt>
 File: background/Figures/F9b_Lodieu2012.pdf Graphic file (type pdf)
 
 <use background/Figures/F9b_Lodieu2012.pdf>
@@ -1716,7 +1716,7 @@ Package pdftex.def Info: background/Figures/F9b_Lodieu2012.pdf used on input li
 ne 228.
 (pdftex.def)             Requested size: 220.35735pt x 227.62204pt.
 
-<background/Figures/F9_Bouy2015.pdf, id=1848, 507.19308pt x 335.7382pt>
+<background/Figures/F9_Bouy2015.pdf, id=1853, 507.19308pt x 335.7382pt>
 File: background/Figures/F9_Bouy2015.pdf Graphic file (type pdf)
 
 <use background/Figures/F9_Bouy2015.pdf>
@@ -1725,7 +1725,7 @@ Package pdftex.def Info: background/Figures/F9_Bouy2015.pdf used on input line
 (pdftex.def)             Requested size: 343.86516pt x 227.62204pt.
  [34] [35 <./background/Figures/F9b_Lodieu2012.pdf> <./background/Figures/F9_Bo
 uy2015.pdf>]
-<background/Figures/F1_Bouy2013.pdf, id=1991, 506.26294pt x 507.44553pt>
+<background/Figures/F1_Bouy2013.pdf, id=1996, 506.26294pt x 507.44553pt>
 File: background/Figures/F1_Bouy2013.pdf Graphic file (type pdf)
 
 <use background/Figures/F1_Bouy2013.pdf>
@@ -1733,20 +1733,16 @@ Package pdftex.def Info: background/Figures/F1_Bouy2013.pdf used on input line
 276.
 (pdftex.def)             Requested size: 455.24408pt x 456.31734pt.
 
-<background/Figures/F12_Bouy2013.pdf, id=1996, 497.92714pt x 264.21912pt>
+<background/Figures/F12_Bouy2013.pdf, id=2001, 497.92714pt x 264.21912pt>
 File: background/Figures/F12_Bouy2013.pdf Graphic file (type pdf)
 
 <use background/Figures/F12_Bouy2013.pdf>
 Package pdftex.def Info: background/Figures/F12_Bouy2013.pdf used on input line
  338.
 (pdftex.def)             Requested size: 428.98396pt x 227.62204pt.
- [36] [37 <./background/Figures/F1_Bouy2013.pdf>] [38]
-
-LaTeX Warning: Reference `tab:primetargets' on page 39 undefined on input line 
-353.
-
-[39 <./background/Figures/F12_Bouy2013.pdf>]
-<background/Figures/CIs.pdf, id=2089, page=1, 505.89pt x 505.89pt>
+ [36] [37 <./background/Figures/F1_Bouy2013.pdf>] [38] [39 <./background/Figure
+s/F12_Bouy2013.pdf>]
+<background/Figures/CIs.pdf, id=2095, page=1, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 1>
@@ -1754,7 +1750,7 @@ Package pdftex.def Info: background/Figures/CIs.pdf, page1 used on input line 3
 65.
 (pdftex.def)             Requested size: 227.62523pt x 227.62204pt.
 
-<background/Figures/CIs.pdf, id=2094, page=2, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=2100, page=2, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 2>
@@ -1762,7 +1758,7 @@ Package pdftex.def Info: background/Figures/CIs.pdf, page2 used on input line 3
 74.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=2095, page=3, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=2101, page=3, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 3>
@@ -1770,7 +1766,7 @@ Package pdftex.def Info: background/Figures/CIs.pdf, page3 used on input line 3
 79.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=2096, page=4, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=2102, page=4, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 4>
@@ -1778,7 +1774,7 @@ Package pdftex.def Info: background/Figures/CIs.pdf, page4 used on input line 3
 84.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=2097, page=5, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=2103, page=5, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 5>
@@ -1800,7 +1796,7 @@ ts-eps-converted-to.pdf background/Figures/ColourCuts.eps>
 (epstopdf)             \includegraphics on input line 445.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ColourCuts-eps-converted-to.pdf, id=2163, 505.89pt x 505.89
+<background/Figures/ColourCuts-eps-converted-to.pdf, id=2169, 505.89pt x 505.89
 pt>
 File: background/Figures/ColourCuts-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1826,14 +1822,14 @@ r (name{equation.3.1.13}) has been already used, duplicate ignored
                                                   
 l.195 
       ] [52] [53] [54] [55] [56]
-<background/Figures/BGMM.png, id=2414, 1089.06876pt x 1027.84pt>
+<background/Figures/BGMM.png, id=2423, 1089.06876pt x 1027.84pt>
 File: background/Figures/BGMM.png Graphic file (type png)
 
 <use background/Figures/BGMM.png>
 Package pdftex.def Info: background/Figures/BGMM.png used on input line 299.
 (pdftex.def)             Requested size: 241.17456pt x 227.62204pt.
  [57 <./background/Figures/BGMM.png>]
-<background/Figures/MissingDistribution.pdf, id=2430, page=1, 505.89pt x 505.89
+<background/Figures/MissingDistribution.pdf, id=2440, page=1, 505.89pt x 505.89
 pt>
 File: background/Figures/MissingDistribution.pdf Graphic file (type pdf)
  <use background/Figures/MissingDistribution.pdf, page 1>
@@ -1841,7 +1837,7 @@ Package pdftex.def Info: background/Figures/MissingDistribution.pdf, page1 used
  on input line 328.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/MissingDistribution.pdf, id=2431, page=2, 505.89pt x 505.89
+<background/Figures/MissingDistribution.pdf, id=2441, page=2, 505.89pt x 505.89
 pt>
 File: background/Figures/MissingDistribution.pdf Graphic file (type pdf)
  <use background/Figures/MissingDistribution.pdf, page 2>
@@ -1849,7 +1845,7 @@ Package pdftex.def Info: background/Figures/MissingDistribution.pdf, page2 used
  on input line 333.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/MissingDistribution.pdf, id=2432, page=3, 505.89pt x 505.89
+<background/Figures/MissingDistribution.pdf, id=2442, page=3, 505.89pt x 505.89
 pt>
 File: background/Figures/MissingDistribution.pdf Graphic file (type pdf)
  <use background/Figures/MissingDistribution.pdf, page 3>
@@ -1857,7 +1853,7 @@ Package pdftex.def Info: background/Figures/MissingDistribution.pdf, page3 used
  on input line 338.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/MissingDistribution.pdf, id=2433, page=4, 505.89pt x 505.89
+<background/Figures/MissingDistribution.pdf, id=2443, page=4, 505.89pt x 505.89
 pt>
 File: background/Figures/MissingDistribution.pdf Graphic file (type pdf)
  <use background/Figures/MissingDistribution.pdf, page 4>
@@ -1867,7 +1863,7 @@ Package pdftex.def Info: background/Figures/MissingDistribution.pdf, page4 used
  [58] [59 <./background/Figures/MissingDistribution.pdf> <./background/Figures/
 MissingDistribution.pdf> <./background/Figures/MissingDistribution.pdf> <./back
 ground/Figures/MissingDistribution.pdf>] [60] [61] [62]
-<background/Figures/GMM-PM-BIC=15.pdf, id=2500, page=3, 405.85988pt x 311.91939
+<background/Figures/GMM-PM-BIC=15.pdf, id=2509, page=3, 405.85988pt x 311.91939
 pt>
 File: background/Figures/GMM-PM-BIC=15.pdf Graphic file (type pdf)
  <use background/Figures/GMM-PM-BIC=15.pdf, page 3>
@@ -1875,7 +1871,7 @@ Package pdftex.def Info: background/Figures/GMM-PM-BIC=15.pdf, page3 used on in
 put line 446.
 (pdftex.def)             Requested size: 204.85844pt x 157.44426pt.
 
-<background/Figures/GMM-PM-BIC2-U+7G.pdf, id=2501, page=1, 405.85988pt x 311.91
+<background/Figures/GMM-PM-BIC2-U+7G.pdf, id=2510, page=1, 405.85988pt x 311.91
 942pt>
 File: background/Figures/GMM-PM-BIC2-U+7G.pdf Graphic file (type pdf)
  <use background/Figures/GMM-PM-BIC2-U+7G.pdf, page 1>
@@ -1885,7 +1881,7 @@ Package pdftex.def Info: background/Figures/GMM-PM-BIC2-U+7G.pdf, page1 used on
  [63] [64 <./background/Figures/GMM-PM-BIC=15.pdf> <./background/Figures/GMM-PM
 -BIC2-U+7G.pdf>]
 [65]
-<background/Figures/F2_Hillenbrand2008.pdf, id=2629, 344.52515pt x 346.683pt>
+<background/Figures/F2_Hillenbrand2008.pdf, id=2638, 344.52515pt x 346.683pt>
 File: background/Figures/F2_Hillenbrand2008.pdf Graphic file (type pdf)
 
 <use background/Figures/F2_Hillenbrand2008.pdf>
@@ -1899,8 +1895,12 @@ Overfull \hbox (69.21584pt too wide) in paragraph at lines 6--56
  []
 
 ) (./background/Figures/Hierarchical_ClusterStars.tex) [71] [72] [73] [74]
+
+LaTeX Warning: Reference `sect:PSDmodelselection' on page 75 undefined on input
+ line 737.
+
 [75] [76] [77] [78]
-<background/Figures/Priors.pdf, id=2874, page=1, 505.89pt x 505.89pt>
+<background/Figures/Priors.pdf, id=2881, page=1, 505.89pt x 505.89pt>
 File: background/Figures/Priors.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors.pdf, page 1>
@@ -1908,7 +1908,7 @@ Package pdftex.def Info: background/Figures/Priors.pdf, page1 used on input lin
 e 882.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors.pdf, id=2875, page=2, 505.89pt x 505.89pt>
+<background/Figures/Priors.pdf, id=2882, page=2, 505.89pt x 505.89pt>
 File: background/Figures/Priors.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors.pdf, page 2>
@@ -1916,7 +1916,7 @@ Package pdftex.def Info: background/Figures/Priors.pdf, page2 used on input lin
 e 887.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors.pdf, id=2876, page=3, 505.89pt x 505.89pt>
+<background/Figures/Priors.pdf, id=2883, page=3, 505.89pt x 505.89pt>
 File: background/Figures/Priors.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors.pdf, page 3>
@@ -1924,7 +1924,7 @@ Package pdftex.def Info: background/Figures/Priors.pdf, page3 used on input lin
 e 892.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors.pdf, id=2877, page=4, 505.89pt x 505.89pt>
+<background/Figures/Priors.pdf, id=2884, page=4, 505.89pt x 505.89pt>
 File: background/Figures/Priors.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors.pdf, page 4>
@@ -1960,7 +1960,7 @@ l.922 \begin{equation}
                        [80 <./background/Figures/Priors.pdf> <./background/Figu
 res/Priors.pdf> <./background/Figures/Priors.pdf> <./background/Figures/Priors.
 pdf>] [81] (./background/Tables/HyperParameters.txt) [82]
-<background/Figures/Priors_Coefs.pdf, id=2943, page=4, 505.89pt x 505.89pt>
+<background/Figures/Priors_Coefs.pdf, id=2951, page=4, 505.89pt x 505.89pt>
 File: background/Figures/Priors_Coefs.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors_Coefs.pdf, page 4>
@@ -2055,7 +2055,7 @@ e identifier (name{equation.3.6.65}) has been already used, duplicate ignored
                                                   
 l.1081 
        ]
-<background/Figures/BHM/AllMeanParticles.pdf, id=3117, 505.89pt x 505.89pt>
+<background/Figures/BHM/AllMeanParticles.pdf, id=3124, 505.89pt x 505.89pt>
 File: background/Figures/BHM/AllMeanParticles.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/AllMeanParticles.pdf>
@@ -2063,7 +2063,7 @@ Package pdftex.def Info: background/Figures/BHM/AllMeanParticles.pdf used on in
 put line 1091.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/AllVarParticles.pdf, id=3118, 505.89pt x 505.89pt>
+<background/Figures/BHM/AllVarParticles.pdf, id=3125, 505.89pt x 505.89pt>
 File: background/Figures/BHM/AllVarParticles.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/AllVarParticles.pdf>
@@ -2077,7 +2077,7 @@ Chapter 4.
 [99
 
 ] [100] [101] [102] [103]
-<background/Figures/FTPRvsSarro.pdf, id=3285, 505.89pt x 505.89pt>
+<background/Figures/FTPRvsSarro.pdf, id=3292, 505.89pt x 505.89pt>
 File: background/Figures/FTPRvsSarro.pdf Graphic file (type pdf)
 
 <use background/Figures/FTPRvsSarro.pdf>
@@ -2085,7 +2085,7 @@ Package pdftex.def Info: background/Figures/FTPRvsSarro.pdf used on input line
 55.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/PrecisionAccuracy.pdf, id=3294, 505.89pt x 505.89pt>
+<background/Figures/PrecisionAccuracy.pdf, id=3301, 505.89pt x 505.89pt>
 File: background/Figures/PrecisionAccuracy.pdf Graphic file (type pdf)
 
 <use background/Figures/PrecisionAccuracy.pdf>
@@ -2094,7 +2094,7 @@ Package pdftex.def Info: background/Figures/PrecisionAccuracy.pdf used on input
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
  [104 <./background/Figures/FTPRvsSarro.pdf>] [105 <./background/Figures/Precis
 ionAccuracy.pdf>]
-<background/Figures/Probabilities.pdf, id=3326, page=1, 505.89pt x 505.89pt>
+<background/Figures/Probabilities.pdf, id=3333, page=1, 505.89pt x 505.89pt>
 File: background/Figures/Probabilities.pdf Graphic file (type pdf)
 
 <use background/Figures/Probabilities.pdf, page 1>
@@ -2102,7 +2102,7 @@ Package pdftex.def Info: background/Figures/Probabilities.pdf, page1 used on in
 put line 85.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
  [106] [107 <./background/Figures/Probabilities.pdf>]
-<background/Figures/ROC.pdf, id=3347, 505.89pt x 505.89pt>
+<background/Figures/ROC.pdf, id=3354, 505.89pt x 505.89pt>
 File: background/Figures/ROC.pdf Graphic file (type pdf)
 
 <use background/Figures/ROC.pdf>
@@ -2121,7 +2121,7 @@ ps-converted-to.pdf background/Figures/ST1_pm.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ST1_pm-eps-converted-to.pdf, id=3386, 361.35pt x 361.35pt>
+<background/Figures/ST1_pm-eps-converted-to.pdf, id=3393, 361.35pt x 361.35pt>
 File: background/Figures/ST1_pm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/ST1_pm-eps-converted-to.pdf>
@@ -2140,7 +2140,7 @@ ps-converted-to.pdf background/Figures/ST1_ph.eps>
 (epstopdf)             \includegraphics on input line 129.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ST1_ph-eps-converted-to.pdf, id=3387, 361.35pt x 361.35pt>
+<background/Figures/ST1_ph-eps-converted-to.pdf, id=3394, 361.35pt x 361.35pt>
 File: background/Figures/ST1_ph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/ST1_ph-eps-converted-to.pdf>
@@ -2160,7 +2160,7 @@ ps-converted-to.pdf background/Figures/ST2_pm.eps>
 (epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ST2_pm-eps-converted-to.pdf, id=3397, 361.35pt x 361.35pt>
+<background/Figures/ST2_pm-eps-converted-to.pdf, id=3404, 361.35pt x 361.35pt>
 File: background/Figures/ST2_pm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/ST2_pm-eps-converted-to.pdf>
@@ -2179,7 +2179,7 @@ ps-converted-to.pdf background/Figures/ST2_ph.eps>
 (epstopdf)             \includegraphics on input line 145.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ST2_ph-eps-converted-to.pdf, id=3398, 361.35pt x 361.35pt>
+<background/Figures/ST2_ph-eps-converted-to.pdf, id=3405, 361.35pt x 361.35pt>
 File: background/Figures/ST2_ph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/ST2_ph-eps-converted-to.pdf>
@@ -2189,7 +2189,7 @@ Package pdftex.def Info: background/Figures/ST2_ph-eps-converted-to.pdf used on
  [110 <./background/Figures/ST1_pm-eps-converted-to.pdf> <./background/Figures/
 ST1_ph-eps-converted-to.pdf> <./background/Figures/ST2_pm-eps-converted-to.pdf>
  <./background/Figures/ST2_ph-eps-converted-to.pdf>]
-<background/Figures/BHM/BHMvsBouy.pdf, id=3458, 505.89pt x 505.89pt>
+<background/Figures/BHM/BHMvsBouy.pdf, id=3465, 505.89pt x 505.89pt>
 File: background/Figures/BHM/BHMvsBouy.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/BHMvsBouy.pdf>
@@ -2197,7 +2197,7 @@ Package pdftex.def Info: background/Figures/BHM/BHMvsBouy.pdf used on input lin
 e 161.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
  [111]
-<background/Figures/BHM/Rejecteds.pdf, id=3494, page=1, 505.89pt x 505.89pt>
+<background/Figures/BHM/Rejecteds.pdf, id=3501, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Rejecteds.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Rejecteds.pdf, page 1>
@@ -2205,7 +2205,7 @@ Package pdftex.def Info: background/Figures/BHM/Rejecteds.pdf, page1 used on in
 put line 177.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/Rejecteds.pdf, id=3495, page=5, 505.89pt x 505.89pt>
+<background/Figures/Rejecteds.pdf, id=3502, page=5, 505.89pt x 505.89pt>
 File: background/Figures/Rejecteds.pdf Graphic file (type pdf)
 
 <use background/Figures/Rejecteds.pdf, page 5>
@@ -2213,7 +2213,7 @@ Package pdftex.def Info: background/Figures/Rejecteds.pdf, page5 used on input
 line 177.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
  [112 <./background/Figures/BHM/BHMvsBouy.pdf>]
-<background/Figures/BHM/RejectedsCOLORS.pdf, id=3516, page=1, 505.89pt x 505.89
+<background/Figures/BHM/RejectedsCOLORS.pdf, id=3523, page=1, 505.89pt x 505.89
 pt>
 File: background/Figures/BHM/RejectedsCOLORS.pdf Graphic file (type pdf)
  <use background/Figures/BHM/RejectedsCOLORS.pdf, page 1>
@@ -2221,7 +2221,7 @@ Package pdftex.def Info: background/Figures/BHM/RejectedsCOLORS.pdf, page1 used
  on input line 185.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/RejectedsCOLORS.pdf, id=3517, page=5, 505.89pt x 505.89pt>
+<background/Figures/RejectedsCOLORS.pdf, id=3524, page=5, 505.89pt x 505.89pt>
 File: background/Figures/RejectedsCOLORS.pdf Graphic file (type pdf)
 
 <use background/Figures/RejectedsCOLORS.pdf, page 5>
@@ -2230,7 +2230,7 @@ input line 185.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
  [113 <./background/Figures/BHM/Rejecteds.pdf> <./background/Figures/Rejecteds.
 pdf>]
-<background/Figures/BHM/NewOnes.pdf, id=3815, page=1, 505.89pt x 505.89pt>
+<background/Figures/BHM/NewOnes.pdf, id=3822, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/NewOnes.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/NewOnes.pdf, page 1>
@@ -2238,7 +2238,7 @@ Package pdftex.def Info: background/Figures/BHM/NewOnes.pdf, page1 used on inpu
 t line 197.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/NewOnes.pdf, id=3816, page=5, 505.89pt x 505.89pt>
+<background/Figures/NewOnes.pdf, id=3823, page=5, 505.89pt x 505.89pt>
 File: background/Figures/NewOnes.pdf Graphic file (type pdf)
 
 <use background/Figures/NewOnes.pdf, page 5>
@@ -2259,7 +2259,7 @@ ps-converted-to.pdf background/Figures/RT1_pm.eps>
 (epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/RT1_pm-eps-converted-to.pdf, id=3862, 505.89pt x 505.89pt>
+<background/Figures/RT1_pm-eps-converted-to.pdf, id=3869, 505.89pt x 505.89pt>
 File: background/Figures/RT1_pm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/RT1_pm-eps-converted-to.pdf>
@@ -2278,7 +2278,7 @@ ps-converted-to.pdf background/Figures/RT1_ph.eps>
 (epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/RT1_ph-eps-converted-to.pdf, id=3863, 505.89pt x 505.89pt>
+<background/Figures/RT1_ph-eps-converted-to.pdf, id=3870, 505.89pt x 505.89pt>
 File: background/Figures/RT1_ph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/RT1_ph-eps-converted-to.pdf>
@@ -2299,7 +2299,7 @@ ps-converted-to.pdf background/Figures/RT2_pm.eps>
 (epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/RT2_pm-eps-converted-to.pdf, id=4145, 505.89pt x 505.89pt>
+<background/Figures/RT2_pm-eps-converted-to.pdf, id=4152, 505.89pt x 505.89pt>
 File: background/Figures/RT2_pm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/RT2_pm-eps-converted-to.pdf>
@@ -2318,7 +2318,7 @@ ps-converted-to.pdf background/Figures/RT2_ph.eps>
 (epstopdf)             \includegraphics on input line 238.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/RT2_ph-eps-converted-to.pdf, id=4146, 505.89pt x 505.89pt>
+<background/Figures/RT2_ph-eps-converted-to.pdf, id=4153, 505.89pt x 505.89pt>
 File: background/Figures/RT2_ph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/RT2_ph-eps-converted-to.pdf>
@@ -2330,7 +2330,7 @@ RT1_ph-eps-converted-to.pdf> <./background/Figures/RT2_pm-eps-converted-to.pdf>
  <./background/Figures/RT2_ph-eps-converted-to.pdf>] (./background/Tables/Table
 Parameters.txt [117]
 [118])
-<background/Figures/BHM/Correlations.pdf, id=4211, page=1, 505.89pt x 505.89pt>
+<background/Figures/BHM/Correlations.pdf, id=4218, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Correlations.pdf Graphic file (type pdf)
 <use background/Figures/BHM/Correlations.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/Correlations.pdf, page1 used on
@@ -2342,14 +2342,14 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 254--255
  []
 
 [119] [120 <./background/Figures/BHM/Correlations.pdf>]
-<background/Figures/BHM/MembersModel.pdf, id=4240, page=2, 505.89pt x 505.89pt>
+<background/Figures/BHM/MembersModel.pdf, id=4248, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
 <use background/Figures/BHM/MembersModel.pdf, page 2>
 Package pdftex.def Info: background/Figures/BHM/MembersModel.pdf, page2 used on
  input line 275.
 (pdftex.def)             Requested size: 455.24408pt x 455.25046pt.
 
-<background/Figures/BHM/Cs_members.pdf, id=4245, page=2, 505.89pt x 505.89pt>
+<background/Figures/BHM/Cs_members.pdf, id=4253, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Cs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Cs_members.pdf, page 2>
@@ -2357,7 +2357,7 @@ Package pdftex.def Info: background/Figures/BHM/Cs_members.pdf, page2 used on i
 nput line 285.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Cs_members.pdf, id=4246, page=3, 505.89pt x 505.89pt>
+<background/Figures/BHM/Cs_members.pdf, id=4254, page=3, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Cs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Cs_members.pdf, page 3>
@@ -2365,7 +2365,7 @@ Package pdftex.def Info: background/Figures/BHM/Cs_members.pdf, page3 used on i
 nput line 290.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Bs_members.pdf, id=4251, page=2, 505.89pt x 505.89pt>
+<background/Figures/BHM/Bs_members.pdf, id=4259, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Bs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Bs_members.pdf, page 2>
@@ -2373,7 +2373,7 @@ Package pdftex.def Info: background/Figures/BHM/Bs_members.pdf, page2 used on i
 nput line 301.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Bs_members.pdf, id=4252, page=3, 505.89pt x 505.89pt>
+<background/Figures/BHM/Bs_members.pdf, id=4260, page=3, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Bs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Bs_members.pdf, page 3>
@@ -2386,99 +2386,144 @@ LaTeX Warning: Text page 123 contains only floats.
 
 [123 <./background/Figures/BHM/Cs_members.pdf> <./background/Figures/BHM/Cs_mem
 bers.pdf> <./background/Figures/BHM/Bs_members.pdf> <./background/Figures/BHM/B
-s_members.pdf>] [124] [125]
-<background/Figures/Density-Kvsi.pdf, id=4562, 505.89pt x 505.89pt>
+s_members.pdf>] [124]
+<background/Figures/PSD/King7.pdf, id=4570, 1084.05pt x 1084.05pt>
+File: background/Figures/PSD/King7.pdf Graphic file (type pdf)
+
+<use background/Figures/PSD/King7.pdf>
+Package pdftex.def Info: background/Figures/PSD/King7.pdf used on input line 40
+5.
+(pdftex.def)             Requested size: 455.24408pt x 455.24828pt.
+ [125] [126 <./background/Figures/PSD/King7.pdf>] [127]
+<background/Figures/PSD/KingEll7.pdf, id=4593, 1806.75pt x 1806.75pt>
+File: background/Figures/PSD/KingEll7.pdf Graphic file (type pdf)
+
+<use background/Figures/PSD/KingEll7.pdf>
+Package pdftex.def Info: background/Figures/PSD/KingEll7.pdf used on input line
+ 492.
+(pdftex.def)             Requested size: 364.19664pt x 364.18318pt.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 500.
+
+
+Overfull \hbox (91.35208pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.7.  SELECTION OF MODELS WITH BIAXIAL SYMMETRY AND LUMINOSITY
+ SEGREGATION \OT1/cmr/m/n/12 128
+ []
+
+[128]
+Overfull \hbox (91.35208pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.7.  SELECTION OF MODELS WITH BIAXIAL SYMMETRY AND LUMINOSITY
+ SEGREGATION \OT1/cmr/m/n/12 129
+ []
+
+[129 <./background/Figures/PSD/KingEll7.pdf>]
+<background/Figures/PSD/KingMS7.pdf, id=4611, 1084.05pt x 1084.05pt>
+File: background/Figures/PSD/KingMS7.pdf Graphic file (type pdf)
+
+<use background/Figures/PSD/KingMS7.pdf>
+Package pdftex.def Info: background/Figures/PSD/KingMS7.pdf used on input line 
+539.
+(pdftex.def)             Requested size: 364.19664pt x 364.18869pt.
+
+Overfull \hbox (42.99802pt too wide) in paragraph at lines 549--568
+ [][] 
+ []
+
+[130] [131 <./background/Figures/PSD/KingMS7.pdf>] [132] [133]
+<background/Figures/Density-Kvsi.pdf, id=4661, 505.89pt x 505.89pt>
 File: background/Figures/Density-Kvsi.pdf Graphic file (type pdf)
 
 <use background/Figures/Density-Kvsi.pdf>
 Package pdftex.def Info: background/Figures/Density-Kvsi.pdf used on input line
- 367.
+ 622.
 (pdftex.def)             Requested size: 364.19664pt x 364.20192pt.
- [126] [127 <./background/Figures/Density-Kvsi.pdf>]
-<background/Figures/BHM/absolute_JHK-log.pdf, id=4597, 375.4025pt x 505.89pt>
+ [134] [135 <./background/Figures/Density-Kvsi.pdf>]
+<background/Figures/BHM/absolute_JHK-log.pdf, id=4694, 375.4025pt x 505.89pt>
 File: background/Figures/BHM/absolute_JHK-log.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/absolute_JHK-log.pdf>
 Package pdftex.def Info: background/Figures/BHM/absolute_JHK-log.pdf used on in
-put line 384.
+put line 639.
 (pdftex.def)             Requested size: 364.19664pt x 490.82077pt.
 
 
-LaTeX Warning: Float too large for page by 8.8645pt on input line 388.
+LaTeX Warning: Float too large for page by 8.8645pt on input line 643.
 
-[128] [129 <./background/Figures/BHM/absolute_JHK-log.pdf>]
-<background/Figures/FitSpline_AllardModels.pdf, id=4640, page=1, 409.94215pt x 
+[136] [137 <./background/Figures/BHM/absolute_JHK-log.pdf>]
+<background/Figures/FitSpline_AllardModels.pdf, id=4739, page=1, 409.94215pt x 
 317.19704pt>
 File: background/Figures/FitSpline_AllardModels.pdf Graphic file (type pdf)
  <use background/Figures/FitSpline_AllardModels.pdf, page 1>
 Package pdftex.def Info: background/Figures/FitSpline_AllardModels.pdf, page1 u
-sed on input line 406.
+sed on input line 661.
 (pdftex.def)             Requested size: 318.66946pt x 246.57535pt.
 
-<background/Figures/FitSpline_AllardModels.pdf, id=4641, page=2, 427.06863pt x 
+<background/Figures/FitSpline_AllardModels.pdf, id=4740, page=2, 427.06863pt x 
 317.49503pt>
 File: background/Figures/FitSpline_AllardModels.pdf Graphic file (type pdf)
  <use background/Figures/FitSpline_AllardModels.pdf, page 2>
 Package pdftex.def Info: background/Figures/FitSpline_AllardModels.pdf, page2 u
-sed on input line 412.
+sed on input line 667.
 (pdftex.def)             Requested size: 318.66946pt x 236.90952pt.
 
-<background/Figures/BHM/MassDistribution.pdf, id=4648, page=1, 578.16pt x 433.6
+<background/Figures/BHM/MassDistribution.pdf, id=4747, page=1, 578.16pt x 433.6
 2pt>
 File: background/Figures/BHM/MassDistribution.pdf Graphic file (type pdf)
  <use background/Figures/BHM/MassDistribution.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/MassDistribution.pdf, page1 use
-d on input line 426.
+d on input line 681.
 (pdftex.def)             Requested size: 578.15858pt x 433.61894pt.
- [130] [131 <./background/Figures/FitSpline_AllardModels.pdf> <./background/Fig
+ [138] [139 <./background/Figures/FitSpline_AllardModels.pdf> <./background/Fig
 ures/FitSpline_AllardModels.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/FitSpline_Allar
 dModels.pdf): PDF inclusion: multiple pdfs with page group included in a single
  page
->] [132 <./background/Figures/BHM/MassDistribution.pdf>] [133]
-<background/Figures/BHM/ModelsMassDistribution.pdf, id=4791, page=1, 578.16pt x
+>] [140 <./background/Figures/BHM/MassDistribution.pdf>]
+<background/Figures/BHM/ModelsMassDistribution.pdf, id=4879, page=1, 578.16pt x
  433.62pt>
 File: background/Figures/BHM/ModelsMassDistribution.pdf Graphic file (type pdf)
 
  <use background/Figures/BHM/ModelsMassDistribution.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/ModelsMassDistribution.pdf, pag
-e1 used on input line 473.
+e1 used on input line 728.
 (pdftex.def)             Requested size: 578.15858pt x 433.61894pt.
 
-[134 <./background/Figures/BHM/ModelsMassDistribution.pdf>]
-<background/Figures/BHM/M45vsM42vsM44.pdf, id=4845, 505.89pt x 505.89pt>
+[141] [142 <./background/Figures/BHM/ModelsMassDistribution.pdf>] [143]
+<background/Figures/BHM/M45vsM42vsM44.pdf, id=4946, 505.89pt x 505.89pt>
 File: background/Figures/BHM/M45vsM42vsM44.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/M45vsM42vsM44.pdf>
 Package pdftex.def Info: background/Figures/BHM/M45vsM42vsM44.pdf used on input
- line 498.
+ line 753.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/BHM/CDF_comparison.pdf, id=4850, 505.89pt x 505.89pt>
+<background/Figures/BHM/CDF_comparison.pdf, id=4951, 505.89pt x 505.89pt>
 File: background/Figures/BHM/CDF_comparison.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/CDF_comparison.pdf>
 Package pdftex.def Info: background/Figures/BHM/CDF_comparison.pdf used on inpu
-t line 506.
+t line 761.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
- [135] [136 <./background/Figures/BHM/M45vsM42vsM44.pdf>] [137 <./background/Fi
-gures/BHM/CDF_comparison.pdf>])
-(./conclusions/conclusions.tex [138]
+ [144 <./background/Figures/BHM/M45vsM42vsM44.pdf>] [145 <./background/Figures/
+BHM/CDF_comparison.pdf>])
+(./conclusions/conclusions.tex [146]
 Chapter 5.
-) (./thesis.bbl [139
+) (./thesis.bbl [147
 
-] [140
+] [148
 
-] [141] [142] [143] [144] [145] [146] [147] [148]
-[149]) [150]
+] [149] [150] [151] [152] [153] [154] [155] [156]
+[157]) [158]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A2088C81DD37BDF17FE7BE9820213E19;2517.
+(rerunfilecheck)             Checksum: CA2BC59AD2D8935E823B08E9C44D7919;2633.
 
 
 LaTeX Warning: There were undefined references.
@@ -2489,10 +2534,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 412.
  ) 
 Here is how much of TeX's memory you used:
- 31408 strings out of 493109
- 601014 string characters out of 6135003
- 940284 words of memory out of 5000000
- 33367 multiletter control sequences out of 15000+600000
+ 31454 strings out of 493109
+ 601974 string characters out of 6135003
+ 940017 words of memory out of 5000000
+ 33391 multiletter control sequences out of 15000+600000
  27615 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,14n,85p,3237b,960s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2534,10 +2579,152 @@ b></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (156 pages, 18567988 bytes).
+Output written on thesis.pdf (164 pages, 19954160 bytes).
 PDF statistics:
- 5211 PDF objects out of 6186 (max. 8388607)
- 4426 compressed objects within 45 object streams
- 632 named destinations out of 1000 (max. 500000)
- 25229 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 5311 PDF objects out of 6186 (max. 8388607)
+ 4509 compressed objects within 46 object streams
+ 650 named destinations out of 1000 (max. 500000)
+ 25252 words of extra memory for PDF output out of 29859 (max. 10000000)
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /BHM/Bs_members.pdf, page2 used on i
+nput line 301.
+(pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
+
+<background/Figures/BHM/Bs_members.pdf, id=2598, page=3, 505.89pt x 505.89pt>
+File: background/Figures/BHM/Bs_members.pdf Graphic file (type pdf)
+
+<use background/Figures/BHM/Bs_members.pdf, page 3>
+Package pdftex.def Info: background/Figures/BHM/Bs_members.pdf, page3 used on i
+nput line 306.
+(pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
+
+
+Package natbib Warning: Citation `Bouy2015' on page 118 undefined on input line
+ 309.
+
+
+Package natbib Warning: Citation `Bouy2015' on page 118 undefined on input line
+ 309.
+
+
+Package natbib Warning: Citation `Buchner2014' on page 118 undefined on input l
+ine 315.
+
+
+Package natbib Warning: Citation `Feroz2009' on page 118 undefined on input lin
+e 315.
+
+
+Package natbib Warning: Citation `Skilling2004' on page 118 undefined on input 
+line 315.
+
+
+Package natbib Warning: Citation `Skilling2006' on page 118 undefined on input 
+line 315.
+
+
+Package natbib Warning: Citation `Jeffreys61' on page 118 undefined on input li
+ne 319.
+
+
+Package natbib Warning: Citation `Jeffreys61' on page 118 undefined on input li
+ne 322.
+
+
+Package natbib Warning: Citation `Jeffreys61' on page 118 undefined on input li
+ne 322.
+
+[118] [119 <./background/Figures/BHM/MembersModel.pdf>]
+Overfull \vbox (114.87003pt too high) has occurred while \output is active []
+
+
+[120 <./background/Figures/BHM/Cs_members.pdf> <./background/Figures/BHM/Cs_mem
+bers.pdf> <./background/Figures/BHM/Bs_members.pdf> <./background/Figures/BHM/B
+s_members.pdf>] [121]
+<background/Figures/PSD/King7.pdf, id=2891, 1084.05pt x 1084.05pt>
+File: background/Figures/PSD/King7.pdf Graphic file (type pdf)
+
+<use background/Figures/PSD/King7.pdf>
+Package pdftex.def Info: background/Figures/PSD/King7.pdf used on input line 40
+3.
+(pdftex.def)             Requested size: 455.24408pt x 455.24828pt.
+ [122 <./background/Figures/PSD/King7.pdf>] [123]
+Overfull \hbox (91.35208pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.7.  SELECTION OF MODELS WITH BIAXIAL SYMMETRY AND LUMINOSITY
+ SEGREGATION \OT1/cmr/m/n/12 124
+ []
+
+[124] <background/Figures/PSD/KingEll7.pdf, id=2914, 1806.75pt x 1806.75pt>
+File: background/Figures/PSD/KingEll7.pdf Graphic file (type pdf)
+
+<use background/Figures/PSD/KingEll7.pdf>
+Package pdftex.def Info: background/Figures/PSD/KingEll7.pdf used on input line
+ 490.
+(pdftex.def)             Requested size: 364.19664pt x 364.18318pt.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 498.
+
+
+LaTeX Warning: Reference `tab:BayesFactorsLumSeg' on page 125 undefined on inpu
+t line 512.
+
+
+LaTeX Warning: Reference `fig:KingMS7' on page 125 undefined on input line 533.
+
+
+<background/Figures/PSD/KingMS7.pdf, id=2915, 1084.05pt x 1084.05pt>
+File: background/Figures/PSD/KingMS7.pdf Graphic file (type pdf)
+
+<use background/Figures/PSD/KingMS7.pdf>
+Package pdftex.def Info: background/Figures/PSD/KingMS7.pdf used on input line 
+537.
+(pdftex.def)             Requested size: 364.19664pt x 364.18869pt.
+
+
+LaTeX Warning: Reference `tab:BayesFactorAll' on page 125 undefined on input li
+ne 542.
+
+
+Overfull \hbox (91.35208pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.7.  SELECTION OF MODELS WITH BIAXIAL SYMMETRY AND LUMINOSITY
+ SEGREGATION \OT1/cmr/m/n/12 125
+ []
+
+[125]
+Overfull \hbox (91.35208pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.7.  SELECTION OF MODELS WITH BIAXIAL SYMMETRY AND LUMINOSITY
+ SEGREGATION \OT1/cmr/m/n/12 126
+ []
+
+[126 <./background/Figures/PSD/KingEll7.pdf>]
+Overfull \hbox (91.35208pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.7.  SELECTION OF MODELS WITH BIAXIAL SYMMETRY AND LUMINOSITY
+ SEGREGATION \OT1/cmr/m/n/12 127
+ []
+
+[127 <./background/Figures/PSD/KingMS7.pdf>]
+./background/Chapter4.tex:555: Missing number, treated as zero.
+<to be read again> 
+                   c
+l.555 \multirow{4}{c}{$3^{\circ}$}
+                                   &King-R&&&&&&&&\\
+? 
+./background/Chapter4.tex:555: Emergency stop.
+<to be read again> 
+                   c
+l.555 \multirow{4}{c}{$3^{\circ}$}
+                                   &King-R&&&&&&&&\\
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 30641 strings out of 493109
+ 583651 string characters out of 6135003
+ 921184 words of memory out of 5000000
+ 32867 multiletter control sequences out of 15000+600000
+ 27871 words of font info for 172 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 64i,13n,85p,3237b,960s stack positions out of 5000i,500n,10000p,200000b,80000s
+./background/Chapter4.tex:555:  ==> Fatal error occurred, no output PDF file pr
+oduced!

@@ -1,4 +1,4 @@
-\begin{thebibliography}{217}
+\begin{thebibliography}{218}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -442,6 +442,9 @@ JCGM. 2008, JCGM 100: Evaluation of Measurement Data - Guide to the Expression
   2007, in Astronomical Society of the Pacific Conference Series, Vol. 371,
   Statistical Challenges in Modern Astronomy IV, ed. G.~J. {Babu} \& E.~D.
   {Feigelson}, 433
+
+\bibitem[{Jeffreys(1961)}]{Jeffreys61}
+Jeffreys, H. 1961, Theory of Probability, 3rd edn. (Oxford, England: Oxford)
 
 \bibitem[{{Jiang} \& {van den Bosch}(2016)}]{2016MNRAS.458.2848J}
 {Jiang}, F. \& {van den Bosch}, F.~C. 2016, \mnras, 458, 2848

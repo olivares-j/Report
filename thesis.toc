@@ -66,11 +66,12 @@
 \contentsline {section}{\numberline {4.4}Updating the prior knowledge}{120}{section.4.4}
 \contentsline {section}{\numberline {4.5}Proper motions distribution}{121}{section.4.5}
 \contentsline {section}{\numberline {4.6}Projected spatial distribution}{122}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Model selection}{124}{subsection.4.6.1}
-\contentsline {section}{\numberline {4.7}Luminosity distribution}{124}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{124}{subsection.4.7.1}
-\contentsline {section}{\numberline {4.8}Mass distribution}{128}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{128}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Present day system mass distribution}{130}{subsection.4.8.2}
-\contentsline {section}{\numberline {4.9}The mass distribution on time}{134}{section.4.9}
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{139}{chapter.5}
+\contentsline {subsection}{\numberline {4.6.1}Selection of models with radial symmetry}{124}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}Selection of models with biaxial symmetry and luminosity segregation}{128}{section.4.7}
+\contentsline {section}{\numberline {4.8}Luminosity distribution}{130}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Derivation of the magnitude distributions}{132}{subsection.4.8.1}
+\contentsline {section}{\numberline {4.9}Mass distribution}{136}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}The mass-luminosity relation}{136}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Present day system mass distribution}{138}{subsection.4.9.2}
+\contentsline {section}{\numberline {4.10}The mass distribution on time}{143}{section.4.10}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{147}{chapter.5}
