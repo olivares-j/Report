@@ -314,9 +314,7 @@ The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos
 \label{sect:PSDresults}
 In this Section, I present the results of the model selection analysis of the Projected Spatial Distribution (PSD) models of the Pleiades cluster. The Bayesian model selection approach and the PSD models are described in Sections \ref{sect:modelselection} and \ref{sect:PSDmethod}, respectively. The Bayesian \emph{evidence} is computed with uniform priors for all parameters using the Python package \emph{PyMultiNest} \citep{Buchner2014}. It is a Python wrapper of the C++ package \emph{MultiNest} \citep{Feroz2009} that implements the Nested Sampling algorithm of \citet{Skilling2004,Skilling2006} (see Section \ref{sect:NestedSampling}).
 
-\subsection{Selection of models with radial symmetry} 
-
-Tables \ref{tab:BayesFactors3deg} and \ref{tab:BayesFactors6deg} summarise the evidences and Bayes factors of the radially symmetric models using the candidate members within  7 pc (3$^{\circ}$) and 14 pc (6$^{\circ}$), respectively. In the Bayesian model selection methodology, the boundaries for decision making from Bayes Factors should be set \emph{ab initio}. Thus, we discuss our results following the classical scale by \cite{Jeffreys61}, which I shown in Table \ref{tab:JeffreysScale}.
+In the Bayesian model selection methodology, the boundaries for decision making from Bayes Factors should be set \emph{ab initio}. Thus, we discuss our results following the classical scale by \cite{Jeffreys61}, which I shown in Table \ref{tab:JeffreysScale}.
 
 \begin{table}[H]
 \caption{\citet{Jeffreys61} scale for Bayes factors.}
@@ -336,15 +334,13 @@ $>$ 20 & decisive\\
 \end{table}%
  
 
+
+\subsection{Selection of models with radial symmetry} 
+
+Tables \ref{tab:BayesFactors3deg} and \ref{tab:BayesFactors6deg} summarise the evidences and Bayes factors of the radially symmetric models using the candidate members within  7 pc (3$^{\circ}$) and 14 pc (6$^{\circ}$), respectively. 
 \begin{table}[ht]
   \centering
-      \caption[]{Natural logarithm of the evidence for each
-        profile density (diagonal) and Bayes factors (off-diagonal
-        elements, with the evidence for the model specified in the
-        column header placed in the denominator). The evidence
-        corresponds to the model including parameters for the cluster
-        centre and a radial truncation at 7 pc (3$^{\circ}$).}
-         
+      \caption{Natural logarithm of the evidence (diagonal) and Bayes factors (off-diagonal elements, with the evidence for the model specified in the column header placed in the numerator and in the row header in the denominator) for each radially symmetric model inferred from the 7 pc (3$^{\circ}$) sample.}
          \begin{tabular}{rcccccc}
            & King & OGKing  &   GKing & EFF & GP & RGP \\
 \hline              
@@ -360,12 +356,7 @@ $>$ 20 & decisive\\
    
 \begin{table}[ht]
   \centering 
- \caption[]{Natural logarithm of the evidence for each
-        profile density (diagonal) and Bayes factors (off-diagonal
-        elements, with the evidence for the model specified in the
-        column header placed in the denominator). The evidence
-        corresponds to the model including parameters for the cluster
-        centre and a radial truncation at 14 pc (6$^{\circ}$).}
+ \caption[]{Natural logarithm of the evidence (diagonal) and Bayes factors (off-diagonal elements, computed as in Table \ref{tab:BayesFactors3deg}) for each profile radially symmetric model inferred from the 14 pc (6$^{\circ}$) sample.}
 
 \begin{tabular}{rcccccc} 
 &King & OGKing & GKing & EFF & GP & RGP \\
@@ -387,10 +378,9 @@ We primarily focus on the 7 pc (3$^{\circ}$) sample, where the completeness and 
 
 The King's and the RGP models have the largest evidences and a Bayes Factor of 0.41 (or 2.43) between them. It implies that there is no reason to prefer one over the other. According to Jeffrey's scale, this difference \emph{barely worth mentioning}. At the same time, King's model, the one with the highest evidence, shows Bayes Factors in the category between 3 and $\sim$10 (\emph{substantial evidence}) or even up to 30 (\emph{strong evidence}) when compared to the remaining models (OGKing, GKing, EFF and GP).  
 
-In Figure \ref{fig:King_7}, we show the projections of the posterior distribution for King's model parameters for the 7 pc (3$^{\circ}$) sample. As can be seen, the tidal radius is relatively unconstrained by the data. This can be understood in terms of the lack of observations in the vicinity of the cluster edge (tidal radius), which introduces a degeneracy. The maximum a posteriori (MAP) values of the parameters of King's profile are $\alpha_c=56.65496^{\circ}$, $\delta_c=24.13461^{\circ}$, $r_c=2.0$ pc and $r_t=44.7$pc. We also fit a multivariate Gaussian to the posterior distribution at the MAP estimate, it yields the following covariance matrix:
+In Figure \ref{fig:King_7}, we show the projections of the posterior distribution for King's model parameters inferred from the 7 pc (3$^{\circ}$) sample. As can be seen, the tidal radius is relatively unconstrained by the data. This can be understood in terms of the lack of observations in the vicinity of the cluster edge (tidal radius), which introduces a degeneracy. The maximum a posteriori (MAP) values of the parameters of King's profile are $\alpha_c=56.65496^{\circ}$, $\delta_c=24.13461^{\circ}$, $r_c=2.0$ pc and $r_t=44.7$pc. We also fit a multivariate Gaussian to the posterior distribution at the MAP estimate, it yields the following standard deviation matrix:
 
 $$
-\Sigma=
 \left(\begin{array}{rrrr}
  0.000045   & -0.000004  &  0.000205  & -0.0008  \\
 -0.000004   &  0.000038  & -0.000005  & -0.0002  \\
@@ -403,18 +393,17 @@ with the above ordering of parameters ($\alpha_c, \delta_c, r_c$, and $r_t$).
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=\textwidth]{background/Figures/PSD/King7.pdf}
-\caption{Samples of the posterior distribution of the King's profile parameters inferred from the 3$^{\circ}$ sample. }
+\caption{Samples of the posterior distribution of the King's profile parameters inferred from the 3$^{\circ}$. The core and tidal radius are in pc. }
 \label{fig:King_7}
 \end{center}
 \end{figure}
 
 
-We will first compare King's model with the GKing profile. GKing is a model with significantly less evidence and two more parameters than King's profile. The posterior distributions reveal a complete loss of interpretability of the parameters, with the core radius relatively unconstrained between 100 and 400 pc, tidal radii between 200 and 800. The $a$ exponent is the only well constrained parameter (MAP value of XXXX)
+We will first compare King's model with the GKing profile. GKing is a model with significantly less evidence and two more parameters than King's profile. The posterior distributions reveal a complete loss of interpretability of the parameters, with the core radius relatively unconstrained between 100 and 400 pc, tidal radii between 200 and 800. %The $a$ exponent is the only well constrained parameter (MAP value of XXXX)
 
-The second alternative is the modified King profile with exponents fixed to the maximum evidence values (OGKing). In this case, the model has the same number of parameters as in the classical King profile, but we have selected the values of $\alpha_1$ and $\alpha_2$ in Eq. \ref{eq:GKing} that maximise the evidence (0.4 and 1.2 respectively, compared to 0.5 and 2 in the classical King profile). It is important to bear in mind that the maximum evidence is attained for the 6$^{\circ}$ sample, and this evidence is no longer maximum when calculated with the 3$^{\circ}$ sample. In this case, the parameters retain the interpretability (for obvious reasons) and the tidal radius is relatively well constrained ($\pm 7$pc). However, the evidence is reduced with respect to the classical King profile despite the increased maximum likelihood. We interpret this as the result of overfitting in the process of fixing the $a$ and $b$ parameters. The MAP estimates of the OGKing profile parameters are $\alpha_c=56.65603^{\circ}$, $\delta_c=24.13292^{\circ}$, $r_c=1.15$ pc and $r_t=13$ pc. The covariance matrix of the multivariate normal fitted at the MAP is 
+The second alternative is the modified King profile with exponents fixed to the maximum evidence values (OGKing). In this case, the model has the same number of parameters as in the classical King profile, but we have selected the values of $\alpha_1$ and $\alpha_2$ in Eq. \ref{eq:GKing} that maximise the evidence (0.4 and 1.2 respectively, compared to 0.5 and 2 in the classical King profile). It is important to bear in mind that the maximum evidence is attained for the 6$^{\circ}$ sample, and this evidence is no longer maximum when calculated with the 3$^{\circ}$ sample. In this case, the parameters retain the interpretability (for obvious reasons) and the tidal radius is relatively well constrained ($\pm 7$pc). However, the evidence is reduced with respect to the classical King profile despite the increased maximum likelihood. We interpret this as the result of overfitting in the process of fixing the $a$ and $b$ parameters. The MAP estimates of the OGKing profile parameters are $\alpha_c=56.65603^{\circ}$, $\delta_c=24.13292^{\circ}$, $r_c=1.15$ pc and $r_t=13$ pc. The standard deviation matrix of the multivariate normal fitted at the MAP is 
 
 $$
-\Sigma=
 \left(\begin{array}{rrrr}
  0.000028 &-0.000003 & 0.000009 & 0.00063\\
 -0.000003 & 0.000026 & 0.000039 &-0.00007\\
@@ -441,10 +430,9 @@ As a summary of the results of the 3$^{\circ}$ sample, we find that the introduc
 
 Concerning the 6$^{\circ}$ sample, the OGKing profile has the largest evidence. It comes as no surprise since OGKing profile fixes the values of $\alpha_1$ and $\alpha_2$ to those that yield the maximum evidence. Hence, we acknowledge overfitting to the incomplete and biased sample of Pleiades members out to 6$^{\circ}$. In fact, the marginal posterior distribution for the tidal radius is sharply peaked around 16 pc, only slightly further than the observational boundary.
 
-For the RGP model, its MAP estimates are $\alpha_c=56.6909785^{\circ}$, $\delta_c=24.13301438^{\circ}$, $R_b=886.84$ pc , $\alpha=1.44$, and $\beta=70.6$. The corresponding standard deviation matrix $\Sigma$ is
+For the RGP model, its MAP estimates are $\alpha_c=56.6909785^{\circ}$, $\delta_c=24.13301438^{\circ}$, $R_b=886.84$ pc , $\alpha=1.44$, and $\beta=70.6$. The corresponding standard deviation matrix is
 
 $$
-\Sigma=
 \left(\begin{array}{rrrrr}
  0.0000589  & 0.000006 &   -0.02 &-0.0000001 &  -0.003  \\
  0.0000061 & 0.000049 &    0.01 & 0.0000134 &  -0.002\\
@@ -454,43 +442,43 @@ $$
 \end{array}\right).
 $$
 
-It is evident from $\Sigma$ that $R_b$ and $\beta$ are only mildly constrained. The profile is, again, characterised by a cusp in the central part of the cluster, as is the profile of the GKing alternative. 
+It is evident from the previous matrix that $R_b$ and $\beta$ are only mildly constrained. The profile is, again, characterised by a cusp in the central part of the cluster, as is the profile of the GKing alternative. 
 
-The 6$^{\circ}$ data set favours clearly MAP profiles (models and MAP estimates of their parameters) with sharp peaks in the centre of the cluster. However, we caution the reader against these results. They refer to a data set that is severely biased and incomplete in ways that we cannot quantify and/or model.
+The 6$^{\circ}$ data set favours  MAP profiles (models and MAP estimates of their parameters) with sharp peaks in the centre of the cluster. However, we caution the reader against these results. They refer to a data set that is severely biased and incomplete in ways that we cannot quantify and/or model.
 
 The conclusion from the comparison of these radially symmetric profiles in the context of the two data sets is that i) there is no compelling reason to abandon the widely used King profile in the context of the complete and homogeneous data set out to 3$^{\circ}$ and ii) there are better models when evaluated on data out to 6$^{\circ}$, but it remains to be found whether this is due to the completeness problems of the DANCe data in the outer regions of the Pleiades or whether they truly represent a need to make the King profile more flexible to accommodate the data. In the following we retain three of the models discussed above (King, OGKing and RGP), and take the comparison one step further in order to accommodate simple deviations from radial symmetry in the form of elliptical density contours.
 
-\section{Selection of models with biaxial symmetry and luminosity segregation}
+\subsection{Selection of models with biaxial symmetry}
 
-Concerning the models with biaxial symmetry, Table \ref{tab:BayesFactorsEll} collects the evidences and Bayes factors. We have included the results for the OGKing alternative despite the fact that we had to extend the support of the prior for the $r_{t,a}$ and $r_{t,b}$ parameters out to 300 pc. For smaller values of the support, the MCMC samples possess maxima at the boundaries. Even in the set up with priors extending out to 300 pc, the parameter samples lack physical interpretations with vanishingly small MAP core radii. We see that the OGKing profile is clearly to be preferred when compared against the other two models, and any of the three is to be preferred to the radially symmetric profiles of Table ref{tab:BayesFactors}. Despite the fact that the OGKing shoes the best evidence and the largest Bayes factor. Its unconstrained and unphysical results allow us to continue exploring the luminosity segregation only in the King model.
+Concerning the models with biaxial symmetry, Table \ref{tab:BayesFactorsEll} collects the evidences and Bayes factors. We have included the results for the OGKing alternative despite the fact that we had to extend the support of the prior for the $r_{t,a}$ and $r_{t,b}$ parameters out to 300 pc. For smaller values of the support, the MCMC samples possess maxima at the boundaries. Even in the set up with priors extending out to 300 pc, the parameter samples lack physical interpretations with vanishingly small MAP core radii. We see that the OGKing profile is clearly to be preferred when compared against the other two models, and any of the three is to be preferred to the radially symmetric profiles of Table \ref{tab:BayesFactorsEll}. Despite the fact that the OGKing shows the best evidence and the largest Bayes factor, the unconstrained and unphysical values of its parameters allow us to discard it, and continue exploring the luminosity segregation only in the King model.
 
-\begin{table}
+\begin{table}[ht!]
   \centering
-  \caption[]{Evidences and Bayes factors for the models with biaxial symmetry applied on the $3^{\circ}$ and $6^{\circ}$ samples. }
+  \caption[]{Natural logarithm of the evidences (diagonal) and Bayes factors (off-diagonal, computed as  in Table \ref{tab:BayesFactors3deg}) for the models with biaxial symmetry inferred from the $3^{\circ}$ and $6^{\circ}$ samples. }
   \label{tab:BayesFactorsEll}
 
-\begin{tabular}{lccc|ccc|}
+\begin{tabular}{cl|ccc|ccc|}
 \hline              
 \hline              
-&  \multicolumn{3}{c}{$3^{\circ}$} &   \multicolumn{3}{c}{$6^{\circ}$} \\
+&&  \multicolumn{3}{c}{$3^{\circ}$} &   \multicolumn{3}{c}{$6^{\circ}$} \\
 \hline              
-&  King & OGKing & RGP &  King &  OGKing & RGP \\
+&&  King & OGKing & RGP &  King &  OGKing & RGP \\
 \hline              
-           $3^{\circ}$-King    &  -2806.9   &  $>100$   &    0.14   &           &            &               \\
-           $3^{\circ}$-OGKing  &            &   -1527.3 & $<0.01$   &           &            &               \\   
-           $3^{\circ}$-RGP     &            &           &  -2808.9  &           &            &               \\
+\multirow{3}{*}{$3^{\circ}$}           &King    &  -2806.9   &  $>100$   &    0.14   &           &            &               \\
+           &OGKing  &            &   -1527.3 & $<0.01$   &           &            &               \\   
+           &RGP     &            &           &  -2808.9  &           &            &               \\
            \hline
-           $6^{\circ}$-King    &            &           &           &  -5023.8  &  $>100$    &   $<0.01$     \\
-           $6^{\circ}$-OGKing  &            &           &           &           &  -3255.7   &   $<0.01$     \\   
-           $6^{\circ}$-RGP     &            &           &           &           &            &  -5034.7      \\
+\multirow{3}{*}{$6^{\circ}$}          &King    &            &           &           &  -5023.8  &  $>100$    &   $<0.01$     \\
+           &OGKing  &            &           &           &           &  -3255.7   &   $<0.01$     \\   
+           &RGP     &            &           &           &           &            &  -5034.7      \\
 \hline              
          \end{tabular}
    \end{table}
 
-\begin {figure}
+\begin{figure}[H]
  \centering
-  \includegraphics[width=0.8\textwidth]{background/Figures/PSD/KingEll7.pdf}
-  \caption{Samples from the posterior distribution of the parameters in the biaxial symmetric King model inferred from the 3$^{\circ}$ sample.}
+  \includegraphics[width=\textwidth]{background/Figures/PSD/KingEll7.pdf}
+  \caption{Samples from the posterior distribution of the parameters in the biaxial symmetric King model inferred from the 3$^{\circ}$ sample. Tidal and core radius are in units of pc.}
 \label{fig:KingEll7}
 \end {figure}
 
@@ -498,7 +486,6 @@ The MAP estimates of the King model on the $3^{\circ}$ sample are $\alpha_c=56.6
 
 $$
 \tiny
-\Sigma=
 \left(\begin{array}{rrrrrrr}
  0.0124 & 0.0003 & 0.0004 &-0.0004 & 0.0002 & -0.0006 &  0.011\\
  0.0003 & 0.0111 &-0.0025 &-0.0069 & 0.0002 & -0.0065 &  0.008\\
@@ -511,41 +498,85 @@ $$
 $$
 with the ordering of parameters used above.
 
-We include luminosity ($J$ band) segregation in the radial and biaxial symmetric extensions of the King profile, which has shown earlier has both large Bayes factor and physical interpretability. Table \ref{tab:BayesFactorsLumSeg} summarises the evidences and Bayes Factors for these models, whose parameters are inferred from the datasets out to 3$^\circ$ and 6$^\circ$.
+Interestingly, this MAP shows no evidence of ellipticity\footnote{The ellipticity is defined as $\epsilon = 1 - \frac{b}{a}$, with $a$ and $b$ the semi-major and semi-minor axis of the ellipse, respectively.} neither in the core radius ($\epsilon_{rc}= 0.04$) nor in the tidal radius ($\epsilon_{rt}= 0.008$).
 
-\begin{table}
+\subsection{Selection of models with luminosity segregation}
+We include luminosity ($J$ band) segregation only in the radial and biaxial symmetric extensions of the King profile. As shown in the previous section, this model has large Bayes factor with physical interpretability. Table \ref{tab:BayesFactorsLumSeg} summarises the evidences and Bayes Factors of the King's model with luminosity segregation in both radial and biaxial symmetric models. The parameters of these models and its evidences are inferred using  the  3$^\circ$ and 6$^\circ$ samples.
+
+\begin{table}[H]
   \centering
-  \caption[]{ Evidences and bayes factors for radial and biaxial symmetric models incorporating luminosity segregation. }
+  \caption[]{Natural logarithm of the evidences (diagonal) and Bayes factors (off-diagonal, computed as in Table \ref{tab:BayesFactors3deg}) for the radial and biaxial symmetric models with luminosity segregation inferred from the 3$^\circ$ and 6$^\circ$ samples. }
   \label{tab:BayesFactorsLumSeg}
-\begin{tabular}{lcccccc}
+\begin{tabular}{cc|cc|cc}
 \hline              
 \hline              
-&  \multicolumn{2}{c}{$3^{\circ}$} &   \multicolumn{2}{c}{$6^{\circ}$} \\
+&&  \multicolumn{2}{c}{$3^{\circ}$} &   \multicolumn{2}{c}{$6^{\circ}$} \\
 \hline              
-&  King-Radial& King-Biaxial &  King-Radial &  King-Biaxial \\
+& & King-Radial& King-Biaxial &  King-Radial &  King-Biaxial \\
 \hline              
- $3^{\circ}$-King-Radial    &  -2875.5   &           &           &            \\
- $3^{\circ}$-King-Biaxial &            &  -2803.9  &           &            \\
- $6^{\circ}$-King-Radial    &            &           &   -5025.4 &            \\
- $6^{\circ}$-King-Biaxial &            &           &           &  -5016.4   \\
+\multirow{2}{*}{$3^{\circ}$}&King-Radial    &  -2875.5   &    $>100$       &           &            \\
+&King-Biaxial &            &  -2803.9  &           &            \\
+\hline
+\multirow{2}{*}{$6^{\circ}$}& King-Radial    &            &           &   -5025.4 &    $>100$        \\
+&King-Biaxial &&                     &           &  -5016.4   \\
 \hline              
          \end{tabular}
    \end{table}
 
-Figure \ref{fig:KingMS7} shows the posterior distributions of the biaxial symmetric King model with luminosity segregation  applied on the 3$^{\circ}$ sample. This model is the best one according to our analysis. 
+Figures \ref{fig:KingRS7} and \ref{fig:KingBS7} show the posterior distributions of the parameters in the radial (King-RS) and biaxial (King-BS) symmetric King models with luminosity segregation, respectively. Both models are inferred from the complete 3$^{\circ}$ sample. Their MAP values and standard deviation matrices of their parameters are the following. 
 
-\begin {figure}
+The MAP values of the King-RS model are $\alpha_c=56.6264^{\circ}$ , $\delta_c=24.1956^{\circ}$, $r_{c}=2.115$ pc, $r_{t}=$ 31.778 pc, and $\kappa= 0.127\, \rm{pc \cdot mag^{-1}}$. Its standard deviation matrix (with parameters in the same previous order) is
+
+$$
+\tiny
+\left(\begin{array}{rrrrr}
+0.0077725911  & 0.0011463608 & 0.015866753 & -0.006895138 &0.0004781459\\
+0.0011463608  & 0.0066805294 & 0.009640874 &  0.011311284  &0.0002655555\\
+0.0158667525  & 0.0096408739 & 0.380770948& -0.844035083  & 0.0210177901\\
+-0.0068951385 & 0.0113112840 & -0.844035083& 45.371984935&-0.0671929448\\
+0.0004781459  & 0.0002655555 & 0.021017790& -0.067192945  &  0.0048742344\\
+\end{array}\right)
+$$
+
+The MAP values of the King-BS model are $\alpha_c=56.6006^{\circ}$, $\delta_c=24.193^{\circ}$, $\phi=1.915$ rad, $r_{cx}=2.348$ pc, $r_{cy}=$2.042 pc ,$r_{tx}=$ 38.12 pc, $r_{ty}=$48.382 pc  and $\kappa= 0.147\, \rm{pc \cdot mag^{-1}}$. Its standard deviation matrix (with parameters in the same previous order) is
+
+$$
+\tiny
+\left(\begin{array}{rrrrrrrr}
+0.0139885233 	 &  -0.0002135887  &-0.002818604  & 0.007312077     &0.004963964   &  0.02605645     &-0.003657460      &-0.0001631951\\
+-0.0002135887 	 &  0.0130671231   &-0.001734756   & -0.003808827   &-0.001210257  &  0.03990854     &-0.013443550      &0.0006731357     \\        
+-0.0028186038 	 & -0.0017347556   & 0.727100779   & 0.013468602    &0.005179071    & -0.55449101    & 0.596346854      &0.0011082365      \\           
+0.0073120769 	 &   -0.0038088265 &  0.013468602  &  0.422814580   &0.054674731    & -0.19355524    & -0.679337642     & 0.0107408223     \\  
+0.0049639637 	 &   -0.0012102569 &  0.005179071  &  0.054674731   &0.433668247    & -1.66048288    & 0.346810670      & 0.0131324789     \\      
+0.0260564469 	 &   0.0399085427  & -0.554491013  &  -0.193555244  & -1.660482881 &  89.94363663   & -13.562539506   & -0.0592770535   \\        
+-0.0036574599 	 &  -0.0134435502  &  0.596346854  & -0.679337642   & 0.346810670  &  -13.56253951  &   56.110848655  &  -0.0089581971   \\          
+-0.0001631951 	 &   0.0006731357  & 0.001108236   & 0.010740822    & 0.013132479   &   -0.05927705  &    -0.008958197  &   0.0040960558    \\
+\end{array}\right)
+$$
+
+
+As can be seen from the MAP values and its standard deviation, the $\kappa$ luminosity segregation parameter is similar and significative for both King-RS and King-BS models. Concerning the ellipticity, the core radius and tidal radius have large values, $\epsilon_{rc}= 0.13$ and $\epsilon_{rt}= 0.21$, respectively. However, due to the large uncertainties in the tidal radii, we trust only in the ellipticity reported for the core radius. The latter value is nevertheless similar to those previously reported in the literature \cite[0.17 and 0.1 to 0.35 reported by][respectively]{Raboud1998,Adams2001}. We do not report the ellipticity value inferred from the extended 6$^\circ$ sample due to the incompleteness of the latter. Indeed, this ellipticity can be strongly biased by the patchy pattern of the DANCe DR2 observations.
+
+\begin{figure}[H]
  \centering
-  \includegraphics[width=0.8\textwidth]{background/Figures/PSD/KingMS7.pdf}
-  \caption{Samples from some of the posterior distribution of the parameters in the biaxial symmetric King luminosity segregated model inferred from the 3$^{\circ}$ sample. Only shown the main axis of the biaxial model.}
-\label{fig:KingMS7}
+  \includegraphics[width=\textwidth]{background/Figures/PSD/KingRS7.pdf}
+  \caption{Samples of the posterior distribution of the parameters in the radially symmetric and luminosity segregated King model inferred from the 3$^{\circ}$ sample. The core and tidal radius are in units of pc, the slope in units of pc per magnitude.}
+\label{fig:KingRS7}
 \end {figure}
 
-The resulting evidences and Bayes Factors clearly indicate that for the Kings models inferred in both  3$^{\circ}$  and 6$^{\circ}$ data sets, there is strong evidence in favour of the more complex models with J-band luminosity segregation and biaxial symmetry (see Table \ref{tab:BayesFactorsAll}).
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=\textwidth]{background/Figures/PSD/KingBS7.pdf}
+  \caption{Samples of the posterior distribution of the parameters in the biaxial symmetric and luminosity segregated King model inferred from the 3$^{\circ}$ sample. The core and tidal radius are in units of pc, the slope in units of pc per magnitude.}
+\label{fig:KingBS7}
+\end {figure}
 
-\begin{table}
+Finally, combining the evidences and Bayes factors of the King's classical and extended models, we can conclude that there is \emph{decisive} (in terms of Jeffrey's scale) evidence, from both the 3$^{\circ}$  and 6$^{\circ}$ data sets, supporting complex models with J-band luminosity segregation and biaxial symmetry (see Table \ref{tab:BayesFactorsAll}).
+
+\begin{table}[H]
   \centering
-  \caption[]{Evidences and bayes factors for King models with radial symmetry (King-R), biaxial symmetry (King-B), and radial and biaxial symmetry with luminosity segregation (King-RS and King-BS, respectively). These evidences are computed using the samples of $3^{\circ}$ and $6^{\circ}$ }
+  \caption[]{Natural logarithm of the evidences (diagonal) and Bayes factors (off-diagonal, computed as in Table \ref{tab:BayesFactors3deg}) for King models with radial symmetry (King-R), biaxial symmetry (King-B), and radial and biaxial symmetry with luminosity segregation (King-RS and King-BS, respectively). These evidences are computed using the samples of $3^{\circ}$ and $6^{\circ}$.}
+  {\small 
 \begin{tabular}{cc|cccc|cccc}
 \hline              
 \hline              
@@ -553,20 +584,26 @@ The resulting evidences and Bayes Factors clearly indicate that for the Kings mo
 \hline              
 &&King-R& King-B &  King-RS& King-BS & King-R & King-B& King-RS &  King-BS \\
 \hline              
-\multirow{4}{*}{$3^{\circ}$} &King-R&-2876.2&&&&&&&\\
-&King-B&&-2806.9&&&&&&\\
-&King-RS    & & &-2875.5   & &          &           &    &        \\
+\multirow{4}{*}{$3^{\circ}$} &King-R&-2876.2&$>100$&2.01&$>100$&&&&\\
+&King-B&&-2806.9&$<0.1$&20.1&&&&\\
+&King-RS    & & &-2875.5   & $>100$&          &           &    &        \\
  &King-BS &    &   &     &  -2803.9  &   &&        &           \\
  \hline
-\multirow{4}{*}{$6^{\circ}$}&King-R   && &&            & -5033.5          &   & &            \\
-&King-B&&&&&&-5023.8&&\\
-&King-RS &&&&            &           &         & -5025.4  &     \\
+\multirow{4}{*}{$6^{\circ}$}&King-R   && &&            & -5033.5          & $>100$  & $>100$&  $>100$  \\
+&King-B&&&&&&-5023.8&0.2& $>100$\\
+&King-RS &&&&            &           &         & -5025.4  &   $>100$  \\
 &King-BS &&&&            &           &         &  &  -5016.4   \\
 \hline              
          \end{tabular}
-    \label{tab:BayesFactorsAll}
-   \end{table}
+         }
+\label{tab:BayesFactorsAll}
+\end{table}
 
+The results of this Section show that, although the majority of the current models of the radial density profile of the Pleiades cluster reproduce well the observed data, only the classical King's profile and the RGP have the best evidences both in the complete $3^\circ$ sample and in the extended $6^\circ$ one. However, we discard the RGP profile due to its high degeneracy and unphysical values. We can perform this selection by the inclusion of restrictive priors PDFs to the physical interpretability of the models. This model selection process using non-identical priors for the competing models is explained in Section \ref{sect:modelselection} (see Eq. \ref{eq:modelselection}). 
+
+Also, we have shown that the HMPS, both complete ($3^\circ$) and extended ($6^\circ$), are better modelled, in terms of the evidence, with complex models including biaxial symmetry and luminosity segregation.
+
+The results of this Section establish a solid probabilistic background for: i) the classical King profile, at least in the Pleiades cluster, and ii) luminosity segregation. The latter indicates that the expected mass segregation in the Pleiades cluster \cite[as has been indicated by previous studies, e.g.][]{Converse2010} is supported by Bayesian evidence. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
