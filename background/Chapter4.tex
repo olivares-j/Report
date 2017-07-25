@@ -7,9 +7,9 @@ Later, I analyse the main results of this work, those that fulfil the objective:
 
 \section{Performance of the classifier}
 \label{sect:classifier}
-As mentioned earlier, the main objective of the methodology of the BHM is the statistical characterisation of the NYOC populations. However, as a by product, it also obtains the individual membership probability distributions of the objects comprising the data set. These membership probability distributions, together with a probability threshold, allow a direct classification of the objects into cluster and field members.  The classification resulting from this procedure, as any other measured property, has an uncertainty. By evaluating this uncertainty under the results of synthetic data (in which the true members are known) we are able to measure the accuracy and precision of the classification process as a function of the probability threshold used. This section explains how an objective probability threshold can be found by maximising the accuracy of the classifier. 
+As mentioned earlier, the main objective of the methodology of the BHM is the statistical characterisation of the NYC populations. However, as a by product, it also obtains the individual membership probability distributions of the objects comprising the data set. These membership probability distributions, together with a probability threshold, allow a direct classification of the objects into cluster and field members.  The classification resulting from this procedure, as any other measured property, has an uncertainty. By evaluating this uncertainty under the results of synthetic data (in which the true members are known) we are able to measure the accuracy and precision of the classification process as a function of the probability threshold used. This section explains how an objective probability threshold can be found by maximising the accuracy of the classifier. 
 
-To measure the accuracy of our classifier, I test it over synthetic data sets that resemble the real RDR2 (Section \ref{sect:RDR2}). An ideal test to our classifier will be to apply it over well known dataset in which tags of cluster and field members were already present. However, if we may have access to these tags, a classifier may not be needed. The Pleiades cluster being one of the most studied cluster in history, it is the NYOC with most of these tags (see Section \ref{sect:memberscomparison}). This is one the reasons for which we decided to benchmark our methodology on it. In spite of the large number of candidate members for the Pleiades clusters, the synthetic data and its true tags are still needed. The reasons are the following. First, the list of candidate members provided by the literature is not infallible. We can never be sure that this list is complete and unpolluted. Here it is important to note that the astrophysical domain of the phenomenon marks a very important distinction with common supervised classification methods. A perfect and real training set is not available. It must be created from simulations. Second, even if the most probable candidate members from the literature were used as a training set \cite[as done for example by][]{Sarro2014} the very faint end of the magnitude distribution (represented by brown-dwarfs) is still a \emph{terra ignota} where candidate members are scarce or not even exist. 
+To measure the accuracy of our classifier, I test it over synthetic data sets that resemble the real RDR2 (Section \ref{sect:RDR2}). An ideal test to our classifier will be to apply it over well known dataset in which tags of cluster and field members were already present. However, if we may have access to these tags, a classifier may not be needed. The Pleiades cluster being one of the most studied cluster in history, it is the NYC with most of these tags (see Section \ref{sect:memberscomparison}). This is one the reasons for which we decided to benchmark our methodology on it. In spite of the large number of candidate members for the Pleiades clusters, the synthetic data and its true tags are still needed. The reasons are the following. First, the list of candidate members provided by the literature is not infallible. We can never be sure that this list is complete and unpolluted. Here it is important to note that the astrophysical domain of the phenomenon marks a very important distinction with common supervised classification methods. A perfect and real training set is not available. It must be created from simulations. Second, even if the most probable candidate members from the literature were used as a training set \cite[as done for example by][]{Sarro2014} the very faint end of the magnitude distribution (represented by brown-dwarfs) is still a \emph{terra ignota} where candidate members are scarce or not even exist. 
 
 Thus, to overcome the problem of the true tags, we decided to create synthetic data sets. These synthetic true tags, and therefore the results obtained from them, rely on the assumption that our cluster and field models resemble the real data. I am aware that these models are far from perfect, but so far this assumption provides the best option. Although this assumption enable us to quantify the internal consistence (precision and accuracy) of our classifier, it does not give any indication about possible biases in the model. To explore this possibility, in the next Section, I compare our real data classification results with those of the literature.
 
@@ -166,7 +166,7 @@ Using the optimal probability threshold of 0.84 to classify the cluster members,
 
 The candidate members of \citet{Bouy2015} that the BHM rejects, which I call the rejected ones, are shown in lower right box of Fig. \ref{fig:BHMBouy}. They amount to 12\% and 12.5\% of total number of candidate members recovered by \citet{Bouy2015} and the present work, respectively. The 12\% figure is 4.7\% higher than the contamination rate (CR) reported by \citet{Sarro2014} ($7.3\pm1.4$\%). It indicates that some true cluster members must be within the rejected objects. Also, the 12.5\% figure is 2.5\% higher than the 10\% loss rate of the BHM (TPR=90\%, see Section \ref{sect:classifier}), which indicates that some contaminants must be within the rejected objects.
 
-Now, I analyse these objects with further detail. As it is shown in Figs. \ref{fig:rejecteds} and \ref{fig:rejectedsCOLORS}, the rejected objects have proper motions uncertainties with median $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{3.15,3.19\} \,\mathrm{mas\cdot yr^{-1}}$. This value is more than four times larger than that of the common candidate members (those objects classified as members by both works, see top right corner of Fig. \ref{fig:BHMBouy}). Among these objects, those with a relatively high membership probability occur mostly at the middle of the cluster photometric sequence (green squares of Fig. \ref{fig:rejectedsCOLORS}). On the other hand, those with lower membership probabilities occur at the bright and faint ends (blue and red triangles of Fig. \ref{fig:rejectedsCOLORS}, respectively). Furthermore, the proper motions uncertainties of the rejected objects at the bright, middle and faint ends of the cluster photometric sequence, have medians of $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{4.0,4.2\}  \,\mathrm{mas\cdot yr^{-1}}$, $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{2.4,2.4\}\,\mathrm{mas\cdot yr^{-1}}$ and $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{3.4,3.4\}\,\mathrm{mas\cdot yr^{-1}}$, respectively. These figures are approximately 6, 4 and 5 times larger, respectively, than those of the candidates in common. These large uncertainties produce a proportional spread of the cluster likelihood. This could reduce the membership probability of these objects.
+Now, I analyse these objects with further detail. As it is shown in Figs. \ref{fig:rejecteds} and \ref{fig:rejectedsCOLORS}, the rejected objects have proper motions uncertainties with median $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{3.19,3.20\} \,\mathrm{mas\cdot yr^{-1}}$. This value is more than four times larger than that of the common candidate members (those objects classified as members by both works, see top right corner of Fig. \ref{fig:BHMBouy}), which have median $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{0.68,0.68\} \,\mathrm{mas\cdot yr^{-1}}$. Among the rejected ones, those with a relatively high membership probability occur mostly at the middle of the cluster photometric sequence (green squares of Fig. \ref{fig:rejectedsCOLORS}). On the other hand, those with lower membership probabilities occur at the bright and faint ends (blue and red triangles of Fig. \ref{fig:rejectedsCOLORS}, respectively). Furthermore, the proper motions uncertainties of the rejected objects at the bright, middle and faint ends of the cluster photometric sequence, have medians of $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{4.3,4.2\}  \,\mathrm{mas\cdot yr^{-1}}$, $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{2.4,2.4\}\,\mathrm{mas\cdot yr^{-1}}$ and $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{3.4,3.4\}\,\mathrm{mas\cdot yr^{-1}}$, respectively. These figures are approximately 6, 4 and 5 times larger, respectively, than those of the candidates in common. These large uncertainties produce a proportional spread of the cluster likelihood. This could reduce the membership probability of these objects.
 
 Furthermore, the bright and faint regions of the cluster photometric sequence coincide with those where objects with missing entries are more frequent (see Fig. \ref{fig:NAsKs}). I stress the fact that the model of \citet{Bouy2015} was constructed using only objects with fully observed vectors of measurements, which represent less than 1\% of the number of objects used by the BHM. Using only fully observed objects, underestimates the field density in the regions where the missing values are more frequent. Underestimating the field likelihood increases the cluster to field likelihood ratio. Therefore it increases also the cluster membership probabilities. This may explain the relatively high membership probabilities reported by \citet{Bouy2015} compared to those of the BHM. In particular, those in the faint region of the photometric cluster sequence. 
 
@@ -188,9 +188,9 @@ Therefore, I consider that both previous phenomena, the large proper motion unce
 \end{center}
 \end{figure}
 
-On the other hand, the new candidates members found by the BHM, shown in the upper left box of Fig. \ref{fig:BHMBouy}, amount to 10\% of the \citet{Bouy2015} candidate members. This figure is higher than the $\sim 3.5\%$ of missing rate (1-TPR) reported by \citet{Sarro2014}. Also, these new candidates amount to 9.6\% of the BHM recovered candidate members. This value is larger than the 4.3\% CR reported in Section \ref{sect:classifier}. These two larger figures may indicate that some truly new discoveries may be within these list of new candidate members. In Figs. \ref{fig:newones} I show the proper motions and $K_s$ vs $i-K_s$ CMD of these new candidates members.
+On the other hand, the new candidates members found by the BHM, shown in the upper left box of Fig. \ref{fig:BHMBouy}, amount to 10\% of the \citet{Bouy2015} candidate members. This figure is higher than the $\sim 3.5\%$ of missing rate (1-TPR) reported by \citet{Sarro2014}. Also, these new candidates amount to 10\% of the BHM recovered candidate members. This value is larger than the 4.3\% CR reported in Section \ref{sect:classifier}. These two larger figures may indicate that some truly new discoveries may be within these list of new candidate members. In Figs. \ref{fig:newones} I show the proper motions and $K_s$ vs $i-K_s$ CMD of these new candidates members.
 
-The new candidate members have proper motions uncertainties whose median, $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{1.33,1.33\} \,\mathrm{mas\cdot yr^{-1}}$, is two times larger than those of the candidate members in common with \citet{Bouy2015}, which have median $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{0.65,0.65\} \,\mathrm{mas\cdot yr^{-1}}$. Also, as shown by Fig. \ref{fig:newones}, the majority of the new candidate members, 148, have probabilities lower than 0.95, are located in a halo around the locus of the cluster proper motions, and on top of the cluster photometric sequence in the $K_s$ vs $i-K_s$ CMD. On the contrary, the new candidate members with probabilities higher than 0.95, which are 39, lie in the centre of the cluster proper motions and fall above the cluster sequence in the $K_s$ vs $i-K_s$ CMD. Thus, I hypothesise that: i) Objects whose photometry is compatible with the cluster sequence but are in the proper motions halo, have higher membership probabilities in our methodology due to the increased flexibility of the cluster proper motions model: it now has four gaussians instead of the two of \citet{Bouy2015}. And ii) objects near the centre of the cluster proper motions but located above the cluster photometric sequence sequence, are multiple systems \cite[probably triple systems which can amount to 4\% of the population][]{Duquennoy1991} with an increased membership probability due to our more flexible photometric model of the cluster and equal-mass binaries sequences.
+The new candidate members have proper motions uncertainties whose median, $\tilde{\mu}_{\alpha},\tilde{\mu}_{\delta}=\{1.41,1.41\} \,\mathrm{mas\cdot yr^{-1}}$, is two times larger than those of the candidate members in common with \citet{Bouy2015}. Also, as shown by Fig. \ref{fig:newones}, the majority of the new candidate members, 166, have probabilities lower than 0.95, are located in a halo around the locus of the cluster proper motions, and on top of the cluster photometric sequence in the $K_s$ vs $i-K_s$ CMD. On the contrary, the new candidate members with probabilities higher than 0.95, which are 39, lie in the centre of the cluster proper motions and fall above the cluster sequence in the $K_s$ vs $i-K_s$ CMD. Thus, I hypothesise that: i) Objects whose photometry is compatible with the cluster sequence but are in the proper motions halo, have higher membership probabilities in our methodology due to the increased flexibility of the cluster proper motions model: it now has four gaussians instead of the two of \citet{Bouy2015}. And ii) objects near the centre of the cluster proper motions but located above the cluster photometric sequence sequence, are multiple systems \cite[probably triple systems which can amount to 4\% of the population][]{Duquennoy1991} with an increased membership probability due to our more flexible photometric model of the cluster and equal-mass binaries sequences.
 
  \begin{figure}[ht]
 \begin{center}
@@ -262,53 +262,6 @@ Also, for the sake of completeness, in Fig. \ref{fig:correlations} I depict the 
 As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the statistics reported in Table \ref{tab:parameters}. These values indicate, for example, that the number of  GMM modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian are both to near zero values. Probably, a better model would be that in which the parameters of these extra gaussian will not be part of the model. Ideally, I should choose between these two models based on the evidence they show (see Section \ref{sect:modelselection}). To my knowledge, the only reliable approach to compute the evidence of a model inferred using MCMC, is by means of Nested Sampling (see Section \ref{sect:NestedSampling}). However, running the BHM in the \emph{MultiNest} package lies beyond our current computational resources.
 
 Another example of inspection of the posterior is the following. In a past run of the BHM on the RDR2, I realised that the prior distribution for the parameter modelling field fraction was too narrow. Although the maximum of the posterior distribution was allowed by this prior (by definition), the prior density at this MAP was negligible. Therefore, I updated the prior distribution to a distribution with a larger variance. Thus, I weaken the prior information.
-
-
-\section{Proper motions distribution}
-The bivariate proper motions distributions of both single and EMB is directly recovered by the BHM by means of the posterior distributions of the parameters in the GMM modelling these populations.
-These bivariate distributions are depicted in Fig, \ref{fig:PM}.
-
-The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos(\delta)$ and $\mu_{\delta}$ components, are shown in Figs. \ref{fig:PMCs} and \ref{fig:PMBs}. Also, I show in this Figs. the densities in the same proper motions projections of the candidate members of \citet{Bouy2015}, and those found by BHM, which have membership probabilities grater than 0.84. Interestingly, the densities rendered by both samples of members are almost identical. Nevertheless, the density resulting from the sample of the posterior distributions of the parameters in the GMMs, differ from the kernel density estimations of the corresponding populations. This difference results from the distinct populations of the two distributions. The BHM finds the posterior distribution of its parameters using the likelihood of all the objects in the data set. The contribution that individual objects have to the total cluster likelihood can be thought to be proportional to their cluster membership probability. Therefore, the observed difference results from those objects whose cluster membership probability is lower than 0.84. The expected number of cluster members in the probability range 0-0.84 amounts to the non negligible value of $\sim 1100$ objects. These objects contaminate the posterior distribution of the parameters in the BHM with an expected value of 5.3\% (see Section \ref{sect:classifier}). Nevertheless, within them also lies a 10\% of true cluster members (as estimated in Section \ref{sect:classifier}). Discarding these true cluster members from the statistical analysis will render it biased. Instead, we decided to include these 10\% possible true cluster members at the small price of a 5.3\% of contamination.
-
-\begin{figure}[ht!]
-\begin{center}
-\includegraphics[page=2,width=\textwidth]{background/Figures/BHM/MembersModel.pdf}
-\caption{Proper motion distributions recovered by the BHM. The dashed and dot-dashed ellipses represent the mode of 100 samples (orange lines) from the posterior covariance matrices in the cluster and EMB GMMs, respectively. Reproduced from Figure 8 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Journal}, Vol. \usebibentry{Olivares2017}{Volume}.}
-\label{fig:PM}
-\end{center}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \begin{subfigure}[t]{0.45\textwidth}
-    \centering
-       \includegraphics[page=2,width=\textwidth]{background/Figures/BHM/Cs_members.pdf}
-        \caption{}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.45\textwidth}
-    \centering
-     \includegraphics[page=3,width=\textwidth]{background/Figures/BHM/Cs_members.pdf}
-        \caption{}
-    \end{subfigure}
-\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the GMM modelling the single stars (orange spaghetti lines), the kernel density estimation of the BHM candidate members classified as single stars (those whose cluster membership probability is higher than 0.84 and EMB membership probability is lower than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies below the EMB sequence (blue line).}
-\label{fig:PMCs}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \begin{subfigure}[t]{0.45\textwidth}
-    \centering
-       \includegraphics[page=2,width=\textwidth]{background/Figures/BHM/Bs_members.pdf}
-        \caption{}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.45\textwidth}
-    \centering
-     \includegraphics[page=3,width=\textwidth]{background/Figures/BHM/Bs_members.pdf}
-        \caption{}
-    \end{subfigure}
-\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the GMM modelling the EMB stars (orange spaghetti lines), the kernel density estimation of the BHM candidate members classified as EMB stars (those whose cluster membership probability is higher than 0.84 and EMB membership probability is higher than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies near the EMB sequence (blue line).}
-\label{fig:PMBs}
-\end{figure}
 
 \section{Projected spatial distribution}
 \label{sect:PSDresults}
@@ -607,6 +560,53 @@ The results of this Section establish a solid probabilistic background for: i) t
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proper motions distribution}
+\label{sect:PMresults}
+The bivariate proper motions distributions of both single and EMB is directly recovered by the BHM by means of the posterior distributions of the parameters in the GMM modelling these populations.
+These bivariate distributions are depicted in Fig, \ref{fig:PM}.
+
+The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos(\delta)$ and $\mu_{\delta}$ components, are shown in Figs. \ref{fig:PMCs} and \ref{fig:PMBs}. Also, I show in this Figs. the densities in the same proper motions projections of the candidate members of \citet{Bouy2015}, and those found by BHM, which have membership probabilities grater than 0.84. Interestingly, the densities rendered by both samples of members are almost identical. Nevertheless, the density resulting from the sample of the posterior distributions of the parameters in the GMMs, differ from the kernel density estimations of the corresponding populations. This difference results from the distinct populations of the two distributions. The BHM finds the posterior distribution of its parameters using the likelihood of all the objects in the data set. The contribution that individual objects have to the total cluster likelihood can be thought to be proportional to their cluster membership probability. Therefore, the observed difference results from those objects whose cluster membership probability is lower than 0.84. The expected number of cluster members in the probability range 0-0.84 amounts to the non negligible value of $\sim 1100$ objects. These objects contaminate the posterior distribution of the parameters in the BHM with an expected value of 5.3\% (see Section \ref{sect:classifier}). Nevertheless, within them also lies a 10\% of true cluster members (as estimated in Section \ref{sect:classifier}). Discarding these true cluster members from the statistical analysis will render it biased. Instead, we decided to include these 10\% possible true cluster members at the small price of a 5.3\% of contamination.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[page=2,width=\textwidth]{background/Figures/BHM/MembersModel.pdf}
+\caption{Proper motion distributions recovered by the BHM. The dashed and dot-dashed ellipses represent the mode of 100 samples (orange lines) from the posterior covariance matrices in the cluster and EMB GMMs, respectively. Reproduced from Figure 8 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Journal}, Vol. \usebibentry{Olivares2017}{Volume}.}
+\label{fig:PM}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+       \includegraphics[page=2,width=\textwidth]{background/Figures/BHM/Cs_members.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+     \includegraphics[page=3,width=\textwidth]{background/Figures/BHM/Cs_members.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the GMM modelling the single stars (orange spaghetti lines), the kernel density estimation of the BHM candidate members classified as single stars (those whose cluster membership probability is higher than 0.84 and EMB membership probability is lower than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies below the EMB sequence (blue line).}
+\label{fig:PMCs}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+       \includegraphics[page=2,width=\textwidth]{background/Figures/BHM/Bs_members.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+     \includegraphics[page=3,width=\textwidth]{background/Figures/BHM/Bs_members.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the GMM modelling the EMB stars (orange spaghetti lines), the kernel density estimation of the BHM candidate members classified as EMB stars (those whose cluster membership probability is higher than 0.84 and EMB membership probability is higher than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies near the EMB sequence (blue line).}
+\label{fig:PMBs}
+\end{figure}
+
 \section{Luminosity distribution}
 \label{sect:luminosity}
 This Section describes the process to obtain the $J,H$, and $K_s$ absolute magnitude distributions from the posterior distributions of the parameters in the BHM. Later, I compare them to those found by \citet{Bouy2015}, in the $K_s$ band specifically. As in the previous section, I also compare these distributions with those resulting from the kernel density estimates of the candidate members of the BHM.
@@ -680,6 +680,7 @@ On the other hand, the differences between the discrete distributions, the BHM a
 \end{figure}
 
 \section{Mass distribution}
+\label{sect:massdistributionresults}
 
 In this Section I describe the procedure to transform the luminosities distributions into mass distributions. As any other transformation of probability distributions, it demands the together with the transformation, its derivative (see Section \ref{sect:introprobability}).Once the mass distributions is obtained,  then, I compare it to the Initial Mass Functions (IMFs) of \citet{Chabrier2005} and \citet{Thies2007}. Finally, I conclude this section with the analysis of some simple toy models that can be fitted to the derived mass distribution.
 
@@ -715,9 +716,9 @@ The mass distribution is independently obtained for the $J,H,K_s$ luminosity dis
 
 \begin{figure}[htbp]
 \begin{center}
-\resizebox{\hsize}{!}{\includegraphics[page=1]{background/Figures/BHM/MassDistribution.pdf}}
-\caption{Normalised logarithmic PDSMD in $J,H,K_s$ band. Also shown the completeness limits computed in previous section and transformed with the mass-luminosity realtion.}
-\label{fig:MassDistribution}.
+\resizebox{\hsize}{!}{\includegraphics[width=\textwidth]{background/Figures/BHM/MassDistribution.pdf}}
+\caption{Normalised logarithmic PDSMD in $J,H,K_s$ band. Also shown the completeness limits computed in previous section and transformed with the mass-luminosity relation.}
+\label{fig:MassDistribution}
 \end{center}
 \end{figure}
 
@@ -727,9 +728,7 @@ This Figure shows that the PDSMDs derived from the BHM compare well, at least in
 
 The PDSMF of \citet{Bouy2015} is computed using only their candidate members within the central three degree region of the Pleiades DANCe DR2. First, their list of candidate members is not the same as those found by the BHM. Second, the PDSMD derived from the BHM uses all objects in the data set, not just the high membership probability candidates. Third, as mentioned in Section \ref{sect:luminosity}, the cut to the central three degree region may have biased the derived PDSMF of \citet{Bouy2015}. Therefore, the lack of objects that it shows,  in the mass range $0.3 - 0.7 \mathrm{M_{\odot}}$ ($-0.5 < \log \mathrm{M/M_{\odot}} < -0.2$) particularly, may has it origin in the objects that \citet{Bouy2015} did not included in his analysis: those lying outside the inner three degree region. 
 
-To obtain the power-law model that is shown on Fig. \ref{fig:ModelMassFunction} (as the black solid line), the procedure is the following. 
-
-First, I select three competing models: a log-normal function (like that of \citet{Chabrier2003b,Chabrier2005}), and two power-law functions of the form $m^{-\alpha}$ with two and three power-law segments. Second, from a 100 sample distribution of the PDSMD in the $K_s$ band (the ones shown as spaghetti lines in Fig. \ref{fig:ModelMassFunction}) I compute the mean distribution. This is, at each of the 200 points grid spanning the completeness interval, I obtain the mean of the probabilities given by the 100 distributions. With this mean distribution I draw a $10^4$ synthetic sample of masses. Third, using \emph{PyMultiNest} \citep{Buchner2014}, I infer the parameters of the three models given the masses of the synthetic sample. Table \ref{tab:fitPDSMD} gives the MAP of the parameters in each model together with its evidence (see Sect. \ref{sect:modelselection}). Judging by these evidences, the best model is the two segment power-law. 
+For the sake of completeness, I fit a simple model to the PDSMD of the BHM. To do it, I proceed as follows. First, I select three competing models: a log-normal function (like that of \citet{Chabrier2003b,Chabrier2005}), and two power-law functions of the form $m^{-\alpha}$ with two and three power-law segments. Second, from a 100 sample distribution of the PDSMD in the $K_s$ band (the ones shown as spaghetti lines in Fig. \ref{fig:ModelMassFunction}) I compute the mean distribution. This is, at each of the 200 points grid spanning the completeness interval, I obtain the mean of the probabilities given by the 100 distributions. With this mean distribution I draw a $10^4$ synthetic sample of masses. Third, using \emph{PyMultiNest} \citep{Buchner2014}, I infer the parameters of the three models given the masses of the synthetic sample. Table \ref{tab:fitPDSMD} gives the MAP of the parameters in each model together with the natural logarithm of the evidences (see Sect. \ref{sect:modelselection}). Judging by \citet{Jeffreys61} scale of evidence (see Table \ref{tab:JeffreysScale}), there is decisive evidence supporting the two and three segment power-law models. However, the Bayes factor of the latter indicates a difference in evidence which barely worth mentioning. Thus, in the following I compare with the two-segment power-law model that is shown on Fig. \ref{fig:ModelMassFunction} (as the black solid line).
 
 The two segment power-law model agrees with the three segment model of \citet{Bouy2015}. However, there are still differences, which are clear at the low and high mass ends particularly. Nevertheless, it is in clear discrepancy with the IMFs of \citet{Chabrier2005},  \cite[$m_c=0.25_{-0.016}^{+0.021}$ and $\sigma=0.55_{-0.01}^{+0.05}$, the uncertainties are those reported by][for single objects]{Chabrier2003b} and of \citet{Thies2007}. 
 
@@ -756,7 +755,7 @@ Three Segments &$\alpha_0=-0.05\pm0.6$ \ \ $m \in [0.04,0.08\pm0.03]$ & \\
 \label{tab:fitPDSMD}
 \end{table*}%
 
-However, ending this section, I use the PDSMD to give a lower limit to the mass of the cluster. Since the RDR2 data set  still lacks the very low mass range and most of the high mass range, the mass derived from this PDSMD is only a lower limit to the mass of the cluster. From the PDSMD, the cluster mean mass in the entire mass range is $0.26 \pm 0.006 \mathrm{M_{\odot}}$. Thus, the product of this mean mass with the expected number \footnote{As explained before, the expected number of cluster members is the integral, over the whole range of membership probabilities, of number of objects at each membership probability value.} of cluster members ($3116 \pm 110$), gives the expected mass of the cluster in this mass range. This  value is $807^{+38}_{-29} \mathrm{M_{\odot}}$. 
+However, ending this section, I use the PDSMD to give a lower limit to the mass of the cluster. Since the RDR2 data set  still lacks the very low mass range and most of the high mass range, the mass derived from this PDSMD is only a lower limit to the mass of the cluster. From the PDSMD, the cluster mean mass in the entire mass range is $0.257 \pm 0.006 \mathrm{M_{\odot}}$. Thus, the product of this mean mass with the expected number \footnote{As explained before, the expected number of cluster members is the integral, over the whole range of membership probabilities, of number of objects at each membership probability value.} of cluster members ($3301 \pm 140$), gives the expected mass of the cluster in this mass range. This  value is $845^{+38}_{-33} \mathrm{M_{\odot}}$. 
 
 Finally, I notice that, as mentioned in Sect. \ref{sect:mass-luminosity}, the uncertainties in the mass-luminosity relations are yet to be established. Thus the quoted uncertainties of our mass results are underestimated.
 
@@ -769,9 +768,10 @@ Finally, I notice that, as mentioned in Sect. \ref{sect:mass-luminosity}, the un
 \end{figure}
 
 \section{The mass distribution on time}
+\label{sect:massontime}
 As I mention in the previous section, the observed differences between the present day mass distribution and the initial mass functions may have their origin on the temporal evolution of the cluster population. To test this hypothesis, I compare the Pleiades PDSMD ($\sim125$ Myr) with those of the younger Trapezium ($\sim1$ Myr) and Hyades ($\sim 600$ Myr) PDMD. These can be thought as snapshots of the Pleiades past and future mass distributions.
 
-Although this comparison formally lies beyond the objectives of the present work, nevertheless, it gives an idea of the importance that the PDSMD of other NYOC have in the understanding of the formation and evolution of the mass distribution.
+Although this comparison formally lies beyond the objectives of the present work, nevertheless, it gives an idea of the importance that the PDSMD of other NYC have in the understanding of the formation and evolution of the mass distribution.
 
 Figure \ref{fig:PDSMDcomparison} shows the PDSMD from the Pleiades, together with those of the Trapezium and Hyades\footnote{Kindly provided by Herv\'e Bouy in a private communication}. These PDSMDs correspond to those of  Fig. 11 of \citet{Bouy2015}. As mentioned by \citet{Bouy2015}, the abundance of low-mass stars and brown dwarfs in the range $0.03 - 0.1\,\mathrm{M_{\odot}}(-1.4 < \log \mathrm{M/M_{\odot}} <-1$) seems to diminish with time. The relative increase of objects in the range $-0.4 < \mathrm{\log M/M_{\odot}} < -0.2$ is an effect of the normalisation\footnote{The interesting alternative of open clusters gaining intermediate mass stars is yet to be explored.}. This effect is consistent with the classical scenario in which low-mass stars and brown dwarfs are ejected as the cluster relaxes.
 
@@ -787,7 +787,7 @@ However, the KS test can also be applied in a graphical way. Given the $\alpha$ 
 
 \begin{figure}[htp]
 \begin{center}
-\resizebox{\hsize}{!}{\includegraphics{background/Figures/BHM/M45vsM42vsM44.pdf}}
+\resizebox{\hsize}{!}{\includegraphics[width=\textwidth]{background/Figures/BHM/M45vsM42vsM44.pdf}}
 \caption{The PDSMDs of the Pleiades (derived here for $J,H,K_s$ bands), Trapezium, and Hyades (both from \citet{Bouy2015}) clusters. They are normalised in the interval of completeness.}
 \label{fig:PDSMDcomparison}.
 \end{center}
@@ -795,9 +795,9 @@ However, the KS test can also be applied in a graphical way. Given the $\alpha$ 
 
 \begin{figure}[htp]
 \begin{center}
-\resizebox{\hsize}{!}{\includegraphics{background/Figures/BHM/CDF_comparison.pdf}}
+\resizebox{\hsize}{!}{\includegraphics[width=\textwidth]{background/Figures/BHM/CDF_comparison.pdf}}
 \caption{Cumulative distribution functions (CDF) of the PDSMDs from left panel and that of \citet{Chabrier2005} and \citet{Thies2007} system initial mass function (normalised also in the interval of completeness). The shown Pleiades CDF correspond to the $K_s$ band. The grey area depicts the area in which the CDFs (both Trapezium and Hyades) should lie for the null hypothesis not to be rejected (at $\alpha=0.01$).}
-\label{fig:PDSMDtest}.
+\label{fig:PDSMDtest}
 \end{center}
 \end{figure}
 

@@ -1,7 +1,68 @@
 %!TEX root = ../thesis.tex
-\chapter{Conclusions and Future Work}
+\chapter{Conclusions and future work}
 \label{chap:conclusions}
 
-Discuss how to deal with future clusters in which we will not have Bouy2015 for the priors.
+In this work, I have created, tested, and validated a new Intelligent System (IS) that recovers the probability distribution functions (PDFs) of star clusters kinematic and photometric observables. In particular, the proper motions and apparent magnitudes. When the distance to the cluster is known, the PDFs of these observables can be transformed into transverse velocity and luminosity distributions. In addition, using the cluster age and a mass-luminosity relation the latter can be transformed into a mass distribution. A compilation of kinematic and mass distributions of Nearby Young Clusters (NYC) in diverse environments and spanning the ages of the early phases of cluster evolution will allow the astrophysical community to understand the effects that the environments and the internal dynamics have in the origin and evolution of stellar clusters. Since the majority of the stars form in clusters, understanding how these form and evolve will shed light into the knowledge of the past and future of our galaxy. 
 
-IS BIC a good approximation, what can be done in the future?
+The IS presented in this work solves most of the issues found in current methodologies of cluster members determination and analysis. Furthermore, it steps ahead of the current paradigm of these methodologies, which is the classification of objects in cluster and field populations, and moves into a new one: \textit{learning the kinematic and photometric distributions of the cluster populations}, both single and binary stars.
+
+Thanks to its Bayesian framework, and to the Bayesian Hierarchical Model (BHM) methodology and the use of weakly informative priors specifically, this new IS solves the issues present in current classifiers from the literature and minimises their biases. In particular, it fulfils its objective by properly propagating the observable multivariate and heteroscedastic uncertainties, using the valuable information provided by objects with missing values in their observables, and eliminating the sampling bias associated with the use of only high membership probability objects.
+
+To learn the posterior distributions of the parameters in the cluster model, the BHM, as we call this new IS, uses a combination of learning techniques, the Particle Swarm Optimiser of \citet{Kennedy1995,Clerc2002} and the \emph{emcee} Markov Chain Monte Carlo method of \citet{Foreman2013}. Both are implemented in High-Performance Computing environments to use large data sets ($10^5$ to $10^6$ objects) and multidimensional observable spaces. While the multidimensionality of the observable space (proper motions and photometry) add valuable information to constrain the cluster model and render it accurate, the large size of the data set increases its precision. In the classification task, which the BHM accomplishes simultaneously to its main objective, it reaches a precision of  $95.6\pm0.2$\%, and an accuracy of $96.5\pm0.1$\%, which ranks it as an excellent classifier with an area under the receiver operating characteristic curve of $AUC=0.99$.
+
+The BHM has been thoroughly tested and validated on the Pleiades DANCe Data Release 2 \cite{Bouy2015}. Since the Pleiades is one of the most studied clusters in the history of astronomy, it offers the perfect case study for the benchmarking of an IS aiming at the analysis of NYC. In addition, the high precision and carefully designed observations of the DANCe project for the Pleiades cluster provide the necessary detailed information and sufficient statistics to benchmark the BHM and constraint its posterior distribution, in the high dimensionality (85) of its parametric space specifically. 
+
+The results of applying the BHM to the Pleiades DANCe DR2 data set yield the following astrophysical results.
+
+\begin{itemize}
+\item The by-product cluster membership probabilities, which are now delivered as full PDFs, show that (see Section \ref{sect:memberscomparison}):
+\begin{itemize}
+\item  There is an outstanding agreement of 99\% with the results of \citet{Bouy2015}.
+\item There are 205 new candidate members, which represent 10\% of the cluster population. 
+\item From the candidate members of \citet{Rebull2016}, 91\% are also classified as members. This figure is better than the estimated value of the true positive rate, $ 90.0 \pm0.05$.
+\end{itemize}
+\item The model selection analysis of the PSD performed on the candidate members of the BHM shows that (see Section \ref{sect:PSDresults}):
+\begin{itemize}
+\item The King's profile \citep{King1962} is not just a good model due to its physical interpretability, but also has the largest Bayesian evidence when compared to classical profiles from the literature.
+\item There is enough Bayesian evidence to support luminosity segregation of the Pleiades cluster.
+\item The Pleiades data set supports, with large Bayesian evidence, PSD models with biaxial symmetry indicating the non negligible ellipticity of the cluster ($\epsilon=0.13$).
+\end{itemize}
+\item The kinematic and photometric distribution of the cluster populations show that (see Section \ref{sect:PMresults} and \ref{sect:luminosity}):
+\begin{itemize}
+\item The equal-mass binary (EMB) fraction is $9.9\pm0.1$\%.
+\item The centroids of the cluster proper motions are $\{16.30,-39.68\}\,\rm{mas\cdot yr^{-1}}$ and $\{15.71,-40.31\}\,\rm{mas\cdot yr^{-1}}$ for single and EMB, respectively. 
+\item The derived luminosity distributions in the infrared bands ($J,H, \rm{and} \,K_s$) in the completeness interval are in good agreement with the previous ones of \citet{Bouy2015}.
+\end{itemize}
+\item The derived present-day system mass distribution \cite[using an age of 120 Myr and the BT-Settl isochrone model of][]{Allard2012} shows (see Sections \ref{sect:massdistributionresults} and \ref{sect:massontime}):
+\begin{itemize}
+\item A general agreement with the IMFs of \citet{Chabrier2005} and \citet{Thies2007}, in the intermediate mass range specifically.
+\item The IMFs of \citet{Chabrier2005} and \citet{Thies2007} predict to many low-mass stars and BD.
+\item A trend of depletion in low-mass stars and BD with cluster age, when comparing it with the Trapezium and Hyades PDSMD from the literature.
+\end{itemize}
+\end{itemize}
+
+\section{Current issues and future improvements}
+
+Despite the fact that the BHM presented here solves the issues present in current methodologies from the literature, the following is a non-exhaustive list of important aspects to tackle in the near future.
+
+\begin{itemize}
+\item The BHM must be able to deal with:
+\begin{itemize}
+\item Unresolved binaries of different mass ratios. Although the CSN has already been included in the BHM to deal with this issue, its application still demands fine tuning of the HPC elements (see Section \ref{subsect:cluster}).
+\item Data from other surveys (e.g. \emph{Gaia} or \emph{Pan-STARRS}). I am currently working on the preprocessing of a new version of the Pleiades DANCe data set that includes \emph{Pan-STARRS} data.
+\item Extinction. The treatment of interstellar extinction is of paramount importance and is mandatory for the application of the BHM in younger and embedded clusters.
+\item Unresolved multiple systems. Although it is expected that these systems represent a small fraction of the cluster population \cite[only 4\% for the triple systems][]{Duquennoy1991}, they nevertheless have an important contribution to the mass distribution. 
+\item Clusters with superimposed populations. The treatment of superimposed populations is also important to minimise contamination.
+\item The white dwarfs population. Although their numbers are negligible on NYC, their mass contribution nevertheless must be considered to properly constrain the PDSMD and the IMFs. 
+\end{itemize}
+\item The time needed to learn the BHM. Currently, the BHM takes four weeks to run in a 80 CPU computing cluster. Although the DANCe team has lately translated the CPU code into GPU code, the latter still needs improvement, in memory allocation and parallel distribution particularly.
+\item The choosing of prior distributions in other non-well studied NYC. In other NYC where the prior information is missing, other kind of prior distributions must be used (e.g. objective or non-informative priors). Nevertheless, the BHM provide still provides the less subjective path to parametric inference.
+\item Choosing the appropriate number of GMM components. As with the previous point, where the prior information is not available, we can nevertheless use non-informative priors and large number of GMM components, so that those non-required components had small weight and covariance matrices. A model selection analysis must be implemented.
+\item The use of other observables. As shown with the projected spatial distribution, other observables like radial velocities, parallaxes, and lithium abundances, give useful information to further constrain the cluster model. These information could be included into independent modules of the BHM to further refine the list of candidate members.
+\item Uncertainties to the mass-luminosity relation. Although non related to the BHM, the mass-luminosity relation is used univocally to transform a luminosity into mass. However, this knowledge is uncertain and its uncertainty must be incorporated into the derived mass distributions.
+\end{itemize}
+
+Once these issues will be solved, the improved BHM will render the inventory of cluster kinematic and luminosity distributions that will allow the DANCe team to fulfil the objective of understanding the effects that the environment (i.e. initial conditions) and the internal dynamics (e.g. evaporation, ejection, mass segregation) have on the clusters formation and evolution.
+
+
+

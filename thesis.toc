@@ -64,15 +64,16 @@
 \contentsline {subsection}{\numberline {4.2.3}Candidate members from \citet {Rebull2016}}{115}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}The statistical distributions of the Pleiades cluster.}{117}{section.4.3}
 \contentsline {section}{\numberline {4.4}Updating the prior knowledge}{120}{section.4.4}
-\contentsline {section}{\numberline {4.5}Proper motions distribution}{121}{section.4.5}
-\contentsline {section}{\numberline {4.6}Projected spatial distribution}{122}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Selection of models with radial symmetry}{124}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Selection of models with biaxial symmetry}{128}{subsection.4.6.2}
-\contentsline {subsection}{\numberline {4.6.3}Selection of models with luminosity segregation}{130}{subsection.4.6.3}
-\contentsline {section}{\numberline {4.7}Luminosity distribution}{134}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{135}{subsection.4.7.1}
+\contentsline {section}{\numberline {4.5}Projected spatial distribution}{121}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Selection of models with radial symmetry}{121}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Selection of models with biaxial symmetry}{125}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Selection of models with luminosity segregation}{128}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Proper motions distribution}{132}{section.4.6}
+\contentsline {section}{\numberline {4.7}Luminosity distribution}{133}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{133}{subsection.4.7.1}
 \contentsline {section}{\numberline {4.8}Mass distribution}{139}{section.4.8}
 \contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{139}{subsection.4.8.1}
 \contentsline {subsection}{\numberline {4.8.2}Present day system mass distribution}{141}{subsection.4.8.2}
-\contentsline {section}{\numberline {4.9}The mass distribution on time}{146}{section.4.9}
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{150}{chapter.5}
+\contentsline {section}{\numberline {4.9}The mass distribution on time}{145}{section.4.9}
+\contentsline {chapter}{\numberline {5}Conclusions and future work}{151}{chapter.5}
+\contentsline {section}{\numberline {5.1}Current issues and future improvements}{153}{section.5.1}
