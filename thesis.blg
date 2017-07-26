@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: aa.bst
+Reallocated field_info (elt_size=4) to 10014 items from 5000.
+Database file #1: biblio.bib
+Warning--empty publisher in 1910pgcs.book.....B
+Warning--can't use both author and editor fields in 2013pss5.book..115K
+Warning--empty publisher in 2013pss5.book..115K
+Warning--empty publisher in Smart1977
+You've used 218 entries,
+            2947 wiz_defined-function locations,
+            2039 strings with 46158 characters,
+and the built_in function-call counts, 104427 in all, are:
+= -- 8717
+> -- 7832
+< -- 130
++ -- 2628
+- -- 2386
+* -- 8573
+:= -- 19231
+add.period$ -- 218
+call.type$ -- 218
+change.case$ -- 1661
+chr.to.int$ -- 221
+cite$ -- 222
+duplicate$ -- 4151
+empty$ -- 6032
+format.name$ -- 2961
+if$ -- 20744
+int.to.chr$ -- 7
+int.to.str$ -- 1
+missing$ -- 194
+newline$ -- 658
+num.names$ -- 889
+pop$ -- 1745
+preamble$ -- 1
+purify$ -- 1654
+quote$ -- 0
+skip$ -- 3643
+stack$ -- 0
+substring$ -- 4534
+swap$ -- 176
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1920
+warning$ -- 4
+while$ -- 881
+width$ -- 0
+write$ -- 2179
+(There were 4 warnings)
