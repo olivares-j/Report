@@ -1,5 +1,5 @@
-\contentsline {section}{Abstract}{i}{Doc-Start}
-\contentsline {section}{French abstract}{iii}{Doc-Start}
+\contentsline {section}{Abstract}{ii}{Doc-Start}
+\contentsline {section}{French abstract}{iv}{Doc-Start}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The initial mass function of stellar clusters}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Numerical simulations of the early stages of star formation}{7}{section.1.2}
