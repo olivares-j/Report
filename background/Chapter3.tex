@@ -321,7 +321,7 @@ From the physical perspective, they occur due to faint or bright sources that pr
 
 From the statistical perspective, important aspects of missing values are, i) the probability distribution of the sources in which they occur, and ii) if they originate due to censoring or truncation. 
 
-In the DANCe DR2, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not \textbf{uniform}. Missing values occur with higher probability at the faintest and brightest ends of the photometric distributions, see Figure \ref{fig:NAsKs}. This is a crucial aspect for the statistical analysis. If missing values were \textbf{uniformly} distributed, then, any statistical analysis derived using only objects with completely observed vectors would be unbiased. This will occur because the objects with completely observed vectors would be a random sample of the data set. \textbf{Since this is not the case in the DANCe DR2, objects with missing values must be incorporated in the data set and properly treated to avoid biases.} 
+In the DANCe DR2, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not \textbf{uniform}. Missing values occur with higher probability at the brightest and faintest ends of the photometric distributions ($\sim 11$ mag and $\sim 18$ mag in $J,H$ and $K_s$ bands, respectively), see Figure \ref{fig:NAsKs}. This is a crucial aspect for the statistical analysis. If missing values were \textbf{uniformly} distributed, then, any statistical analysis derived using only objects with completely observed vectors would be unbiased. This will occur because the objects with completely observed vectors would be a random sample of the data set. \textbf{Since this is not the case in the DANCe DR2, objects with missing values must be incorporated in the data set and properly treated to avoid biases.} 
 
 \begin{figure}[ht!]
     \centering
@@ -345,7 +345,7 @@ In the DANCe DR2, missing values occur only in the photometric measurements (see
         \caption{}
         \label{} 
     \end{subfigure}
-\caption{Probability distributions of objects with missing values. The vast majority of objects with missing values are located at the faint end of the magnitude distributions.}
+\caption{Probability distributions of objects with missing values. The majority of objects with missing values are located at the faint end of the magnitude distributions ($K_s \sim 18$), while a non negligible fraction is at the bright end ($K_s \sim 12$). The small bump at $K_s \sim 16$ may have its origin in the complex pattern of spatial+photometric coverage, see \citet{Bouy2013}.}
 \label{fig:NAsKs}
 \end{figure}
 
@@ -840,7 +840,7 @@ where the parameter $R_b$ follows the same elliptic angle dependence as defined 
 
 \subsection{Models with luminosity segregation}
 \label{sect:SegregatedModels}
-In this Section, we consider an extended version of the King profile to introduce a dependence of the core radius with the $J$ magnitude. We select the $J$ magnitude because it is the reddest of the magnitudes that are available for all candidate members. We assume that stars of the same mass have approximately the same magnitude and that distance differences (due to the 3D spatial extend of the Pleiades) average out. The core radius dependence with the $J$ magnitude is modelled as
+In this Section, we consider an extension to introduce a dependence of the core radius with the $J$ magnitude. We select the $J$ magnitude because it is the reddest of the magnitudes that are available for all candidate members. We assume that stars of the same mass have approximately the same magnitude and that distance differences (due to the 3D spatial extend of the Pleiades) average out. The core radius dependence with the $J$ magnitude is modelled as
 
 \begin{equation}
   r_c(\phi,J) = r_c(\phi)+\kappa\cdot(J-13.5).
@@ -938,7 +938,7 @@ Table \ref{table:hyperparameters} shows a summary all the hyper-parameter values
 
 \textbf{The methodology of the Bayesian Hierarchical Models, the one chosen here, has been specifically designed to avoid as much as possible the subjectivity of the chosen priors \citep{Gelman2006}. Thus, by using the results of \citet{Bouy2015} to set only the hyper-parameter values of the prior distributions we avoid much of the subjectivity of choosing that particular work. On top of that, the use of the weakly informative priors (see Section \ref{sect:generalities}) further decreases the impact of the prior information on the recovered posterior distributions.}
 
-\textbf{Despite the weakly informative priors and the BHM methodology, the work of \citet{Bouy2015} may have influence our results in a similar way as it was influenced by previous works. There is an unavoidable influence from the past into the present. In this work, we aim at keeping this influence at minimum by using the least subjective approaches to the inference process under a Bayesian framework. In an analogy, I aim at setting a Markov chain in the iterative process of discovery.}
+\textbf{Despite the weakly informative priors and the BHM methodology, the work of \citet{Bouy2015} may have influence our results in a similar way as it was influenced by previous works. There is an unavoidable influence from the past into the present. In this work, we aim at keeping this influence at minimum by using the least subjective approaches to the inference process under a Bayesian framework.}
 
 \textbf{Furthermore, as mentioned at the end of Section \ref{sect:generalities}, the prior information must be analysed in terms of the posterior distribution and verify if they make sense \citep{Gelman2006,Gelman2013}. Details of this analysis will be presented in Section \ref{sect:updating_priors}.}
 

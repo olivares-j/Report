@@ -9,7 +9,7 @@ Later, I analyse the main results of this work, those that fulfil the objective:
 \label{sect:classifier}
 As mentioned earlier, the main objective of the methodology of the BHM is the statistical characterisation of the NYC populations. However, as a by product, it also obtains the individual membership probability distributions of the objects comprising the data set. These membership probability distributions, together with a probability threshold, allow a direct classification of the objects into cluster and field members.  The classification resulting from this procedure, as any other measured property, has an uncertainty. By evaluating this uncertainty under the results of synthetic data (in which the true members are known) we are able to measure the accuracy and precision of the classification process as a function of the probability threshold used. This section explains how an objective probability threshold can be found by maximising the accuracy of the classifier. 
 
-To measure the accuracy of our classifier, I test it over synthetic data sets that resemble the real RDR2 (Section \ref{sect:RDR2}). An ideal test to our classifier will be to apply it over well known dataset in which tags of cluster and field members were already present. However, if we may have access to these tags, a classifier may not be needed. The Pleiades cluster being one of the most studied cluster in history, it is the NYC with most of these tags (see Section \ref{sect:memberscomparison}). This is one the reasons for which we decided to benchmark our methodology on it. In spite of the large number of candidate members for the Pleiades clusters, the synthetic data and its true tags are still needed. The reasons are the following. First, the list of candidate members provided by the literature is not infallible. We can never be sure that this list is complete and unpolluted. Here it is important to note that the astrophysical domain of the phenomenon marks a very important distinction with common supervised classification methods. A perfect and real training set is not available. It must be created from simulations. Second, even if the most probable candidate members from the literature were used as a training set \cite[as done for example by][]{Sarro2014} the very faint end of the magnitude distribution (represented by brown-dwarfs) is still a \emph{terra ignota} where candidate members are scarce or not even exist. 
+To measure the accuracy of our classifier, I test it over synthetic data sets that resemble the real RDR2 (Section \ref{sect:RDR2}). An ideal test to our classifier will be to apply it over well known dataset in which tags of cluster and field members were already present. However, if we may have access to these tags, a classifier may not be needed. The Pleiades cluster being one of the most studied cluster in history, it is the NYC with most of these tags (see Section \ref{sect:memberscomparison}). This is one of the reasons for which we decided to benchmark our methodology on it. In spite of the large number of candidate members for the Pleiades clusters, the synthetic data and its true tags are still needed. The reasons are the following. First, the list of candidate members provided by the literature is not infallible. We can never be sure that this list is complete and unpolluted. Here it is important to note that the astrophysical domain of the phenomenon marks a very important distinction with common supervised classification methods. A perfect and real training set is not available. It must be created from simulations. Second, even if the most probable candidate members from the literature were used as a training set \cite[as done for example by][]{Sarro2014} the very faint end of the magnitude distribution (represented by brown-dwarfs) is still a \emph{terra incognita} where candidate members are scarce or not even exist. 
 
 Thus, to overcome the problem of the true tags, we decided to create synthetic data sets. These synthetic true tags, and therefore the results obtained from them, rely on the assumption that our cluster and field models resemble the real data. I am aware that these models are far from perfect, but so far this assumption provides the best option. Although this assumption enable us to quantify the internal consistence (precision and accuracy) of our classifier, it does not give any indication about possible biases in the model. To explore this possibility, in the next Section, I compare our real data classification results with those of the literature.
 
@@ -68,7 +68,7 @@ Figure \ref{fig:ACC} shows the ACC and the PPV of the classifier when when it is
 
 We further investigate the impact that objects with missing value entries in their observations have on our methodology. In specific, I analyse possible biases introduced by these objects. To do this, I compare the membership probabilities, summarised by the mode, recovered after inferring the model on two synthetic data sets of. These two data sets are identical except that in one of them some entries in the vector of observables where masked as missing (using the procedure previously described).
 
-In Fig. \ref{figure:IncVsCom}, I compare the mode of the membership probabilities. The horizontal axis shows the membership probabilities of the data set with fully observed objects (I call this case the complete one). The vertical axis shows the membership probabilities of the same objects but in which some entries were masked as missing (I call this case the Incomplete one). As can be seen in this Fig., the missing values impact our results by spreading the membership probabilities. Ideally, we would like to recover membership probabilities following the line of slope one. This is the case of some fully observed objects (red squares) in the data set containing objects with missing entries. The most striking deviations come from those objects with the $CI$ masked as missing (enclosed in black). The BHM methodology uses the \emph{true} $CI$ to prescribe the \emph{true} photometry. Also, it uses the observed $CI$ to constrain the marginalisation integral of the \emph{true} $CI$. Thus, as expected, a missing $CI$ produces a spread in the membership probability. 
+In Fig. \ref{figure:IncVsCom}, I compare the mode of the membership probabilities. The horizontal axis shows the membership probabilities of the data set with fully observed objects (I call this case the complete one). The vertical axis shows the membership probabilities of the same objects but in which some entries were masked as missing (I call this case the Incomplete one). As can be seen in this figure, the missing values impact our results by spreading the membership probabilities. Ideally, we would like to recover membership probabilities following the line of slope one. This is the case of some fully observed objects (red squares) in the data set containing objects with missing entries. The most striking deviations come from those objects with the $CI$ masked as missing (enclosed in black). The BHM methodology uses the \emph{true} $CI$ to prescribe the \emph{true} photometry. Also, it uses the observed $CI$ to constrain the marginalisation integral of the \emph{true} $CI$. Thus, as expected, a missing $CI$ produces a spread in the membership probability. 
 
 The objects with a missing $CI$ show two different behaviours. In one case, there are objects with membership probabilities from the fully observed data set (horizontal axis) that have an overestimated membership probability in the missing entries data set (vertical axis). In the other case, there are objects that have underestimated probabilities in the missing entries data set. These objects correspond to those seen in the combed area below the line of unit slope. 
 
@@ -107,15 +107,15 @@ The BHM methodology, described in Chapter \ref{chap:BHM}, is applied to the Plei
 
 \subsection{Candidate members from \citet{Stauffer2007}}
 
-\citet{Stauffer2007} published two list of candidate members. The first one contains 1417 objects compiled from the literature (see Table 2 of the mentioned work). These objects were classified as candidate members by several authors. As \citet{Stauffer2007} mention, this list is inhomogeneous, incomplete and certainly includes non members. I refer to this list as ST1. Their second list contains 55 candidate members (see Table 5 of the mentioned work). \citet{Stauffer2007} found these members using infrared photometry and proper motions. I refer to this list as ST2.
+\citet{Stauffer2007} published two list of candidate members. The first one contains 1417 objects compiled from the literature (see Table 2 of the mentioned work). These objects were classified as candidate members by several authors. As \citet{Stauffer2007} mention, this list is inhomogeneous, incomplete and certainly includes non-members. I refer to this list as ST1. Their second list contains 55 candidate members (see Table 5 of the mentioned work). \citet{Stauffer2007} found these members using infrared photometry and proper motions. I refer to this list as ST2.
 
-Cross matching (at CDS\footnote{ Using the service http://cdsxmatch.u-strasbg.fr/xmatch}, within 1 arcsec radius) the previous two lists with the the Pleiades DANCe DR2 catalogue \citep{Bouy2015}, I find that only 1384 and 54 of the ST1 and ST2 lists have a counter part in the Pleiades DANCe DR2 catalogue, respectively. 
+Cross matching (at CDS\footnote{ Using the service http://cdsxmatch.u-strasbg.fr/xmatch}, within 1 arcsec radius) the previous two lists with the Pleiades DANCe DR2 catalogue \citep{Bouy2015}, I find that only 1384 and 54 of the ST1 and ST2 lists have a counter part in the Pleiades DANCe DR2 catalogue, respectively. 
 
 Concerning our list of candidate members, after cross matching it with the two lists of \citet{Stauffer2007}, ST1 and ST2, I recover 1146 and 34 of the candidate members, respectively. Compared to the candidate members of \citet{Bouy2015}, our BHM recovers 28 more candidate members in ST1 and the same in ST2.
 
 As mentioned before, the ST1 list is an exhaustive compilation of Pleiades members. It contains objects that were classified, at some point in history, as Pleiades candidate members, even when their membership probability are as low as 0.1 \citep{Stauffer2007}. For this reason I will not analyse the details of 238 rejected objects of ST1. It suffices to show that these rejected objects lie far from the cluster photometric or proper motions loci, as shown in Fig. \ref{fig:ST1}.
 
-On the other hand, from the 20 objects in ST2 that are rejected by the BHM, 18 of them lie below the cluster photometric sequence and far from the proper motion locus, see Fig. \ref{fig:ST2}. The remaining two (DANCe IDs: J034552.57+235145.9 and J034543.47+233851.5), although have observed photometric vectors compatible with the clusters sequence, their proper motions still are far from the cluster centre (these are the two objects located at the far right in Fig. \ref{fig:ST1}).
+On the other hand, from the 20 objects in ST2 that are rejected by the BHM, 18 of them lie below the cluster photometric sequence and far from the proper motion locus, see Fig. \ref{fig:ST2}. The remaining two (DANCe IDs: J034552.57+235145.9 and J034543.47+233851.5), although have observed photometric vectors compatible with the clusters sequence, their proper motions still are far from the cluster centre (with $\mu_{\alpha}\cos(\delta)\sim 40\,\rm{mas\cdot yr^{-1}}$), see Fig. \ref{fig:ST2}.
 
 \begin{figure}[ht!]
     \centering
@@ -138,7 +138,6 @@ On the other hand, from the 20 objects in ST2 that are rejected by the BHM, 18 o
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
        \includegraphics[width=\textwidth]{background/Figures/ST2_pm.eps}
-        \caption{}
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
@@ -224,7 +223,7 @@ After cross matching (at CDS with a 0.5 arcsec radius) the list of candidate mem
 \label{fig:RT1}
 \end{figure}
 
-On the other hand, after cross matching (at CDS with a 0.5 arcsec radius)  the list of 154 objects that \citet{Rebull2016} classify as non members (their Table 6, here after RT2) with the DANCe DR2, I find that all these objects have a counter part on the DANCe DR2. The 21\% of objects in the RT2 list (33 of them) were classified as candidate members in the BHM. This is a value five times larger than the CR reported in Section \ref{sect:classifier}(CR=4.3\%). However, we can not assume that the RT2 list comprises only non members. First, this objects were at some point classified as members by other authors \cite[Appendix B of][]{Rebull2016}. Second, not all of these objects have periods \cite[only 20\% according to][]{Rebull2016}. From the 33 objects classified as candidate members by the BHM, only nine of them have periods. It means that for the remaining 24 candidate members, these authors used other criteria to discard them as members. In any case, the high rate of BHM candidate members found in this RT2 list may indicate that the criteria used by \citet{Rebull2016} are too restrictive. As can be seen in Fig. \ref{fig:RT2}, these 33 objects have proper motions and photometric measurements consistent with those of the cluster. In order to clarify the status of these 33 objects, further information is still needed.
+On the other hand, after cross matching (at CDS with a 0.5 arcsec radius)  the list of 154 objects that \citet{Rebull2016} classify as non-members (their Table 6, here after RT2) with the DANCe DR2, I find that all these objects have a counter part on the DANCe DR2. The 21\% of objects in the RT2 list (33 of them) were classified as candidate members in the BHM. This is a value five times larger than the CR reported in Section \ref{sect:classifier} (CR=4.3\%). However, we can not assume that the RT2 list comprises only non-members. First, this objects were at some point classified as members by other authors \cite[Appendix B of][]{Rebull2016}. Second, not all of these objects have periods \cite[only 20\% according to][]{Rebull2016}. From the 33 objects classified as candidate members by the BHM, only nine of them have periods. It means that for the remaining 24 candidate members, these authors used other criteria to discard them as members. About their classification process, \citet{Rebull2016} say ``This process was qualitative in the sense that we weighted all of the information in a subjective manner. However, the process was also extensive, with each star considered individually and with all available information considered in detail. [...] we believe that in the great majority of cases we have made the right decision.'' In any case, the high rate of BHM candidate members found in this RT2 list may indicate that either our contamination rate is underestimated or that the criteria used by \citet{Rebull2016} are too restrictive. As can be seen in Fig. \ref{fig:RT2}, these 33 objects have proper motions and photometric measurements consistent with those of the cluster. In order to clarify the status of these objects, further information is still needed.
 
 \begin{figure}[ht!]
     \centering
@@ -238,7 +237,7 @@ On the other hand, after cross matching (at CDS with a 0.5 arcsec radius)  the l
      \includegraphics[width=\textwidth]{background/Figures/RT2_ph.eps}
         \caption{}
     \end{subfigure}
-\caption{Proper motions (a) and $K$ vs $i-K$ CMD (b) of the RT2 in the DANCe DR2 catalogue (black). Also shown, the objects classified as candidate members in the BHM (grey), and those classified as non members in the RT2 and as candidate members in the BHM (blue).}
+\caption{Proper motions (a) and $K$ vs $i-K$ CMD (b) of the RT2 in the DANCe DR2 catalogue (black). Also shown, the objects classified as candidate members in the BHM (grey), and those classified as non-members in the RT2 and as candidate members in the BHM (blue).}
 \label{fig:RT2}
 \end{figure}
  
@@ -267,7 +266,7 @@ Another example of inspection of the posterior is the following. In a past run o
 \label{sect:PSDresults}
 In this Section, I present the results of the model selection analysis of the Projected Spatial Distribution (PSD) models of the Pleiades cluster. The Bayesian model selection approach and the PSD models are described in Sections \ref{sect:modelselection} and \ref{sect:PSDmethod}, respectively. The Bayesian \emph{evidence} is computed with uniform priors for all parameters using the Python package \emph{PyMultiNest} \citep{Buchner2014}. It is a Python wrapper of the C++ package \emph{MultiNest} \citep{Feroz2009} that implements the Nested Sampling algorithm of \citet{Skilling2004,Skilling2006} (see Section \ref{sect:NestedSampling}).
 
-In the Bayesian model selection methodology, the boundaries for decision making from Bayes Factors should be set \emph{ab initio}. Thus, we discuss our results following the classical scale by \cite{Jeffreys61}, which I shown in Table \ref{tab:JeffreysScale}.
+In the Bayesian model selection methodology, the boundaries for decision making from Bayes Factors should be set \emph{ab initio}. Thus, we discuss our results following the classical scale by \cite{Jeffreys61}, which I show in Table \ref{tab:JeffreysScale}.
 
 \begin{table}[H]
 \caption{\citet{Jeffreys61} scale for Bayes factors.}
@@ -293,17 +292,24 @@ $>$ 20 & decisive\\
 Tables \ref{tab:BayesFactors3deg} and \ref{tab:BayesFactors6deg} summarise the evidences and Bayes factors of the radially symmetric models using the candidate members within  7 pc (3$^{\circ}$) and 14 pc (6$^{\circ}$), respectively. 
 \begin{table}[ht]
   \centering
-      \caption{Natural logarithm of the evidence (diagonal) and Bayes factors (off-diagonal elements, with the evidence for the model specified in the column header placed in the numerator and in the row header in the denominator) for each radially symmetric model inferred from the 7 pc (3$^{\circ}$) sample.}
+      \caption{Natural logarithm of the evidence (diagonal) and Bayes factors (off-diagonal elements) for each radially symmetric model inferred from the 7 pc (3$^\circ$) sample.}
          \begin{tabular}{rcccccc}
            & King & OGKing  &   GKing & EFF & GP & RGP \\
 \hline              
            King    &-2876.2 &  0.13   &   0.04  &  0.03   &   0.04  &  0.41  \\
-           OGKing  &        &-2878.2  &   0.33  &  0.25   &   0.3   &  3.00  \\
-           GKing   &        &         &-2879.3  &  0.74   &   0.90  &  9.02  \\
-           EFF     &        &         &         &-2879.6  &   1.22  & 12.18  \\
-           GP      &        &         &         &         &-2879.4  &  9.97  \\
-           RGP     &        &         &         &         &         &-2877.1 \\
-         \end{tabular}
+           OGKing  &   7.39     &-2878.2  &   0.33  &  0.25   &   0.3   &  3.00  \\
+           GKing   &    22.19    &    3.0     &-2879.3  &  0.74   &   0.90  &  9.02  \\
+           EFF     &    29.96    &      4.0   &   1.34      &-2879.6  &   1.22  & 12.18  \\
+           GP      &    24.53    &     3.32    &   1.1      &    0.81     &-2879.4  &  9.97  \\
+           RGP     &   2.45     &     0.33    &    0.14     &      0.08   &   0.1      &-2877.1 \\
+           \hline
+\multicolumn{7}{l}{
+  \begin{minipage}{12cm}
+    {\footnotesize Note. Bayes factors are computed with evidence of the model specified in the column header placed in the numerator and in the row header in the denominator.}
+  \end{minipage}
+}
+\end{tabular}
+        
   \label{tab:BayesFactors3deg}
    \end{table}
    
@@ -314,12 +320,12 @@ Tables \ref{tab:BayesFactors3deg} and \ref{tab:BayesFactors6deg} summarise the e
 \begin{tabular}{rcccccc} 
 &King & OGKing & GKing & EFF & GP & RGP \\
 \hline              
-           King    &-5033.5  &  $>100$  &   2.7    &   $<0.01$     &  3.3       &    27.113  \\
-           OGKing  &         &  -5023.6 &  $<0.01$ &   $<0.01$     &   $<0.01$  &   $<0.01$   \\
-           GKing   &         &          & -5032.5  &   $<0.01$     &  1.2       &   10.0     \\
-           EFF     &         &          &          &   -5044.1     &  $>100$    &   $>100$   \\
-           GP      &         &          &          &               &   -5032.3    & 8.2      \\
-           RGP     &         &          &          &               &              & -5030.2     \\
+           King    &-5033.5       &  $>100$  &   2.7    &   $<0.01$     &  3.3       &    27.113  \\
+           OGKing  &    $<0.1$&  -5023.6 &  $<0.01$ &   $<0.01$     &   $<0.01$  &   $<0.01$   \\
+           GKing   &    0.36     &  $>100$   & -5032.5  &   $<0.01$     &  1.2       &   10.0     \\
+           EFF     &    $>100$ & $>100$ &    $>100$  &   -5044.1     &  $>100$    &   $>100$   \\
+           GP      &   0.3          &   $>100$ &    0.81      &    $<0.01$    &   -5032.3    & 8.2      \\
+           RGP     &   0.03      &   $>100$  &    0.1      &     $<0.01$    &   0.12           & -5030.2     \\
          \end{tabular}
  
  \label{tab:BayesFactors6deg}
@@ -378,7 +384,7 @@ Finally (we will not discuss the EFF or GP profiles), the RGP suffers the same l
 %\end{center}
 %\end{figure}
 
-As a summary of the results of the 3$^{\circ}$ sample, we find that the introduction of more flexibility in the analytical expressions of the classical radially symmetric profiles does not produce larger evidences, and results in some cases in unconstrained parameters and a loss of the interpretability associated to the original formulations. Therefore, for the data set that extends out to 3$^{\circ}$ there are two competing models (classical King and RGP) and there is not sufficient evidence to select amongst them. The central part is reasonable well fitted either by a King's profile with relatively well constrained parameters or with a RGP profile with large degeneracy.  Only additional, perfectly acceptable prejudices like physical interpretability or the ability to compare with previous results, can be invoked to choose the King's profile over the rest.
+As a summary of the results of the 3$^{\circ}$ sample, we find that the introduction of more flexibility in the analytical expressions of the classical radially symmetric profiles does not produce larger evidences, and results in some cases in unconstrained parameters and a loss of the interpretability associated to the original formulations. Therefore, for the data set that extends out to 3$^{\circ}$ there are two competing models (classical King and RGP) and there is no sufficient evidence to select amongst them. The central part is reasonably well fitted either by a King's profile with relatively well constrained parameters or with a RGP profile with large degeneracy.  Only additional, perfectly acceptable prejudices like physical interpretability or the ability to compare with previous results, can be invoked to choose the King's profile over the rest.
 
 
 Concerning the 6$^{\circ}$ sample, the OGKing profile has the largest evidence. It comes as no surprise since OGKing profile fixes the values of $\alpha_1$ and $\alpha_2$ to those that yield the maximum evidence. Hence, we acknowledge overfitting to the incomplete and biased sample of Pleiades members out to 6$^{\circ}$. In fact, the marginal posterior distribution for the tidal radius is sharply peaked around 16 pc, only slightly further than the observational boundary.
@@ -403,7 +409,7 @@ The conclusion from the comparison of these radially symmetric profiles in the c
 
 \subsection{Selection of models with biaxial symmetry}
 
-Concerning the models with biaxial symmetry, Table \ref{tab:BayesFactorsEll} collects the evidences and Bayes factors. We have included the results for the OGKing alternative despite the fact that we had to extend the support of the prior for the $r_{t,a}$ and $r_{t,b}$ parameters out to 300 pc. For smaller values of the support, the MCMC samples possess maxima at the boundaries. Even in the set up with priors extending out to 300 pc, the parameter samples lack physical interpretations with vanishingly small MAP core radii. We see that the OGKing profile is clearly to be preferred when compared against the other two models, and any of the three is to be preferred to the radially symmetric profiles of Table \ref{tab:BayesFactorsEll}. Despite the fact that the OGKing shows the best evidence and the largest Bayes factor, the unconstrained and unphysical values of its parameters allow us to discard it, and continue exploring the luminosity segregation only in the King model.
+Concerning the models with biaxial symmetry, Table \ref{tab:BayesFactorsEll} collects the evidences and Bayes factors. We have included the results for the OGKing alternative despite the fact that we had to extend the support of the prior for the $r_{t,a}$ and $r_{t,b}$ parameters out to 300 pc. For smaller values of the support, the MCMC samples possess maxima at the boundaries. Even in the set up with priors extending out to 300 pc, the parameter samples lack physical interpretations with vanishingly small MAP core radii. We see that the OGKing profile is clearly to be preferred when compared against the other two models, and any of the three is to be preferred to the radially symmetric profiles of Table \ref{tab:BayesFactorsEll}. However, despite the fact that the OGKing shows the best evidence and the largest Bayes factor, the unconstrained and unphysical values of its parameters allow us to discard it, and continue exploring the luminosity segregation only in the King model.
 
 \begin{table}[ht!]
   \centering
@@ -428,7 +434,7 @@ Concerning the models with biaxial symmetry, Table \ref{tab:BayesFactorsEll} col
          \end{tabular}
    \end{table}
 
-\begin{figure}[H]
+\begin{figure}[ht!]
  \centering
   \includegraphics[width=\textwidth]{background/Figures/PSD/KingEll7.pdf}
   \caption{Samples from the posterior distribution of the parameters in the biaxial symmetric King model inferred from the 3$^{\circ}$ sample. Tidal and core radius are in units of pc.}
@@ -451,12 +457,13 @@ $$
 $$
 with the ordering of parameters used above.
 
-Interestingly, this MAP shows no evidence of ellipticity\footnote{The ellipticity is defined as $\epsilon = 1 - \frac{b}{a}$, with $a$ and $b$ the semi-major and semi-minor axis of the ellipse, respectively.} neither in the core radius ($\epsilon_{rc}= 0.04$) nor in the tidal radius ($\epsilon_{rt}= 0.008$).
+Interestingly, this MAP shows no evidence of ellipticity\footnote{The ellipticity is defined as $\epsilon = 1 - \frac{b}{a}$, with $a$ and $b$ the semi-major and semi-minor axis of the ellipse, respectively.} neither in the core radius ($\epsilon_{rc}= 0.04$) nor in the tidal radius ($\epsilon_{rt}= 0.008$). Despite this fact, the biaxial symmetric King models have decisive evidence when compared to the radially symmetric ones (see Table \ref{tab:BayesFactorsAll}).
 
 \subsection{Selection of models with luminosity segregation}
-We include luminosity ($J$ band) segregation only in the radial and biaxial symmetric extensions of the King profile. As shown in the previous section, this model has large Bayes factor with physical interpretability. Table \ref{tab:BayesFactorsLumSeg} summarises the evidences and Bayes Factors of the King's model with luminosity segregation in both radial and biaxial symmetric models. The parameters of these models and its evidences are inferred using  the  3$^\circ$ and 6$^\circ$ samples.
+\label{sect:lumsegregation}
+In this Section, I describe the luminosity ($J$ band) segregation (see Section \ref{sect:SegregatedModels}) included only in the radial and biaxial symmetric extensions of the King profile. As shown in the previous section, King's profile not just has large Bayes factor, but also physical interpretability. Table \ref{tab:BayesFactorsLumSeg} summarises the evidences and Bayes Factors of the King's model with luminosity segregation in both radial and biaxial symmetric models. The parameters of these models and its evidences are inferred using  the  3$^\circ$ and 6$^\circ$ samples.
 
-\begin{table}[H]
+\begin{table}[ht!]
   \centering
   \caption[]{Natural logarithm of the evidences (diagonal) and Bayes factors (off-diagonal, computed as in Table \ref{tab:BayesFactors3deg}) for the radial and biaxial symmetric models with luminosity segregation inferred from the 3$^\circ$ and 6$^\circ$ samples. }
   \label{tab:BayesFactorsLumSeg}
@@ -510,14 +517,14 @@ $$
 
 As can be seen from the MAP values and its standard deviation, the $\kappa$ luminosity segregation parameter is similar and significative for both King-RS and King-BS models. Concerning the ellipticity, the core radius and tidal radius have large values, $\epsilon_{rc}= 0.13$ and $\epsilon_{rt}= 0.21$, respectively. However, due to the large uncertainties in the tidal radii, we trust only in the ellipticity reported for the core radius. The latter value is nevertheless similar to those previously reported in the literature \cite[0.17 and 0.1 to 0.35 reported by][respectively]{Raboud1998,Adams2001}. We do not report the ellipticity value inferred from the extended 6$^\circ$ sample due to the incompleteness of the latter. Indeed, this ellipticity can be strongly biased by the patchy pattern of the DANCe DR2 observations.
 
-\begin{figure}[H]
+\begin{figure}[ht!]
  \centering
   \includegraphics[width=\textwidth]{background/Figures/PSD/KingRS7.pdf}
   \caption{Samples of the posterior distribution of the parameters in the radially symmetric and luminosity segregated King model inferred from the 3$^{\circ}$ sample. The core and tidal radius are in units of pc, the slope in units of pc per magnitude.}
 \label{fig:KingRS7}
 \end {figure}
 
-\begin{figure}[H]
+\begin{figure}[ht!]
  \centering
   \includegraphics[width=\textwidth]{background/Figures/PSD/KingBS7.pdf}
   \caption{Samples of the posterior distribution of the parameters in the biaxial symmetric and luminosity segregated King model inferred from the 3$^{\circ}$ sample. The core and tidal radius are in units of pc, the slope in units of pc per magnitude.}
@@ -526,7 +533,7 @@ As can be seen from the MAP values and its standard deviation, the $\kappa$ lumi
 
 Finally, combining the evidences and Bayes factors of the King's classical and extended models, we can conclude that there is \emph{decisive} (in terms of Jeffrey's scale) evidence, from both the 3$^{\circ}$  and 6$^{\circ}$ data sets, supporting complex models with J-band luminosity segregation and biaxial symmetry (see Table \ref{tab:BayesFactorsAll}).
 
-\begin{table}[H]
+\begin{table}[ht!]
   \centering
   \caption[]{Natural logarithm of the evidences (diagonal) and Bayes factors (off-diagonal, computed as in Table \ref{tab:BayesFactors3deg}) for King models with radial symmetry (King-R), biaxial symmetry (King-B), and radial and biaxial symmetry with luminosity segregation (King-RS and King-BS, respectively). These evidences are computed using the samples of $3^{\circ}$ and $6^{\circ}$.}
   {\small 
@@ -554,7 +561,7 @@ Finally, combining the evidences and Bayes factors of the King's classical and e
 
 The results of this Section show that, although the majority of the current models of the radial density profile of the Pleiades cluster reproduce well the observed data, only the classical King's profile and the RGP have the best evidences both in the complete $3^\circ$ sample and in the extended $6^\circ$ one. However, we discard the RGP profile due to its high degeneracy and unphysical values. We can perform this selection by the inclusion of restrictive priors PDFs to the physical interpretability of the models. This model selection process using non-identical priors for the competing models is explained in Section \ref{sect:modelselection} (see Eq. \ref{eq:modelselection}). 
 
-Also, we have shown that the HMPS, both complete ($3^\circ$) and extended ($6^\circ$), are better modelled, in terms of the evidence, with complex models including biaxial symmetry and luminosity segregation.
+Also, we have shown that the high membership probability samples, both complete ($3^\circ$) and extended ($6^\circ$), are better modelled, in terms of the evidence, with complex models including biaxial symmetry and luminosity segregation.
 
 The results of this Section establish a solid probabilistic background for: i) the classical King profile, at least in the Pleiades cluster, and ii) luminosity segregation. The latter indicates that the expected mass segregation in the Pleiades cluster \cite[as has been indicated by previous studies, e.g.][]{Converse2010} is supported by Bayesian evidence. 
 
@@ -565,7 +572,7 @@ The results of this Section establish a solid probabilistic background for: i) t
 The bivariate proper motions distributions of both single and EMB is directly recovered by the BHM by means of the posterior distributions of the parameters in the GMM modelling these populations.
 These bivariate distributions are depicted in Fig, \ref{fig:PM}.
 
-The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos(\delta)$ and $\mu_{\delta}$ components, are shown in Figs. \ref{fig:PMCs} and \ref{fig:PMBs}. Also, I show in this Figs. the densities in the same proper motions projections of the candidate members of \citet{Bouy2015}, and those found by BHM, which have membership probabilities grater than 0.84. Interestingly, the densities rendered by both samples of members are almost identical. Nevertheless, the density resulting from the sample of the posterior distributions of the parameters in the GMMs, differ from the kernel density estimations of the corresponding populations. This difference results from the distinct populations of the two distributions. The BHM finds the posterior distribution of its parameters using the likelihood of all the objects in the data set. The contribution that individual objects have to the total cluster likelihood can be thought to be proportional to their cluster membership probability. Therefore, the observed difference results from those objects whose cluster membership probability is lower than 0.84. The expected number of cluster members in the probability range 0-0.84 amounts to the non negligible value of $\sim 1100$ objects. These objects contaminate the posterior distribution of the parameters in the BHM with an expected value of 5.3\% (see Section \ref{sect:classifier}). Nevertheless, within them also lies a 10\% of true cluster members (as estimated in Section \ref{sect:classifier}). Discarding these true cluster members from the statistical analysis will render it biased. Instead, we decided to include these 10\% possible true cluster members at the small price of a 5.3\% of contamination.
+The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos(\delta)$ and $\mu_{\delta}$ components, are shown in Figs. \ref{fig:PMCs} and \ref{fig:PMBs}. Also, I show in this figures the densities in the same proper motions projections of the candidate members of \citet{Bouy2015}, and those found by BHM, which have membership probabilities grater than 0.84. Interestingly, the densities rendered by both samples of members are almost identical. Nevertheless, the density resulting from the sample of the posterior distributions of the parameters in the GMMs, differ from the kernel density estimations of the corresponding populations. This difference results from the distinct populations of the two distributions. The BHM finds the posterior distribution of its parameters using the likelihood of all the objects in the data set. The contribution that individual objects have to the total cluster likelihood can be thought to be proportional to their cluster membership probability. Therefore, the observed difference results from those objects whose cluster membership probability is lower than 0.84. The expected number of cluster members in the probability range 0-0.84 amounts to the non negligible value of $\sim 1100$ objects. These objects contaminate the posterior distribution of the parameters in the BHM with an expected value of 5.3\% (see Section \ref{sect:classifier}). Nevertheless, within them also lies a 10\% of true cluster members (as estimated in Section \ref{sect:classifier}). Discarding these true cluster members from the statistical analysis will render it biased. Instead, we decided to include these 10\% possible true cluster members at the small price of a 5.3\% of contamination.
 
 \begin{figure}[ht!]
 \begin{center}
@@ -648,7 +655,7 @@ The completeness limits of the derived luminosity distributions are acquired as 
 
 \citet{Bouy2015} mention that, due to the heterogeneous origins of the DANCe DR2 survey, the spatial coverage and sensitivity of the survey is also not homogeneous. To remedy this issue, they identify a region with complete spatial coverage, the inner three degrees of the cluster (see Fig. \ref{fig:originDANCeDR2}). Then, they restricted their photometric analysis to this spatially complete region. 
 
-Restricting their sample of candidate members to this inner region results in a sample of candidate members that is spatially biased. If any dynamical process has been set on the cluster such that the mass distribution of its members is not uniformly distributed in the space, then an spatial cut in a sample of candidate members will result in a bias on the mass distribution. One of such dynamical process is the mass segregation, which, as suggested by \citet{Adams2001} may have happen in the Pleiades cluster. 
+Restricting their sample of candidate members to this inner region results in a sample of candidate members that is spatially biased. If any dynamical process has been set on the cluster such that the mass distribution of its members is not uniformly distributed in the space, then a spatial cut in a sample of candidate members will result in a bias on the mass distribution. One of such dynamical process is the mass segregation, which, as suggested by \citet{Adams2001} may have happen in the Pleiades cluster. As proven in Section \ref{sect:lumsegregation}, there is strong evidence in favour of luminosity segregation in the Pleiades, at least in the $J$ band.
 
 Thus, to avoid such biases, I assume that the UKIDSS survey, which is the most profound from among the contributions to the DANCe DR2 catalogue, provides the homogeneous spatial and sensitivity coverage at faint magnitudes (see Fig. \ref{fig:originDANCeDR2}). This survey thus provides the upper completeness limits, which are essentially those reported in the Appendix A of \citet{Bouy2015}, $i\sim23$ mag and $K_s\sim18$ mag.
 
@@ -682,13 +689,13 @@ On the other hand, the differences between the discrete distributions, the BHM a
 \section{Mass distribution}
 \label{sect:massdistributionresults}
 
-In this Section I describe the procedure to transform the luminosities distributions into mass distributions. As any other transformation of probability distributions, it demands the together with the transformation, its derivative (see Section \ref{sect:introprobability}).Once the mass distributions is obtained,  then, I compare it to the Initial Mass Functions (IMFs) of \citet{Chabrier2005} and \citet{Thies2007}. Finally, I conclude this section with the analysis of some simple toy models that can be fitted to the derived mass distribution.
+In this Section I describe the procedure to transform the luminosities distributions into mass distributions. Transforming a  probability distributions requires the transformation \emph{per se} and its derivative (see Section \ref{sect:introprobability}). Once the mass distributions is obtained,  then, I compare it to the Initial Mass Functions (IMFs) of \citet{Chabrier2005} and \citet{Thies2007}. Finally, I conclude this section with the analysis of some simple toy models that can be fitted to the derived mass distribution.
 
 \subsection{The mass-luminosity relation}
 \label{sect:mass-luminosity}
-The mass-luminosity relation is the non linear transformation that enables us to obtain the mass distribution from the luminosity distributions. Given the values of the upper limits of the luminosity distributions (the faint ends), the mass-luminosity relation relies entirely on the current models of stellar atmospheres. Among the different flavours of theoretical stellar evolution models in the literature (those from the Pisa, Padova, Trieste, Geneva, and Lyon research groups)  we choose the BT-Settl models of \citet{Allard2012}. These models go deeper into the lower masses reaching the planetary mass range thus allowing a complete coverage of our luminosity distributions. The rest of the models stay in the $0.1-10\,\mathrm{M_{\odot}}$ range, with the \emph{PARSEC} models been the ones reaching the $0.1\,\mathrm{M_{\odot}}$ limit \citep{Bressan2012}. 
+The mass-luminosity relation is the non linear transformation that enables us to obtain the mass distribution from the luminosity distributions. Given the values of the upper limits of the luminosity distributions (the faint ends), the mass-luminosity relation relies entirely on the current models of stellar atmospheres. Among the different flavours of theoretical stellar evolution models in the literature (those from the Pisa, Padova, Trieste, Geneva, and Lyon research groups)  we choose the BT-Settl models of \citet{Allard2012}. These models go deeper into the lower masses reaching the planetary mass range thus allowing a complete coverage of our luminosity distributions. The rest of the models stay in the $0.1-10\,\mathrm{M_{\odot}}$ range, with the \emph{PARSEC} models being the ones reaching the $0.1\,\mathrm{M_{\odot}}$ limit \citep{Bressan2012}. 
 
-From the BT-Settle grid I choose the CIFIST2011bc for the 2MASS AB photometric system, 120 Myr and solar metallicity. I choose this photometric system because it covers the dynamic range of the DANCe DR2 survey. The age and metallicity values are the closest, within the grid, to the canonical ones (see Section \ref{sect:generalities}). This grid returns values of the luminosity for certain non uniformly distributed values of the mass. As shown in Eq. \ref{eq:transformdistribution}, the transformation of a probability distribution, in this case the luminosities, into the mass distribution is proportional to the derivative of the transformation, which must be continuos. To avoid the discontinuities in the derivatives produced by the grid, we fit the values from the grid using spline series (see Fig. \ref{fig:splineML}). Then, derivative is obtained from these continuos series (see Fig. \ref{fig:der_splineML}). It is important to notice the following two assumptions. First, I assume that the luminosity distributions in $J,H$ and $K_s$ bands are independent between them, and then I obtain a mass distribution for each one of them. Second, I assume that the transformation from luminosities to masses does not have any associated uncertainty. These assumptions must be taken since the isochrone models do not provide neither uncertainties nor a way to incorporate correlations between the mass distributions of distinct photometric bands. 
+From the BT-Settle grid I choose the CIFIST2011bc for the 2MASS AB photometric system, 120 Myr and solar metallicity. I choose this photometric system because it covers the dynamic range of the DANCe DR2 survey. The age and metallicity values are the closest, within the grid, to the canonical ones (see Section \ref{sect:generalities}). This grid returns values of the luminosity for certain non uniformly distributed values of the mass. As shown in Eq. \ref{eq:transformdistribution}, the transformation of a probability distribution, in this case the luminosities, into the mass distribution is proportional to the derivative of the transformation, which must be continuous. To avoid the discontinuities in the derivatives produced by the grid, we fit the values from the grid using spline series (see Fig. \ref{fig:splineML}). Then, derivative is obtained from these continuous series (see Fig. \ref{fig:der_splineML}). It is important to notice the following two assumptions. First, I assume that the luminosity distributions in $J,H$ and $K_s$ bands are independent between them, and then I obtain a mass distribution for each one of them. Second, I assume that the transformation from luminosities to masses does not have any associated uncertainty. These assumptions must be taken since the isochrone models do not provide neither uncertainties nor a way to incorporate correlations between the mass distributions of distinct photometric bands. 
 
 Figure \ref{fig:splineML} shows the spline fit to the mass-luminosity relations of the BT-Settl absolute $J,H$ and $K_s$ magnitudes (black points) as a function of the mass. Figure \ref{fig:der_splineML} shows the derivative of mass-luminosity relation. The grey shaded areas represent the incompleteness regions of the DANCe survey (see previous section).
 
@@ -779,9 +786,9 @@ Since I lack the learned BHM for these two open clusters, the following comparis
 
 In this hypothesis test, the null hypothesis is that the Hyades and Trapezium PDSMDs came, each of them, from the same distribution than the Pleiades. 
 
-If we want to test the null hypothesis that two distributions come from the same parent distribution, Kolmogorov-Smirnov (KS) and the Anderson-Darling (AD) tests are classical options, with the AD the must robust one. To perform these tests, we must compute certain measures from the two distributions. Then, given the measure, the test distribution returns the probability that the two distributions came from the same parent distribution. Finally, we reject the null hypothesis only if the previous probability is lower than certain probability threshold ($\alpha$), which is usually 0.1, 0.05, or 0.01. 
+If we want to test the null hypothesis that two distributions come from the same parent distribution, Kolmogorov-Smirnov (KS) and the Anderson-Darling (AD) tests are classical options, with the AD the most robust one. To perform these tests, we must compute certain measures from the two distributions. Then, given the measure, the test distribution returns the probability that the two distributions came from the same parent distribution. Finally, we reject the null hypothesis only if the previous probability is lower than certain probability threshold ($\alpha$), which is usually 0.1, 0.05, or 0.01. 
 
-To perform the KS tests we must obtain the maximum distance between the CDFs of the two distributions. Then, using this distance and the KS distribution, we obtain the probability that the two distributions came from the same parent distribution. If this probability is higher than certain probability threshold ($\alpha$) then the null hypothesis can not be rejected. 
+To perform the KS tests we must obtain the maximum distance between the CDFs of the two distributions. Then, using this distance and the KS distribution, we obtain the probability that the two distributions came from the same parent distribution. %If this probability is higher than certain probability threshold ($\alpha$) then the null hypothesis can not be rejected. 
 
 However, the KS test can also be applied in a graphical way. Given the $\alpha$ probability threshold, there is a $d_{\alpha}$ distance for which the KS distribution returns a probability $\alpha$. For $d < d_{\alpha}$ $p_{KS}(d) > \alpha$ and for $d > d_{\alpha}$ $p_{KS}(d) < \alpha$. Therefore, given the CDF of one of the distributions that we want to compare and a probability threshold $\alpha$, the region of distance $d_{\alpha}$ around the CDF depicts the hypothesis test. If the CDF of the other distribution lies entirely within this region, then its maximum distance from the first CDF is less than $d_{\alpha}$. Therefore, its probability is greater than $\alpha$ and the null hypothesis can not be rejected.
 
