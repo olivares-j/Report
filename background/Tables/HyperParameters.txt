@@ -1,7 +1,7 @@
 % latex table generated in R 3.1.1 by xtable 1.7-4 package
 % Thu Feb 16 10:48:27 2017
 \begin{table}[H]
-\caption{Hyper-parameters for different blocks of the Hierarchical Bayesian Model. The upper and middle blocks correspond, respectively, to hyper-parameters of the proper motions and photometric models. The lower block to hyper-parameters shared by both models.}
+\caption{Hyper-parameters for different blocks of the \gls{bhm}. The upper and middle blocks correspond, respectively, to hyper-parameters of the proper motions and photometric models. The lower block to hyper-parameters shared by both models.}
 \centering
 \begin{tabular}{ll}
   \hline

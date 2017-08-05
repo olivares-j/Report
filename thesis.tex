@@ -58,6 +58,7 @@
 %% \usepackage{amsmath}
 %% \usepackage{amssymb}
 \usepackage{xspace}
+
 \usepackage{algorithmic}
 \usepackage{algorithm}
 \usepackage{enumitem}
@@ -69,7 +70,11 @@
 \usepackage{fancyhdr}
 %\usepackage{graphicx}
 \usepackage{subcaption}
+
 % \newfloat{algorithm}{t}{lop}
+
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{2 on 1}[border shrink=1mm]
 
 
 \usepackage{usebib}
@@ -112,6 +117,11 @@
 %% It is assumed that that file is called "definitions.tex".
 \input{definitions}
 
+%%%%%% ACRONYMS %%%%%%%%%%%%
+\usepackage[toc,acronym]{glossaries}
+%\glsdisablehyper
+\input{acronyms}
+\makeglossaries
 %% Cross-referencing utilities. Use one or the other--whichever you prefer--
 %% but comment out both lines for final version.
 %\usepackage{showlabels}
@@ -407,6 +417,8 @@
 
 %%%% Input bibliography file %%%%%%%%%%%%%%%
 % \input{thesis}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{biblio} % add intelligently
-
+%%%% Prints the glossaries %%%%%
+\printglossaries
 \end{document}
