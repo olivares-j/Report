@@ -372,22 +372,22 @@ Thus, our photometric set of observables is made of $i-K_s, Y,J,H$ and $K_s$.
     \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[page=2,height=6cm]{background/Figures/CIs.pdf}
         \caption{}
-        \label{}
+        
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
       \includegraphics[page=3,height=6cm]{background/Figures/CIs.pdf}
         \caption{}
-        \label{} 
+         
     \end{subfigure}
      \begin{subfigure}[t]{0.45\textwidth}
       \includegraphics[page=4,height=6cm]{background/Figures/CIs.pdf}
         \caption{}
-        \label{} 
+         
     \end{subfigure}
      \begin{subfigure}[t]{0.45\textwidth}
       \includegraphics[page=5,height=6cm]{background/Figures/CIs.pdf}
         \caption{}
-        \label{} 
+         
     \end{subfigure}
     \caption{CMD for the Pleiades candidate members of \citet{Bouy2015}. The magnitude $K_s$ is shown versus the colour indices: $Y-K_s$(a), $J-K_s$(b), $H-K_s$(c), and $Y-J$ (d).}
     \label{fig:otherCI}
@@ -450,9 +450,81 @@ Furthermore, we restrict the lower limit of the \gls{ci} to the value of the bri
 
 With the previous restrictions to the \gls{ddr2} reduced it to 1 424 893 objects, with the largest number of rejected objects ($\sim 500\, 000$) resulting from a completely missing photometry.
 
+\subsubsection{The Restricted DANCe Data Release 2 (RDDR2)}
 Our computational constraints and the costly computations of our methodology (see Sect. \ref{sect:BHM}), prevented its application to the entire data set. However, since the precision of our methodology, as that of any statistical analysis, increases with the number of independent observations, we find that a size of $10^5$ source for our data is a reasonable compromise. Although a smaller data set produces faster results, it also renders a less precise and potentially more biased model of the field (in the area around the cluster) and therefore, a more contaminated model of the cluster. Thus, our data set was restricted to the $10^5$ objects with highest membership probabilities according to \citet{Bouy2015}. In the following I refer to this data set as the \gls{rdr2}. The majority of these objects ($\sim$98\%) belong to the field with cluster membership probabilities about zero according to \citet{Sarro2014,Bouy2015}. Thus, under the assumption that the membership probabilities given by these authors are correct, the probability of leaving out a cluster member is negligible. The \gls{rdr2} data set is used to construct the cluster model and obtain the membership probability of its $10^5$ objects. For the remainder of the objects in the \gls{ddr2}, we assign membership probabilities \emph{a posteriori}, once the cluster model is constructed. 
 
-The data set for the analysis of the Pleiades \gls{psd} consists of the high membership probability objects recovered after applying the \gls{bhm} methodology (see Section \ref{sect:datamodelling}) to the \gls{rdr2} data set. For the sake of simplicity, I call this data set the \gls{hmps}. Although the \gls{ddr2} extends up to a radius of 6$^{\circ}$, the spatial coverage is not homogeneous. As Fig. \ref{fig:originDANCeDR2} shows, the deepest images of \emph{UKIDSS} cover the entire region while the rest of the instruments cover mainly the central part. Due to this patchy pattern, \citet{Bouy2015} used the central 3$^{\circ}$ region as the most complete one. Thus, for the the analysis of the \gls{psd} we define two samples, the complete one comprising those objects in the central $3^{\circ}$, and the extended one, which includes all objects up to a radius of $6^{\circ}$.
+Tables \ref{tab:rddr2_cluster} and \ref{tab:rddr2_field} show summaries of the observables and uncertainties for the 98012 field and 1988 cluster objects in the \gls{rdr2}, respectively. This classification is based on the membership probabilities and probability threshold ($p=0.75$) derived by \citet{Bouy2015}.
+
+\begin{table}[ht!]
+\caption{Summary of the 1988 candidate members of \citet{Bouy2015} in the \gls{ddr2}.}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Observable & Min. & 1st. Qu. & Median & Mean & 3rd. Qu. & Max. & NA's \\
+\hline
+\hline
+$\mu_{\alpha} [mas\cdot yr^{-1}]$&-81.64 &  14.45  & 16.24 &  16.30  & 18.14  & 90.32&0\\
+$\mu_{\delta} [mas\cdot yr^{-1}]$&-81.88&  -42.09 & -39.85  & -39.62  &-37.45  & 82.59&0\\
+i -$K_s$[mag] &  0.934 &   3.002 &  3.364  & 3.396 &  3.678 &  7.085  &   713\\
+Y [mag]& 8.284 & 13.700 & 14.450  &14.690  &15.400 & 20.390  &   518\\
+J [mag]& 6.545 & 11.950 & 13.400  &13.160 & 14.380  &19.310   &    6\\
+H [mag]& 6.587 & 11.330 & 12.850  &12.610&  13.840 & 18.300   &   13\\
+$K_s$ [mag]& 6.514 & 11.090 & 12.530 & 12.300 & 13.500 & 17.360   &    1\\
+\hline
+\multicolumn{8}{c}{Uncertainties}\\
+\hline
+Observable & Min. & 1st. Qu. & Median &Mean& 3rd. Qu. & Max. & NA's \\
+\hline
+\hline
+$\mu_{\alpha} [mas\cdot yr^{-1}]$&0.08&0.25&0.76&0.5201&2.02&1e+5 &0\\ 
+$\mu_{\delta} [mas\cdot yr^{-1}]$&0.08&0.25&0.76&0.52&2.02&1e+5& 0\\ 
+i [mag] & 0.0200 & 0.0200 & 0.0200 & 0.0351 & 0.0202 & 2.1610&713 \\
+Y [mag] & 0.0300&  0.0500&  0.0501&  0.0569&  0.0503 & 0.2392&518\\
+J [mag] & 0.02000& 0.02700& 0.05005 &0.04270& 0.05014 &0.15990&6\\
+H [mag] & 0.02000 &0.02700& 0.04009 &0.03994 &0.05010 & 0.14340&13\\
+$K_s$[mag]&0.02000& 0.05003& 0.05045& 0.05278 &0.06001 &9.99500&1\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:rddr2_cluster}
+\end{table}%
+
+\begin{table}[ht!]
+\caption{Summary of the 98012 filed objects in the \gls{rdr2}.}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Observable & Min. & 1st. Qu. & Median & Mean & 3rd. Qu. & Max. & NA's \\
+\hline
+\hline
+$\mu_{\alpha} [mas\cdot yr^{-1}]$&-99.980& -11.730  & 1.803 &  1.307 & 15.050 & 99.910&0\\
+$\mu_{\delta} [mas\cdot yr^{-1}]$&-99.990& -17.980  &-4.820  &-4.088   &9.189  &99.980&0\\
+i -$K_s$[mag] &   1.04 &   3.49  &  5.13    &   4.81  &  5.81  &  7.99 &  95628 \\
+Y [mag]          & 9.97  & 18.70      &  19.45 &  18.83 &  19.93 &  22.23  & 21988 \\
+J [mag]          & 3.954 & 17.790 & 18.660 & 17.880 & 19.160 & 20.620 &   7305\\
+H [mag]         & 2.969 & 16.950 & 17.750 & 17.020 & 18.210 & 20.270  &  7655\\
+$K_s$ [mag] & 2.598 & 16.260 & 16.960  &16.360  &17.370 & 21.020 &   5013\\
+\hline
+\multicolumn{8}{c}{Uncertainties}\\
+\hline
+Observable & Min. & 1st. Qu. & Median &Mean& 3rd. Qu. & Max. & NA's \\
+\hline
+\hline
+$\mu_{\alpha} [mas\cdot yr^{-1}]$&0.08  &    8.65   &  14.94   &  23.50   &  25.60 &1.0e+05&0\\ 
+$\mu_{\delta} [mas\cdot yr^{-1}]$&0.085  &   8.652  &  14.940  &  20.710  &  25.600 &1.86e+04 & 0\\ 
+i [mag] & 0.02        &  0.02    &    0.07 &   0.08 &  0.12   & 0.66    &    95628 \\
+Y [mag] & 0.030     &   0.068&   0.103&  0.112 &   0.148&0.938  &   21988\\
+J [mag] & 0.020      &  0.065  & 0.097  & 0.104 & 0.136  &0.403   & 7305\\
+H [mag] & 0.020     &  0.065  & 0.093  &0.099  & 0.124  &9.998   & 7655\\
+$K_s$[mag]&0.020 &  0.060 &  0.079 & 0.087  & 0.101 & 9.998  & 5013\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:rddr2_field}
+\end{table}%
+
+\subsubsection{The High Membership Probability Sample (HMPS)}
+The data set for the analysis of the Pleiades \gls{psd} consists of the high membership probability objects recovered after applying the \gls{bhm} methodology (see Section \ref{sect:datamodelling}) to the \gls{rdr2} data set. For the sake of simplicity, I call this data set the \gls{hmps}. Although the \gls{ddr2} extends up to a radius of 6$^{\circ}$, the spatial coverage is not homogeneous. As Fig. \ref{fig:originDANCeDR2} shows, the deepest images of \emph{UKIDSS} cover the entire region while the rest of the instruments cover mainly the central part. Due to this patchy pattern, \citet{Bouy2015} used the central 3$^{\circ}$ region as the most complete one. Thus, for the the analysis of the \gls{psd} we define two samples, the complete one comprising those objects in the central $3^{\circ}$, and the extended one, which includes all objects in the \gls{hmps} up to a radius of $6^{\circ}$.
 
 
 

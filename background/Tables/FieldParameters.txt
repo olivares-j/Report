@@ -1,0 +1,24 @@
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Thu Feb 16 10:48:27 2017
+\begin{table*}[ht]
+\caption{Field parameters. Listed are the groups, symbols, dimensions and descriptions of the field parameters derived from the field objects of the \gls{rdr2} data set.}
+\centering
+\begin{tabular}{lccc}
+\hline
+Group         &         Symbol                & Dimension  &   Description \\ 
+\hline
+Proper Motions &  $\pi_{f,pm,0}    $           & 1          &   Fraction of the uniform distribution\\
+    		         &  $S_{\mu_{\alpha}}$	      & 2          &   Support of the uniform distribution in R.A\\
+              	        &  $S_{\mu_{\delta}}$ 	      & 2          &   Support of the uniform distribution in Dec.\\
+                        &  $\boldsymbol{\pi}_{f,pm}$      & 7          &   Fractions of Gaussians in the mixture \\
+                	       &  $\boldsymbol{\mu}_{f,pm}$    & 7$\times$2 &   Means of Gaussians in the mixture \\
+              	       &  $\boldsymbol{\Sigma}_{f,pm}$ & 7$\times$4 &   Covariance matrices of Gaussians in the mixture \\
+\hline
+Photometry    &  $\boldsymbol{\pi}_{f,ph}$         & 14                   &   Fractions of Gaussians in the mixture \\
+                	      &  $\boldsymbol{\mu}_{f,ph}$      & 14$\times$5   &   Means of Gaussians in the mixture \\
+              	      &  $\boldsymbol{\Sigma}_{f,ph}$ & 14$\times$25 &   Covariance matrices of Gaussians in the mixture \\
+\hline
+\hline
+\end{tabular}
+\label{tab:field_parameters}
+\end{table*}

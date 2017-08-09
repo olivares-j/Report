@@ -105,7 +105,7 @@ This Equation illustrates that $p(b|c)$ is a normalisation constant which can be
 \label{sect:parametric_inference}
 In a broad sense, models are representations or abstractions of the knowledge someone has about something. Sometimes this knowledge is also shared by others. Models are everywhere in our daily life: from the words we speak every day, to the evolution of the species and the general relativity; from a kid's drawing to cosmological models. In science, however, the concept of model is restricted to a mathematical representation of the relations (the knowledge) among the entities that the model attempts to describe: the observables (i.e. the data). If the model contains variables that through the different values they take reproduce in some extent the observables, then model is called parametric and the variables the parameters. 
 
-{Parametric statistical models, like the ones I use in this work, assume that the underlying population of interest, from which the observed data is just a sample, can be described by parametric probability distribution functions. The act of finding the parameters governing these distributions is called parametric inference. This last can focus either on the entire \glspl{pdf} of the parameters, or just on some summary of them (e.g.the  \gls{map}, or the mean and variance).}
+{Parametric statistical models, like the ones I use in this work, assume that the underlying population of interest, from which the observed data is just a sample, can be described by parametric probability distribution functions. The act of finding the parameters governing these distributions is called parametric inference. This last can focus either on the entire \glspl{pdf} of the parameters, or just on some summary of them (e.g. the  \gls{map}, or the mean and variance).}
 
 The proper way to obtain the entire probability distribution of the parameters in a model, given the data, is through Bayes' theorem. Thus it is called Bayesian inference. Another example of parametric inference is the maximum likelihood approach, where the likelihood, which is seen as a function of the parameters, is maximised. Despite that it obtains the parameter values that make the model to resemble the data, it does not return their probability distribution. Formally, the likelihood is a probability distribution for the data, and just a function of the parameters. Thus, to obtain the probability distribution of the parameters, the likelihood must be multiplied by the priors and the product normalised. This is what Bayes' theorem does.
 
@@ -326,22 +326,22 @@ In the \gls{ddr2}, missing values occur only in the photometric measurements (se
     \begin{subfigure}[t]{0.45\textwidth}
         \includegraphics[page=1,height=6cm]{background/Figures/MissingDistribution.pdf}
         \caption{}
-        \label{}
+        
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
       \includegraphics[page=2,height=6cm]{background/Figures/MissingDistribution.pdf}
         \caption{}
-        \label{} 
+         
     \end{subfigure}
      \begin{subfigure}[t]{0.45\textwidth}
       \includegraphics[page=3,height=6cm]{background/Figures/MissingDistribution.pdf}
         \caption{}
-        \label{} 
+         
     \end{subfigure}
      \begin{subfigure}[t]{0.45\textwidth}
       \includegraphics[page=4,height=6cm]{background/Figures/MissingDistribution.pdf}
         \caption{}
-        \label{} 
+         
     \end{subfigure}
 \caption{Probability distributions of objects with missing values. The majority of objects with missing values are located at the faint end of the magnitude distributions ($K_s \sim 18$), while a non negligible fraction is at the bright end ($K_s \sim 12$). The small bump at $K_s \sim 16$ may have its origin in the complex pattern of spatial+photometric coverage, see \citet{Bouy2013}.}
 \label{fig:NAsKs}
@@ -404,6 +404,7 @@ where $\boldsymbol{\theta}_f$ and $\boldsymbol{\theta}_c$ indicate the cluster a
 In the following, I assume that the observed quantities, even if they contain missing values, resulted from the convolution of likelihood, given the \emph{true} quantities, with the uncertainty process (see Section \ref{sect:parametric_inference}). The latter could be different for each object, thus resulting in different individual uncertainties. It means that the \gls{ddr2} data set is modelled allowing for its intrinsic heteroscedaticity. Although these uncertainties are not assumed to have the same values, I do assume that they have the same shape. Thus, I assume that uncertainties in our data set belong to the multivariate normal family.  This assumption is standard practice and is also supported by the large and heterogeneous origins of the \gls{ddr2} data set. 
 
 \subsection{The field population}
+\label{sect:field_population}
 To model the field population, I assume that the joint seven-dimensional probability distribution of the field can be factorised into the probability distributions of proper motions and photometry. Thus, the field likelihood of the proper motions and the photometry are assumed to be independent. Also, I assume that both distributions are described by \gls{gmm}. The flexibility of \glspl{gmm} to fit a variety of distribution geometries makes them a suitable model to describe the field density of the heterogeneous \gls{ddr2} data set. 
 
 A \gls{gmm} is a probability distribution resulting from the linear combination of $M$ Gaussian distributions, 
@@ -435,18 +436,35 @@ BIC = \ln{n}\cdot k - 2 \ln{\mathcal{L}}.
 \end{equation}
 
 To estimate the parameters of the \gls{gmm} we use the \gls{em} algorithm. However, the missing values in the photometry prevent the use of the standard form of the algorithm \cite[see for example Chapter 9 of][]{Bishop2006}.
-Instead, I estimated these parameters with the modified version of the \gls{em} algorithm for \gls{gmm} found by \citet{McMichael1996} {and rediscovered by me}. On this version, objects with missing values also contribute to the \gls{mle} of the parameters. I applied this algorithm to \gls{gmm} whose number of components ranged from 1 to 20. The optimal number of gaussians suggested by the \gls{bic} is 14. 
+Instead, I estimated these parameters with the modified version of the \gls{em} algorithm for \gls{gmm} found by \citet{McMichael1996} and rediscovered by me. On this version, objects with missing values also contribute to the \gls{mle} of the parameters. \textbf{I applied this algorithm to the photometric observables of the 98,010 objects (from the \gls{rdr2}) with membership probabilities below 0.75 according to \citet{Bouy2015}. I tested \glspl{gmm} whose number of components ranged from 1 to 20. The optimal number of components suggested by the \gls{bic} is 14. Figure \ref{fig:fphGMM} shows two dimensional projections of these 14 components \gls{gmm}. It is important to notice that only $\sim$1\% of these 98,010 objects have completely observed  photometry. Thus, if we were to work only with these completely observed objects and we have discarded 99\% of the data set, our derived parameters would be severely biased since missing value objects are not uniformly distributed (see Section \ref{sect:missing}).}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.7\textwidth}
+        \includegraphics[page=1,width=\textwidth]{background/Figures/Field_GMM_BIC_[0,4].pdf}
+        
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.7\textwidth}
+      \includegraphics[page=1,width=\textwidth]{background/Figures/Field_GMM_BIC_[2,4].pdf}
+         
+        \caption{}
+    \end{subfigure}
+\caption{$K_s$ vs. $i-K_s$ (a) and $K_s$ vs. $J$ (b) showing projections of the 14 components in the \gls{gmm} used to model the field photometry. The density of field objects with $p <0.75$ \cite[according to][there are 98010 field objects]{Bouy2015} is shown in grey scale. Only 2.4\% and  87.4\%, in (a) and (b) respectively, of these field objects have complete observations in these projections. For this reason, some of the fitted Gaussians in (a) appear almost empty.}
+\label{fig:fphGMM}
+\end{figure}
 
 {In the case of proper motions, since they do not contain missing values, I computed the \gls{gmm} parameters with the standard \gls{em} algorithm. The \gls{bic} finds a model with 15 components, the majority of them with large variances and small fractions (see Fig. \ref{fig:fpmGMM}). These small-fraction Gaussians fit an extended component of the proper motions distributions, which is clearly non-Gaussian. For this reason, we decided modify the mixture of Gaussians by adding a uniform distribution $\mathcal{U}({d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})$, with $S_{\mu_{\alpha}}$ and $S_{\mu_{\delta}}$ the support of the proper motions in Right Ascension and Declination, respectively (see Table \ref{tab:DR2properties}). I changed the \gls{em} algorithm to properly account for this modification. The \gls{bic} applied to this new mixture renders more reasonable results (see Fig. \ref{fig:fpmMMM}), with an eight components mixture distribution: seven Gaussians plus the uniform. This modification improves the \gls{gmm} while simultaneously reduces the number of parameters.}
 
 \begin{figure}[ht!]
     \centering
-    \begin{subfigure}[t]{0.45\textwidth}
+    \begin{subfigure}[t]{0.8\textwidth}
         \includegraphics[page=3,width=\textwidth]{background/Figures/GMM-PM-BIC=15.pdf}
         \caption{}
         \label{fig:fpmGMM}
     \end{subfigure}
-    \begin{subfigure}[t]{0.45\textwidth}
+    \\
+    \begin{subfigure}[t]{0.8\textwidth}
       \includegraphics[page=1,width=\textwidth]{background/Figures/GMM-PM-BIC2-U+7G.pdf}
         \caption{}
         \label{fig:fpmMMM} 
@@ -461,7 +479,11 @@ p_f(\mathbf{d}|\boldsymbol{\theta}_f,\mathbf{u})=&\left[\pi_{f,pm,0}\cdot\mathca
 &\left[ \sum \limits_{i=1}^{14}\pi_{f,ph,i}\cdot \mathcal{N}(\mathbf{d}_{ph} | \boldsymbol{\mu}_{f,ph,i},\boldsymbol{\Sigma}_{f,ph,i}+\mathbf{u}_{ph})\right].
 \label{eq:field}
 \end{align}
-The first and second brackets represent the proper motion (subindex $pm$) and photometric (subindex $ph$) models, respectively, with $\boldsymbol{\pi}_f,\boldsymbol{\mu}_f,\boldsymbol{\Sigma}_f$ their fractions, means and covariance matrices, respectively. { The first term of the proper motion model is the uniform distribution, with $\pi_{f,pm,0}$ its fraction}. The uncertainty process is convolved (see Section \ref{sect:introprobability}) with the assumed models using the individual proper motions ($\mathbf{u}_{pm}$) and photometric ($\mathbf{u}_{ph}$) uncertainties. 
+The first and second brackets represent the proper motion (subindex $pm$) and photometric (subindex $ph$) models, respectively, with $\boldsymbol{\pi}_f,\boldsymbol{\mu}_f,\boldsymbol{\Sigma}_f$ their fractions, means and covariance matrices, respectively. The first term of the proper motion model is the uniform distribution, with $\pi_{f,pm,0}$ its fraction. The uncertainty process is convolved (see Section \ref{sect:introprobability}) with the assumed models using the individual proper motions ($\mathbf{u}_{pm}$) and photometric ($\mathbf{u}_{ph}$) uncertainties. 
+
+\textbf{Table \ref{tab:field_parameters} lists the groups (proper motions or photometry), symbols, dimension, and meanings of all the field parameters $\boldsymbol{\theta}_f$ (see Eq. \ref{eq:genmod}) described in this Section. These parameters are derived from the \gls{rdr2} objects whose cluster membership probability is lower than 0.75 according to \citet{Bouy2015}. As stated earlier, these field parameters remain fixed through the inference process of the cluster parameters $\boldsymbol{\theta}_c$ (see Eq. \ref{eq:genmod}). Thus, there is no need to establish priors for them. }
+
+\input{background/Tables/FieldParameters.txt}
 
 \subsection{The cluster population}
 \label{subsect:cluster}
@@ -476,6 +498,7 @@ Unresolved multiple systems, binary systems particularly, have an impact on the 
 For the sake of simplicity, in the following whenever I refer to the photometric or proper motions model of the \gls{emb}s, I call it the \gls{emb} sequence model (with the subindex $Bs$). I refer to the model of the rest of the stars as the cluster sequence model or simply single stars. Despite that this is an abuse of the terminology, because there are binaries and multiple systems with different mass ratios, it keeps the text more readable.
 
 \subsubsection{Photometric model of single and EMB stars}
+\label{sect:cluster_ph}
 
 The cluster photometric sequences, both for single and \gls{emb} stars, are modelled with cubic splines, one for each of the $Y,J,H,K_s$ vs \gls{ci} \glspl{cmd}. I choose the spline series due to their fitting properties. I tried several polynomial bases (monic, Laguerre, Hermite, Chebyshev) but in spite of the order, they were not able to fit the sequence. In specific, they do not fit the region around \gls{ci} $\sim 3$ where the slope is higher. 
 
@@ -484,11 +507,42 @@ Despite their superior flexibility, spline series require more parameters than p
 Any spline function can be represented in terms of \glspl{bspline}. By definition, a \gls{bspline} of order $n$ is a piece-wise polynomial function of order $n$ in the interval $t_0 \leq x \leq t_n$. The boundary and internal points, $\mathbf{t}=\{t_0,t_1,...,t_n\}$ represent the knots. For a given set of knots, there is one and only one \gls{bspline} representation of the spline, thus the name \glsfirst{bspline}.  In particular, any cubic spline can be represented as,
 
 \begin{equation}
+\label{eq:spline_cubic}
 S_3(CI,\boldsymbol{\beta},\mathbf{t}) = \sum_i \beta_i\cdot B_{i,3}(CI,\mathbf{t}).
 \end{equation}
 Where $B_{i,n}$ are the \glspl{bspline} given by the Cox-de Boor recursive formula, and $\boldsymbol{\beta}$ are the coefficients of the series. For more details on splines and the Cox-de Boor formula see \citet{deBoor1978}.
 
-Despite their fitting properties, \glspl{bspline} present a problem when inferring simultaneously their coefficients and knots: there is multi-modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi-modality, I decided to keep the knots fixed throughout the inference. Although this decision reduces the flexibility of the splines, it allows a still better fit than that of the tested polynomials. To obtain the \gls{mle} of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the \gls{bic} to select among competing models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The \gls{bic} indicates that seven coefficients is the best number of components for the \glspl{bspline} series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the \gls{bic}. {In general, the continuity of a spline function is $C^{p-k}$, with $p$ the degree of the spline, and $k$ the highest multiplicity of the knots \citep{deBoor1978}. In our case, since the knot at 3.22 has a multiplicity of two, then the resulting spline has lost one degree of continuity. It is now $C^1$ continuous. It means that the spline and its derivative are continuous, thus ensuring a smooth function.}
+Despite their fitting properties, \glspl{bspline} present a problem when inferring simultaneously their coefficients and knots: there is multi-modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi-modality, I decided to keep the knots fixed throughout the inference. Although this decision reduces the flexibility of the splines, it allows a still better fit than that of the tested polynomials. To obtain the \gls{mle} of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the \gls{bic} to select among competing models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The \gls{bic} indicates that seven coefficients is the best number of components for the \glspl{bspline} series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the \gls{bic}. \textbf{Figure \ref{fig:fitCMDs} show the spline fits, with the use of the previous knots, to the \gls{rdr2} candidate members of \citet{Bouy2015}. \glspl{emb} are excluded as described in Section \ref{sect:priors}. The positions of the knots are indicated by vertical lines.} 
+
+In general, the continuity of a spline function is $C^{p-k}$, with $p$ the degree of the spline, and $k$ the highest multiplicity of the knots \citep{deBoor1978}. In our case, since the knot at 3.22 has a multiplicity of two, then the resulting spline has lost one degree of continuity. It is now $C^1$ continuous. It means that the spline and its derivative are continuous, thus ensuring a smooth function.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \includegraphics[page=1,height=8cm,width=\textwidth]{background/Figures/Photometry_fit.pdf}
+        \caption{}
+        
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=3,height=8cm,width=\textwidth]{background/Figures/Photometry_fit.pdf}
+        \caption{}
+         
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=5,height=8cm,width=\textwidth]{background/Figures/Photometry_fit.pdf}
+        \caption{}
+         
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=7,height=8cm,width=\textwidth]{background/Figures/Photometry_fit.pdf}
+        \caption{}
+         
+    \end{subfigure}
+\caption{Spline fits (dashed lines) to the single stars candidate members of \citet{Bouy2015} (blue circles) resulting from the use of the knots, $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$, (vertical lines).}
+\label{fig:fitCMDs}
+\end{figure}
+
+
 
 As I mentioned in the introduction to this Section, we assume that the observed photometric quantities are drawn from a distribution resulting from the convolution of the observed uncertainties, with the likelihood, given the \emph{true} quantities. We also assume that the model has an intrinsic dispersion that addresses photometric variations resulting from astrophysical phenomena not treated by our model (see Section \ref{sect:parametric_inference}). These phenomena include, but are not limited to, age, metallicity and distance dispersions, unresolved systems (other than \gls{emb}), variability, and transits. If we were to assume no \emph{true} intrinsic dispersion, then any deviation from the \emph{true} quantities would have to be explained \emph{only} on the basis of the observational uncertainties. Thus it would result in an over-simplistic model, which would underestimate the likelihood of hypothetical true cluster members. 
 
@@ -514,10 +568,14 @@ Thus, the \emph{true} photometry is given by,
 \end{align}
 where
 \begin{align}
-Y &=\mathcal{S}_Y(CI,\hat{\beta}_Y), \nonumber \\
-J &=\mathcal{S}_J(CI,\hat{\beta}_J),\nonumber \\
- H &=\mathcal{S}_H(CI,\hat{\beta}_H), \nonumber \\
- K_s &=\mathcal{S}_{K_s}(CI,\hat{\beta}_{K_s}),  \nonumber 
+\label{eq:spline_Y}
+Y &=\mathcal{S}_Y(CI,\hat{\beta}_Y),\\
+\label{eq:spline_J}
+J &=\mathcal{S}_J(CI,\hat{\beta}_J),\\
+\label{eq:spline_H}
+ H &=\mathcal{S}_H(CI,\hat{\beta}_H), \\
+ \label{eq:spline_K}
+ K_s &=\mathcal{S}_{K_s}(CI,\hat{\beta}_{K_s}), 
 \end{align}
 with $\hat{\beta}_{i}, i\in\{Y,J,H,K_s\}$ the vectors of seven coefficients of the \glspl{bspline} for the $Y,J,H,K_s$ bands.  For the sake of simplicity I denote this $4\times7$ coefficients matrix as $\boldsymbol{\beta}$.
 
@@ -541,9 +599,19 @@ Since the splines are parametrised by the true \gls{ci} of each object, we have 
 
 To marginalise these \glspl{ci} we need a prior, which we provide in a hierarchical way (thus the name Bayesian Hierarchical model). This marginalisation leaves behind a precise estimate of the parameters of the prior distribution. Paradoxically, all objects, even those without a measurement of the \gls{ci}, contribute to this estimate. Here lays the force of the \gls{bhm} .
 
-{We model the prior of the \emph{true} \gls{ci} as a truncated ($0.8\leq CI \leq8$) univariate \gls{gmm} with five components, whose parameters are also inferred from the data. We choose five components as suggested by the \gls{bic} computed from the \gls{em} algorithm for \gls{gmm} applied to the candidate members of \citet{Bouy2015}. I tested larger number of components in the mixture (up to ten), but the posterior distribution did not changed significantly, thus indicating that the \gls{bic} value was a proper assumption.}
+We model the prior of the \emph{true} \gls{ci} as a truncated ($0.8\leq CI \leq8$) univariate \gls{gmm} with five components, whose parameters are also inferred from the data. We choose five components as suggested by the \gls{bic} computed from the \gls{em} algorithm for \gls{gmm} applied to the \gls{rdr2} candidate members of \citet{Bouy2015} \textbf{with observed \glspl{ci}}. I tested larger number of components in the mixture (up to ten), but the posterior distribution did not changed significantly, thus indicating that the \gls{bic} value was a proper assumption. \textbf{Figure \ref{fig:fitCI} shows the fit of this five component univariate \gls{gmm} to the \gls{rdr2} candidate members of \citet{Bouy2015} with observed \glspl{ci}. Notice that these fits are only performed to obtain the best number of components in the \gls{gmm}.}
 
- The \gls{gmm} modelling the prior of the \emph{true} \gls{ci} is 
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[page=1,width=\textwidth]{background/Figures/BIC_Color_fit.pdf}
+\caption{Distribution of observed \glspl{ci} of the candidate members of \citet{Bouy2015} (solid blue line). The uncertainties are taken into account by performing a \gls{kde} in which each object kernel is Gaussian with bandwidth equal to its observed uncertainty. Also shown is the five components \gls{gmm} fitted to this data (solid black line). For the sake of completeness, I also show the distribution of imputed and observed $\glspl{ci}$ for all candidate members of \citet{Bouy2015} (dashed blue line). Missing \glspl{ci} where imputed with those of the closet euclidean neighbour in the five dimensional space.}
+\label{fig:fitCI}
+\end{center}
+\end{figure}
+
+
+
+The \gls{gmm} modelling the prior of the \emph{true} \gls{ci} is 
 
 \begin{equation}
 \label{eq:colordist}
@@ -575,22 +643,64 @@ In these Equations, $\boldsymbol{\theta}_c$ stands for all cluster parameters re
 The observed \gls{ci} and magnitudes help us  to reduce the computing time of the marginalisation integral. We use them to discard  regions of the integral in which the argument is almost zero (i.e. far from the measured values). Although we allow the nuisance parameters \glspl{ci} to have all their possible values, the data, by means of the likelihood, give us information about the distribution of these individual nuisance parameters. To use this information, we proceed as follows. First, we compare the observed photometry to the true one (i.e. the cluster sequence given by the splines). For it we use a grid of 300 points uniformly distributed in the domain of \gls{ci} ($0.8<CI<8$)\footnote{\label{foot:extendedCI}As explained in Section \ref{sect:RDR2}, if this \gls{ci} range will have covered that of all the objects in the \gls{ddr2} data set, the marginalisation integral would have to be computed over the extended \gls{ci} range. Therefore, the computing time of the \gls{bhm}  would have also increased proportionally to the number of extra points in this integral.}. Then, we find the point, $p$, of the grid that is closest to the vector of the observed photometry.  Distance is computed under  the Mahalanobis metric. This metric takes into account the observational uncertainty, $\mathbf{u}_{ph}$, and the intrinsic dispersion of the cluster sequence, $\Sigma_{clus}$. Finally, the limits of the marginalisation integral  are defined as those given by a ball of 3.5 Mahalanobis distances around point $p$. Contributions outside this ball are negligible to the integral ($< 4\times10^{-4}$).
 
 \subsubsection{Proper motion model of EMB and single stars}
+\label{sect:cluster_pm}
 As mentioned before, we assume that the cluster population has two subpopulations: single and \gls{emb} stars.
 We model the proper motions of these two subpopulations with independent \gls{gmm}. If the cluster is virialised (see Chapter \ref{chap:pleiades}), we can assume that{ the distribution of its velocity modulus} is almost Maxwellian (Maxwell-Boltzman distribution). Therefore a \gls{gmm} is a reasonable {approximation}. Furthermore, in the absence of external forces, a virialised system is expected to have spherical symmetry both in its spatial and velocity distributions. Thus we can safely assume that the gaussians within each \gls{gmm} are concentric, thus they share the same mean. However we allow independent means for both single and \gls{emb} subpopulations. The assumption of spherical symmetry may be a weak one in the presence of the galactic potential. It can perturb the cluster and deviate its spatial and velocity distribution from spherical symmetry. Furthermore, the ellipticity of the spatial distribution, which has been reported to be no-negligible \cite[$\epsilon=0.17$, according to ][]{Raboud1998}, can be due to projection effects that further deviate the observed velocity distribution profile from spherical symmetry. Nevertheless, since we model the covariance matrices of the \gls{gmm} of both single and \gls{emb}, as full covariance matrices, any departure from the spherical symmetry in the velocity distribution can still be modelled by the non-diagonal entries of these matrices.
 
 
 We infer the parameters of these \glspl{gmm} as part of our Bayesian hierarchical model. However we set a priori the number of gaussians in each \gls{gmm}. Not doing so will demand a technique in which the model parameters can be augmented. Although such techniques already exist, they are still under computational development \cite[see][for a review of reversible jump \gls{mcmc}]{Fan2011}.
 
-Using the \gls{em} algorithm for \gls{gmm} and the proper motions of the candidate members of \citet{Bouy2015}, I obtained the \glspl{mle} for the \gls{gmm} likelihoods. I did this for configurations of \gls{gmm} ranging from one to five components. The \gls{bic} (Eq. \ref{eq:BIC}) suggested four and two components for the cluster and \gls{emb} \glspl{gmm}, respectively. Since covariance matrices are always symmetric, only three parameters are needed to fully specify the covariance matrices of these bivariate normal distributions.
+Using the \gls{em} algorithm for \gls{gmm} and the proper motions of the \gls{rdr2} candidate members of \citet{Bouy2015}, I obtained the \glspl{mle} for the \gls{gmm} likelihoods. I did this for configurations of \gls{gmm} ranging from one to six components. The \gls{bic} (Eq. \ref{eq:BIC}) suggested four and two components for the cluster and \gls{emb} \glspl{gmm}, respectively. \textbf{Figures \ref{fig:fitPM} and \ref{fig:fitPMprojections} show the Gaussians fitted, and the marginal densities. Notice that this fit is only illustrative of the number of components used for these \glspl{gmm}. } Since covariance matrices are always symmetric, only three parameters are needed to fully specify the covariance matrices of these bivariate normal distributions.
+
+\begin{figure}[ht!]
+    \centering
+       \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=1,height=8cm,width=\textwidth]{background/Figures/BIC_PM_Cs_fit.pdf}
+        \caption{}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=1,height=8cm,width=\textwidth]{background/Figures/BIC_PM_Bs_fit.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{Single stars (a) and \glspl{emb} (b) members of \citet{Bouy2015} (blue circles) in the \gls{rdr2}. Also shown the fitted \glspl{gmm} with four and two components according to the \gls{bic}.}
+\label{fig:fitPM}
+\end{figure}
+
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \includegraphics[page=2,height=8cm,width=\textwidth]{background/Figures/BIC_PM_Cs_fit.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=3,height=8cm,width=\textwidth]{background/Figures/BIC_PM_Cs_fit.pdf}
+        \caption{}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=2,height=8cm,width=\textwidth]{background/Figures/BIC_PM_Bs_fit.pdf}
+        \caption{}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=3,height=8cm,width=\textwidth]{background/Figures/BIC_PM_Bs_fit.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{Marginal distributions of the single stars (a and b) and \glspl{emb} (c and d) candidate members of \citet{Bouy2015} in the \gls{rdr2} (blue lines). The densities result of a \gls{kde} with gaussian kernel and bandwidth equal to the individual uncertainties. Also shown the marginal distribution resulting from the fitted \glspl{gmm} of Fig. \ref{fig:fitPM} (black lines).}
+\label{fig:fitPMprojections}
+\end{figure}
+
+
 
 The cluster (subindex $Cs$) and \gls{emb} (subindex $Bs$) likelihoods of an object with proper motions measurements $\mathbf{d}_{pm}$, and uncertainties $\mathbf{u}_{pm}$, are
 
-\begin{align}
+\begin{align}\label{eq:lik-pm-cs}
 p_{Cs}(\mathbf{d}_{pm}| \boldsymbol{\pi}_{Cs}, \boldsymbol{\mu}_{Cs},\boldsymbol{\Sigma}_{Cs},\mathbf{u}_{pm})
-&= \sum_{i=1}^4\pi_{Cs,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{Cs},\Sigma_{Cs,i}+\mathbf{u}_{pm}) \nonumber\\
+&= \sum_{i=1}^4\pi_{Cs,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{Cs},\Sigma_{Cs,i}+\mathbf{u}_{pm})
+\end{align}
+\begin{align}
 p_{Bs}(\mathbf{d}_{pm}| \boldsymbol{\pi}_{Bs}, \boldsymbol{\mu}_{Bs},\boldsymbol{\Sigma}_{Bs},\mathbf{u}_{pm})
 &= \sum_{i=1}^2\pi_{Bs,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{Bs},\Sigma_{Bs,i}+\mathbf{u}_{pm}).
-\label{eq:lik-pm}
+\label{eq:lik-pm-bs}
 \end{align}
 
 Finally, combining the proper motions and photometric models, the total cluster likelihood of an object with measurement $\mathbf{d}$, and uncertainties $\mathbf{u}$, is
@@ -600,13 +710,17 @@ p_c(\mathbf{d}|\boldsymbol{\theta}_c,\mathbf{u})=\pi_{CB}&\cdot p_{Cs}(\mathbf{d
 +(1-\pi_{CB})&\cdot p_{Bs}(\mathbf{d}_{pm}| \boldsymbol{\pi}_{Bs}, \boldsymbol{\mu}_{Bs},\boldsymbol{\Sigma}_{Bs},\mathbf{u}_{pm}) \cdot  p_{Bs}(\mathbf{d}_{ph}|\boldsymbol{\pi}_{CI},\boldsymbol{\mu}_{CI},\boldsymbol{\sigma}_{CI}, \boldsymbol{\beta},\Sigma_{clus}, \mathbf{u}_{ph}),
 \end{align}
 
-where $\pi_{CB}$ is the parameter representing the proportion or fraction of single cluster sequence stars in the single-\gls{emb} mixture model. The photometric and proper motions likelihoods are given by Equations \ref{eq:lik-seq2} and \ref{eq:lik-pm}, respectively.
+where $\pi_{CB}$ is the parameter representing the proportion or fraction of single cluster sequence stars in the single-\gls{emb} mixture model. The photometric and proper motions likelihoods are given by Equations \ref{eq:lik-seq2}, and \ref{eq:lik-pm-cs} and \ref{eq:lik-pm-bs}, respectively.
 
-Finally, before ending this Section, I present a summary of the symbols used to represent the parameters in the \gls{bhm}  (Table \ref{tab:symbols_parameters}), together with its graphical representation in the form of a \gls{pgm} (Fig. \ref{fig:PGMBHM}).
-\input{background/Tables/SymbolParameters.txt}
+\textbf{Before ending this Section, in Table \ref{tab:cluster_parameters}, I list the groups (proper motions of photometry), symbols, dimensions and meanings of the cluster parameters. Furthermore, Table \ref{tab:all_parameters} lists all parameters in the \gls{bhm} (field and cluster) together with their symbols, status (i.e. if they are free or fixed, and the sample from which their values were derived, in case they are fixed), a brief description of their meaning, and the Section and Equation in which they are explained. Finally, Fig. \ref{fig:PGMBHM} gives the graphical representation of the \gls{bhm} in the form of a \gls{pgm}.}
+
+\input{background/Tables/ClusterParameters.txt}
+
+\input{background/Tables/AllParameters.txt}
 
 
-\begin{figure}[H]
+
+\begin{figure}[ht!]
   \begin{center}
   \resizebox{0.8\textwidth}{!}{\input{background/Figures/Hierarchical_ClusterStars.tex}}
   \end{center}
@@ -848,7 +962,8 @@ Finally, to compare the previous models, we use the model selection methodology 
 \label{sect:priors}
 The Bayesian formalism is characterised by the use of priors. These represent the objective way to establish the subjective beliefs that the user of the model may have about the distribution of the parameter values. Although the beliefs themselves remain subjective, the way to establish them is measurable and reproducible. For example, by stating that I use a normal distribution as the prior for certain parameter, I provide a measure of my subjective beliefs, its \gls{pdf}, that others can reproduce.
 
-In the following, I describe the information used to establish both the family of the prior distribution as well as its hyper-parameters (the parameters at the top hierarchy of the \gls{bhm}). As mentioned before, these families are chosen to fall, whenever possible, in the category of weakly informative priors. 
+In the following, I describe the information used to establish both the family of the prior distribution as well as its hyper-parameters (the parameters at the top hierarchy of the \gls{bhm}). As mentioned before, these families are chosen to fall, whenever possible, in the category of weakly informative priors. \textbf{All the free parameters of the \gls{bhm} together together with their priors and symbols are listed in Table \ref{tab:priors_parameters}.}
+\input{background/Tables/PriorsParameters.txt}
 
 The priors in the \gls{bhm} can be grouped into three main categories. The first one correspond to priors for parameters representing fractions in mixture models. The second and third categories correspond to parameters in the proper motions and photometric models. 
 
@@ -864,40 +979,36 @@ E[x_k]=\frac{\alpha_k}{\sum_k \alpha_k},
 Var[x_k]=\frac{-\alpha_k\cdot (\alpha_k -\sum_k \alpha_k)}{(\sum_k \alpha_k)^2 \cdot (1+\sum_k \alpha_k)}.
 \end{equation}
 
-For the field-cluster mixture we set the hyper-parameters to $\boldsymbol{\alpha}=\{98,2\}$. We expect a mean 98\% of field objects and a 2\% of cluster objects with little variance. These figures correspond to the existing prior knowledge, that is the fraction of field and cluster candidate members found by \citet{Bouy2015}. 
+For the field-cluster mixture we set the hyper-parameters to $\boldsymbol{\alpha}=\{98,2\}$. We expect a mean 98\% of field objects and a 2\% of cluster objects with little variance. These figures correspond to the existing prior knowledge, that is the fraction of field and cluster candidate members of \citet{Bouy2015} contained in the \gls{rdr2}. 
 For the single-\gls{emb} mixture we use an hyper-parameter value, $\boldsymbol{\alpha}_{CB}=\{8,2\}$. We expect a mean 20\% of \gls{emb}, as suggested by \citet{Bouy2015}. 
-For fractions in the proper motions \gls{gmm}, hyper-parameter are $\boldsymbol{\alpha}_{Cs}=\{1,1,5,5\}$ and $\boldsymbol{\alpha}_{Bs}=\{1.2,8.8\}$. These values induce fraction distributions whose means are similar to the fractions recovered after fitting a \gls{gmm} to the  candidate members of \citet{Bouy2015}. 
+For fractions in the proper motions \gls{gmm}, hyper-parameter are $\boldsymbol{\alpha}_{Cs}=\{1,1,5,5\}$ and $\boldsymbol{\alpha}_{Bs}=\{1.2,8.8\}$. These values induce fraction distributions whose means are similar to the fractions recovered after fitting a \gls{gmm} to the  candidate members of \citet{Bouy2015} \textbf{(see Fig. \ref{fig:fitPM} and \ref{fig:fitPMprojections})}. 
 For the fraction in the \gls{gmm} of the \gls{ci} distribution, the hyper-parameter were set all to 1, ($\boldsymbol{\alpha}_{CI}=\{1,1,1,1,1\}$), which results in equal means and large variances for all {components in the mixture}. 
 
-{In the previous cases, with exception of the cluster-field mixture, the hyper parameters are chosen so that the resulting fraction distributions have large variances, see Fig.\ref{figure:priors}.} The narrow variance in the cluster-field mixture expresses our prior belief about the number (fraction) of candidate members within our large data set.
+{In the previous cases, with exception of the cluster-field mixture, the hyper parameters are chosen so that the resulting fraction distributions have large variances, see Fig.\ref{figure:priors}.} The narrow variance in the cluster-field mixture expresses our prior belief about the number (fraction) of candidate members within our large \gls{rdr2} data set.
 
 \begin{figure}[ht!]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
         \includegraphics[page=1,height=9cm,width=\textwidth]{background/Figures/Priors.pdf}
         \caption{}
-        \label{}
     \end{subfigure}
     \begin{subfigure}[t]{0.48\textwidth}
       \includegraphics[page=2,height=9cm,width=\textwidth]{background/Figures/Priors.pdf}
         \caption{}
-        \label{} 
     \end{subfigure}
      \begin{subfigure}[t]{0.48\textwidth}
       \includegraphics[page=3,height=9cm,width=\textwidth]{background/Figures/Priors.pdf}
         \caption{}
-        \label{} 
     \end{subfigure}
      \begin{subfigure}[t]{0.48\textwidth}
       \includegraphics[page=4,height=9cm,width=\textwidth]{background/Figures/Priors.pdf}
         \caption{}
-        \label{} 
     \end{subfigure}
 \caption{\gls{kde} of $10^4$ realisations of the prior distributions of fraction parameters. Distributions of: (a) The field fraction $\pi$, (b) The \gls{emb} fraction, $1-\pi_{CB}$, (c) the proper motions cluster fractions, $\pi_{Cs}$, and (d) the proper motions equal-mass binaries fractions $\pi_{Bs}$.}
 \label{figure:priors}
 \end{figure}
 
-{For the priors of the  means in the proper motions \gls{gmm}}, both of single stars and \gls{emb}, we choose the bivariate normal distribution. We set the hyper-parameters of this bivariate normal to those found after fitting a bivariate normal to the candidate members of \citet{Bouy2015}. These values are
+{For the priors of the  means in the proper motions \gls{gmm}}, both of single stars and \gls{emb}, we choose the bivariate normal distribution. We set the hyper-parameters of this bivariate normal to those found after fitting a bivariate normal to the proper motions of the candidate members of \citet{Bouy2015} in the \gls{rdr2}. \textbf{Figure \ref{fig:fitPMone} shows the proper motions of these objects and the fitted Gaussian. The parameters of the latter are}
 
 \begin{equation}
 \boldsymbol{\mu}_{\mu_{pm}}=(16.30,-39.62) \ \ \mathrm{mas\cdot yr^{-1}},\nonumber
@@ -910,6 +1021,13 @@ For the fraction in the \gls{gmm} of the \gls{ci} distribution, the hyper-parame
 1.18&40.71\\
 \end{array} \right)\ \ \mathrm{mas^2\cdot yr^{-2}}.\nonumber
 \end{equation}
+
+\begin{figure}[ht!]
+    \centering
+      \includegraphics[page=1,width=\textwidth]{background/Figures/Hyp_PM_fit.pdf}
+\caption{Proper motions of the candidate members of \citet{Bouy2015} in the \gls{rdr2} (blue dots), and fitted Gaussian (black line).}
+\label{fig:fitPMone}
+\end{figure}
 
 
 As prior for the covariance matrices of both single stars and \gls{emb} proper motions we use the Half--$t(\nu,\mathbf{A})$ distribution. It is parametrised by a scalar $\nu$ and a vector $\mathbf{A}$. As shown by \citet{Huang2013}, this distribution family leads to more accurate estimations of covariance matrices than the traditional Inverse-Wishart distribution. In specific, the marginal correlation parameters, $\rho$, have the following distribution,
@@ -924,7 +1042,30 @@ Concerning the photometric priors, they can be grouped in three categories: (i) 
 
 For the means in the univariate \gls{gmm} of the \emph{true} \gls{ci}, I choose a uniform distribution in the range  ($0.8\leq CI \leq8$). For the standard deviations I choose the Half--Cauchy$(0,\eta)$ distribution as suggested by \citet{Gelman2006}. The value of $\eta$ is set to an arbitrarily large value, $\eta=100$.
 
-For the coefficients in the spline series we set the priors as univariate normal distributions. To find the mean and variance of these distributions we proceed as follows. First, we remove the \gls{emb} from the list of candidate members of \citet{Bouy2015}. To do this, I performed an iterative fit of the cluster sequence, at each iteration I removed those objects whose photometry was  as bright as that of the \gls{emb}. In the region of $CI > 7$ there are no candidate members of \citet{Bouy2015} or of any other source. Thus, to provide a prior we complement our list of candidate members with the brown-dwarfs from the \citet{Faherty2012} sample. We choose only those objects observed in the same photometric bands of our data set. Finally, we fit the splines, and use the coefficients of this fit as the means, $\mu_{\beta}$ of the univariate normal distributions. The standard deviation terms were set to $\sigma_{\beta}=\{1,1,1,1,1,0.5,0.1\}\,\mathrm{mag}$. These values provide a reasonable compromise between cluster sequences compatible with the previously known candidates, and those far away or with exotic shapes. We show a sample of these priors in Fig. \ref{figure:priorcoefs}. This Figure shows also the brown-dwarfs from \citet{Faherty2012} and the sequence (dashed line) we use to provide the means of the univariate normal distributions.
+For the coefficients in the spline series we set the priors as univariate normal distributions. To find the mean and variance of these distributions we proceed as follows. First, we remove the \gls{emb} from the list of candidate members of \citet{Bouy2015}. To do this, I performed an iterative fit of the cluster sequence, at each iteration I removed those objects whose photometry was  as bright as that of the \gls{emb}. In the region of $CI > 7$ there are no candidate members of \citet{Bouy2015} or of any other source, see Fig \ref{fig:fitCMDs}. Thus, to provide a prior we complement our list of candidate members with the brown-dwarfs from the \citet{Faherty2012} sample. We choose only those objects observed in the same photometric bands of our data set. Finally, we fit the splines, and use the coefficients of this fit as the means, $\mu_{\beta}$ of the univariate normal distributions. \textbf{Figure \ref{fig:fitCMDsBD} shows the four cubic \glspl{bspline} fitted to our four \glspl{cmd} complemented with the \glspl{bd} of \citet{Faherty2012}}. The standard deviation terms were set to $\sigma_{\beta}=\{1,1,1,1,1,0.5,0.1\}\,\mathrm{mag}$. These values provide a reasonable compromise between cluster sequences compatible with the previously known candidates, and those far away or with exotic shapes. We show a sample of these priors in Fig. \ref{figure:priorcoefs}. This Figure shows also the brown-dwarfs from \citet{Faherty2012} and the sequence (dashed line) we use to provide the means of the univariate normal distributions.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \includegraphics[page=2,height=8cm,width=\textwidth]{background/Figures/Photometry_fit.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=4,height=8cm,width=\textwidth]{background/Figures/Photometry_fit.pdf}
+        \caption{}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=6,height=8cm,width=\textwidth]{background/Figures/Photometry_fit.pdf}
+        \caption{}   
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=8,height=8cm,width=\textwidth]{background/Figures/Photometry_fit.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{Spline fits (dashed lines) to the single stars candidate members of \citet{Bouy2015} (blue circles) and the \glspl{bd} of \citet{Faherty2012} (red crosses).}
+\label{fig:fitCMDsBD}
+\end{figure}
+
 
 Again, I choose again the Half--t$(\nu,\boldsymbol{A})$ distribution to set the prior for the parameters of the cluster intrinsic dispersion, $\Sigma_{clus}$.  However, this time I use  $\boldsymbol{A}_{ph}=\{10,10,10,10,10\}$ mag. These values are large when compared to the standard deviation terms of the observed uncertainties. Therefore, they provide a weakly informative prior on the marginal standard deviation terms of the $\Sigma_{clus}$ covariance matrix.
 
@@ -1083,13 +1224,11 @@ $sd(\sigma^2)=\sigma^2 \sqrt{\kappa/n + 2/(n-1)}$ with $\kappa$ the kurtosis and
     \centering
         \includegraphics[width=\textwidth]{background/Figures/BHM/AllMeanParticles.pdf}
         \caption{}
-        \label{}
     \end{subfigure}
     \begin{subfigure}[t]{0.45\textwidth}
     \centering
       \includegraphics[width=\textwidth]{background/Figures/BHM/AllVarParticles.pdf}
         \caption{}
-        \label{} 
     \end{subfigure}
 \caption{Normalised mean (a) and variance (b) of each parameter in \gls{bhm} model as functions of iterations. The normalisation values are the mean and variance of the ensemble of particles positions at the last iteration. Red lines show one and two sigma levels of these normalisation values. Only shown the last 4000 iterations previous to stopping the algorithm.}
 \label{fig:convergence}

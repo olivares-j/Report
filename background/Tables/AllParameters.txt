@@ -1,0 +1,44 @@
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Thu Feb 16 10:48:27 2017
+%\begin{table*}[ht]
+\begin{sidewaystable}
+\caption{Parameters of the BHM. Listed are the groups (cluster or field), symbols, status (wether they are free or fixed in the inference process, and the sample from which the fixed ones are derived), a brief description, and a reference to the Section and Equations were they are introduced. See also Tables \ref{tab:field_parameters} and \ref{tab:cluster_parameters} for more details.}
+{\normalsize
+\begin{tabular}{lllllc}
+\hline
+Group         &         Symbol                & Status & Description & Section &Equation   \\ 
+\hline
+& $\pi$                                    & Free & Fraction of field objects in the data.                               & \ref{sect:generative-model}& \ref{eq:genmod} \\
+\hline
+Cluster            &  $\boldsymbol{\pi}_{Cs}$         & Free  &   Fractions of GMM for the proper motions of single stars.& \ref{sect:cluster_pm} &\ref{eq:lik-pm-cs}\\
+                	       &  $\boldsymbol{\mu}_{Cs}$      & Free  &   Mean of GMM for the proper motions of single stars. &\ref{sect:cluster_pm}&\ref{eq:lik-pm-cs}\\
+              	       &  $\boldsymbol{\Sigma}_{Cs}$ & Free &   Cov. matrices of GMM for the proper motions of single stars.&\ref{sect:cluster_pm} & \ref{eq:lik-pm-cs}\\
+                        &  $\boldsymbol{\pi}_{Bs}$        & Free  &   Fractions of GMM for the proper motions of EMB stars. &\ref{sect:cluster_pm}&\ref{eq:lik-pm-bs}\\
+                	       &  $\boldsymbol{\mu}_{Bs}$      & Free    &   Mean of GMM for the proper motions of single EMB. &\ref{sect:cluster_pm}&\ref{eq:lik-pm-bs}\\
+              	       &  $\boldsymbol{\Sigma}_{Bs}$ & Free    &   Cov. matrices of GMM for the proper motions of EMB. &\ref{sect:cluster_pm}&\ref{eq:lik-pm-bs}\\
+                       &  $\boldsymbol{\pi}_{CI}$          &  Free   &   Fractions of GMM for the \emph{true} CI. &\ref{sect:cluster_ph}&\ref{eq:colordist}\\
+                	      &  $\boldsymbol{\mu}_{CI}$        &   Free  &   Means of GMM for the \emph{true} CI. &\ref{sect:cluster_ph}&\ref{eq:colordist}\\
+              	      &  $\boldsymbol{\sigma}_{CI}$    & Free   &   Standard deviations of GMM for the \emph{true} CI.&\ref{sect:cluster_ph}&\ref{eq:colordist}\\
+              	      &  $\Sigma_{clus}$                      &  Free  &   Cov. matrix representing the intrinsic photometric dispersion.&\ref{sect:cluster_ph}&\ref{eq:lik-seq},\ref{eq:lik-seq2}\\      
+	               & $\hat{\beta}_Y$                        & Free& Coefficients of the B-splines for $Y$ band.&\ref{sect:cluster_ph}&\ref{eq:spline_Y}\\
+	               & $\hat{\beta}_J$                         & Free& Coefficients of the B-splines for $J$ band.&\ref{sect:cluster_ph}&\ref{eq:spline_J}\\
+	               & $\hat{\beta}_H$                         & Free& Coefficients of the B-splines for $H$ band.&\ref{sect:cluster_ph}&\ref{eq:spline_H}\\
+	               & $\hat{\beta}_{K_s}$                   & Free& Coefficients of the B-splines for $K_s$ band.&\ref{sect:cluster_ph}&\ref{eq:spline_K}\\
+	               &  $\textbf{t}$                              & Fixed\footnote{\label{footnote:a}Derived from objects in the RDDR2 (Sect. \ref{sect:RDR2}) with probability $p>0.75$ according to \citet{Bouy2015}.}  &  Knots of the B-splines.&\ref{sect:cluster_ph}&\ref{eq:spline_cubic}\\
+\hline
+Field                 &  $\pi_{f,pm,0}    $           & Fixed\footnote{\label{footnote:b}Derived from objects in the RDDR2 (Sect. \ref{sect:RDR2}) with probability $p<0.75$ according to \citet{Bouy2015}.}       &   Fraction of the uniform distribution &\ref{sect:field_population}&\ref{eq:field}\\
+    		         &  $S_{\mu_{\alpha}}$	           & Fixed\footref{footnote:b}      &   Support of the uniform distribution in R.A &\ref{sect:field_population}&\ref{eq:field}\\
+              	        &  $S_{\mu_{\delta}}$ 	           & Fixed\footref{footnote:b}      &   Support of the uniform distribution in Dec.&\ref{sect:field_population}&\ref{eq:field}\\
+                        &  $\boldsymbol{\pi}_{f,pm}$         & Fixed\footref{footnote:b}     &   Fractions of GMM of field proper motions &\ref{sect:field_population}&\ref{eq:field}\\
+                	       &  $\boldsymbol{\mu}_{f,pm}$       & Fixed\footref{footnote:b}     &   Means of GMM of field proper motions & \ref{sect:field_population}&\ref{eq:field}\\
+              	       &  $\boldsymbol{\Sigma}_{f,pm}$ & Fixed\footref{footnote:b}   &   Cov. matrices of GMM of field proper motions&\ref{sect:field_population}&\ref{eq:field}\\
+                       &  $\boldsymbol{\pi}_{f,ph}$         & Fixed\footref{footnote:b}   &   Fractions of GMM of field photometry &\ref{sect:field_population}&\ref{eq:field}\\
+                	      &  $\boldsymbol{\mu}_{f,ph}$      & Fixed\footref{footnote:b}    &   Means of GMM of field photometry &\ref{sect:field_population}&\ref{eq:field}\\
+              	      &  $\boldsymbol{\Sigma}_{f,ph}$ & Fixed\footref{footnote:b}   &   Cov. matrices of GMM of field photometry&\ref{sect:field_population}&\ref{eq:field} \\
+\hline
+\hline
+\end{tabular}
+}
+\label{tab:all_parameters}
+%\end{table*}
+\end{sidewaystable}

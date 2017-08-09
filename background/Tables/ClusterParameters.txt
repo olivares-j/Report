@@ -1,0 +1,34 @@
+% latex table generated in R 3.1.1 by xtable 1.7-4 package
+% Thu Feb 16 10:48:27 2017
+\begin{table*}[ht]
+\caption{Cluster parameters. Listed are the groups, symbols, dimensions and descriptions of the cluster parameters.}
+\centering
+{\small
+\begin{tabular}{llll}
+\hline
+Group         &         Symbol                & Dimension  &   Description \\ 
+\hline
+                         & $\pi_{CB}$              & 2                & Fractions of single and EMB stars.\\
+\hline
+Proper Motions &  $\boldsymbol{\pi}_{Cs}$      & 4          &   Fractions of GMM for the proper motions of single stars. \\
+                	       &  $\boldsymbol{\mu}_{Cs}$    & 2 &   Mean of GMM for the proper motions of single stars. \\
+              	       &  $\boldsymbol{\Sigma}_{Cs}$ & 4$\times$4 &   Cov. matrices of GMM for the proper motions of single stars. \\
+                        &  $\boldsymbol{\pi}_{Bs}$      & 2          &   Fractions of GMM for the proper motions of EMB stars. \\
+                	       &  $\boldsymbol{\mu}_{Bs}$    & 2 &   Mean of GMM for the proper motions of single EMB. \\
+              	       &  $\boldsymbol{\Sigma}_{Bs}$ & 2$\times$4 &   Cov. matrices of GMM for the proper motions of EMB. \\
+\hline
+Photometry    &  $\boldsymbol{\pi}_{CI}$         & 5                   &   Fractions of GMM for the \emph{true} CI. \\
+                	      &  $\boldsymbol{\mu}_{CI}$      & 5   &   Means of GMM for the \emph{true} CI. \\
+              	      &  $\boldsymbol{\sigma}_{CI}$ & 5 &   Standard deviations of GMM for the \emph{true} CI.\\
+              	      &  $\Sigma_{clus}$ & $5\times5$ &   Cov. matrix representing the intrinsic photometric dispersion.\\      
+	               & $\hat{\beta}_Y$ & 7& Coefficients of the B-splines for $Y$ band.\\
+	               & $\hat{\beta}_J$ & 7& Coefficients of the B-splines for $J$ band.\\
+	               & $\hat{\beta}_H$ & 7& Coefficients of the B-splines for $H$ band.\\
+	               & $\hat{\beta}_{K_s}$ & 7& Coefficients of the B-splines for $K_s$ band.\\
+	                 &  $\textbf{t}$ & 5 &   Knots of the B-splines.\\
+\hline
+\hline
+\end{tabular}
+}
+\label{tab:cluster_parameters}
+\end{table*}

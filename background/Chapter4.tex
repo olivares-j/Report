@@ -243,9 +243,42 @@ On the other hand, after cross matching (at CDS with a 0.5 arcsec radius)  the l
 \end{figure}
  
 \section{The statistical distributions of the Pleiades cluster.}
-Now, I present the results of the statistical distributions that describe the cluster population, which are the main objective of the present work. These distributions result directly or indirectly from the posterior distribution of the parameters in our model. Indirectly means that I use them as parameters of other function (e.g. the mass distribution). Since we have 85 parameters in the \gls{bhm}, I only discuss the posterior distributions of some of these parameters. In particular, those related with the velocity, luminosity and mass distributions. Nevertheless, in Table \ref{tab:parameters}, I summarise the posterior distribution of the parameters in our model using the mode, also I use the 16th and 84th percentiles as a proxy for the uncertainty. The parameter names in this Table correspond to those given in Section \ref{sect:priors} (at Table \ref{tab:symbols_parameters}). 
+Now, I present the results of the statistical distributions that describe the cluster population, which are the main objective of the present work. These distributions result directly or indirectly from the posterior distribution of the parameters in our model. Indirectly means that I use them as parameters of other function (e.g. the mass distribution). Since we have 85 parameters in the \gls{bhm}, I only discuss the posterior distributions of some of these parameters. In particular, those related with the velocity, luminosity and mass distributions. Nevertheless, in Table \ref{tab:parameters}, I summarise the posterior distribution of the parameters in our model using the mode, also I use the 16th and 84th percentiles as a proxy for the uncertainty. The parameter names in this Table correspond to those given in Section \ref{sect:priors} (at Table \ref{tab:priors_parameters}). 
 
-Also, for the sake of completeness, in Fig. \ref{fig:correlations} I depict the values the correlation coefficients among the 85 parameters in the \gls{bhm}. As can be seen from this Figure, the larger correlations appear among parameters describing the true $\gls{ci}$ distribution, and  among these and almost the rest of the parameters. This is expected since the true $\gls{ci}$ is key parameter in the \gls{bhm}. It is also interesting to notice that there is a strong correlation among the coefficients of the splines series modelling different magnitudes. For example, there is a strong correlation among the fourth coefficients of the splines. These correlations are expected since the shape of the cluster sequence is similar in the four \glspl{cmd}.  
+\textbf{The posterior distributions of the parameters in the \glspl{bspline} and the \emph{true} \gls{ci} distribution are shown in Figs. \ref{fig:CMDs_results} and \ref{fig:CI_results}, respectively.  The posterior distributions of the parameters in the proper motion models are described in Section \ref{sect:PMresults}.}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \includegraphics[page=1,height=8cm,width=\textwidth]{background/Figures/BHM/CMDs.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=2,height=8cm,width=\textwidth]{background/Figures/BHM/CMDs.pdf}
+        \caption{}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=3,height=8cm,width=\textwidth]{background/Figures/BHM/CMDs.pdf}
+        \caption{}   
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=4,height=8cm,width=\textwidth]{background/Figures/BHM/CMDs.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{\glspl{cmd} showing the cluster and field members (blue triangles and grey dots, respectively resulting from classification using the $p_t = 0.84$ derived in Sect. \ref{sect:classifier}), together with 100 samples (orange spaghetti graphs) from the posterior distributions of the coefficients of the \glspl{bspline} resulting in the \emph{true} values of the cluster photometry. Also shown, the mode of these 100 samples (blue dashed line), the \gls{emb} sequence (magenta dot dashed line) and projections of the photometric field model (grey ellipses).}
+\label{fig:CMDs_results}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+      \includegraphics[page=1,width=\textwidth]{background/Figures/BHM/Color_members.pdf}
+\caption{\gls{kde} (Gaussian kernel with bandwidth equal to observed uncertainty) of the observed \glspl{ci} of the candidate members of the \gls{bhm} (black line) together with 100 samples from the posterior distribution of the parameters in the \emph{true} \gls{ci} distribution (orange lines). Also shown, the distribution of all \gls{bhm} candidate members (red line, objects with a missing \gls{ci} were imputed from the closest euclidean neighbour).}
+\label{fig:CI_results}
+\end{figure}
+
+
+
+Also, for the sake of completeness, in Fig. \ref{fig:correlations}, I depict the values the correlation coefficients among the 85 parameters in the \gls{bhm}. As can be seen from this Figure, the larger correlations appear among parameters describing the true $\gls{ci}$ distribution, and  among these and almost the rest of the parameters. This is expected since the true $\gls{ci}$ is key parameter in the \gls{bhm}. It is also interesting to notice that there is a strong correlation among the coefficients of the splines series modelling different magnitudes. For example, there is a strong correlation among the fourth coefficients of the splines. These correlations are expected since the shape of the cluster sequence is similar in the four \glspl{cmd}.  
 
 \input{background/Tables/TableParameters.txt}
 
