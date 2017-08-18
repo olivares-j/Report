@@ -437,12 +437,14 @@ J035418.93+252944.0& 0.366009& 0.3760922 &  0.386213 \\
 \end{table}%
 
 
-Furthermore, we restrict the lower limit of the \gls{ci} to the value of the brightest cluster member, \gls{ci}=0.8 in the \gls{ddr2} data set. We do not expect to find new bluer members in the bright part of the \glspl{cmd}. In the Tycho+\gls{dance} data set \citep{Bouy2015}, which comprises the bright side of the cluster sequence, the bluer candidate member of \citet{Bouy2015} (for this data set) has a \gls{ci}=0.67. Showing that the cut at 0.8 is reasonable for the fainter \gls{dance} data set. Also, we set the upper limit of the \gls{ci} one magnitude redder than the colour index of the reddest known cluster member, \gls{ci}=8, thus allowing for new discoveries. Due to the sensitivity limits of the \gls{ddr2} survey in $i$ and $K_s$ bands,\cite[$i\sim23$ mag and $K_s\sim18$ mag, see Appendix A of][]{Bouy2015}, objects with \gls{ci}$>8$ have $K_s$ magnitudes brighter than 16 mag. This combination of \gls{ci} and $K_s$ magnitude is incompatible with the cluster sequence of \citet{Bouy2015} (see Fig. \ref{fig:incompatible_objects}). Thus, we discard a priori these 262 objects as cluster members. Although formally these two cuts in the $CI$ are not needed for the statistical analysis, they nevertheless improved significantly the computing time required for it. If we were to include these objects, the resulting \gls{ci} range (\gls{ci}$\in[-6,12.5]$) would have been 2.5 times larger than the \gls{ci}$\in[0.8,8]$. Thus, increasing in the same amount the computing time of the analysis (for more details, see Footnote \ref{foot:extendedCI} on page \pageref{foot:extendedCI}).
+Furthermore, we restrict the lower limit of the \gls{ci} to the value of the brightest cluster member, \gls{ci}=0.8 in the \gls{ddr2} data set (\textbf{The actual value is \gls{ci}=0.93, see Table \ref{tab:rddr2_cluster}, but 0.8 was chosen conservatively to include the uncertainty}). We do not expect to find new bluer members in the bright part of the \glspl{cmd}. In the Tycho+\gls{dance} data set \citep{Bouy2015}, which comprises the bright side of the cluster sequence, the bluer candidate member of \citet{Bouy2015} (for the Tycho+\gls{dance} data set) has a \gls{ci}=0.67. Showing that the cut at 0.8 is reasonable for the fainter \gls{dance} data set. Also, we set the upper limit of the \gls{ci} one magnitude redder than the colour index of the reddest known cluster member, \gls{ci}=8, thus allowing for new discoveries. Due to the sensitivity limits of the \gls{ddr2} survey in $i$ and $K_s$ bands,\cite[$i\sim23$ mag and $K_s\sim18$ mag, see Appendix A of][]{Bouy2015}, objects with \gls{ci}$>8$ have $K_s$ magnitudes brighter than 16 mag. This combination of \gls{ci} and $K_s$ magnitude is incompatible with the cluster sequence of \citet{Bouy2015} (see Fig. \ref{fig:incompatible_objects}). Thus, we discard a priori these 262 objects as cluster members. 
+
+Although formally these two cuts in the observed $\gls{ci}$ (\textbf{and only in objects with observed \gls{ci}}) are not needed for the statistical analysis, they nevertheless improved significantly the computing time required for it. If we were to include these objects, the resulting \gls{ci} range (\gls{ci}$\in[-6,12.5]$) would have been 2.5 times larger than the \gls{ci}$\in[0.8,8]$. Thus, increasing in the same amount the computing time of the analysis (for more details, see Footnote \ref{foot:extendedCI} on page \pageref{foot:extendedCI}).
 
 \begin{figure}[ht!]
 \begin{center}
-\includegraphics[width=\textwidth]{background/Figures/ColourCuts.eps}
-\caption{$K_s$ vs \gls{ci} CMD showing the candidate members of \citet{Bouy2015}(grey dots) and the \gls{ddr2} objects bluer (blue dots) and redder (red dots) than the \gls{ci}$\in[0.8,8]$.}
+\includegraphics[width=\textwidth]{background/Figures/ColourCuts.pdf}
+\caption{$K_s$ vs \gls{ci} \gls{cmd} showing the density (black contour lines) of all objects (with observed entries in this \gls{cmd}) in the \gls{ddr2}. Also shown, the candidate members of \citet{Bouy2015} (grey dots), and the objects excluded by the cuts at \gls{ci}=0.8 (blue dots) and \gls{ci}=8 (red dots). See text for details.}
 \label{fig:incompatible_objects}
 \end{center}
 \end{figure}
@@ -523,8 +525,31 @@ $K_s$[mag]&0.020 &  0.060 &  0.079 & 0.087  & 0.101 & 9.998  & 5013\\
 \label{tab:rddr2_field}
 \end{table}%
 
-\subsubsection{The High Membership Probability Sample (HMPS)}
-The data set for the analysis of the Pleiades \gls{psd} consists of the high membership probability objects recovered after applying the \gls{bhm} methodology (see Section \ref{sect:datamodelling}) to the \gls{rdr2} data set. For the sake of simplicity, I call this data set the \gls{hmps}. Although the \gls{ddr2} extends up to a radius of 6$^{\circ}$, the spatial coverage is not homogeneous. As Fig. \ref{fig:originDANCeDR2} shows, the deepest images of \emph{UKIDSS} cover the entire region while the rest of the instruments cover mainly the central part. Due to this patchy pattern, \citet{Bouy2015} used the central 3$^{\circ}$ region as the most complete one. Thus, for the the analysis of the \gls{psd} we define two samples, the complete one comprising those objects in the central $3^{\circ}$, and the extended one, which includes all objects in the \gls{hmps} up to a radius of $6^{\circ}$.
+\subsubsection{The High Membership Probability Set (HMPS)}
+The data set for the analysis of the Pleiades \gls{psd} consists of the high membership probability objects recovered after applying the \gls{bhm} methodology (see Section \ref{sect:datamodelling}) to the \gls{rdr2} data set. For the sake of simplicity, I call this data set the \gls{hmps}. \textbf{Table \ref{tab:hmps} summarises the values of the observables in this data set}. Although the \gls{ddr2} extends up to a radius of 6$^{\circ}$, the spatial coverage is not homogeneous. As Fig. \ref{fig:originDANCeDR2} shows, the deepest images of \emph{UKIDSS} cover the entire region while the rest of the instruments cover mainly the central part. Due to this patchy pattern, \citet{Bouy2015} used the central 3$^{\circ}$ region as the most complete one. Thus, for the the analysis of the \gls{psd} we define two samples, the complete one comprising those objects in the central $3^{\circ}$, and the extended one, which includes all objects in the \gls{hmps} up to a radius of $6^{\circ}$.
+
+\begin{table}[ht!]
+\caption{Summary of the 1967 objects classified as members by the \gls{bhm}.}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Observable & Min. & 1st. Qu. & Median & Mean & 3rd. Qu. & Max. & NA's \\
+\hline
+\hline
+RA [deg]   & 51.42 &  55.67 & 56.69 &  56.76  & 57.81  & 62.81 & 0\\
+Dec. [deg] &19.13  & 23.11  & 24.10 &  24.13  & 25.22 &  29.56 &0\\
+$\mu_{\alpha} [mas\cdot yr^{-1}]$&-23.34  & 14.59  & 16.32 &  16.73 &  18.37  & 53.84&0\\
+$\mu_{\delta} [mas\cdot yr^{-1}]$&-81.370 &-42.410& -40.130& -40.480& -37.760&  -2.016&0\\
+i -$K_s$[mag] &  0.934 &  2.979  & 3.357    & 3.325   &  3.648  &6.662   &643\\
+Y [mag]           &   8.284 & 13.660 & 14.360  &14.590  &15.310  &20.100 &   467 \\
+J [mag]           &   7.058 & 12.060& 13.370  & 13.180 & 14.290 & 18.570&      5\\
+H [mag]          &   7.009 & 11.430 & 12.810  & 12.620 & 13.750 & 17.480&      9 \\
+$K_s$ [mag]  &   7.008 & 11.190 & 12.500  & 12.320 & 13.410 & 16.740&    0\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:hmps}
+\end{table}%
 
 
 

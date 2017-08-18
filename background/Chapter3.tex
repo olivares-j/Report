@@ -731,9 +731,9 @@ where $\pi_{CB}$ is the parameter representing the proportion or fraction of sin
 \section{The methodology for the analysis of the PSD}
 \label{sect:PSDmethod}
 
-In this Section, I present the methodology applied to investigate the \glsfirst{psd}. Although this analysis uses the cluster membership probabilities recovered by the \gls{bhm}, is independent of the latter. It means that the kinematic and photometric distributions derived by the  \gls{bhm}  are assumed to be independent of the \gls{psd} of the cluster. Section \ref{sect:RF-2} details the reasons of this decision. 
+In this Section, I present the methodology applied to investigate the \glsfirst{psd}. This analysis uses the candidate members in the \glsfirst{hmps} (see Section \ref{sect:RDR2}), the ones recovered by the \gls{bhm}. Although the analysis of the \gls{psd} uses the membership probabilities of the \gls{bhm}, it is independent of the latter. It means that the kinematic and photometric distributions derived by the  \gls{bhm}  are assumed to be independent of the \gls{psd} of the cluster. Section \ref{sect:RF-2} details the reasons of this decision. 
 
-The generative model of the \gls{psd} is similar to that of the \gls{bhm}  (Eq. \ref{eq:genmod}). However, instead of inferring the fraction of field objects in the data set (which would be similar to the estimated contamination rate on the \glsfirst{hmps}, see Section \ref{sect:classifier}), each object contributes to the cluster model proportionally to its membership probability, $P$ (the ones from the \gls{bhm}). Thus the generative model of the \gls{psd} for object $n$ is
+The generative model of the \gls{psd} is similar to that of the \gls{bhm}  (Eq. \ref{eq:genmod}). However, instead of inferring the fraction of field objects in the data set (which would be similar to the estimated contamination rate on the \gls{hmps}, see Section \ref{sect:classifier}), each object contributes to the cluster model proportionally to its membership probability, $P$ (the ones obtained by the \gls{bhm}). Thus the generative model of the \gls{psd} for object $n$ is
 
 \begin{equation}
 \label{eq:genmodPSD}
@@ -948,7 +948,7 @@ where the parameter $R_b$ follows the same elliptic angle dependence as defined 
 
 \subsection{Models with luminosity segregation}
 \label{sect:SegregatedModels}
-In this Section, we consider an extension to introduce a dependence of the core radius with the $J$ magnitude. We select the $J$ magnitude because it is the reddest of the magnitudes that are available for all candidate members. We assume that stars of the same mass have approximately the same magnitude and that distance differences (due to the 3D spatial extend of the Pleiades) average out. The core radius dependence with the $J$ magnitude is modelled as
+In this Section, we consider an extension to introduce a dependence of the core radius with the $J$ magnitude. We select the $J$ magnitude because it is the \textbf{bluest} of the magnitudes that are available for \textbf{almost} all candidate members in the \gls{hmps} (\textbf{see Table \ref{tab:hmps}}). We assume that stars of the same mass have approximately the same magnitude and that distance differences (due to the 3D spatial extend of the Pleiades) average out. The core radius dependence with the $J$ magnitude is modelled as
 
 \begin{equation}
   r_c(\phi,J) = r_c(\phi)+\kappa\cdot(J-13.5).
