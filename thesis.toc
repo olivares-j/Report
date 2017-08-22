@@ -32,52 +32,52 @@
 \contentsline {subsection}{\numberline {3.2.3}Graphical representation.}{57}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}The BHM for the Pleiades DANCe data set}{58}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Missing values}{59}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}The generative model}{60}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}The field population}{62}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}The cluster population}{67}{subsection.3.3.4}
-\contentsline {subsubsection}{Photometric model of single and EMB stars}{68}{section*.38}
-\contentsline {subsubsection}{Proper motion model of EMB and single stars}{74}{section*.42}
-\contentsline {section}{\numberline {3.4}The methodology for the analysis of the PSD}{76}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Models with radial symmetry}{80}{subsection.3.4.1}
-\contentsline {subsubsection}{Extensions of the classical profiles}{82}{section*.48}
-\contentsline {subsection}{\numberline {3.4.2}Central symmetry constraint}{83}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Models with biaxial symmetry}{84}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Models with luminosity segregation}{85}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Priors}{86}{section.3.5}
-\contentsline {section}{\numberline {3.6}Sampling the posterior distribution}{93}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}PSO}{95}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}MCMC}{96}{subsection.3.6.2}
-\contentsline {subsubsection}{Generalities}{96}{section*.55}
-\contentsline {subsubsection}{Metropolis-Hastings}{97}{section*.56}
-\contentsline {subsubsection}{Hamiltonian Monte Calro}{98}{section*.57}
-\contentsline {subsubsection}{Affine invariant}{98}{section*.58}
-\contentsline {subsubsection}{Nested sampling}{99}{section*.59}
-\contentsline {subsection}{\numberline {3.6.3}Implementation and convergence: PSO and MCMC}{100}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Codes}{102}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}The modified charged PSO}{103}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Improvements of emcee}{104}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}GMM for the field population}{104}{subsection.3.7.3}
-\contentsline {subsection}{\numberline {3.7.4}Hybrid-HPC implementations}{106}{subsection.3.7.4}
-\contentsline {chapter}{\numberline {4}Results}{108}{chapter.4}
-\contentsline {section}{\numberline {4.1}Performance of the classifier}{108}{section.4.1}
-\contentsline {section}{\numberline {4.2}Comparison with the literature}{117}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Candidate members from \citet {Stauffer2007}}{118}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Candidate members from \citet {Bouy2015}}{118}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Candidate members from \citet {Rebull2016}}{123}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}The statistical distributions of the Pleiades cluster.}{125}{section.4.3}
-\contentsline {section}{\numberline {4.4}Updating the prior knowledge}{128}{section.4.4}
-\contentsline {section}{\numberline {4.5}Projected spatial distribution}{131}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Selection of models with radial symmetry}{132}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Selection of models with biaxial symmetry}{136}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Selection of models with luminosity segregation}{137}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Proper motions distribution}{141}{section.4.6}
-\contentsline {section}{\numberline {4.7}Luminosity distribution}{142}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{142}{subsection.4.7.1}
-\contentsline {section}{\numberline {4.8}Mass distribution}{148}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{148}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Present day system mass distribution}{150}{subsection.4.8.2}
-\contentsline {section}{\numberline {4.9}The mass distribution on time}{154}{section.4.9}
-\contentsline {chapter}{\numberline {5}Conclusions and future work}{160}{chapter.5}
-\contentsline {section}{\numberline {5.1}Current issues and future improvements}{162}{section.5.1}
-\contentsline {chapter}{Bibliography}{164}{section.5.1}
-\contentsline {chapter}{Acronyms}{176}{section*.98}
+\contentsline {subsection}{\numberline {3.3.2}The generative model}{62}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}The field population}{64}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}The cluster population}{69}{subsection.3.3.4}
+\contentsline {subsubsection}{Photometric model of single and EMB stars}{69}{section*.39}
+\contentsline {subsubsection}{Proper motion model of EMB and single stars}{76}{section*.43}
+\contentsline {section}{\numberline {3.4}The methodology for the analysis of the PSD}{79}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Models with radial symmetry}{82}{subsection.3.4.1}
+\contentsline {subsubsection}{Extensions of the classical profiles}{84}{section*.49}
+\contentsline {subsection}{\numberline {3.4.2}Central symmetry constraint}{85}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Models with biaxial symmetry}{86}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Models with luminosity segregation}{87}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Priors}{88}{section.3.5}
+\contentsline {section}{\numberline {3.6}Sampling the posterior distribution}{95}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}PSO}{97}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}MCMC}{98}{subsection.3.6.2}
+\contentsline {subsubsection}{Generalities}{98}{section*.56}
+\contentsline {subsubsection}{Metropolis-Hastings}{99}{section*.57}
+\contentsline {subsubsection}{Hamiltonian Monte Calro}{100}{section*.58}
+\contentsline {subsubsection}{Affine invariant}{100}{section*.59}
+\contentsline {subsubsection}{Nested sampling}{101}{section*.60}
+\contentsline {subsection}{\numberline {3.6.3}Implementation and convergence: PSO and MCMC}{102}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Codes}{104}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}The modified charged PSO}{105}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Improvements of emcee}{106}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}GMM for the field population}{106}{subsection.3.7.3}
+\contentsline {subsection}{\numberline {3.7.4}Hybrid-HPC implementations}{108}{subsection.3.7.4}
+\contentsline {chapter}{\numberline {4}Results}{110}{chapter.4}
+\contentsline {section}{\numberline {4.1}Performance of the classifier}{110}{section.4.1}
+\contentsline {section}{\numberline {4.2}Comparison with the literature}{119}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Candidate members from \citet {Stauffer2007}}{120}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Candidate members from \citet {Bouy2015}}{120}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Candidate members from \citet {Rebull2016}}{125}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}The statistical distributions of the Pleiades cluster.}{127}{section.4.3}
+\contentsline {section}{\numberline {4.4}Updating the prior knowledge}{130}{section.4.4}
+\contentsline {section}{\numberline {4.5}Projected spatial distribution}{133}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Selection of models with radial symmetry}{134}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Selection of models with biaxial symmetry}{138}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Selection of models with luminosity segregation}{139}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Proper motions distribution}{143}{section.4.6}
+\contentsline {section}{\numberline {4.7}Luminosity distribution}{144}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{144}{subsection.4.7.1}
+\contentsline {section}{\numberline {4.8}Mass distribution}{150}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{150}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Present day system mass distribution}{152}{subsection.4.8.2}
+\contentsline {section}{\numberline {4.9}The mass distribution on time}{156}{section.4.9}
+\contentsline {chapter}{\numberline {5}Conclusions and future work}{162}{chapter.5}
+\contentsline {section}{\numberline {5.1}Current issues and future improvements}{164}{section.5.1}
+\contentsline {chapter}{Bibliography}{166}{section.5.1}
+\contentsline {chapter}{Acronyms}{178}{section*.99}

@@ -319,7 +319,31 @@ From the physical perspective, they occur due to faint or bright sources that pr
 
 From the statistical perspective, important aspects of missing values are, i) the probability distribution of the sources in which they occur, and ii) if they originate due to censoring or truncation. 
 
-In the \gls{ddr2}, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not {uniform}. Missing values occur with higher probability at the brightest and faintest ends of the photometric distributions ($\sim 11$ mag and $\sim 18$ mag in $J,H$ and $K_s$ bands, respectively), see Figure \ref{fig:NAsKs}. This is a crucial aspect for the statistical analysis. If missing values were {uniformly} distributed, then, any statistical analysis derived using only objects with completely observed vectors would be unbiased. This will occur because the objects with completely observed vectors would be a random sample of the data set. {Since this is not the case in the \gls{ddr2}, objects with missing values must be incorporated in the data set and properly treated to avoid biases.} 
+\textbf{In the \gls{ddr2}, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not uniform. Missing values occur with higher probability at the faintest end of the photometric distributions ($\sim 18$ mag in $J,H$ and $K_s$ bands). Figure \ref{fig:NAsDDR2} shows the distribution of objects having missing values according to the bands in which they were observed. As mentioned, the vast majority of these objects occur at the faint end, close to the sensitivity limit of the survey. It coincides with the sensitivity limits of the UKIDSS Galactic Cluster Survey \cite[$Y\sim 20.3$, $J\sim19.5$, $H\sim K_s\sim18.6$ according to][]{2007MNRAS.379.1599L}, which provides the deepest photometry in the \gls{ddr2}. In this Figure, the bumps at the bright and middle ranges arise due to the mixing of surveys. The first bump corresponds to the survey carried out by \citet{Bouy2015}. As mentioned in their Appendix A, due to saturation, the $Y$ band photometry was limited to objects fainter than $\sim 13$ magnitude. Thus, they complemented the Pleiades \gls{dance} catalogue with shallow $Y$ band photometry in the magnitude range of 8 to 14 magnitudes but only for 40 candidate members of \citet{Stauffer2007} and their surrounding objects \cite[see][for more details]{Bouy2015}. Thus, the large amount of missing $Y$ values in the 8 to 14 mag range of Fig. \ref{fig:NAsDDR2} come from those objects not observed by these authors. The second bump at the middle range is slightly fainter than the sensitivity limits of the 2MASS survey ($J\sim 16.4$, $H\sim15.5$ and $K_s \sim 14.8$, see Section 6.2 of the Explanatory Supplement to the 2MASS All Sky Data Release\footnote{\url{https://www.ipac.caltech.edu/2mass/releases/allsky/doc/sec6_2.html}}), which indicates that it comes from the mixing of the 2MASS and UKIDSS surveys. Due to the different spatial resolutions, some objects are detected in 2MASS and not in UKIDSS and vice versa. The missing $Y$ band values come from objects observed only by 2MASS.}
+
+The distribution of missing values is a crucial aspect for the statistical analysis. If missing values were uniformly distributed, then, any statistical analysis derived using only objects with completely observed vectors would be unbiased. This will occur because the objects with completely observed vectors would be a random sample of the data set. As shown in Figs. \ref{fig:NAsDDR2} and \ref{fig:NAs}, this is not the case neither in the \gls{ddr2} nor in the \gls{rdr2}. Therefore, objects with missing values must be incorporated in the data set and properly treated to avoid biases.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[page=1,height=6cm]{background/Figures/MissingDistributionDDR2.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=2,height=6cm]{background/Figures/MissingDistributionDDR2.pdf}
+        \caption{}        
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=3,height=6cm]{background/Figures/MissingDistributionDDR2.pdf}
+        \caption{}         
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=4,height=6cm]{background/Figures/MissingDistributionDDR2.pdf}
+        \caption{}         
+    \end{subfigure}
+\caption{Scaled density distributions in $Y,J,H$ and $K_s$ bands of \gls{ddr2} objects with missing values in the rest of the bands. The majority of these objects are located at the faint end of the magnitude distributions ($Y \sim 20$, $J \sim 19$, $H\sim18.5$, and $K_s \sim 18$). A non negligible fraction of missing  $Y$ band photometry is at the bright end ($J,H,K_s \sim 8 - 14$ mag), and in the middle range of 13 to 16 magnitudes. See text for details.}
+\label{fig:NAsDDR2}
+\end{figure}
 
 \begin{figure}[ht!]
     \centering
@@ -343,23 +367,20 @@ In the \gls{ddr2}, missing values occur only in the photometric measurements (se
         \caption{}
          
     \end{subfigure}
-\caption{Probability distributions of objects with missing values. The majority of objects with missing values are located at the faint end of the magnitude distributions ($K_s \sim 18$), while a non negligible fraction is at the bright end ($K_s \sim 12$). The small bump at $K_s \sim 16$ may have its origin in the complex pattern of spatial+photometric coverage, see \citet{Bouy2013}.}
-\label{fig:NAsKs}
+\caption{Scaled density distributions in $Y,J,H$ and $K_s$ bands of \gls{rdr2} objects with missing values in the rest of the bands. The features are similar to those in Fig. \ref{fig:NAsDDR2}. The small differences come from the fact that the \gls{rdr2} is not a random sample of the \gls{ddr2}.}
+\label{fig:NAs}
 \end{figure}
 
+Truncation occurs when the data set does not contain records, neither of the measured value nor of the number of measurements, for objects whose measured quantity lies outside certain limits.\textbf{ The \gls{ddr2} is truncated at the sensitivity limits of the UKIDSS survey}. On the other hand, censoring happens when the data set contains only partial information about the actual value of the measured quantity. Basically, censoring happens when the value lies outside the upper or lower limits of the measuring instrument, and these limits become the only available record of the measurement.\textbf{ In the \gls{ddr2} censoring occurs in objects whose values are outside the sensitivity limits of the detectors.} Currently, the \gls{ddr2} does not provide upper or lower limits for the censored data. Although these limits could also be inferred from the data, the heterogeneous origin of the \gls{ddr2} prohibits this task. Furthermore, the missing values in the \gls{ddr2} data set do not occur only because of censoring. Indeed, cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures are just some examples of potential sources of missing values. The statistical treatment of missing values originating from each of these sources lies beyond the scope of this work. 
 
-
-
-{Truncation occurs when the data set does not contain records, neither of the measured value nor of the number of measurements, for objects whose measured quantity lies outside certain limits}. On the other hand, censoring happens when the data set contains only partial information about the actual value of the measured quantity. Basically,  censoring happens when the value lies outside the upper or lower limits of the measuring instrument, and these limits become the only available record of the measurement. Currently, the \gls{ddr2} does not provide upper or lower limits for the censored data. Although these limits could also be inferred from the data, the heterogeneous origin of the \gls{ddr2} prohibits this task. Furthermore, the missing values in the \gls{ddr2} data set do not occur only because of censoring. Indeed, cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures are just some examples of potential sources of missing values. The statistical treatment of missing values originating from all these sources lies beyond the scope of this work. However, there is a general way to deal with missing values {whatever} their origin.
-
-In terms of probability, there is no distinction between missing values and parameters. Therefore, we can marginalise missing values as we do with any other nuisance parameter. If the vector of measurements $\mathbf{d}$ has a missing value in entry $i$, then $x_{i} = NA$ , and $\mathbf{d}=\{x_1,x_2,...,x_{i-1},NA,x_{i+1}...,x_n\}$, with $n$ the dimension of $\mathbf{d}$. Thus, the marginalised likelihood of this datum, given model parameters $\boldsymbol{\theta}$ is
+However, in terms of probability, there is no distinction between missing values and parameters. Therefore, we can marginalise missing values as we do with any other nuisance parameter\textbf{ with the aid of a prior}. If the vector of measurements $\mathbf{d}$ has a missing value in entry $i$, then $x_{i} = NA$ , and $\mathbf{d}=\{x_1,x_2,...,x_{i-1},NA,x_{i+1}...,x_n\}$, with $n$ the dimension of $\mathbf{d}$. Thus, the marginalised likelihood of this datum, given model parameters $\boldsymbol{\theta}$ is
 
 \begin{equation}
 \label{eq:marginalmiss}
-p(\mathbf{d}|\boldsymbol{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i-1},x_{i}= NA,x_{i+1},...,d_n\}|\boldsymbol{\theta})\cdot \mathrm{d}x_{i}.
+p(\mathbf{d}|\boldsymbol{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i-1},x_{i}= NA,x_{i+1},...,d_n\}|\boldsymbol{\theta})\cdot p(x_i)\cdot \mathrm{d}x_{i},
 \end{equation}
-
-Throughout this work, missing entries are marginalised in the previous way whenever present.
+\textbf{with $p(x_i)$ the prior distribution for the missing value. Because missing values, as explained before, arise not only from censoring but from several other sources, some of them unknown, I assume that the prior $p(x_i)$ is uniform. This assumption is called \emph{ignorability} of the missing process \cite[see Chapter 8 of][for more details]{Gelman2013}. The modelling of missing values could be improved by the inclusion of more \emph{ad hoc} priors, however, the uniform prior allows to perform the above integral analytically. Specifying a prior for each of the missing values would demand to numerically evaluate the integral, which would have required a tremendous amount of computing power.}
+Therefore, throughout this work, missing entries are marginalised in the previous way whenever present.
 
 %I made a remark of a point that may seem obvious but it is important to remember. Let $p(a)$ be a probability distribution, $A$ a random sample of $n$ points from it, and $p_A(a)$ the empirical probability distribution of $A$. Let $B$ be a non-random sample of $p(a)$ with $n$ elements, and empirical probability distribution $p_B(a)$. In the limit of $n\rightarrow \infty$, $p_A(a)=p(a)$ however $p_B(a)\neq p(a)$. Therefore, $p_A(a)\neq p_B(a)$. Similarly, in data with missing values, if the missing value pattern is not random, the distribution of the completely observed data (with non-missing values) differs from that of all the data. In \citet{Olivares2017} we show this subtle but important difference in the case of the \gls{dance} data set. 
 
