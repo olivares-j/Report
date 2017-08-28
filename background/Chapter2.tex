@@ -362,7 +362,7 @@ Thus, our photometric set of observables is made of $i-K_s, Y,J,H$ and $K_s$.
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics[page=1,height=8cm]{background/Figures/CIs.pdf}
-\caption{$K_s$ vs $i-K_s$ CMD for the Pleiades candidate members of \citet{Bouy2015}}.
+\caption{$K_s$ vs $i-K_s$ CMD for the Pleiades candidate members of \citet{Bouy2015} with membership probability $>0.75$.}
 \label{fig:CI}
 \end{center}
 \end{figure}
@@ -389,7 +389,7 @@ Thus, our photometric set of observables is made of $i-K_s, Y,J,H$ and $K_s$.
         \caption{}
          
     \end{subfigure}
-    \caption{CMD for the Pleiades candidate members of \citet{Bouy2015}. The magnitude $K_s$ is shown versus the colour indices: $Y-K_s$(a), $J-K_s$(b), $H-K_s$(c), and $Y-J$ (d).}
+    \caption{CMD for the Pleiades candidate members of \citet{Bouy2015}  with membership probability $>0.75$. The magnitude $K_s$ is shown versus the colour indices: $Y-K_s$(a), $J-K_s$(b), $H-K_s$(c), and $Y-J$ (d).}
     \label{fig:otherCI}
 \end{figure}
 
@@ -399,6 +399,8 @@ Thus, our photometric set of observables is made of $i-K_s, Y,J,H$ and $K_s$.
 Since both photometry and proper motions carry crucial information for the disentanglement of the cluster population, we restrict the data set to only those objects with observed proper motions, and also at least two photometric entries in our photometric set ($i-K_s,Y,J,H,K_s$). {Objects with only one photometric entry, although theoretically could be included in the data set, are left aside due to computational reasons. Their treatment requires selection statements to choose between the univariate and multivariate computational libraries that proved to be computationally expensive.}
 
 The previous restrictions exclude 22 candidate members of \citet{Bouy2015}, which only have one observed value in the photometry. For these particular objects, we compute their marginal proper motion membership probability a posteriori, once the parameters of the model were inferred. The mode and 16 and 84 percentiles of their membership probabilities are listed in Table \ref{tab:22excluded}. Only four of these 22 objects have membership probabilities below 0.5, which may indicate they are contaminants. Since these membership probabilities were computed using only the kinematic information, these four members could not be discarded as probable candidate members.
+
+\textbf{In the following, whenever I mention the Pleiades candidate members of \citet{Bouy2015}, I refer to the 1988 objects in the \gls{ddr2} with \citet{Bouy2015} membership probabilities grater than 0.75, and with at least two observed values in the photometry.}
 
 \begin{table}[htdp]
 \caption{Membership probabilities of the 22 excluded candidate members of \citet{Bouy2015}.}
@@ -453,7 +455,7 @@ Although formally these two cuts in the observed $\gls{ci}$ (\textbf{and only in
 With the previous restrictions to the \gls{ddr2} reduced it to 1 424 893 objects, with the largest number of rejected objects ($\sim 500\, 000$) resulting from a completely missing photometry.
 
 \subsubsection{The Restricted DANCe Data Release 2 (RDDR2)}
-Our computational constraints and the costly computations of our methodology (see Sect. \ref{sect:BHM}), prevented its application to the entire data set. However, since the precision of our methodology, as that of any statistical analysis, increases with the number of independent observations, we find that a size of $10^5$ source for our data is a reasonable compromise. Although a smaller data set produces faster results, it also renders a less precise and potentially more biased model of the field (in the area around the cluster) and therefore, a more contaminated model of the cluster. Thus, our data set was restricted to the $10^5$ objects with highest membership probabilities according to \citet{Bouy2015}. In the following I refer to this data set as the \gls{rdr2}. The majority of these objects ($\sim$98\%) belong to the field with cluster membership probabilities about zero according to \citet{Sarro2014,Bouy2015}. Thus, under the assumption that the membership probabilities given by these authors are correct, the probability of leaving out a cluster member is negligible. The \gls{rdr2} data set is used to construct the cluster model and obtain the membership probability of its $10^5$ objects. For the remainder of the objects in the \gls{ddr2}, we assign membership probabilities \emph{a posteriori}, once the cluster model is constructed. 
+Our computational constraints and the costly computations of our methodology (see Sect. \ref{sect:BHM}), prevented its application to the entire data set. However, since the precision of our methodology, as that of any statistical analysis, increases with the number of independent observations, we find that a size of $10^5$ source for our data is a reasonable compromise. Although a smaller data set produces faster results, it also renders a less precise and potentially more biased model of the field (in the area around the cluster) and therefore, a more contaminated model of the cluster. Thus, our data set was restricted to the $10^5$ objects with highest membership probabilities according to \citet{Bouy2015}. \textbf{This is equivalent to set a probability threshold at $p=1.05e^{-11}$ and select objects above this level.} In the following I refer to this data set as the \gls{rdr2}. The majority of these objects ($\sim$98\%) belong to the field with cluster membership probabilities about zero according to \citet{Sarro2014,Bouy2015}. Thus, under the assumption that the membership probabilities given by these authors are correct, the probability of leaving out a cluster member is negligible. The \gls{rdr2} data set is used to construct the cluster model and obtain the membership probability of its $10^5$ objects. For the remainder of the objects in the \gls{ddr2}, we assign membership probabilities \emph{a posteriori}, once the cluster model is constructed. 
 
 Tables \ref{tab:rddr2_cluster} and \ref{tab:rddr2_field} show summaries of the observables and uncertainties for the 98012 field and 1988 cluster objects in the \gls{rdr2}, respectively. This classification is based on the membership probabilities and probability threshold ($p=0.75$) derived by \citet{Bouy2015}.
 

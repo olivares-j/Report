@@ -379,7 +379,9 @@ However, in terms of probability, there is no distinction between missing values
 \label{eq:marginalmiss}
 p(\mathbf{d}|\boldsymbol{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i-1},x_{i}= NA,x_{i+1},...,d_n\}|\boldsymbol{\theta})\cdot p(x_i)\cdot \mathrm{d}x_{i},
 \end{equation}
-\textbf{with $p(x_i)$ the prior distribution for the missing value. Because missing values, as explained before, arise not only from censoring but from several other sources, some of them unknown, I assume that the prior $p(x_i)$ is uniform. This assumption is called \emph{ignorability} of the missing process \cite[see Chapter 8 of][for more details]{Gelman2013}. The modelling of missing values could be improved by the inclusion of more \emph{ad hoc} priors, however, the uniform prior allows to perform the above integral analytically. Specifying a prior for each of the missing values would demand to numerically evaluate the integral, which would have required a tremendous amount of computing power.}
+\textbf{with $p(x_i)$ the prior distribution for the missing value. Because missing values, as explained before, arise not only from censoring but from several other sources, some of them unknown, I assume that the prior $p(x_i)$ is uniform. This assumption is called \emph{ignorability} of the missing process \cite[see Chapter 8 of][for more details]{Gelman2013}. Notice however, that the impact of the uniform prior relays deeply in the multidimensionality of the data and in the correlation between the missing and observed variables. When this correlation is negligible, the observed data provides no information, thus rendering the results similar to those performed only in the completely observed data. Since photometric variables are highly correlated (see Fig. \ref{fig:fphGMM2}), objects with missing values provide useful information that must be taken into account.}
+
+\textbf{The modelling of missing values could be improved by the inclusion of more \emph{ad hoc} priors or selection functions, however, the uniform prior allows to perform the above integral analytically. Specifying a prior for each of the missing values would demand to numerically evaluate the integral, which would have required a tremendous amount of computing power.}
 Therefore, throughout this work, missing entries are marginalised in the previous way whenever present.
 
 %I made a remark of a point that may seem obvious but it is important to remember. Let $p(a)$ be a probability distribution, $A$ a random sample of $n$ points from it, and $p_A(a)$ the empirical probability distribution of $A$. Let $B$ be a non-random sample of $p(a)$ with $n$ elements, and empirical probability distribution $p_B(a)$. In the limit of $n\rightarrow \infty$, $p_A(a)=p(a)$ however $p_B(a)\neq p(a)$. Therefore, $p_A(a)\neq p_B(a)$. Similarly, in data with missing values, if the missing value pattern is not random, the distribution of the completely observed data (with non-missing values) differs from that of all the data. In \citet{Olivares2017} we show this subtle but important difference in the case of the \gls{dance} data set. 
@@ -457,25 +459,45 @@ BIC = \ln{n}\cdot k - 2 \ln{\mathcal{L}}.
 \end{equation}
 
 To estimate the parameters of the \gls{gmm} we use the \gls{em} algorithm. However, the missing values in the photometry prevent the use of the standard form of the algorithm \cite[see for example Chapter 9 of][]{Bishop2006}.
-Instead, I estimated these parameters with the modified version of the \gls{em} algorithm for \gls{gmm} found by \citet{McMichael1996} and rediscovered by me. On this version, objects with missing values also contribute to the \gls{mle} of the parameters. \textbf{I applied this algorithm to the photometric observables of the 98,010 objects (from the \gls{rdr2}) with membership probabilities below 0.75 according to \citet{Bouy2015}. I tested \glspl{gmm} whose number of components ranged from 1 to 20. The optimal number of components suggested by the \gls{bic} is 14. Figure \ref{fig:fphGMM} shows two dimensional projections of these 14 components \gls{gmm}. It is important to notice that only $\sim$1\% of these 98,010 objects have completely observed  photometry. Thus, if we were to work only with these completely observed objects and we have discarded 99\% of the data set, our derived parameters would be severely biased since missing value objects are not uniformly distributed (see Section \ref{sect:missing}).}
+Instead, I estimated these parameters with the modified version of the \gls{em} algorithm for \gls{gmm} found by \citet{McMichael1996} and rediscovered by me. On this version, objects with missing values also contribute to the \gls{mle} of the parameters. \textbf{I applied this algorithm to the five dimensional photometric observables of the 98,010 objects (from the \gls{rdr2}) with membership probabilities below 0.75 according to \citet{Bouy2015}. I tested \glspl{gmm} whose number of components ranged from 1 to 20. The optimal number of components suggested by the \gls{bic} is 14. Figures \ref{fig:fphGMM} and \ref{fig:fphGMM2} show two dimensional projections of the 14 components in the five dimensional \gls{gmm}. It is important to notice that only $\sim$1\% of these 98,010 objects have completely observed photometry (i.e. no missing values in any observable). For this reason, some of the Gaussians appear empty in Fig. \ref{fig:fphGMM}. However, Fig. \ref{fig:fphGMM2} shows projections of the same 14 component and five dimensional \gls{gmm} in the magnitude-magnitude diagrams, where the percentage of completeness is above 80\%. As a consequence, there are no empty Gaussians in this Figure, as shown by the log scale density. If we were to work only with the completely observed objects and discarded 99\% of the data set, our derived parameters would be severely biased since missing value objects are not uniformly distributed (see Section \ref{sect:missing}).}
 
 \begin{figure}[ht!]
     \centering
-    \begin{subfigure}[t]{0.7\textwidth}
-        \includegraphics[page=1,width=\textwidth]{background/Figures/Field_GMM_BIC_[0,4].pdf}
-        
+    \begin{subfigure}[t]{0.48\textwidth}
+        \includegraphics[page=2,height=8cm,width=\textwidth]{background/Figures/Field_GMM.pdf}
         \caption{}
     \end{subfigure}
-    \begin{subfigure}[t]{0.7\textwidth}
-      \includegraphics[page=1,width=\textwidth]{background/Figures/Field_GMM_BIC_[2,4].pdf}
-         
+    \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=3,height=8cm,width=\textwidth]{background/Figures/Field_GMM.pdf}
         \caption{}
     \end{subfigure}
-\caption{$K_s$ vs. $i-K_s$ (a) and $K_s$ vs. $J$ (b) showing projections of the 14 components in the \gls{gmm} used to model the field photometry. The density of field objects with $p <0.75$ \cite[according to][there are 98010 field objects]{Bouy2015} is shown in grey scale. Only 2.4\% and  87.4\%, in (a) and (b) respectively, of these field objects have complete observations in these projections. For this reason, some of the fitted Gaussians in (a) appear almost empty.}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=4,height=8cm,width=\textwidth]{background/Figures/Field_GMM.pdf}
+        \caption{} 
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=5,height=8cm,width=\textwidth]{background/Figures/Field_GMM.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{\glspl{cmd} showing projections of the 14 components in the \gls{gmm} (ellipses for the covariance matrix and crosses for the mean) used in the model the field photometry. The density of field objects with $p <0.75$ \cite[according to][there are 98010 field objects]{Bouy2015} is shown in grey scale. Notice that only $\sim2.4\%$ of these field objects have complete observations in these projections. For this reason, some of the Gaussians appear almost empty. The ellipses shown in Fig. \ref{fig:CMDs_results} represent this \gls{gmm}.}
 \label{fig:fphGMM}
 \end{figure}
 
-{In the case of proper motions, since they do not contain missing values, I computed the \gls{gmm} parameters with the standard \gls{em} algorithm. The \gls{bic} finds a model with 15 components, the majority of them with large variances and small fractions (see Fig. \ref{fig:fpmGMM}). These small-fraction Gaussians fit an extended component of the proper motions distributions, which is clearly non-Gaussian. For this reason, we decided modify the mixture of Gaussians by adding a uniform distribution $\mathcal{U}({d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})$, with $S_{\mu_{\alpha}}$ and $S_{\mu_{\delta}}$ the support of the proper motions in Right Ascension and Declination, respectively (see Table \ref{tab:DR2properties}). I changed the \gls{em} algorithm to properly account for this modification. The \gls{bic} applied to this new mixture renders more reasonable results (see Fig. \ref{fig:fpmMMM}), with an eight components mixture distribution: seven Gaussians plus the uniform. This modification improves the \gls{gmm} while simultaneously reduces the number of parameters.}
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \includegraphics[page=7,height=8cm,width=\textwidth]{background/Figures/Field_GMM.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=8,height=8cm,width=\textwidth]{background/Figures/Field_GMM.pdf}
+        \caption{}
+     \end{subfigure}
+\caption{Magnitude-magnitude diagrams showing projections of the 14 components in the \gls{gmm} (ellipses and crosses) used in the model the field photometry, and the logarithm of the density (grey) of field objects with $p <0.75$ \cite[according to][there are 98010 field objects]{Bouy2015}. Notice that $\sim85\%$ of these field objects have complete observations in the projections shown.}
+\label{fig:fphGMM2}
+\end{figure}
+
+In the case of proper motions, since they do not contain missing values, I computed the \gls{gmm} parameters with the standard \gls{em} algorithm. The \gls{bic} finds a model with 15 components, the majority of them with large variances and small fractions (see Fig. \ref{fig:fpmGMM}). These small-fraction Gaussians fit an extended component of the proper motions distributions, which is clearly non-Gaussian. For this reason, we decided modify the mixture of Gaussians by adding a uniform distribution $\mathcal{U}({d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})$, with $S_{\mu_{\alpha}}$ and $S_{\mu_{\delta}}$ the support of the proper motions in Right Ascension and Declination, respectively (see Table \ref{tab:DR2properties}). I changed the \gls{em} algorithm to properly account for this modification. The \gls{bic} applied to this new mixture renders more reasonable results (see Fig. \ref{fig:fpmMMM}), with an eight components mixture distribution: seven Gaussians plus the uniform. This modification improves the \gls{gmm} while simultaneously reduces the number of parameters.
 
 \begin{figure}[ht!]
     \centering
@@ -486,11 +508,11 @@ Instead, I estimated these parameters with the modified version of the \gls{em} 
     \end{subfigure}
     \\
     \begin{subfigure}[t]{0.8\textwidth}
-      \includegraphics[page=1,width=\textwidth]{background/Figures/GMM-PM-BIC2-U+7G.pdf}
+      \includegraphics[page=1,width=\textwidth]{background/Figures/Field_GMM.pdf}
         \caption{}
         \label{fig:fpmMMM} 
     \end{subfigure}
-\caption{Gaussian (a) and Modified (b) Mixture Models fitted to the proper motions of the field objects in the \gls{rdr2} data set (density in grey scale). The crosses and ellipses indicate the means and the one-$\sigma$ covariance matrices, respectively. The colour code indicates the value of the fraction in the mixture. Uniform distribution not shown in (b)}
+\caption{Gaussian (a) and Modified (b) Mixture Models fitted to the proper motions of the field objects in the \gls{rdr2} data set (density in grey scale). The crosses and ellipses indicate the means and the one-$\sigma$ covariance matrices, respectively. The colour code indicates the value of the fraction in the mixture. Uniform distribution not shown in (b). The ellipses in Fig. \ref{fig:PM} show the Modified Mixture Model of this figure.}
 \label{fig:GMMvsMMM}
 \end{figure}
 
