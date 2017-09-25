@@ -144,14 +144,14 @@ Let $\mathbf{D}$ be the data, i.e. the collection of statistics of the $N$ objec
 
  with $p_n$ explicitly stating that the individual probability distributions are distinct. 
  
-Similarly, if the likelihood of the data, $p(\mathbf{D}|\boldsymbol{\theta},M)$ is assumed to be independent for each object, then
+Similarly, if the likelihood of the data, $p(\mathbf{D}|\boldsymbol{\theta},\mathcal{M})$ is assumed to be independent for each object, then
 
 \begin{equation}
 \label{eq:lik_datum}
- p(\mathbf{D}|\boldsymbol{\theta},M) = \prod_{n=1}^N p(\mathbf{d}_n|\boldsymbol{\theta},M).
+ p(\mathbf{D}|\boldsymbol{\theta},\mathcal{M}) = \prod_{n=1}^N p(\mathbf{d}_n|\boldsymbol{\theta},\mathcal{M}).
 \end{equation}
 
-The term $p(\mathbf{d}_n|\boldsymbol{\theta},M)$ is the likelihood of datum $\mathbf{d}_n$. This is also called the \emph{generative} model, since it contains the necessary information to generate the data. 
+The term $p(\mathbf{d}_n|\boldsymbol{\theta},\mathcal{M})$ is the likelihood of datum $\mathbf{d}_n$. This is also called the \emph{generative} model, since it contains the necessary information to generate the data. 
 
 
 To take into account the uncertainty process for object $n$, we model the datum $\mathbf{d}_n$ as resulting from the addition of the true value, $\mathbf{x}_n$, which is given by the model, with a random variable, $\mathbf{e}_n$, given by the uncertainty process. This is
@@ -164,21 +164,21 @@ In general, if the model does not contain any intrinsic dispersion, then its lik
 In particular, it can be assumed that both the uncertainty process of datum $\mathbf{d}_n$, and the likelihood of the model are normally distributed with variances $\boldsymbol{\Sigma}_n^2$ and $\boldsymbol{\Sigma}^2$, respectively, 
 \begin{align}
 p(\mathbf{e}_n|\mathbf{\Sigma}_n^2)= &\mathcal{N}(\mathbf{e}_n|0,\boldsymbol{\Sigma}_n^2), \nonumber\\
-p(x_n|\boldsymbol{\theta},M,\mathbf{\Sigma}^2)= &\mathcal{N}(\mathbf{x}_n|\boldsymbol{\theta},M,\boldsymbol{\Sigma}^2).\nonumber
+p(\mathbf{x}_n|\boldsymbol{\theta},\mathcal{M},\mathbf{\Sigma}^2)= &\mathcal{N}(\mathbf{x}_n|\boldsymbol{\theta},\mathcal{M},\boldsymbol{\Sigma}^2).\nonumber
 \end{align}
 Formally, $\boldsymbol{\Sigma}^2$ is part of the set of model parameters, $\boldsymbol{\theta}$, but I explicitly leave it outside to exemplify the process. 
 
 Then the addition of these two normally distributed random variables results in another normally distributed random variable\footnote{The convolution of two Gaussian \glspl{pdf}  is another Gaussian \gls{pdf}.}. Thus,
 
 \begin{equation}
-p(\mathbf{x}_n|\boldsymbol{\theta},M,\boldsymbol{\Sigma}^2)*p(\mathbf{e}_n|\boldsymbol{\Sigma}_n^2) = \mathcal{N}(\mathbf{d}_n|\boldsymbol{\theta},M,\boldsymbol{\Sigma}_n^2+\boldsymbol{\Sigma}^2).
+p(\mathbf{x}_n|\boldsymbol{\theta},\mathcal{M},\boldsymbol{\Sigma}^2)*p(\mathbf{e}_n|\boldsymbol{\Sigma}_n^2) = \mathcal{N}(\mathbf{d}_n|\boldsymbol{\theta},\mathcal{M},\boldsymbol{\Sigma}_n^2+\boldsymbol{\Sigma}^2).
 \end{equation}
 
 Therefore, Eq. \ref{eq:lik_datum}, can be expressed in general as,
 
 \begin{equation}
 \label{eq:lik_generativemodel}
-p(\mathbf{D}|\boldsymbol{\theta},M) = \prod_{n=1}^N p(\mathbf{d}_n|\boldsymbol{\theta},M,\mathbf{u}_n),
+p(\mathbf{D}|\boldsymbol{\theta},\mathcal{M}) = \prod_{n=1}^N p(\mathbf{d}_n|\boldsymbol{\theta},\mathcal{M},\mathbf{u}_n),
 \end{equation}
 where $\mathbf{u}_n$ is the uncertainty of datum $\mathbf{d}_n$.
 
@@ -207,25 +207,25 @@ Here, hypotheses can be identified with models. Thus, this principle tells us we
 
 When comparing a linear model to a quadratic one in which the constant term has been fixed, we see that they have the same number of free parameters, two, but clearly the second one has an extra fixed assumption. Therefore, choosing the model with fewer free parameters does not necessarily means choosing the model with the fewest assumptions.
 
-One of the great advantages of the Bayesian methodology is that it incorporates directly Ockham's principle. Suppose that we want to compare two models, $M_1$ and $M_2$, which we assume describe the data set, $\mathbf{D}$. Each model has prior probabilities, $p(M_k)$ and likelihoods $p(\mathbf{D}|M_k)$ (with $k=1,2$). Notice that now, I use Bayes' theorem for models and not for parameters within a model. So, the prior probabilities of the models reflect our beliefs about the fixed assumptions within each model. On the other hand, the likelihood of the data, given the model, is related to the parameters (the free assumptions) and their prior probabilities, both within a model. This likelihood of the data given the model corresponds to the \emph{evidence} of the model (Eq. \ref{eq:evidence}). This evidence, written in terms of the model parameters, $\theta_k$, is now
+One of the great advantages of the Bayesian methodology is that it incorporates directly Ockham's principle. Suppose that we want to compare two models, $\mathcal{M}_1$ and $\mathcal{M}_2$, which we assume describe the data set, $\mathbf{D}$. Each model has prior probabilities, $p(\mathcal{M}_k)$ and likelihoods $p(\mathbf{D}|\mathcal{M}_k)$ (with $k=1,2$). Notice that now, I use Bayes' theorem for models and not for parameters within a model. So, the prior probabilities of the models reflect our beliefs about the fixed assumptions within each model. On the other hand, the likelihood of the data, given the model, is related to the parameters (the free assumptions) and their prior probabilities, both within a model. This likelihood of the data given the model corresponds to the \emph{evidence} of the model (Eq. \ref{eq:evidence}). This evidence, written in terms of the model parameters, $\boldsymbol{\theta}_k$, is now
 
  \begin{equation}
-p(\mathbf{D}|M_k)=\int_{\theta_k} p(\mathbf{D}|\theta_k,M_K)\cdot p(\theta_k|M_k)\cdot \mathrm{d}\theta_k. \label{eq:evidence2}
+p(\mathbf{D}|\mathcal{M}_k)=\int_{\boldsymbol{\theta}_k} p(\mathbf{D}|\boldsymbol{\theta}_k,\mathcal{M}_K)\cdot p(\boldsymbol{\theta}_k|\mathcal{M}_k)\cdot \mathrm{d}\boldsymbol{\theta}_k. \label{eq:evidence2}
 \end{equation}
 Bayes' theorem applied to models, instead of individual parameters as illustrated above, tells us that
 \begin{equation}
-p(M_k|\mathbf{D})=\frac{p(\mathbf{D}|M_k)\cdot p(M_k)}{p(\mathbf{D})},
+p(\mathcal{M}_k|\mathbf{D})=\frac{p(\mathbf{D}|\mathcal{M}_k)\cdot p(\mathcal{M}_k)}{p(\mathbf{D})},
 \end{equation}
-with $k=1,2$. Since there are only two models, their prior probabilities are related by $p(M_1)= 1- p(M_2)$. Therefore,
+with $k=1,2$. Since there are only two models, their prior probabilities are related by $p(\mathcal{M}_1)= 1- p(\mathcal{M}_2)$. Therefore,
  \begin{equation}
-p(M_k|\mathbf{D})=\frac{p(\mathbf{D}|M_k)\cdot p(M_k)}{p(\mathbf{D}|M_1)\cdot p(M_1)+p(\mathbf{D}|M_2)\cdot p(M_2)}.
+p(\mathcal{M}_k|\mathbf{D})=\frac{p(\mathbf{D}|\mathcal{M}_k)\cdot p(\mathcal{M}_k)}{p(\mathbf{D}|\mathcal{M}_1)\cdot p(\mathcal{M}_1)+p(\mathbf{D}|\mathcal{M}_2)\cdot p(\mathcal{M}_2)}.
 \end{equation}
 From this last Equation, the ratio of the posterior distributions is:
 \begin{equation}
 \label{eq:modelselection}
-\frac{p(M_1|\mathbf{D})}{p(M_2|\mathbf{D})}=\frac{p(\mathbf{D}|M_1)\cdot p(M_1)}{p(\mathbf{D}|M_2)\cdot p(M_2)}.
+\frac{p(\mathcal{M}_1|\mathbf{D})}{p(\mathcal{M}_2|\mathbf{D})}=\frac{p(\mathbf{D}|\mathcal{M}_1)\cdot p(\mathcal{M}_1)}{p(\mathbf{D}|\mathcal{M}_2)\cdot p(\mathcal{M}_2)}.
 \end{equation}
-This ratio provides an objective measure of how better the model $M_1$ is when compared to model $M_2$, under the measure provided by the data $\mathbf{D}$ by means of the evidence. When both prior probabilities  $p(M_1)$ and $p(M_2)$ are set alike, the ratio of posteriors equals the ratio of likelihoods. This is known as the \emph{Bayes factor} \cite[for a similar derivation and some examples of its application see][]{Kaas1995}. 
+This ratio provides an objective measure of how better the model $\mathcal{M}_1$ is when compared to model $\mathcal{M}_2$, under the measure provided by the data $\mathbf{D}$ by means of the evidence. When both prior probabilities  $p(\mathcal{M}_1)$ and $p(\mathcal{M}_2)$ are set alike, the ratio of posteriors equals the ratio of likelihoods. This is known as the \emph{Bayes factor} \cite[for a similar derivation and some examples of its application see][]{Kaas1995}. 
 
 Even when the priors for the models are set alike, the evidences themselves (Eq. \ref{eq:evidence2}) embody Ockham's principle. The evidence is the integral, in parametric space, of the prior times the likelihood, with the likelihood acting as a weight to the priors.  Then, the larger the number of parameters (free assumptions) is, the greater the volume over which the integral must be carried on, and the most spread the prior probability gets. Thus, unless the likelihood increases as well, the evidence is smaller in models with larger number of parameters.
 
@@ -233,16 +233,16 @@ As explained in this section, the paramount importance of Bayes' theorem comes f
 
 \subsection{Membership probability}
 
-In the previous Section we {derived} the ratio of the probabilities of two competing models $M_1$ and $M_2$, given the data $\mathbf{D}$. In this Section, I describe a similar problem: the probability of two competing models given the two likelihoods for a single datum, $\mathbf{d}$. It also can be interpreted as the probability that the datum $\mathbf{d}$ was generated by model $M_k$. This probability is commonly known as the membership probability of the datum $\mathbf{d}$ to belong to model or class, $M_k$ ($k=1,2$). 
+In the previous Section we {derived} the ratio of the probabilities of two competing models $\mathcal{M}_1$ and $\mathcal{M}_2$, given the data $\mathbf{D}$. In this Section, I describe a similar problem: the probability of two competing models given the two likelihoods for a single datum, $\mathbf{d}$. It also can be interpreted as the probability that the datum $\mathbf{d}$ was generated by model $\mathcal{M}_k$. This probability is commonly known as the membership probability of the datum $\mathbf{d}$ to belong to model or class, $\mathcal{M}_k$ ($k=1,2$). 
 
 Bayes' theorem for this particular case is,
 
 \begin{equation}
 \label{eq:prob}
-p( M_k | \mathbf{d}) =\frac{p(\mathbf{d}|M_k)\cdot p(M_k)}{\sum_{k=1}^2 p(\mathbf{d}|M_k)\cdot p(M_k)},
+p( \mathcal{M}_k | \mathbf{d}) =\frac{p(\mathbf{d}|\mathcal{M}_k)\cdot p(\mathcal{M}_k)}{\sum_{k=1}^2 p(\mathbf{d}|\mathcal{M}_k)\cdot p(\mathcal{M}_k)},
 \end{equation}
 
-where $p(\mathbf{d}|M_k)$ is the likelihood of datum $\mathbf{d}$ and, $p(M_k)$ is the prior probability of model $M_k$.
+where $p(\mathbf{d}|\mathcal{M}_k)$ is the likelihood of datum $\mathbf{d}$ and, $p(\mathcal{M}_k)$ is the prior probability of model $\mathcal{M}_k$.
 
 
 
@@ -310,85 +310,133 @@ The current understanding of the Pleiades cluster together with the description 
 
 Once the \emph{a priori} knowledge has bee gathered, the creation of the model becomes an iterative and continuous process. Assembling the knowledge into a coherent system demands continuous iterations of decision making, test, and analysis of preliminary results. This Section provides a snapshot of this process: the state of the model once the article \citet{Olivares2017} was submitted.
 
-Section \ref{sect:missing} explains the statistical procedure to deal with one of the crucial aspects of the \gls{ddr2} data set: objects with missing values in their measurement vector. Later, Section \ref{sect:generative-model} provides details of how the relevant knowledge about the Pleiades cluster and field populations are embedded in the generative model of the data.
-\subsection{Missing values}
+The following is a brief description of the \gls{bhm}. Probabilistic models (likelihoods) are created for the field and cluster populations. These models, together with the data set, are used to infer both the posterior distributions of the cluster parameters, and the membership probabilities of objects in the data set. Both cluster and field models are assumed to be independent in photometry and proper motions. The proper motions and photometric elements of the field model are described using \glspl{gmm}. The cluster population is additionally model as the joint population of single stars and \gls{emb}. Both cluster proper motions models, for singles and \gls{emb}, are described using \gls{gmm}. The photometric models of both single and \gls{emb} consist of multivariate normal distributions whose means and covariances are parameters of the model. The means of these multivariate normal distributions are parameterised by means of spline functions. In turn, these are parametrised by the \emph{true} \gls{ci} of each star, which is marginalised using the \emph{true} colour distribution. Later, this \emph{true} \gls{ci} distribution will be used, in combination with the splines parameters, to derive the distributions of the magnitudes, and from them the luminosity distributions. 
+
+The details are explained in the following Sections. First, Section \ref{sect:missing}, explains the statistical procedure to deal with one of the crucial aspects of the \gls{ddr2} data set: objects with missing values in their measurement vector. Later, Section \ref{sect:generative-model} provides details of how the relevant knowledge about the Pleiades cluster and field populations are embedded in the generative model of the data. Finally, Sections \ref{sect:field_population} and \ref{subsect:cluster} deal with the explanation of the field and cluster model, respectively.
+
+\subsection{Treatment of objects with missing values}
 \label{sect:missing}
-Missing values refer to a non-measured or non-available (NA) value in the vector of measurements of an object. They can arise due to different statistical or physical processes. 
+A missing values refer to a non-measured or non-available value in the vector of measurements of an object. It can arise due to different statistical or physical processes. 
 
-From the physical perspective, they occur due to faint or bright sources that produce counts values outside the dynamical range of the detector. They can also emerge due to detector malfunctions, e.g. electronic failures, or to random effects, e.g. cosmic rays. 
+From the physical perspective, missing values occur due to faint or bright sources that produce counts values outside the dynamical range of the detector. They can also emerge due to detector malfunctions, e.g. electronic failures, or to random effects, e.g. cosmic rays. 
 
-From the statistical perspective, important aspects of missing values are, i) the probability distribution of the sources in which they occur, and ii) if they originate due to censoring or truncation. 
+From the statistical perspective, it is important to know if their origin is deterministic or stochastic. In the former, they occur only above or below a certain hard limit, while in the latter, they follow a probability distribution. If its origin is deterministic, there are two possible scenarios: censoring and truncation. 
 
-\textbf{In the \gls{ddr2}, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not uniform. Missing values occur with higher probability at the faintest end of the photometric distributions ($\sim 18$ mag in $J,H$ and $K_s$ bands). Figure \ref{fig:NAsDDR2} shows the distribution of objects having missing values according to the bands in which they were observed. As mentioned, the vast majority of these objects occur at the faint end, close to the sensitivity limit of the survey. It coincides with the sensitivity limits of the UKIDSS Galactic Cluster Survey \cite[$Y\sim 20.3$, $J\sim19.5$, $H\sim K_s\sim18.6$ according to][]{2007MNRAS.379.1599L}, which provides the deepest photometry in the \gls{ddr2}. In this Figure, the bumps at the bright and middle ranges arise due to the mixing of surveys. The first bump corresponds to the survey carried out by \citet{Bouy2015}. As mentioned in their Appendix A, due to saturation, the $Y$ band photometry was limited to objects fainter than $\sim 13$ magnitude. Thus, they complemented the Pleiades \gls{dance} catalogue with shallow $Y$ band photometry in the magnitude range of 8 to 14 magnitudes but only for 40 candidate members of \citet{Stauffer2007} and their surrounding objects \cite[see][for more details]{Bouy2015}. Thus, the large amount of missing $Y$ values in the 8 to 14 mag range of Fig. \ref{fig:NAsDDR2} come from those objects not observed by these authors. The second bump at the middle range is slightly fainter than the sensitivity limits of the 2MASS survey ($J\sim 16.4$, $H\sim15.5$ and $K_s \sim 14.8$, see Section 6.2 of the Explanatory Supplement to the 2MASS All Sky Data Release\footnote{\url{https://www.ipac.caltech.edu/2mass/releases/allsky/doc/sec6_2.html}}), which indicates that it comes from the mixing of the 2MASS and UKIDSS surveys. Due to the different spatial resolutions, some objects are detected in 2MASS and not in UKIDSS and vice versa. The missing $Y$ band values come from objects observed only by 2MASS.}
+Truncation occurs when the data set contains measures of the population but until a certain limit. All information of the population above this limit is lost. Thus, the data set does not contain records, neither of the measured value nor of the number of measurements, for objects whose measured quantity lies outside the truncation limits.  On the other hand, censoring happens when the data set contains only partial information about the actual value of the measured quantity. This information is the number of objects with missing values and the threshold limit upon which they appear. Basically, censoring happens when the value lies outside the upper or lower limits of the measuring instrument, and the number of these objects become the only available record.
 
-The distribution of missing values is a crucial aspect for the statistical analysis. If missing values were uniformly distributed, then, any statistical analysis derived using only objects with completely observed vectors would be unbiased. This will occur because the objects with completely observed vectors would be a random sample of the data set. As shown in Figs. \ref{fig:NAsDDR2} and \ref{fig:NAs}, this is not the case neither in the \gls{ddr2} nor in the \gls{rdr2}. Therefore, objects with missing values must be incorporated in the data set and properly treated to avoid biases.
+In the \gls{ddr2}, the proper motions are truncated to lay within the limits of -100 mas yr$^-1$ and 100 mas yr$^-1$ in both R.A. and Dec., see Section \ref{sect:DDR2}. However, due to its heterogenous origin, it does not posses unique truncation or censoring limits in its photometry.  Although these limits could also be inferred from the data, the large number of \gls{ddr2} sources (not just surveys, but instruments and detectors) prohibits this task. 
 
-\begin{figure}[ht!]
-    \centering
-    \begin{subfigure}[t]{0.45\textwidth}
-        \includegraphics[page=1,height=6cm]{background/Figures/MissingDistributionDDR2.pdf}
-        \caption{}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=2,height=6cm]{background/Figures/MissingDistributionDDR2.pdf}
-        \caption{}        
-    \end{subfigure}
-     \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=3,height=6cm]{background/Figures/MissingDistributionDDR2.pdf}
-        \caption{}         
-    \end{subfigure}
-     \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=4,height=6cm]{background/Figures/MissingDistributionDDR2.pdf}
-        \caption{}         
-    \end{subfigure}
-\caption{Scaled density distributions in $Y,J,H$ and $K_s$ bands of \gls{ddr2} objects with missing values in the rest of the bands. The majority of these objects are located at the faint end of the magnitude distributions ($Y \sim 20$, $J \sim 19$, $H\sim18.5$, and $K_s \sim 18$). A non negligible fraction of missing  $Y$ band photometry is at the bright end ($J,H,K_s \sim 8 - 14$ mag), and in the middle range of 13 to 16 magnitudes. See text for details.}
-\label{fig:NAsDDR2}
-\end{figure}
+To account for missing values the likelihood of the data must be modified. In truncation, it is renormalised to integrate to one within the observed limits, while in censoring this renormalisation account for the number of censored data. 
 
-\begin{figure}[ht!]
-    \centering
-    \begin{subfigure}[t]{0.45\textwidth}
-        \includegraphics[page=1,height=6cm]{background/Figures/MissingDistribution.pdf}
-        \caption{}
-        
-    \end{subfigure}
-    \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=2,height=6cm]{background/Figures/MissingDistribution.pdf}
-        \caption{}
-         
-    \end{subfigure}
-     \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=3,height=6cm]{background/Figures/MissingDistribution.pdf}
-        \caption{}
-         
-    \end{subfigure}
-     \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=4,height=6cm]{background/Figures/MissingDistribution.pdf}
-        \caption{}
-         
-    \end{subfigure}
-\caption{Scaled density distributions in $Y,J,H$ and $K_s$ bands of \gls{rdr2} objects with missing values in the rest of the bands. The features are similar to those in Fig. \ref{fig:NAsDDR2}. The small differences come from the fact that the \gls{rdr2} is not a random sample of the \gls{ddr2}.}
-\label{fig:NAs}
-\end{figure}
+However,  in the \gls{ddr2} missing values not only occur because of censoring or truncation.  Other sources of missing values include but are not restricted to cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures. The statistical treatment of missing values originating from each of these sources lies beyond the scope of this work. 
 
-Truncation occurs when the data set does not contain records, neither of the measured value nor of the number of measurements, for objects whose measured quantity lies outside certain limits.\textbf{ The \gls{ddr2} is truncated at the sensitivity limits of the UKIDSS survey}. On the other hand, censoring happens when the data set contains only partial information about the actual value of the measured quantity. Basically, censoring happens when the value lies outside the upper or lower limits of the measuring instrument, and these limits become the only available record of the measurement.\textbf{ In the \gls{ddr2} censoring occurs in objects whose values are outside the sensitivity limits of the detectors.} Currently, the \gls{ddr2} does not provide upper or lower limits for the censored data. Although these limits could also be inferred from the data, the heterogeneous origin of the \gls{ddr2} prohibits this task. Furthermore, the missing values in the \gls{ddr2} data set do not occur only because of censoring. Indeed, cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures are just some examples of potential sources of missing values. The statistical treatment of missing values originating from each of these sources lies beyond the scope of this work. 
+In terms of probability, there is no distinction between missing values and parameters. Therefore, when computing the likelihood $p(\mathbf{d}|\boldsymbol{\theta})$, where $\mathbf{d}$ is the datum with a missing entry, and $\boldsymbol{\theta}$ is the set of likelihood parameters, we can marginalise the missing values as we do with any other nuisance parameter: with the aid of a prior. In this case, the prior sets the probability of finding a missing value within its support. This prior probability can also be conditioned on extra information that may or not be available. For example, it can be conditioned on other observations (usually called covariates like the value of proper motions or sky position), in the value of the observed (non-missing) entries $\mathbf{d}_{obs}$, or in parameters of the missing data collection mechanism, which can also be inferred from the data in hierarchical fashion.
 
-However, in terms of probability, there is no distinction between missing values and parameters. Therefore, we can marginalise missing values as we do with any other nuisance parameter\textbf{ with the aid of a prior}. If the vector of measurements $\mathbf{d}$ has a missing value in entry $i$, then $x_{i} = NA$ , and $\mathbf{d}=\{x_1,x_2,...,x_{i-1},NA,x_{i+1}...,x_n\}$, with $n$ the dimension of $\mathbf{d}$. Thus, the marginalised likelihood of this datum, given model parameters $\boldsymbol{\theta}$ is
+The interested reader can find, in Chapter 8 of \citet{Gelman2013}, a detailed description of the variety of schemes to account for the data collection mechanism, including the special cases of censoring and truncation. In general, the missing data mechanism can be accounted for by expressing the missing values entries with index $I$ (usually a zeros and ones matrix, with ones in the missing entries) and modifying the likelihood to account for the missing information.
 
+The likelihood of the complete datum, which comprises not just the observed and missing datum $\mathbf{d}=\{\mathbf{d}_{obs},\mathbf{d}_{mis}\}$, but also the index $I$, conditioned on the model parameters $\boldsymbol{\theta}$, is
+
+\begin{align}
+p(\mathbf{d},I|\boldsymbol{\theta})&=p(I|\mathbf{d},\boldsymbol{\theta})\cdot p(\mathbf{d}|\boldsymbol{\theta}), \nonumber
+\end{align}
+with $p(I|\mathbf{d},\boldsymbol{\theta})$ the missingness probability.
+
+However, the actual information available in the datum is $(\mathbf{d}_{obs},I)$. Thus, the observed-datum likelihood can be expressed as
 \begin{equation}
-\label{eq:marginalmiss}
-p(\mathbf{d}|\boldsymbol{\theta})= \int_{-\infty}^{\infty} p(\{x_1,x_2,...,x_{i-1},x_{i}= NA,x_{i+1},...,d_n\}|\boldsymbol{\theta})\cdot p(x_i)\cdot \mathrm{d}x_{i},
+\label{eq:marginalmis}
+p(\mathbf{d}_{obs},I|\boldsymbol{\theta})=\int p(\mathbf{d}|\boldsymbol{\theta})p(I|\mathbf{d},\boldsymbol{\theta})\mathrm{d}\mathbf{d}_{mis},
 \end{equation}
-\textbf{with $p(x_i)$ the prior distribution for the missing value. Because missing values, as explained before, arise not only from censoring but from several other sources, some of them unknown, I assume that the prior $p(x_i)$ is uniform. This assumption is called \emph{ignorability} of the missing process \cite[see Chapter 8 of][for more details]{Gelman2013}. Notice however, that the impact of the uniform prior relays deeply in the multidimensionality of the data and in the correlation between the missing and observed variables. When this correlation is negligible, the observed data provides no information, thus rendering the results similar to those performed only in the completely observed data. Since photometric variables are highly correlated (see Fig. \ref{fig:fphGMM2}), objects with missing values provide useful information that must be taken into account.}
+where the missing values have been marginalised with the aid the prior $p(I|\mathbf{d},\boldsymbol{\theta})$. 
 
-\textbf{The modelling of missing values could be improved by the inclusion of more \emph{ad hoc} priors or selection functions, however, the uniform prior allows to perform the above integral analytically. Specifying a prior for each of the missing values would demand to numerically evaluate the integral, which would have required a tremendous amount of computing power.}
-Therefore, throughout this work, missing entries are marginalised in the previous way whenever present.
+In the following, whenever missing values appear in the likelihood functions, they will be marginalised using the previous equation.
+Furthermore, I assume that the probability $p(I|\mathbf{d})$ is uniform. This assumption is called \emph{ignorability} because the result of it is that $p(\mathbf{d}_{obs},I|\boldsymbol{\theta})= p(\mathbf{d}_{obs}|\boldsymbol{\theta})$, which is equivalent to ignores the missing data mechanism.  Although I acknowledge that this assumption is incorrect (missing values are most probable at the faint photometric ends, see Section \ref{sect:DR2}), I am obliged to assume it because of the following reasons.
 
-%I made a remark of a point that may seem obvious but it is important to remember. Let $p(a)$ be a probability distribution, $A$ a random sample of $n$ points from it, and $p_A(a)$ the empirical probability distribution of $A$. Let $B$ be a non-random sample of $p(a)$ with $n$ elements, and empirical probability distribution $p_B(a)$. In the limit of $n\rightarrow \infty$, $p_A(a)=p(a)$ however $p_B(a)\neq p(a)$. Therefore, $p_A(a)\neq p_B(a)$. Similarly, in data with missing values, if the missing value pattern is not random, the distribution of the completely observed data (with non-missing values) differs from that of all the data. In \citet{Olivares2017} we show this subtle but important difference in the case of the \gls{dance} data set. 
+%Because missing values arise not only due to censoring but from several other sources, many of them unknown, I assume that the missing data collection mechanism can be ignored, which essentially is the same as adopting a uniform prior for  $p(I|\mathbf{d})$. Thus 
+%\begin{equation}
+%p(\mathbf{d}_{obs}|\boldsymbol{\theta})=\int p(\mathbf{d}|\boldsymbol{\theta})\mathrm{d}\mathbf{d}_{mis}. \nonumber
+%\end{equation}
+%This assumption is called \emph{ignorability} of the data collection mechanism \footnote{
+%Following \citet{Gelman2013} two conditions are sufficient to ensure ignorability.
+%
+%\emph{Distinct parameters} requires independence between the model parameters $\theta$ and the missing data process parameters $\phi$. This means
+%\begin{equation}
+%p(\phi|\theta)=p(\phi). \nonumber
+%\end{equation}
+%\emph{Missing at random} requires that the probability of having a missing value only depends in the observed values. This is
+%\begin{equation}
+%p(I|y,\phi)=p(I|y_{obs},\phi), \nonumber
+%\end{equation}
+%Then, the joint posterior distribution of the model and missing mechanism parameters,
+%\begin{align}
+%p(\theta,\phi|y_{obs},I) \propto p(\theta,\phi) p(y_{obs},I|\theta,\phi) =p(\theta,\phi)\int p(y,I|\theta,\phi)\mathrm{d} y_{mis}=p(\theta,\phi)\int p(I|y,\phi)p(y|\theta) \mathrm{d} y_{mis}\nonumber
+%\end{align}
+%marginalised over $\phi$, 
+%\begin{align}
+%p(\theta|y_{obs},I)=p(\theta)\int \int p(\phi|\theta) p(I|y,\phi)p(y|\theta) \mathrm{d} y_{mis} \mathrm{d}\phi, \nonumber
+%\end{align}
+%and using the previous conditions, results in 
+%\begin{align}
+%p(\theta|y_{obs},I)=p(\theta)\int \int p(\phi) p(I|y_{obs},\phi)p(y|\theta) \mathrm{d} y_{mis} \mathrm{d}\phi =p(\theta)\int p(y|\theta)\mathrm{d} y_{mis}=p(\theta|y_{obs}).\end{align}
+%Thus, proving the ignorability of the missing data mechanism.
+%}.
+
+
+%I decided to ignore the data collection mechanism for the following reasons.
+First, the $p(I|\mathbf{d},\boldsymbol{\theta})$ is not known. The \gls{ddr2} is a compilation of data from a variety of surveys, thus the data collection mechanism in neither homogeneous not (currently\footnote{ The DANCe team is currently working on the assessing of the missingness process. In particular,  we are interested in the detection probability as a function of signal-to-noise and sky position. The latter is of paramount importance in the vicinity of bright sources where halos and artefacts have the largest impact.}) totally understood. 
+
+Second, even if a more elaborate and accurate probability $p(I|\mathbf{d},\boldsymbol{\theta})$ would be available, the current computational capabilities will not allow to numerically evaluate the integral of Eq. \ref{eq:marginalmis}. The use of a uniform probability enable us to analytically evaluate this integral thus avoiding the high computational burden of computing it for each object and missing value in the data set and at each step in the MCMC chain.
+
+Since this assumption is not correct, it inevitably results in biased estimators of the true population parameters. In the following Section I quantify this bias.
+
+\subsubsection{Validity of the \emph{ignorability} assumption.}
+\label{sect:ignorability}
+
+In this Section, I present the quantification of the bias introduced by assuming the \emph{ignorability} of the missing-value mechanism. In addition, I also quantify the bias introduced by assuming that the true population parameters can be recovered using only completely observed objects and discarding those with missing entries. I call the latter the \emph{naivety} assumption. Notice that these two assumptions will be undistinguishable in the absence of correlation amongst observables. 
+
+To quantify the biases rendered by these assumptions, I proceed as follows.
+
+First, I assume to know the parameter values of the true population. I the parameter values of the \gls{gmm} describing the photometry of the field population contained in the \gls{rdr2} data set. In specific, I assume that these true parameter values are those inferred in Section \ref{sect:field_population}. 
+
+Second, using these true parameter values I generate a synthetic data set of size equal to that of the \gls{rdr2}.
+
+Third, using the real data from the \gls{rdr2}, I mask as missing the photometric entries in the synthetic data. The masking procedure is the following.
+For each synthetic datum, I use the mask of missing entries of one of its closer neighbours in the real data set. Here, distance is measured in the euclidean sense. If I were to use the missing value mask of the nearest neighbour in the real data set, then I will obtain a biased sample in which objects with fully observed vectors will be underestimated. This is the inevitable consequence of  euclidean distances being measured in subspaces resulting from removing the dimensions of the missing entries. Since these distances are the smaller, or at most equal, to those measured in the complete space, the fully observed objects will be under represented.
+
+The mask of missing entries is chosen from amongst the missing values of the closer neighbours in the available \glspl{cmd}: $\{K_s,J-K_s\},\{J,J-H\},\{K_s,H-K_s\},\{J,Y-J\},\{K_s,i-K_s\}$. These \glspl{cmd} comprise, in decreasing order, the bands and colours of the magnitudes with fewer missing values (see Table \ref{tab:DR2properties}).  The mask of missing entries is then chosen as follows. First, for each \glspl{cmd} subspace, I find the set of real objects that has fully observed entries, I call it $C_{or,i}$ and its fraction from the total, $f_r$. Then, I take a random sample from the synthetic data with size such that its fraction, $f_s$, equals $f_r$. For objects in this sample I assign the missing value pattern of the nearest neighbour in $C_{or,i}$. I repeat this procedure for the rest of the \glspl{cmd}. In this way, the synthetic data sets have fractions of objects with and without missing entries, similar to those of the objects in the real data set.
+
+Thus, I now have three synthetic data sets. The original one, with completely observed entries, the one with missing values, and, the one resulting from taking only the completely observed objects from the one with missing values. To each of these data sets, I apply the \gls{gmm} algorithm (the one described in Section \ref{sec:codeGMM}) and recover the fractions, means and covariance matrices of the \gls{gmm}. I call these set of parameters original, ignorable, and naive, in accordance to the data set from which they were obtained.
+
+By means of these three set of parameters, I can quantify the bias induced by the \emph{ignorability} and \emph{naivety} assumptions. Furthermore, to minimise the effects of the sample size in the comparisons, instead of comparing the ignorable and naive set of parameters to the true parameters, I do use the original set of parameters. To quantify differences I use the absolute relative difference, defined as the absolute value of the relative difference between the ignorable and naive parameters to the original ones. Figure \ref{fig:ignorable_and_naive} shows the absolute relative differences in the projected densities (in the set of \glspl{cmd} used in this work) between the ignorable and naive \glspl{gmm}. As can be seen, the naive parameters return projected densities that over-estimate the density at the central parts, where $\gls{ci}\sim4$, whereas the ignorable parameters return densities similar to the original ones, except at the bright end, where it also over-estimate the original ones.
+
+\begin{figure}[ht!]
+\begin{center}
+\begin{subfigure}[t]{0.45\textwidth}
+\includegraphics[page=1,width=\textwidth]{./background/Figures/validationMissing.pdf}
+\end{subfigure}
+\begin{subfigure}[t]{0.45\textwidth}
+\includegraphics[page=2,width=\textwidth]{./background/Figures/validationMissing.pdf}
+\end{subfigure}
+\begin{subfigure}[t]{0.45\textwidth}
+\includegraphics[page=3,width=\textwidth]{./background/Figures/validationMissing.pdf}
+\end{subfigure}
+\begin{subfigure}[t]{0.45\textwidth}
+\includegraphics[page=4,width=\textwidth]{./background/Figures/validationMissing.pdf}
+\end{subfigure}
+\caption{Contours comparing the absolute relative difference between the naive and original models (left panels), and the ignorable and the original ones (right panels) for each of the \glspl{cmd} used in this work. The densities resulting of the original model are shown by means of the grey scale. Regions where the density of the original model goes below $10^{-4}$ are not shown.}
+\label{fig:ignorable_and_naive}
+\end{center}
+\end{figure}
+
+
+In addition, the mean absolute relative difference between the ignorable and naive, and the original, set of parameters are $0.19 \pm 0.2$ and $1.7 \pm 3.8$, respectively. These figures indicate that the ignorability assumption is indeed biased by a mean 19\%, whereas the naivety assumption is biased by an astonishing 170\%. 
+
+The modelling of missing values could be greatly improved by removing the ignorability assumption and using correct prior probabilities for the missing-data mechanism. These priors are expected to be available in future releases of the DANCe survey, together with detailed information of the upper and lower limits of each missing value.
+
+Nevertheless, the \emph{ignorability} assumption (i.e. the uniform prior), which enable us to perform the marginalisation integral (Eq. \ref{eq:marginalmis}) analytically an thus reduce the computing time, renders better estimates of the true parameters than the naivety assumption used by the previous worksin the literature (see Section \ref{sect:current_methodologies}). 
 
 \subsection{The generative model}
 \label{sect:generative-model}
-{In the \gls{ddr2} data set, cluster stars are mixed with field sources. Thus, cluster and field populations must be disentangled to achieve the objective of this work. The probabilistic disentanglement of them, requires probabilistic models for each population, i.e. their likelihoods. The true values of these two likelihoods, field and cluster, are given by parametric relations embodying the state of knowledge of \gls{nyc}.  Using these likelihoods, individual cluster membership probability \glspl{pdf}  are computed (by means of Eq. \ref{eq:prob}) for each object in the data set. These \glspl{pdf}  together with a probability classification threshold,  allow individual objects to be separated into cluster and field populations.}
+In the \gls{ddr2} data set, cluster stars and field sources are mixed. Their probabilistic disentanglement requires probabilistic models for each population, i.e. their likelihoods. The true values of these two likelihoods, field and cluster, will be given given by parametric relations embodying the state of knowledge of \gls{nyc} (i.e. the models of cluster and field).  Using these likelihoods, the individual cluster membership probability of each object in the data set is computed (by means of Eq. \ref{eq:prob}). These \glspl{pdf}  together with a probability classification threshold, allow individual objects to be separated into cluster and field populations.
 
 The inference process demands a set of $N$ binary integers $\mathbf{q}$, one $q_n$ for each object. The two possible values of these binary integers represent one of the two mutually exclusive possibilities: the object belongs to the cluster ($q_n=1$) or to the field population ($q_n=0$). 
 
@@ -398,20 +446,20 @@ Let $\boldsymbol{\theta}$ and $\boldsymbol{\phi}$ be the parameters of the clust
 p(\mathbf{D}|\mathbf{q},\boldsymbol{\theta},\boldsymbol{\phi})= \prod_{n=1}^N {p_c(\mathbf{d}_n|\boldsymbol{\theta})}^{q_n}\cdot {p_f(\mathbf{d}_n|\boldsymbol{\phi})}^{(1-q_n)}.
 \end{equation}
 
-The inference of these $N$ binary integers will demand a computing power that is outside the current possibilities. Thus, instead of inferring them, I marginalise them using a prior probability, which is set in terms of a new and unique parameter $\boldsymbol{\pi}$. It represents the \emph{prior} probability that an object belongs to the field. Thus, the prior probability of $\mathbf{q}$ is
+The inference of these $N$ binary integers will demand a computing power that is outside the current possibilities. Thus, instead of inferring them, I marginalise them using a prior probability, which is set in terms of a new and unique parameter $\pi$. It represents the \emph{prior} probability that an object belongs to the field. Thus, the prior probability of $\mathbf{q}$ is
 
 \begin{equation}
 p(\mathbf{q}|\pi)= \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)}.
 \end{equation}
 
-Since $\mathbf{q}$ represents the $2^N$ possible ways to combine the binary variables $q_n$, then the marginalisation over all these possible states is,
+Since the entries in $\mathbf{q}$ can only take as value zero or one, the marginalisation integral is indeed a sum. Furthermore, the domain of this sum is the $2^N$ possible ways to combine the binary variables $q_n$. Thus, the marginalisation sum over all these $2^N$ possible states results in,
 
 \begin{align}
-p(\mathbf{D}|\pi,\theta,\phi)&=\sum_{\mathbf{q}} p(\mathbf{D},\mathbf{q}|\pi,\theta,\phi)\cdot \mathrm{\Delta}\mathbf{q} \nonumber\\
-&=\sum_{\mathbf{q}} p(\mathbf{D}|\mathbf{q},\pi,\theta,\phi)\cdot p(\mathbf{q}|\pi)\cdot \mathrm{\Delta}\mathbf{q} \nonumber \\
-&=\sum_{\mathbf{q}} \prod_{n=1}^N {p_c(\mathbf{d}_n|\theta)}^{q_n}\cdot {p_f(\mathbf{d}_n|\phi)}^{(1-q_n)}\cdot \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)}\cdot \mathrm{\Delta}\mathbf{q} \nonumber \\
-&=\sum_{\mathbf{q}} \prod_{n=1}^N \left[(1-\pi)\cdot p_c(\mathbf{d}_n|\theta)\right]^{q_n}\cdot \left[\pi\cdot p_f(\mathbf{d}_n|\phi)\right]^{(1-q_n)}\cdot \mathrm{\Delta}\mathbf{q} \nonumber \\
-&=\prod_{n=1}^N (1-\pi)\cdot p_c(\mathbf{d}_n|\theta) + \pi\cdot p_f(\mathbf{d}_n|\phi).
+p(\mathbf{D}|\pi,\boldsymbol{\theta},\phi)&=\sum_{\mathbf{q}} p(\mathbf{D},\mathbf{q}|\pi,\boldsymbol{\theta},\phi)\nonumber\\
+&=\sum_{\mathbf{q}} p(\mathbf{D}|\mathbf{q},\pi,\boldsymbol{\theta},\phi)\cdot p(\mathbf{q}|\pi) \nonumber \\
+&=\sum_{\mathbf{q}} \prod_{n=1}^N {p_c(\mathbf{d}_n|\boldsymbol{\theta})}^{q_n}\cdot {p_f(\mathbf{d}_n|\phi)}^{(1-q_n)}\cdot \prod_{n=1}^N {(1-\pi)}^{q_n}\cdot {\pi}^{(1-q_n)} \nonumber \\
+&=\sum_{\mathbf{q}} \prod_{n=1}^N \left[(1-\pi)\cdot p_c(\mathbf{d}_n|\boldsymbol{\theta})\right]^{q_n}\cdot \left[\pi\cdot p_f(\mathbf{d}_n|\phi)\right]^{(1-q_n)} \nonumber \\
+&=\prod_{n=1}^N (1-\pi)\cdot p_c(\mathbf{d}_n|\boldsymbol{\theta}) + \pi\cdot p_f(\mathbf{d}_n|\phi).
 \end{align}
 This last equality is a rather complicated derivation which can be found in \citet{Press1997}, and in \citet{Hogg2010a} for $p_c$ and $p_f$ in the exponential family. Also, a general derivation of this expression is given by \citet{Jaynes2003}. He obtains it assuming individual unknown probabilities $p_n$ instead of $q_n$ and marginalising over them with the aid of a prior.
 
@@ -424,7 +472,7 @@ p(\mathbf{d}_n | \pi,\boldsymbol{\theta}_c,\boldsymbol{\theta}_f,\mathbf{u}_n)=\
 
 where $\boldsymbol{\theta}_f$ and $\boldsymbol{\theta}_c$ indicate the cluster and field parameters, while $\mathbf{u}_n$ refers to the datum uncertainty. The probabilities $p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n)$ and $p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)$ are the field and cluster models, respectively. These models are explained in detail in the next two sections.
 
-In the following, I assume that the observed quantities, even if they contain missing values, resulted from the convolution of likelihood, given the \emph{true} quantities, with the uncertainty process (see Section \ref{sect:parametric_inference}). The latter could be different for each object, thus resulting in different individual uncertainties. It means that the \gls{ddr2} data set is modelled allowing for its intrinsic heteroscedaticity. Although these uncertainties are not assumed to have the same values, I do assume that they have the same shape. Thus, I assume that uncertainties in our data set belong to the multivariate normal family.  This assumption is standard practice and is also supported by the large and heterogeneous origins of the \gls{ddr2} data set. 
+In the following, I assume that the observed quantities result from the convolution of the model likelihood, given the \emph{true} quantities, with the uncertainty process (see Section \ref{sect:parametric_inference}). The latter could be different for each object, thus resulting in different individual uncertainties. Thus, the model allows heteroscedatic uncertainties. Although these uncertainties are not assumed to have the same values, I assume that tall of them are multivariate normal.  This assumption is standard practice and is also supported by the large and heterogeneous origins of the \gls{ddr2} data set. 
 
 \subsection{The field population}
 \label{sect:field_population}
@@ -459,7 +507,7 @@ BIC = \ln{n}\cdot k - 2 \ln{\mathcal{L}}.
 \end{equation}
 
 To estimate the parameters of the \gls{gmm} we use the \gls{em} algorithm. However, the missing values in the photometry prevent the use of the standard form of the algorithm \cite[see for example Chapter 9 of][]{Bishop2006}.
-Instead, I estimated these parameters with the modified version of the \gls{em} algorithm for \gls{gmm} found by \citet{McMichael1996} and rediscovered by me. On this version, objects with missing values also contribute to the \gls{mle} of the parameters. \textbf{I applied this algorithm to the five dimensional photometric observables of the 98,010 objects (from the \gls{rdr2}) with membership probabilities below 0.75 according to \citet{Bouy2015}. I tested \glspl{gmm} whose number of components ranged from 1 to 20. The optimal number of components suggested by the \gls{bic} is 14. Figures \ref{fig:fphGMM} and \ref{fig:fphGMM2} show two dimensional projections of the 14 components in the five dimensional \gls{gmm}. It is important to notice that only $\sim$1\% of these 98,010 objects have completely observed photometry (i.e. no missing values in any observable). For this reason, some of the Gaussians appear empty in Fig. \ref{fig:fphGMM}. However, Fig. \ref{fig:fphGMM2} shows projections of the same 14 component and five dimensional \gls{gmm} in the magnitude-magnitude diagrams, where the percentage of completeness is above 80\%. As a consequence, there are no empty Gaussians in this Figure, as shown by the log scale density. If we were to work only with the completely observed objects and discarded 99\% of the data set, our derived parameters would be severely biased since missing value objects are not uniformly distributed (see Section \ref{sect:missing}).}
+Instead, I estimated these parameters with the modified version of the \gls{em} algorithm for \gls{gmm} found by \citet{McMichael1996} and rediscovered by me. On this version, objects with missing values also contribute to the \gls{mle} of the parameters. The distribution of missing values though is also assumed uniform (i.e. it assumes the ignorability of the missing-value process). \textbf{I applied this algorithm to the five dimensional photometric observables of the 98,010 objects (from the \gls{rdr2}) with membership probabilities below 0.75 according to \citet{Bouy2015}. I tested \glspl{gmm} whose number of components ranged from 1 to 20. The optimal number of components suggested by the \gls{bic} is 14. Figures \ref{fig:fphGMM} and \ref{fig:fphGMM2} show two dimensional projections of the 14 components in the five dimensional \gls{gmm}. It is important to notice that only $\sim$1\% of these 98,010 objects have completely observed photometry (i.e. no missing values in any observable). For this reason, some of the Gaussians appear empty in Fig. \ref{fig:fphGMM}. However, Fig. \ref{fig:fphGMM2} shows projections of the same 14 component and five dimensional \gls{gmm} in the magnitude-magnitude diagrams, where the percentage of completeness is above 80\%. As a consequence, there are no empty Gaussians in this Figure, as shown by the log scale density. If we were to work only with the completely observed objects and discarded 99\% of the data set, our derived parameters would be severely biased (see Section \ref{sect:missing}).}
 
 \begin{figure}[ht!]
     \centering
@@ -497,7 +545,7 @@ Instead, I estimated these parameters with the modified version of the \gls{em} 
 \label{fig:fphGMM2}
 \end{figure}
 
-In the case of proper motions, since they do not contain missing values, I computed the \gls{gmm} parameters with the standard \gls{em} algorithm. The \gls{bic} finds a model with 15 components, the majority of them with large variances and small fractions (see Fig. \ref{fig:fpmGMM}). These small-fraction Gaussians fit an extended component of the proper motions distributions, which is clearly non-Gaussian. For this reason, we decided modify the mixture of Gaussians by adding a uniform distribution $\mathcal{U}({d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})$, with $S_{\mu_{\alpha}}$ and $S_{\mu_{\delta}}$ the support of the proper motions in Right Ascension and Declination, respectively (see Table \ref{tab:DR2properties}). I changed the \gls{em} algorithm to properly account for this modification. The \gls{bic} applied to this new mixture renders more reasonable results (see Fig. \ref{fig:fpmMMM}), with an eight components mixture distribution: seven Gaussians plus the uniform. This modification improves the \gls{gmm} while simultaneously reduces the number of parameters.
+In the case of proper motions, since they do not contain missing values, I computed the \gls{gmm} parameters with the standard \gls{em} algorithm. The \gls{bic} finds a model with 15 components, the majority of them with large variances and small fractions (see Fig. \ref{fig:fpmGMM}). These small-fraction Gaussians fit an extended component of the proper motions distributions, which is clearly non-Gaussian. For this reason, we decided modify the mixture of Gaussians by adding a uniform distribution $\mathcal{U}(\mathbf{d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})$, with $S_{\mu_{\alpha}}$ and $S_{\mu_{\delta}}$ the support of the proper motions in Right Ascension and Declination, respectively (see Table \ref{tab:DR2properties}). I changed the \gls{em} algorithm to properly account for this modification. The \gls{bic} applied to this new mixture renders more reasonable results (see Fig. \ref{fig:fpmMMM}), with an eight components mixture distribution: seven Gaussians plus the uniform. This modification improves the \gls{gmm} while simultaneously reduces the number of parameters.
 
 \begin{figure}[ht!]
     \centering
@@ -518,7 +566,7 @@ In the case of proper motions, since they do not contain missing values, I compu
 
 Finally, the field likelihood $p_f(\mathbf{d}|\boldsymbol{\theta}_f,\mathbf{u})$ of an object with measurements $\mathbf{d}$, given its standard uncertainties $\mathbf{u}$ and the field parameters, $\boldsymbol{\theta}_f$, is
 \begin{align}
-p_f(\mathbf{d}|\boldsymbol{\theta}_f,\mathbf{u})=&\left[\pi_{f,pm,0}\cdot\mathcal{U}({d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})+  \sum \limits_{i=1}^{7}\pi_{f,pm,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{f,pm,i},\boldsymbol{\Sigma}_{f,pm,i}+\mathbf{u}_{pm})\right]\cdot  \nonumber \\ 
+p_f(\mathbf{d}|\boldsymbol{\theta}_f,\mathbf{u})=&\left[\pi_{f,pm,0}\cdot\mathcal{U}(\mathbf{d}_{pm}|S_{\mu_{\alpha}},S_{\mu_{\delta}})+  \sum \limits_{i=1}^{7}\pi_{f,pm,i}\cdot \mathcal{N}(\mathbf{d}_{pm} | \boldsymbol{\mu}_{f,pm,i},\boldsymbol{\Sigma}_{f,pm,i}+\mathbf{u}_{pm})\right]\cdot  \nonumber \\ 
 &\left[ \sum \limits_{i=1}^{14}\pi_{f,ph,i}\cdot \mathcal{N}(\mathbf{d}_{ph} | \boldsymbol{\mu}_{f,ph,i},\boldsymbol{\Sigma}_{f,ph,i}+\mathbf{u}_{ph})\right].
 \label{eq:field}
 \end{align}
@@ -543,21 +591,31 @@ For the sake of simplicity, in the following whenever I refer to the photometric
 \subsubsection{Photometric model of single and EMB stars}
 \label{sect:cluster_ph}
 
-The cluster photometric sequences, both for single and \gls{emb} stars, are modelled with cubic splines, one for each of the $Y,J,H,K_s$ vs \gls{ci} \glspl{cmd}. I choose the spline series due to their fitting properties. I tried several polynomial bases (monic, Laguerre, Hermite, Chebyshev) but in spite of the order, they were not able to fit the sequence. In specific, they do not fit the region around \gls{ci} $\sim 3$ where the slope is higher. 
+The cluster photometric sequences, in each of the $Y,J,H,K_s$ vs \gls{ci} \glspl{cmd}, are modelled as one-to-one functions of the \emph{true} \gls{ci}. Thus,
 
-Despite their superior flexibility, spline series require more parameters than polynomials. In addition to the coefficients of the series, they require the specification of points called knots. These knots represent the starting and ending points of the spline sections. 
+\begin{align}
+Y&=f_0(CI,\boldsymbol{\phi}),\nonumber\\
+J&=f_1(CI,\boldsymbol{\phi}),\nonumber\\
+H&=f_2(CI,\boldsymbol{\phi}),\nonumber\\
+K_s&=f_3(CI,\boldsymbol{\phi}),\nonumber
+\end{align}
+where $\boldsymbol{\phi}$ represents the set of parameters upon which the functions $f_i$ also depend on (more details below). Assuming that the magnitudes can be described by one-to-one functions of the \emph{true} colour index is an important assumption. If magnitudes were to be described by relations instead of functions, then there may be the case that one value of the colour index may result in several values of the magnitude, thus causing a non-removable discontinuity\footnote{There are three classes of discontinuities: removable, jump, and infinity ones, with increasing order of complexity for their algebraical treatment.}. This will cause degeneracies in the parametric space that will not just cripple the performance of the MCMC sampler, but also will lead to (non-removable) discontinuities in the \emph{true} colour index distribution, and therefore, in the luminosity and mass distributions. As described in Section \ref{sect:RF-2}, this the main reason for which the colour index $i-K_s$ was preferred over the other available colour indices, in spite of its large number of missing values.
 
-Any spline function can be represented in terms of \glspl{bspline}. By definition, a \gls{bspline} of order $n$ is a piece-wise polynomial function of order $n$ in the interval $t_0 \leq x \leq t_n$. The boundary and internal points, $\mathbf{t}=\{t_0,t_1,...,t_n\}$ represent the knots. For a given set of knots, there is one and only one \gls{bspline} representation of the spline, thus the name \glsfirst{bspline}.  In particular, any cubic spline can be represented as,
+After testing several functions, including the monic, Laguerre, Hermite, and Chebyshev polynomial bases, I decided to use cubic splines to model the cluster photometric sequence. Splines are piece-wise polynomial functions with more flexibility than common polynomial bases. In specific, they provide a better fit of the cluster sequence in region around \gls{ci} $\sim 3$ where other polynomial bases fail due to the high slope. 
+
+Despite their superior flexibility when compared to the tested polynomials bases, spline series require more parameters than the latter. In addition to the coefficients of the series, they need a set of points, within their domain and in non-descending order, which are called knots. These knots represent the starting and ending points of the segments in which each piece of the pice-wise function is defined.
+
+In addition, any spline function can be uniquely represented in terms of \glspl{bspline}. By definition, a \gls{bspline} of order $n$ is a piece-wise polynomial function of order $n-1$ in its parameter, in this case the \gls{ci}. For a given set of knots $\mathbf{t}=\{t_0,t_1,...,t_n\}$, there is one and only one \gls{bspline} representation of the spline, thus the name \glsfirst{bspline}.  In particular, any cubic spline can be represented as,
 
 \begin{equation}
 \label{eq:spline_cubic}
-S_3(CI,\boldsymbol{\beta},\mathbf{t}) = \sum_i \beta_i\cdot B_{i,3}(CI,\mathbf{t}).
+S_3(CI|\boldsymbol{\beta},\mathbf{t}) = \sum_i \beta_i\cdot B_{i,3}(CI|\mathbf{t}).
 \end{equation}
-Where $B_{i,n}$ are the \glspl{bspline} given by the Cox-de Boor recursive formula, and $\boldsymbol{\beta}$ are the coefficients of the series. For more details on splines and the Cox-de Boor formula see \citet{deBoor1978}.
+Where $B_{i,3}$ are the cubic \glspl{bspline} given by the Cox-de Boor recursive formula, and $\boldsymbol{\beta}$ are the coefficients of the series. For more details on splines and the Cox-de Boor formula see \citet{deBoor1978}.
 
-Despite their fitting properties, \glspl{bspline} present a problem when inferring simultaneously their coefficients and knots: there is multi-modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi-modality, I decided to keep the knots fixed throughout the inference. Although this decision reduces the flexibility of the splines, it allows a still better fit than that of the tested polynomials. To obtain the \gls{mle} of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the \gls{bic} to select among competing models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The \gls{bic} indicates that seven coefficients is the best number of components for the \glspl{bspline} series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the \gls{bic}. \textbf{Figure \ref{fig:fitCMDs} show the spline fits, with the use of the previous knots, to the \gls{rdr2} candidate members of \citet{Bouy2015}. \glspl{emb} are excluded as described in Section \ref{sect:priors}. The positions of the knots are indicated by vertical lines.} 
+Despite their fitting properties, \glspl{bspline} present a problem when simultaneously inferring their coefficients and knots: there is multi-modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi-modality, I decided to keep the knots fixed throughout the inference. Although this decision reduces the flexibility of the splines, it allows a still better fit than that of the tested functions (i.e. the polynomial bases). To obtain the \gls{mle} of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the \gls{bic} to select among competing models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The \gls{bic} indicates that seven coefficients is the best number of components for the \glspl{bspline} series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the \gls{bic}. \textbf{Figure \ref{fig:fitCMDs} show the spline fits to the \gls{rdr2} candidate members of \citet{Bouy2015}, resulting from the previous knots. In this fit, \glspl{emb} are excluded (see Section \ref{sect:priors} for details of how they are removed). The positions of the knots are indicated by vertical lines.} 
 
-In general, the continuity of a spline function is $C^{p-k}$, with $p$ the degree of the spline, and $k$ the highest multiplicity of the knots \citep{deBoor1978}. In our case, since the knot at 3.22 has a multiplicity of two, then the resulting spline has lost one degree of continuity. It is now $C^1$ continuous. It means that the spline and its derivative are continuous, thus ensuring a smooth function.
+In general, the continuity of a spline function is $C^{p-k}$, with $p$ the degree of the spline, and $k$ the highest multiplicity of the knots \citep{deBoor1978}. In our case, since the knot at 3.22 has a multiplicity of two, then the resulting spline has lost one degree of continuity. It is now $C^1$ continuous. It means that the spline and its derivative are continuous, thus ensuring a smooth function. Furthermore, due to their pice-wise properties,\glspl{bspline} will enable us to model more complicated photometric sequences in which the turn-off point of the sequence may be present.
 
 \begin{figure}[ht!]
     \centering
@@ -585,13 +643,11 @@ In general, the continuity of a spline function is $C^{p-k}$, with $p$ the degre
 \label{fig:fitCMDs}
 \end{figure}
 
-
-
-As I mentioned in the introduction to this Section, we assume that the observed photometric quantities are drawn from a distribution resulting from the convolution of the observed uncertainties, with the likelihood, given the \emph{true} quantities. We also assume that the model has an intrinsic dispersion that addresses photometric variations resulting from astrophysical phenomena not treated by our model (see Section \ref{sect:parametric_inference}). These phenomena include, but are not limited to, age, metallicity and distance dispersions, unresolved systems (other than \gls{emb}), variability, and transits. If we were to assume no \emph{true} intrinsic dispersion, then any deviation from the \emph{true} quantities would have to be explained \emph{only} on the basis of the observational uncertainties. Thus it would result in an over-simplistic model, which would underestimate the likelihood of hypothetical true cluster members. 
+As I mentioned in the introduction to this Section, we assume that the observed photometric quantities are drawn from a distribution resulting from the convolution of the observed uncertainties, with the likelihood of the model prescribed by the \emph{true} quantities. We also assume that the model has an intrinsic dispersion that addresses photometric variations resulting from astrophysical phenomena not treated by our model (see Section \ref{sect:parametric_inference}). These phenomena include, but are not limited to, age, metallicity and distance dispersions, unresolved systems (other than \gls{emb}), variability, and transits. If we were to assume no \emph{true} intrinsic dispersion, then any deviation from the \emph{true} quantities would have to be explained \emph{only} on the basis of the observational uncertainties. Thus it would result in an over-simplistic model, which would underestimate the likelihood of hypothetical true cluster members. 
 
 This photometric dispersion shows an skewed distribution \cite[see Figure 2 of][which I reproduce in Fig. \ref{fig:luminosity_dispersion}]{2008ASPC..384..200H}, which we model with a multivariate \gls{csn} distribution; see for example \citet{Gonzalez-Farias2004,Gupta2004}. Despite the fact that the \gls{csn} requires only five parameters more than a multivariate normal distribution, the computing of its density takes $\sim$ 50\% more \gls{cpu} time than that of the multivariate normal distribution. Due to computational constraints, we decided to postpone the results of the \gls{csn} until our computational resources allow it. 
 
-Instead of using the \gls{csn}, we model the intrinsic photometric  dispersion of both the cluster and \gls{emb} sequences with a multivariate normal distribution. It has five dimensions corresponding to our photometric reference set: $CI,Y,J,H,K_s$. The \glspl{bspline} model the \emph{true} photometric quantities, both for the cluster sequence, $\mathbf{t}_{ph;Cs}$, and the \gls{emb}, $\mathbf{t}_{ph;Bs}$. The latter is displaced 0.75 into the bright side of the cluster sequence. In the following, the matrix $\Sigma_{clus}$, represents the covariance matrix of this multivariate normal distribution. By definition, covariance matrices are symmetric and positive semi-definite. Therefore, from the 25 entries in $\Sigma_{clus}$, only 15 are unique. These are also inferred from the data set.
+Instead of using the \gls{csn}, we model the intrinsic photometric dispersion of both the cluster and \gls{emb} sequences with two multivariate normal distributions, one for the single stars sequence and other for the \gls{emb} sequence. Each of them has five dimensions corresponding to our photometric reference set: $CI,Y,J,H,K_s$. The \glspl{bspline} model the \emph{true} photometric quantities, both for the cluster sequence, $\mathbf{t}_{ph;Cs}$, and the \gls{emb}, $\mathbf{t}_{ph;Bs}$. The latter is displaced 0.75 into the bright side of the cluster sequence. In the following, the matrix $\Sigma_{clus}$, represents the covariance matrix of these two multivariate normal distribution. Since we have no reasons to believe that the intrinsic dispersion of   \gls{emb} and single stars is different, we  use only one $\Sigma_{clus}$ for both of them. By definition, covariance matrices are symmetric and positive semi-definite. Therefore, from the 25 entries in $\Sigma_{clus}$, only 15 are unique. These are also inferred from the data set.
 
 
 \begin{figure}[ht!]
@@ -771,235 +827,6 @@ where $\pi_{CB}$ is the parameter representing the proportion or fraction of sin
   \label{fig:PGMBHM}
 \end{figure}
 
-\section{The methodology for the analysis of the PSD}
-\label{sect:PSDmethod}
-
-In this Section, I present the methodology applied to investigate the \glsfirst{psd}. This analysis uses the candidate members in the \glsfirst{hmps} (see Section \ref{sect:RDR2}), the ones recovered by the \gls{bhm}. Although the analysis of the \gls{psd} uses the membership probabilities of the \gls{bhm}, it is independent of the latter. It means that the kinematic and photometric distributions derived by the  \gls{bhm}  are assumed to be independent of the \gls{psd} of the cluster. Section \ref{sect:RF-2} details the reasons of this decision. 
-
-The generative model of the \gls{psd} is similar to that of the \gls{bhm}  (Eq. \ref{eq:genmod}). However, instead of inferring the fraction of field objects in the data set (which would be similar to the estimated contamination rate on the \gls{hmps}, see Section \ref{sect:classifier}), each object contributes to the cluster model proportionally to its membership probability, $P$ (the ones obtained by the \gls{bhm}). Thus the generative model of the \gls{psd} for object $n$ is
-
-\begin{equation}
-\label{eq:genmodPSD}
-p(\mathbf{d}_n, P_n |\boldsymbol{\theta}_c,\boldsymbol{\theta}_f)=(1-P_n) \cdot p_f(\mathbf{d}_n|\boldsymbol{\theta}_f) + P_n\cdot p_c(\mathbf{d}_n| \boldsymbol{\theta}_c),
-\end{equation}
-
-with $\mathbf{d}_n$ its vector of observations, comprising the right ascension $\alpha$ (R.A.) and the declination $\delta$ (Dec.), and $P_n$ its cluster membership probability. The terms $p_f(\mathbf{d}_n|\boldsymbol{\theta}_f)$ and $p_c(\mathbf{d}_n|\boldsymbol{\theta}_c)$ are the field and cluster likelihood, respectively, of the datum $\mathbf{d}_n$ given the field, $\boldsymbol{\theta}_f$ and cluster, $\boldsymbol{\theta}_c$, parameters. Since all objects in the \gls{ddr2} have R.A. and Dec. uncertainties which are symmetric, almost identical, and negligible ($\sim 2\times10^{-6}$ deg) compared to the size of the cluster ($\sim7^{\circ}$), we can safely assume that: i) the data are independent and identically distributed, and ii) the observed positions correspond to the \emph{true} ones. Thus, the uncertainties are not included in the generative model. 
-
-We would expect that the fraction of contaminants in the \gls{hmps} will be uniformly distributed in right ascension and declination because the position on the sky was explicitly removed from the calculation of membership probabilities. Except perhaps for a mild positive gradient of the density towards the Galactic centre. Hence, we model these contaminants with a uniform spatial distribution $\mathcal{U}$. In this way, the contribution of these hypothetical contaminants will not bias our inference of the cluster parameters.
-
-In the following Section, I describe the kinds of \gls{psd} models that we included in our model selection analysis: those with radial symmetry, and those with luminosity segregation (a proxy for mass segregation). The former are the classical ones in the literature. The latter allow us to put a solid statistical background to the assumption of mass segregation in the Pleiades cluster \cite[see for example][]{2004A&A...426...75M, Converse2010} without relying on mass-luminosity transformations for individual objects. 
-
-\subsection{Models with radial symmetry}
-\label{sect:RadialModels}
-The first alternative is King's profile \citep{King1962}, which has been widely used in the Pleiades (see Section \ref{sect:PSD}) and to describe open clusters
-\citep[see][for recent applications]{2017MNRAS.469.1330A,2017MNRAS.468.2684P}, globular clusters \citep{2017ApJ...840L..25M} and even to study
-galaxies \citep{2017MNRAS.466.1513R}, halo substructure \citep{2007ApJ...663..960S} and the dark matter distribution \citep{2016MNRAS.458.2848J}. 
-
-The analytical description of the surface number density of stars counts $n$ is given by
-
-\begin{equation}
-  \rho(R) = k\cdot\left(\frac{1}{\sqrt{[1+(R/R_c)^2}}-\frac{1}{\sqrt{[1+(R_t/R_c)^2]}}\right)^2,
-\end{equation}
-
-where $R_c$ (the core radius) is a scale factor, $R_t$ is the tidal radius, and $k$ is a constant related (but not equal) to the central surface density. In the following we use $R$ instead of $r$ (as is often common in some of the articles that introduced the profile analytic expressions used here) to refer to the distance from the system centre projected on the celestial sphere. Also, we use $\rho$ to denote the surface number density of stars, and, $I$, to refer to the projected surface brightness.
-
-We have also considered the model proposed by \cite{EFF1987}, henceforth \gls{eff}, to describe young open clusters in the Large Magellanic Cloud. Their surface density (in star counts per solid angle) is given by
-
-\begin{equation}
-\rho(R)=\rho(0)\cdot(1+(R^2/A^2))^\frac{\gamma}{2}.
-\label{eq:eff}
-\end{equation}
-
-Equation \ref{eq:eff} is introduced heuristically and hence, the two parameters $A$ and $\gamma$ have no physical meaning (although $A$ must have the same units as $R$).
-
-Finally, we analyse a more general parameterisation introduced in \cite{1995AJ....110.2622L}, \cite{1996AJ....111.1889B} and \cite{Zhao1997}, which we call \gls{gp}. In it, the projected mass density is given as
-
-\begin{equation}
-  \rho(R) = \frac{k'}{(R/R_b)^{\gamma}\cdot(1+(R/R_b)^{1/\alpha})^{(\gamma-\beta)\alpha}}.
-  \label{eq:zhao}
-\end{equation}
-
-Equation \ref{eq:zhao} represents a double power law with $\gamma$ being the exponent in the innermost region, $\beta$ the exponent in the outer region, $\alpha$ is the width of the transition region, $R_b$ is the so called break radius, and $k'$ is a scale constant. In purity, the aforementioned works assume this functional form for the projected surface brightness $I$, the projected mass density $\rho$, and for the volume density $v$. Although the latter two are related by integration:
-
-\begin{equation}
-  \rho(R) = \int_{0}^{\infty}v(r)\cdot {\rm d}z  
-\end{equation}
-
-where $z$ is the distance along the line of sight corresponding to a radial distance projected onto the plane of the sky $R$.
-{Volume}
-In this work we will assume that the analytical expression in Eq. \ref{eq:zhao} is correctly stated in terms of the number density and not of volume density.
-
-This \gls{gp} is a more general analytical expression that comprises many simpler models each of which represent particular choices of the model parameters. For example, the model put forward by \cite{1911MNRAS..71..460P} to describe the projected spatial density corresponds to the general model with $\alpha=1/2$, $\beta=5$ and $\gamma=0$. Several density profiles proposed to describe galaxies can be grouped by particular choices of the parameters. For example, $\alpha=1$ includes models by \cite{1997ApJ...490..493N}, \cite{1990ApJ...356..359H},\cite{1983MNRAS.202..995J}, and \cite{1999MNRAS.310.1147M}, and $\alpha=1/2, \gamma=0$ includes the aforementioned model by \cite{1911MNRAS..71..460P}, and also models by \cite{1990ApJ...361..408S} and \cite{1985MNRAS.216..273D}. King's profile, however, cannot be cast into this general model unless the tidal radius $R_t$ is fixed at infinity. This is an important difference that will nevertheless have little effect on our comparisons for reasons that will become apparent further below.
-
-In all three cases, we need to convert the projected stellar densities (number of stars per unit solid angle) into probability density functions that describe the probability of finding a star between $R$ and $R+{\rm d}R$ under the assumption of spherical symmetry. In all three cases we can construct the probability densities from their definitions:
-
-\begin{equation}
-\rho(R)=\frac{N\cdot p(R)\cdot {\rm d}R}{2\pi\cdot R\cdot {\rm d}R}
-\label{eq:probfromdens}
-\end{equation}
-
-where $N$ is the total number of stars in the system. Applying Equation \ref{eq:probfromdens} to King's profile, we obtain
-
-\begin{equation}
-  p(R)=\frac{k\cdot2\pi}{N}\cdot R \cdot
-  \left(\frac{1}{\sqrt{1+(R/r_c)^2}} - \frac{1}{\sqrt{1+(r_t/r_c)^2}}\right)^2.
-\end{equation}
-
-Actually, in probabilistic inference we write this probability function as:
-
-\begin{equation}
-  p(R|r_c, r_t, k_1,\mathcal{M}_1)=k_1\cdot R \cdot
-  \left(\frac{1}{\sqrt{1+(R/r_c)^2}} - \frac{1}{\sqrt{1+(r_t/r_c)^2}}\right)^2,
-\label{eq:probfromdens1}
-\end{equation}
-
-where we have defined a new constant $k_1=\frac{k\cdot2\pi}{N}$, and made explicit the dependence of the probability on the underlying analytical expression ($\mathcal{M}_1$), and the values of the parameter set ($k_1, r_c$, and $r_t$). In practice $k_1$ is treated as a normalisation constant (to enforce unit integral) and there is no need to know the total number of stars in the system. This \gls{pdf} corresponds to the cluster model of \emph{likelihood}.
-
-Likewise, the expression for the \gls{eff} model is
-
-\begin{equation}
-  p(R|a, \gamma, k_2,\mathcal{M}_2)=k_2\cdot R \cdot (1+(R^2/a^2))^\frac{\gamma}{2}.
-\label{eq:probfromdens2}
-\end{equation}
-
-And finally, the generic model will be given by
-
-\begin{equation}
-  p(R| \alpha, \beta, \gamma, R_b, k_3,\mathcal{M}_3 ) = \frac{k_3\cdot R} {(R/R_b)^{\gamma}\cdot(1+(R/R_b)^{1/\alpha})^{(\gamma-\beta)\alpha}}.
-  \label{eq:probfromdens3}
-\end{equation}
-
-In all three cases, the $R$ coordinate is defined with respect to the origin of a coordinate axis. The actual values of $R$ then depend on this choice of origin. We therefore infer this centre as part of our models in order to incorporate all sources of uncertainty. 
-
-
-\subsubsection{Extensions of the classical profiles}
-
-In addition to the classical profiles we have tested two extensions of King's profile, and one variant of the \gls{gp}. Let us describe them in order.
-
-We define the \gls{gking} as King's profile without fixing the exponents of the analytical expression. Instead of Equation \ref{eq:probfromdens1}, we have
-
-\begin{equation}
-  p(R|r_c, r_t, k_1,\mathcal{M}_1)=k_1\cdot R \cdot
-  \left(
-  \left(1+(R/r_c)^{\frac{1}{\alpha_1}}\right)^{-\alpha_1}
-  -
-  \left(1+(r_t/r_c)^{\frac{1}{\alpha_1}}\right)^{-\alpha_1}
-  \right)^{\alpha_2}
-\label{eq:GKing}
-\end{equation}
-
-where the classical King's profile is recovered for $\alpha_1=0.5$ and $\alpha_2=2$. \citet{2017MNRAS.466.1513R} use a modified empirical King's profile that is similar to the one presented here. However, their profile is more restrictive and requires that $\alpha_2 = \alpha_1^{-1}$  and both terms $(R/r_c)$, and $(r_t/r_c)$ will be at the power of 2.
-
-The \gls{ogking} is the \gls{gking} profile with the values of $\alpha_1$ and $\alpha_2$ fixed  so as to maximise the evidence evaluated with all \gls{hmps} sources up to $6^\circ$ radius. The reasons for this will become apparent after Section \ref{sect:PSDresults}, but we can write here that this choice is the most favourable for the  profile in the context of model selection. These values are $\alpha_1=0.4$ and $\alpha_2=1.2$. Notice that $\alpha_1$ is very similar to the King's $\alpha_1=0.5$, which indicates that the central region is almost identical to King's profile. On the other hand, $\alpha_2=1.2$ is lower than King's $\alpha_2=2$,  thus showing that the main difference comes from the outskirts of the cluster. More details will be given in Section \ref{sect:PSDresults}.
-
-Finally, the \gls{rgp} corresponds to the generalised profile with the value $\gamma$ fixed at 0.
-
-
-\subsection{Central symmetry constraint}
-\label{sect:CentreModels}
-
-So far, we have defined a set of three models (King's, \gls{eff} and the \gls{gp}) and their extensions. Each has a different set of parameters. King's profile depends on two parameters ($r_c$ and $r_t$); \gls{eff}'s model depends on two parameters ($a$ and $\gamma$); the \gls{gp} depends on four parameters ($\alpha$, $\beta$, $\gamma$ and $R_b$).
-
-In reality, there are always two more parameters that do not appear explicitly in any of the classical analytical formulations of the King's, \gls{eff} or \gls{gp}. These are the cluster centre coordinates from which all radial distances $R_i$ are measured. It is not a minor question because the problem is degenerate, and there is a maximum likelihood solution for each choice of the cluster centre. In principle, one could even choose a poor cluster centre estimate that renders the angular distribution of members asymmetric, and obtain a maximum likelihood fit better than those obtained with a better centred estimate.  The models assume central symmetry, but this can only be ensured approximately. There is a region of non-negligible extent, where the cluster centre may be, and any particular choice of its position will influence the posterior distribution inferred. Thus, in order to propagate appropriately this uncertainty about the cluster centre position in our posterior inferences, we have included the two cluster centre coordinates, $\alpha_c$ and $\delta_c$, and the polar angle $\eta$ as further parameters of our models. The polar angle $\eta$ ensures that the resulting symmetry does not depend on the RA and Dec. coordinate system. Furthermore, this angle will be used in the elliptical models of the next section, where the position angle is computed from the semi-major axis. Thus, the use of the same likelihood functions for the centre coordinates will allow us to perform a fair comparison of the radial models, which is the main objective of this section.
-
-For any given choice of the cluster centre coordinates $\alpha_c,\delta_c$ and polar angle $\eta$, we calculate the radial distance, $R(\alpha_c,\delta_c)$, and the position angle $\phi(\eta)$ of each star in our data set. To avoid biases introduced by projection effects of objects located far from the cluster centre, we project each object coordinates into the plane of the sky along the line-of-sight vector \cite[see for example, Eq. 1 of][]{2006A&A...445..513V}. These projected coordinates are
-\begin{align}
-\tilde{x} =&\sin(\alpha - \alpha_c ) \cdot \cos(\delta)\nonumber\\
-\tilde{y} = &\cos(\delta_c)\cdot \sin(\delta) - \sin(\delta_c)\cdot \cos(\delta)\cdot\cos(\alpha - \alpha_c)
-\end{align}
-
-From these projected coordinates, the radial distance $R$ and the position angle $\phi$ are computed as 
-
-\begin{align}
-R=& \sqrt{\tilde{x}^2 + \tilde{y}^2},\nonumber\\
-\phi=& \arctan2 (\tilde{x},\tilde{y})
-\end{align}
- 
-
-
-The requirement of central symmetry is enforced by the inclusion of a multiplicative term in the likelihood. For a given set of parameters values of $\alpha_c, \delta_c, \eta$ we divide the computed polar angles of individual stars into four equally spaced quadrants (with separations at $\phi=\{0,90,180,270\}^{\circ}$) and require that the number of stars in each quadrant be Poisson distributed with a mean rate given by $N_q=N_{tot}/4$. Under this model, the likelihood of any given proposal for the models parameters ($\alpha_c,\delta_c,\eta$) will be
-
-\begin{equation}
-\mathcal{L}= p(N_1,N_2,N_3,N_4|\alpha_c,\delta_c,\eta) =\mathcal{P}(N_1|N_q)\cdot \mathcal{P}(N_2|N_q)\cdot \mathcal{P}(N_3|N_q)\cdot
-\mathcal{P}(N_4|N_q) 
-\end{equation}
-
-where $N_i, i=1,2,3,4$ is the number of sources in each quadrant, and $\mathcal{P}(N_i|N_q)$ is the Poisson distribution with mean rate $N_{tot}/4$ evaluated at $N_i$.
-
-%The new likelihood term is based on the empirical distribution function and is expressed as
-%
-%\begin{equation}
-%\mathcal{L}(\bm{\phi}) = p(\bm{\phi}|\bm{\theta}) = \prod_{n=1}^{N}\mathcal{N}(\phi_n|\mu=n\cdot2\pi/N,\sigma)
-%\end{equation}
-%
-%where $\bm{\phi}$ is the vector of ordered angles $\phi_n\in {0,2\pi}$ calculated for a given centre and coordinate system (parameters included in the set $\bm{\theta}$); $\phi_n$ is the n-th angle in the vector $\bm{\phi}$, and $\sigma$ is the allowed level of departure from the cumulative distribution function of the uniform distribution. 
-
-\subsection{Models with biaxial symmetry}
-\label{sect:EllipticModels}
-
-In this Section we extend the previous models to accommodate deviations from radial symmetry. We do this by allowing variations of the radial profile that depend on the angular coordinate but still maintain biaxial symmetry. This can be done in many ways. In this work we focus in the simplest one: the analytical expression of the radial profile is maintained along any radial direction but the profile parameters ($r_c$ an $r_t$ for example in the King's profile) have an ellipse-like dependence on the angular coordinate.
-
-This requires the definition of a coordinate system centred at the cluster centre and potentially rotated from the RA-Dec system of axes. We use the previously included the angle $\eta$ between the principal axis of the ellipse and RA-Dec system.  It is inferred together with the rest of the model parameters.
-
-Starting with King's profile, the likelihood term now is defined as
- 
-\begin{equation}
-  p(R|r_c, r_t, k_1,\mathcal{M}_1)=
-  k_1\cdot R \cdot
-  \left(\frac{1}{\sqrt{1+(R/r_c(\phi))^2}} - \frac{1}{\sqrt{1+(r_t(\phi)/r_c(\phi))^2}}\right)^2
-\label{eq:KingEll}
-\end{equation}
-
-where
-
-
-\begin{equation}
-r_c(\phi) = \frac{r_{cx}\cdot r_{cy}}{\sqrt{((r_{cx}\sin(\phi))^2+r_{cy}\cos(\phi))^2)}},
-\label{eq:anglerc}
-\end{equation}
-
-\begin{equation}
-r_t(\phi) = \frac{r_{tx}\cdot r_{ty}}{\sqrt{((r_{tx}\sin(\phi))^2+r_{ty}\cos(\phi))^2)}},
-\label{eq:anglert}
-\end{equation}
-
-with $r_{cx}$ and $r_{cy}$ are the $r_c$ ellipse semi-axes, and $r_{tx}$ and $r_{ty}$ are the $r_t$ ellipse semi-axes. Notice that we do not constrain the two ellipses to have the same aspect ratio, but they are co-aligned.
-
-The angle dependence of the \gls{ogking} profile is introduced according to
-
-\begin{equation}
-    p(R|r_c, r_t, k_1,\mathcal{M}_1)=
-    k_1\cdot R \cdot
-  \left(
-  \left(1+(R/r_c(\phi))^{\frac{1}{0.4}}\right)^{-0.4}
-  -
-  \left(1+(r_t(\phi)/r_c(\phi))^{\frac{1}{0.4}}\right)^{-0.4}
-  \right)^{1.2}
-\end{equation}
-
-with $r_c(\phi)$ and $r_t(\phi)$ following the same angle dependence as in the classical King's profile.
-
-In the case of the \gls{rgp} profile, the new likelihood is defined as
-
-\begin{equation}
-  p(R| \alpha, \beta, \gamma=0, R_b, k_3,\mathcal{M}_3 ) = \frac
-  {k_3\cdot R} {(1+(R/R_b(\phi))^{1/\alpha})^{(-\beta)\alpha}},
-  \label{eq:EllRGP}
-\end{equation}
-
-where the parameter $R_b$ follows the same elliptic angle dependence as defined in Equations \ref{eq:anglerc} and \ref{eq:anglert}, and we do not incorporate any angle dependence for the exponents $\alpha$ and $\beta$.
-
-\subsection{Models with luminosity segregation}
-\label{sect:SegregatedModels}
-In this Section, we consider an extension to introduce a dependence of the core radius with the $J$ magnitude. We select the $J$ magnitude because it is the \textbf{bluest} of the magnitudes that are available for \textbf{almost} all candidate members in the \gls{hmps} (\textbf{see Table \ref{tab:hmps}}). We assume that stars of the same mass have approximately the same magnitude and that distance differences (due to the 3D spatial extend of the Pleiades) average out. The core radius dependence with the $J$ magnitude is modelled as
-
-\begin{equation}
-  r_c(\phi,J) = r_c(\phi)+\kappa\cdot(J-13.5).
-\end{equation}
-
-The slope of the relationship $\kappa$ is independent of the position angle $\phi$. Therefore, for $J=13.5$ (the mode of the $J$ distribution) the model reduces to the elliptic profile described in Section \ref{sect:EllipticModels}. A positive value of $\kappa$ corresponds to smaller values of the core radius for stars brighter than $J=13.5$. In other words, it describes a system where the more massive stars are more concentrated than the less massive ones.
-
-Finally, to compare the previous models, we use the model selection methodology described in Section \ref{sect:modelselection} together with truncated uniform priors for all cluster parameters. The results of this analysis are detailed in Chapter \ref{chap:Results}.
 
 \section{Priors}
 \label{sect:priors}
@@ -1142,9 +969,9 @@ This Section is structured as follows. First, I introduce an heuristic technique
 
 The likelihood of the data is the product of the individual likelihoods of each datum (Eq. \ref{eq:lik_datum}). Therefore, the number of operations needed to evaluate the likelihood grows proportionally to the size of the data. As I will explain in Section \ref{sect:MCMC}, the burn-in phase of \gls{mcmc} techniques allows them to reach the target distribution. However, once the \gls{mcmc} reaches this target distribution, the burn-in computations are discarded. Since the evaluation of the likelihood, and therefore of the posterior, is computationally expensive, I decided to reduce as much as possible the burn-in phase. To do so, I provide \gls{mcmc} with a set of initial solutions which are close to the \gls{map} of the target (posterior) distribution. These near-\gls{map} solutions must not be too crowded on the \gls{map}, or otherwise the \gls{mcmc} will spend too much time expanding them to reach the entire distribution. Here, there is a trade-off between the crowdedness of the solutions and its proximity to the \gls{map}. Since we aim at obtaining a representative sample of the posterior distribution and not just an estimate of it, then the initial set of solution for the \gls{mcmc} must be carefully chosen to minimise the computing time. This section provides the details of this procedure. 
 
-{In Section \ref{sect:MCMC}, I will also show that the \gls{mcmc} flavour more suitable to our objective belongs to the family of \emph{ensemble} \gls{mcmc}. This flavour works with particles in the parametric space. To make the transition between the initial near-\gls{map} solutions and the  \gls{mcmc} particles as efficient as possible, I choose the \gls{pso} of  \citet{Kennedy1995}, which is a \gls{map} finder that also works with particles. It provides a heuristic cheap-and-fast approach to the \gls{map} solution. The \gls{pso} works with an ensemble of particles which move through the parametric space.} These particles use the collective and individual past and present information to update their position. This information is specified by the score function, which in our case is the posterior distribution. The particles update their position iteratively according to their velocity. This velocity has a random but restricted magnitude. However, its direction is determined by the particle position, and the individual and collective positions with maximum score. \citet{Kennedy1995} has a detailed description of the original algorithm, while a more efficient version is given by \citep{Clerc2002}.
+{In Section \ref{sect:MCMC}, I will also show that the \gls{mcmc} flavour more suitable to our objective belongs to the family of \emph{ensemble} \gls{mcmc}. This flavour works with particles in the parametric space. To make the transition between the initial near-\gls{map} solutions and the  \gls{mcmc} particles as efficient as possible, I choose the \gls{pso} of  \citet{Kennedy1995}, which is a function optimiser that also works with particles. It provides a heuristic cheap-and-fast approach to the \gls{map} solution. The \gls{pso} works with an ensemble of particles which move through the parametric space.} These particles use the collective and individual past and present information to update their position. This information is specified by the score function, which in our case is the posterior distribution. The particles update their position iteratively according to their velocity. This velocity has a random but restricted magnitude. However, its direction is determined by the particle position, and the individual and collective positions with maximum score. \citet{Kennedy1995} show detailed description of the original algorithm, while a more efficient version is given by \citep{Clerc2002}.
 
-Although the \gls{pso} is a simple and rather efficient solution to the \gls{map} approximation, it is far from perfect. Due to its heuristic origin, there is no theory behind its formulation. Furthermore, it does not always guarantee the finding of the global maximum \cite[for a convergence guaranteed version see][]{Patel2013}. Although,  this issue does not affect our results (as we will see \gls{mcmc} does guarantee the finding of the target distribution), it impacts the computing time. If the global maximum is not found in the \gls{pso} stage, then the \gls{mcmc} will take longer to arrive to the target distribution. 
+Although the \gls{pso} is a simple and rather efficient solution to the \gls{map} approximation, it is far from perfect. Due to its heuristic origin, there is no theory behind its formulation. Furthermore, it does not guarantee the finding of the global maximum \cite[for a convergence guaranteed version see][]{Patel2013}. Although,  this issue does not affect our results (as we will see \gls{mcmc} does guarantee the finding of the target distribution once it has converged), it impacts the computing time. If the global maximum is not found in the \gls{pso} stage, then the \gls{mcmc} will take longer to arrive to the target distribution. 
 
 On the other hand, the \gls{pso} stops its computations once the mean of the particles scores lies within a user defined tolerance. If this tolerance is too large, the \gls{pso} may stop far from the \gls{map}. If it is too small, it may converge to the \gls{map} but deliver solutions highly concentrated around it. This poses a problem to the following \gls{mcmc} stage. For it to explore the full posterior distribution, the \gls{mcmc} will need more iterations, thus more time, to expand the initially concentrated positions. {The optimal value for the relative tolerance is $10^{-7}$. I found it after several trials and errors. It was a time consuming exercise that will be avoided in the analyses of other clusters.} 
 
@@ -1319,7 +1146,7 @@ and it is now applied over each dimension of the parametric space. The distance 
 The modification I introduced in \emph{emcee}, although very simple, improved the acceptance fraction and mixing of the particles.
 To allow the parallelisation, \citet{Foreman2013} divide the ensemble of particles in two ensembles. In the original version, the particles in one ensemble use one and the same particle in the complementary ensemble to compute their positions according to Eq. \ref{eq:stretchmove}. In the modified version, particles from one ensemble update their positions using a particle from the complementary ensemble. However, this particle is chosen randomly at each iteration. 
 
-In a private communication with David Foreman, the developer of \emph{emcee}, he mentions that a similar modification was already introduced in a beta version of the \emph{emcee} code.
+In a private communication with Daniel Foreman-Mackey, the developer of \emph{emcee}, he mentions that a similar modification was already introduced in a beta version of the \emph{emcee} code.
 
 %Figure \ref{fig:emcee\gls{dance}} compares the mixing and acceptance fractions of the original and modified versions of \emph{emcee}.
 %\begin{figure}[htbp]
@@ -1330,6 +1157,7 @@ In a private communication with David Foreman, the developer of \emph{emcee}, he
 %\end{center}
 %\end{figure}
 \subsection{GMM for the field population}
+\label{sec:codeGMM}
 As mentioned earlier in this Chapter, the field population is modelled by means of two independent photometric and proper motion distributions. The \gls{mle} of the parameters of these distributions were found using the \gls{em} algorithm.  The conventional \gls{em} algorithm for \gls{gmm} \citep{Dempster1977} for a mixture of $M$ gaussians goes as follows. Given a set of parameters $\theta=\{w_i,\boldsymbol{\mu}_i,\boldsymbol{\Sigma}_i\}_{i=1}^M$, were $w_i$,$\boldsymbol{\mu}_i$, and $\boldsymbol{\Sigma}_i$ are the fraction, mean and covariance matrix of gaussian component $i$, the likelihood of the data is,
 
 \begin{equation}
@@ -1366,7 +1194,7 @@ E[p(\{\mathbf{y}_n\}_{n=1}^N|\theta)]=\prod_{n=1}^N {\left[z_{n,0}\cdot w_0 \cdo
 
 The maximisation step remains identical except for the indices. There are now $M+1$ fractions $w_i$, with $i=0,1,...,M$, and the means and covariances run from $i=1,...,M$.
 
-Regarding the photometric \gls{gmm} of the field, and given that the photometry has missing values, we use the \gls{em} algorithm of \citet{McMichael1996}. This algorithm was developed to obtain the \gls{mle} of data sets containing objects with missing values. A more recent version has been developed by \citet{Lin2006}, however, this assumes that the missing entries are randomly distributed (missing at random). However,  as mentioned earlier, the missing values in the photometry of the \gls{ddr2} are not randomly distributed.
+Regarding the photometric \gls{gmm} of the field, and given that the photometry has missing values, we use the \gls{em} algorithm of \citet{McMichael1996}. This algorithm was developed to obtain the \gls{mle} of data sets containing objects with missing values. A recent and faster version was developed by \citet{Lin2006}. Although this new version is faster, its mean absolute relative error is in the range 0.02-0.2 (see Tables2 and 3 of the mentioned authors). In \citet{McMichael1996} algorithm this indicator is lower, at least for fractions and means (see Fig. \ref{fig:validate_MGMM}).
 
 In the algorithm of \citet{McMichael1996}, there is a set of $N$ gain matrices, one for each datum. Each $M_n$ matrix is an identity matrix in which the rows of the corresponding missing value have been deleted. Thus, the expected value of the likelihood is now,
 
@@ -1396,7 +1224,15 @@ with $\Delta_i$ given by
 \Delta_i=  \frac{1}{\sum_{n=1}^N z_{n,i}}\cdot \sum_{n=1}^N z_{n,i} \cdot \left[H_n(\mathbf{y}_n -  M_n \boldsymbol{\mu}_i) \times  (\mathbf{y}_n -  M_n \boldsymbol{\mu}_i)^TH_n^T - H_nI\right].
 \end{equation}
  
- This algorithm preserves the monotonic convergence of the conventional \gls{em}, and returns positive definite matrices provided that $\rho < 2$. For details and validation of this algorithm see \citet{McMichael1996}.
+ This algorithm preserves the monotonic convergence of the conventional \gls{em}, and returns positive definite matrices provided that $\rho < 2$. For details and validation of this algorithm see \citet{McMichael1996}. \textbf{Nevertheless, I tested the validity of this algorithm on synthetic data sets. I created them using the parameters of the photometric model presented in Section \ref{sect:field_population}.  Figure \ref{fig:validate_MGMM} shows the mean absolute relative differences between each of the input and recovered parameters in the \gls{gmm}. The panels are separated by the kind of parameter: fractions, means and covariance matrices. The mean absolute relative differences are shown as a function of the sample size and the fraction of objects with missing values. The latter were randomly chosen, with missing entries in three of the five observables. As can be seen from this figure, the algorithm performs reasonably well in the explored range of sample sizes and missing fractions.}
+ 
+ \begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{background/Figures/Analysis_Missing_GMM.pdf}
+\caption{Mean of the relative difference between the input parameters and the recovered ones as a function of the sample size and the fraction of objects with missing values.}
+\label{fig:validate_MGMM}
+\end{figure}
+
 
 \subsection{Hybrid-HPC implementations}
 \label{sect:HHPC}
@@ -1407,6 +1243,237 @@ In the Hybrid-\gls{hpc} approach, the particles of \emph{emcee} are distributed 
 However, the  Hybrid-\gls{hpc} approach was not the best solution at the Infrastructure de Calcul Intensive et de Donées\footnote{https://gricad.univ-grenoble-alpes.fr}of the University of Grenoble Alpes. At the Froggy\footnote{https://ciment.ujf-grenoble.fr/wiki-pub/index.php/Hardware:Froggy} cluster, the code continuously render errors of communication. For this reason, I implemented a \gls{mpi}-only version of the code. In this version, the multithreading approach is left aside. Instead, the totality of the available cores is fully dedicated to the computing of the likelihood. Each of the $n$ cores computes the likelihood of the $n$th fraction of the objects in the data set. Once the likelihood of all particles has been computed, the master node evaluates the new positions of the particles.
 
 I finish this chapter with a brief description of the difficulties faced in the development and testing of the \gls{bhm} code. As the code evolved in complexity, my computational skills were compelled to evolve as well. I started by learning R and solving some toy problems on it. Later, when the dimensionality of the posterior increased I learned \emph{Stan}. When the data set increased in size, we faced the parallelisation, so I learned Python and \gls{mpi}. Once these versions were operable, I was forced to deal with libraries, from the common, numpy, scipy and numba, to the linking of modules and libraries. Finally, when dealing with several clusters I learned the queue languages Condor, slurm and OAR. Currently, I am working on the improvement (memory allocation and data distribution) of the \gls{gpu} implementation of the \gls{bhm} code.  
+
+\section{The methodology for the analysis of the PSD}
+\label{sect:PSDmethod}
+
+In this Section, I present the methodology applied to investigate the \glsfirst{psd}. The data set for this analysis is described in Section \ref{}. Here suffices to mention that is comprises the largest and less contaminated sample of Pleiades candidate members to date.  Although the analysis of the \gls{psd} uses the membership probabilities of the \gls{bhm} (derived in this work) and those of \citet{Bouy2015} for the Tycho-2 sample, it is independent of both the latter because both works explicitly removed the sky positions in their analyses. See Section \ref{sect:RF-2} details the reasons of this decision. 
+
+The generative model of the \gls{psd} is similar to that of the \gls{bhm}  (Eq. \ref{eq:genmod}). However, instead of inferring the fraction of field objects in the data set (which would be similar to the estimated contamination rate on the \gls{hmps}, see Section \ref{sect:classifier}), each object contributes to the cluster model proportionally to its membership probability, $P$ (the ones obtained by the \gls{bhm} and by \citealt{Bouy2015}). Thus the generative model of the \gls{psd} for object $n$ is
+
+\begin{equation}
+\label{eq:genmodPSD}
+p(\mathbf{d}_n, P_n |\boldsymbol{\theta}_c,\boldsymbol{\theta}_f)=(1-P_n) \cdot p_f(\mathbf{d}_n|\boldsymbol{\theta}_f) + P_n\cdot p_c(\mathbf{d}_n| \boldsymbol{\theta}_c),
+\end{equation}
+
+with $\mathbf{d}_n$ its vector of observations, comprising the right ascension $\alpha$ (R.A.) and the declination $\delta$ (Dec.), and $P_n$ its cluster membership probability. The terms $p_f(\mathbf{d}_n|\boldsymbol{\theta}_f)$ and $p_c(\mathbf{d}_n|\boldsymbol{\theta}_c)$ are the field and cluster likelihood, respectively, of the datum $\mathbf{d}_n$ given the field, $\boldsymbol{\theta}_f$ and cluster, $\boldsymbol{\theta}_c$, parameters. Since all objects in the \gls{ddr2} have R.A. and Dec. uncertainties which are symmetric, almost identical, and negligible ($\sim 2\times10^{-6}$ deg) compared to the size of the cluster ($\sim7^{\circ}$), we can safely assume that: i) the data are independent and identically distributed, and ii) the observed positions correspond to the \emph{true} ones. Thus, the uncertainties are not included in the generative model. 
+
+We would expect that the fraction of contaminants in the \gls{hmps} will be uniformly distributed in right ascension and declination because the position on the sky was explicitly removed from the calculation of membership probabilities. Except perhaps for a mild positive gradient of the density towards the Galactic centre. Hence, we model these contaminants with a uniform spatial distribution $\mathcal{U}$. In this way, the contribution of these hypothetical contaminants will not bias our inference of the cluster parameters.
+
+In the following Section, I describe the kinds of \gls{psd} models that we included in our model selection analysis: those with radial symmetry, and those with luminosity segregation (a proxy for mass segregation). The former are the classical ones in the literature. The latter allow us to put a solid statistical background to the assumption of mass segregation in the Pleiades cluster \cite[see for example][]{2004A&A...426...75M, Converse2010} without relying on mass-luminosity transformations for individual objects. 
+
+\subsection{Models with radial symmetry}
+\label{sect:RadialModels}
+The first alternative is King's profile \citep{King1962}, which has been widely used in the Pleiades (see Section \ref{sect:PSD}) and to describe open clusters
+\citep[see][for recent applications]{2017MNRAS.469.1330A,2017MNRAS.468.2684P}, globular clusters \citep{2017ApJ...840L..25M} and even to study
+galaxies \citep{2017MNRAS.466.1513R}, halo substructure \citep{2007ApJ...663..960S} and the dark matter distribution \citep{2016MNRAS.458.2848J}. 
+
+The analytical description of the surface number density of stars counts $n$ is given by
+
+\begin{equation}
+  \rho(R) = k\cdot\left(\frac{1}{\sqrt{1+(R/R_c)^2}}-\frac{1}{\sqrt{1+(R_t/R_c)^2}}\right)^2,
+\end{equation}
+
+where $R_c$ (the core radius) is a scale factor, $R_t$ is the tidal radius, and $k$ is a constant related (but not equal) to the central surface density. In the following we use $R$ instead of $r$ (as is often common in some of the articles that introduced the profile analytic expressions used here) to refer to the distance from the system centre projected on the celestial sphere. Also, we use $\rho$ to denote the surface number density of stars, and, $I$, to refer to the projected surface brightness.
+
+We have also considered the model proposed by \cite{EFF1987}, henceforth \gls{eff}, to describe young open clusters in the Large Magellanic Cloud. Their surface density (in star counts per solid angle) is given by
+
+\begin{equation}
+\rho(R)=\rho(0)\cdot(1+(R/A)^2)^\frac{\gamma}{2}.
+\label{eq:eff}
+\end{equation}
+
+Equation \ref{eq:eff} is introduced heuristically and hence, the two parameters $A$ and $\gamma$ have no physical meaning (although $A$ must have the same units as $R$).
+
+Finally, we analyse a more general parameterisation introduced in \cite{1995AJ....110.2622L}, \cite{1996AJ....111.1889B} and \cite{Zhao1997}, which we call \gls{gp}. In it, the projected mass density is given as
+
+\begin{equation}
+  \rho(R) = \frac{k'}{(R/R_b)^{\gamma}\cdot(1+(R/R_b)^{1/\alpha})^{(\gamma-\beta)\alpha}}.
+  \label{eq:zhao}
+\end{equation}
+
+Equation \ref{eq:zhao} represents a double power law with $\gamma$ being the exponent in the innermost region, $\beta$ the exponent in the outer region, $\alpha$ is the width of the transition region, $R_b$ is the so called break radius, and $k'$ is a scale constant. In purity, the aforementioned works assume this functional form for the projected surface brightness $I$, the projected mass density $\rho$, and for the volume density $v$. Although the latter two are related by integration:
+
+\begin{equation}
+  \rho(R) = \int_{0}^{\infty}v(r)\cdot {\rm d}z  
+\end{equation}
+
+where $z$ is the distance along the line of sight corresponding to a radial distance projected onto the plane of the sky $R$.
+
+In this work we will assume that the analytical expression in Eq. \ref{eq:zhao} is correctly stated in terms of the number density and not of volume density.
+
+This \gls{gp} is a more general analytical expression that comprises many simpler models each of which represent particular choices of the model parameters. For example, the model put forward by \cite{1911MNRAS..71..460P} to describe the projected spatial density corresponds to the general model with $\alpha=1/2$, $\beta=5$ and $\gamma=0$. Several density profiles proposed to describe galaxies can be grouped by particular choices of the parameters. For example, $\alpha=1$ includes models by \cite{1997ApJ...490..493N}, \cite{1990ApJ...356..359H},\cite{1983MNRAS.202..995J}, and \cite{1999MNRAS.310.1147M}, and $\alpha=1/2, \gamma=0$ includes the aforementioned model by \cite{1911MNRAS..71..460P}, and also models by \cite{1990ApJ...361..408S} and \cite{1985MNRAS.216..273D}. King's profile, however, cannot be cast into this general model unless the tidal radius $R_t$ is fixed at infinity. This is an important difference that will nevertheless have little effect on our comparisons for reasons that will become apparent further below.
+
+In all three cases, we need to convert the projected stellar densities (number of stars per unit solid angle) into probability density functions that describe the probability of finding a star between $R$ and $R+{\rm d}R$ under the assumption of spherical symmetry. In all three cases we can construct the probability densities from their definitions:
+
+\begin{equation}
+\rho(R)=\frac{N\cdot p(R)\cdot {\rm d}R}{2\pi\cdot R\cdot {\rm d}R}
+\label{eq:probfromdens}
+\end{equation}
+
+where $N$ is the total number of stars in the system. Applying Equation \ref{eq:probfromdens} to King's profile, we obtain
+
+\begin{equation}
+  p(R)=\frac{k\cdot2\pi}{N}\cdot R \cdot
+  \left(\frac{1}{\sqrt{1+(R/r_c)^2}} - \frac{1}{\sqrt{1+(r_t/r_c)^2}}\right)^2.
+\end{equation}
+
+Actually, in probabilistic inference we write this probability function as:
+
+\begin{equation}
+  p(R|r_c, r_t, k_1,\mathcal{M}_1)=k_1\cdot R \cdot
+  \left(\frac{1}{\sqrt{1+(R/r_c)^2}} - \frac{1}{\sqrt{1+(r_t/r_c)^2}}\right)^2,
+\label{eq:probfromdens1}
+\end{equation}
+
+where we have defined a new constant $k_1=\frac{k\cdot2\pi}{N}$, and made explicit the dependence of the probability on the underlying analytical expression ($\mathcal{M}_1$), and the values of the parameter set ($k_1, r_c$, and $r_t$). In practice $k_1$ is treated as a normalisation constant (to enforce unit integral) and there is no need to know the total number of stars in the system. This \gls{pdf} corresponds to the cluster model of \emph{likelihood}.
+
+Likewise, the expression for the \gls{eff} model is
+
+\begin{equation}
+  p(R|a, \gamma, k_2,\mathcal{M}_2)=k_2\cdot R \cdot (1+(R^2/a^2))^\frac{\gamma}{2}.
+\label{eq:probfromdens2}
+\end{equation}
+
+And finally, the generic model will be given by
+
+\begin{equation}
+  p(R| \alpha, \beta, \gamma, R_b, k_3,\mathcal{M}_3 ) = \frac{k_3\cdot R} {(R/R_b)^{\gamma}\cdot(1+(R/R_b)^{1/\alpha})^{(\gamma-\beta)\alpha}}.
+  \label{eq:probfromdens3}
+\end{equation}
+
+In all three cases, the $R$ coordinate is defined with respect to the origin of a coordinate axis. The actual values of $R$ then depend on this choice of origin. We therefore infer this centre as part of our models in order to incorporate all sources of uncertainty. 
+
+
+\subsubsection{Extensions of the classical profiles}
+
+In addition to the classical profiles we have tested two extensions of King's profile, and one variant of the \gls{gp}. Let us describe them in order.
+
+We define the \gls{gking} as King's profile without fixing the exponents of the analytical expression. Instead of Equation \ref{eq:probfromdens1}, we have
+
+\begin{equation}
+  p(R|r_c, r_t, k_1,\mathcal{M}_1)=k_1\cdot R \cdot
+  \left(
+  \left(1+(R/r_c)^{\frac{1}{\alpha_1}}\right)^{-\alpha_1}
+  -
+  \left(1+(r_t/r_c)^{\frac{1}{\alpha_1}}\right)^{-\alpha_1}
+  \right)^{\alpha_2}
+\label{eq:GKing}
+\end{equation}
+
+where the classical King's profile is recovered for $\alpha_1=0.5$ and $\alpha_2=2$. \citet{2017MNRAS.466.1513R} use a modified empirical King's profile that is similar to the one presented here. However, their profile is more restrictive and requires that $\alpha_2 = \alpha_1^{-1}$  and both terms $(R/r_c)$, and $(r_t/r_c)$ will be at the power of 2.
+
+The \gls{ogking} is the \gls{gking} profile with the values of $\alpha_1$ and $\alpha_2$ fixed  so as to maximise the evidence evaluated with all \gls{hmps} sources up to $6^\circ$ radius. The reasons for this will become apparent after Section \ref{sect:PSDresults}, but we can write here that this choice is the most favourable for the  profile in the context of model selection. These values are $\alpha_1=0.4$ and $\alpha_2=1.2$. Notice that $\alpha_1$ is very similar to the King's $\alpha_1=0.5$, which indicates that the central region is almost identical to King's profile. On the other hand, $\alpha_2=1.2$ is lower than King's $\alpha_2=2$,  thus showing that the main difference comes from the outskirts of the cluster. More details will be given in Section \ref{sect:PSDresults}.
+
+Finally, the \gls{rgp} corresponds to the generalised profile with the value $\gamma$ fixed at 0.
+
+
+\subsection{Central symmetry constraint}
+\label{sect:CentreModels}
+
+So far, we have defined a set of three models (King's, \gls{eff} and the \gls{gp}) and their extensions. Each has a different set of parameters. King's profile depends on two parameters ($r_c$ and $r_t$); \gls{eff}'s model depends on two parameters ($a$ and $\gamma$); the \gls{gp} depends on four parameters ($\alpha$, $\beta$, $\gamma$ and $R_b$).
+
+In reality, there are always two more parameters that do not appear explicitly in any of the classical analytical formulations of the King's, \gls{eff} or \gls{gp}. These are the cluster centre coordinates from which all radial distances $R_i$ are measured. It is not a minor question because the problem is degenerate, and there is a maximum likelihood solution for each choice of the cluster centre. In principle, one could even choose a poor cluster centre estimate that renders the angular distribution of members asymmetric, and obtain a maximum likelihood fit better than those obtained with a better centred estimate.  The models assume central symmetry, but this can only be ensured approximately. There is a region of non-negligible extent, where the cluster centre may be, and any particular choice of its position will influence the posterior distribution inferred. Thus, in order to propagate appropriately this uncertainty about the cluster centre position in our posterior inferences, we have included the two cluster centre coordinates, $\alpha_c$ and $\delta_c$, and the polar angle $\eta$ as further parameters of our models. The polar angle $\eta$ ensures that the resulting symmetry does not depend on the RA and Dec. coordinate system. Furthermore, this angle will be used in the elliptical models of the next section, where the position angle is computed from the semi-major axis. Thus, the use of the same likelihood functions for the centre coordinates will allow us to perform a fair comparison of the radial models, which is the main objective of this section.
+
+For any given choice of the cluster centre coordinates $\alpha_c,\delta_c$ and polar angle $\eta$, we calculate the radial distance, $R(\alpha_c,\delta_c)$, and the position angle $\phi(\eta)$ of each star in our data set. To avoid biases introduced by projection effects of objects located far from the cluster centre, we project each object coordinates into the plane of the sky along the line-of-sight vector \cite[see for example, Eq. 1 of][]{2006A&A...445..513V}. These projected coordinates are
+\begin{align}
+\tilde{x} =&\sin(\alpha - \alpha_c ) \cdot \cos(\delta)\nonumber\\
+\tilde{y} = &\cos(\delta_c)\cdot \sin(\delta) - \sin(\delta_c)\cdot \cos(\delta)\cdot\cos(\alpha - \alpha_c)
+\end{align}
+
+From these projected coordinates, the radial distance $R$ and the position angle $\phi$ are computed as 
+
+\begin{align}
+R=& \sqrt{\tilde{x}^2 + \tilde{y}^2},\nonumber\\
+\phi=& \arctan2 (\tilde{x},\tilde{y})
+\end{align}
+ 
+
+
+The requirement of central symmetry is enforced by the inclusion of a multiplicative term in the likelihood. For a given set of parameters values of $\alpha_c, \delta_c, \eta$ we divide the computed polar angles of individual stars into four equally spaced quadrants (with separations at $\phi=\{0,90,180,270\}^{\circ}$) and require that the number of stars in each quadrant be Poisson distributed with a mean rate given by $N_q=N_{tot}/4$. Under this model, the likelihood of any given proposal for the models parameters ($\alpha_c,\delta_c,\eta$) will be
+
+\begin{equation}
+\mathcal{L}= p(N_1,N_2,N_3,N_4|\alpha_c,\delta_c,\eta) =\mathcal{P}(N_1|N_q)\cdot \mathcal{P}(N_2|N_q)\cdot \mathcal{P}(N_3|N_q)\cdot
+\mathcal{P}(N_4|N_q) 
+\end{equation}
+
+where $N_i, i=1,2,3,4$ is the number of sources in each quadrant, and $\mathcal{P}(N_i|N_q)$ is the Poisson distribution with mean rate $N_{tot}/4$ evaluated at $N_i$.
+
+%The new likelihood term is based on the empirical distribution function and is expressed as
+%
+%\begin{equation}
+%\mathcal{L}(\bm{\phi}) = p(\bm{\phi}|\bm{\theta}) = \prod_{n=1}^{N}\mathcal{N}(\phi_n|\mu=n\cdot2\pi/N,\sigma)
+%\end{equation}
+%
+%where $\bm{\phi}$ is the vector of ordered angles $\phi_n\in {0,2\pi}$ calculated for a given centre and coordinate system (parameters included in the set $\bm{\theta}$); $\phi_n$ is the n-th angle in the vector $\bm{\phi}$, and $\sigma$ is the allowed level of departure from the cumulative distribution function of the uniform distribution. 
+
+\subsection{Models with biaxial symmetry}
+\label{sect:EllipticModels}
+
+In this Section we extend the previous models to accommodate deviations from radial symmetry. We do this by allowing variations of the radial profile that depend on the angular coordinate but still maintain biaxial symmetry. This can be done in many ways. In this work we focus in the simplest one: the analytical expression of the radial profile is maintained along any radial direction but the profile parameters ($r_c$ an $r_t$ for example in the King's profile) have an ellipse-like dependence on the angular coordinate.
+
+This requires the definition of a coordinate system centred at the cluster centre and potentially rotated from the RA-Dec system of axes. We use the previously included the angle $\eta$ between the principal axis of the ellipse and RA-Dec system.  It is inferred together with the rest of the model parameters.
+
+Starting with King's profile, the likelihood term now is defined as
+ 
+\begin{equation}
+  p(R|r_c, r_t, k_1,\mathcal{M}_1)=
+  k_1\cdot R \cdot
+  \left(\frac{1}{\sqrt{1+(R/r_c(\phi))^2}} - \frac{1}{\sqrt{1+(r_t(\phi)/r_c(\phi))^2}}\right)^2
+\label{eq:KingEll}
+\end{equation}
+
+where
+
+
+\begin{equation}
+r_c(\phi) = \frac{r_{cx}\cdot r_{cy}}{\sqrt{((r_{cx}\sin(\phi))^2+r_{cy}\cos(\phi))^2)}},
+\label{eq:anglerc}
+\end{equation}
+
+\begin{equation}
+r_t(\phi) = \frac{r_{tx}\cdot r_{ty}}{\sqrt{((r_{tx}\sin(\phi))^2+r_{ty}\cos(\phi))^2)}},
+\label{eq:anglert}
+\end{equation}
+
+with $r_{cx}$ and $r_{cy}$ are the $r_c$ ellipse semi-axes, and $r_{tx}$ and $r_{ty}$ are the $r_t$ ellipse semi-axes. Notice that we do not constrain the two ellipses to have the same aspect ratio, but they are co-aligned.
+
+The angle dependence of the \gls{ogking} profile is introduced according to
+
+\begin{equation}
+    p(R|r_c, r_t, k_1,\mathcal{M}_1)=
+    k_1\cdot R \cdot
+  \left(
+  \left(1+(R/r_c(\phi))^{\frac{1}{0.4}}\right)^{-0.4}
+  -
+  \left(1+(r_t(\phi)/r_c(\phi))^{\frac{1}{0.4}}\right)^{-0.4}
+  \right)^{1.2}
+\end{equation}
+
+with $r_c(\phi)$ and $r_t(\phi)$ following the same angle dependence as in the classical King's profile.
+
+In the case of the \gls{rgp} profile, the new likelihood is defined as
+
+\begin{equation}
+  p(R| \alpha, \beta, \gamma=0, R_b, k_3,\mathcal{M}_3 ) = \frac
+  {k_3\cdot R} {(1+(R/R_b(\phi))^{1/\alpha})^{(-\beta)\alpha}},
+  \label{eq:EllRGP}
+\end{equation}
+
+where the parameter $R_b$ follows the same elliptic angle dependence as defined in Equations \ref{eq:anglerc} and \ref{eq:anglert}, and we do not incorporate any angle dependence for the exponents $\alpha$ and $\beta$.
+
+\subsection{Models with luminosity segregation}
+\label{sect:SegregatedModels}
+In this Section, we consider an extension to introduce a dependence of the core radius with the $J$ magnitude. We select the $J$ magnitude because it is the \textbf{bluest} of the magnitudes that are available for \textbf{almost} all candidate members in the \gls{hmps} (\textbf{see Table \ref{tab:hmps}}). We assume that stars of the same mass have approximately the same magnitude and that distance differences (due to the 3D spatial extend of the Pleiades) average out. The core radius dependence with the $J$ magnitude is modelled as
+
+\begin{equation}
+  r_c(\phi,J) = r_c(\phi)+\kappa\cdot(J-13.5).
+\end{equation}
+
+The slope of the relationship $\kappa$ is independent of the position angle $\phi$. Therefore, for $J=13.5$ (the mode of the $J$ distribution) the model reduces to the elliptic profile described in Section \ref{sect:EllipticModels}. A positive value of $\kappa$ corresponds to smaller values of the core radius for stars brighter than $J=13.5$. In other words, it describes a system where the more massive stars are more concentrated than the less massive ones.
+
+Finally, to compare the previous models, we use the model selection methodology described in Section \ref{sect:modelselection} together with truncated uniform priors for all cluster parameters. The results of this analysis are detailed in Chapter \ref{chap:Results}.
+
 
 
 

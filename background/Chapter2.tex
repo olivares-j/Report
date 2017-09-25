@@ -268,12 +268,12 @@ Later, \citet{1980IAUS...85..157V}  determined a total mass of $2000 \,\mathrm{M
 \section{The Pleiades DANCe DR2}
 \label{sect:DR2}
 
-The \glsfirst{ddr2} contains astrometric (stellar positions and proper motions) and photometric ($ugrizYJHK_s$) measurements for 1,972,245 objects. As explained in Chapter 1, the \gls{dance} data set has an heterogenous origin as can be seen from Fig. \ref{fig:originDANCeDR2}. The interested reader can find more the details of this data set and its processing on \citet{Bouy2013}. Here I briefly summarise its properties. Table \ref{tab:DR2properties} contains the basic statistics for the observables, while Table \ref{tab:DR2uncertainties} does it for the uncertainties. As an example, Fig. \ref{fig:pmuncert} shows the proper motions uncertainties as a function of the $i$ magnitude.
+The \glsfirst{ddr2} contains astrometric (stellar positions and proper motions) and photometric ($ugrizYJHK_s$) measurements for 1,972,245 objects. As explained in Chapter 1, the \gls{dance} data set has an heterogenous origin, which can be observed in Fig. \ref{fig:originDANCeDR2} where the patchy pattern arise from the combination of several surveys. The interested reader can find more the details of this data set and its processing on \citet{Bouy2013}. Here, I briefly summarise its properties. Table \ref{tab:DR2properties} contains the basic statistics for the observables, while Table \ref{tab:DR2uncertainties} does it for the uncertainties. As an example, Fig. \ref{fig:pmuncert} shows the proper motions uncertainties as a function of the $i$ magnitude.
 
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics[width=\textwidth]{background/Figures/F1_Bouy2013.pdf}
-\caption{Patchy composition of the \gls{ddr2}. The moon shows the scale, and the yellow stars correspond to the central brightest objects of the Pleiades cluster. Reproduced from Figure 1 of \citet{Bouy2013}, \textit{\usebibentry{Bouy2013}{Title}}, \usebibentry{Bouy2013}{Journal}, Vol. \usebibentry{Bouy2013}{Volume}.}
+\caption{Patchy composition of the \gls{ddr2}. The moon shows the scale, and the yellow stars correspond to the central brightest objects of the Pleiades cluster. As can be seen, the UKIDSS (UKIRT) survey provides the most homogeneous and extended coverage. Reproduced from Figure 1 of \citet{Bouy2013}, \textit{\usebibentry{Bouy2013}{Title}}, \usebibentry{Bouy2013}{Journal}, Vol. \usebibentry{Bouy2013}{Volume}.}
 \label{fig:originDANCeDR2}
 \end{center}
 \end{figure}
@@ -340,16 +340,70 @@ $K_s$[mag]&1.40e-02& 5.75e-02& 8.17e-02& 1.32e-01& 3.88e+01&1.04e-01\\
 \end{center}
 \end{figure}
 
+\subsection{Missing values}
+\textbf{In the \gls{ddr2}, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not uniform. Missing values occur with higher probability at the faintest end of the photometric distributions ($\sim 18$ mag in $J,H$ and $K_s$ bands). Figure \ref{fig:NAsDDR2} shows the distribution of objects having at least a missing entry as a function of the band or bands that were actually observed. As mentioned, the vast majority of these objects occur at the faint end, close to the sensitivity limit of the survey. It coincides with the sensitivity limits of the UKIDSS Galactic Cluster Survey \cite[$Y\sim 20.3$, $J\sim19.5$, $H\sim K_s\sim18.6$ according to][]{2007MNRAS.379.1599L}, which provides the deepest photometry in the \gls{ddr2}. In this Figure, the bumps at the bright and middle ranges arise due to the mixing of surveys. The first bump corresponds to the survey carried out by \citet{Bouy2015}. As mentioned in their Appendix A, due to saturation, the $Y$ band photometry was limited to objects fainter than $\sim 13$ magnitude. Thus, they complemented the Pleiades \gls{dance} catalogue with shallow $Y$ band photometry in the magnitude range of 8 to 14 magnitudes but only for 40 candidate members of \citet{Stauffer2007} and their surrounding objects \cite[see][for more details]{Bouy2015}. Thus, the large amount of missing $Y$ values in the 8 to 14 mag range of Fig. \ref{fig:NAsDDR2} come from those objects not observed by these authors. The second bump at the middle range is slightly fainter than the sensitivity limits of the 2MASS survey ($J\sim 16.4$, $H\sim15.5$ and $K_s \sim 14.8$, see Section 6.2 of the Explanatory Supplement to the 2MASS All Sky Data Release\footnote{\url{https://www.ipac.caltech.edu/2mass/releases/allsky/doc/sec6_2.html}}), which indicates that it comes from the mixing of the 2MASS and UKIDSS surveys. Due to the different spatial resolutions, some objects are detected in 2MASS and not in UKIDSS and vice versa. The missing $Y$ band values come from objects observed only by 2MASS.}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[page=1,height=6cm]{background/Figures/MissingDistributionsDDR2.pdf}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=2,height=6cm]{background/Figures/MissingDistributionsDDR2.pdf}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=3,height=6cm]{background/Figures/MissingDistributionsDDR2.pdf}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=4,height=6cm]{background/Figures/MissingDistributionsDDR2.pdf}
+    \end{subfigure}
+\caption{Density distributions in $Y,J,H$ and $K_s$ bands for \gls{ddr2} objects with missing values in the other bands. For comparison, the distribution of observed objects is also shown with a dashed line. The majority of the missing value objects are located at the faint end of the magnitude distributions ($Y \sim 20$, $J \sim 19$, $H\sim18.5$, and $K_s \sim 18$). A non negligible fraction of missing  $Y$ band photometry is at the bright end ($J,H,K_s \sim 8 - 14$ mag), and in the middle range of 13 to 16 magnitudes. See text for details.}
+\label{fig:NAsDDR2}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[page=1,height=6cm]{background/Figures/MissingDistributions.pdf}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=2,height=6cm]{background/Figures/MissingDistributions.pdf}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=3,height=6cm]{background/Figures/MissingDistributions.pdf}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=4,height=6cm]{background/Figures/MissingDistributions.pdf}
+    \end{subfigure}
+\caption{Density distributions in $Y,J,H$ and $K_s$ bands of \gls{rdr2} for objects with missing values in the other bands. For comparison, the distribution of observed objects is also shown with a dashed line. The features are similar to those in Fig. \ref{fig:NAsDDR2}. The small differences between the two figures come from the fact that the \gls{rdr2} is not a random sample of the \gls{ddr2}.}
+\label{fig:NAs}
+\end{figure}
+
 \subsection{Selection of observables}
 \label{sect:RF-2}
 \sloppy
-As mentioned earlier, the \gls{ddr2} contains the positions R.A., Dec., proper motions, $\mu_{\rm{R.A.}},\mu_{\rm{Dec.}}$, and photometric $ugrizYJHK_s$ bands, of almost 2 million sources on the vicinity of the Pleiades clusters. Although these 13 observables carry information valuable to discriminate cluster members from field objects, not all of them discriminate in the same amount. \citet{Sarro2014} used random forest to select the observables that were the most discriminant. In their analysis, these authors did not included the stellar positions. They obtain that the AM, RF-2, and RF-3 reference sets containing the observables $\mu_{R.A.},\mu_{Dec.}$ proper motions, and photometric bands $rizYJHK_s$ were the most discriminants. {However, most of the objects with a missing $r$ band occur at the faint end of the cluster sequence. Therefore, these authors trained their model in two stages. Their first stage used all literature candidate members with the $r$ band observed. Then, they discarded the $r$ band observations and continue the training of their model with the objects in which the $r$ band was missing.} In a subsequent analysis using roughly the same methodology, \citet{Bouy2015} skipped the first training stage and worked only with the RF-2, which also excludes the $z$ band.
+The \gls{ddr2} contains the positions R.A., Dec. (in the following $\alpha$ and $\delta$), proper motions, $\mu_{\rm{R.A.}},\mu_{\rm{Dec.}}$, and photometric $ugrizYJHK_s$ bands, of almost two million sources on the vicinity of the Pleiades clusters. Although these 13 observables carry information valuable to discriminate cluster members from field objects, not all of them do it in the same way. A detailed analysis of the capacity of the previous set of observables (except the stellar postions) to discriminate between cluster members and field population is present in the work of \citet{Sarro2014}. These authors use random forest to select the observables that were the most discriminant. They find that the observables of  proper motions ($\mu_{R.A.},\mu_{Dec.}$) and the photometric bands $rizYJHK_s$ are the most discriminants. 
 
-{In this work, I select the $\alpha,\delta$,$\mu_{\alpha},\mu_{\delta},i,Y,J,H,K_s$ observables as my reference set. The set of proper motions and photometric bands correspond to those used by \citet{Sarro2014}, and \citet{Bouy2015}. }
+However, since most the objects with a missing $r$ band occur at the faint end of the cluster sequence, \citet{Sarro2014} train their model in two stages. In the first stage, they use all literature candidate members with observed $r$ band. In the second stage, they discard the $r$ band observations and continue training their model with objects in which the $r$ band was missing.  In a subsequent analysis using roughly the same methodology, \citet{Bouy2015} skipped the first training stage and worked only with the RF-2, which also excludes the $z$ band.
+
+Therefore, in the present work I use as a reference set the the proper motions, $\mu_{\alpha},\mu_{\delta}$, the photometric bands $Y,J,H,K_s$, and the colour index $i-K_s$, with the addition of the stellar positions  $\alpha$ and $\delta$. This decision roots in two key aspects. First,  \citet{Sarro2014} prove that this observables (excluding the stellar positions) are amongst the most discriminant ones. Second, this set corresponds to the one used by \cite{Bouy2015}, thus, it will enable us to perform a direct comparison and validation with their results. 
+
+However, there is a subtle difference between the set of observables used by \cite{Bouy2015} and the ones use in the present work. While here I use the $Y$ band alone, \citet{Bouy2015} use the colour index $Y-J$. Originally, I tested the methodology with this $Y-J$ colour index, however, the contamination resulting from the use of the $Y$ gets reduced with respect to that of the $Y-J$ colour index. I interpret this situation as resulting from at least two points. First, the $Y-J$ colour index does not convey information for the sequence of equal-mass binaries, thus reduces the capacity to identify these objects. Second, the width of the cluster sequence in the $Y-J$ vs. $i-K_s$ colour-colour diagram varies greatly across $i-K_s$ when compared to the relatively stable width of the cluster sequence in the the $Y$ vs $i-K_s$ \gls{cmd}. This effect can be observed in Figure \ref{fig:Y-JvsY}, where the candidate members of \citet{Bouy2015} (blue dots) are depicted, together with the \gls{rdr2} density, in the colour-colour diagram $Y-J$ vs. $i-K_s$, and the  \gls{cmd} $Y$ vs $i-K_s$. Since the current version of the photometric model describes the cluster sequence with a constant width across the $i-K_s$ colour index (details are shown in Section \ref{sect:cluster_ph}), then the use of $Y-J$ results in larger contamination in those regions where the clusters sequence is narrower than the average. Future steps will be take to include more colour indices in the reference set of observables.
+
+\begin{figure}[htp!]
+\begin{center}
+\includegraphics[page=1,width=0.47\textwidth]{background/Figures/Y-J.pdf}
+\includegraphics[page=2,width=0.47\textwidth]{background/Figures/Y-J.pdf}
+\caption{Candidate members of \citet{Bouy2015}, blue dots, together with the density of the \gls{rdr2} data set, black contours, in the colour-colour  diagram $Y-J$ vs. $i-K_s$ (left) and \gls{cmd} $Y$ vs $i-K_s$ (right).}
+\label{fig:Y-JvsY}
+\end{center}
+\end{figure}
  
-{Independent analyses will be performed to obtain: i) the kinematic and photometric distributions of the cluster population, and ii) the \gls{psd}. This decision roots in the following reasons. }
 
-First. To fulfil the objective of the \gls{dance} project (see Section \ref{sect:DANCeproject}), the inventory of kinematic and photometric distributions of the \gls{nyc} must be obtained with an homogenous methodology. The \gls{dance} \gls{nyc} targets (see Tables \ref{tab:maintargets} and \ref{tab:secondarytargets}) do not share similar projected spatial density profiles; while Taurus, Ophiucus and the Trapezium are extended \cite[see for example][]{simon1997}, the Pleiades is almost radially symmetric \citep{Raboud1998}. Thus, including the spatial information together with the proper motions and photometry would require completely different models for the \gls{psd} of different clusters. That would result in non-homogenous methodologies that would bias any comparison between the derived \gls{pdsmd} of these clusters.
+ 
+Concerning the stellar positions $\alpha$ and $\delta$, neither \citet{Bouy2015} nor \citet{Sarro2014} use them in their analyses. Thus, I will independently analyse the: i) the kinematic and photometric distributions of the cluster population, and ii) the \gls{psd}. This decision roots in the following reasons.
+
+First. To fulfil the objective of the \gls{dance} project (see Section \ref{sect:DANCeproject}), the inventory of kinematic and photometric distributions of the \glspl{nyc} must be obtained with an homogenous methodology. The \gls{dance} \gls{nyc} targets (see Tables \ref{tab:maintargets} and \ref{tab:secondarytargets}) do not share similar projected spatial density profiles; while Taurus, Ophiucus and the Trapezium are extended \cite[see for example][]{simon1997}, the Pleiades is almost radially symmetric \citep{Raboud1998}. Thus, including the spatial information together with the proper motions and photometry would require completely different models for the \gls{psd} of different clusters. That would result in non-homogenous methodologies that would bias any comparison between the derived \gls{pdsmd} of these clusters.
 
 {Second. To validate the results of the present work, which will be conducted in the Pleiades cluster, we must compare them with similar results under the most similar conditions. Since \citet{Bouy2015,Sarro2014} do not include the stellar positions in their observables, I do that as well. }
 
@@ -527,8 +581,12 @@ $K_s$[mag]&0.020 &  0.060 &  0.079 & 0.087  & 0.101 & 9.998  & 5013\\
 \label{tab:rddr2_field}
 \end{table}%
 
-\subsubsection{The High Membership Probability Set (HMPS)}
-The data set for the analysis of the Pleiades \gls{psd} consists of the high membership probability objects recovered after applying the \gls{bhm} methodology (see Section \ref{sect:datamodelling}) to the \gls{rdr2} data set. For the sake of simplicity, I call this data set the \gls{hmps}. \textbf{Table \ref{tab:hmps} summarises the values of the observables in this data set}. Although the \gls{ddr2} extends up to a radius of 6$^{\circ}$, the spatial coverage is not homogeneous. As Fig. \ref{fig:originDANCeDR2} shows, the deepest images of \emph{UKIDSS} cover the entire region while the rest of the instruments cover mainly the central part. Due to this patchy pattern, \citet{Bouy2015} used the central 3$^{\circ}$ region as the most complete one. Thus, for the the analysis of the \gls{psd} we define two samples, the complete one comprising those objects in the central $3^{\circ}$, and the extended one, which includes all objects in the \gls{hmps} up to a radius of $6^{\circ}$.
+\section{The Tycho+DANCe candidate members}
+\label{sect:Tycho+DANCe}
+Here I describe the data set used for the analysis of the Pleiades \gls{psd}. This data set is the largest and less contaminated list of Pleiades candidate members to date. It comprises, for the middle and faint luminosities, the \gls{hmps} of candidate members recovered by the \gls{bhm}, described in Section \ref{sect:memberscomparison}, and summarised in Table \ref{tab:hmps}, and for the high luminosities, the Tycho+DANCe candidate members of \cite{Bouy2015}, summarised in Table \ref{tab:tycho2}.
+
+This joint data set comprises the positions in equatorial coordinates R.A. and Dec. (in the following $\alpha$ and $\delta$), proper motions, photometry, and membership probabilities of 2060 unique sources. 
+However, for the analysis of the \gls{psd} we work only with the positions, membership probabilities, and $J$ photometric band. The latter is the bluest most available photometric band for this list of members. It will be used as a proxy for the mass, and to explore evidence of mass segregation.
 
 \begin{table}[ht!]
 \caption{Summary of the 1967 objects classified as members by the \gls{bhm}.}
@@ -552,6 +610,50 @@ $K_s$ [mag]  &   7.008 & 11.190 & 12.500  & 12.320 & 13.410 & 16.740&    0\\
 \end{center}
 \label{tab:hmps}
 \end{table}%
+
+\begin{table}[ht!]
+\caption{Summary of the 207 objects from the Tycho2+DANCe data set classified as Pleiades candidate members ($P>0.48)$ by \citet{Bouy2015}.}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Observable & Min. & 1st. Qu. & Median & Mean & 3rd. Qu. & Max. & NA's \\
+\hline
+\hline
+RA [$^\circ$]                                 				            &  52.05&55.89 & 56.46 &56.55  &57.30   &  62.49  & 0\\
+Dec. [$^\circ$]                       					           &  18.56&23.13  & 24.08& 23.99  &24.88  & 29.89 &0\\
+$\mu_{\alpha} [\mathrm{mas}\cdot \mathrm{yr}^{-1}]$   &      9.7 &18.9   & 20.1  &    20.0 &  21.1   &  26.7&0\\
+$\mu_{\delta} [\mathrm{mas}\cdot \mathrm{yr}^{-1}]]$   &  -55.10&-46.60&-45.10&-45.19 &-43.70  & -37.70&0\\
+i [mag]								            &   7.910&9.321 & 10.21&  10.04 &   10.76& 12.960&   72\\
+J [mag]          								    &   3.800& 7.588& 8.638& 8.451 & 9.575  &10.590&      0\\
+H [mag]        								    &   3.864& 7.535& 8.463& 8.236 & 9.209  & 10.030&      0 \\
+$K_s$ [mag]  							            &   3.879&7.478 & 8.373& 8.167  &  9.113 &  9.929&    0\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:tycho2}
+\end{table}%
+
+\subsection{Contamination and completeness}
+\label{sect:TDContamination}
+In Section \ref{sect:classifier}, we estimate a contamination rate of $4.3\pm0.2$\% in the \gls{hmps}, which
+would amount to 84 of the 1967 candidate members. Also, \citet{Sarro2014} estimate that the contamination rate of their methodology is $11.0\pm2.0$\% for a probability threshold of $p=0.5$, as the one used by \citet{Bouy2015} to classify the candidate members of their Tycho+DANCe data set.  Thus, in our combined Tycho+DANCe list of candidate members, we acknowledge a mean contamination rate of $\sim 8\%$. We would expect these contaminating sources to be uniformly distributed in right ascension and declination because the position on the sky was explicitly removed from the calculation of membership probabilities.
+
+We estimate the completeness of our list of candidate members, in terms of the J band luminosity and
+spatial coverage, by assessing the completeness of the joint Tycho+DANCe survey. In Fig. \ref{fig:completeness} we show the distribution of the number of sources in the combined DANCe+Tycho catalogue as a function of the radial position for different limiting magnitudes in the J band.
+The radial position is computed assuming a distance of 134.4 pc to the Pleiades cluster \citep{Galli2017} and a centre at $\alpha,\delta =[56.65,24.13]$. Distances are corrected by geometric distortions of large angles (using Eqs. \ref{eq:distfree} and \ref{eq:rs_and_ts}).
+As can be seen from this figure, the DANCe+Tycho catalogue is complete until magnitude $J\sim19$ and radial distance of 11.5 pc ($\sim5^\circ$). We notice that the latter corresponds roughly with the sky coverage of the UKIDSS survey \citep{2007MNRAS.379.1599L}.
+Hence, we restrict our list of candidate members to those with: i) J band observed and less than 19 mag., and ii) radial distances less than 11.5 pc. This results in 1964 candidate members, which represents more than 50\% more candidate members that those of  \citet{Converse2010}, who did the latest analysis of the Pleiades PSD.
+
+Nevertheless, we remind the reader that the inhomogeneities (e.g. spatial resolutions, gaps in luminosity) of the data DANCe+Tycho data set are so complex (and some of them only partially understood) that can indeed bias the sample of candidate members in unknown ways. For example, the gap in luminosity coverage between the faint end of Tycho-2 catalogue and the bright end of the DANCe survey (see in Fig. 8 of \citealt{Bouy2015}) may result in undetected sources, therefore unmeasured proper motions and finally an incomplete list of candidate members.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[page=2,width=\columnwidth]{./background/Figures/RadiiDistribution_Tycho+DANCe_Jmag.pdf}
+\caption{Density of sources in the combined DANCe+Tycho catalogue as a function of the radial distance to the cluster centre and limiting magnitude in the J band. The vertical grey line marks the limit of spatial completeness, 11.5 pc.}
+\label{fig:completeness}
+\end{center}
+\end{figure}
+
 
 
 
