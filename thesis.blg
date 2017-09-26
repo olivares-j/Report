@@ -2,51 +2,52 @@ This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: aa.bst
-Reallocated field_info (elt_size=4) to 10060 items from 5000.
+Reallocated field_info (elt_size=4) to 10129 items from 5000.
 Database file #1: biblio.bib
+Warning--I didn't find a database entry for "corner"
 Warning--empty publisher in 1910pgcs.book.....B
 Warning--can't use both author and editor fields in 2013pss5.book..115K
 Warning--empty publisher in 2013pss5.book..115K
 Warning--empty publisher in Smart1977
-You've used 220 entries,
+You've used 222 entries,
             2947 wiz_defined-function locations,
-            2051 strings with 46778 characters,
-and the built_in function-call counts, 106115 in all, are:
-= -- 8844
-> -- 8043
-< -- 131
-+ -- 2699
-- -- 2455
-* -- 8729
-:= -- 19550
-add.period$ -- 220
-call.type$ -- 220
-change.case$ -- 1692
-chr.to.int$ -- 223
-cite$ -- 224
-duplicate$ -- 4186
-empty$ -- 6086
-format.name$ -- 3033
-if$ -- 21074
+            2064 strings with 47095 characters,
+and the built_in function-call counts, 106953 in all, are:
+= -- 8915
+> -- 8094
+< -- 132
++ -- 2716
+- -- 2470
+* -- 8796
+:= -- 19706
+add.period$ -- 222
+call.type$ -- 222
+change.case$ -- 1705
+chr.to.int$ -- 225
+cite$ -- 226
+duplicate$ -- 4222
+empty$ -- 6139
+format.name$ -- 3052
+if$ -- 21240
 int.to.chr$ -- 7
 int.to.str$ -- 1
-missing$ -- 196
-newline$ -- 664
-num.names$ -- 897
-pop$ -- 1775
+missing$ -- 198
+newline$ -- 670
+num.names$ -- 905
+pop$ -- 1788
 preamble$ -- 1
-purify$ -- 1685
+purify$ -- 1698
 quote$ -- 0
-skip$ -- 3676
+skip$ -- 3708
 stack$ -- 0
-substring$ -- 4582
+substring$ -- 4627
 swap$ -- 176
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1938
+type$ -- 1956
 warning$ -- 4
-while$ -- 889
+while$ -- 897
 width$ -- 0
-write$ -- 2199
-(There were 4 warnings)
+write$ -- 2219
+(There were 5 warnings)

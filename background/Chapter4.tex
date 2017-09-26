@@ -299,7 +299,14 @@ Another example of inspection of the posterior is the following. In a past run o
 
 \section{Projected spatial distribution}
 \label{sect:PSDresults}
-In this Section, I present the results of the model selection analysis of the \glsfirst{psd} models of the Pleiades cluster. The Bayesian model selection approach and the \gls{psd} models are described in Sections \ref{sect:modelselection} and \ref{sect:PSDmethod}, respectively. The Bayesian \emph{evidence} is computed with uniform priors for all parameters using the Python package \emph{PyMultiNest} \citep{Buchner2014}. It is a Python wrapper of the C++ package \emph{MultiNest} \citep{Feroz2009} that implements the Nested Sampling algorithm of \citet{Skilling2004,Skilling2006} (see Section \ref{sect:NestedSampling}).
+In this Section, I present the results of the model selection analysis of the \glsfirst{psd} models of the Pleiades cluster. The Bayesian model selection approach and the \gls{psd} models are described in Sections \ref{sect:modelselection} and \ref{sect:PSDmethod}, respectively. The Bayesian \emph{evidence} is computed by means of the Python package \emph{PyMultiNest} \citep{Buchner2014}, which is a Python wrapper of the C++ package \emph{MultiNest} \citep{Feroz2009} that implements the Nested Sampling algorithm of \citet{Skilling2004,Skilling2006} (see Section \ref{sect:NestedSampling}).
+
+Appendix \ref{app:posteriors} contains the details of the inference process 
+of the posterior distributions, figures of the fitted densities and marginal distributions, 
+together with the uncertainties of the parameters in each analysed model.
+Table \ref{tab:BFAll}, given here, summarises the evidences and Bayes Factors
+resulting for all our models and extensions. In the following we will use the figures in this Table to discuss the model comparison.
+
 
 In the Bayesian model selection methodology, the boundaries for decision making from Bayes Factors should be set \emph{ab initio}. Thus, we discuss our results following the classical scale by \cite{Jeffreys61}, which I show in Table \ref{tab:JeffreysScale}.
 
@@ -309,11 +316,10 @@ In the Bayesian model selection methodology, the boundaries for decision making 
 \begin{tabular}{cc}
 Bayes factor & Strength of evidence\\
 \hline
-0 to 5 & barely worth mentioning\\
-5 to 10 & substantial\\
-10 to 15 & strong\\
-15 to 20 & very strong\\
-$>$ 20 & decisive\\
+$\lesssim$ 3:1 & \emph{Inconclusive}\\
+$\sim$ 3:1 & \emph{Weak}\\
+$\sim$12:1 & \emph{Moderate}\\
+$\gtrsim$ 150 :1 & \emph{Strong}\\
 \hline
 \end{tabular}
 \end{center}
@@ -321,284 +327,135 @@ $>$ 20 & decisive\\
 \end{table}%
  
 
+\begin{table*}
+\tabcolsep=1pt
+  \centering
+  \caption[]{Natural logarithm of the evidence for each
+        profile density (diagonal) and Bayes factors (off-diagonal
+        elements, with the evidence for the model specified in the
+        column header placed in the denominator). The evidence
+        corresponds to data set truncated at 11.5pc.}  \label{tab:BFAll}
+ \resizebox{\textwidth}{!}{
+    \input{./Analysis/BayesFactors/BF_All_11_0.txt}
+    }
+  \end{table*}
 
 \subsection{Selection of models with radial symmetry} 
 
-Tables \ref{tab:BayesFactors3deg} and \ref{tab:BayesFactors6deg} summarise the evidences and Bayes factors of the radially symmetric models using the candidate members within  7 pc (3$^{\circ}$) and 14 pc (6$^{\circ}$), respectively. 
-\begin{table}[ht]
-  \centering
-      \caption{Natural logarithm of the evidence (diagonal) and Bayes factors (off-diagonal elements) for each radially symmetric model inferred from the 7 pc (3$^\circ$) sample.}
-         \begin{tabular}{rcccccc}
-           & King & OGKing  &   GKing & EFF & GP & RGP \\
-\hline              
-           King    &-2876.2 &  0.13   &   0.04  &  0.03   &   0.04  &  0.41  \\
-           OGKing  &   7.39     &-2878.2  &   0.33  &  0.25   &   0.3   &  3.00  \\
-           GKing   &    22.19    &    3.0     &-2879.3  &  0.74   &   0.90  &  9.02  \\
-           EFF     &    29.96    &      4.0   &   1.34      &-2879.6  &   1.22  & 12.18  \\
-           GP      &    24.53    &     3.32    &   1.1      &    0.81     &-2879.4  &  9.97  \\
-           RGP     &   2.45     &     0.33    &    0.14     &      0.08   &   0.1      &-2877.1 \\
-           \hline
-\multicolumn{7}{l}{
-  \begin{minipage}{12cm}
-    {\footnotesize Note. Bayes factors are computed with evidence of the model specified in the column header placed in the numerator and in the row header in the denominator.}
-  \end{minipage}
-}
-\end{tabular}
-        
-  \label{tab:BayesFactors3deg}
-   \end{table}
-   
-\begin{table}[ht]
-  \centering 
- \caption[]{Natural logarithm of the evidence (diagonal) and Bayes factors (off-diagonal elements, computed as in Table \ref{tab:BayesFactors3deg}) for each profile radially symmetric model inferred from the 14 pc (6$^{\circ}$) sample.}
-
-\begin{tabular}{rcccccc} 
-&King & OGKing & GKing & EFF & GP & RGP \\
-\hline              
-           King    &-5033.5       &  $>100$  &   2.7    &   $<0.01$     &  3.3       &    27.113  \\
-           OGKing  &    $<0.1$&  -5023.6 &  $<0.01$ &   $<0.01$     &   $<0.01$  &   $<0.01$   \\
-           GKing   &    0.36     &  $>100$   & -5032.5  &   $<0.01$     &  1.2       &   10.0     \\
-           EFF     &    $>100$ & $>100$ &    $>100$  &   -5044.1     &  $>100$    &   $>100$   \\
-           GP      &   0.3          &   $>100$ &    0.81      &    $<0.01$    &   -5032.3    & 8.2      \\
-           RGP     &   0.03      &   $>100$  &    0.1      &     $<0.01$    &   0.12           & -5030.2     \\
-         \end{tabular}
+The upper-left panel of Table \ref{tab:BFAll} summarises the evidences and Bayes
+factors obtained from our radially symmetric models. In addition, Table \ref{tab:MAPCtr}, shows the \gls{map}
+ estimate of each parameter in the radially symmetric models
+(uncertainties are shown in the Appendix \ref{sect:app_radial} in the form of covariance matrices).
  
- \label{tab:BayesFactors6deg}
+   
+ \begin{table}[ht!]
+  \centering
+      \caption[]{Maximum-a-posteriori estimates of the inferred parameters in each radially symmetric model.}
+         \label{tab:MAPCtr}
+         \resizebox{\textwidth}{!}{
+         \input{./Analysis/BayesFactors/MAPs_Centre_11.txt}
+         }
    \end{table}
-  
+ 
+We observe that the evidences cluster in two groups. In one hand there is the family of King's
+models, where the evidence to compare between them is inconclusive and moderate in favour of \gls{ogking} over \gls{gking}. 
+On the other hand there are the \gls{eff}, \gls{gdp} and \gls{rgdp}, where there is moderate and weak evidence
+supporting \gls{eff} over \gls{gdp} and \gls{rgdp}, respectively. \gls{rgdp} is moderately better than \gls{rgdp}.
 
+Comparing the two groups shows that models in King's family have evidences that are: inconclusive and weak
+over the \gls{eff}, weak and moderate over  \gls{rgdp}, and moderate over \gls{gdp}. Only from the evidences we can conclude that
+the tidal radius is an important parameter.
 
-We primarily focus on the 7 pc (3$^{\circ}$) sample, where the completeness and depth are most homogeneous (see Section \ref{sect:DR2}). As can be seen in Table \ref{tab:BayesFactors3deg}, the Bayes Factors are in the ranges between 1 and 3 (differences \emph{barely worth mentioning} in Jeffrey's scale) and between 3 and 10 (\emph{substantial evidence}).
+In addition, we observe that in \gls{gdp} and \gls{rgdp}, the $r_c$ and $\beta$ parameters  show large correlations (0.85 and 0.92 for \gls{gdp} and \gls{rgdp}, respectively) and are relatively unconstrained with large uncertainties (see Appendix \ref{app:posteriors}).
+Despite this fact, the models still have evidences comparable to those of the rest of the models. It suggests that these two parameters, although necessary for the model, are unconstrained by the data, and therefore not penalised by the evidence. Aiming at eliminating this source of degeneracy,
+ we tested models in which one of these two parameters was removed. However, the fits and evidence resulting from
+them were poorer than that of the \gls{rgdp}. Thus, we consider these parameters as necessary for this model.
 
-The King's and the \gls{rgp} models have the largest evidences and a Bayes Factor of 0.41 (or 2.43) between them. It implies that there is no reason to prefer one over the other. According to Jeffrey's scale, this difference \emph{barely worth mentioning}. At the same time, King's model, the one with the highest evidence, shows Bayes Factors in the category between 3 and $\sim$10 (\emph{substantial evidence}) or even up to 30 (\emph{strong evidence}) when compared to the remaining models (\gls{ogking}, \gls{gking}, \gls{eff} and \gls{gp}).  
+We find that the introduction of more flexibility in the
+analytical expressions of the classical radially symmetric profiles
+does not produce larger evidences, and results in some cases in
+unconstrained parameters and a loss of the interpretability associated
+to the original formulations. Therefore, the best models are those pertaining to the King's family,
+with not sufficient evidence to select which one of them is the best. Only
+additional, perfectly acceptable prejudices like physical
+interpretability or the ability to compare with previous results, can
+be invoked to choose one (e.g. King's profile) over the rest.
 
-In Figure \ref{fig:King_7}, we show the projections of the posterior distribution for King's model parameters inferred from the 7 pc (3$^{\circ}$) sample. As can be seen, the tidal radius is relatively unconstrained by the data. This can be understood in terms of the lack of observations in the vicinity of the cluster edge (tidal radius), which introduces a degeneracy. The maximum a posteriori (\gls{map}) values of the parameters of King's profile are $\alpha_c=56.65496^{\circ}$, $\delta_c=24.13461^{\circ}$, $r_c=2.0$ pc and $r_t=44.7$pc. We also fit a multivariate Gaussian to the posterior distribution at the \gls{map} estimate, it yields the following standard deviation matrix:
+The evidences seem 
+to indicate that the best model is the \gls{ogking}.  
+However, the fact that this profile has a larger evidence than any of the
+remaining models should come as no surprise since it results from fixing
+the values of $\alpha$ and $\beta$ of the \gls{gking} model to their MAP 
+values. 
 
-$$
-\left(\begin{array}{rrrr}
- 0.000045   & -0.000004  &  0.000205  & -0.0008  \\
--0.000004   &  0.000038  & -0.000005  & -0.0002  \\
- 0.000205   & -0.000005  &  0.20      & -0.3646  \\
--0.000805   & -0.000233  & -0.364647  &  28.048  \\
-\end{array}\right)
-$$
-with the above ordering of parameters ($\alpha_c, \delta_c, r_c$, and $r_t$). 
+Comparing the rest of the models, we see that the poorest model is \gls{gdp} with moderate evidences against it. 
+The best models are again in King's family followed by \gls{rgdp} and \gls{eff}.
 
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{background/Figures/PSD/King7.pdf}
-\caption{Samples of the posterior distribution of the King's profile parameters inferred from the 3$^{\circ}$. The core and tidal radius are in pc. }
-\label{fig:King_7}
-\end{center}
-\end{figure}
-
-
-We will first compare King's model with the \gls{gking} profile. \gls{gking} is a model with significantly less evidence and two more parameters than King's profile. The posterior distributions reveal a complete loss of interpretability of the parameters, with the core radius relatively unconstrained between 100 and 400 pc, tidal radii between 200 and 800. %The $a$ exponent is the only well constrained parameter (\gls{map} value of XXXX)
-
-The second alternative is the modified King profile with exponents fixed to the maximum evidence values (\gls{ogking}). In this case, the model has the same number of parameters as in the classical King profile, but we have selected the values of $\alpha_1$ and $\alpha_2$ in Eq. \ref{eq:GKing} that maximise the evidence (0.4 and 1.2 respectively, compared to 0.5 and 2 in the classical King profile). It is important to bear in mind that the maximum evidence is attained for the 6$^{\circ}$ sample, and this evidence is no longer maximum when calculated with the 3$^{\circ}$ sample. In this case, the parameters retain the interpretability (for obvious reasons) and the tidal radius is relatively well constrained ($\pm 7$pc). However, the evidence is reduced with respect to the classical King profile despite the increased maximum likelihood. We interpret this as the result of overfitting in the process of fixing the $a$ and $b$ parameters. The \gls{map} estimates of the \gls{ogking} profile parameters are $\alpha_c=56.65603^{\circ}$, $\delta_c=24.13292^{\circ}$, $r_c=1.15$ pc and $r_t=13$ pc. The standard deviation matrix of the multivariate normal fitted at the \gls{map} is 
-
-$$
-\left(\begin{array}{rrrr}
- 0.000028 &-0.000003 & 0.000009 & 0.00063\\
--0.000003 & 0.000026 & 0.000039 &-0.00007\\
- 0.000009 & 0.000039 & 0.149843 &-0.28731\\
- 0.000627 &-0.000070 &-0.287310 & 6.69046\\
-\end{array}\right).
-$$
-
-
-The two profiles (King and \gls{ogking}) are relatively similar despite the different exponents and \gls{map} parameter estimates. 
-
-Finally (we will not discuss the \gls{eff} or \gls{gp} profiles), the \gls{rgp} suffers the same loss of interpretability encountered for the \gls{gking} profile, with an unconstrained core radius in the range of hundreds of parsecs. Also the posterior distributions of the $R_b$ and $b$ parameters are unconstrained, with a large correlation between $a$ and $b$. The resulting density profile is also cusped at the centre of the cluster. 
-
-%\begin{figure}[ht!]
-%\begin{center}
-%%\includegraphics[width=\textwidth]{background/Figures/PSD/GKing7.pdf}
-%\caption{Posterior distributions of the parameters in the GKing profile. }
-%\label{fig:GKing7}
-%\end{center}
-%\end{figure}
-
-As a summary of the results of the 3$^{\circ}$ sample, we find that the introduction of more flexibility in the analytical expressions of the classical radially symmetric profiles does not produce larger evidences, and results in some cases in unconstrained parameters and a loss of the interpretability associated to the original formulations. Therefore, for the data set that extends out to 3$^{\circ}$ there are two competing models (classical King and \gls{rgp}) and there is no sufficient evidence to select amongst them. The central part is reasonably well fitted either by a King's profile with relatively well constrained parameters or with a \gls{rgp} profile with large degeneracy.  Only additional, perfectly acceptable prejudices like physical interpretability or the ability to compare with previous results, can be invoked to choose the King's profile over the rest.
-
-
-Concerning the 6$^{\circ}$ sample, the \gls{ogking} profile has the largest evidence. It comes as no surprise since \gls{ogking} profile fixes the values of $\alpha_1$ and $\alpha_2$ to those that yield the maximum evidence. Hence, we acknowledge overfitting to the incomplete and biased sample of Pleiades members out to 6$^{\circ}$. In fact, the marginal posterior distribution for the tidal radius is sharply peaked around 16 pc, only slightly further than the observational boundary.
-
-For the \gls{rgp} model, its \gls{map} estimates are $\alpha_c=56.6909785^{\circ}$, $\delta_c=24.13301438^{\circ}$, $R_b=886.84$ pc , $\alpha=1.44$, and $\beta=70.6$. The corresponding standard deviation matrix is
-
-$$
-\left(\begin{array}{rrrrr}
- 0.0000589  & 0.000006 &   -0.02 &-0.0000001 &  -0.003  \\
- 0.0000061 & 0.000049 &    0.01 & 0.0000134 &  -0.002\\
--0.0243964 & 0.011738 &20173.20 & 3.0774488 & 616.625\\
--0.0000001 & 0.000013 &    3.08 & 0.0219039 &  -2.316\\
--0.0028333 &-0.002123 &  616.63 &-2.3162244 & 331.945\\
-\end{array}\right).
-$$
-
-It is evident from the previous matrix that $R_b$ and $\beta$ are only mildly constrained. The profile is, again, characterised by a cusp in the central part of the cluster, as is the profile of the \gls{gking} alternative. 
-
-The 6$^{\circ}$ data set favours  \gls{map} profiles (models and \gls{map} estimates of their parameters) with sharp peaks in the centre of the cluster. However, we caution the reader against these results. They refer to a data set that is severely biased and incomplete in ways that we cannot quantify and/or model.
-
-The conclusion from the comparison of these radially symmetric profiles in the context of the two data sets is that i) there is no compelling reason to abandon the widely used King profile in the context of the complete and homogeneous data set out to 3$^{\circ}$ and ii) there are better models when evaluated on data out to 6$^{\circ}$, but it remains to be found whether this is due to the completeness problems of the \gls{dance} data in the outer regions of the Pleiades or whether they truly represent a need to make the King profile more flexible to accommodate the data. In the following we retain three of the models discussed above (King, \gls{ogking} and \gls{rgp}), and take the comparison one step further in order to accommodate simple deviations from radial symmetry in the form of elliptical density contours.
+The conclusion from the comparison of these radially symmetric
+profiles is that i) there is no
+compelling reason to abandon the widely used King profile in the
+context of the complete and homogeneous data set,
+and ii) there are slightly better models, but we lack evidence to prove if they truly 
+represent a need to make the King's
+profile more flexible to accommodate the data. 
+In the following, we retain the models discussed above and
+take the comparison one step further in order to include simple
+deviations from radial symmetry in the form of elliptical density
+contours.
 
 \subsection{Selection of models with biaxial symmetry}
+The central panel of  Table \ref{tab:BFAll} contains the
+logarithm of the evidences and Bayes Factors of the biaxially symmetric models. The evidences follow a pattern similar to 
+that observed for the radially symmetric models, with the exception of the evidences against the \gls{gdp} model. We can conclude that there is
+strong evidence for the family of King's models agains the \gls{gdp} one.
+The evidence is still moderate and weak to compare the rest of the models.
 
-Concerning the models with biaxial symmetry, Table \ref{tab:BayesFactorsEll} collects the evidences and Bayes factors. We have included the results for the \gls{ogking} alternative despite the fact that we had to extend the support of the prior for the $r_{t,a}$ and $r_{t,b}$ parameters out to 300 pc. For smaller values of the support, the \gls{mcmc} samples possess maxima at the boundaries. Even in the set up with priors extending out to 300 pc, the parameter samples lack physical interpretations with vanishingly small \gls{map} core radii. We see that the \gls{ogking} profile is clearly to be preferred when compared against the other two models, and any of the three is to be preferred to the radially symmetric profiles of Table \ref{tab:BayesFactorsEll}. However, despite the fact that the \gls{ogking} shows the best evidence and the largest Bayes factor, the unconstrained and unphysical values of its parameters allow us to discard it, and continue exploring the luminosity segregation only in the King model.
+However, by comparing the evidences of the biaxially symmetric models to those of the radially symmetric ones (middle left panel of  Table \ref{tab:BFAll}), 
+we can conclude that in all cases there is strong evidence in favour of the biaxial models.
 
-\begin{table}[ht!]
+
+Additionally, we compute a posteriori (from the \gls{mcmc} chains) the ellipticities\footnote{The ellipticity used here is also known as flattening.}  $\epsilon_{rc}$ and $\epsilon_{rt}$, which are defined as,
+
+\begin{align}
+\epsilon_{rc} = 1- \frac{r_{cb}}{r_{ca}}, \nonumber \\
+\epsilon_{rt} = 1- \frac{r_{tb}}{r_{ta}}, \nonumber
+\end{align}
+with the latter available only for the King's family of models. 
+
+ \begin{table*}[ht!]
   \centering
-  \caption[]{Natural logarithm of the evidences (diagonal) and Bayes factors (off-diagonal, computed as  in Table \ref{tab:BayesFactors3deg}) for the models with biaxial symmetry inferred from the $3^{\circ}$ and $6^{\circ}$ samples. }
-  \label{tab:BayesFactorsEll}
-
-\begin{tabular}{cl|ccc|ccc|}
-\hline              
-\hline              
-&&  \multicolumn{3}{c}{$3^{\circ}$} &   \multicolumn{3}{c}{$6^{\circ}$} \\
-\hline              
-&&  King & OGKing & RGP &  King &  OGKing & RGP \\
-\hline              
-\multirow{3}{*}{$3^{\circ}$}           &King    &  -2806.9   &  $>100$   &    0.14   &           &            &               \\
-           &OGKing  &            &   -1527.3 & $<0.01$   &           &            &               \\   
-           &RGP     &            &           &  -2808.9  &           &            &               \\
-           \hline
-\multirow{3}{*}{$6^{\circ}$}          &King    &            &           &           &  -5023.8  &  $>100$    &   $<0.01$     \\
-           &OGKing  &            &           &           &           &  -3255.7   &   $<0.01$     \\   
-           &RGP     &            &           &           &           &            &  -5034.7      \\
-\hline              
-         \end{tabular}
-   \end{table}
-
-\begin{figure}[ht!]
- \centering
-  \includegraphics[width=\textwidth]{background/Figures/PSD/KingEll7.pdf}
-  \caption{Samples from the posterior distribution of the parameters in the biaxial symmetric King model inferred from the 3$^{\circ}$ sample. Tidal and core radius are in units of pc.}
-\label{fig:KingEll7}
-\end {figure}
-
-The \gls{map} estimates of the King model on the $3^{\circ}$ sample are $\alpha_c=56.66025602372^{\circ}$ , $\delta_c=24.2038 ^{\circ}$, $\phi=2.1$ rad, $r_{cx}=1.84$ pc, $r_{cy}=$1.77 pc ,$r_{tx}=$ 48.9 pc, and $r_{ty}=$48.5 pc. The standard deviation matrix is
-
-$$
-\tiny
-\left(\begin{array}{rrrrrrr}
- 0.0124 & 0.0003 & 0.0004 &-0.0004 & 0.0002 & -0.0006 &  0.011\\
- 0.0003 & 0.0111 &-0.0025 &-0.0069 & 0.0002 & -0.0065 &  0.008\\
- 0.0004 &-0.0025 & 0.7070 &-0.0377 & 0.0540 &  0.2696 & -0.013\\
--0.0004 &-0.0069 &-0.0377 & 0.3749 &-0.0244 & -0.0387 & -0.703\\
- 0.0002 & 0.0002 & 0.0540 &-0.0244 & 0.3722 & -0.9000 &  0.017\\
--0.0006 &-0.0065 & 0.2696 &-0.0387 &-0.9000 & 59.3446 &-12.580\\
- 0.0113 & 0.0076 &-0.0129 &-0.7034 & 0.0174 &-12.5795 & 60.462\\
-\end{array}\right)
-$$
-with the ordering of parameters used above.
-
-Interestingly, this \gls{map} shows no evidence of ellipticity\footnote{The ellipticity is defined as $\epsilon = 1 - \frac{b}{a}$, with $a$ and $b$ the semi-major and semi-minor axis of the ellipse, respectively.} neither in the core radius ($\epsilon_{rc}= 0.04$) nor in the tidal radius ($\epsilon_{rt}= 0.008$). Despite this fact, the biaxial symmetric King models have decisive evidence when compared to the radially symmetric ones (see Table \ref{tab:BayesFactorsAll}).
-
-\subsection{Selection of models with luminosity segregation}
-\label{sect:lumsegregation}
-In this Section, I describe the luminosity ($J$ band) segregation (see Section \ref{sect:SegregatedModels}) included only in the radial and biaxial symmetric extensions of the King profile. As shown in the previous section, King's profile not just has large Bayes factor, but also physical interpretability. Table \ref{tab:BayesFactorsLumSeg} summarises the evidences and Bayes Factors of the \gls{krs} and \gls{kbs}. The parameters of these models and its evidences are inferred using  the  3$^\circ$ and 6$^\circ$ samples.
-
-\begin{table}[ht!]
-  \centering
-  \caption[]{Natural logarithm of the evidences (diagonal) and Bayes factors (off-diagonal, computed as in Table \ref{tab:BayesFactors3deg}) for the radial and biaxial symmetric models with luminosity segregation inferred from the 3$^\circ$ and 6$^\circ$ samples. }
-  \label{tab:BayesFactorsLumSeg}
-\begin{tabular}{cc|cc|cc}
-\hline              
-\hline              
-&&  \multicolumn{2}{c}{$3^{\circ}$} &   \multicolumn{2}{c}{$6^{\circ}$} \\
-\hline              
-& & King-Radial& King-Biaxial &  King-Radial &  King-Biaxial \\
-\hline              
-\multirow{2}{*}{$3^{\circ}$}&King-Radial    &  -2875.5   &    $>100$       &           &            \\
-&King-Biaxial &            &  -2803.9  &           &            \\
-\hline
-\multirow{2}{*}{$6^{\circ}$}& King-Radial    &            &           &   -5025.4 &    $>100$        \\
-&King-Biaxial &&                     &           &  -5016.4   \\
-\hline              
-         \end{tabular}
-   \end{table}
-
-Figures \ref{fig:KingRS7} and \ref{fig:KingBS7} show the posterior distributions of the parameters \gls{krs} and \gls{kbs} models, respectively. Both models are inferred from the complete 3$^{\circ}$ sample. Their \gls{map} values and standard deviation matrices of their parameters are the following. 
-
-The \gls{map} values of the \gls{krs} model are $\alpha_c=56.6264^{\circ}$ , $\delta_c=24.1956^{\circ}$, $r_{c}=2.115$ pc, $r_{t}=$ 31.778 pc, and $\kappa= 0.127\, \rm{pc \cdot mag^{-1}}$. Its standard deviation matrix (with parameters in the same previous order) is
-
-$$
-\tiny
-\left(\begin{array}{rrrrr}
-0.0077725911  & 0.0011463608 & 0.015866753 & -0.006895138 &0.0004781459\\
-0.0011463608  & 0.0066805294 & 0.009640874 &  0.011311284  &0.0002655555\\
-0.0158667525  & 0.0096408739 & 0.380770948& -0.844035083  & 0.0210177901\\
--0.0068951385 & 0.0113112840 & -0.844035083& 45.371984935&-0.0671929448\\
-0.0004781459  & 0.0002655555 & 0.021017790& -0.067192945  &  0.0048742344\\
-\end{array}\right)
-$$
-
-The \gls{map} values of the \gls{kbs} model are $\alpha_c=56.6006^{\circ}$, $\delta_c=24.193^{\circ}$, $\phi=1.915$ rad, $r_{cx}=2.348$ pc, $r_{cy}=$2.042 pc ,$r_{tx}=$ 38.12 pc, $r_{ty}=$48.382 pc  and $\kappa= 0.147\, \rm{pc \cdot mag^{-1}}$. Its standard deviation matrix (with parameters in the same previous order) is
-
-$$
-\tiny
-\left(\begin{array}{rrrrrrrr}
-0.0139885233 	 &  -0.0002135887  &-0.002818604  & 0.007312077     &0.004963964   &  0.02605645     &-0.003657460      &-0.0001631951\\
--0.0002135887 	 &  0.0130671231   &-0.001734756   & -0.003808827   &-0.001210257  &  0.03990854     &-0.013443550      &0.0006731357     \\        
--0.0028186038 	 & -0.0017347556   & 0.727100779   & 0.013468602    &0.005179071    & -0.55449101    & 0.596346854      &0.0011082365      \\           
-0.0073120769 	 &   -0.0038088265 &  0.013468602  &  0.422814580   &0.054674731    & -0.19355524    & -0.679337642     & 0.0107408223     \\  
-0.0049639637 	 &   -0.0012102569 &  0.005179071  &  0.054674731   &0.433668247    & -1.66048288    & 0.346810670      & 0.0131324789     \\      
-0.0260564469 	 &   0.0399085427  & -0.554491013  &  -0.193555244  & -1.660482881 &  89.94363663   & -13.562539506   & -0.0592770535   \\        
--0.0036574599 	 &  -0.0134435502  &  0.596346854  & -0.679337642   & 0.346810670  &  -13.56253951  &   56.110848655  &  -0.0089581971   \\          
--0.0001631951 	 &   0.0006731357  & 0.001108236   & 0.010740822    & 0.013132479   &   -0.05927705  &    -0.008958197  &   0.0040960558    \\
-\end{array}\right)
-$$
-
-
-As can be seen from the \gls{map} values and its standard deviation, the $\kappa$ luminosity segregation parameter is similar and significative for both \gls{krs} and \gls{kbs} models. Concerning the ellipticity, the core radius and tidal radius have large values, $\epsilon_{rc}= 0.13$ and $\epsilon_{rt}= 0.21$, respectively. However, due to the large uncertainties in the tidal radii, we trust only in the ellipticity reported for the core radius. The latter value is nevertheless similar to those previously reported in the literature \cite[0.17 and 0.1 to 0.35 reported by][respectively]{Raboud1998,Adams2001}. We do not report the ellipticity value inferred from the extended 6$^\circ$ sample due to the incompleteness of the latter. Indeed, this ellipticity can be strongly biased by the patchy pattern of the \gls{ddr2} observations.
-
-\begin{figure}[ht!]
- \centering
-  \includegraphics[width=\textwidth]{background/Figures/PSD/KingRS7.pdf}
-  \caption{Samples of the posterior distribution of the parameters in the radially symmetric and luminosity segregated King model inferred from the 3$^{\circ}$ sample. The core and tidal radius are in units of pc, the slope in units of pc per magnitude.}
-\label{fig:KingRS7}
-\end {figure}
-
-\begin{figure}[ht!]
- \centering
-  \includegraphics[width=\textwidth]{background/Figures/PSD/KingBS7.pdf}
-  \caption{Samples of the posterior distribution of the parameters in the biaxial symmetric and luminosity segregated King model inferred from the 3$^{\circ}$ sample. The core and tidal radius are in units of pc, the slope in units of pc per magnitude.}
-\label{fig:KingBS7}
-\end {figure}
-
-Finally, combining the evidences and Bayes factors of the King's classical and extended models, we can conclude that there is \emph{decisive} (in terms of Jeffrey's scale) evidence, from both the 3$^{\circ}$  and 6$^{\circ}$ data sets, supporting complex models with J-band luminosity segregation and biaxial symmetry (see Table \ref{tab:BayesFactorsAll}).
-
-\begin{table}[ht!]
-  \centering
-  \caption[]{Natural logarithm of the evidences (diagonal) and Bayes factors (off-diagonal, computed as in Table \ref{tab:BayesFactors3deg}) for King models with radial symmetry (King-R), biaxial symmetry (King-B), and radial and biaxial symmetry with luminosity segregation (\gls{krs} and \gls{kbs}, respectively). These evidences are computed using the samples of $3^{\circ}$ and $6^{\circ}$.}
-  {\small 
-\begin{tabular}{cc|cccc|cccc}
-\hline              
-\hline              
-&&  \multicolumn{4}{c}{$3^{\circ}$} &   \multicolumn{4}{c}{$6^{\circ}$} \\
-\hline              
-&&King-R& King-B &  King-RS& King-BS & King-R & King-B& King-RS &  King-BS \\
-\hline              
-\multirow{4}{*}{$3^{\circ}$} &King-R&-2876.2&$>100$&2.01&$>100$&&&&\\
-&King-B&&-2806.9&$<0.1$&20.1&&&&\\
-&King-RS    & & &-2875.5   & $>100$&          &           &    &        \\
- &King-BS &    &   &     &  -2803.9  &   &&        &           \\
- \hline
-\multirow{4}{*}{$6^{\circ}$}&King-R   && &&            & -5033.5          & $>100$  & $>100$&  $>100$  \\
-&King-B&&&&&&-5023.8&0.2& $>100$\\
-&King-RS &&&&            &           &         & -5025.4  &   $>100$  \\
-&King-BS &&&&            &           &         &  &  -5016.4   \\
-\hline              
-         \end{tabular}
+      \caption[]{Maximum-a-posteriori estimates of the inferred parameters in each biaxially symmetric model. Ellipticities are derived a posteriori using the inferred parameters.}
+         \label{tab:MAPEll}
+          \resizebox{\textwidth}{!}{
+         \input{./Analysis/BayesFactors/MAPs_Elliptic_11.txt}
          }
-\label{tab:BayesFactorsAll}
-\end{table}
+   \end{table*}
+   
+Table \ref{tab:MAPEll} shows the MAP estimate of the parameters in the models of this section, together with the mode of the distributions of ellipticities. Uncertainties for the latter are given in Appendix \ref{sect:app_biaxial}.
 
-The results of this Section show that, although the majority of the current models of the radial density profile of the Pleiades cluster reproduce well the observed data, only the classical King's profile and the \gls{rgp} have the best evidences both in the complete $3^\circ$ sample and in the extended $6^\circ$ one. However, we discard the \gls{rgp} profile due to its high degeneracy and unphysical values. We can perform this selection by the inclusion of restrictive priors \glspl{pdf} to the physical interpretability of the models. This model selection process using non-identical priors for the competing models is explained in Section \ref{sect:modelselection} (see Eq. \ref{eq:modelselection}). 
+We can observe that models that do not posses a tidal radius have similar $\epsilon_{rc}$ ellipticities with a mean value of $0.23\pm0.01$. This value is similar to the 0.17  found by \citep{Raboud1998}, who use a multicomponent analysis to derive the directions (although its value is not given) and the aspect ratio of the ellipse axes. However, it is very interesting to see that the models within King's family result in lower values of the ellipticity in the central region and larger values in the outer one. This result is expected from the interaction with the galactic potential and is predicted by the numerical simulations of open clusters \cite[see for example][]{1987MNRAS.224..193T}.
+\subsection{Selection of models with luminosity segregation}
+The lower-right panel of Table \ref{tab:BFAll} summarise the evidences and Bayes
+Factors of models with luminosity segregation. Also, Table \ref{tab:MAPSg} shows the MAP of the inferred distributions for this set of models, together with the derived ellipticities.
 
-Also, we have shown that the high membership probability samples, both complete ($3^\circ$) and extended ($6^\circ$), are better modelled, in terms of the evidence, with complex models including biaxial symmetry and luminosity segregation.
+\begin{table*}[ht!]
+  \centering
+      \caption[]{Maximum-a-posteriori estimates of the inferred parameters in each luminosity segregated model. Ellipticities are derived a posteriori using the inferred parameters.}
+         \label{tab:MAPSg}
+          \resizebox{\textwidth}{!}{
+         \input{./Analysis/BayesFactors/MAPs_Segregated_11.txt}
+         }
+   \end{table*}
+   
+ We observe that the ellipticities follow the same pattern as those of the previous Section. This is expected because we explicitly model the luminosity segregation as independent of the position angle.
+   
+The luminosity segregation inferred here is non negligible with $\kappa$ in the range 0.1 to 0.25 $\rm{pc}\,\rm{mag}^{-1}$. Thus indicating that it is indeed an important parameter. However, in all the models, the marginal posterior distribution of $\kappa$ does not discard the zero value.
 
-The results of this Section establish a solid probabilistic background for: i) the classical King profile, at least in the Pleiades cluster, and ii) luminosity segregation. The latter indicates that the expected mass segregation in the Pleiades cluster \cite[as has been indicated by previous studies, e.g.][]{Converse2010} is supported by Bayesian evidence. 
+The evidences of the models with luminosity segregation follow a similar pattern as those from radial symmetry. However, in this case the best model is the classical King's, which shows only moderate evidences against the \gls{eff}, \gls{rgdp} and \gls{gdp} models. The evidence of King's model over \gls{gking} and O\gls{gking} is weak.
+
+The evidences of the luminosity segregated models strongly favour them against the radially and biaxially symmetric ones in all cases. We can conclude that although with a small value of $\kappa$ the luminosity segregations is an important parameter regardless of the model used.
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -695,26 +552,10 @@ where $M$ and $m$ are the absolute and apparent magnitudes, and $d$ and $\pi$ th
 
 Finally, I deredden the previous distributions employing the canonical value of extinction for the Pleiades: $A_v=0.12$ mag \citep{Guthrie1987}. This last values were transformed into the $J,H,K_s$ extinctions using the extinction law of \citet{Cardelli1989}.
 
-The completeness limits of the derived luminosity distributions are acquired as follows. Since the \gls{bhm} methodology prescribes the \emph{true} photometric quantities based on the \emph{true} colour index $\gls{ci}$. Then, the completeness limits of the $\gls{ci}$ distribution dictate those of the luminosity distributions. 
+Since the \gls{bhm} describe the magnitudes as functions of the \gls{ci}, the completeness limits of the latter dictate those of the former, except for those of the $i$ and $K_s$ magnitude. The latter prescribe the completeness interval of the \gls{ci}, which is defined as that of all the points, along the cluster sequence in the $K_s$ vs. $i-K_s$ \gls{cmd}, for which $i$ and $K_s$ are bounded by their upper and lower completeness limits, respectively. Using the completeness limits found in Section \ref{sect:ddr2_completeness} results in a completeness interval of  $2.7<\gls{ci}<5.6$ mag. With it, and the cluster sequence (the splines and their parameters), I derive the completeness intervals for the $J,H,K_s$ bands. Finally, I transform these intervals to absolute magnitudes and deredden them. 
 
-\citet{Bouy2015} mention that, due to the heterogeneous origins of the \gls{ddr2} data set, the spatial coverage and sensitivity of the survey is also not homogeneous. To remedy this issue, they identify a region with complete spatial coverage, the inner three degrees of the cluster (see Fig. \ref{fig:originDANCeDR2}). Then, they restricted their photometric analysis to this spatially complete region. 
 
-Restricting their sample of candidate members to this inner region results in a sample of candidate members that is spatially biased. If any dynamical process has been set on the cluster such that the mass distribution of its members is not uniformly distributed in the space, then a spatial cut in a sample of candidate members will result in a bias on the mass distribution. One of such dynamical process is the mass segregation, which, as suggested by \citet{Adams2001} may have happen in the Pleiades cluster. As proven in Section \ref{sect:lumsegregation}, there is strong evidence in favour of luminosity segregation in the Pleiades, at least in the $J$ band.
-
-Thus, to avoid such biases, I assume that the UKIDSS survey, which is the most profound from among the contributions to the \gls{ddr2} data set, provides the homogeneous spatial and sensitivity coverage at faint magnitudes (see Fig. \ref{fig:originDANCeDR2}). This survey thus provides the upper completeness limits, which are essentially those reported in the Appendix A of \citet{Bouy2015}, $i\sim23$ mag and $K_s\sim18$ mag.
-
-Since we are interested in the completeness limits of the $\gls{ci}$, and this equals $i -K_s$, then its completeness limits are defined by those of $i$ and $K_s$ together. In Fig. \ref{fig:completeness}, I show the $K_s$ and $i$ kernel density estimate computed using all sources in the \gls{ddr2}. As can be seen from this Figure, the point with maximum density, which corresponds to $i=21.4$ mag and $K_s=18.1$ mag, should be used to set the upper completeness limits. Notice that, due to the use of the two dimensional density, the upper completeness limit in $i$ is reduced with respect to that of the univariate $i$ distribution. This density shows a sharp decline at bright magnitudes, probably due to saturation of the detectors. To be conservative, I choose $i=13.2$ mag and $K_s=11.0$ mag as the lower completeness limits.
-
-\begin{figure}[htbp]
-\begin{center}
-\resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/Density-Kvsi.pdf}}
-\caption{Density of all \gls{ddr2} sources in $K_s$ and $i$ magnitudes. Lines show the chosen completeness limits, $13.2<i<21.4$ mag and $11<K_s<18.1$ mag. The grey area is considered incomplete. Reproduced from Figure 9 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Journal}, Vol. \usebibentry{Olivares2017}{Volume}.}
-\label{fig:completeness}.
-\end{center}
-\end{figure}
-
-The $\gls{ci}$ completeness interval is then defined as that of all the points, along the cluster sequence in the $K_s$ vs. $i-K_s$ \gls{cmd}, for which $i$ and $K_s$ are bounded by their upper and lower completeness limits, respectively. This results in a completeness interval of  $2.7<\gls{ci}<5.6$ mag. With it, and the cluster sequence (the splines), I derive the completeness intervals for the $J,H,K_s$ bands. Finally, I transform these intervals to absolute magnitudes and deredden them. 
-
+CHANGE FIGURES AND TEXT. REFER TO THE SAMPLES AS THE BHM AND TO THE HMPS AS THE HMPS!
 The luminosity distributions of the $J,H,K_s$ bands, together with their completeness limits are shown in Fig. \ref{fig:Luminosities}. I call them model \gls{bhm}. For the sake of comparison, I also show the following luminosity distributions. First, the luminosity distributions of objects classified as candidate members in the \gls{bhm}. I call these the discrete \gls{bhm} distributions. Also, I plot the luminosity distribution resulting from the candidate members of \citet{Bouy2015}, I call them the discrete Bouy. Since the discrete luminosity distributions, both Bouy and \gls{bhm}, rely on the magnitudes of the individual candidate members, and many of these objects have missing value entries, then I impute their missing entries using those of the nearest euclidean neighbour. 
 
 The difference between the luminosity distributions derived using the posterior distribution of the parameters in the \gls{bhm} and discrete \gls{bhm} distributions, comes as well from the fact that the candidate members are not a random sample of the cluster population. As explained before, the luminosity distributions derived from the parameters in the model take into account all objects proportionally to their cluster membership probability. The discrete \gls{bhm} uses only the high probability candidate members, thus they may be biased by the probability threshold. In addition, the missing value entries of al the objects in the model \gls{bhm} distributions are marginalised, while in the discrete \gls{bhm} they are imputed.
@@ -739,6 +580,8 @@ In this Section I describe the procedure to transform the luminosities distribut
 The mass-luminosity relation is the non linear transformation that enables us to obtain the mass distribution from the luminosity distributions. Given the values of the upper limits of the luminosity distributions (the faint ends), the mass-luminosity relation relies entirely on the current models of stellar atmospheres. Among the different flavours of theoretical stellar evolution models in the literature (those from the Pisa, Padova, Trieste, Geneva, and Lyon research groups)  we choose the BT-Settl models of \citet{Allard2012}. These models go deeper into the lower masses reaching the planetary mass range thus allowing a complete coverage of our luminosity distributions. The rest of the models stay in the $0.1-10\,\mathrm{M_{\odot}}$ range, with the \emph{PARSEC} models being the ones reaching the $0.1\,\mathrm{M_{\odot}}$ limit \citep{Bressan2012}. 
 
 From the BT-Settle grid I choose the CIFIST2011bc for the 2MASS AB photometric system, 120 \gls{myr} and solar metallicity. I choose this photometric system because it covers the dynamic range of the \gls{ddr2} survey. The age and metallicity values are the closest, within the grid, to the canonical ones (see Section \ref{sect:generalities}). This grid returns values of the luminosity for certain non uniformly distributed values of the mass. As shown in Eq. \ref{eq:transformdistribution}, the transformation of a probability distribution, in this case the luminosities, into the mass distribution is proportional to the derivative of the transformation, which must be continuous. To avoid the discontinuities in the derivatives produced by the grid, we fit the values from the grid using spline series (see Fig. \ref{fig:splineML}). Then, derivative is obtained from these continuous series (see Fig. \ref{fig:der_splineML}). It is important to notice the following two assumptions. First, I assume that the luminosity distributions in $J,H$ and $K_s$ bands are independent between them, and then I obtain a mass distribution for each one of them. Second, I assume that the transformation from luminosities to masses does not have any associated uncertainty. These assumptions must be taken since the isochrone models do not provide neither uncertainties nor a way to incorporate correlations between the mass distributions of distinct photometric bands. 
+
+PERFORM ANDERSON DARLING TEST TO COMPARE HOW DIFFERENT ARE THE LUMINOSITY DISTRIBUTIONS OF BOUY AND BHM.
 
 Figure \ref{fig:splineML} shows the spline fit to the mass-luminosity relations of the BT-Settl absolute $J,H$ and $K_s$ magnitudes (black points) as a function of the mass. Figure \ref{fig:der_splineML} shows the derivative of mass-luminosity relation. The grey shaded areas represent the incompleteness regions of the \gls{dance} survey (see previous section).
 
@@ -778,7 +621,7 @@ This Figure shows that the \glspl{pdsmd} derived from the \gls{bhm} compare well
 
 The \gls{pdsmd} of \citet{Bouy2015} is computed using only their candidate members within the central three degree region of the \gls{ddr2}. First, their list of candidate members is not the same as those found by the \gls{bhm}. Second, the \gls{pdsmd} derived from the \gls{bhm} uses all objects in the data set, not just the high membership probability candidates. Third, as mentioned in Section \ref{sect:luminosity}, the cut to the central three degree region may have biased the derived \gls{pdsmd} of \citet{Bouy2015}. Therefore, the lack of objects that it shows,  in the mass range $0.3 - 0.7 \mathrm{M_{\odot}}$ ($-0.5 < \log \mathrm{M/M_{\odot}} < -0.2$) particularly, may has it origin in the objects that \citet{Bouy2015} did not included in his analysis: those lying outside the inner three degree region. 
 
-For the sake of completeness, I fit a simple model to the \gls{pdsmd} of the \gls{bhm}. To do it, I proceed as follows. First, I select three competing models: a log-normal function (like that of \citet{Chabrier2003b,Chabrier2005}), and two power-law functions of the form $m^{-\alpha}$ with two and three power-law segments. Second, from a 100 sample distribution of the \gls{pdsmd} in the $K_s$ band (the ones shown as spaghetti lines in Fig. \ref{fig:ModelMassFunction}) I compute the mean distribution. This is, at each of the 200 points grid spanning the completeness interval, I obtain the mean of the probabilities given by the 100 distributions. With this mean distribution I draw a $10^4$ synthetic sample of masses. Third, using \emph{PyMultiNest} \citep{Buchner2014}, I infer the parameters of the three models given the masses of the synthetic sample. Table \ref{tab:fitPDSMD} gives the \gls{map} of the parameters in each model together with the natural logarithm of the evidences (see Sect. \ref{sect:modelselection}). Judging by \citet{Jeffreys61} scale of evidence (see Table \ref{tab:JeffreysScale}), there is decisive evidence supporting the two and three segment power-law models. However, the Bayes factor of the latter indicates a difference in evidence which barely worth mentioning. Thus, in the following I compare with the two-segment power-law model that is shown on Fig. \ref{fig:ModelMassFunction} (as the black solid line).
+For the sake of completeness, I fit a simple model to the \gls{pdsmd} obtained by the \gls{bhm}. To do it, I proceed as follows. First, I select three competing models: a log-normal function (like that of \citet{Chabrier2003b,Chabrier2005}), and two power-law functions of the form $m^{-\alpha}$ with two and three segments. Second, from the derived \gls{pdsmd} in the $K_s$ band, I took a sample of 100 distributions ( the ones shown as spaghetti lines in Fig. \ref{fig:ModelMassFunction}). Then, I divide  the completeness interval into a grid with 200 steps, and at each step I compute the mean of the values given by the 100 distributions. After normalisation this function can be thought as a mean distribution of the mass. Third, from the latter, I draw a sample of$10^4$ synthetic masses. Fourth, using \emph{PyMultiNest} \citep{Buchner2014} and the sample of synthetic masses, I obtain: i) the posterior distributions of the parameters in each of the three competing models, and ii) Bayesian evidences (Eq. \ref{eq:evidence}) for each of these models. In Table \ref{tab:fitPDSMD} I report the \gls{map} of the parameters in each model, together with the natural logarithm of the computed evidences. Judging by \citet{Jeffreys61} scale of evidence (see Table \ref{tab:JeffreysScale}), there is decisive evidence in favour of the two and three segment power-law models and against the log-normal function. However, the Bayes factor of the former indicates an evidence which barely worth mentioning. Under inconclusive evidence, I am allowed to use a simplicity prior (prejudice for simpler models) for the two competing power-law models (see Eq. \ref{eq:modelselection}). Thus, I chose the two-segment power-law model, which I show in Fig. \ref{fig:ModelMassFunction} by means of the black solid line.
 
 The two segment power-law model agrees with the three segment model of \citet{Bouy2015}. However, there are still differences, which are clear at the low and high mass ends particularly. Nevertheless, it is in clear discrepancy with the \glspl{imf} of \citet{Chabrier2005},  \cite[$m_c=0.25_{-0.016}^{+0.021}$ and $\sigma=0.55_{-0.01}^{+0.05}$, the uncertainties are those reported by][for single objects]{Chabrier2003b} and of \citet{Thies2007}. 
 
@@ -819,11 +662,11 @@ Finally, I notice that, as mentioned in Sect. \ref{sect:mass-luminosity}, the un
 
 \section{The mass distribution on time}
 \label{sect:massontime}
-As I mention in the previous section, the observed differences between the present day mass distribution and the initial mass functions may have their origin on the temporal evolution of the cluster population. To test this hypothesis, I compare the Pleiades \gls{pdsmd} ($\sim125$ \gls{myr}) with those of the younger Trapezium ($\sim1$ \gls{myr}) and Hyades ($\sim 600$ \gls{myr}) clusters. These can be thought as snapshots of the Pleiades past and future mass distributions.
+Assuming the universality of the \gls{imf}, the observed differences between the present day mass distribution and the initial mass functions may have their origin on the temporal evolution of the cluster population. To test this hypothesis, I compare the Pleiades \gls{pdsmd} ($\sim125$ \gls{myr}) with those of the younger Trapezium ($\sim1$ \gls{myr}) and Hyades ($\sim 600$ \gls{myr}) clusters. Under the assumption of a universal \gls{imf}, the \glspl{pdsmd} of these two cluster can be thought as snapshots of the Pleiades past and future mass distributions.
 
 Although this comparison formally lies beyond the objectives of the present work, nevertheless, it gives an idea of the importance that the \gls{pdsmd} of other \gls{nyc} have in the understanding of the formation and evolution of the mass distribution.
 
-Figure \ref{fig:PDSMDcomparison} shows the \gls{pdsmd} from the Pleiades, together with those of the Trapezium and Hyades\footnote{Kindly provided by Herv\'e Bouy in a private communication}. These \glspl{pdsmd} correspond to those of  Fig. 11 of \citet{Bouy2015}. As mentioned by \citet{Bouy2015}, the abundance of low-mass stars and brown dwarfs in the range $0.03 - 0.1\,\mathrm{M_{\odot}}(-1.4 < \log \mathrm{M/M_{\odot}} <-1$) seems to diminish with time. The relative increase of objects in the range $-0.4 < \mathrm{\log M/M_{\odot}} < -0.2$ is an effect of the normalisation\footnote{The interesting alternative of open clusters gaining intermediate mass stars is yet to be explored.}. This effect is consistent with the classical scenario in which low-mass stars and brown dwarfs are ejected as the cluster relaxes.
+Figure \ref{fig:PDSMDcomparison} shows the \gls{pdsmd} from the Pleiades, together with those of the Trapezium and Hyades\footnote{Kindly provided by Herv\'e Bouy in a private communication.}. These \glspl{pdsmd} correspond to those of  Fig. 11 of \citet{Bouy2015}. As mentioned by \citet{Bouy2015}, the abundance of low-mass stars and brown dwarfs in the range $0.03 - 0.1\,\mathrm{M_{\odot}}(-1.4 < \log \mathrm{M/M_{\odot}} <-1$) seems to diminish with time. The relative increase of objects in the range $-0.4 < \mathrm{\log M/M_{\odot}} < -0.2$ is an effect of the normalisation\footnote{The interesting alternative of open clusters gaining intermediate mass stars across their orbit is yet to be explored.}. This effect is consistent with the classical scenario in which low-mass stars and brown dwarfs are ejected as the cluster relaxes.
 
 Since I lack the learned \gls{bhm} for these two open clusters, the following comparison is made on a frequentist hypothesis testing approach, rather than on the proper Bayesian model selection scheme.
 
@@ -856,9 +699,9 @@ Figure \ref{fig:PDSMDtest} shows the cumulative distribution functions (\glspl{c
 
 Furthermore, since the \gls{ks} test uses only the maximum distance between \glspl{cdf}, I also applied the more robust \gls{ad} test. It also rejects the null hypotheses (at $p < 0.004$) that the Trapezium and Hyades \glspl{pdsmd} and the \citet{Chabrier2005} and \citet{Thies2007} \glspl{imf} came from the same parent distribution as the Pleiades \gls{pdsmd}. 
 
-The previous tests suggest that there is enough evidence for the observed differences among the \glspl{pdsmd} of these three clusters. Also, they suggest that \glspl{imf} of \citet{Chabrier2005} and \citet{Thies2007} are statistically different from the  Pleiades \gls{pdsmd}.  These observed differences, as mentioned in the previous Section, may have its origin on dynamical effects associated with age and relaxation.
+The previous tests suggest that there is enough statistical evidence  to support the diverse origins in the \glspl{pdsmd} of these three clusters. Also, these evidences suggest that \glspl{imf} of \citet{Chabrier2005} and \citet{Thies2007} are statistically different from the  Pleiades \gls{pdsmd}.  These observed differences, as mentioned in the previous Section, may have its origin on dynamical effects associated with age and relaxation. However, they can also arise due to the simpler assumption that no two clusters are born alike.
 
- Nevertheless, to claim for reliable evidence supporting these differences, several issues must be solved. First, the uncertainties in the \gls{pdsmd} must be properly established. Second, the luminosity distributions must include the uncertainties from the data not just from the poissonian counts. For this, the \gls{bhm} of these cluster must be computed. Finally, the proper way to compare models is under Bayes' theorem.
+Whatever the answer is, to attain it at least two issues must be solved. First, the uncertainties in the \gls{pdsmd} must be properly established, particularly those of the mass-luminosity relation, distance, and extinction. Second, the luminosity distributions of all compared clusters must include the properly propagated uncertainties from the data, as in the \gls{bhm}, and not just from the poissonian counts. Thus, in the future, the \gls{bhm} of the remaining cluster must be computed. Once this questions are solved, the Bayes' theorem will provide the proper way to compare these hypotheses. 
  
 
 

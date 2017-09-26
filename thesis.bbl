@@ -1,4 +1,4 @@
-\begin{thebibliography}{220}
+\begin{thebibliography}{222}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -515,6 +515,11 @@ Koller, D. \& Friedman, N. 2009, Probabilistic Graphical Models: Principles and
   Stellar and Sub-Stellar Initial Mass Function of Simple and Composite
   Populations}, ed. T.~D. {Oswalt} \& G.~{Gilmore}, 115
 
+\bibitem[{{K{\"u}pper} {et~al.}(2010){K{\"u}pper}, {Kroupa}, {Baumgardt}, \&
+  {Heggie}}]{2010MNRAS.407.2241K}
+{K{\"u}pper}, A.~H.~W., {Kroupa}, P., {Baumgardt}, H., \& {Heggie}, D.~C. 2010,
+  \mnras, 407, 2241
+
 \bibitem[{{Kuznetsova} {et~al.}(2015){Kuznetsova}, {Hartmann}, \&
   {Ballesteros-Paredes}}]{2015ApJ...815...27K}
 {Kuznetsova}, A., {Hartmann}, L., \& {Ballesteros-Paredes}, J. 2015, \apj, 815,
@@ -845,6 +850,9 @@ Spiriti, S., Eubank, R., Smith, P.~W., \& Young, D. 2013, Journal of
   \& {Huedo}}]{Tapiador2017}
 {Tapiador}, D., {Berihuete}, A., {Sarro}, L.~M., {Julbe}, F., \& {Huedo}, E.
   2017, Astronomy and Computing, 19, 1
+
+\bibitem[{{Terlevich}(1987)}]{1987MNRAS.224..193T}
+{Terlevich}, E. 1987, \mnras, 224, 193
 
 \bibitem[{{Terndrup} {et~al.}(2000){Terndrup}, {Stauffer}, {Pinsonneault},
   {Sills}, {Yuan}, {Jones}, {Fischer}, \&
