@@ -340,8 +340,42 @@ $K_s$[mag]&1.40e-02& 5.75e-02& 8.17e-02& 1.32e-01& 3.88e+01&1.04e-01\\
 \end{center}
 \end{figure}
 
+\subsection{Completeness limits}
+\label{sect:ddr2_completeness}
+
+The photometric completeness of the \gls{ddr2} is difficult to estimate due to its heterogeneous origin (e.g. see Figure \ref{fig:originDANCeDR2}). Nevertheless, in the following I will attempt to estimate it. To do it, in the following I will assume that the distribution of sources in the region of the sky occupied by the Pleiades grows as a power-law in the observed magnitude of the sources. This assumption is of course very simplistic since the cluster itself and the galaxy prevent this exact law in the increasing number of objects as a function of the magnitude. Despite this reason, this assumption suffices for the objectives of the present work. As can be seen in Figure \ref{fig:completeness}, the distribution of sources in the \gls{ddr2} as a function of the photometric magnitudes grows almost like a power-law. At certain limits, the power-law behaviour stops and the number of sources rapidly falls. In the following, I will assume that the survey is complete below this drop-off limit.
+
+\citet{Bouy2015} mention that, due to the heterogeneous origins of the \gls{ddr2} data set, the spatial coverage and sensitivity of the survey is also not homogeneous. To remedy this issue, they identify a region with complete spatial coverage, the inner three degrees of the cluster (see Fig. \ref{fig:originDANCeDR2}). Then, they restricted their photometric analysis to this spatially complete region. 
+
+Restricting their sample of candidate members to this inner region results in a sample of candidate members that is spatially biased. If any dynamical process has been set on the cluster such that the mass distribution of its members is not uniformly distributed in the space, then a spatial cut in a sample of candidate members will result in a bias on the mass distribution. One of such dynamical process is the mass segregation, which, as suggested by several authors \cite[][, including the present work]{Adams2001,Converse2008,Converse2010} occurs in the Pleiades.
+
+Thus, to avoid such biases, I assume that the \gls{ukidss} survey \citep{2007MNRAS.379.1599L}, which is the most sensitive from among those that contribute to the \gls{ddr2} data set, provides the homogeneous spatial and sensitivity coverage at faint magnitudes (see Fig. \ref{fig:originDANCeDR2}, and \citealt{Bouy2013}). According to \citet{2007MNRAS.379.1599L}, the completeness limits of the \gls{ukidss} survey (which are shown in Figure \ref{fig:completeness} as vertical dotted lines) are: $Y\sim20.16$, $J\sim19.56$,$H\sim18.81$, and $K\sim18.19$ magnitudes. In addition, \citet{Bouy2015} estimate the the completeness limit of the \gls{ddr2} in the $i$ band is $i\sim23$ mag. However, as can be seen from Figure \ref{fig:completeness}, such limits are optimistic for the \gls{ddr2}. After re-estimating them, I find the following values: $i\sim21.2$, $Y\sim19.2$, $J\sim18.6$,$H\sim18$, and $K\sim17.4$ magnitudes, which are shown in Figure \ref{fig:completeness} as the vertical dashed lines. 
+
+\begin{figure}[htbp]
+\begin{center}
+\resizebox{\hsize}{!}{\includegraphics[width=0.5\textwidth]{background/Figures/MagnitudeDistributionsDDR2.pdf}}
+\caption{Density of all \gls{ddr2} sources as a function of the observed magnitudes. The vertical dotted and dashed lines correspond to the completeness limits of the literature, and to those derived as the mode of the densities, respectively. The bump in the $i$ distribution at 15.5 mag corresponds to the completeness limits of the APASS survey.  See text and \citet{Bouy2015} for more details.}
+\label{fig:completeness}.
+\end{center}
+\end{figure}
+
+The \gls{ddr2} is also incomplete in the bright end due to saturation of the detectors. The bright end of the $J,H,K$ bands is given by the 2MASS survey, thus the observed values of this bands in the \gls{ddr2} fall within the sensitivity limits of the 2MASS detectors. On the other hand the $Y$ and $i$ bands are prone to saturation, as can be seen in Figure \ref{fig:completeness} for the $Y$ band. The case of the $i$ band is more intricate. 
+
+The $i$ band in the \gls{ddr2} comes from two main surveys: APASS in the bright end (completeness limit at 15.5 mag., see bump in Figure \ref{fig:completeness}), and CFHT/MegaCam (yellow pattern in Figure \ref{fig:originDANCeDR2}) at the mid and low ends (with completeness limit at $i\sim21.2$). However, while APASS covers 100\% of the \gls{ddr2} sky area and its detectors do not saturates at the bright end (at least within the range covered by the \gls{ddr2} values), the detectors of CFHT/MegaCam, which covers just the central $3^\circ$ area, saturate at $i\sim13$, as indicated by \citet{Bouy2015}. Due to this intricate pattern, I will adopt the lower completeness limit given by the latter authors.
+
+As I will show in Chapter \ref{chap:BHM},  we are interested in the completeness limits of the $i -K_s$ colour index, which are defined by those of $i$ and $K_s$ together. In Fig. \ref{fig:completenessK+i}, I show the $K_s$ and $i$ 2d kernel density estimate of the \gls{ddr2} sources. This density shows a sharp decline below $i=13.2$ mag., which most probably is the product of saturation, as mentioned before. At this value of $i$ band, I chose the value of $K_s=11.0$ mag as a conservative lower completeness limits. Therefore, the central rectangle of Figure \ref{fig:completentessK+i} depicts the region where the $i-K_s$ colour index is assumed to be complete.
+
+\begin{figure}[htbp]
+\begin{center}
+\resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/Density-Kvsi.pdf}}
+\caption{Density of all \gls{ddr2} sources in $K_s$ and $i$ magnitudes. Lines show the chosen completeness limits, $13<i<21.2$ mag.,and $11<K_s<17.4$ mag. The grey area is considered incomplete. Reproduced from Figure 9 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Journal}, Vol. \usebibentry{Olivares2017}{Volume}.}
+\label{fig:completenessK+i}.
+\end{center}
+\end{figure}
+
+
 \subsection{Missing values}
-In the \gls{ddr2}, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not uniform. Missing values occur with higher probability at the faintest end of the photometric distributions ($\sim 18$ mag in $J,H$ and $K_s$ bands). Figure \ref{fig:NAsDDR2} shows the distribution of objects having at least a missing entry as a function of the band or bands that were actually observed. As mentioned, the vast majority of these objects occur at the faint end, close to the sensitivity limit of the survey. It coincides with the sensitivity limits of the UKIDSS Galactic Cluster Survey \cite[$Y\sim 20.3$, $J\sim19.5$, $H\sim K_s\sim18.6$ according to][]{2007MNRAS.379.1599L}, which provides the deepest photometry in the \gls{ddr2}. In this Figure, the bumps at the bright and middle ranges arise due to the mixing of surveys. The first bump corresponds to the survey carried out by \citet{Bouy2015}. As mentioned in their Appendix A, due to saturation, the $Y$ band photometry was limited to objects fainter than $\sim 13$ magnitude. Thus, they complemented the Pleiades \gls{dance} catalogue with shallow $Y$ band photometry in the magnitude range of 8 to 14 magnitudes but only for 40 candidate members of \citet{Stauffer2007} and their surrounding objects \cite[see][for more details]{Bouy2015}. Thus, the large amount of missing $Y$ values in the 8 to 14 mag range of Fig. \ref{fig:NAsDDR2} come from those objects not observed by these authors. The second bump at the middle range is slightly fainter than the sensitivity limits of the 2MASS survey ($J\sim 16.4$, $H\sim15.5$ and $K_s \sim 14.8$, see Section 6.2 of the Explanatory Supplement to the 2MASS All Sky Data Release\footnote{\url{https://www.ipac.caltech.edu/2mass/releases/allsky/doc/sec6_2.html}}), which indicates that it comes from the mixing of the 2MASS and UKIDSS surveys. Due to the different spatial resolutions, some objects are detected in 2MASS and not in UKIDSS and vice versa. The missing $Y$ band values come from objects observed only by 2MASS.
+In the \gls{ddr2}, missing values occur only in the photometric measurements (see Table \ref{tab:DR2properties}), with the bluer bands being the most affected. As expected, the probability distribution of sources with missing values is not uniform. Missing values occur with higher probability at the faintest end of the photometric distributions ($\sim 18$ mag in $J,H$ and $K_s$ bands). Figure \ref{fig:NAsDDR2} shows the distribution of objects having at least one missing entry in one band as a function of the band that is actually observed. As mentioned, the vast majority of these objects occur at the faint end, close to the sensitivity limit of the survey. It coincides with the sensitivity limits of the UKIDSS Galactic Cluster Survey \cite[$Y\sim 20.3$, $J\sim19.5$, $H\sim K_s\sim18.6$ according to][]{2007MNRAS.379.1599L}, which provides the deepest photometry in the \gls{ddr2}. In this Figure, the bumps at the bright and middle ranges arise due to the mixing of surveys. The first bump corresponds to the survey carried out by \citet{Bouy2015}. As mentioned in their Appendix A, due to saturation, the $Y$ band photometry was limited to objects fainter than $\sim 13$ magnitude. Thus, they complemented the Pleiades \gls{dance} catalogue with shallow $Y$ band photometry in the magnitude range of 8 to 14 magnitudes but only for 40 candidate members of \citet{Stauffer2007} and their surrounding objects \cite[see][for more details]{Bouy2015}. Thus, the large amount of missing $Y$ values in the 8 to 14 mag range of Fig. \ref{fig:NAsDDR2} come from those objects not observed by these authors. The second bump at the middle range is slightly fainter than the sensitivity limits of the 2MASS survey ($J\sim 16.4$, $H\sim15.5$ and $K_s \sim 14.8$, see Section 6.2 of the Explanatory Supplement to the 2MASS All Sky Data Release\footnote{\url{https://www.ipac.caltech.edu/2mass/releases/allsky/doc/sec6_2.html}}), which indicates that it comes from the mixing of the 2MASS and UKIDSS surveys. Due to the different spatial resolutions, some objects are detected in 2MASS and not in UKIDSS (e.g. pairs that are unresolved in UKIDSS are resolved in 2MASS).
 
 \begin{figure}[ht!]
     \centering
@@ -359,47 +393,6 @@ In the \gls{ddr2}, missing values occur only in the photometric measurements (se
     \end{subfigure}
 \caption{Density distributions in $Y,J,H$ and $K_s$ bands for \gls{ddr2} objects with missing values in the other bands. For comparison, the distribution of observed objects is also shown with a dashed line. The majority of the missing value objects are located at the faint end of the magnitude distributions ($Y \sim 20$, $J \sim 19$, $H\sim18.5$, and $K_s \sim 18$). A non negligible fraction of missing  $Y$ band photometry is at the bright end ($J,H,K_s \sim 8 - 14$ mag), and in the middle range of 13 to 16 magnitudes. See text for details.}
 \label{fig:NAsDDR2}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \begin{subfigure}[t]{0.45\textwidth}
-        \includegraphics[page=1,height=6cm]{background/Figures/MissingDistributions.pdf}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=2,height=6cm]{background/Figures/MissingDistributions.pdf}
-    \end{subfigure}
-     \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=3,height=6cm]{background/Figures/MissingDistributions.pdf}
-    \end{subfigure}
-     \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=4,height=6cm]{background/Figures/MissingDistributions.pdf}
-    \end{subfigure}
-\caption{Density distributions in $Y,J,H$ and $K_s$ bands of \gls{rdr2} for objects with missing values in the other bands. For comparison, the distribution of observed objects is also shown with a dashed line. The features are similar to those in Fig. \ref{fig:NAsDDR2}. The small differences between the two figures come from the fact that the \gls{rdr2} is not a random sample of the \gls{ddr2}.}
-\label{fig:NAs}
-\end{figure}
-
-
-\subsection{Completeness limits}
-\label{sect:ddr2_completeness}
-
-EXPLAIN THE ASSUMPTION ABOUT THE POWER LAW IN THE NUMBER OF SOURCES AND THAT NO MODEL IS USED TO DETERMINE THIS COMPLETENESS.
-The completeness limits of the derived luminosity distributions are acquired as follows. Since the \gls{bhm} methodology prescribes the \emph{true} photometric quantities based on the \emph{true} colour index \gls{ci}. Then, the completeness limits of the \gls{ci} distribution dictate those of the luminosity distributions. 
-
-\citet{Bouy2015} mention that, due to the heterogeneous origins of the \gls{ddr2} data set, the spatial coverage and sensitivity of the survey is also not homogeneous. To remedy this issue, they identify a region with complete spatial coverage, the inner three degrees of the cluster (see Fig. \ref{fig:originDANCeDR2}). Then, they restricted their photometric analysis to this spatially complete region. 
-
-Restricting their sample of candidate members to this inner region results in a sample of candidate members that is spatially biased. If any dynamical process has been set on the cluster such that the mass distribution of its members is not uniformly distributed in the space, then a spatial cut in a sample of candidate members will result in a bias on the mass distribution. One of such dynamical process is the mass segregation, which, as suggested by \citet{Adams2001} may have happen in the Pleiades cluster. As proven in Section \ref{sect:lumsegregation}, there is strong evidence in favour of luminosity segregation in the Pleiades, at least in the $J$ band.
-
-Thus, to avoid such biases, I assume that the UKIDSS survey, which is the most profound from among the contributions to the \gls{ddr2} data set, provides the homogeneous spatial and sensitivity coverage at faint magnitudes (see Fig. \ref{fig:originDANCeDR2}). This survey thus provides the upper completeness limits, which are essentially those reported in the Appendix A of \citet{Bouy2015}, $i\sim23$ mag and $K_s\sim18$ mag.
-
-Since we are interested in the completeness limits of the $\gls{ci}$, and this equals $i -K_s$, then its completeness limits are defined by those of $i$ and $K_s$ together. In Fig. \ref{fig:completeness}, I show the $K_s$ and $i$ kernel density estimate computed using all sources in the \gls{ddr2}. As can be seen from this Figure, the point with maximum density, which corresponds to $i=21.4$ mag and $K_s=18.1$ mag, should be used to set the upper completeness limits. Notice that, due to the use of the two dimensional density, the upper completeness limit in $i$ is reduced with respect to that of the univariate $i$ distribution. This density shows a sharp decline at bright magnitudes, probably due to saturation of the detectors. To be conservative, I choose $i=13.2$ mag and $K_s=11.0$ mag as the lower completeness limits.
-
-\begin{figure}[htbp]
-\begin{center}
-\resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/Density-Kvsi.pdf}}
-\caption{Density of all \gls{ddr2} sources in $K_s$ and $i$ magnitudes. Lines show the chosen completeness limits, $13.2<i<21.4$ mag and $11<K_s<18.1$ mag. The grey area is considered incomplete. Reproduced from Figure 9 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Journal}, Vol. \usebibentry{Olivares2017}{Volume}.}
-\label{fig:completeness}.
-\end{center}
 \end{figure}
 
 \subsection{Selection of observables}
@@ -604,6 +597,24 @@ $K_s$[mag]&0.020 &  0.060 &  0.079 & 0.087  & 0.101 & 9.998  & 5013\\
 \label{tab:rddr2_field}
 \end{table}%
 
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[page=1,height=6cm]{background/Figures/MissingDistributions.pdf}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=2,height=6cm]{background/Figures/MissingDistributions.pdf}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=3,height=6cm]{background/Figures/MissingDistributions.pdf}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=4,height=6cm]{background/Figures/MissingDistributions.pdf}
+    \end{subfigure}
+\caption{Density distributions in $Y,J,H$ and $K_s$ bands of \gls{rdr2} for objects with missing values in the other bands. For comparison, the distribution of observed objects is also shown with a dashed line. The features are similar to those in Fig. \ref{fig:NAsDDR2}. The small differences between the two figures come from the fact that the \gls{rdr2} is not a random sample of the \gls{ddr2}.}
+\label{fig:NAs}
+\end{figure}
+
 
 
 \section{The Tycho+DANCe candidate members}
@@ -661,21 +672,21 @@ $K_s$ [mag]  							            &   3.879&7.478 & 8.373& 8.167  &  9.113 &  9.92
 \subsection{Contamination and completeness}
 \label{sect:TDContamination}
 In Section \ref{sect:classifier}, we estimate a contamination rate of $4.3\pm0.2$\% in the \gls{hmps}, which
-would amount to 84 of the 1967 candidate members. Also, \citet{Sarro2014} estimate that the contamination rate of their methodology is $11.0\pm2.0$\% for a probability threshold of $p=0.5$, as the one used by \citet{Bouy2015} to classify the candidate members of their Tycho+DANCe data set.  Thus, in our combined Tycho+DANCe list of candidate members, we acknowledge a mean contamination rate of $\sim 8\%$. We would expect these contaminating sources to be uniformly distributed in right ascension and declination because the position on the sky was explicitly removed from the calculation of membership probabilities.
+would amount to 84 of the 1967 candidate members. Also, \citet{Sarro2014} estimate that the contamination rate of their methodology is $11.0\pm2.0$\% for a probability threshold of $p=0.5$, as the one used by \citet{Bouy2015} to classify the candidate members of their \gls{t+d} data set.  Thus, in our combined \gls{t+d} list of candidate members, we acknowledge a mean contamination rate of $\sim 8\%$. We would expect these contaminating sources to be uniformly distributed in right ascension and declination because the position on the sky was explicitly removed from the calculation of membership probabilities.
 
 We estimate the completeness of our list of candidate members, in terms of the J band luminosity and
-spatial coverage, by assessing the completeness of the joint Tycho+DANCe survey. In Fig. \ref{fig:completeness} we show the distribution of the number of sources in the combined DANCe+Tycho catalogue as a function of the radial position for different limiting magnitudes in the J band.
+spatial coverage, by assessing the completeness of the joint \gls{t+d} survey. In Fig. \ref{fig:completenessT+D} we show the distribution of the number of sources in the combined \gls{t+d} catalogue as a function of the radial position for different limiting magnitudes in the J band.
 The radial position is computed assuming a distance of 134.4 pc to the Pleiades cluster \citep{Galli2017} and a centre at $\alpha,\delta =[56.65,24.13]$. Distances are corrected by geometric distortions of large angles (using Eqs. \ref{eq:distfree} and \ref{eq:rs_and_ts}).
-As can be seen from this figure, the DANCe+Tycho catalogue is complete until magnitude $J\sim19$ and radial distance of 11.5 pc ($\sim5^\circ$). We notice that the latter corresponds roughly with the sky coverage of the UKIDSS survey \citep{2007MNRAS.379.1599L}.
+As can be seen from this figure, the \gls{t+d} catalogue is complete until magnitude $J\sim19$ and radial distance of 11.5 pc ($\sim5^\circ$). We notice that the latter corresponds roughly with the sky coverage of the UKIDSS survey \citep{2007MNRAS.379.1599L}.
 Hence, we restrict our list of candidate members to those with: i) J band observed and less than 19 mag., and ii) radial distances less than 11.5 pc. This results in 1964 candidate members, which represents more than 50\% more candidate members that those of  \citet{Converse2010}, who did the latest analysis of the Pleiades PSD.
 
-Nevertheless, we remind the reader that the inhomogeneities (e.g. spatial resolutions, gaps in luminosity) of the data DANCe+Tycho data set are so complex (and some of them only partially understood) that can indeed bias the sample of candidate members in unknown ways. For example, the gap in luminosity coverage between the faint end of Tycho-2 catalogue and the bright end of the DANCe survey (see in Fig. 8 of \citealt{Bouy2015}) may result in undetected sources, therefore unmeasured proper motions and finally an incomplete list of candidate members.
+Nevertheless, we remind the reader that the inhomogeneities (e.g. spatial resolutions, gaps in luminosity) of the \gls{t+d} data set are so complex (and some of them only partially understood) that can indeed bias the sample of candidate members in unknown ways. For example, the gap in luminosity coverage between the faint end of Tycho-2 catalogue and the bright end of the DANCe survey (see in Fig. 8 of \citealt{Bouy2015}) may result in undetected sources, therefore unmeasured proper motions and finally an incomplete list of candidate members.
 
 \begin{figure}[ht!]
 \begin{center}
 \includegraphics[page=2,width=\columnwidth]{./background/Figures/RadiiDistribution_Tycho+DANCe_Jmag.pdf}
-\caption{Density of sources in the combined DANCe+Tycho catalogue as a function of the radial distance to the cluster centre and limiting magnitude in the J band. The vertical grey line marks the limit of spatial completeness, 11.5 pc.}
-\label{fig:completeness}
+\caption{Density of sources in the combined \gls{t+d} catalogue as a function of the radial distance to the cluster centre and limiting magnitude in the J band. The vertical grey line marks the limit of spatial completeness, 11.5 pc.}
+\label{fig:completenessT+D}
 \end{center}
 \end{figure}
 

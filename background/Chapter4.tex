@@ -104,7 +104,11 @@ Furthermore, if the classifier returns a continuous random variable which then i
 \section{Comparison with the literature}
 \label{sect:memberscomparison}
 
-In the following, I will present the results of applying the \gls{bhm} methodology, described in Chapter \ref{chap:BHM}, to the real \gls{rdr2} data set. Then, I compare the recovered membership probabilities with three sources from the literature: \citet{Stauffer2007}, \citet{Bouy2015} and \citet{Rebull2016}.  Since the \gls{rdr2} is contained in the data set used by \citet{Bouy2015}, can be extended not just to the candidate members but to all objects in the data set. However, the comparison with \citet{Stauffer2007}, and \citet{Rebull2016} can only be done in terms of the objects in common. Since \citet{Rebull2016} obtain their list of candidates based on photometric variability, and this observable is not present in our set of observables, this comparison represent an important source of external validation. 
+In the following, I will I compare the cluster membership probabilities recovered by the \gls{bhm} methodology, after applying it to the real \gls{rdr2}, with three sources from the literature: \citet{Stauffer2007}, \citet{Bouy2015} and \citet{Rebull2016}.
+
+In the following I will refer to the \glsfirst{hmps} as those objects in the \gls{rdr2} from which the \gls{bhm} returns a membership probability distribution with a 84th percentile larger than the optimal probability threshold of 0.84 determined in the previous Section. The 84th percentile ensures that the uncertainty is taken into account.
+
+Since the \gls{rdr2} is contained in the data set used by \citet{Bouy2015}, the comparison in this case can be extended not just to the common candidate members, but to all objects in the data set. However, the comparison with \citet{Stauffer2007}, and \citet{Rebull2016} can only be done in terms of the objects in common. Since \citet{Rebull2016} obtain their list of candidates based on photometric variability, and this observable is not present in our set of observables, this comparison represent an important source of external validation. 
 
 
 \subsection{Candidate members from \citet{Stauffer2007}}
@@ -243,7 +247,7 @@ On the other hand, after cross matching (at CDS with a 0.5 arcsec radius)  the l
 \label{fig:RT2}
 \end{figure}
  
-\section{The statistical distributions of the Pleiades cluster.}
+\section{The statistical distributions of the Pleiades.}
 Now, I present the results of the statistical distributions that describe the cluster population, which are the main objective of the present work. These distributions result directly or indirectly from the posterior distribution of the parameters in our model. Indirectly means that I use them as parameters of other function (e.g. the mass distribution). Since we have 85 parameters in the \gls{bhm}, I only discuss the posterior distributions of some of these parameters. In particular, those related with the velocity, luminosity and mass distributions. Nevertheless, in Table \ref{tab:parameters}, I summarise the posterior distribution of the parameters in our model using the mode, also I use the 16th and 84th percentiles as a proxy for the uncertainty. The parameter names in this Table correspond to those given in Section \ref{sect:priors} (at Table \ref{tab:priors_parameters}). 
 
 \textbf{The posterior distributions of the parameters in the \glspl{bspline} and the \emph{true} \gls{ci} distribution are shown in Figs. \ref{fig:CMDs_results} and \ref{fig:CI_results}, respectively.  The posterior distributions of the parameters in the proper motion models are described in Section \ref{sect:PMresults}.}
@@ -251,22 +255,22 @@ Now, I present the results of the statistical distributions that describe the cl
 \begin{figure}[ht!]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
-        \includegraphics[page=1,height=8cm,width=\textwidth]{background/Figures/BHM/CMDs.pdf}
+        \includegraphics[page=7,height=8cm,width=\textwidth]{background/Figures/BHM/MembersModel.pdf}
         \caption{}
     \end{subfigure}
     \begin{subfigure}[t]{0.48\textwidth}
-      \includegraphics[page=2,height=8cm,width=\textwidth]{background/Figures/BHM/CMDs.pdf}
+      \includegraphics[page=8,height=8cm,width=\textwidth]{background/Figures/BHM/MembersModel.pdf}
         \caption{}
     \end{subfigure}
      \begin{subfigure}[t]{0.48\textwidth}
-      \includegraphics[page=3,height=8cm,width=\textwidth]{background/Figures/BHM/CMDs.pdf}
+      \includegraphics[page=9,height=8cm,width=\textwidth]{background/Figures/BHM/MembersModel.pdf}
         \caption{}   
     \end{subfigure}
      \begin{subfigure}[t]{0.48\textwidth}
-      \includegraphics[page=4,height=8cm,width=\textwidth]{background/Figures/BHM/CMDs.pdf}
+      \includegraphics[page=10,height=8cm,width=\textwidth]{background/Figures/BHM/MembersModel.pdf}
         \caption{}
     \end{subfigure}
-\caption{\glspl{cmd} showing the cluster and field members (blue triangles and grey dots, respectively resulting from classification using the $p_t = 0.84$ derived in Sect. \ref{sect:classifier}), together with 100 samples (orange spaghetti graphs) from the posterior distributions of the coefficients of the \glspl{bspline} resulting in the \emph{true} values of the cluster photometry. Also shown, the mode of these 100 samples (blue dashed line), the \gls{emb} sequence (magenta dot dashed line) and projections of the photometric field model (grey ellipses, see Fig. \ref{fig:fphGMM}).}
+\caption{\glspl{cmd} showing the cluster (\gls{hmps}) and field members (blue triangles and grey dots, respectively resulting from classification using the $p_t = 0.84$ derived in Sect. \ref{sect:classifier}), together with 100 samples (orange spaghetti graphs) from the posterior distributions of the coefficients of the \glspl{bspline} resulting in the \emph{true} values of the cluster photometry. Also shown, the mode of these 100 samples (blue dashed line), the \gls{emb} sequence (magenta dot dashed line) and projections of the photometric field model (grey ellipses, see Fig. \ref{fig:fphGMM}).}
 \label{fig:CMDs_results}
 \end{figure}
 
@@ -486,7 +490,7 @@ The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos
      \includegraphics[page=3,width=\textwidth]{background/Figures/BHM/Cs_members.pdf}
         \caption{}
     \end{subfigure}
-\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the \gls{gmm} modelling the single stars (orange spaghetti lines), the kernel density estimation of the \gls{bhm} candidate members classified as single stars (those whose cluster membership probability is higher than 0.84 and \gls{emb} membership probability is lower than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies below the \gls{emb} sequence (blue line).}
+\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the \gls{gmm} modelling the single stars (orange spaghetti lines), the kernel density estimation of the \gls{hmps} of candidate members classified as single stars (those whose cluster membership probability is higher than 0.84 and \gls{emb} membership probability is lower than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies below the \gls{emb} sequence (blue line).}
 \label{fig:PMCs}
 \end{figure}
 
@@ -502,7 +506,7 @@ The univariate projections of these distributions, in the $\mu_{\alpha}\cdot cos
      \includegraphics[page=3,width=\textwidth]{background/Figures/BHM/Bs_members.pdf}
         \caption{}
     \end{subfigure}
-\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the \gls{gmm} modelling the \gls{emb} stars (orange spaghetti lines), the kernel density estimation of the \gls{bhm} candidate members classified as \gls{emb} stars (those whose cluster membership probability is higher than 0.84 and \gls{emb} membership probability is higher than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies near the \gls{emb} sequence (blue line).}
+\caption{Proper motions densities resulting from: a 100 element sample from the posterior distributions of parameters in the \gls{gmm} modelling the \gls{emb} stars (orange spaghetti lines), the kernel density estimation of the \gls{hmps} of candidate members classified as \gls{emb} stars (those whose cluster membership probability is higher than 0.84 and \gls{emb} membership probability is higher than 0.5), and, the kernel density estimation of the candidate members of \citet{Bouy2015} whose photometry lies near the \gls{emb} sequence (blue line).}
 \label{fig:PMBs}
 \end{figure}
 
@@ -513,7 +517,7 @@ This Section describes the process to obtain the $J,H$, and $K_s$ absolute magni
 \subsection{Derivation of the magnitude distributions}
 \label{subsect:deriveluminosity}
 
-In the \gls{bhm} the photometric magnitudes are expressed as functions of the true $\gls{ci}$ (see Section \ref{sect:}
+In the \gls{bhm} the photometric magnitudes are expressed as functions of the true $\gls{ci}$ (see Section \ref{subsect:cluster})
 The $J,H,K_s$ magnitude distributions are derived by transforming the true $\gls{ci}$ distribution into the $J,H,K_s$ apparent magnitude distributions by means of the posterior distributions of the cluster photometric parameters. In particular, I use the \glspl{bspline} and the intrinsic dispersion of the cluster photometric sequence. In this transformations, the fractions of \gls{emb} are taken into account by mixing the single and \gls{emb} populations according to their fractions. In the following paragraphs, I describe the process to obtain the $K_s$ apparent magnitude. This process is similar for the rest of the bands. 
 
 Since we aim at the probability distribution of $K_s$, and it depends on the true $\gls{ci}$, I use this as a nuisance parameter that I later marginalise. Thus, 
@@ -554,18 +558,18 @@ Finally, I deredden the previous distributions employing the canonical value of 
 
 Since the \gls{bhm} describe the magnitudes as functions of the \gls{ci}, the completeness limits of the latter dictate those of the former, except for those of the $i$ and $K_s$ magnitude. The latter prescribe the completeness interval of the \gls{ci}, which is defined as that of all the points, along the cluster sequence in the $K_s$ vs. $i-K_s$ \gls{cmd}, for which $i$ and $K_s$ are bounded by their upper and lower completeness limits, respectively. Using the completeness limits found in Section \ref{sect:ddr2_completeness} results in a completeness interval of  $2.7<\gls{ci}<5.6$ mag. With it, and the cluster sequence (the splines and their parameters), I derive the completeness intervals for the $J,H,K_s$ bands. Finally, I transform these intervals to absolute magnitudes and deredden them. 
 
+The luminosity distributions in the $J,H,K_s$ bands derived from the \gls{bhm}, together with their completeness limits are shown in Fig. \ref{fig:Luminosities}. For the sake of comparison, I also show the luminosity distributions resulting from the \gls{kde} in the magnitudes of the candidate members from: i) the \gls{hmps} derived in previous sections, and, ii)  \citet{Bouy2015}. Since the  luminosity distributions of Bouy and the \gls{hmps}, depend on the magnitudes of the individual candidate members, and many of them have missing entries, then I impute their missing values using those of the nearest euclidean neighbour. 
 
-CHANGE FIGURES AND TEXT. REFER TO THE SAMPLES AS THE BHM AND TO THE HMPS AS THE HMPS!
-The luminosity distributions of the $J,H,K_s$ bands, together with their completeness limits are shown in Fig. \ref{fig:Luminosities}. I call them model \gls{bhm}. For the sake of comparison, I also show the following luminosity distributions. First, the luminosity distributions of objects classified as candidate members in the \gls{bhm}. I call these the discrete \gls{bhm} distributions. Also, I plot the luminosity distribution resulting from the candidate members of \citet{Bouy2015}, I call them the discrete Bouy. Since the discrete luminosity distributions, both Bouy and \gls{bhm}, rely on the magnitudes of the individual candidate members, and many of these objects have missing value entries, then I impute their missing entries using those of the nearest euclidean neighbour. 
-
-The difference between the luminosity distributions derived using the posterior distribution of the parameters in the \gls{bhm} and discrete \gls{bhm} distributions, comes as well from the fact that the candidate members are not a random sample of the cluster population. As explained before, the luminosity distributions derived from the parameters in the model take into account all objects proportionally to their cluster membership probability. The discrete \gls{bhm} uses only the high probability candidate members, thus they may be biased by the probability threshold. In addition, the missing value entries of al the objects in the model \gls{bhm} distributions are marginalised, while in the discrete \gls{bhm} they are imputed.
+The difference between the luminosity distributions derived using the posterior distribution of the cluster photometric parameters (i.e. the \gls{bhm}) and that obtained from the \gls{hmps} of candidate members, comes as well from the fact that the \gls{hmps} is not a random sample of the cluster population, but it is selected based on the membership probability. Thus the latter is biased towards objects with high membership probability. Since the luminosity distributions derived from the cluster parameters takes into account all objects proportionally to their cluster membership probability, the it is free from this kind of bias. Another source of discrepancy comes from objects with missing entries. While in the luminosity resulting from the \gls{bhm} the missing values are marginalised, in that of the \gls{hmps} they are imputed.
  
-On the other hand, the differences between the discrete distributions, the \gls{bhm} and that of \citet{Bouy2015}, arise mainly at the bright and faint ends ($K_s\sim 4$ mag and $K_s\sim11$ mag). I hypothesise that the origin of these differences lie in the different list of candidate members. As it has been discussed, the model of \citet{Bouy2015} is constructed only based in fully observed objects. The regions where the objects with missing entries happen more frequently is in the bright and faint regions. Therefore, the observed differences in the luminosity distributions may arise from the incomplete treatment that those authors made of objects with missing entries.
+On the other hand, the differences between the discrete distributions, the \gls{bhm} and that of \citet{Bouy2015}, arise mainly at the bright and faint ends ($K_s\sim 4$ mag and $K_s\sim11$ mag). I hypothesise that the origin of these differences lie in the different list of candidate members. To quantify the discrepancies between these two distributions, I performed the Anderson-Darling similarity test. In the comparison between the each of the 100 samples from the luminosity distribution from the \gls{bhm} and that of \citet{Bouy2015}, all the probabilities that the two distributions come from the same parent distributions are below $p< 0.04$ (the statistics from this test are in all cases larger than 10).
+
+As it has been discussed, the model of \citet{Bouy2015} is constructed only based in fully observed objects. The regions where the objects with missing entries happen more frequently is in the bright and faint regions. Therefore, the observed differences in the luminosity distributions may arise from the simplistic treatment that those authors made of objects with missing entries (see Section \ref{sect:ignorability}).
 
 \begin{figure}[htbp]
 \begin{center}
 \resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/BHM/absolute_JHK-log.pdf}}
-\caption{Luminosity distribution of $J,H,K_s$ bands (orange spaghetti lines). Also shown: the regions of incompleteness, and, the luminosity distributions computed from: the candidate members of \citet{Bouy2015} (dot-dashed blue line), and our candidate members, ($p_{84\%}>p_t$, dashed black line). Reproduced from Figure 10 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Volume} \usebibentry{Olivares2017}{Volume}.}
+\caption{Luminosity distribution of $J,H,K_s$ bands derived from the \gls{bhm} (orange spaghetti lines). Also shown: the regions of incompleteness, and, the luminosity distributions computed from: the candidate members of \citet{Bouy2015} (dot-dashed blue line), and our \gls{hmps} of candidate members, ($p_{84\%}>p_t$, dashed black line). Reproduced from Figure 10 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Volume} \usebibentry{Olivares2017}{Volume}.}
 \label{fig:Luminosities}.
 \end{center}
 \end{figure}
@@ -580,8 +584,6 @@ In this Section I describe the procedure to transform the luminosities distribut
 The mass-luminosity relation is the non linear transformation that enables us to obtain the mass distribution from the luminosity distributions. Given the values of the upper limits of the luminosity distributions (the faint ends), the mass-luminosity relation relies entirely on the current models of stellar atmospheres. Among the different flavours of theoretical stellar evolution models in the literature (those from the Pisa, Padova, Trieste, Geneva, and Lyon research groups)  we choose the BT-Settl models of \citet{Allard2012}. These models go deeper into the lower masses reaching the planetary mass range thus allowing a complete coverage of our luminosity distributions. The rest of the models stay in the $0.1-10\,\mathrm{M_{\odot}}$ range, with the \emph{PARSEC} models being the ones reaching the $0.1\,\mathrm{M_{\odot}}$ limit \citep{Bressan2012}. 
 
 From the BT-Settle grid I choose the CIFIST2011bc for the 2MASS AB photometric system, 120 \gls{myr} and solar metallicity. I choose this photometric system because it covers the dynamic range of the \gls{ddr2} survey. The age and metallicity values are the closest, within the grid, to the canonical ones (see Section \ref{sect:generalities}). This grid returns values of the luminosity for certain non uniformly distributed values of the mass. As shown in Eq. \ref{eq:transformdistribution}, the transformation of a probability distribution, in this case the luminosities, into the mass distribution is proportional to the derivative of the transformation, which must be continuous. To avoid the discontinuities in the derivatives produced by the grid, we fit the values from the grid using spline series (see Fig. \ref{fig:splineML}). Then, derivative is obtained from these continuous series (see Fig. \ref{fig:der_splineML}). It is important to notice the following two assumptions. First, I assume that the luminosity distributions in $J,H$ and $K_s$ bands are independent between them, and then I obtain a mass distribution for each one of them. Second, I assume that the transformation from luminosities to masses does not have any associated uncertainty. These assumptions must be taken since the isochrone models do not provide neither uncertainties nor a way to incorporate correlations between the mass distributions of distinct photometric bands. 
-
-PERFORM ANDERSON DARLING TEST TO COMPARE HOW DIFFERENT ARE THE LUMINOSITY DISTRIBUTIONS OF BOUY AND BHM.
 
 Figure \ref{fig:splineML} shows the spline fit to the mass-luminosity relations of the BT-Settl absolute $J,H$ and $K_s$ magnitudes (black points) as a function of the mass. Figure \ref{fig:der_splineML} shows the derivative of mass-luminosity relation. The grey shaded areas represent the incompleteness regions of the \gls{dance} survey (see previous section).
 
