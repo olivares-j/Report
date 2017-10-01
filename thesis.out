@@ -14,28 +14,29 @@
 \BOOKMARK [1][-]{section.2.5}{Luminosity Distribution}{chapter.2}% 14
 \BOOKMARK [1][-]{section.2.6}{Mass Distribution}{chapter.2}% 15
 \BOOKMARK [1][-]{section.2.7}{The Pleiades DANCe DR2}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.8}{The Tycho+DANCe candidate members}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{Bayesian formalism}{}% 18
-\BOOKMARK [1][-]{section.3.1}{Introduction to probability theory.}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.2}{Bayesian Hierarchical Models}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.3}{The BHM for the Pleiades DANCe data set}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.4}{Priors}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.5}{Sampling the posterior distribution}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.6}{Codes}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.7}{The methodology for the analysis of the PSD}{chapter.3}% 25
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 26
-\BOOKMARK [1][-]{section.4.1}{Performance of the classifier}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.2}{Comparison with the literature}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.3}{The statistical distributions of the Pleiades.}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.4}{Updating the prior knowledge}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.5}{Projected spatial distribution}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.6}{Proper motions distribution}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.7}{Luminosity distribution}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.8}{Mass distribution}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.9}{The mass distribution on time}{chapter.4}% 35
-\BOOKMARK [0][-]{chapter.5}{Conclusions and future work}{}% 36
-\BOOKMARK [1][-]{section.5.1}{Current issues and future improvements}{chapter.5}% 37
-\BOOKMARK [0][-]{appendix.A}{Effects of truncation on King's profile }{}% 38
-\BOOKMARK [0][-]{appendix.B}{Posterior distributions for the Projected Spatial Distribution }{}% 39
-\BOOKMARK [0][-]{figure.caption.132}{Bibliography}{}% 40
-\BOOKMARK [0][-]{section*.134}{Acronyms}{}% 41
+\BOOKMARK [1][-]{section.2.8}{The Restricted DANCe Data Release 2 \(RDDR2\)}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.9}{The Tycho+DANCe candidate members}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Bayesian formalism}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Introduction to probability theory.}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Bayesian Hierarchical Models}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.3}{The BHM for the Pleiades DANCe data set}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.4}{Priors}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.5}{Sampling the posterior distribution}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.6}{Codes}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.7}{The methodology for the analysis of the PSD}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Performance of the classifier}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Comparison with the literature}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{The statistical distributions of the Pleiades.}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{Updating the prior knowledge}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.5}{Projected spatial distribution}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.6}{Proper motions distribution}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.7}{Luminosity distribution}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.8}{Mass distribution}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.9}{The mass distribution on time}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Conclusions and future work}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Current issues and future improvements}{chapter.5}% 38
+\BOOKMARK [0][-]{appendix.A}{Effects of truncation on King's profile }{}% 39
+\BOOKMARK [0][-]{appendix.B}{Posterior distributions for the Projected Spatial Distribution }{}% 40
+\BOOKMARK [0][-]{figure.caption.132}{Bibliography}{}% 41
+\BOOKMARK [0][-]{section*.134}{Acronyms}{}% 42
