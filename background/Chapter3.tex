@@ -304,35 +304,38 @@ To exemplify the use of \glspl{pgm}, Figure \ref{fig:pgmGMM} shows the \gls{pgm}
 
 \section{The BHM for the Pleiades DANCe data set}
 \label{sect:datamodelling}
-Creating a model is a complex task. As previously mentioned, a model is a mathematical representation of the knowledge about a certain phenomenon. Thus, a model demands the gathering and arranging of the \emph{a priori} knowledge of the phenomenon as well as the gathering process of its associated data set. 
+Creating a model is a complex task. As previously mentioned, a model is a mathematical representation of the knowledge about a certain phenomenon. Thus, constructing a model demands gathering and arranging the \emph{a priori} knowledge of the phenomenon. However, the model is not a isolated entity, in the sense that having a model alone, besides its pure mathematical interest, is almost useless without a data set into which apply it. The data set and the model conform an entity able to produce knowledge, this entity is the likelihood. For this knowledge to be accurate the likelihood must incorporate the information of the data collection mechanism, particularly if the latter is non-ignorable.
 
-The current understanding of the Pleiades cluster together with the description of the \gls{ddr2} data set are summarised in Chapter \ref{chap:pleiades}. 
+The \emph{a priori} knowledge of the Pleiades cluster together with the description of the data collection mechanism of the \gls{ddr2} data set are summarised in Chapter \ref{chap:pleiades}. Here, I describe how this information is assembled to create the \gls{bhm}.
 
 Once the \emph{a priori} knowledge has bee gathered, the creation of the model becomes an iterative and continuous process. Assembling the knowledge into a coherent system demands continuous iterations of decision making, test, and analysis of preliminary results. This Section provides a snapshot of this process: the state of the model once the article \citet{Olivares2017} was submitted.
 
-The following is a brief description of the \gls{bhm}. Probabilistic models (likelihoods) are created for the field and cluster populations. These models, together with the data set, are used to infer both the posterior distributions of the cluster parameters, and the membership probabilities of objects in the data set. Both cluster and field models are assumed to be independent in photometry and proper motions. The proper motions and photometric elements of the field model are described using \glspl{gmm}. The cluster population is additionally model as the joint population of single stars and \gls{emb}. Both cluster proper motions models, for singles and \gls{emb}, are described using \gls{gmm}. The photometric models of both single and \gls{emb} consist of multivariate normal distributions whose means and covariances are parameters of the model. The means of these multivariate normal distributions are parameterised by means of spline functions. In turn, these are parametrised by the \emph{true} \gls{ci} of each star, which is marginalised using the \emph{true} colour distribution. Later, this \emph{true} \gls{ci} distribution will be used, in combination with the splines parameters, to derive the distributions of the magnitudes, and from them the luminosity distributions. 
+The following is a brief description of the \gls{bhm}. Probabilistic models (likelihoods) are created for the field and cluster populations. These models, together with the data set, are used to infer both the posterior distributions of the cluster parameters, and the cluster membership probabilities of objects in the data set. Both cluster and field models are assumed to be independent in photometry and proper motions. The proper motions and photometric elements of the field model are described using \glspl{gmm}. The cluster population is additionally model as the joint population of single stars and \gls{emb}. Both cluster proper motions models, for singles and \gls{emb}, are described using \gls{gmm}. The photometric models of both single and \gls{emb} consist of multivariate normal distributions whose means and covariances are parameters of the model. The means of these multivariate normal distributions are parameterised by means of spline functions. In turn, these are parametrised by the \emph{true} \gls{ci} of each star, which is marginalised using the \emph{true} colour distribution. Later, this \emph{true} \gls{ci} distribution will be used, in combination with the splines parameters, to derive the distributions of the magnitudes, and from them the luminosity distributions. 
 
-The details are explained in the following Sections. First, Section \ref{sect:missing}, explains the statistical procedure to deal with one of the crucial aspects of the \gls{ddr2} data set: objects with missing values in their measurement vector. Later, Section \ref{sect:generative-model} provides details of how the relevant knowledge about the Pleiades cluster and field populations are embedded in the generative model of the data. Finally, Sections \ref{sect:field_population} and \ref{subsect:cluster} deal with the explanation of the field and cluster model, respectively.
+The details are explained in the following Sections. First, Section \ref{sect:missing}, explains the statistical procedure to deal with one of the crucial aspects of the \gls{ddr2} data set: the missing information. Later, Section \ref{sect:generative-model} provides details of how the relevant knowledge about the Pleiades cluster and field populations are embedded in the generative model of the data. Finally, Sections \ref{sect:field_population} and \ref{subsect:cluster} deal with the explanation of the field and cluster model, respectively.
 
-\subsection{Treatment of objects with missing values}
+\subsection{Treatment of missing information}
 \label{sect:missing}
-A missing values refer to a non-measured or non-available value in the vector of measurements of an object. It can arise due to different statistical or physical processes. 
 
-From the physical perspective, missing values occur due to faint or bright sources that produce counts values outside the dynamical range of the detector. They can also emerge due to detector malfunctions, e.g. electronic failures, or to random effects, e.g. cosmic rays. 
+Missing information refers to at least two forms of absent values. In one hand, there are the data completely lost and from which the data set contains no information at all (except perhaps for the number of lost objects). On the other hand, there are the data that has been partially observed, and thus contains missing entries in some of its observables, but not in all of them.
 
-From the statistical perspective, it is important to know if their origin is deterministic or stochastic. In the former, they occur only above or below a certain hard limit, while in the latter, they follow a probability distribution. If its origin is deterministic, there are two possible scenarios: censoring and truncation. 
+A missing entry or missing value refers to a non-measured or non-available value in the vector of measurements of an object. It can arise due to different statistical or physical processes. 
+
+From the physical perspective, missing values occur due to faint or bright sources that produce counts values outside the dynamical range of the detector. They can also emerge due to detector malfunctions (e.g. electronic failures), or to random effects (e.g. cosmic rays).
+
+From the statistical perspective, it is important to know if the origin of the missing information, called the missing process, is deterministic or stochastic. In the former, they occur only above or below a certain hard limit, while in the latter, they follow a probability distribution. If its origin is deterministic, there are two possible scenarios: censoring and truncation. 
 
 Truncation occurs when the data set contains measures of the population but until a certain limit. All information of the population above this limit is lost. Thus, the data set does not contain records, neither of the measured value nor of the number of measurements, for objects whose measured quantity lies outside the truncation limits.  On the other hand, censoring happens when the data set contains only partial information about the actual value of the measured quantity. This information is the number of objects with missing values and the threshold limit upon which they appear. Basically, censoring happens when the value lies outside the upper or lower limits of the measuring instrument, and the number of these objects become the only available record.
 
-In the \gls{ddr2}, the proper motions are truncated to lay within the limits of -100 mas yr$^-1$ and 100 mas yr$^-1$ in both R.A. and Dec., see Section \ref{sect:DDR2}. However, due to its heterogenous origin, it does not posses unique truncation or censoring limits in its photometry.  Although these limits could also be inferred from the data, the large number of \gls{ddr2} sources (not just surveys, but instruments and detectors) prohibits this task. 
+In the \gls{ddr2}, the proper motions are truncated to lay within the limits of -100 mas yr$^{-1}$ and 100 mas yr$^{-1}$ in both R.A. and Dec., see Section \ref{sect:DR2}. However, due to its heterogenous origin, it does not posses unique truncation or censoring limits in its photometry.  Although these limits could also be inferred from the data, the large number of \gls{ddr2} sources (not just surveys, but instruments and detectors) prohibits this task. 
 
-To account for missing values the likelihood of the data must be modified. In truncation, it is renormalised to integrate to one within the observed limits, while in censoring this renormalisation account for the number of censored data. 
+To account for the missing information the likelihood of the data must be modified. In truncation, the likelihood is renormalised to integrate to one within the observed limits, while in censoring this renormalisation account for the number of censored data. However, if the missing process is stochastic a more detailed treatment is needed. 
 
-However,  in the \gls{ddr2} missing values not only occur because of censoring or truncation.  Other sources of missing values include but are not restricted to cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures. The statistical treatment of missing values originating from each of these sources lies beyond the scope of this work. 
+However, in the \gls{ddr2} missing values not only occur because of censoring or truncation.  Other sources of missing values include but are not restricted to cosmic rays, hot pixels, halos of bright stars, diffraction patterns and cross-matching failures. The statistical treatment of missing values originating from each of these sources lies beyond the scope of this work. 
 
-In terms of probability, there is no distinction between missing values and parameters. Therefore, when computing the likelihood $p(\mathbf{d}|\boldsymbol{\theta})$, where $\mathbf{d}$ is the datum with a missing entry, and $\boldsymbol{\theta}$ is the set of likelihood parameters, we can marginalise the missing values as we do with any other nuisance parameter: with the aid of a prior. In this case, the prior sets the probability of finding a missing value within its support. This prior probability can also be conditioned on extra information that may or not be available. For example, it can be conditioned on other observations (usually called covariates like the value of proper motions or sky position), in the value of the observed (non-missing) entries $\mathbf{d}_{obs}$, or in parameters of the missing data collection mechanism, which can also be inferred from the data in hierarchical fashion.
+In terms of probability, there is no distinction between missing values and parameters. Therefore, when computing the likelihood $p(\mathbf{d}|\boldsymbol{\theta})$, where $\mathbf{d}$ is the datum with a missing entry, and $\boldsymbol{\theta}$ is the set of likelihood parameters, we can marginalise the missing values as we do with any other nuisance parameter: with the aid of a prior. In this case, the prior sets the probability of finding a missing value within the domain of the observable. This prior probability can also be conditioned on extra information that may or not be available. For example, it can be conditioned on other observations (usually called covariates, e.g. the proper motions or sky positions), in the value of the observed (non-missing) entries $\mathbf{d}_{obs}$, or in parameters of the missing data collection mechanism, which can also be inferred from the data in hierarchical fashion.
 
-The interested reader can find, in Chapter 8 of \citet{Gelman2013}, a detailed description of the variety of schemes to account for the data collection mechanism, including the special cases of censoring and truncation. In general, the missing data mechanism can be accounted for by expressing the missing values entries with index $I$ (usually a zeros and ones matrix, with ones in the missing entries) and modifying the likelihood to account for the missing information.
+The interested reader can find, in Chapter 8 of \citet{Gelman2013}, a detailed description of the variety of schemes to account for the data collection mechanism, including the special cases of censoring and truncation. In general, the missing data mechanism can be accounted for by expressing the missing values entries with index $I$ (a matrix of dimensions equal to those of the data, with ones in the entries corresponding to the observed entries in the data and zeros in the missing ones) and modifying the likelihood to account for the missing information.
 
 The likelihood of the complete datum, which comprises not just the observed and missing datum $\mathbf{d}=\{\mathbf{d}_{obs},\mathbf{d}_{mis}\}$, but also the index $I$, conditioned on the model parameters $\boldsymbol{\theta}$, is
 
@@ -348,91 +351,132 @@ p(\mathbf{d}_{obs},I|\boldsymbol{\theta})=\int p(\mathbf{d}|\boldsymbol{\theta})
 \end{equation}
 where the missing values have been marginalised with the aid the prior $p(I|\mathbf{d},\boldsymbol{\theta})$. 
 
-In the following, whenever missing values appear in the likelihood functions, they will be marginalised using the previous equation.
-Furthermore, I assume that the probability $p(I|\mathbf{d})$ is uniform. This assumption is called \emph{ignorability} because the result of it is that $p(\mathbf{d}_{obs},I|\boldsymbol{\theta})= p(\mathbf{d}_{obs}|\boldsymbol{\theta})$, which is equivalent to ignores the missing data mechanism.  Although I acknowledge that this assumption is incorrect (missing values are most probable at the faint photometric ends, see Section \ref{sect:DR2}), I am obliged to assume it because of the following reasons.
+The probability $p(I|\mathbf{d})$ can be assumed to be uniform, which results in what is called the \emph{ignorability} of the data collection mechanism. The result of this assumption is that $p(\mathbf{d}_{obs},I|\boldsymbol{\theta})= p(\mathbf{d}_{obs}|\boldsymbol{\theta})$, which is equivalent to ignore the missing mechanism. This assumption is incorrect because, as shown in Section \ref{sect:DR2}, missing values are most probable at the faint photometric ends.
 
-%Because missing values arise not only due to censoring but from several other sources, many of them unknown, I assume that the missing data collection mechanism can be ignored, which essentially is the same as adopting a uniform prior for  $p(I|\mathbf{d})$. Thus 
-%\begin{equation}
-%p(\mathbf{d}_{obs}|\boldsymbol{\theta})=\int p(\mathbf{d}|\boldsymbol{\theta})\mathrm{d}\mathbf{d}_{mis}. \nonumber
-%\end{equation}
-%This assumption is called \emph{ignorability} of the data collection mechanism \footnote{
-%Following \citet{Gelman2013} two conditions are sufficient to ensure ignorability.
-%
-%\emph{Distinct parameters} requires independence between the model parameters $\theta$ and the missing data process parameters $\phi$. This means
-%\begin{equation}
-%p(\phi|\theta)=p(\phi). \nonumber
-%\end{equation}
-%\emph{Missing at random} requires that the probability of having a missing value only depends in the observed values. This is
-%\begin{equation}
-%p(I|y,\phi)=p(I|y_{obs},\phi), \nonumber
-%\end{equation}
-%Then, the joint posterior distribution of the model and missing mechanism parameters,
-%\begin{align}
-%p(\theta,\phi|y_{obs},I) \propto p(\theta,\phi) p(y_{obs},I|\theta,\phi) =p(\theta,\phi)\int p(y,I|\theta,\phi)\mathrm{d} y_{mis}=p(\theta,\phi)\int p(I|y,\phi)p(y|\theta) \mathrm{d} y_{mis}\nonumber
-%\end{align}
-%marginalised over $\phi$, 
-%\begin{align}
-%p(\theta|y_{obs},I)=p(\theta)\int \int p(\phi|\theta) p(I|y,\phi)p(y|\theta) \mathrm{d} y_{mis} \mathrm{d}\phi, \nonumber
-%\end{align}
-%and using the previous conditions, results in 
-%\begin{align}
-%p(\theta|y_{obs},I)=p(\theta)\int \int p(\phi) p(I|y_{obs},\phi)p(y|\theta) \mathrm{d} y_{mis} \mathrm{d}\phi =p(\theta)\int p(y|\theta)\mathrm{d} y_{mis}=p(\theta|y_{obs}).\end{align}
-%Thus, proving the ignorability of the missing data mechanism.
-%}.
+The probability $p(I|\mathbf{d},\boldsymbol{\theta})$ is formally not known because \gls{ddr2} is a compilation of data from a variety of surveys. Thus the data collection mechanism is neither homogeneous nor totally understood\footnote{ The DANCe team is currently working on the assessing of the missingness process. In particular, we are interested in the detection probability as a function of signal-to-noise and sky position. The latter is of paramount importance in the vicinity of bright sources where halos and artefacts have the largest impact.}. In spite of that, it can also be assumed that the collection mechanism depends only on the observed values, $\mathbf{d}_{obs}$. Such assumption is called \emph{missing at random} \cite[][p. 450]{Gelman2013} because the distribution of the missing-data mechanism does not depend on the missing values. This assumption is still incorrect because, as shown in Section \ref{sect:DR2},  the probability of detecting an object depends on its brightness. However, under this assumption, $p(I|\mathbf{d},\boldsymbol{\theta})=p(I|\mathbf{d}_{obs})$. Thus, Equation \ref{eq:marginalmis} reduces to,
+
+\begin{align}
+\label{eq:MAR}
+p(\mathbf{d}_{obs},I|\boldsymbol{\theta})&=\int p(\mathbf{d}|\boldsymbol{\theta})\cdot p(I|\mathbf{d}_{obs})\mathrm{d}\mathbf{d}_{mis}\nonumber \\
+&=p(I|\mathbf{d}_{obs})\cdot \int p(\mathbf{d}_{mis},\mathbf{d}_{obs},|\boldsymbol{\theta})\mathrm{d}\mathbf{d}_{mis}\nonumber\\
+&=p(I|\mathbf{d}_{obs})\cdot p(\mathbf{d}_{obs}|\boldsymbol{\theta}).
+\end{align}
+
+This approach is similar to the use of the so called \emph{selection function} \cite[see for example][]{2013SADM....6...15A}. Indeed, the probability $p(I|\mathbf{d}_{obs})$, is the probability of including the object with observables $\mathbf{d}_{obs}$ in the data set under analysis. Thus we can call it  \emph{selection probability}.
+
+As kindly suggested by Stefano Andreon (one of the referees of this work), another possibility to compute the likelihood function based on the observed data is given by Equation 30 of \citet{2013SADM....6...15A}. In the latter,
+
+\begin{equation}
+\label{eq:selectionfunction}
+p(y_i^{obs}|I_i = 1,y_i,\theta)=\frac{f(I_i=1|y_i)\cdot p(y_i^{obs}|y_i,\theta)}{\int f(I_i=1|z)\cdot p(z|y_i,\theta),\mathrm{d}z}
+\end{equation}
+
+where $y_i$ and $y_i^{obs}$ are the true and observed values, respectively, $f(I_i=1|y_i)$ is the \emph{selection function}, and $p(y_i^{obs}|y_i,\theta)$ is the likelihood of the observed data given the true data and the parameters $\theta$. 
+
+However, in the \gls{bhm} the previous approach can not be used because of the following reasons. First, the \gls{rdr2} has a \emph{selection function} which is almost impossible to estimate given that objects are selected based on their membership probability to the cluster. Even if a simpler selection function could be used instead (like cuts in the observable space), the resulting one will be the \emph{selection function} conditioned on the observed values, and not in the true ones, as required by Eq. \ref{eq:selectionfunction}. Furthermore, this approach is computationally expensive due to the integral in the denominator of Eq. \ref{eq:selectionfunction}, and using it will result in an even larger computing time.
+
+As it will be shown in the next section, the likelihood of the data (Eq. \ref{eq:marginalmis}) will be partitioned in the likelihoods of the cluster and field (Eq. \ref{eq:genmod}). Since the objects in the \gls{rdr2} were selected based on their cluster membership probability, then, under the assumption of \emph{missing at random}, the cluster \emph{selection probability} is $p(I|\mathbf{d}_{obs})=1 - 10^{-11}$, where $10^{-11}$ is the probability of leaving one cluster member out of the \gls{rdr2} (see Section \ref{sect:RDR2}). Therefore, we can safely assume that the cluster \emph{selection probability} is one. Thus from Eq. \ref{eq:MAR}, $p(\mathbf{d}_{obs},I|\boldsymbol{\theta})=p(\mathbf{d}_{obs}|\boldsymbol{\theta})$.
 
 
-%I decided to ignore the data collection mechanism for the following reasons.
-First, the $p(I|\mathbf{d},\boldsymbol{\theta})$ is not known. The \gls{ddr2} is a compilation of data from a variety of surveys, thus the data collection mechanism in neither homogeneous not (currently\footnote{ The DANCe team is currently working on the assessing of the missingness process. In particular,  we are interested in the detection probability as a function of signal-to-noise and sky position. The latter is of paramount importance in the vicinity of bright sources where halos and artefacts have the largest impact.}) totally understood. 
 
-Second, even if a more elaborate and accurate probability $p(I|\mathbf{d},\boldsymbol{\theta})$ would be available, the current computational capabilities will not allow to numerically evaluate the integral of Eq. \ref{eq:marginalmis}. The use of a uniform probability enable us to analytically evaluate this integral thus avoiding the high computational burden of computing it for each object and missing value in the data set and at each step in the MCMC chain.
+Summarising, in the treatment of missing values I make the following assumptions.
 
-Since this assumption is not correct, it inevitably results in biased estimators of the true population parameters. In the following Section I quantify this bias.
+\begin{itemize}
+\item The cluster data collection mechanism is \emph{missing at random} with \emph{selection probability} $p(I|\mathbf{d}_{obs})=1$.
+\item The field data collection mechanism is \emph{ignorable} with $p(I|\mathbf{d})$  uniform.
+\end{itemize}
+
+This assumptions, although incorrect, are taken because of the following reasons. 
+
+First, the $p(I|\mathbf{d},\boldsymbol{\theta})$ for the formal treatment of missing values in Eq. \ref{eq:marginalmis} is not known.
+
+Second, even if the probability $p(I|\mathbf{d},\boldsymbol{\theta})$ would be available (or an approximation of it), the current computational capabilities will not allow to numerically evaluate the integral of Eq. \ref{eq:marginalmis}. The use of a uniform probability enable us to analytically evaluate this integral thus avoiding the high computational burden of computing it for each object and missing value in the data set and at each step in the MCMC chain.
+
+Therefore, although the \emph{ignorability} assumption is not correct, it currently provides the simplest and straight forward option to perform the expensive integral of Eq. \ref{eq:marginalmis}. Since this assumption is incorrect, and therefore results in biased estimators of the true population parameters, in the following section I quantify this biases.
 
 \subsubsection{Validity of the \emph{ignorability} assumption.}
 \label{sect:ignorability}
 
-In this Section, I present the quantification of the bias introduced by assuming the \emph{ignorability} of the missing-value mechanism. In addition, I also quantify the bias introduced by assuming that the true population parameters can be recovered using only completely observed objects and discarding those with missing entries. I call the latter the \emph{naivety} assumption. Notice that these two assumptions will be undistinguishable in the absence of correlation amongst observables. 
+In this Section, I present the quantification of the bias introduced by assuming the \emph{ignorability} of the missing mechanism. In addition, I also quantify the bias introduced by assuming that the true population parameters can be recovered using only completely observed objects and discarding those with missing entries. The latter, which here I call the \emph{naivety} assumption, is common practice in the literature (at least in the works mentioned in Section \ref{sect:current_methodologies}. Notice that these two assumptions, \emph{naivety} and \emph{ignorability} are undistinguishable in the absence of correlations amongst observables. Therefore, the bias must be quantified in a data set with similar correlations to those in the \gls{rdr2}.
 
 To quantify the biases rendered by these assumptions, I proceed as follows.
 
-First, I assume to know the parameter values of the true population. I the parameter values of the \gls{gmm} describing the photometry of the field population contained in the \gls{rdr2} data set. In specific, I assume that these true parameter values are those inferred in Section \ref{sect:field_population}. 
+First, I assume to know the parameter values of the true population. Thus, I use the parameter values of the \gls{gmm} describing the photometry of the field population contained in the \gls{rdr2} data set. In specific, I assume that these true parameter values are those inferred in Section \ref{sect:field_population}. 
 
-Second, using these true parameter values I generate a synthetic data set of size equal to that of the \gls{rdr2}.
+Second, using these true parameter values I generate a synthetic data set with $10^4$ objects.
 
-Third, using the real data from the \gls{rdr2}, I mask as missing the photometric entries in the synthetic data. The masking procedure is the following.
-For each synthetic datum, I use the mask of missing entries of one of its closer neighbours in the real data set. Here, distance is measured in the euclidean sense. If I were to use the missing value mask of the nearest neighbour in the real data set, then I will obtain a biased sample in which objects with fully observed vectors will be underestimated. This is the inevitable consequence of  euclidean distances being measured in subspaces resulting from removing the dimensions of the missing entries. Since these distances are the smaller, or at most equal, to those measured in the complete space, the fully observed objects will be under represented.
+Third, using the real data from the \gls{rdr2}, I mask as missing entries the photometric entries in the synthetic data. The masking procedure is the following.
 
-The mask of missing entries is chosen from amongst the missing values of the closer neighbours in the available \glspl{cmd}: $\{K_s,J-K_s\},\{J,J-H\},\{K_s,H-K_s\},\{J,Y-J\},\{K_s,i-K_s\}$. These \glspl{cmd} comprise, in decreasing order, the bands and colours of the magnitudes with fewer missing values (see Table \ref{tab:DR2properties}).  The mask of missing entries is then chosen as follows. First, for each \glspl{cmd} subspace, I find the set of real objects that has fully observed entries, I call it $C_{or,i}$ and its fraction from the total, $f_r$. Then, I take a random sample from the synthetic data with size such that its fraction, $f_s$, equals $f_r$. For objects in this sample I assign the missing value pattern of the nearest neighbour in $C_{or,i}$. I repeat this procedure for the rest of the \glspl{cmd}. In this way, the synthetic data sets have fractions of objects with and without missing entries, similar to those of the objects in the real data set.
+Given that the $K_s$ photometric band is the most observed one in the \gls{rdr2}, I use it as covariate, and to obtain the probability of having a missing value. Thus,
+\begin{equation}
+p(I_x=0 | K_s)=\frac{p(K_s|I_x = 0)\cdot p(I_x=0)}{p(K_s)},\nonumber
+\end{equation}
+where $I_x=0$ stands for the probability that the photometric band $x$ which can be $\{i-K_s,Y,J,H\}$ is missing, $p(K_s|I_x = 0)$ is the probability of $K_s$ given that the band $x$ is missing, $p(K_s)$ is the probability of all observed values of $K_s$, and $p(I_x=0)$ is the fraction of objects with missing entries in the $x$ band. Then, I create a synthetic random matrix $R$ of size equal to that of the synthetic data. The entries in this matrix are drawn from a uniform probability distribution between zero and one. Then, objects in the synthetic data set are masked as missing if and only if 
+\begin{equation}
+\label{eq:mask_missing}
+ \left\{ \begin{array}{rcl}       R_{i,x} > p(I_x=0 | K_s) & \mbox{for} & x\in \{i-K_s,Y,J,H\} \\ 
+       R_{i,x} > p(I_x=0 ) & \mbox{for} & x =K_s \end{array}\right.
+\end{equation}
+with $p(I_{K_s}=0 )$ the fraction of objects with missing values in $K_s$. The latter assumes that missing values in $K_s$ are uniformly distributed.
 
-Thus, I now have three synthetic data sets. The original one, with completely observed entries, the one with missing values, and, the one resulting from taking only the completely observed objects from the one with missing values. To each of these data sets, I apply the \gls{gmm} algorithm (the one described in Section \ref{sec:codeGMM}) and recover the fractions, means and covariance matrices of the \gls{gmm}. I call these set of parameters original, ignorable, and naive, in accordance to the data set from which they were obtained.
+Thus, I now have three synthetic data sets. The original one, with completely observed entries (hereafter Complete), the one with missing values (hereafter Missing), and, the one resulting from taking only the completely observed objects from the one with missing values (hereafter Observed). Figure \ref{fig:ignorability_synthetic} shows the distribution of objects in these data sets as a function of the photometric magnitude for each magnitude. To each of these data sets, I apply the \gls{gmm} algorithm (the one described in Section \ref{sec:codeGMM}) and recover the fractions, means and covariance matrices of the \gls{gmm}. I call these set of parameters and the densities they produce Complete, Missing, and Observed, in accordance to the data set from which they were obtained.
 
-By means of these three set of parameters, I can quantify the bias induced by the \emph{ignorability} and \emph{naivety} assumptions. Furthermore, to minimise the effects of the sample size in the comparisons, instead of comparing the ignorable and naive set of parameters to the true parameters, I do use the original set of parameters. To quantify differences I use the absolute relative difference, defined as the absolute value of the relative difference between the ignorable and naive parameters to the original ones. Figure \ref{fig:ignorable_and_naive} shows the absolute relative differences in the projected densities (in the set of \glspl{cmd} used in this work) between the ignorable and naive \glspl{gmm}. As can be seen, the naive parameters return projected densities that over-estimate the density at the central parts, where $\gls{ci}\sim4$, whereas the ignorable parameters return densities similar to the original ones, except at the bright end, where it also over-estimate the original ones.
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[page=2,height=6cm]{background/Figures/Check_distributions.pdf}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=3,height=6cm]{background/Figures/Check_distributions.pdf}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=4,height=6cm]{background/Figures/Check_distributions.pdf}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=5,height=6cm]{background/Figures/Check_distributions.pdf}
+    \end{subfigure}
+\caption{Density distributions in $Y,J,H$ and $K_s$ bands of the synthetic objects in the Complete, Missing and, Observed data sets. See text.}
+\label{fig:ignorability_synthetic}
+\end{figure}
+
+By means of these three set of parameters, I can quantify the bias induced by the \emph{ignorability} and \emph{naivety} assumptions. The first is given by the Missing data set and parameters, while the later by the Observed data set and parameters. Furthermore, to minimise the effects of the sample size in the comparisons, instead of comparing the Missing and Observed set of parameters to the true parameters, I  use the Complete set of parameters. 
+
+I quantify differences by means of the Root Mean Square Deviation, which is defined as, 
+
+\begin{equation}
+RMSD = \sqrt{\frac{\sum_i^n(\frac{x_i-y_i}{y_i})^2}{n}}, \nonumber
+\end{equation}
+
+where $x_i$ is the density given by the Missing or Observed \glspl{gmm} and $y_i$ is the density given by the Complete \gls{gmm}. 
+
+The densities of the Complete, Missing and Observed \glspl{gmm} are evaluated in grids (with $n$ total points separated by 0.05 mag) in each of the $Y,J,H,K_s$ vs \gls{ci} \glspl{cmd}. The RMSDs are computed just for those points in the grids where the Complete density is higher than $10^{-3}$, which avoids the regions far from the cluster sequence where the density vanishes. Figure \ref{fig:ignorable_and_naive} shows the RMSDs of the Missing and Observed \glspl{gmm} compared to the Complete one. As can be seen, the Observed parameters return projected densities that are over-estimated in the central parts, particularly at $\gls{ci}\sim3.5$. On the other hand, the Missing parameters return densities similar to the original ones across the \gls{cmd}.
+
+The mean RMSD of the Observed  and Missing \glspl{gmm} in the four \glspl{cmd} are $0.78\pm0.38$ and $0.21\pm0.4$, respectively. Uncertainties are the standard deviation of the four RMSDs.
 
 \begin{figure}[ht!]
 \begin{center}
 \begin{subfigure}[t]{0.45\textwidth}
-\includegraphics[page=1,width=\textwidth]{./background/Figures/validationMissing.pdf}
-\end{subfigure}
-\begin{subfigure}[t]{0.45\textwidth}
 \includegraphics[page=2,width=\textwidth]{./background/Figures/validationMissing.pdf}
-\end{subfigure}
-\begin{subfigure}[t]{0.45\textwidth}
-\includegraphics[page=3,width=\textwidth]{./background/Figures/validationMissing.pdf}
 \end{subfigure}
 \begin{subfigure}[t]{0.45\textwidth}
 \includegraphics[page=4,width=\textwidth]{./background/Figures/validationMissing.pdf}
 \end{subfigure}
-\caption{Contours comparing the absolute relative difference between the naive and original models (left panels), and the ignorable and the original ones (right panels) for each of the \glspl{cmd} used in this work. The densities resulting of the original model are shown by means of the grey scale. Regions where the density of the original model goes below $10^{-4}$ are not shown.}
+\begin{subfigure}[t]{0.45\textwidth}
+\includegraphics[page=6,width=\textwidth]{./background/Figures/validationMissing.pdf}
+\end{subfigure}
+\begin{subfigure}[t]{0.45\textwidth}
+\includegraphics[page=8,width=\textwidth]{./background/Figures/validationMissing.pdf}
+\end{subfigure}
+\caption{Contours comparing the relative deviations of the Observed (left panels) and Missing (right panels) \glspl{gmm} when compared to the Complete \gls{gmm} (in grey scale at the background), projected in each of the \glspl{cmd} used in this work.  Regions where the density of the Complete model goes below $10^{-3}$ are not shown.}
 \label{fig:ignorable_and_naive}
 \end{center}
 \end{figure}
 
+In addition, the mean absolute relative difference of the Missing and Observed set of parameters when compared to the Complete ones are $0.42 \pm 2.5$ and $1.5 \pm 3.2$, respectively.  
 
-In addition, the mean absolute relative difference between the ignorable and naive, and the original, set of parameters are $0.19 \pm 0.2$ and $1.7 \pm 3.8$, respectively. These figures indicate that the ignorability assumption is indeed biased by a mean 19\%, whereas the naivety assumption is biased by an astonishing 170\%. 
+The previous values indicate that the Missing and Observed \gls{gmm} resulting from the \emph{ignorability} and \emph{naivety} assumptions, respectively are indeed biased. However, as this figures demonstrate, the bias introduced by the \emph{naivety} assumption is more than 3.5 times larger than that introduced by the \emph{ignorability} assumption. Furthermore, the \emph{naivety} reaches its maximum deviation at \gls{ci}= 3.5, exactly where the cluster reaches is peak density, which is not a coincidence. The cluster members have been thoroughly observed.
 
-The modelling of missing values could be greatly improved by removing the ignorability assumption and using correct prior probabilities for the missing-data mechanism. These priors are expected to be available in future releases of the DANCe survey, together with detailed information of the upper and lower limits of each missing value.
-
-Nevertheless, the \emph{ignorability} assumption (i.e. the uniform prior), which enable us to perform the marginalisation integral (Eq. \ref{eq:marginalmis}) analytically an thus reduce the computing time, renders better estimates of the true parameters than the naivety assumption used by the previous worksin the literature (see Section \ref{sect:current_methodologies}). 
+In spite of the incorrectness of the \emph{ignorability} assumption, which nevertheless enable us to analytically perform the marginalisation integral (Eq. \ref{eq:marginalmis}) and reduce the computing time, it renders better estimates of the true population parameters than the commonly spread naivety assumption used by the previous works from the literature (see Section \ref{sect:current_methodologies}). 
 
 \subsection{The generative model}
 \label{sect:generative-model}

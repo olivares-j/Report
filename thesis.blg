@@ -2,54 +2,52 @@ This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: aa.bst
-Reallocated field_info (elt_size=4) to 10175 items from 5000.
+Reallocated field_info (elt_size=4) to 10152 items from 5000.
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "Convers2008"
-Warning--I didn't find a database entry for "Convers2010"
 Warning--I didn't find a database entry for "corner"
 Warning--empty publisher in 1910pgcs.book.....B
 Warning--can't use both author and editor fields in 2013pss5.book..115K
 Warning--empty publisher in 2013pss5.book..115K
 Warning--empty publisher in Smart1977
-You've used 222 entries,
+You've used 223 entries,
             2947 wiz_defined-function locations,
-            2068 strings with 47139 characters,
-and the built_in function-call counts, 106953 in all, are:
-= -- 8915
-> -- 8094
-< -- 132
-+ -- 2716
-- -- 2470
-* -- 8796
-:= -- 19706
-add.period$ -- 222
-call.type$ -- 222
-change.case$ -- 1705
-chr.to.int$ -- 225
-cite$ -- 226
-duplicate$ -- 4222
-empty$ -- 6139
-format.name$ -- 3052
-if$ -- 21240
+            2070 strings with 47326 characters,
+and the built_in function-call counts, 107348 in all, are:
+= -- 8951
+> -- 8116
+< -- 133
++ -- 2723
+- -- 2476
+* -- 8825
+:= -- 19778
+add.period$ -- 223
+call.type$ -- 223
+change.case$ -- 1711
+chr.to.int$ -- 226
+cite$ -- 227
+duplicate$ -- 4241
+empty$ -- 6164
+format.name$ -- 3063
+if$ -- 21319
 int.to.chr$ -- 7
 int.to.str$ -- 1
-missing$ -- 198
-newline$ -- 670
-num.names$ -- 905
-pop$ -- 1788
+missing$ -- 199
+newline$ -- 673
+num.names$ -- 909
+pop$ -- 1795
 preamble$ -- 1
-purify$ -- 1698
+purify$ -- 1704
 quote$ -- 0
-skip$ -- 3708
+skip$ -- 3724
 stack$ -- 0
-substring$ -- 4627
+substring$ -- 4645
 swap$ -- 176
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1956
+type$ -- 1965
 warning$ -- 4
-while$ -- 897
+while$ -- 901
 width$ -- 0
-write$ -- 2219
-(There were 7 warnings)
+write$ -- 2229
+(There were 5 warnings)

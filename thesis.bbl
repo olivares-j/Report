@@ -1,4 +1,4 @@
-\begin{thebibliography}{222}
+\begin{thebibliography}{223}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -41,6 +41,10 @@ Akeret, J., Seehars, S., Amara, A., Refregier, A., \& Csillaghy, A. 2013,
 \bibitem[{{Anderes} {et~al.}(2015){Anderes}, {Wandelt}, \&
   {Lavaux}}]{Anderes2015}
 {Anderes}, E., {Wandelt}, B.~D., \& {Lavaux}, G. 2015, \apj, 808, 152
+
+\bibitem[{{Andreon} \& {Hurn}(2013)}]{2013SADM....6...15A}
+{Andreon}, S. \& {Hurn}, M. 2013, Statistical Analysis and Data Mining: The ASA
+  Data Science Journal, Vol.~9, Issue 1, p.~15-33, 6, 15
 
 \bibitem[{Andrieu {et~al.}(2003)Andrieu, de~Freitas, Doucet, \&
   Jordan}]{Andrieu2003}
@@ -122,7 +126,7 @@ Blackwell, T. \& Bentley, P. 2002, in Proceedeings of the 4th Annual Conference
   Publishers Inc.), 19--26
 
 \bibitem[{{Boss}(1910)}]{1910pgcs.book.....B}
-{Boss}, L. 1910, {Preliminary General Catalogue of 6188 stars for the eopoch
+{Boss}, L. 1910, {Preliminary General Catalogue of 6188 stars for the epoch
   1900}
 
 \bibitem[{{Bouy} {et~al.}(2013){Bouy}, {Bertin}, {Moraux}, {Cuillandre},
