@@ -284,8 +284,8 @@ Now, I present the results of the statistical distributions that describe the cl
 
 \begin{figure}[ht!]
     \centering
-      \includegraphics[page=1,width=\textwidth]{background/Figures/BHM/Color_members.pdf}
-\caption{\gls{kde} (Gaussian kernel with bandwidth equal to observed uncertainty) of the observed \glspl{ci} of the candidate members of the \gls{bhm} (black line) together with 100 samples from the posterior distribution of the parameters in the \emph{true} \gls{ci} distribution (orange lines). Also shown, the distribution of all \gls{bhm} candidate members (red line, objects with a missing \gls{ci} were imputed from the closest euclidean neighbour).}
+      \includegraphics[page=1,width=\textwidth]{background/Figures/BHM/membersModel.pdf}
+\caption{Posterior distribution of the \emph{true} \gls{ci} (orange lines, resulting from 100 samples of the posterior distributions of the parameters in the \gls{ci} \gls{gmm}). Also shown, the \gls{kde} (Gaussian kernel with bandwidth equal to observed uncertainty) for the observed \glspl{ci} of the candidate members in the \gls{hmps} (black line), and the prior distribution of the \emph{true} \gls{ci} \gls{gmm} (grey lines, resulting from 100 samples of the prior distributions of the parameters in the \gls{ci} \gls{gmm}).}
 \label{fig:CI_results}
 \end{figure}
 
@@ -303,11 +303,14 @@ Also, for the sake of completeness, in Fig. \ref{fig:correlations}, I depict the
 \end{center}
 \end{figure}
 
-\section{Updating the prior knowledge}
+\section{Updating the assumptions and prior knowledge}
 \label{sect:updating_priors}
 As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the statistics reported in Table \ref{tab:parameters}. These values indicate, for example, that the number of  \gls{gmm} modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian are both to near zero values. Probably, a better model would be that in which the parameters of these extra gaussian will not be part of the model. Ideally, I should choose between these two models based on the evidence they show (see Section \ref{sect:modelselection}). To my knowledge, the only reliable approach to compute the evidence of a model inferred using \gls{mcmc}, is by means of Nested Sampling (see Section \ref{sect:NestedSampling}). However, running the \gls{bhm} in the \emph{MultiNest} package lies beyond our current computational resources.
 
 Another example of inspection of the posterior is the following. In a past run of the \gls{bhm} on the \gls{rdr2}, I realised that the prior distribution for the parameter modelling field fraction was too narrow. Although the maximum of the posterior distribution was allowed by this prior (by definition), the prior density at this \gls{map} was negligible. Therefore, I updated the prior distribution to a distribution with a larger variance. Thus, I weaken the prior information.
+\subsection{Assumptions}
+
+Include section with newfield model.
 
 \section{Projected spatial distribution}
 \label{sect:PSDresults}
@@ -353,6 +356,39 @@ $\gtrsim$ 150 :1 & \emph{Strong}\\
   \end{table*}
 
 \subsection{Selection of models with radial symmetry} 
+
+The inferred posterior distributions of the parameters in our models with radial symmetry are shown in Fig. \ref{fig:PSDctr} by means of 100 samples randomly drawn, together with the \gls{map} value. For comparison, the data has been binned and is shown with poisson uncertainties.
+
+\begin {figure}
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Centre/EFF_11/EFF_fit.pdf}
+ \caption{EFF}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Centre/GDP_11/GDP_fit.pdf}
+ \caption{GDP}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Centre/GKing_11/GKing_fit.pdf}
+ \caption{GKing}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Centre/King_11/King_fit.pdf}
+ \caption{King}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Centre/OGKing_11/OGKing_fit.pdf}
+ \caption{OGKing}  
+    \end{subfigure}
+        \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Centre/RGDP_11/RGDP_fit.pdf}
+ \caption{RGDP}  
+    \end{subfigure}
+  \caption{Inferred density of the radially symmetric profiles shown by means of the \gls{map} value (red line) and samples from the posterior distribution (grey lines). 
+  For comparison the data has been binned with poissonian uncertainties (black dots).}
+\label{fig:PSDctr}
+\end {figure}
 
 The upper-left panel of Table \ref{tab:BFAll} summarises the evidences and Bayes
 factors obtained from our radially symmetric models. In addition, Table \ref{tab:MAPCtr}, shows the \gls{map}
@@ -416,6 +452,40 @@ deviations from radial symmetry in the form of elliptical density
 contours.
 
 \subsection{Selection of models with biaxial symmetry}
+
+The inferred posterior distributions of the parameters in our models with biaxial symmetry are shown in Fig. \ref{fig:PSDEll} by means of 100 samples randomly drawn, together with the \gls{map} value. For comparison, the data has been binned and is shown with poisson uncertainties.
+
+\begin {figure}
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Elliptic/EFF_11/EFF_fit.pdf}
+ \caption{EFF}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Elliptic/GDP_11/GDP_fit.pdf}
+ \caption{GDP}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Elliptic/GKing_11/GKing_fit.pdf}
+ \caption{GKing}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Elliptic/King_11/King_fit.pdf}
+ \caption{King}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Elliptic/OGKing_11/OGKing_fit.pdf}
+ \caption{OGKing}  
+    \end{subfigure}
+        \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Elliptic/RGDP_11/RGDP_fit.pdf}
+ \caption{RGDP}  
+    \end{subfigure}
+  \caption{Inferred density of the biaxially symmetric profiles shown by means of the \gls{map} value (red line) and samples from the posterior distribution (grey lines). 
+  For comparison the data has been binned with poissonian uncertainties (black dots).}
+\label{fig:PSDEll}
+\end {figure}
+
 The central panel of  Table \ref{tab:BFAll} contains the
 logarithm of the evidences and Bayes Factors of the biaxially symmetric models. The evidences follow a pattern similar to 
 that observed for the radially symmetric models, with the exception of the evidences against the \gls{gdp} model. We can conclude that there is
@@ -446,7 +516,71 @@ with the latter available only for the King's family of models.
 Table \ref{tab:MAPEll} shows the MAP estimate of the parameters in the models of this section, together with the mode of the distributions of ellipticities. Uncertainties for the latter are given in Appendix \ref{sect:app_biaxial}.
 
 We can observe that models that do not posses a tidal radius have similar $\epsilon_{rc}$ ellipticities with a mean value of $0.23\pm0.01$. This value is similar to the 0.17  found by \citep{Raboud1998}, who use a multicomponent analysis to derive the directions (although its value is not given) and the aspect ratio of the ellipse axes. However, it is very interesting to see that the models within King's family result in lower values of the ellipticity in the central region and larger values in the outer one. This result is expected from the interaction with the galactic potential and is predicted by the numerical simulations of open clusters \cite[see for example][]{1987MNRAS.224..193T}.
+
 \subsection{Selection of models with luminosity segregation}
+The inferred posterior distributions of the parameters in our models with biaxial symmetry and luminosity segregation are shown in Fig. \ref{fig:PSDSeg} by means of 100 samples randomly drawn, together with the \gls{map} value. For comparison, the data has been binned and is shown with poisson uncertainties. In addition, Fig. \ref{fig:Segregated} shows the density profiles of the luminosity segregated models, together with the J band data in three bins ($J < 12$, $12 \lesssim J \lesssim 15$, and $15 < J$). The three shown models have core radii as given by Eq. \ref{eq:rc_segregated}, in which the value of J band correspond to the mean of each bin.
+
+\begin {figure}
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Segregated/EFF_11/EFF_fit.pdf}
+ \caption{EFF}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Segregated/GDP_11/GDP_fit.pdf}
+ \caption{GDP}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Segregated/GKing_11/GKing_fit.pdf}
+ \caption{GKing}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Segregated/King_11/King_fit.pdf}
+ \caption{King}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Segregated/OGKing_11/OGKing_fit.pdf}
+ \caption{OGKing}  
+    \end{subfigure}
+        \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=2,width=\textwidth]{Analysis/Segregated/RGDP_11/RGDP_fit.pdf}
+ \caption{RGDP}  
+    \end{subfigure}
+  \caption{Inferred density of the biaxially symmetric and luminosity segregated profiles shown by means of the \gls{map} value (red line) and samples from the posterior distribution (grey lines). 
+  For comparison the data has been binned with poissonian uncertainties (black dots).}
+\label{fig:PSDSeg}
+\end {figure}
+
+\begin {figure}
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Segregated/EFF_11/EFF_fit.pdf}
+ \caption{EFF}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Segregated/GDP_11/GDP_fit.pdf}
+ \caption{GDP}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Segregated/GKing_11/GKing_fit.pdf}
+ \caption{GKing}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Segregated/King_11/King_fit.pdf}
+ \caption{King}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Segregated/OGKing_11/OGKing_fit.pdf}
+ \caption{OGKing}  
+    \end{subfigure}
+        \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Segregated/RGDP_11/RGDP_fit.pdf}
+ \caption{RGDP}  
+    \end{subfigure}
+  \caption{Density profiles of the data binned in J band ($J < 12$, green dots, $12 \lesssim J \lesssim 15$ cyan dots, and $15 < J$ magenta dots) together with the density models with parameters at the \gls{map} values. The core radii $r_c$ has been increased according to Eq. \ref{eq:rc_segregated}.}
+\label{fig:Segregated}
+\end {figure}
+
 The lower-right panel of Table \ref{tab:BFAll} summarise the evidences and Bayes
 Factors of models with luminosity segregation. Also, Table \ref{tab:MAPSg} shows the MAP of the inferred distributions for this set of models, together with the derived ellipticities.
 
@@ -577,7 +711,7 @@ As it has been discussed, the model of \citet{Bouy2015} is constructed only base
 \begin{figure}[htbp]
 \begin{center}
 \resizebox{\hsize}{!}{\includegraphics[width=0.8\textwidth]{background/Figures/BHM/absolute_JHK-log.pdf}}
-\caption{Luminosity distribution of $J,H,K_s$ bands derived from the \gls{bhm} (orange spaghetti lines). Also shown: the regions of incompleteness, and, the luminosity distributions computed from: the candidate members of \citet{Bouy2015} (dot-dashed blue line), and our \gls{hmps} of candidate members, ($p_{84\%}>p_t$, dashed black line). Reproduced from Figure 10 of \citet{Olivares2017},\textit{\usebibentry{Olivares2017}{Title}}, \usebibentry{Olivares2017}{Volume} \usebibentry{Olivares2017}{Volume}.}
+\caption{Luminosity distribution of $J,H,K_s$ bands derived from the \gls{bhm} (orange spaghetti lines). Also shown: the regions of incompleteness, the luminosity distributions computed from: the candidate members of \citet{Bouy2015} (dot-dashed blue line), and our \gls{hmps} of candidate members, ($p_{84\%}>p_t$, dashed black line), and the prior for the true \gls{ci}, which was transformed in the same way as the posterior \gls{ci} distribution.}
 \label{fig:Luminosities}.
 \end{center}
 \end{figure}
@@ -589,9 +723,34 @@ In this Section I describe the procedure to transform the luminosities distribut
 
 \subsection{The mass-luminosity relation}
 \label{sect:mass-luminosity}
-The mass-luminosity relation is the non linear transformation that enables us to obtain the mass distribution from the luminosity distributions. Given the values of the upper limits of the luminosity distributions (the faint ends), the mass-luminosity relation relies entirely on the current models of stellar atmospheres. Among the different flavours of theoretical stellar evolution models in the literature (those from the Pisa, Padova, Trieste, Geneva, and Lyon research groups)  we choose the BT-Settl models of \citet{Allard2012}. These models go deeper into the lower masses reaching the planetary mass range thus allowing a complete coverage of our luminosity distributions. The rest of the models stay in the $0.1-10\,\mathrm{M_{\odot}}$ range, with the \emph{PARSEC} models being the ones reaching the $0.1\,\mathrm{M_{\odot}}$ limit \citep{Bressan2012}. 
+The mass-luminosity relation is the non linear transformation that enables us to obtain the mass distribution from the luminosity distributions. Given the values of the upper limits of the luminosity distributions (the faint ends), the mass-luminosity relation relies entirely on the current models of stellar atmospheres. Among the different flavours of theoretical stellar evolution models in the literature (those from the Pisa, Padova, Trieste, Geneva, and Lyon research groups)  we choose the BT-Settl models of \citet{Allard2012}. These models go deeper into the lower masses reaching the planetary mass range thus allowing a complete coverage of our luminosity distributions. The rest of the models stay in the $0.1-10\,\mathrm{M_{\odot}}$ range, with the \emph{PARSEC} models being the ones reaching the $0.1\,\mathrm{M_{\odot}}$ limit \citep{Bressan2012}.  Figure \ref{fig:BHM_vs_BT-Settl} compares the 
+BT-Settl models of \citet{Allard2012} to the \gls{rdr2} data set (top panels), and to the cluster sequence obtained by the \gls{bhm} and the \gls{hmps} of cluster candidate members (bottom panels). The BT-Settl model corresponds to the Pleiades isochrone (at a distance of 134 pc, with 120 \gls{myr} and solar metallicity, which are the canonical ones, see Section \ref{sect:generalities}) given by the CIFIST2011bc grid, with $J$ and $K_s$ bands in the \gls{2mass} Vega photometric system and the $i$ band in the Sloan AB system, which correspond to the ones used in the \gls{ddr2} data set (H. Bouy, private communication).
 
-From the BT-Settle grid I choose the CIFIST2011bc for the 2MASS AB photometric system, 120 \gls{myr} and solar metallicity. I choose this photometric system because it covers the dynamic range of the \gls{ddr2} survey. The age and metallicity values are the closest, within the grid, to the canonical ones (see Section \ref{sect:generalities}). This grid returns values of the luminosity for certain non uniformly distributed values of the mass. As shown in Eq. \ref{eq:transformdistribution}, the transformation of a probability distribution, in this case the luminosities, into the mass distribution is proportional to the derivative of the transformation, which must be continuous. To avoid the discontinuities in the derivatives produced by the grid, we fit the values from the grid using spline series (see Fig. \ref{fig:splineML}). Then, derivative is obtained from these continuous series (see Fig. \ref{fig:der_splineML}). It is important to notice the following two assumptions. First, I assume that the luminosity distributions in $J,H$ and $K_s$ bands are independent between them, and then I obtain a mass distribution for each one of them. Second, I assume that the transformation from luminosities to masses does not have any associated uncertainty. These assumptions must be taken since the isochrone models do not provide neither uncertainties nor a way to incorporate correlations between the mass distributions of distinct photometric bands. 
+Notice that the $i$ band photometry yielded by the BT-Settl model, contrary to the $J$ and $K_s$ ones, does not fit the observed data (solid lines in Fig. \ref{fig:BHM_vs_BT-Settl}). It must be shifted by 0.7 mag in order to be in accordance with the observed values (dashed lines in Fig. \ref{fig:BHM_vs_BT-Settl}). In a private communication with France Allard, she explained me that there was problem in the computation of some of the latest versions: a value from the earlier versions of \citet{1998A&A...337..403B} remained unaltered in the new versions. She assured me that they were working to solve that problem. This is probably the reason for the discrepant values returned by the Sloan AB system. However, since the the $J,H$ and $K_s$ bands are unaffected, this issue pose no problem for the further results of the present work. 
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+       \includegraphics[page=1,width=\textwidth]{background/Figures/BHM/BHM_vs_BT-Settl.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+     \includegraphics[page=2,width=\textwidth]{background/Figures/BHM/BHM_vs_BT-Settl.pdf}
+        \caption{}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.45\textwidth}
+       \includegraphics[page=4,width=\textwidth]{background/Figures/BHM/BHM_vs_BT-Settl.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+     \includegraphics[page=6,width=\textwidth]{background/Figures/BHM/BHM_vs_BT-Settl.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{Comparison between observations and models. Top panels: $J$ vs. $K_s$ and $i$ vs $K_s$ magnitude-magnitude diagrams showing the \gls{rdr2} objects (black dots), and the original (green solid lines) and shifted (green dashed lines) BT-Settl models. Bottom panels: $J$ vs $i-K_s$ and $K_s$ vs $i-K_s$ \glspl{cmd} showing the \gls{hmps} of candidate members and the original (green solid lines) and shifted (green dashed lines) BT-Settl models. See text for details.}
+\label{fig:BHM_vs_BT-Settl}
+\end{figure}
+
+The CIFIST2011bc grid returns values of the luminosity for certain non uniformly distributed values of the mass. As shown in Eq. \ref{eq:transformdistribution}, the transformation of a probability distribution, in this case the luminosities probability distributions, into the mass distribution is proportional to the derivative of the transformation, which must be continuous. To avoid the discontinuities in the derivatives produced by the grid, we fit the grid values by spline series (see Fig. \ref{fig:splineML}). Then, derivative is obtained from these continuous series (see Fig. \ref{fig:der_splineML}). It is important to notice the following two assumptions. First, I assume that the luminosity distributions in $J,H$ and $K_s$ bands are independent between them, and then I obtain a mass distribution for each one of them. Second, I assume that the transformation from luminosities to masses does not have any associated uncertainty. I must assume that because the isochrone models do not provide neither uncertainties nor a way to incorporate correlations between the mass distributions of distinct photometric bands. 
 
 Figure \ref{fig:splineML} shows the spline fit to the mass-luminosity relations of the BT-Settl absolute $J,H$ and $K_s$ magnitudes (black points) as a function of the mass. Figure \ref{fig:der_splineML} shows the derivative of mass-luminosity relation. The grey shaded areas represent the incompleteness regions of the \gls{dance} survey (see previous section).
 
@@ -620,7 +779,7 @@ The mass distribution is independently obtained for the $J,H,K_s$ luminosity dis
 \begin{figure}[htbp]
 \begin{center}
 \resizebox{\hsize}{!}{\includegraphics[width=\textwidth]{background/Figures/BHM/MassDistribution.pdf}}
-\caption{Normalised logarithmic \gls{pdsmd} in $J,H,K_s$ band. Also shown the completeness limits computed in previous section and transformed with the mass-luminosity relation.}
+\caption{Normalised logarithmic \gls{pdsmd} in $J,H,K_s$ band. Also shown the completeness limits computed in previous section and transformed with the mass-luminosity relation, and the prior distribution, which was transformed in the same way as the posterior distribution.}
 \label{fig:MassDistribution}
 \end{center}
 \end{figure}

@@ -207,25 +207,37 @@ Here, hypotheses can be identified with models. Thus, this principle tells us we
 
 When comparing a linear model to a quadratic one in which the constant term has been fixed, we see that they have the same number of free parameters, two, but clearly the second one has an extra fixed assumption. Therefore, choosing the model with fewer free parameters does not necessarily means choosing the model with the fewest assumptions.
 
-One of the great advantages of the Bayesian methodology is that it incorporates directly Ockham's principle. Suppose that we want to compare two models, $\mathcal{M}_1$ and $\mathcal{M}_2$, which we assume describe the data set, $\mathbf{D}$. Each model has prior probabilities, $p(\mathcal{M}_k)$ and likelihoods $p(\mathbf{D}|\mathcal{M}_k)$ (with $k=1,2$). Notice that now, I use Bayes' theorem for models and not for parameters within a model. So, the prior probabilities of the models reflect our beliefs about the fixed assumptions within each model. On the other hand, the likelihood of the data, given the model, is related to the parameters (the free assumptions) and their prior probabilities, both within a model. This likelihood of the data given the model corresponds to the \emph{evidence} of the model (Eq. \ref{eq:evidence}). This evidence, written in terms of the model parameters, $\boldsymbol{\theta}_k$, is now
+One of the great advantages of the Bayesian methodology is that it incorporates directly Ockham's principle. Suppose that we want to compare two models, $\mathcal{M}_1$ and $\mathcal{M}_2$, which we assume describe the data set, $\mathbf{D}$. Each model has prior \gls{pmf}\footnote{Since the number of models is in principle discrete, their probabilities do not define a continuous \gls{pdf}, but a discrete probability function which is called \gls{pmf}. Thus, the capital P is used to differentiate it from a \gls{pdf}.}, $P(\mathcal{M}_k)$, and likelihoods $p(\mathbf{D}|\mathcal{M}_k)$ (with $k=1,2$). Notice that now, I use Bayes' theorem for models and not for parameters within a model. So, the prior probabilities of the models reflect our beliefs about the fixed assumptions within each model. On the other hand, the likelihood of the data, given the model, is related to the parameters (the free assumptions) and their prior probabilities, both within a model. This likelihood of the data given the model corresponds to the \emph{evidence} of the model (Eq. \ref{eq:evidence}). This evidence, written in terms of the model parameters, $\boldsymbol{\theta}_k$, is now
 
  \begin{equation}
-p(\mathbf{D}|\mathcal{M}_k)=\int_{\boldsymbol{\theta}_k} p(\mathbf{D}|\boldsymbol{\theta}_k,\mathcal{M}_K)\cdot p(\boldsymbol{\theta}_k|\mathcal{M}_k)\cdot \mathrm{d}\boldsymbol{\theta}_k. \label{eq:evidence2}
+p(\mathbf{D}|\mathcal{M}_k)=\int_{\boldsymbol{\theta}_k} p(\mathbf{D}|\boldsymbol{\theta}_k,\mathcal{M}_k)\cdot p(\boldsymbol{\theta}_k|\mathcal{M}_k)\cdot \mathrm{d}\boldsymbol{\theta}_k. \label{eq:evidence2}
 \end{equation}
 Bayes' theorem applied to models, instead of individual parameters as illustrated above, tells us that
 \begin{equation}
-p(\mathcal{M}_k|\mathbf{D})=\frac{p(\mathbf{D}|\mathcal{M}_k)\cdot p(\mathcal{M}_k)}{p(\mathbf{D})},
+P(\mathcal{M}_k|\mathbf{D})=\frac{p(\mathbf{D}|\mathcal{M}_k)\cdot P(\mathcal{M}_k)}{p(\mathbf{D})},
 \end{equation}
-with $k=1,2$. Since there are only two models, their prior probabilities are related by $p(\mathcal{M}_1)= 1- p(\mathcal{M}_2)$. Therefore,
+with $k=1,2$. Notice that $P(\mathcal{M}_k|\mathbf{D})$ can be defined without problem because the joint probability $p(\mathcal{M}_k,\mathbf{D})$ is a generalised\footnote{The generalised \gls{pdf} of a mixed random variable is defined as,
+\begin{equation}
+f_X(x)=\sum_k a_k\cdot \delta (x- x_k) + g(x), \nonumber
+\end{equation}
+where $a_k = P(X = x_k)$, $\delta$ is the Dirac delta, and $g(x)$ is a continuous \gls{pdf}, with no Dirac deltas. By definition,
+
+\begin{equation}
+1=\int f_X(x) \mathrm{d}x=\sum_k a_k + \int g(x)\mathrm{d}x. \nonumber
+\end{equation}
+For further details see \url{https://www.probabilitycourse.com/chapter4/4_3_1_mixed.php}.
+} \gls{pdf}. 
+
+Since there are only two models, their prior probabilities are related by $P(\mathcal{M}_1)= 1- P(\mathcal{M}_2)$. Therefore,
  \begin{equation}
-p(\mathcal{M}_k|\mathbf{D})=\frac{p(\mathbf{D}|\mathcal{M}_k)\cdot p(\mathcal{M}_k)}{p(\mathbf{D}|\mathcal{M}_1)\cdot p(\mathcal{M}_1)+p(\mathbf{D}|\mathcal{M}_2)\cdot p(\mathcal{M}_2)}.
+P(\mathcal{M}_k|\mathbf{D})=\frac{p(\mathbf{D}|\mathcal{M}_k)\cdot P(\mathcal{M}_k)}{p(\mathbf{D}|\mathcal{M}_1)\cdot P(\mathcal{M}_1)+p(\mathbf{D}|\mathcal{M}_2)\cdot P(\mathcal{M}_2)}.
 \end{equation}
 From this last Equation, the ratio of the posterior distributions is:
 \begin{equation}
 \label{eq:modelselection}
-\frac{p(\mathcal{M}_1|\mathbf{D})}{p(\mathcal{M}_2|\mathbf{D})}=\frac{p(\mathbf{D}|\mathcal{M}_1)\cdot p(\mathcal{M}_1)}{p(\mathbf{D}|\mathcal{M}_2)\cdot p(\mathcal{M}_2)}.
+\frac{P(\mathcal{M}_1|\mathbf{D})}{P(\mathcal{M}_2|\mathbf{D})}=\frac{p(\mathbf{D}|\mathcal{M}_1)\cdot P(\mathcal{M}_1)}{p(\mathbf{D}|\mathcal{M}_2)\cdot P(\mathcal{M}_2)}.
 \end{equation}
-This ratio provides an objective measure of how better the model $\mathcal{M}_1$ is when compared to model $\mathcal{M}_2$, under the measure provided by the data $\mathbf{D}$ by means of the evidence. When both prior probabilities  $p(\mathcal{M}_1)$ and $p(\mathcal{M}_2)$ are set alike, the ratio of posteriors equals the ratio of likelihoods. This is known as the \emph{Bayes factor} \cite[for a similar derivation and some examples of its application see][]{Kaas1995}. 
+This ratio provides an objective measure of how better the model $\mathcal{M}_1$ is when compared to model $\mathcal{M}_2$, under the measure provided by the data $\mathbf{D}$ by means of the evidence. When both prior probabilities  $P(\mathcal{M}_1)$ and $P(\mathcal{M}_2)$ are set alike, the ratio of posteriors equals the ratio of likelihoods. This is known as the \emph{Bayes factor} \cite[for a similar derivation and some examples of its application see][]{Kaas1995}. 
 
 Even when the priors for the models are set alike, the evidences themselves (Eq. \ref{eq:evidence2}) embody Ockham's principle. The evidence is the integral, in parametric space, of the prior times the likelihood, with the likelihood acting as a weight to the priors.  Then, the larger the number of parameters (free assumptions) is, the greater the volume over which the integral must be carried on, and the most spread the prior probability gets. Thus, unless the likelihood increases as well, the evidence is smaller in models with larger number of parameters.
 
@@ -239,12 +251,10 @@ Bayes' theorem for this particular case is,
 
 \begin{equation}
 \label{eq:prob}
-p( \mathcal{M}_k | \mathbf{d}) =\frac{p(\mathbf{d}|\mathcal{M}_k)\cdot p(\mathcal{M}_k)}{\sum_{k=1}^2 p(\mathbf{d}|\mathcal{M}_k)\cdot p(\mathcal{M}_k)},
+P( \mathcal{M}_k | \mathbf{d}) =\frac{p(\mathbf{d}|\mathcal{M}_k)\cdot P(\mathcal{M}_k)}{\sum_{k=1}^2 p(\mathbf{d}|\mathcal{M}_k)\cdot P(\mathcal{M}_k)},
 \end{equation}
 
-where $p(\mathbf{d}|\mathcal{M}_k)$ is the likelihood of datum $\mathbf{d}$ and, $p(\mathcal{M}_k)$ is the prior probability of model $\mathcal{M}_k$.
-
-
+where $p(\mathbf{d}|\mathcal{M}_k)$ is the likelihood of datum $\mathbf{d}$ and, $p(\mathcal{M}_k)$ is the prior probability that object $\mathbf{d}$ was generated by model $\mathcal{M}_k$, with $\sum_{k=1}^2P( \mathcal{M}_k) =1$.
 
 \section{Bayesian Hierarchical Models}
 \label{sect:BHM}
@@ -414,8 +424,10 @@ p(I_x=0 | K_s)=\frac{p(K_s|I_x = 0)\cdot p(I_x=0)}{p(K_s)},\nonumber
 where $I_x=0$ stands for the probability that the photometric band $x$ which can be $\{i-K_s,Y,J,H\}$ is missing, $p(K_s|I_x = 0)$ is the probability of $K_s$ given that the band $x$ is missing, $p(K_s)$ is the probability of all observed values of $K_s$, and $p(I_x=0)$ is the fraction of objects with missing entries in the $x$ band. Then, I create a synthetic random matrix $R$ of size equal to that of the synthetic data. The entries in this matrix are drawn from a uniform probability distribution between zero and one. Then, objects in the synthetic data set are masked as missing if and only if 
 \begin{equation}
 \label{eq:mask_missing}
- \left\{ \begin{array}{rcl}       R_{i,x} > p(I_x=0 | K_s) & \mbox{for} & x\in \{i-K_s,Y,J,H\} \\ 
-       R_{i,x} > p(I_x=0 ) & \mbox{for} & x =K_s \end{array}\right.
+ \left\{ \begin{array}{rcl}
+       R_{i,x} > p(I_x=0 | K_s) & \mbox{for} & x\in \{i-K_s,Y,J,H\} \\ 
+       R_{i,x} > p(I_x=0 ) & \mbox{for} & x =K_s 
+\end{array}\right.
 \end{equation}
 with $p(I_{K_s}=0 )$ the fraction of objects with missing values in $K_s$. The latter assumes that missing values in $K_s$ are uniformly distributed.
 
@@ -516,6 +528,20 @@ p(\mathbf{d}_n | \pi,\boldsymbol{\theta}_c,\boldsymbol{\theta}_f,\mathbf{u}_n)=\
 
 where $\boldsymbol{\theta}_f$ and $\boldsymbol{\theta}_c$ indicate the cluster and field parameters, while $\mathbf{u}_n$ refers to the datum uncertainty. The probabilities $p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n)$ and $p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)$ are the field and cluster models, respectively. These models are explained in detail in the next two sections.
 
+The cluster membership probability of each object in our data set are computed from the elements in Eq. \ref{eq:genmod}, by means of Eq. \ref{eq:prob}. Thus, the cluster membership probability is given by,
+
+\begin{equation}
+\label{eq:prob_dist}
+p( \mathcal{M}_c | \mathbf{d}_n) =\frac{p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)\cdot (1-\pi)}{\pi \cdot p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n) + (1-\pi)\cdot p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)},
+\end{equation}
+In Eq. \ref{eq:prob}, the probabilities $P( \mathcal{M}_k | \mathbf{d})$ are \gls{pmf} because the probabilities $P( \mathcal{M}_k )$ are themselves \gls{pmf}. However, in Eq. \ref{eq:prob_dist}, by hierarchically setting the prior probabilities $\pi$ and $1-\pi$ as random variables drawn from a Dirichlet distribution $Dir(\boldsymbol{\alpha})$, then $p(\mathcal{M}_c | \mathbf{d}_n)$ also follows a probability distribution. To demonstrate this, let  $y= p( \mathcal{M}_c | \mathbf{d}_n)$, and 
+\begin{equation}
+g(\pi)= \frac{p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)\cdot (1-\pi)}{\pi \cdot p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n) + (1-\pi)\cdot p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)},\nonumber
+\end{equation}
+a transformation of $\pi$. Then, by definition $y \equiv g(\pi)$ and $y$ follows the distribution $y= g(Dir(\boldsymbol{\alpha}))$. Since, the parameter $\pi$ is also inferred from the data, then each cluster membership probability determined in this work is itself a \gls{pdf}. 
+
+
+
 In the following, I assume that the observed quantities result from the convolution of the model likelihood, given the \emph{true} quantities, with the uncertainty process (see Section \ref{sect:parametric_inference}). The latter could be different for each object, thus resulting in different individual uncertainties. Thus, the model allows heteroscedatic uncertainties. Although these uncertainties are not assumed to have the same values, I assume that tall of them are multivariate normal.  This assumption is standard practice and is also supported by the large and heterogeneous origins of the \gls{ddr2} data set. 
 
 \subsection{The field population}
@@ -541,7 +567,9 @@ It can be further assumed that these hypothetically misclassified objects are sp
 
 If the misclassified objects are a few and spread over the observable space, then their contribution to the parameters of the \gls{gmm} describing the field population can be neglected. Thus, the parameters of the \gls{gmm} can remain fixed and out of the inference process. 
 
-The previous assumption is of paramount importance due to practical reasons. If I were to simultaneously infer the parameters of both cluster and field models, even only those of the field proper motions \gls{gmm}, the required computing time would be excessive. The number of parameters in the field \gls{gmm} goes up to $\sim 300$, more than twice that of the cluster model (85 parameters). {Even inferring only the 42 parameters of the field proper motions \gls{gmm} would represent, at least, a 50\% increase in the computing time}. Instead, I first fit the parameters of the field \gls{gmm} using the field objects in the \gls{rdr2} (the $\sim 98,000$ objects with membership probabilities below 0.75) and then I keep these parameters fixed in the inference process.   
+The previous assumption is of paramount importance due to practical reasons, but because the field parameters remain fixed, their uncertainty is not propagated to cluster parameters an neither to membership probabilities. If I were to simultaneously infer the parameters of both cluster and field models, even only those of the field proper motions \gls{gmm}, the required computing time would be excessive. The number of parameters in the field \gls{gmm} goes up to $\sim 300$, more than twice that of the cluster model (85 parameters). {Even inferring only the 42 parameters of the field proper motions \gls{gmm} would represent, at least, a 50\% increase in the computing time}. Instead, I first fit the parameters of the field \gls{gmm} using the field objects in the \gls{rdr2} (the $\sim 98,000$ objects with membership probabilities below 0.75) and then I keep these parameters fixed in the inference process.   
+
+ 
 
 The number of gaussians for the proper motions and photometric \gls{gmm} is found using the \gls{bic} introduced by \citet{Schwarz1978}. The \gls{bic} is a model selection criterium that aims at avoiding over-fitting. It represents a compromise between the likelihood, $\mathcal{L}$, of the $n$ data points, and the number of parameters, $k$. This is,
 
@@ -551,7 +579,7 @@ BIC = \ln{n}\cdot k - 2 \ln{\mathcal{L}}.
 \end{equation}
 
 To estimate the parameters of the \gls{gmm} we use the \gls{em} algorithm. However, the missing values in the photometry prevent the use of the standard form of the algorithm \cite[see for example Chapter 9 of][]{Bishop2006}.
-Instead, I estimated these parameters with the modified version of the \gls{em} algorithm for \gls{gmm} found by \citet{McMichael1996} and rediscovered by me. On this version, objects with missing values also contribute to the \gls{mle} of the parameters. The distribution of missing values though is also assumed uniform (i.e. it assumes the ignorability of the missing-value process). \textbf{I applied this algorithm to the five dimensional photometric observables of the 98,010 objects (from the \gls{rdr2}) with membership probabilities below 0.75 according to \citet{Bouy2015}. I tested \glspl{gmm} whose number of components ranged from 1 to 20. The optimal number of components suggested by the \gls{bic} is 14. Figures \ref{fig:fphGMM} and \ref{fig:fphGMM2} show two dimensional projections of the 14 components in the five dimensional \gls{gmm}. It is important to notice that only $\sim$1\% of these 98,010 objects have completely observed photometry (i.e. no missing values in any observable). For this reason, some of the Gaussians appear empty in Fig. \ref{fig:fphGMM}. However, Fig. \ref{fig:fphGMM2} shows projections of the same 14 component and five dimensional \gls{gmm} in the magnitude-magnitude diagrams, where the percentage of completeness is above 80\%. As a consequence, there are no empty Gaussians in this Figure, as shown by the log scale density. If we were to work only with the completely observed objects and discarded 99\% of the data set, our derived parameters would be severely biased (see Section \ref{sect:missing}).}
+Instead, I estimated these parameters with the modified version of the \gls{em} algorithm for \gls{gmm} found by \citet{McMichael1996} and rediscovered by me (see Section \ref{sec:codeGMM}). On this version, objects with missing values also contribute to the \gls{mle} of the parameters. The distribution of missing values though is also assumed uniform (i.e. it assumes the ignorability of the missing-value process). I applied this algorithm to the five dimensional photometric observables of the 98,010 objects (from the \gls{rdr2}) with membership probabilities below 0.75 according to \citet{Bouy2015}. I tested \glspl{gmm} whose number of components ranged from 1 to 20. The optimal number of components suggested by the \gls{bic} is 14. Figures \ref{fig:fphGMM} and \ref{fig:fphGMM2} show two dimensional projections of the 14 components in the five dimensional \gls{gmm}. It is important to notice that only $\sim$1\% of these 98,010 objects have completely observed photometry (i.e. no missing values in any observable). For this reason, some of the Gaussians appear empty in Fig. \ref{fig:fphGMM}. However, Fig. \ref{fig:fphGMM2} shows projections of the same 14 component and five dimensional \gls{gmm} in the magnitude-magnitude diagrams, where the percentage of completeness is above 80\%. As a consequence, there are no empty Gaussians in this Figure, as shown by the log scale density. If we were to work only with the completely observed objects and discarded 99\% of the data set, our derived parameters would be severely biased (see Section \ref{sect:missing}).
 
 \begin{figure}[ht!]
     \centering
@@ -626,24 +654,119 @@ Similarly to what I assume for the field population model, I also assume that th
 
 It is known that unresolved systems of stars (groups of stars that, given the spatial resolution of the telescope, are seen as an individual object) have an increased brightness proportional to the multiplicity of the system. In particular, if an unresolved system is made of two equally luminous objects, then its magnitude is 0.752 times brighter than that of an individual object. This happens for equal mass binaries.
 
-Since the pioneer work of \citet{Trumpler1921}, we know that some of the Pleiades members are double systems. Recently, \citet{Sarro2014} show evidence that some of these double systems lie in an \gls{emb} sequence. Those authors model this \gls{emb} sequence assuming that its number of objects is 20\% of the total number of cluster members. In the present work, we also model objects is this displaced \gls{emb} sequence  but we do not assume that its proportion is fixed; we infer it from the data. 
+Since the pioneer work of \citet{Trumpler1921}, we know that some of the Pleiades members are double systems. Recently, \citet{Sarro2014} show evidence that some of these double systems lie in an \gls{emb} sequence. Those authors model the \gls{emb} sequence assuming that its number of objects is 20\% of the total number of cluster members. In the present work, we also model objects is this displaced \gls{emb} sequence  but we do not assume that its proportion is fixed; we infer it from the data. 
 
-Unresolved multiple systems, binary systems particularly, have an impact on the cluster proper motions distribution. In stellar clusters, the massive objects are expected to fall towards the centre of the gravitational potential at a higher rate than that of the less massive ones {\cite[see for example][p. 556]{Binney2008}}. This behaviour arises from stellar encounters in which the energy exchange results in the less massive objects gaining kinetic energy and the massive ones losing it. {Since binaries and multiple systems are typically more massive than the average object, they are expected to fall towards the cluster centre.} From an astronomical point of view, an unresolved system shifts the photo-centre of its images when compared to that of a single object. Given the previous considerations, we decide to model the \gls{emb} as an independent population in the proper motions. Furthermore, we pair this proper motions model to its photometric counterpart. This more comprehensive statistical model allows us to directly compare the kinematic and photometric properties of the \gls{emb} population with those of the rest of the cluster. 
+Unresolved multiple systems, binary systems particularly, have an impact on the cluster proper motions distribution. In stellar clusters, the massive objects are expected to fall towards the centre of the gravitational potential at a higher rate than that of the less massive ones {\cite[see for example][p. 556]{Binney2008}}. This behaviour arises from stellar encounters in which the energy exchange results in the less massive objects gaining kinetic energy and the massive ones losing it. {Since binaries and multiple systems are typically more massive than the average object, they are expected to fall towards the cluster centre.} From an astrometric point of view, an unresolved system shifts the photo-centre of its images when compared to that of a single object. Given the previous considerations, we decide to model the \gls{emb} as an independent population in the proper motions. Furthermore, we pair this proper motions model to its photometric counterpart. This more comprehensive statistical model allows us to directly compare the kinematic and photometric properties of the \gls{emb} population with those of the rest of the cluster. 
 
 For the sake of simplicity, in the following whenever I refer to the photometric or proper motions model of the \gls{emb}s, I call it the \gls{emb} sequence model (with the subindex $Bs$). I refer to the model of the rest of the stars as the cluster sequence model or simply single stars. Despite that this is an abuse of the terminology, because there are binaries and multiple systems with different mass ratios, it keeps the text more readable.
 
 \subsubsection{Photometric model of single and EMB stars}
 \label{sect:cluster_ph}
 
-The cluster photometric sequences, in each of the $Y,J,H,K_s$ vs \gls{ci} \glspl{cmd}, are modelled as one-to-one functions of the \emph{true} \gls{ci}. Thus,
+One of the corner stones of stellar physics is the \gls{hrd} (Fig. \ref{fig:HR}). On it, the luminosity of stars and brown dwarfs is shown against their temperature. As this diagram exhibits, the luminosities and temperatures of stars and brown dwarfs are heavily correlated and occupy very specific loci. Since the beginning of their life, stars and brown dwarfs start to migrate to a narrow sequence called the main sequence, where they live most of their life times. Later (at roughly the ages shown by the green arrows), they start to migrate off the main sequence, and to the regions of giants, supergiants and white dwarfs. The stellar evolution models, like those of \citet{1998A&A...337..403B,2013MmSAI..84.1053A,2014IAUS..299..271A} provide a physical description about how the properties (e.g. temperature, luminosity) of stars and brown dwarfs evolve along their life time.
 
-\begin{align}
-Y&=f_0(CI,\boldsymbol{\phi}),\nonumber\\
-J&=f_1(CI,\boldsymbol{\phi}),\nonumber\\
-H&=f_2(CI,\boldsymbol{\phi}),\nonumber\\
-K_s&=f_3(CI,\boldsymbol{\phi}),\nonumber
-\end{align}
-where $\boldsymbol{\phi}$ represents the set of parameters upon which the functions $f_i$ also depend on (more details below). Assuming that the magnitudes can be described by one-to-one functions of the \emph{true} colour index is an important assumption. If magnitudes were to be described by relations instead of functions, then there may be the case that one value of the colour index may result in several values of the magnitude, thus causing a non-removable discontinuity\footnote{There are three classes of discontinuities: removable, jump, and infinity ones, with increasing order of complexity for their algebraical treatment.}. This will cause degeneracies in the parametric space that will not just cripple the performance of the MCMC sampler, but also will lead to (non-removable) discontinuities in the \emph{true} colour index distribution, and therefore, in the luminosity and mass distributions. As described in Section \ref{sect:RF-2}, this the main reason for which the colour index $i-K_s$ was preferred over the other available colour indices, in spite of its large number of missing values.
+\begin{figure}[htp!]
+\begin{center}
+\includegraphics[page=1,width=0.6\textwidth]{background/Figures/Hertzsprung-Russel_StarData.png}
+\caption{
+Hertzsprung-Russell Diagram identifying many well known stars in the Milky Way galaxy. Image by ESO\url{https://www.eso.org/public/images/eso0728c/}, CC BY 4.0\url{https://commons.wikimedia.org/w/index.php?curid=19915788}
+}
+\label{fig:HR}
+\end{center}
+\end{figure}
+
+In star clusters, stars and brown dwarfs are born almost simultaneously (although the birth of the most massive stars might trigger the birth of less massive stars and brown dwarfs), share similar metallicities and are located at similar distances from the observer (assuming that the cluster is smaller compared to the distance to the observer). Thus, the stellar clusters provide the very opportunity to observe, in the space of photometric observables (i.e. apparent magnitudes), the main sequence, which otherwise is blurred by the different ages, metallicities and distances of the objects. Stellar clusters are therefore the very laboratory where the stellar evolutionary models can be tested. Figure \ref{fig:HDRvsCMD} shows the luminosity $L_{\odot}$, in solar units, predicted by the BT-Settl evolutionary models of \citep{2014IAUS..299..271A} for the Pleiades cluster (120 Myr and solar metallically), as function of the effective temperature $T_{eff}$. For comparison, Figure \ref{fig:HDRvsCMD} also shows the $K$ vs. $i-K$ \gls{cmd} of \citet{Bouy2015} Pleiades candidate members. 
+
+\begin{figure}[htp!]
+\begin{center}
+\includegraphics[page=1,width=0.8\textwidth]{background/Figures/Teff_vs_phot.pdf}
+\caption{\gls{hrd} (left) $K$ vs. $i-K$ \gls{cmd} (right). The black dots and lines are the Pleiades isochrone given by the BT-Settl models of \citep{2014IAUS..299..271A}. The blue dots are the Pleiades candidate members of \citet{Bouy2015}}
+\label{fig:HDRvsCMD}
+\end{center}
+\end{figure}
+
+Besides the close and almost deterministic relation between the luminosity of stars and brown dwarfs and its effective temperature, the later also determines the bulk of the spectral energy distribution in which the luminosity is emitted. The stars radiative energy is emitted in a distribution of frequencies (or wavelengths) that roughly corresponds to that of a black body (or grey body with emissivity less than one in absorption lines and larger than one in emission lines). The spectral energy distribution of a black body is parametrised by its temperature by means of Planck's law\footnote{
+Planck's law describes the amount of radiative energy $B_{\lambda}$, that a body of temperature $T$ gives off at each wave length $\lambda$. Its formulation is 
+\begin{equation}
+B_\lambda (\lambda,T)=\frac{2hc^2}{\lambda^5}\frac{1}{e^{h c /\lambda k_B T}-1}\nonumber
+\end{equation}
+where, $h$, $k_B$ and $c$ are Planck's and Boltzmann's constants and the speed of light, respectively. 
+}. 
+
+In the ideal model of a star, its luminosity and spectral energy distribution are prescribed by its effective temperature\footnote{The definition of effective temperature is that of a black body that yields the same luminosity per surface area as the star} and radius. 
+
+Because of the previous reasons, the photometric observables can be roughly\footnote{This is a very idealised scenario in which the metallically, variability, magnetic fields, rotation, and other properties have been left aside.} estimated as the combined outcome of the radius and effective temperature of stars and brown dwarfs. Given the importance of the effective temperature, it seems reasonable to find proxies for it in the combination of direct observables. Colour indices are one of these proxies. Defined as the difference of two photometric bands, the provide a proxy for the slope of the spectral energy distribution and therefore for the effective temperature.  However, the quality of the index as an estimator of the effective temperature depends on the latter. 
+
+As mentioned by \citet{1998A&A...333..231B}, the colour index I-K is a good indicator of the effective temperature of M dwarfs. In the light of new theoretical evolutionary models of \citet{2014IAUS..299..271A}, I decided to investigate which of the magnitudes or colour indices available in our set of observables provides the best proxy for the effective temperature. 
+
+Figure \ref{fig:Teff_vs_colours} shows the effective temperature, given by the 120 Myr isochrone of the BT-Settl models \citep{2014IAUS..299..271A}, as a function of the absolute magnitudes and colour indices available in our set of observables. 
+As the reader can confirm, given the typical uncertainty of 0.1 mag in the photometric bands, the \glsfirst{ci} provides the best estimator of the effective temperature from within the available colour indices. 
+
+
+\begin{figure}[htp!]
+\begin{center} 
+\begin{subfigure}[t]{0.48\textwidth}
+\includegraphics[page=2,width=\textwidth]{background/Figures/Teff_vs_phot.pdf}
+\end{subfigure}
+ \begin{subfigure}[t]{0.48\textwidth}
+\includegraphics[page=3,width=\textwidth]{background/Figures/Teff_vs_phot.pdf}
+\end{subfigure}
+\caption{Effective temperature as a function of the photometric bands and colour indices within the photometric observables of the RF-2 set. Derived from the BT-Settl models \citep{2014IAUS..299..271A} using an age of 120 \gls{myr}.}
+\label{fig:Teff_vs_colours}
+\end{center}
+\end{figure}
+
+
+
+Therefore, to model the observed photometric bands, we use function and I choose the \emph{true} \gls{ci} to be the parameter of these functions. As shown in Figures \ref{fig:CI} and \ref{fig:otherCI}, this colour allows the most one-to-one relation with the photometric band $K_s$ (this effect is similar for the rest of the bands). This one-to-one relation, which basically enable us to model the magnitudes as functions of the \gls{ci}, is crucial to avoid degeneracies. Without it, two magnitudes could be described by the same colour index, as it occurs with colour index $J- K_s$ at values $\sim0.9$ (see right panel of Fig. \ref{fig:Teff_vs_colours} and panel b of Fig. \ref{fig:otherCI}). Therefore a simple monotonic relation between colour index and magnitude would not be valid, an injective\footnote{An injective function is a one-to-one function that maps each element in its domain to one and only one in its codomain.} function is needed. 
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[page=1,height=8cm]{background/Figures/CIs.pdf}
+\caption{$K_s$ vs $i-K_s$ CMD for the Pleiades candidate members of \citet{Bouy2015} with membership probability $>0.75$.}
+\label{fig:CI}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[page=2,height=6cm]{background/Figures/CIs.pdf}
+        \caption{}
+        
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=3,height=6cm]{background/Figures/CIs.pdf}
+        \caption{}
+         
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=4,height=6cm]{background/Figures/CIs.pdf}
+        \caption{}
+         
+    \end{subfigure}
+     \begin{subfigure}[t]{0.45\textwidth}
+      \includegraphics[page=5,height=6cm]{background/Figures/CIs.pdf}
+        \caption{}
+         
+    \end{subfigure}
+    \caption{CMD for the Pleiades candidate members of \citet{Bouy2015}  with membership probability $>0.75$. The magnitude $K_s$ is shown versus the colour indices: $Y-K_s$(a), $J-K_s$(b), $H-K_s$(c), and $Y-J$ (d).}
+    \label{fig:otherCI}
+\end{figure}
+
+It is important to notice that if a photometric band, like $K_s$ for example, would be used to parametrise the rest of the photometric bands and the \gls{ci}. 
+Then, the resulting magnitude-magnitude diagrams would provide no information to discriminate between cluster members and field objects. 
+
+
+%The cluster photometric sequences, in each of the $Y,J,H,K_s$ vs \gls{ci} \glspl{cmd}, are modelled as one-to-one functions of the \emph{true} \gls{ci}. Thus,
+%
+%\begin{align}
+%Y&=f_0(CI,\boldsymbol{\phi}),\nonumber\\
+%J&=f_1(CI,\boldsymbol{\phi}),\nonumber\\
+%H&=f_2(CI,\boldsymbol{\phi}),\nonumber\\
+%K_s&=f_3(CI,\boldsymbol{\phi}),\nonumber
+%\end{align}
+%where $\boldsymbol{\phi}$ represents the set of parameters upon which the functions $f_i$ also depend on (more details below). Assuming that the magnitudes can be described by one-to-one functions of the \emph{true} colour index is an important assumption. If magnitudes were to be described by relations instead of functions, then there may be the case that one value of the colour index may result in several values of the magnitude, thus causing a non-removable discontinuity\footnote{There are three classes of discontinuities: removable, jump, and infinity ones, with increasing order of complexity for their algebraical treatment.}. This will cause degeneracies in the parametric space that will not just cripple the performance of the MCMC sampler, but also will lead to (non-removable) discontinuities in the \emph{true} colour index distribution, and therefore, in the luminosity and mass distributions. As described in Section \ref{sect:RF-2}, this the main reason for which the colour index $i-K_s$ was preferred over the other available colour indices, in spite of its large number of missing values.
 
 After testing several functions, including the monic, Laguerre, Hermite, and Chebyshev polynomial bases, I decided to use cubic splines to model the cluster photometric sequence. Splines are piece-wise polynomial functions with more flexibility than common polynomial bases. In specific, they provide a better fit of the cluster sequence in region around \gls{ci} $\sim 3$ where other polynomial bases fail due to the high slope. 
 
@@ -657,7 +780,7 @@ S_3(CI|\boldsymbol{\beta},\mathbf{t}) = \sum_i \beta_i\cdot B_{i,3}(CI|\mathbf{t
 \end{equation}
 Where $B_{i,3}$ are the cubic \glspl{bspline} given by the Cox-de Boor recursive formula, and $\boldsymbol{\beta}$ are the coefficients of the series. For more details on splines and the Cox-de Boor formula see \citet{deBoor1978}.
 
-Despite their fitting properties, \glspl{bspline} present a problem when simultaneously inferring their coefficients and knots: there is multi-modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi-modality, I decided to keep the knots fixed throughout the inference. Although this decision reduces the flexibility of the splines, it allows a still better fit than that of the tested functions (i.e. the polynomial bases). To obtain the \gls{mle} of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the \gls{bic} to select among competing models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The \gls{bic} indicates that seven coefficients is the best number of components for the \glspl{bspline} series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the \gls{bic}. \textbf{Figure \ref{fig:fitCMDs} show the spline fits to the \gls{rdr2} candidate members of \citet{Bouy2015}, resulting from the previous knots. In this fit, \glspl{emb} are excluded (see Section \ref{sect:priors} for details of how they are removed). The positions of the knots are indicated by vertical lines.} 
+Despite their fitting properties, \glspl{bspline} present a problem when simultaneously inferring their coefficients and knots: there is multi-modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi-modality, I decided to keep the knots fixed throughout the inference. Although this decision reduces the flexibility of the splines, it allows a still better fit than that of the tested functions (i.e. the polynomial bases). To obtain the \gls{mle} of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the \gls{bic} to select among competing models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The \gls{bic} indicates that seven coefficients is the best number of components for the \glspl{bspline} series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the \gls{bic}. Figure \ref{fig:fitCMDs} show the spline fits to the \gls{rdr2} candidate members of \citet{Bouy2015}, resulting from the previous knots. In this fit, \glspl{emb} are excluded (see Section \ref{sect:priors} for details of how they are removed). The positions of the knots are indicated by vertical lines.
 
 In general, the continuity of a spline function is $C^{p-k}$, with $p$ the degree of the spline, and $k$ the highest multiplicity of the knots \citep{deBoor1978}. In our case, since the knot at 3.22 has a multiplicity of two, then the resulting spline has lost one degree of continuity. It is now $C^1$ continuous. It means that the spline and its derivative are continuous, thus ensuring a smooth function. Furthermore, due to their pice-wise properties,\glspl{bspline} will enable us to model more complicated photometric sequences in which the turn-off point of the sequence may be present.
 
@@ -954,7 +1077,29 @@ The standard deviation term $\sigma_k$, associated to entry $k$, is distributed 
 
 Concerning the photometric priors, they can be grouped in three categories: (i) priors for the the \emph{true} \gls{ci}, (ii) priors for the splines coefficients, and (iii) priors for the cluster sequence intrinsic dispersion. 
 
-For the means in the univariate \gls{gmm} of the \emph{true} \gls{ci}, I choose a uniform distribution in the range  ($0.8\leq CI \leq8$). For the standard deviations I choose the Half--Cauchy$(0,\eta)$ distribution as suggested by \citet{Gelman2006}. The value of $\eta$ is set to an arbitrarily large value, $\eta=100$.
+For the means in the univariate \gls{gmm} of the \emph{true} \gls{ci}, I choose a uniform distribution in the range  ($0.8\leq CI \leq8$). For the standard deviations I choose the Half--Cauchy$(0,\eta)$ distribution as suggested by \citet{Gelman2006}. The value of $\eta$ is set to an arbitrarily large value, $\eta=100$. Figure \ref{fig:priors_colour} shows the \gls{kde} of $10^3$ realisations from the prior distributions for the fractions, means, and variances of the parameters in the  \emph{true} \gls{ci} \gls{gmm}. Additonally, the lower right panel of this Fig. shows the resulting prior in the \gls{ci} space. Notice that values in this latter panel are truncated in the range of the observed \gls{ci}.
+
+\begin{figure}[ht!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \includegraphics[page=1,height=9cm,width=\textwidth]{background/Figures/Priors_Color.pdf}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=2,height=9cm,width=\textwidth]{background/Figures/Priors_Color.pdf}
+        \caption{}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=3,height=9cm,width=\textwidth]{background/Figures/Priors_Color.pdf}
+        \caption{}
+    \end{subfigure}
+     \begin{subfigure}[t]{0.48\textwidth}
+      \includegraphics[page=4,height=9cm,width=\textwidth]{background/Figures/Priors_Color.pdf}
+        \caption{}
+    \end{subfigure}
+\caption{\gls{kde} of $10^4$ realisations of the prior distributions of parameters in the \emph{true} \gls{ci} \gls{gmm}. Distributions of: (a) The field fraction $\pi$, (b) The \gls{emb} fraction, $1-\pi_{CB}$, (c) the proper motions cluster fractions, $\pi_{Cs}$, and (d) the proper motions equal-mass binaries fractions $\pi_{Bs}$.}
+\label{fig:priors_colour}
+\end{figure}
 
 For the coefficients in the spline series we set the priors as univariate normal distributions. To find the mean and variance of these distributions we proceed as follows. First, we remove the \gls{emb} from the list of candidate members of \citet{Bouy2015}. To do this, I performed an iterative fit of the cluster sequence, at each iteration I removed those objects whose photometry was  as bright as that of the \gls{emb}. In the region of $CI > 7$ there are no candidate members of \citet{Bouy2015} or of any other source, see Fig \ref{fig:fitCMDs}. Thus, to provide a prior we complement our list of candidate members with the brown-dwarfs from the \citet{Faherty2012} sample. We choose only those objects observed in the same photometric bands of our data set. Finally, we fit the splines, and use the coefficients of this fit as the means, $\mu_{\beta}$ of the univariate normal distributions. \textbf{Figure \ref{fig:fitCMDsBD} shows the four cubic \glspl{bspline} fitted to our four \glspl{cmd} complemented with the \glspl{bd} of \citet{Faherty2012}}. The standard deviation terms were set to $\sigma_{\beta}=\{1,1,1,1,1,0.5,0.1\}\,\mathrm{mag}$. These values provide a reasonable compromise between cluster sequences compatible with the previously known candidates, and those far away or with exotic shapes. We show a sample of these priors in Fig. \ref{figure:priorcoefs}. This Figure shows also the brown-dwarfs from \citet{Faherty2012} and the sequence (dashed line) we use to provide the means of the univariate normal distributions.
 
@@ -1365,8 +1510,8 @@ related by integration:
 where $z$ is the distance along the line of sight corresponding to the radial distance, $R$ projected onto the plane of the sky.
 
 In this work we will assume that the analytical expression in
-Eq. \ref{eq:zhao} is correctly stated in terms of the number density
-and not of volume density.
+Eq. \ref{eq:zhao} is correctly stated in terms of the projected number density
+and not of projected mass density.
 
 This model is a more general analytical expression, thus we call it generalised density profile\footnote{Although it is also called Nuker profile by \citet{2010MNRAS.407.2241K}.}, here after the  \gls{gdp}, that comprises many
 simpler models each of which represent particular choices of the model
@@ -1632,6 +1777,7 @@ differences (due to the 3D spatial extend of the Pleiades) average
 out. The core radius dependence with the J magnitude is modelled as
 
 \begin{equation}
+\label{eq:rc_segregated}
   r_c(\theta,J) = r_c(\theta)+\kappa\cdot(J- J_{mode}),
 \end{equation}
 where $J_{mode}$ is the mode of the $J$ band distribution. 

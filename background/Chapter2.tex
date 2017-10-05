@@ -50,7 +50,7 @@ Nevertheless, the distance distribution {(measured uncertainties comprised)} is 
 
 \section{Projected spatial distribution}
 \label{sect:PSD}
-The \gls{psd} is the two dimensional projection, in the plane of the sky (the one perpendicular to the line of sight), of the cluster three dimensional space distribution. In astronomy, object positions are commonly measured in what is called the Equatorial Coordinate System\footnote{Another common coordinate system is the Alt-Azimuth one \cite[see][]{Smart1977}.}. It can be thought as the projection of the geographical coordinates, latitude and longitude, into the sky. The Right Ascension (R.A.) coordinate, analogous to the longitude, gives the objects angle with the vernal equinox, in an eastward direction and along the celestial equator. The Declination (Dec.) coordinate, analogous to the latitude, gives the object angle perpendicular to the celestial equator, positive to the North and negative to the South. For more details of the Equatorial Coordinate System see for example \citet{Smart1977}. 
+The \gls{psd} is the two dimensional projection, in the plane of the sky (the one perpendicular to the line of sight), of the cluster three dimensional space distribution. In astronomy, object positions are commonly measured in what is called the Equatorial Coordinate System\footnote{Another common coordinate system is the Alt-Azimuth one \cite[see][]{Smart1977}.}. It can be thought as the projection of the geographical coordinates, latitude and longitude, into the sky. The Right Ascension (R.A.) coordinate, analogous to the longitude, gives the objects angle with the vernal equinox, measured in an eastward direction and along the celestial equator. The Declination (Dec.) coordinate, analogous to the latitude, gives the object angle perpendicular to the celestial equator, positive to the North and negative to the South. For more details of the Equatorial Coordinate System see for example \citet{Smart1977}. 
 
 {Stellar positions of an object are far more easily measured than its parallax. For this reason, just a small fraction of objects with stellar positions has also parallax measurements. In the case of the Pleiades, after cross-matching the \emph{Hipparcos} catalogue \citep{1997A&A...323L..49P} with the candidate members of \citet{Bouy2015}, I find that only 70 of the $\sim2100$ candidates have parallaxes. As seen in the previous section, this figure is roughly doubled with the new \gls{tgas} \citep{2016A&A...595A...1G} data release. In addition to the scarcity of parallaxes, which is expected to be solved with future \emph{Gaia} data releases, the relative uncertainties in R.A. and Dec. coordinates, measured in degrees, are far better ($\sim 10^{-5}$) than those of the parallaxes ($\sim10^{-1}$), measured in mas. Transforming these relative precisions into parsecs, by means of the distance, it is seen that the position in the plane of the sky is $10^4$ more precise than along the line of sight.  These two are the main reasons, for which the Pleiades space distribution has been studied mainly through its \gls{psd}. The latter has been the subject of several studies. }
 
@@ -343,13 +343,20 @@ $K_s$[mag]&1.40e-02& 5.75e-02& 8.17e-02& 1.32e-01& 3.88e+01&1.04e-01\\
 \subsection{Selection of observables}
 \label{sect:RF-2}
 \sloppy
-The \gls{ddr2} contains the positions R.A., Dec. (in the following $\alpha$ and $\delta$), proper motions, $\mu_{\rm{R.A.}},\mu_{\rm{Dec.}}$, and photometric $ugrizYJHK_s$ bands, of almost two million sources on the vicinity of the Pleiades clusters. Although these 13 observables carry information valuable to discriminate cluster members from field objects, not all of them do it in the same way. A detailed analysis of the capacity of the previous set of observables (except the stellar postions) to discriminate between cluster members and field population is present in the work of \citet{Sarro2014}. These authors use random forest to select the observables that were the most discriminant. They find that the observables of  proper motions ($\mu_{R.A.},\mu_{Dec.}$) and the photometric bands $rizYJHK_s$ are the most discriminants. 
+The \gls{ddr2} contains the positions R.A., Dec. (in the following $\alpha$ and $\delta$), proper motions, $\mu_{\rm{R.A.}},\mu_{\rm{Dec.}}$, and photometric $ugrizYJHK_s$ bands, of almost two million sources on the vicinity of the Pleiades clusters. Although these 13 observables carry information valuable to discriminate cluster members from field objects, not all of them do it in the same way. \citet{Sarro2014} give a detailed analysis of the capacity of the previous observables (with the exception of the stellar positions) to discriminate between cluster members and field population. These authors use random forest to select the observables that were the most discriminant. They find that the proper motions ($\mu_{R.A.},\mu_{Dec.}$) and the photometric bands $rizYJHK_s$ are the most discriminants. 
 
-However, since most the objects with a missing $r$ band occur at the faint end of the cluster sequence, \citet{Sarro2014} train their model in two stages. In the first stage, they use all literature candidate members with observed $r$ band. In the second stage, they discard the $r$ band observations and continue training their model with objects in which the $r$ band was missing.  In a subsequent analysis using roughly the same methodology, \citet{Bouy2015} skipped the first training stage and worked only with the RF-2, which also excludes the $z$ band.
+Since most the objects with a missing $r$ band occur at the faint end of the cluster sequence, \citet{Sarro2014} train their model (see Section \ref{sect:current_methodologies}) in two stages. In the first stage, they use all literature candidate members with observed $r$ band. In the second stage, they discard the $r$ band observations and continue training their model with objects in which the $r$ band was missing. In a subsequent analysis using roughly the same methodology, \citet{Bouy2015} skipped the first training stage and worked only with the RF-2, which also excludes the $z$ band.
 
-Therefore, in the present work I use as a reference set the the proper motions, $\mu_{\alpha},\mu_{\delta}$, the photometric bands $Y,J,H,K_s$, and the colour index $i-K_s$, with the addition of the stellar positions  $\alpha$ and $\delta$. This decision roots in two key aspects. First,  \citet{Sarro2014} prove that this observables (excluding the stellar positions) are amongst the most discriminant ones. Second, this set corresponds to the one used by \cite{Bouy2015}, thus, it will enable us to perform a direct comparison and validation with their results. 
+Therefore, in the present work I use as a reference set the the proper motions, $\mu_{\alpha},\mu_{\delta}$, the photometric bands $Y,J,H,K_s$, and the colour index $i-K_s$, with the addition of the stellar positions  $\alpha$ and $\delta$. This decision roots in the following reasons.
 
-However, there is a subtle difference between the set of observables used by \cite{Bouy2015} and the ones use in the present work. While here I use the $Y$ band alone, \citet{Bouy2015} use the colour index $Y-J$. Originally, I tested the methodology with this $Y-J$ colour index but the contamination resulting from it is higher than that resulting from the use of the $Y$ band. This is a consequence of the modelling of the intrinsic dispersion of the cluster photometric sequence. The details of it are shown in Section \ref{subsect:cluster}. Here suffices to say that the cluster sequence in the $Y-J$ vs. $i-K_s$ colour-colour diagram varies greatly, across $i-K_s$, compared to the relatively stable width of the cluster sequence in the the $Y$ vs $i-K_s$ \gls{cmd}. This effect can be observed in Figure \ref{fig:Y-JvsY}, where the candidate members of \citet{Bouy2015} (blue dots) are depicted, together with the \gls{rdr2} density (black contour lines), in the colour-colour diagram $Y-J$ vs. $i-K_s$, and the  \gls{cmd} $Y$ vs $i-K_s$. The current version of the photometric model describes the cluster sequence intrinsic dispersion with a constant width across the $i-K_s$ colour index. Therefore, the use of $Y-J$ results in larger contamination in those regions where the clusters sequence is narrower than the average. Future steps will be take to include more colour indices in the reference set of observables.
+\begin{itemize}
+
+\item First, \citet{Sarro2014} prove that these observables (excluding the stellar positions) are amongst the most discriminant ones in the \gls{ddr2}. 
+
+\item Second, this set corresponds to the one used by \cite{Bouy2015}, thus, it will enable us to perform a direct comparison and validation with their results. 
+However, observables used by \cite{Bouy2015} and the ones use in the present work are not exactly alike. While here I use the $Y$ band alone, \citet{Bouy2015} use the colour index $Y-J$. Originally, I tested the methodology with this $Y-J$ colour index but the contamination resulting from it was higher than that resulting from the use of the $Y$ band. This is a consequence of how the intrinsic dispersion of the cluster photometric sequence is modelled. The details of it will be shown in Section \ref{subsect:cluster}. Here suffices to say that the photometric model describes the cluster sequence dispersion with a constant width across the $i-K_s$ colour index. The dispersion of the cluster sequence in the $Y-J$ vs. $i-K_s$ colour-colour diagram varies greatly across $i-K_s$ contrary to the elatively stable dispersion in the $Y$ vs $i-K_s$ \gls{cmd}. This effect can be observed in Figure \ref{fig:Y-JvsY}, where the candidate members of \citet{Bouy2015} (blue dots) are depicted, together with the \gls{ddr2} density (black contour lines), in the colour-colour diagram $Y-J$ vs. $i-K_s$, and the  \gls{cmd} $Y$ vs $i-K_s$.  Therefore, the use of $Y-J$ results in larger contamination in those regions where the true clusters sequence is narrower than the average model. Future steps will be take to include more colour indices in the reference set of observables.
+
+\end{itemize}
 
 \begin{figure}[htp!]
 \begin{center}
@@ -361,52 +368,16 @@ However, there is a subtle difference between the set of observables used by \ci
 \end{figure}
  
 
- 
 Concerning the stellar positions $\alpha$ and $\delta$, neither \citet{Bouy2015} nor \citet{Sarro2014} use them in their analyses. Thus, I will independently analyse the: i) the kinematic and photometric distributions of the cluster population, and ii) the \gls{psd}. This decision roots in the following reasons.
 
-First. To fulfil the objective of the \gls{dance} project (see Section \ref{sect:DANCeproject}), the inventory of kinematic and photometric distributions of the \glspl{nyc} must be obtained with an homogenous methodology. The \gls{dance} \gls{nyc} targets (see Tables \ref{tab:maintargets} and \ref{tab:secondarytargets}) do not share similar projected spatial density profiles; while Taurus, Ophiucus and the Trapezium are extended \cite[see for example][]{simon1997}, the Pleiades is almost radially symmetric \citep{Raboud1998}. Thus, including the spatial information together with the proper motions and photometry would require completely different models for the \gls{psd} of different clusters. That would result in non-homogenous methodologies that would bias any comparison between the derived \gls{pdsmd} of these clusters.
+\begin{itemize}
 
-{Second. To validate the results of the present work, which will be conducted in the Pleiades cluster, we must compare them with similar results under the most similar conditions. Since \citet{Bouy2015,Sarro2014} do not include the stellar positions in their observables, I do that as well. }
+\item To fulfil the objective of the \gls{dance} project (see Section \ref{sect:DANCeproject}), the inventory of kinematic and photometric distributions of the \glspl{nyc} must be obtained with an homogenous methodology. The \gls{dance} \gls{nyc} targets (see Tables \ref{tab:maintargets} and \ref{tab:secondarytargets}) do not share similar projected spatial density profiles; while Taurus, Ophiucus and the Trapezium are extended \cite[see for example][]{simon1997}, the Pleiades is almost radially symmetric \citep{Raboud1998}. Thus, including the spatial information together with the proper motions and photometry would require completely different models for the \gls{psd} of different clusters. That would result in non-homogenous methodologies that would bias any comparison between the derived \gls{pdsmd} of these clusters.
+\item To validate the results of the present work, which will be conducted in the Pleiades cluster, we must compare them with similar results under the most similar conditions. Since \citet{Bouy2015,Sarro2014} do not include the stellar positions in their observables, I do that as well. 
+\item Almost all previous analyses of the Pleiades \gls{psd} use King profile (see Section \ref{sect:PSD}) without providing any further reason beyond its physical interpretability, which nevertheless remains a good one. Thus, we decided to perform a Bayesian model selection analysis to compare how well the common surface density profiles, included the King's one, reproduce the Pleiades \gls{psd}. The results of this analysis have been submitted to the $A\&A$ journal.
+\end{itemize}
 
-{Third. Almost all previous analyses of the Pleiades \gls{psd} use King profile (see Section \ref{sect:PSD}) without providing any further reason that its physical interpretability, which nevertheless remains a good one. Thus, we decided to perform a Bayesian model selection analysis to compare how well the common surface density profiles, included the King's one, reproduce the Pleiades \gls{psd}. The results of this analysis are in preparation and will be soon submitted to the $A\&A$ journal. }
-
-As will be described in Section \ref{subsect:cluster}, the photometry is modelled by parametric series of cubic splines. I choose the \emph{true} \gls{ci} to be the parameter of these series. This colour allows the most one-to-one dependent-independent variable relations. This one-to-one relation can be seen in Figures \ref{fig:CI} and \ref{fig:otherCI}, where I show the colour-magnitude diagram of $K$ vs $i-K_s$ and $K$ vs colours $Y-K_s$, $J-K_s$, $H-K_s$, and $Y-J$, respectively.  This one-to-one relation is crucial to avoid degeneracies. Without it, two magnitudes could be described by the same colour index. Therefore a monotonic relation would not be valid. 
-
-Thus, our photometric set of observables is made of $i-K_s, Y,J,H$ and $K_s$. 
-
-\begin{figure}[ht!]
-\begin{center}
-\includegraphics[page=1,height=8cm]{background/Figures/CIs.pdf}
-\caption{$K_s$ vs $i-K_s$ CMD for the Pleiades candidate members of \citet{Bouy2015} with membership probability $>0.75$.}
-\label{fig:CI}
-\end{center}
-\end{figure}
-
-\begin{figure}[ht!]
-    \centering
-    \begin{subfigure}[t]{0.45\textwidth}
-        \includegraphics[page=2,height=6cm]{background/Figures/CIs.pdf}
-        \caption{}
-        
-    \end{subfigure}
-    \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=3,height=6cm]{background/Figures/CIs.pdf}
-        \caption{}
-         
-    \end{subfigure}
-     \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=4,height=6cm]{background/Figures/CIs.pdf}
-        \caption{}
-         
-    \end{subfigure}
-     \begin{subfigure}[t]{0.45\textwidth}
-      \includegraphics[page=5,height=6cm]{background/Figures/CIs.pdf}
-        \caption{}
-         
-    \end{subfigure}
-    \caption{CMD for the Pleiades candidate members of \citet{Bouy2015}  with membership probability $>0.75$. The magnitude $K_s$ is shown versus the colour indices: $Y-K_s$(a), $J-K_s$(b), $H-K_s$(c), and $Y-J$ (d).}
-    \label{fig:otherCI}
-\end{figure}
+As will be described in Section \ref{subsect:cluster}, the cluster photometric sequence, in each magnitude, is modelled by functions in which the parameter is the \emph{true} \gls{ci} (details for this decision will be given in Section \ref{sect:cluster_ph}. Thus, our photometric set of observables is made of the colour index $\gls{ci}=i-K_s$ and the photometric bands $Y,J,H$ and $K_s$. 
 
 \subsection{Data preprocessing}
 

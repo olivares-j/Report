@@ -28,7 +28,7 @@
 \BOOKMARK [1][-]{section.4.1}{Performance of the classifier}{chapter.4}% 28
 \BOOKMARK [1][-]{section.4.2}{Comparison with the literature}{chapter.4}% 29
 \BOOKMARK [1][-]{section.4.3}{The statistical distributions of the Pleiades.}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.4}{Updating the prior knowledge}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.4}{Updating the assumptions and prior knowledge}{chapter.4}% 31
 \BOOKMARK [1][-]{section.4.5}{Projected spatial distribution}{chapter.4}% 32
 \BOOKMARK [1][-]{section.4.6}{Proper motions distribution}{chapter.4}% 33
 \BOOKMARK [1][-]{section.4.7}{Luminosity distribution}{chapter.4}% 34
@@ -36,7 +36,9 @@
 \BOOKMARK [1][-]{section.4.9}{The mass distribution on time}{chapter.4}% 36
 \BOOKMARK [0][-]{chapter.5}{Conclusions and future work}{}% 37
 \BOOKMARK [1][-]{section.5.1}{Current issues and future improvements}{chapter.5}% 38
-\BOOKMARK [0][-]{appendix.A}{Effects of truncation on King's profile }{}% 39
-\BOOKMARK [0][-]{appendix.B}{Posterior distributions for the Projected Spatial Distribution }{}% 40
-\BOOKMARK [0][-]{figure.caption.133}{Bibliography}{}% 41
-\BOOKMARK [0][-]{section*.135}{Acronyms}{}% 42
+\BOOKMARK [0][-]{appendix.A}{Posterior distributions of the PSD }{}% 39
+\BOOKMARK [1][-]{section.A.1}{Models with radial symmetry}{appendix.A}% 40
+\BOOKMARK [1][-]{section.A.2}{Models with biaxial symmetry}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.3}{Models with luminosity segregation}{appendix.A}% 42
+\BOOKMARK [0][-]{figure.caption.128}{Bibliography}{}% 43
+\BOOKMARK [0][-]{section*.130}{Acronyms}{}% 44

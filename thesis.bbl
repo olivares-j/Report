@@ -1,4 +1,4 @@
-\begin{thebibliography}{223}
+\begin{thebibliography}{225}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -106,6 +106,10 @@ Andrieu, C., de~Freitas, N., Doucet, A., \& Jordan, M.~I. 2003, Machine
 
 \bibitem[{Berger {et~al.}(2009)Berger, Bernardo, \& Sun}]{Berger2009}
 Berger, J.~O., Bernardo, J.~M., \& Sun, D. 2009, Ann. Statist., 37, 905
+
+\bibitem[{{Bessell} {et~al.}(1998){Bessell}, {Castelli}, \&
+  {Plez}}]{1998A&A...333..231B}
+{Bessell}, M.~S., {Castelli}, F., \& {Plez}, B. 1998, \aap, 333, 231
 
 \bibitem[{{Binney} \& {Tremaine}(2008)}]{Binney2008}
 {Binney}, J. \& {Tremaine}, S. 2008, {Galactic Dynamics: Second Edition}
@@ -279,6 +283,9 @@ Feroz, F., Hobson, M.~P., \& Bridges, M. 2009, Monthly Notices of the Royal
 \bibitem[{Flegal {et~al.}(2016)Flegal, Hughes, \& Vats}]{mcmcse}
 Flegal, J.~M., Hughes, J., \& Vats, D. 2016, mcmcse: Monte Carlo Standard
   Errors for MCMC, Riverside, CA and Minneapolis, MN, r package version 1.2-1
+
+\bibitem[{Foreman-Mackey(2016)}]{corner}
+Foreman-Mackey, D. 2016, The Journal of Open Source Software, 24
 
 \bibitem[{Foreman-Mackey {et~al.}(2013)Foreman-Mackey, Hogg, Lang, \&
   Goodman}]{Foreman2013}

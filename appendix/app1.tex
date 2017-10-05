@@ -1,446 +1,409 @@
+%!TEX root = ../thesis.tex
+%\chapter{Effects of truncation on King's profile \label{app:truncation}}
+%
+%Statistical truncation occurs when an unknown number of sources lay beyond a threshold value. This threshold value can originate in the measuring process or in the post-processing of the data. The resulting data set does not contain any information about objects beyond the threshold.
+%
+%Performing inference on truncated data can bias the recovered parameters if the truncation mechanism is not included in the analysis. Nevertheless, bias can still appear if poor statistics are used o summarise the results. Practically, if the truncation is too restrictive it could also lead to bias due to a reduced sample size. To estimate the impact of these effects, we generated synthetic data sets from the King's profile, at true values of $r_c =2.0$ pc and $r_t=20.0$ pc, and infer the parameters under different sample sizes (1000,2000, and 3000 objects) and truncation radii (5,10,15,20 pc). We repeat each estimation ten times to account for randomness in the sample. Figure \ref{fig:KingSyn} shows the posterior distributions inferred at each sample size and truncation radius. As can be seen, accounting for truncation results in posterior distribution that correctly recover the true parameter values. However, due to the large asymmetry in the posterior distributions of the tidal radius at the lower truncation radius (5 pc), the Maximum A Posteriori (MAP) statistic can be severely biased. Figure \ref{fig:KingSynMRE} shows the mean relative error of this statistic as a function of the truncation radius. As can be seen, the larger biases appear at the extreme case where the truncation radius is only one fourth of the true tidal radius. Notice that although the MAP estimates of each of the ten realisations are biased, they do so in a similar way above and below the true value. Except at the truncation radius of 5 pc, where they slightly over estimate the value. Also, the MAP is unbiased above truncation radii of half the tidal radius, in spite of the number of stars (at least for the tested values).
+%
+%This example shows that the inference of the parameters in the King's profile can be biased even after truncation has been accounted for. In particular, the tidal radius can be severely affected by truncation radius below one half of the tidal radius. Since this phenomenon is observed under the weakly informative priors used (half-cauchy centred at zero and scale parameter of 100), this effect can be generalised to any maximum-likelihood estimator, the $\chi^2$ statistic particularly. 
+%
+%Finally, as can be seen in Figure \ref{fig:KingSynNoTrunc}, inferring King's profile parameters without properly accounting for truncation leads to even larger biases.
+%
+%\begin {figure}[ht!]
+% \centering
+%  \includegraphics[page=1,width=0.5\textwidth]{Analysis/Synthetic-King-densities.pdf}
+%  \caption{Mixture of the ten posterior distributions of the core and tidal radius ($r_c$ and $r_t$, respectively) inferred under different sample sizes (line styles) and truncation radii (colours). The true parameter values are shown with the vertical grey lines.}
+%\label{fig:KingSyn}
+%\end {figure}
+%
+%\begin {figure}[ht!]
+% \centering
+%  \includegraphics[page=2,width=0.5\textwidth]{Analysis/Synthetic-King-densities.pdf}
+%  \caption{Mean relative error ($r_c$ and $r_t$, respectively) of the MAP statistic inferred from ten random realisations of different sample sizes (line styles) and truncation radii (colours). The uncertainties correspond to the standard deviation of the ten inferred MAPs.}
+%\label{fig:KingSynMRE}
+%\end {figure}
+%
+%\begin {figure}[ht!]
+% \centering
+%  \includegraphics[page=1,width=0.5\textwidth]{Analysis/Synthetic-King-densities-NoTrunc.pdf}
+%  \caption{Mixture of the ten posterior distributions of the core and tidal radius ($r_c$ and $r_t$, respectively) inferred under different sample sizes (line styles) and truncation radii (colours) without correcting for truncation. The true parameter values are shown with the vertical grey lines.}
+%\label{fig:KingSynNoTrunc}
+%\end {figure}
 
-\chapter{Effects of truncation on King's profile \label{app:truncation}}
+\chapter{Posterior distributions of the PSD \label{app:posteriors}}
 
-Statistical truncation occurs when an unknown number of sources lay beyond a threshold value. This threshold value can originate in the measuring process or in the post-processing of the data. The resulting data set does not contain any information about objects beyond the threshold.
-
-Performing inference on truncated data can bias the recovered parameters if the truncation mechanism is not included in the analysis. Nevertheless, bias can still appear if poor statistics are used o summarise the results. Practically, if the truncation is too restrictive it could also lead to bias due to a reduced sample size. To estimate the impact of these effects, we generated synthetic data sets from the King's profile, at true values of $r_c =2.0$ pc and $r_t=20.0$ pc, and infer the parameters under different sample sizes (1000,2000, and 3000 objects) and truncation radii (5,10,15,20 pc). We repeat each estimation ten times to account for randomness in the sample. Figure \ref{fig:KingSyn} shows the posterior distributions inferred at each sample size and truncation radius. As can be seen, accounting for truncation results in posterior distribution that correctly recover the true parameter values. However, due to the large asymmetry in the posterior distributions of the tidal radius at the lower truncation radius (5 pc), the Maximum A Posteriori (MAP) statistic can be severely biased. Figure \ref{fig:KingSynMRE} shows the mean relative error of this statistic as a function of the truncation radius. As can be seen, the larger biases appear at the extreme case where the truncation radius is only one fourth of the true tidal radius. Notice that although the MAP estimates of each of the ten realisations are biased, they do so in a similar way above and below the true value. Except at the truncation radius of 5 pc, where they slightly over estimate the value. Also, the MAP is unbiased above truncation radii of half the tidal radius, in spite of the number of stars (at least for the tested values).
-
-This example shows that the inference of the parameters in the King's profile can be biased even after truncation has been accounted for. In particular, the tidal radius can be severely affected by truncation radius below one half of the tidal radius. Since this phenomenon is observed under the weakly informative priors used (half-cauchy centred at zero and scale parameter of 100), this effect can be generalised to any maximum-likelihood estimator, the $\chi^2$ statistic particularly. 
-
-Finally, as can be seen in Figure \ref{fig:KingSynNoTrunc}, inferring King's profile parameters without properly accounting for truncation leads to even larger biases.
-
-\begin {figure}[ht!]
- \centering
-  \includegraphics[page=1,width=0.5\textwidth]{Analysis/Synthetic-King-densities.pdf}
-  \caption{Mixture of the ten posterior distributions of the core and tidal radius ($r_c$ and $r_t$, respectively) inferred under different sample sizes (line styles) and truncation radii (colours). The true parameter values are shown with the vertical grey lines.}
-\label{fig:KingSyn}
-\end {figure}
-
-\begin {figure}[ht!]
- \centering
-  \includegraphics[page=2,width=0.5\textwidth]{Analysis/Synthetic-King-densities.pdf}
-  \caption{Mean relative error ($r_c$ and $r_t$, respectively) of the MAP statistic inferred from ten random realisations of different sample sizes (line styles) and truncation radii (colours). The uncertainties correspond to the standard deviation of the ten inferred MAPs.}
-\label{fig:KingSynMRE}
-\end {figure}
-
-\begin {figure}[ht!]
- \centering
-  \includegraphics[page=1,width=0.5\textwidth]{Analysis/Synthetic-King-densities-NoTrunc.pdf}
-  \caption{Mixture of the ten posterior distributions of the core and tidal radius ($r_c$ and $r_t$, respectively) inferred under different sample sizes (line styles) and truncation radii (colours) without correcting for truncation. The true parameter values are shown with the vertical grey lines.}
-\label{fig:KingSynNoTrunc}
-\end {figure}
-
-\chapter{Posterior distributions for the Projected Spatial Distribution \label{app:posteriors}}
-
- This Appendix contains the details of the inference performed for each of the models and extensions presented in Section \ref{sec:modelselect}.
+ This Appendix contains the details of the inference performed for each of the models and extensions presented in Section \ref{sect:PSDresults}.
  It is structured in the same way as that Section. It starts with the radial models, then continues with the biaxial ones and finalises with the
- luminosity segregated ones. Each Section contains: i) the covariance matrices around the MAP of the joint posterior distribution of all parameters in each model, and, ii) figures depicting:  a) the surface density (i.e. the number of stars per square parsec), with the data in black dots with poisson uncertainties, the MAP model with a red line, and 100 samples of the posterior distributions, with grey spaghetti lines, and, b) the univariate and bivariate marginal posterior distributions obtained from \emph{PyMultiNest} in the form of a corner plot \citep{corner}.
- 
- Notice that, since the MAP is computed in the joint posterior, it does not necessarily coincides with the modes of the
+ luminosity segregated ones. Each Section contains: i) the covariance matrices around the MAP of the joint posterior distribution of all parameters in each model, and, ii) figures depicting the univariate and bivariate marginal posterior distributions obtained from \emph{PyMultiNest} in the form of a corner plot \citep{corner}. Notice that, since the MAP is computed in the joint posterior distribution, it does not necessarily coincides with the modes of the
 marginal distributions. 
 
 We summarise the uncertainties and correlations of the inferred parameter values by means of covariance matrices. These covariance matrices
-are computed using the 68.2\% of samples from the MCMC that were the closest to the MAP value. They represent the $2-\sigma$ uncertainties
-and correlations of the parameters at the vicinity of the MAP. The order of the parameters in these covariance matrices is the of the MAPs of Section  \ref{sec:modelselect}.
+are computed using the 68.2\% of samples from the MCMC that were the closest to the MAP value. They represent the $2\sigma$ uncertainties
+and correlations of the parameters at the vicinity of the MAP. The order of the parameters in these covariance matrices is the of the MAPs of Section  \ref{sect:PSDresults}.
 
-In addition, Sections \ref{sect:app_biaxial} and \ref{sect:app_segregated} contain also the ellipticity distributions computed a posteriori from the core and tidal (when available) semi-major and semi-minor axes resulting from the \emph{PyMultiNest} samples. The numbers shown in brackets represent the 16th percentile, the mode, and the 84th percentile, of the distribution. Finally, Section \ref{sect:app_segregated} shows also figures with the J band in three bins ($J < 12$, $12 \lesssim J \lesssim 15$, and $15 < J$) and the core radius increased accordingly using the mean value of J band in each bin.
+In addition, Sections \ref{sect:app_biaxial} and \ref{sect:app_segregated} contain also the ellipticity distributions computed a posteriori from the core and tidal (when available) semi-major and semi-minor axes resulting from the \emph{PyMultiNest} samples. The numbers shown in brackets represent the 16th percentile, the mode, and the 84th percentile, of the distribution. 
 
- \subsection{Models with radial symmetry}
+ \section{Models with radial symmetry}
  \label{sect:app_radial}
-{\tiny
-$$
+ 
+ \resizebox{\textwidth}{!}{
+$
 \Sigma_{\rm{EFF}}=
 \left(\arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Centre/EFF_11/EFF_covariance.txt}
 \end{array}\right)
-$$
-
-$$
+$
+$
 \Sigma_{\rm{GDP}}=
 \left(\arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Centre/GDP_11/GDP_covariance.txt}
 \end{array}\right)
-$$
-
-$$
+$
+}
+ \resizebox{\textwidth}{!}{
+$
 \Sigma_{\rm{GKing}}=
 \left(\arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Centre/GKing_11/GKing_covariance.txt}
 \end{array}\right)
-$$
-$$
+$
+$
 \Sigma_{\rm{King}}=
 \left(\arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Centre/King_11/King_covariance.txt}
 \end{array}\right)
-$$
-
-$$
+$
+}
+ \resizebox{\textwidth}{!}{
+$
 \Sigma_{\rm{OGKing}}=
 \left(\arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Centre/OGKing_11/OGKing_covariance.txt}
 \end{array}\right)
-$$
-
-$$
+$
+$
 \Sigma_{\rm{RGDP}}=
 \left(\arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Centre/RGDP_11/RGDP_covariance.txt}
 \end{array}\right)
-$$
+$
 }
-\begin {figure}
- \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Centre/EFF_11/EFF_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Centre/EFF_11/EFF_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the EFF model .}
-\label{fig:EFFctr}
-\end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Centre/GDP_11/GDP_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Centre/GDP_11/GDP_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the GDP model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Centre/GDP_11/GDP_fit.pdf}
+  \caption{Projections of the posterior distribution for the GDP model.}
 \label{fig:GDPctr}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Centre/GKing_11/GKing_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Centre/GKing_11/GKing_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the GKing model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Centre/GKing_11/GKing_fit.pdf}
+  \caption{Projections of the posterior distribution for the GKing model.}
 \label{fig:GKingctr}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Centre/King_11/King_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Centre/King_11/King_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the King's model .}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Centre/King_11/King_fit.pdf}
+  \caption{Projections of the posterior distribution for the King's model.}
 \label{fig:Kingctr}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Centre/OGKing_11/OGKing_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Centre/OGKing_11/OGKing_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the OGKing model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Centre/OGKing_11/OGKing_fit.pdf}
+  \caption{Projections of the posterior distribution for the OGKing model.}
 \label{fig:OGKingctr}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Centre/RGDP_11/RGDP_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Centre/RGDP_11/RGDP_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the RGDP model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Centre/RGDP_11/RGDP_fit.pdf}
+  \caption{Projections of the posterior distribution for the RGDP model.}
 \label{fig:RGDPctr}
 \end {figure}
 %############################# ELLIPTIC MODELS ###############################################
-\clearpage
-\subsection{Models with biaxial symmetry}
+\section{Models with biaxial symmetry}
 \label{sect:app_biaxial}
 
-{\tiny
-\begin{multline}
+\resizebox{\textwidth}{!}{
+$
 \Sigma_{\rm{EFF}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Elliptic/EFF_11/EFF_covariance.txt}
 \end{array}\right) \nonumber
-\end{multline}
+$
 
-\begin{multline}
+$
 \Sigma_{\rm{GDP}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Elliptic/GDP_11/GDP_covariance.txt}
 \end{array}\right) \nonumber
-\end{multline}
+$
 
-\begin{multline}
+}
+ \resizebox{\textwidth}{!}{
+ 
+$
 \Sigma_{\rm{GKing}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Elliptic/GKing_11/GKing_covariance.txt}
 \end{array}\right) \nonumber
-\end{multline}
+$
 
 
-\begin{multline}
+$
 \Sigma_{\rm{King}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Elliptic/King_11/King_covariance.txt}
 \end{array}\right) \nonumber
-\end{multline}
+$
 
-
-\begin{multline}
+}
+ \resizebox{\textwidth}{!}{
+ 
+$
 \Sigma_{\rm{OGKing}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Elliptic/OGKing_11/OGKing_covariance.txt}
 \end{array}\right)\nonumber
-\end{multline}
+$
 
-\begin{multline}
+$
 \Sigma_{\rm{RGDP}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Elliptic/RGDP_11/RGDP_covariance.txt}
 \end{array}\right)\nonumber
-\end{multline}
+$
 }
    
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Elliptic/GDP_11/GDP_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Elliptic/GDP_11/GDP_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the GDP biaxially symmetric model .}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Elliptic/GDP_11/GDP_fit.pdf}
+  \caption{Projections of the posterior distribution for the GDP biaxially symmetric model.}
 \label{fig:GDP7Ell}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Elliptic/GKing_11/GKing_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Elliptic/GKing_11/GKing_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the GKing biaxially symmetric model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Elliptic/GKing_11/GKing_fit.pdf}
+  \caption{Projection of the posterior distribution for the GKing biaxially symmetric model.}
 \label{fig:GKingEll}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Elliptic/King_11/King_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Elliptic/King_11/King_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the King's biaxially symmetric model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Elliptic/King_11/King_fit.pdf}
+  \caption{Projection of the posterior distribution for  the King's biaxially symmetric model.}
 \label{fig:KingEll}
 \end {figure}
 
-
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Elliptic/OGKing_11/OGKing_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Elliptic/OGKing_11/OGKing_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the OGKing biaxially symmetric model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Elliptic/OGKing_11/OGKing_fit.pdf}
+  \caption{Projection of the posterior distribution for the OGKing biaxially symmetric model.}
 \label{fig:OGKingEll}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Elliptic/RGDP_11/RGDP_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Elliptic/RGDP_11/RGDP_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the RGDP biaxially symmetric model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Elliptic/RGDP_11/RGDP_fit.pdf}
+  \caption{Projection of the posterior distribution for the RGDP biaxially symmetric model.}
 \label{fig:RGDPEll}
 \end {figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% Ellipticity distributions %%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
 \begin {figure}
- \centering
- \includegraphics[page=5,width=0.5\textwidth]{Analysis/Elliptic/EFF_11/EFF_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the EFF biaxially symmetric model.}
-\label{fig:EFFEllepsilon}
-\end {figure}
-
-\begin {figure}
- \centering
- \includegraphics[page=5,width=0.5\textwidth]{Analysis/Elliptic/GDP_11/GDP_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the GDP biaxially symmetric model.}
-\label{fig:GDPEllepsilon}
-\end {figure}
-
-\begin {figure}
- \centering
- \includegraphics[page=5,width=0.5\textwidth]{Analysis/Elliptic/GKing_11/GKing_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the GKing biaxially symmetric model .}
-\label{fig:GKingEllepsilon}
-\end {figure}
-
-\begin {figure}
- \centering
- \includegraphics[page=5,width=0.5\textwidth]{Analysis/Elliptic/King_11/King_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the King biaxially symmetric model .}
-\label{fig:KingEllepsilon}
-\end {figure}
-
-\begin {figure}
- \centering
- \includegraphics[page=5,width=0.5\textwidth]{Analysis/Elliptic/OGKing_11/OGKing_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the OGKing biaxially symmetric model .}
-\label{fig:OGKingEllepsilon}
-\end {figure}
-
-\begin {figure}
- \centering
- \includegraphics[page=5,width=0.5\textwidth]{Analysis/Elliptic/RGDP_11/RGDP_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the RGDP biaxially symmetric model .}
-\label{fig:RGDPEllepsilon}
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Elliptic/EFF_11/EFF_fit.pdf}
+ \caption{EFF}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Elliptic/GDP_11/GDP_fit.pdf}
+ \caption{GDP}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Elliptic/GKing_11/GKing_fit.pdf}
+ \caption{GKing}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Elliptic/King_11/King_fit.pdf}
+ \caption{King}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Elliptic/OGKing_11/OGKing_fit.pdf}
+ \caption{OGKing}  
+    \end{subfigure}
+        \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=5,width=\textwidth]{Analysis/Elliptic/RGDP_11/RGDP_fit.pdf}
+ \caption{RGDP}  
+    \end{subfigure}
+  \caption{Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry.}
+\label{fig:ElliticityEll}
 \end {figure}
 
 %############################# MODELS with luminosity segregation ###############################################
-\clearpage
-\subsection{Models with luminosity segregation}
-\label{sect:app_segregated}
 
-{\tiny
-\begin{multline}
+\section{Models with luminosity segregation}
+\label{sect:app_segregated}
+\begin{center}
+
+ \resizebox{\textwidth}{!}{
+ $
+\Sigma_{\rm{EFF}}=
+\left(
+\arraycolsep=1.5pt
+\begin{array}{*{10}r}
+\input{./Analysis/Segregated/EFF_11/EFF_covariance.txt}
+\end{array}\right) \nonumber
+$
+ 
+$
 \Sigma_{\rm{GDP}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Segregated/GDP_11/GDP_covariance.txt}
 \end{array}\right) \nonumber
-\end{multline}
-
-\begin{multline}
+$
+}
+ \resizebox{\textwidth}{!}{
+$
 \Sigma_{\rm{GKing}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Segregated/GKing_11/GKing_covariance.txt}
 \end{array}\right) \nonumber
-\end{multline}
+$
 
-
-
-\begin{multline}
+$
 \Sigma_{\rm{King}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Segregated/King_11/King_covariance.txt}
 \end{array}\right) \nonumber
-\end{multline}
+$
+}
+ \resizebox{\textwidth}{!}{
 
-
-\begin{multline}
+$
 \Sigma_{\rm{OGKing}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Segregated/OGKing_11/OGKing_covariance.txt}
 \end{array}\right)\nonumber
-\end{multline}
+$
 
-\begin{multline}
+$
 \Sigma_{\rm{RGDP}}=
 \left(
 \arraycolsep=1.5pt
 \begin{array}{*{10}r}
 \input{./Analysis/Segregated/RGDP_11/RGDP_covariance.txt}
 \end{array}\right)\nonumber
-\end{multline}
+$
 }
-   
-
+\end{center}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Segregated/EFF_11/EFF_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Segregated/EFF_11/EFF_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the EFF luminosity segregated model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Segregated/EFF_11/EFF_fit.pdf}
+  \caption{Projections of the posterior distribution for the EFF luminosity segregated model.}
 \label{fig:EFFSeg}
 \end {figure}
 
-
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Segregated/GDP_11/GDP_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Segregated/GDP_11/GDP_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the GDP luminosity segregated model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Segregated/GDP_11/GDP_fit.pdf}
+  \caption{Projections of the posterior distribution for the GDP luminosity segregated model.}
 \label{fig:GDPSeg}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Segregated/GKing_11/GKing_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Segregated/GKing_11/GKing_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the GKing luminosity segregated model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Segregated/GKing_11/GKing_fit.pdf}
+  \caption{Projections of the posterior distribution for the GKing luminosity segregated model.}
 \label{fig:GKingSeg}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Segregated/King_11/King_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Segregated/King_11/King_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the King's luminosity segregated model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Segregated/King_11/King_fit.pdf}
+  \caption{Projections of the posterior distribution for the King's luminosity segregated model.}
 \label{fig:KingSeg}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Segregated/OGKing_11/OGKing_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Segregated/OGKing_11/OGKing_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the OGKing luminosity segregated model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Segregated/OGKing_11/OGKing_fit.pdf}
+  \caption{Projections of the posterior distribution for the OGKing luminosity segregated model.}
 \label{fig:OGKingSeg}
 \end {figure}
 
 \begin {figure}
  \centering
- \includegraphics[page=2,width=0.5\textwidth]{Analysis/Segregated/RGDP_11/RGDP_fit.pdf}
- \includegraphics[page=4,width=0.5\textwidth]{Analysis/Segregated/RGDP_11/RGDP_fit.pdf}
-  \caption{Profile density (left), and projection of the posterior distribution (right) of the RGDP luminosity segregated model.}
+ \includegraphics[page=4,width=\textwidth]{Analysis/Segregated/RGDP_11/RGDP_fit.pdf}
+  \caption{Projections of the posterior distribution for the RGDP luminosity segregated model.}
 \label{fig:RGDPSeg}
 \end {figure}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%% Segregatedity distributions %%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-\begin{figure}
- \centering
- \includegraphics[page=6,width=0.5\textwidth]{Analysis/Segregated/EFF_11/EFF_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the EFF luminosity segregated model.}
-\label{fig:EFFSegEpsilon}
-\end {figure}
-
+%%%%%%%%%%%%%%%%%%%%%%%% Ellipticity distributions %%%%%%%%%%%%%%%%%%%%%%%%
 \begin {figure}
- \centering
- \includegraphics[page=6,width=0.5\textwidth]{Analysis/Segregated/GDP_11/GDP_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the GDP luminosity segregated model.}
-\label{fig:GDPSegEpsilon}
+\centering
+\begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=6,width=\textwidth]{Analysis/Segregated/EFF_11/EFF_fit.pdf}
+ \caption{EFF}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=6,width=\textwidth]{Analysis/Segregated/GDP_11/GDP_fit.pdf}
+ \caption{GDP}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=6,width=\textwidth]{Analysis/Segregated/GKing_11/GKing_fit.pdf}
+ \caption{GKing}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=6,width=\textwidth]{Analysis/Segregated/King_11/King_fit.pdf}
+ \caption{King}  
+    \end{subfigure}
+    \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=6,width=\textwidth]{Analysis/Segregated/OGKing_11/OGKing_fit.pdf}
+ \caption{OGKing}  
+    \end{subfigure}
+        \begin{subfigure}[t]{0.45\textwidth}
+ \includegraphics[page=6,width=\textwidth]{Analysis/Segregated/RGDP_11/RGDP_fit.pdf}
+ \caption{RGDP}  
+    \end{subfigure}
+  \caption{Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry and luminosity segregation.}
+\label{fig:EllipticitySeg}
 \end {figure}
 
-\begin {figure}
- \centering
- \includegraphics[page=6,width=0.5\textwidth]{Analysis/Segregated/GKing_11/GKing_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the GKing luminosity segregated model.}
-\label{fig:GKingSegEpsilon}
-\end {figure}
 
-\begin {figure}
- \centering
- \includegraphics[page=6,width=0.5\textwidth]{Analysis/Segregated/King_11/King_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the King luminosity segregated model.}
-\label{fig:KingSegEpsilon}
-\end {figure}
 
-\begin {figure}
- \centering
- \includegraphics[page=6,width=0.5\textwidth]{Analysis/Segregated/OGKing_11/OGKing_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the OGKing luminosity segregated model.}
-\label{fig:OGKingSegEpsilon}
-\end {figure}
-
-\begin {figure}
- \centering
- \includegraphics[page=6,width=0.5\textwidth]{Analysis/Segregated/RGDP_11/RGDP_fit.pdf}
-  \caption{Ellipticity distribution computed from the posterior distribution of the RGDP luminosity segregated model.}
-\label{fig:RGDPSegEpsilon}
-\end {figure}
 
 
 
