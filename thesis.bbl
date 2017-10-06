@@ -1,4 +1,4 @@
-\begin{thebibliography}{225}
+\begin{thebibliography}{228}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -212,6 +212,11 @@ Clerc, M. \& Kennedy, J. 2002, Trans. Evol. Comp, 6, 58
 \bibitem[{De~Boor(1978)}]{deBoor1978}
 De~Boor, C. 1978, A practical guide to splines / Carl de Boor (Springer-Verlag
   New York), xxiv, 392 p. :
+
+\bibitem[{{De Gennaro} {et~al.}(2009){De Gennaro}, {von Hippel}, {Jefferys},
+  {Stein}, {van Dyk}, \& {Jeffery}}]{DeGennaro2009}
+{De Gennaro}, S., {von Hippel}, T., {Jefferys}, W.~H., {et~al.} 2009, \apj,
+  696, 12
 
 \bibitem[{{de Graeve}(1979)}]{1979PVatO...1....1D}
 {de Graeve}, E. 1979, Publications of the Vatican Observatory V.1:16, P.~1,
@@ -662,6 +667,11 @@ Metropolis, N., Rosenbluth, A.~W., Rosenbluth, M.~N., Teller, A.~H., \& Teller,
 \bibitem[{Morris(1983)}]{Morris1983}
 Morris, C.~N. 1983, Journal of the American Statistical Association, 78, 47
 
+\bibitem[{{Muench} {et~al.}(2002){Muench}, {Lada}, {Lada}, \&
+  {Alves}}]{Muench2002}
+{Muench}, A.~A., {Lada}, E.~A., {Lada}, C.~J., \& {Alves}, J. 2002, \apj, 573,
+  366
+
 \bibitem[{{Mulders} {et~al.}(2015){Mulders}, {Pascucci}, \&
   {Apai}}]{2015ApJ...814..130M}
 {Mulders}, G.~D., {Pascucci}, I., \& {Apai}, D. 2015, \apj, 814, 130
@@ -765,6 +775,9 @@ Roberts, G.~O. \& Rosenthal, J.~S. 2004, Probability Surveys, 1, 20
 \bibitem[{{Rosvick} {et~al.}(1992){Rosvick}, {Mermilliod}, \&
   {Mayor}}]{1992A&A...255..130R}
 {Rosvick}, J.~M., {Mermilliod}, J.-C., \& {Mayor}, M. 1992, \aap, 255, 130
+
+\bibitem[{Rueda(1992)}]{Rueda1992}
+Rueda, R. 1992, Test, 1, 61
 
 \bibitem[{{Sackett} \& {Sparke}(1990)}]{1990ApJ...361..408S}
 {Sackett}, P.~D. \& {Sparke}, L.~S. 1990, \apj, 361, 408

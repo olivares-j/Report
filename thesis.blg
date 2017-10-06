@@ -2,51 +2,51 @@ This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: aa.bst
-Reallocated field_info (elt_size=4) to 10175 items from 5000.
+Reallocated field_info (elt_size=4) to 10244 items from 5000.
 Database file #1: biblio.bib
 Warning--empty publisher in 1910pgcs.book.....B
 Warning--can't use both author and editor fields in 2013pss5.book..115K
 Warning--empty publisher in 2013pss5.book..115K
 Warning--empty publisher in Smart1977
-You've used 225 entries,
+You've used 228 entries,
             2947 wiz_defined-function locations,
-            2080 strings with 47629 characters,
-and the built_in function-call counts, 108083 in all, are:
-= -- 9015
-> -- 8158
-< -- 134
-+ -- 2737
-- -- 2488
-* -- 8880
-:= -- 19920
-add.period$ -- 225
-call.type$ -- 225
-change.case$ -- 1723
-chr.to.int$ -- 228
-cite$ -- 229
-duplicate$ -- 4276
-empty$ -- 6211
-format.name$ -- 3079
-if$ -- 21461
+            2098 strings with 48185 characters,
+and the built_in function-call counts, 109471 in all, are:
+= -- 9130
+> -- 8265
+< -- 135
++ -- 2775
+- -- 2521
+* -- 8996
+:= -- 20182
+add.period$ -- 228
+call.type$ -- 228
+change.case$ -- 1746
+chr.to.int$ -- 231
+cite$ -- 232
+duplicate$ -- 4330
+empty$ -- 6287
+format.name$ -- 3118
+if$ -- 21731
 int.to.chr$ -- 7
 int.to.str$ -- 1
-missing$ -- 201
-newline$ -- 679
-num.names$ -- 917
-pop$ -- 1806
+missing$ -- 204
+newline$ -- 688
+num.names$ -- 929
+pop$ -- 1829
 preamble$ -- 1
-purify$ -- 1716
+purify$ -- 1739
 quote$ -- 0
-skip$ -- 3753
+skip$ -- 3797
 stack$ -- 0
-substring$ -- 4677
+substring$ -- 4736
 swap$ -- 176
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1983
+type$ -- 2010
 warning$ -- 4
-while$ -- 908
+while$ -- 920
 width$ -- 0
-write$ -- 2249
+write$ -- 2279
 (There were 4 warnings)

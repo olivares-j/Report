@@ -534,11 +534,14 @@ The cluster membership probability of each object in our data set are computed f
 \label{eq:prob_dist}
 p( \mathcal{M}_c | \mathbf{d}_n) =\frac{p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)\cdot (1-\pi)}{\pi \cdot p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n) + (1-\pi)\cdot p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)},
 \end{equation}
-In Eq. \ref{eq:prob}, the probabilities $P( \mathcal{M}_k | \mathbf{d})$ are \gls{pmf} because the probabilities $P( \mathcal{M}_k )$ are themselves \gls{pmf}. However, in Eq. \ref{eq:prob_dist}, by hierarchically setting the prior probabilities $\pi$ and $1-\pi$ as random variables drawn from a Dirichlet distribution $Dir(\boldsymbol{\alpha})$, then $p(\mathcal{M}_c | \mathbf{d}_n)$ also follows a probability distribution. To demonstrate this, let  $y= p( \mathcal{M}_c | \mathbf{d}_n)$, and 
-\begin{equation}
-g(\pi)= \frac{p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)\cdot (1-\pi)}{\pi \cdot p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n) + (1-\pi)\cdot p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)},\nonumber
-\end{equation}
-a transformation of $\pi$. Then, by definition $y \equiv g(\pi)$ and $y$ follows the distribution $y= g(Dir(\boldsymbol{\alpha}))$. Since, the parameter $\pi$ is also inferred from the data, then each cluster membership probability determined in this work is itself a \gls{pdf}. 
+In Eq. \ref{eq:prob}, the probabilities $P( \mathcal{M}_k | \mathbf{d})$ are \gls{pmf} because the probabilities $P( \mathcal{M}_k )$ are themselves \gls{pmf}. However, in Eq. \ref{eq:prob_dist}, by setting the prior probability $\pi$ as a random variable ($\pi \in [0,1]$), which is itself inferred from the data in a hierarchical way and with prior \gls{pdf} given by a Dirichlet distribution $Dir(\boldsymbol{\alpha})$ (with $\boldsymbol{\alpha}$ its hyper-parameter), then $p(\mathcal{M}_c | \mathbf{d}_n)$ also follows a probability distribution. To demonstrate this, let 
+\begin{align}
+y&= p( \mathcal{M}_c | \mathbf{d}_n),\nonumber \\
+g(\pi)&= \frac{p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)\cdot (1-\pi)}{\pi \cdot p_f(\mathbf{d}_n|\boldsymbol{\theta}_f,\mathbf{u}_n) + (1-\pi)\cdot p_c(\mathbf{d}_n| \boldsymbol{\theta}_c,\mathbf{u}_n)},\nonumber \\
+\pi &\sim p(\pi),\nonumber
+\end{align}
+with $p(\pi)$ the probability distribution of the random variable $\pi$, and $g(\pi)$ a linear transformation of $\pi$.
+Then, by definition $y \equiv g(\pi)$, and $y$ follows the probability distribution given by $y= g(p(\pi))$. Since the parameter $\pi$ is also inferred from the data, then each cluster membership probability determined in this work is itself a \gls{pdf}. 
 
 
 

@@ -66,29 +66,29 @@
 \contentsline {subsection}{\numberline {3.7.4}Priors in the Projected Spatial Distribution models}{132}{subsection.3.7.4}
 \contentsline {chapter}{\numberline {4}Results}{134}{chapter.4}
 \contentsline {section}{\numberline {4.1}Performance of the classifier}{134}{section.4.1}
-\contentsline {section}{\numberline {4.2}Comparison with the literature}{144}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Candidate members from \citet {Stauffer2007}}{144}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Candidate members from \citet {Bouy2015}}{145}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Candidate members from \citet {Rebull2016}}{150}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}The statistical distributions of the Pleiades.}{152}{section.4.3}
-\contentsline {section}{\numberline {4.4}Updating the assumptions and prior knowledge}{156}{section.4.4}
+\contentsline {section}{\numberline {4.2}Comparison with the literature}{143}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Candidate members from \citet {Stauffer2007}}{145}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Candidate members from \citet {Bouy2015}}{147}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Candidate members from \citet {Rebull2016}}{152}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}The statistical distributions of the Pleiades.}{153}{section.4.3}
+\contentsline {section}{\numberline {4.4}Updating the assumptions and priors}{157}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Assumptions}{157}{subsection.4.4.1}
 \contentsline {section}{\numberline {4.5}Projected spatial distribution}{157}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Selection of models with radial symmetry}{159}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Selection of models with biaxial symmetry}{162}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Selection of models with luminosity segregation}{164}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Proper motions distribution}{167}{section.4.6}
-\contentsline {section}{\numberline {4.7}Luminosity distribution}{168}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{170}{subsection.4.7.1}
-\contentsline {section}{\numberline {4.8}Mass distribution}{172}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{174}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.5.1}Selection of models with radial symmetry}{161}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Selection of models with biaxial symmetry}{164}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Selection of models with luminosity segregation}{166}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Proper motions distribution}{169}{section.4.6}
+\contentsline {section}{\numberline {4.7}Luminosity distribution}{172}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{172}{subsection.4.7.1}
+\contentsline {section}{\numberline {4.8}Mass distribution}{175}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{175}{subsection.4.8.1}
 \contentsline {subsection}{\numberline {4.8.2}Present day system mass distribution}{177}{subsection.4.8.2}
-\contentsline {section}{\numberline {4.9}The mass distribution on time}{179}{section.4.9}
-\contentsline {chapter}{\numberline {5}Conclusions and future work}{185}{chapter.5}
-\contentsline {section}{\numberline {5.1}Current issues and future improvements}{187}{section.5.1}
-\contentsline {chapter}{\numberline {A}Posterior distributions of the PSD }{190}{appendix.A}
-\contentsline {section}{\numberline {A.1}Models with radial symmetry}{191}{section.A.1}
-\contentsline {section}{\numberline {A.2}Models with biaxial symmetry}{191}{section.A.2}
-\contentsline {section}{\numberline {A.3}Models with luminosity segregation}{203}{section.A.3}
-\contentsline {chapter}{Bibliography}{203}{figure.caption.128}
-\contentsline {chapter}{Acronyms}{222}{section*.130}
+\contentsline {section}{\numberline {4.9}The mass distribution on time}{184}{section.4.9}
+\contentsline {chapter}{\numberline {5}Conclusions and future work}{188}{chapter.5}
+\contentsline {section}{\numberline {5.1}Current issues and future improvements}{190}{section.5.1}
+\contentsline {chapter}{\numberline {A}Posterior distributions of the PSD }{193}{appendix.A}
+\contentsline {section}{\numberline {A.1}Models with radial symmetry}{194}{section.A.1}
+\contentsline {section}{\numberline {A.2}Models with biaxial symmetry}{194}{section.A.2}
+\contentsline {section}{\numberline {A.3}Models with luminosity segregation}{206}{section.A.3}
+\contentsline {chapter}{Bibliography}{206}{figure.caption.132}
+\contentsline {chapter}{Acronyms}{225}{section*.134}
