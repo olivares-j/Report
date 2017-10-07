@@ -431,7 +431,7 @@ where $I_x=0$ stands for the probability that the photometric band $x$ which can
 \end{equation}
 with $p(I_{K_s}=0 )$ the fraction of objects with missing values in $K_s$. The latter assumes that missing values in $K_s$ are uniformly distributed.
 
-Thus, I now have three synthetic data sets. The original one, with completely observed entries (hereafter Complete), the one with missing values (hereafter Missing), and, the one resulting from taking only the completely observed objects from the one with missing values (hereafter Observed). Figure \ref{fig:ignorability_synthetic} shows the distribution of objects in these data sets as a function of the photometric magnitude for each magnitude. To each of these data sets, I apply the \gls{gmm} algorithm (the one described in Section \ref{sec:codeGMM}) and recover the fractions, means and covariance matrices of the \gls{gmm}. I call these set of parameters and the densities they produce Complete, Missing, and Observed, in accordance to the data set from which they were obtained.
+Thus, I now have three synthetic data sets. The original one, with completely observed entries (hereafter Complete), the one with missing values (hereafter Missing), and, the one resulting from taking only the completely observed objects from the one with missing values (hereafter Observed). Figure \ref{fig:ignorability_synthetic} shows the distribution of objects in these data sets as a function of the photometric magnitude for each magnitude. These densities are similar to the corresponding ones in the \gls{rdr2}, as expected (see Fig. \ref{fig:mis_vs_obs}). To each of these data sets, I apply the \gls{gmm} algorithm (the one described in Section \ref{sec:codeGMM}) and recover the fractions, means and covariance matrices of the \gls{gmm}. I call these set of parameters and the densities they produce Complete, Missing, and Observed, in accordance to the data set from which they were obtained.
 
 \begin{figure}[ht!]
     \centering
@@ -451,44 +451,45 @@ Thus, I now have three synthetic data sets. The original one, with completely ob
 \label{fig:ignorability_synthetic}
 \end{figure}
 
-By means of these three set of parameters, I can quantify the bias induced by the \emph{ignorability} and \emph{naivety} assumptions. The first is given by the Missing data set and parameters, while the later by the Observed data set and parameters. Furthermore, to minimise the effects of the sample size in the comparisons, instead of comparing the Missing and Observed set of parameters to the true parameters, I  use the Complete set of parameters. 
-
-I quantify differences by means of the Root Mean Square Deviation, which is defined as, 
+By means of these three set of parameters, I can quantify the bias induced by the \emph{ignorability} and \emph{naivety} assumptions. The first is given by the Missing data set and the parameters derived from it, while the later by the Observed data set and its derived parameters. Furthermore, to minimise the effects of the sample size, instead of comparing the Missing and Observed set of parameters to the true one, I  compare them to the Complete set of parameters. To quantify differences, I use the Root Mean Square Relative Deviation, which is defined as, 
 
 \begin{equation}
-RMSD = \sqrt{\frac{\sum_i^n(\frac{x_i-y_i}{y_i})^2}{n}}, \nonumber
+RMSRD = \sqrt{\frac{\sum_i^n\left(\frac{x_i-y_i}{y_i}\right)^2}{n}}, \nonumber
 \end{equation}
 
-where $x_i$ is the density given by the Missing or Observed \glspl{gmm} and $y_i$ is the density given by the Complete \gls{gmm}. 
+where $x_i$ is the density given by the either the Missing or the Observed \glspl{gmm}, and $y_i$ is the density given by the Complete \gls{gmm}. 
 
-The densities of the Complete, Missing and Observed \glspl{gmm} are evaluated in grids (with $n$ total points separated by 0.05 mag) in each of the $Y,J,H,K_s$ vs \gls{ci} \glspl{cmd}. The RMSDs are computed just for those points in the grids where the Complete density is higher than $10^{-3}$, which avoids the regions far from the cluster sequence where the density vanishes. Figure \ref{fig:ignorable_and_naive} shows the RMSDs of the Missing and Observed \glspl{gmm} compared to the Complete one. As can be seen, the Observed parameters return projected densities that are over-estimated in the central parts, particularly at $\gls{ci}\sim3.5$. On the other hand, the Missing parameters return densities similar to the original ones across the \gls{cmd}.
+The densities of the Complete, Missing and Observed \glspl{gmm} are evaluated in grids (with $n$ total points separated by 0.05 mag) in each of the $Y,J,H,K_s$ vs \gls{ci} \glspl{cmd}. The RMSRDs are computed just for those points in the grids where the Complete density is higher than $10^{-3}$, which avoids the regions far from the cluster sequence where the density vanishes. The mean RMSRD of the Observed  and Missing \glspl{gmm} in the four \glspl{cmd} are $0.78\pm0.38$ and $0.21\pm0.4$, respectively. Uncertainties are the standard deviation of the four RMSRDs.
 
-The mean RMSD of the Observed  and Missing \glspl{gmm} in the four \glspl{cmd} are $0.78\pm0.38$ and $0.21\pm0.4$, respectively. Uncertainties are the standard deviation of the four RMSDs.
+In addition, the mean absolute relative difference of the Missing and Observed set of parameters when compared to the Complete ones are $0.42 \pm 2.5$ and $1.5 \pm 3.2$, respectively.  
+
+The previous values indicate that the Missing and Observed \glspl{gmm} resulting from the \emph{ignorability} and \emph{naivety} assumptions, respectively, are indeed biased. However, as these values demonstrate, the bias introduced by the \emph{naivety} assumption is 3.5 times larger than that introduced by the \emph{ignorability} assumption. 
+
+Figure \ref{fig:ignorable_and_naive} shows the (absolute) differences of the Missing and Observed \glspl{gmm} when compared to the Complete one. As can be seen, the \emph{naivety} assumption (Observed \gls{gmm}) leads to: i) overestimated field densities in the central regions corresponding \gls{ci}= 3.5, and, ii) underestimated field densities in the bright and faintest regions  $\gls{ci}\sim[2,5,6.5]$. On the other hand, the \emph{ignorability} assumption (Missing \gls{gmm}) leads to field densities similar to the Complete ones across the \glspl{cmd}, except at the very faint ends $\gls{ci}>5$.
+
 
 \begin{figure}[ht!]
 \begin{center}
-\begin{subfigure}[t]{0.45\textwidth}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[page=1,width=\textwidth]{./background/Figures/validationMissing.pdf}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
 \includegraphics[page=2,width=\textwidth]{./background/Figures/validationMissing.pdf}
 \end{subfigure}
-\begin{subfigure}[t]{0.45\textwidth}
+\begin{subfigure}[t]{0.47\textwidth}
+\includegraphics[page=3,width=\textwidth]{./background/Figures/validationMissing.pdf}
+\end{subfigure}
+\begin{subfigure}[t]{0.47\textwidth}
 \includegraphics[page=4,width=\textwidth]{./background/Figures/validationMissing.pdf}
 \end{subfigure}
-\begin{subfigure}[t]{0.45\textwidth}
-\includegraphics[page=6,width=\textwidth]{./background/Figures/validationMissing.pdf}
-\end{subfigure}
-\begin{subfigure}[t]{0.45\textwidth}
-\includegraphics[page=8,width=\textwidth]{./background/Figures/validationMissing.pdf}
-\end{subfigure}
-\caption{Contours comparing the relative deviations of the Observed (left panels) and Missing (right panels) \glspl{gmm} when compared to the Complete \gls{gmm} (in grey scale at the background), projected in each of the \glspl{cmd} used in this work.  Regions where the density of the Complete model goes below $10^{-3}$ are not shown.}
+\caption{Contours comparing the deviations in the density (in units of mag$^{-2}$) of the Observed (left panels) and Missing (right panels) \glspl{gmm} when compared to the Complete \gls{gmm} (in grey scale at the background), projected in each of the \glspl{cmd} used in this work.  Regions where the density of the Complete model goes below $10^{-3}$ are not shown.}
 \label{fig:ignorable_and_naive}
 \end{center}
 \end{figure}
 
-In addition, the mean absolute relative difference of the Missing and Observed set of parameters when compared to the Complete ones are $0.42 \pm 2.5$ and $1.5 \pm 3.2$, respectively.  
 
-The previous values indicate that the Missing and Observed \gls{gmm} resulting from the \emph{ignorability} and \emph{naivety} assumptions, respectively are indeed biased. However, as this figures demonstrate, the bias introduced by the \emph{naivety} assumption is more than 3.5 times larger than that introduced by the \emph{ignorability} assumption. Furthermore, the \emph{naivety} reaches its maximum deviation at \gls{ci}= 3.5, exactly where the cluster reaches is peak density, which is not a coincidence. The cluster members have been thoroughly observed.
 
-In spite of the incorrectness of the \emph{ignorability} assumption, which nevertheless enable us to analytically perform the marginalisation integral (Eq. \ref{eq:marginalmis}) and reduce the computing time, it renders better estimates of the true population parameters than the commonly spread naivety assumption used by the previous works from the literature (see Section \ref{sect:current_methodologies}). 
+In spite of the incorrectness of the \emph{ignorability} assumption, which nevertheless enable us to analytically perform the marginalisation integral (Eq. \ref{eq:marginalmis}) and reduce the computing time, it renders better estimates of the true population parameters than the commonly spread \emph{naivety} assumption used by the previous works from the literature (see Section \ref{sect:current_methodologies}). 
 
 \subsection{The generative model}
 \label{sect:generative-model}
@@ -659,9 +660,9 @@ It is known that unresolved systems of stars (groups of stars that, given the sp
 
 Since the pioneer work of \citet{Trumpler1921}, we know that some of the Pleiades members are double systems. Recently, \citet{Sarro2014} show evidence that some of these double systems lie in an \gls{emb} sequence. Those authors model the \gls{emb} sequence assuming that its number of objects is 20\% of the total number of cluster members. In the present work, we also model objects is this displaced \gls{emb} sequence  but we do not assume that its proportion is fixed; we infer it from the data. 
 
-Unresolved multiple systems, binary systems particularly, have an impact on the cluster proper motions distribution. In stellar clusters, the massive objects are expected to fall towards the centre of the gravitational potential at a higher rate than that of the less massive ones {\cite[see for example][p. 556]{Binney2008}}. This behaviour arises from stellar encounters in which the energy exchange results in the less massive objects gaining kinetic energy and the massive ones losing it. {Since binaries and multiple systems are typically more massive than the average object, they are expected to fall towards the cluster centre.} From an astrometric point of view, an unresolved system shifts the photo-centre of its images when compared to that of a single object. Given the previous considerations, we decide to model the \gls{emb} as an independent population in the proper motions. Furthermore, we pair this proper motions model to its photometric counterpart. This more comprehensive statistical model allows us to directly compare the kinematic and photometric properties of the \gls{emb} population with those of the rest of the cluster. 
+Unresolved multiple systems, binary systems particularly, have an impact on the cluster proper motions distribution. In stellar clusters, the massive objects are expected to fall towards the centre of the gravitational potential at a higher rate than that of the less massive ones {\cite[see for example][p. 556]{Binney2008}}. This behaviour arises from stellar encounters in which the energy exchange results in the less massive objects gaining kinetic energy and the massive ones losing it. Since binaries and multiple systems are typically more massive than the average object, they are expected to fall towards the cluster centre. From an astrometric point of view, an unresolved system shifts the photo-centre of its images when compared to that of a single object. Given the previous considerations, we decide to model the \gls{emb} as an independent population in the proper motions. Furthermore, we pair this proper motions model to its photometric counterpart. This more comprehensive statistical model allows us to directly compare the kinematic and photometric properties of the \gls{emb} population with those of the rest of the cluster. 
 
-For the sake of simplicity, in the following whenever I refer to the photometric or proper motions model of the \gls{emb}s, I call it the \gls{emb} sequence model (with the subindex $Bs$). I refer to the model of the rest of the stars as the cluster sequence model or simply single stars. Despite that this is an abuse of the terminology, because there are binaries and multiple systems with different mass ratios, it keeps the text more readable.
+Furthermore, our model of cluster and \gls{emb} also include an intrinsic dispersion of the photometric sequences. This intrinsic dispersion allows to include as candidate members true cluster members that are displaced from the infinitely narrow sequence due to variations in the average properties (e.g. distance). On of these properties is the mass ratio, but notice that due to the degeneracies, we can not disentangle binaries of low mass ratio from single stars that are closer than the average. In a similar way, the sequence of \gls{emb}, due to its width, contains also binaries of mass ratio similar to one. However, for the sake of simplicity, in the following whenever I refer to the photometric or proper motions model of the \glspl{emb} and stars of mass ratio similar to one, I call it the \gls{emb} sequence model (with the subindex $Bs$). Likewise, whenever I refer to the model of the single stars, which include binaries with mass ratio similar to zero, I call it the cluster sequence or the single star sequence. Despite that this is an abuse of the terminology, it keeps the text more readable.
 
 \subsubsection{Photometric model of single and EMB stars}
 \label{sect:cluster_ph}
@@ -682,8 +683,8 @@ In star clusters, stars and brown dwarfs are born almost simultaneously (althoug
 
 \begin{figure}[htp!]
 \begin{center}
-\includegraphics[page=1,width=0.8\textwidth]{background/Figures/Teff_vs_phot.pdf}
-\caption{\gls{hrd} (left) $K$ vs. $i-K$ \gls{cmd} (right). The black dots and lines are the Pleiades isochrone given by the BT-Settl models of \citep{2014IAUS..299..271A}. The blue dots are the Pleiades candidate members of \citet{Bouy2015}}
+\includegraphics[page=1,width=0.8\textwidth]{background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf}
+\caption{\gls{hrd} (left), $K$ vs. $i-K$ (middle) and $K_s$ vs $J-K_s$ (right) \glspl{cmd}. The black dots and lines are the Pleiades isochrone given by the BT-Settl models of \citep{2014IAUS..299..271A}. The blue dots are the Pleiades candidate members of \citet{Bouy2015}. In the middle panel the i band has been shifted 0.7 mag.}
 \label{fig:HDRvsCMD}
 \end{center}
 \end{figure}
@@ -698,21 +699,21 @@ where, $h$, $k_B$ and $c$ are Planck's and Boltzmann's constants and the speed o
 
 In the ideal model of a star, its luminosity and spectral energy distribution are prescribed by its effective temperature\footnote{The definition of effective temperature is that of a black body that yields the same luminosity per surface area as the star} and radius. 
 
-Because of the previous reasons, the photometric observables can be roughly\footnote{This is a very idealised scenario in which the metallically, variability, magnetic fields, rotation, and other properties have been left aside.} estimated as the combined outcome of the radius and effective temperature of stars and brown dwarfs. Given the importance of the effective temperature, it seems reasonable to find proxies for it in the combination of direct observables. Colour indices are one of these proxies. Defined as the difference of two photometric bands, the provide a proxy for the slope of the spectral energy distribution and therefore for the effective temperature.  However, the quality of the index as an estimator of the effective temperature depends on the latter. 
+Because of the previous reasons, the photometric observables can be roughly\footnote{This is a very idealised scenario in which the metallically, variability, magnetic fields, rotation, and other properties have been left aside.} estimated as the combined outcome of the radius and effective temperature of stars and brown dwarfs (although the opacity of their atmospheres plays an important part). Given the importance of the effective temperature, it seems reasonable to find proxies for it in the combination of direct observables. If we were to use of the effective temperature (or the mass) of the star as the parameter to model the photometry, its determination would have require the use of a stellar structure model (like the BT-Settl described before). The simple black body approximation is not precise enough. Although the stellar structure models are one of the greatest achievements of modern astrophysics, they still fail to reproduce, at the level of precision required in this work, the observed photometry of low-mass stars and brown dwarfs \cite[see Fig. \ref{fig:HDRvsCMD}, and for example ][]{Bouy2015}.Thus, instead of modelling the photometry by means of a non-observed parameter, we opt to use a combination of observables. Colour indices are good proxies of the effective temperature. Defined as the difference of two photometric bands, the provide a proxy for the slope of the spectral energy distribution and therefore for the effective temperature.  However, the quality of the index as an estimator of the effective temperature depends on the value of the latter. 
 
 As mentioned by \citet{1998A&A...333..231B}, the colour index I-K is a good indicator of the effective temperature of M dwarfs. In the light of new theoretical evolutionary models of \citet{2014IAUS..299..271A}, I decided to investigate which of the magnitudes or colour indices available in our set of observables provides the best proxy for the effective temperature. 
 
 Figure \ref{fig:Teff_vs_colours} shows the effective temperature, given by the 120 Myr isochrone of the BT-Settl models \citep{2014IAUS..299..271A}, as a function of the absolute magnitudes and colour indices available in our set of observables. 
-As the reader can confirm, given the typical uncertainty of 0.1 mag in the photometric bands, the \glsfirst{ci} provides the best estimator of the effective temperature from within the available colour indices. 
+As it can be seen, given the typical uncertainty of 0.1 mag in the photometric bands, the \glsfirst{ci} provides the best estimator of the effective temperature from within the available colour indices. 
 
 
 \begin{figure}[htp!]
 \begin{center} 
 \begin{subfigure}[t]{0.48\textwidth}
-\includegraphics[page=2,width=\textwidth]{background/Figures/Teff_vs_phot.pdf}
+\includegraphics[page=2,width=\textwidth]{background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf}
 \end{subfigure}
  \begin{subfigure}[t]{0.48\textwidth}
-\includegraphics[page=3,width=\textwidth]{background/Figures/Teff_vs_phot.pdf}
+\includegraphics[page=3,width=\textwidth]{background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf}
 \end{subfigure}
 \caption{Effective temperature as a function of the photometric bands and colour indices within the photometric observables of the RF-2 set. Derived from the BT-Settl models \citep{2014IAUS..299..271A} using an age of 120 \gls{myr}.}
 \label{fig:Teff_vs_colours}
@@ -785,7 +786,7 @@ Where $B_{i,3}$ are the cubic \glspl{bspline} given by the Cox-de Boor recursive
 
 Despite their fitting properties, \glspl{bspline} present a problem when simultaneously inferring their coefficients and knots: there is multi-modality in the parametric space \citep{Lindstrom1999}. It means that at least more than one combination of parameters produces the same solution. To avoid this multi-modality, I decided to keep the knots fixed throughout the inference. Although this decision reduces the flexibility of the splines, it allows a still better fit than that of the tested functions (i.e. the polynomial bases). To obtain the \gls{mle} of the knots I use the algorithm of  \citet{Spiriti2013}. This algorithm, implemented in the \emph{freeknotsplines} R package, allows to simultaneously obtain the knots and the best truncation value for the spline series. It uses the \gls{bic} to select among competing models. In order to obtain both the truncation of the series and the value of the knots, I use the candidate members of \citet{Bouy2015}. The \gls{bic} indicates that seven coefficients is the best number of components for the \glspl{bspline} series, with the knots at $\mathbf{t}=\{0.8,3.22,3.22,5.17,8.0\}$. I tested different number of knots, ranging from two to nine, with five the best configuration given by the \gls{bic}. Figure \ref{fig:fitCMDs} show the spline fits to the \gls{rdr2} candidate members of \citet{Bouy2015}, resulting from the previous knots. In this fit, \glspl{emb} are excluded (see Section \ref{sect:priors} for details of how they are removed). The positions of the knots are indicated by vertical lines.
 
-In general, the continuity of a spline function is $C^{p-k}$, with $p$ the degree of the spline, and $k$ the highest multiplicity of the knots \citep{deBoor1978}. In our case, since the knot at 3.22 has a multiplicity of two, then the resulting spline has lost one degree of continuity. It is now $C^1$ continuous. It means that the spline and its derivative are continuous, thus ensuring a smooth function. Furthermore, due to their pice-wise properties,\glspl{bspline} will enable us to model more complicated photometric sequences in which the turn-off point of the sequence may be present.
+In general, the continuity of a spline function is $C^{p-k}$, with $p$ the degree of the spline, and $k$ the highest multiplicity of the knots \citep{deBoor1978}. In our case, since the knot at 3.22 has a multiplicity of two, then the resulting spline has lost one degree of continuity. It is now $C^1$ continuous. It means that the spline and its derivative are continuous, thus ensuring a smooth\footnote{In Section \ref{sect:luminosity}, the \gls{bspline} will be used to transform the \emph{true} \gls{ci} distribution into the magnitude distributions. Since the spline and its derivative are both continuous, not further treatment is needed. If this were not the case, the \emph{true} \gls{ci} distribution should have to be transformed in the intervals in which the splines and its derivative are both continuous.} function. Furthermore, due to their pice-wise properties, \glspl{bspline} will enable us to model more complicated photometric sequences in which the turn-off point of the sequence may be present.
 
 \begin{figure}[ht!]
     \centering
@@ -1725,7 +1726,7 @@ r(\theta) = \frac{r_{a}\cdot r_{b}}{\sqrt{(r_{a}\sin(\theta))^2+r_{b}\cos(\theta
 \label{eq:rang}
 \end{equation}
 
-where $\theta$ is the position angle measured from the semi-major axis, and $r_a$ and $r_b$ are the parameters
+where $\theta$ is the position angle of each star, which is measured from the semi-major axis, and $r_a$ and $r_b$ are the parameters
 representing the characteristic radius at the semi-major and -minor axis, respectively.
 
 We illustrate this new biaxial dependancy in the King's profile. 
@@ -1750,8 +1751,9 @@ r_t(\theta) = \frac{r_{ta}\cdot r_{tb}}{\sqrt{(r_{ta}\sin(\theta))^2+r_{tb}\cos(
 \end{equation}
 
 $r_{ca}$ and $r_{tb}$ are the core and tidal radius at the semi-major axis of the ellipse, and $r_{cb}$
-and $r_{tb}$ are the the corresponding ones of the semi-minor axis. Notice that we do not
-constrain the two ellipses to have the same aspect ratio, but they are co-aligned.
+and $r_{tb}$ are the the corresponding ones of the semi-minor axis. In these models, all the cluster members share the same
+$r_{ca},r_{cb},r_{ta},r_{tb}$ parameters, but each individual member have different $r_t$ and $r_c$.
+Notice that we do not constrain the two ellipses to have the same aspect ratio, but they are co-aligned.
 
 For the remaining model the likelihoods are similarly obtained. We
 do not incorporate any angle dependence for the exponents $\alpha,\beta$ or $\gamma$.  

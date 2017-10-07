@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  6 OCT 2017 18:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  7 OCT 2017 23:41
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2073,7 +2073,7 @@ Package pdftex.def Info: background/Figures/BGMM.png used on input line 309.
 (pdftex.def)             Requested size: 241.17456pt x 227.62204pt.
  [69 <./background/Figures/BGMM.png>] [70]
 [71] [72] [73] [74]
-<background/Figures/Check_distributions.pdf, id=3334, page=2, 399.41846pt x 335
+<background/Figures/Check_distributions.pdf, id=3336, page=2, 399.41846pt x 335
 .10179pt>
 File: background/Figures/Check_distributions.pdf Graphic file (type pdf)
  <use background/Figures/Check_distributions.pdf, page 2>
@@ -2081,7 +2081,7 @@ Package pdftex.def Info: background/Figures/Check_distributions.pdf, page2 used
  on input line 439.
 (pdftex.def)             Requested size: 203.48131pt x 170.71652pt.
 
-<background/Figures/Check_distributions.pdf, id=3335, page=3, 399.41846pt x 335
+<background/Figures/Check_distributions.pdf, id=3337, page=3, 399.41846pt x 335
 .10179pt>
 File: background/Figures/Check_distributions.pdf Graphic file (type pdf)
  <use background/Figures/Check_distributions.pdf, page 3>
@@ -2089,7 +2089,7 @@ Package pdftex.def Info: background/Figures/Check_distributions.pdf, page3 used
  on input line 442.
 (pdftex.def)             Requested size: 203.48131pt x 170.71652pt.
 
-<background/Figures/Check_distributions.pdf, id=3336, page=4, 399.41846pt x 335
+<background/Figures/Check_distributions.pdf, id=3338, page=4, 399.41846pt x 335
 .10179pt>
 File: background/Figures/Check_distributions.pdf Graphic file (type pdf)
  <use background/Figures/Check_distributions.pdf, page 4>
@@ -2097,7 +2097,7 @@ Package pdftex.def Info: background/Figures/Check_distributions.pdf, page4 used
  on input line 445.
 (pdftex.def)             Requested size: 203.48131pt x 170.71652pt.
 
-<background/Figures/Check_distributions.pdf, id=3337, page=5, 399.41846pt x 335
+<background/Figures/Check_distributions.pdf, id=3339, page=5, 399.41846pt x 335
 .10179pt>
 File: background/Figures/Check_distributions.pdf Graphic file (type pdf)
  <use background/Figures/Check_distributions.pdf, page 5>
@@ -2109,57 +2109,57 @@ Package pdftex.def Info: background/Figures/Check_distributions.pdf, page5 used
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.465 
-      ]
-<./background/Figures/validationMissing.pdf, id=3357, page=2, 406.83876pt x 310
+l.463 
+      ] [76 <./background/Figures/Check_distributions.pdf> <./background/Figure
+s/Check_distributions.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Check_distribut
+ions.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+> <./background/Figures/Check_distributions.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Check_distribut
+ions.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+> <./background/Figures/Check_distributions.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Check_distribut
+ions.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+>]
+<./background/Figures/validationMissing.pdf, id=3414, page=1, 409.67213pt x 310
+.34052pt>
+File: ./background/Figures/validationMissing.pdf Graphic file (type pdf)
+ <use ./background/Figures/validationMissing.pdf, page 1>
+Package pdftex.def Info: ./background/Figures/validationMissing.pdf, page1 used
+ on input line 474.
+(pdftex.def)             Requested size: 213.96527pt x 162.0883pt.
+
+<./background/Figures/validationMissing.pdf, id=3415, page=2, 409.67213pt x 310
 .34052pt>
 File: ./background/Figures/validationMissing.pdf Graphic file (type pdf)
  <use ./background/Figures/validationMissing.pdf, page 2>
 Package pdftex.def Info: ./background/Figures/validationMissing.pdf, page2 used
- on input line 471.
-(pdftex.def)             Requested size: 204.85844pt x 156.26848pt.
+ on input line 477.
+(pdftex.def)             Requested size: 213.96527pt x 162.0883pt.
 
-<./background/Figures/validationMissing.pdf, id=3358, page=4, 406.83876pt x 310
+<./background/Figures/validationMissing.pdf, id=3416, page=3, 409.67213pt x 310
+.34052pt>
+File: ./background/Figures/validationMissing.pdf Graphic file (type pdf)
+ <use ./background/Figures/validationMissing.pdf, page 3>
+Package pdftex.def Info: ./background/Figures/validationMissing.pdf, page3 used
+ on input line 480.
+(pdftex.def)             Requested size: 213.96527pt x 162.0883pt.
+
+<./background/Figures/validationMissing.pdf, id=3417, page=4, 409.67213pt x 310
 .34052pt>
 File: ./background/Figures/validationMissing.pdf Graphic file (type pdf)
  <use ./background/Figures/validationMissing.pdf, page 4>
 Package pdftex.def Info: ./background/Figures/validationMissing.pdf, page4 used
- on input line 474.
-(pdftex.def)             Requested size: 204.85844pt x 156.26848pt.
-
-<./background/Figures/validationMissing.pdf, id=3359, page=6, 406.83876pt x 310
-.34052pt>
-File: ./background/Figures/validationMissing.pdf Graphic file (type pdf)
- <use ./background/Figures/validationMissing.pdf, page 6>
-Package pdftex.def Info: ./background/Figures/validationMissing.pdf, page6 used
- on input line 477.
-(pdftex.def)             Requested size: 204.85844pt x 156.26848pt.
-
-<./background/Figures/validationMissing.pdf, id=3360, page=8, 406.83876pt x 310
-.34052pt>
-File: ./background/Figures/validationMissing.pdf Graphic file (type pdf)
- <use ./background/Figures/validationMissing.pdf, page 8>
-Package pdftex.def Info: ./background/Figures/validationMissing.pdf, page8 used
- on input line 480.
-(pdftex.def)             Requested size: 204.85844pt x 156.26848pt.
- [76 <./background/Figures/Check_distributions.pdf> <./background/Figures/Check
-_distributions.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Check_distribut
-ions.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
-ge
-> <./background/Figures/Check_distributions.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Check_distribut
-ions.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
-ge
-> <./background/Figures/Check_distributions.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Check_distribut
-ions.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
-ge
->] [77 <./background/Figures/validationMissing.pdf> <./background/Figures/valid
-ationMissing.pdf
+ on input line 483.
+(pdftex.def)             Requested size: 213.96527pt x 162.0883pt.
+ [77 <./background/Figures/validationMissing.pdf> <./background/Figures/validat
+ionMissing.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/validationMissi
 ng.pdf): PDF inclusion: multiple pdfs with page group included in a single page
@@ -2178,57 +2178,56 @@ ng.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 3.24}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.501 \begin{equation}
+l.502 \begin{equation}
                        [78] [79] [80]
-<background/Figures/Field_GMM.pdf, id=3594, page=2, 393.41974pt x 310.34052pt>
+<background/Figures/Field_GMM.pdf, id=3579, page=2, 393.41974pt x 310.34052pt>
 File: background/Figures/Field_GMM.pdf Graphic file (type pdf)
 
 <use background/Figures/Field_GMM.pdf, page 2>
 Package pdftex.def Info: background/Figures/Field_GMM.pdf, page2 used on input 
-line 590.
+line 591.
 (pdftex.def)             Requested size: 218.51862pt x 227.62636pt.
 
-<background/Figures/Field_GMM.pdf, id=3595, page=3, 393.41974pt x 310.34052pt>
+<background/Figures/Field_GMM.pdf, id=3580, page=3, 393.41974pt x 310.34052pt>
 File: background/Figures/Field_GMM.pdf Graphic file (type pdf)
 
 <use background/Figures/Field_GMM.pdf, page 3>
 Package pdftex.def Info: background/Figures/Field_GMM.pdf, page3 used on input 
-line 594.
+line 595.
 (pdftex.def)             Requested size: 218.51862pt x 227.62636pt.
 
-<background/Figures/Field_GMM.pdf, id=3596, page=4, 393.41974pt x 310.34052pt>
+<background/Figures/Field_GMM.pdf, id=3581, page=4, 393.41974pt x 310.34052pt>
 File: background/Figures/Field_GMM.pdf Graphic file (type pdf)
 
 <use background/Figures/Field_GMM.pdf, page 4>
 Package pdftex.def Info: background/Figures/Field_GMM.pdf, page4 used on input 
-line 598.
+line 599.
 (pdftex.def)             Requested size: 218.51862pt x 227.62636pt.
 
-<background/Figures/Field_GMM.pdf, id=3597, page=5, 393.41974pt x 310.34052pt>
+<background/Figures/Field_GMM.pdf, id=3582, page=5, 393.41974pt x 310.34052pt>
 File: background/Figures/Field_GMM.pdf Graphic file (type pdf)
 
 <use background/Figures/Field_GMM.pdf, page 5>
 Package pdftex.def Info: background/Figures/Field_GMM.pdf, page5 used on input 
-line 602.
+line 603.
 (pdftex.def)             Requested size: 218.51862pt x 227.62636pt.
-
-<background/Figures/Field_GMM.pdf, id=3610, page=7, 393.41974pt x 310.34052pt>
+ [81]
+<background/Figures/Field_GMM.pdf, id=3606, page=7, 393.41974pt x 310.34052pt>
 File: background/Figures/Field_GMM.pdf Graphic file (type pdf)
 
 <use background/Figures/Field_GMM.pdf, page 7>
 Package pdftex.def Info: background/Figures/Field_GMM.pdf, page7 used on input 
-line 612.
+line 613.
 (pdftex.def)             Requested size: 218.51862pt x 227.62636pt.
 
-<background/Figures/Field_GMM.pdf, id=3611, page=8, 393.41974pt x 310.34052pt>
+<background/Figures/Field_GMM.pdf, id=3607, page=8, 393.41974pt x 310.34052pt>
 File: background/Figures/Field_GMM.pdf Graphic file (type pdf)
 
 <use background/Figures/Field_GMM.pdf, page 8>
 Package pdftex.def Info: background/Figures/Field_GMM.pdf, page8 used on input 
-line 616.
+line 617.
 (pdftex.def)             Requested size: 218.51862pt x 227.62636pt.
- [81] [82 <./background/Figures/Field_GMM.pdf> <./background/Figures/Field_GMM.
-pdf
+ [82 <./background/Figures/Field_GMM.pdf> <./background/Figures/Field_GMM.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Field_GMM.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
@@ -2241,20 +2240,20 @@ pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Field_GMM.pdf):
 pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Field_GMM.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<background/Figures/GMM-PM-BIC=15.pdf, id=3715, page=3, 405.85988pt x 311.91939
+<background/Figures/GMM-PM-BIC=15.pdf, id=3700, page=3, 405.85988pt x 311.91939
 pt>
 File: background/Figures/GMM-PM-BIC=15.pdf Graphic file (type pdf)
  <use background/Figures/GMM-PM-BIC=15.pdf, page 3>
 Package pdftex.def Info: background/Figures/GMM-PM-BIC=15.pdf, page3 used on in
-put line 628.
+put line 629.
 (pdftex.def)             Requested size: 364.19664pt x 279.9062pt.
 
-<background/Figures/Field_GMM.pdf, id=3716, page=1, 405.85988pt x 311.91939pt>
+<background/Figures/Field_GMM.pdf, id=3701, page=1, 405.85988pt x 311.91939pt>
 File: background/Figures/Field_GMM.pdf Graphic file (type pdf)
 
 <use background/Figures/Field_GMM.pdf, page 1>
 Package pdftex.def Info: background/Figures/Field_GMM.pdf, page1 used on input 
-line 634.
+line 635.
 (pdftex.def)             Requested size: 364.19664pt x 279.9062pt.
  [83 <./background/Figures/Field_GMM.pdf> <./background/Figures/Field_GMM.pdf
 
@@ -2275,380 +2274,390 @@ Overfull \hbox (15.2363pt too wide) in paragraph at lines 6--24
  []
 
 ) [85]
-<background/Figures/Hertzsprung-Russel_StarData.png, id=3801, 569.12625pt x 602
+<background/Figures/Hertzsprung-Russel_StarData.png, id=3787, 569.12625pt x 602
 .25pt>
 File: background/Figures/Hertzsprung-Russel_StarData.png Graphic file (type png
 )
  <use background/Figures/Hertzsprung-Russel_StarData.png>
 Package pdftex.def Info: background/Figures/Hertzsprung-Russel_StarData.png use
-d on input line 673.
+d on input line 674.
 (pdftex.def)             Requested size: 273.14922pt x 289.05833pt.
+ [86]
+<background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, id=3806, page=1, 4
+52.60153pt x 315.86394pt>
+File: background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf Graphic file (
+type pdf)
 
-<background/Figures/Teff_vs_phot.pdf, id=3813, page=1, 452.60153pt x 316.16193p
-t>
-File: background/Figures/Teff_vs_phot.pdf Graphic file (type pdf)
- <use background/Figures/Teff_vs_phot.pdf, page 1>
-Package pdftex.def Info: background/Figures/Teff_vs_phot.pdf, page1 used on inp
-ut line 685.
-(pdftex.def)             Requested size: 364.19664pt x 254.41092pt.
- [86] [87 <./background/Figures/Hertzsprung-Russel_StarData.png (PNG copy)> <./
-background/Figures/Teff_vs_phot.pdf>]
-<background/Figures/Teff_vs_phot.pdf, id=3924, page=2, 423.03795pt x 315.76015p
-t>
-File: background/Figures/Teff_vs_phot.pdf Graphic file (type pdf)
- <use background/Figures/Teff_vs_phot.pdf, page 2>
-Package pdftex.def Info: background/Figures/Teff_vs_phot.pdf, page2 used on inp
-ut line 712.
-(pdftex.def)             Requested size: 218.51521pt x 163.10251pt.
+<use background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, page 1>
+Package pdftex.def Info: background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot
+.pdf, page1 used on input line 686.
+(pdftex.def)             Requested size: 364.19664pt x 254.17113pt.
 
-<background/Figures/Teff_vs_phot.pdf, id=3925, page=3, 423.03795pt x 315.76015p
-t>
-File: background/Figures/Teff_vs_phot.pdf Graphic file (type pdf)
- <use background/Figures/Teff_vs_phot.pdf, page 3>
-Package pdftex.def Info: background/Figures/Teff_vs_phot.pdf, page3 used on inp
-ut line 715.
-(pdftex.def)             Requested size: 218.51521pt x 163.10251pt.
+[87 <./background/Figures/Hertzsprung-Russel_StarData.png (PNG copy)>] [88 <./b
+ackground/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf>]
+<background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, id=3926, page=2, 4
+23.03795pt x 315.53458pt>
+File: background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf Graphic file (
+type pdf)
 
-<background/Figures/CIs.pdf, id=3939, page=1, 505.89pt x 505.89pt>
+<use background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, page 2>
+Package pdftex.def Info: background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot
+.pdf, page2 used on input line 713.
+(pdftex.def)             Requested size: 218.51521pt x 162.986pt.
+
+<background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, id=3927, page=3, 4
+23.03795pt x 315.53458pt>
+File: background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf Graphic file (
+type pdf)
+
+<use background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, page 3>
+Package pdftex.def Info: background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot
+.pdf, page3 used on input line 716.
+(pdftex.def)             Requested size: 218.51521pt x 162.986pt.
+
+<background/Figures/CIs.pdf, id=3941, page=1, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 1>
 Package pdftex.def Info: background/Figures/CIs.pdf, page1 used on input line 7
-28.
+29.
 (pdftex.def)             Requested size: 227.62523pt x 227.62204pt.
- [88]
-<background/Figures/CIs.pdf, id=3957, page=2, 505.89pt x 505.89pt>
+
+<background/Figures/CIs.pdf, id=3946, page=2, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 2>
 Package pdftex.def Info: background/Figures/CIs.pdf, page2 used on input line 7
-37.
+38.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=3958, page=3, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=3947, page=3, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 3>
 Package pdftex.def Info: background/Figures/CIs.pdf, page3 used on input line 7
-42.
+43.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=3959, page=4, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=3948, page=4, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 4>
 Package pdftex.def Info: background/Figures/CIs.pdf, page4 used on input line 7
-47.
+48.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
 
-<background/Figures/CIs.pdf, id=3960, page=5, 505.89pt x 505.89pt>
+<background/Figures/CIs.pdf, id=3949, page=5, 505.89pt x 505.89pt>
 File: background/Figures/CIs.pdf Graphic file (type pdf)
 
 <use background/Figures/CIs.pdf, page 5>
 Package pdftex.def Info: background/Figures/CIs.pdf, page5 used on input line 7
-52.
+53.
 (pdftex.def)             Requested size: 170.71892pt x 170.71652pt.
- [89 <./background/Figures/Teff_vs_phot.pdf> <./background/Figures/Teff_vs_phot
-.pdf
+ [89 <./background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf> <./backgrou
+nd/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf
 
-pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/Teff_vs_phot.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
-> <./background/Figures/CIs.pdf>]pdfTeX warning (ext4): destination with the sa
-me identifier (name{equation.3.3.32}) has been already used, duplicate ignored
+pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/BT-Settl-2011bc
+-120Myr_Teff_vs_phot.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+>]pdfTeX warning (ext4): destination with the same identifier (name{equation.3.
+3.32}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.780 \begin{equation}
-                       [90 <./background/Figures/CIs.pdf> <./background/Figures
-/CIs.pdf> <./background/Figures/CIs.pdf> <./background/Figures/CIs.pdf>]
-<background/Figures/Photometry_fit.pdf, id=4107, page=1, 505.89pt x 505.89pt>
+l.781 \begin{equation}
+                       [90 <./background/Figures/CIs.pdf>] [91 <./background/Fi
+gures/CIs.pdf> <./background/Figures/CIs.pdf> <./background/Figures/CIs.pdf> <.
+/background/Figures/CIs.pdf>]
+<background/Figures/Photometry_fit.pdf, id=4117, page=1, 505.89pt x 505.89pt>
 File: background/Figures/Photometry_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Photometry_fit.pdf, page 1>
 Package pdftex.def Info: background/Figures/Photometry_fit.pdf, page1 used on i
-nput line 793.
+nput line 794.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/Photometry_fit.pdf, id=4108, page=3, 505.89pt x 505.89pt>
+<background/Figures/Photometry_fit.pdf, id=4118, page=3, 505.89pt x 505.89pt>
 File: background/Figures/Photometry_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Photometry_fit.pdf, page 3>
 Package pdftex.def Info: background/Figures/Photometry_fit.pdf, page3 used on i
-nput line 798.
+nput line 799.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/Photometry_fit.pdf, id=4109, page=5, 505.89pt x 505.89pt>
+<background/Figures/Photometry_fit.pdf, id=4119, page=5, 505.89pt x 505.89pt>
 File: background/Figures/Photometry_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Photometry_fit.pdf, page 5>
 Package pdftex.def Info: background/Figures/Photometry_fit.pdf, page5 used on i
-nput line 803.
+nput line 804.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/Photometry_fit.pdf, id=4110, page=7, 505.89pt x 505.89pt>
+<background/Figures/Photometry_fit.pdf, id=4120, page=7, 505.89pt x 505.89pt>
 File: background/Figures/Photometry_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Photometry_fit.pdf, page 7>
 Package pdftex.def Info: background/Figures/Photometry_fit.pdf, page7 used on i
-nput line 808.
+nput line 809.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
- [91] [92 <./background/Figures/Photometry_fit.pdf> <./background/Figures/Photo
-metry_fit.pdf> <./background/Figures/Photometry_fit.pdf> <./background/Figures/
-Photometry_fit.pdf>]
-<background/Figures/F2_Hillenbrand2008.pdf, id=4166, 344.52515pt x 346.683pt>
+ [92]
+<background/Figures/F2_Hillenbrand2008.pdf, id=4159, 344.52515pt x 346.683pt>
 File: background/Figures/F2_Hillenbrand2008.pdf Graphic file (type pdf)
 
 <use background/Figures/F2_Hillenbrand2008.pdf>
 Package pdftex.def Info: background/Figures/F2_Hillenbrand2008.pdf used on inpu
-t line 825.
+t line 826.
 (pdftex.def)             Requested size: 364.19664pt x 366.49829pt.
- [93 <./background/Figures/F2_Hillenbrand2008.pdf>] [94]
-<background/Figures/BIC_Color_fit.pdf, id=4236, page=1, 505.89pt x 505.89pt>
+ [93 <./background/Figures/Photometry_fit.pdf> <./background/Figures/Photometry
+_fit.pdf> <./background/Figures/Photometry_fit.pdf> <./background/Figures/Photo
+metry_fit.pdf>] [94 <./background/Figures/F2_Hillenbrand2008.pdf>]
+<background/Figures/BIC_Color_fit.pdf, id=4232, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BIC_Color_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/BIC_Color_fit.pdf, page 1>
 Package pdftex.def Info: background/Figures/BIC_Color_fit.pdf, page1 used on in
-put line 875.
+put line 876.
 (pdftex.def)             Requested size: 455.24408pt x 455.25046pt.
  [95] [96 <./background/Figures/BIC_Color_fit.pdf>] [97]
-<background/Figures/BIC_PM_Cs_fit.pdf, id=4341, page=1, 505.89pt x 505.89pt>
+<background/Figures/BIC_PM_Cs_fit.pdf, id=4337, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BIC_PM_Cs_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/BIC_PM_Cs_fit.pdf, page 1>
 Package pdftex.def Info: background/Figures/BIC_PM_Cs_fit.pdf, page1 used on in
-put line 927.
+put line 928.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/BIC_PM_Bs_fit.pdf, id=4342, page=1, 505.89pt x 505.89pt>
+<background/Figures/BIC_PM_Bs_fit.pdf, id=4338, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BIC_PM_Bs_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/BIC_PM_Bs_fit.pdf, page 1>
 Package pdftex.def Info: background/Figures/BIC_PM_Bs_fit.pdf, page1 used on in
-put line 931.
+put line 932.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/BIC_PM_Cs_fit.pdf, id=4355, page=2, 505.89pt x 505.89pt>
+<background/Figures/BIC_PM_Cs_fit.pdf, id=4351, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BIC_PM_Cs_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/BIC_PM_Cs_fit.pdf, page 2>
 Package pdftex.def Info: background/Figures/BIC_PM_Cs_fit.pdf, page2 used on in
-put line 942.
+put line 943.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/BIC_PM_Cs_fit.pdf, id=4356, page=3, 505.89pt x 505.89pt>
+<background/Figures/BIC_PM_Cs_fit.pdf, id=4352, page=3, 505.89pt x 505.89pt>
 File: background/Figures/BIC_PM_Cs_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/BIC_PM_Cs_fit.pdf, page 3>
 Package pdftex.def Info: background/Figures/BIC_PM_Cs_fit.pdf, page3 used on in
-put line 946.
+put line 947.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/BIC_PM_Bs_fit.pdf, id=4357, page=2, 505.89pt x 505.89pt>
+<background/Figures/BIC_PM_Bs_fit.pdf, id=4353, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BIC_PM_Bs_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/BIC_PM_Bs_fit.pdf, page 2>
 Package pdftex.def Info: background/Figures/BIC_PM_Bs_fit.pdf, page2 used on in
-put line 950.
+put line 951.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/BIC_PM_Bs_fit.pdf, id=4358, page=3, 505.89pt x 505.89pt>
+<background/Figures/BIC_PM_Bs_fit.pdf, id=4354, page=3, 505.89pt x 505.89pt>
 File: background/Figures/BIC_PM_Bs_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/BIC_PM_Bs_fit.pdf, page 3>
 Package pdftex.def Info: background/Figures/BIC_PM_Bs_fit.pdf, page3 used on in
-put line 954.
+put line 955.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
- [98 <./background/Figures/BIC_PM_Cs_fit.pdf> <./background/Figures/BIC_PM_Bs_f
-it.pdf>] [99 <./background/Figures/BIC_PM_Cs_fit.pdf> <./background/Figures/BIC
-_PM_Cs_fit.pdf> <./background/Figures/BIC_PM_Bs_fit.pdf> <./background/Figures/
-BIC_PM_Bs_fit.pdf>]
+ [98]
 (./background/Tables/ClusterParameters.txt
 Overfull \hbox (51.74403pt too wide) in paragraph at lines 7--34
  [][] 
  []
 
 ) (./background/Tables/AllParameters.txt)
-(./background/Figures/Hierarchical_ClusterStars.tex)
+(./background/Figures/Hierarchical_ClusterStars.tex) [99 <./background/Figures/
+BIC_PM_Cs_fit.pdf> <./background/Figures/BIC_PM_Bs_fit.pdf>] [100 <./background
+/Figures/BIC_PM_Cs_fit.pdf> <./background/Figures/BIC_PM_Cs_fit.pdf> <./backgro
+und/Figures/BIC_PM_Bs_fit.pdf> <./background/Figures/BIC_PM_Bs_fit.pdf>]
 (./background/Tables/PriorsParameters.txt
 Overfull \hbox (69.21584pt too wide) in paragraph at lines 6--56
  [][] 
  []
 
-) [100] [101] [102]
+) [101] [102] [103]
 
-LaTeX Warning: Text page 103 contains only floats.
+LaTeX Warning: Text page 104 contains only floats.
 
-[103] <background/Figures/Priors.pdf, id=4597, page=1, 505.89pt x 505.89pt>
+[104] <background/Figures/Priors.pdf, id=4603, page=1, 505.89pt x 505.89pt>
 File: background/Figures/Priors.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors.pdf, page 1>
 Package pdftex.def Info: background/Figures/Priors.pdf, page1 used on input lin
-e 1032.
+e 1033.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors.pdf, id=4598, page=2, 505.89pt x 505.89pt>
+<background/Figures/Priors.pdf, id=4604, page=2, 505.89pt x 505.89pt>
 File: background/Figures/Priors.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors.pdf, page 2>
 Package pdftex.def Info: background/Figures/Priors.pdf, page2 used on input lin
-e 1036.
+e 1037.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors.pdf, id=4599, page=3, 505.89pt x 505.89pt>
+<background/Figures/Priors.pdf, id=4605, page=3, 505.89pt x 505.89pt>
 File: background/Figures/Priors.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors.pdf, page 3>
 Package pdftex.def Info: background/Figures/Priors.pdf, page3 used on input lin
-e 1040.
+e 1041.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors.pdf, id=4600, page=4, 505.89pt x 505.89pt>
+<background/Figures/Priors.pdf, id=4606, page=4, 505.89pt x 505.89pt>
 File: background/Figures/Priors.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors.pdf, page 4>
 Package pdftex.def Info: background/Figures/Priors.pdf, page4 used on input lin
-e 1044.
+e 1045.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
-
-<background/Figures/Hyp_PM_fit.pdf, id=4611, page=1, 505.89pt x 505.89pt>
+ [105 <./background/Figures/Priors.pdf> <./background/Figures/Priors.pdf> <./ba
+ckground/Figures/Priors.pdf> <./background/Figures/Priors.pdf>]
+<background/Figures/Hyp_PM_fit.pdf, id=4627, page=1, 505.89pt x 505.89pt>
 File: background/Figures/Hyp_PM_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Hyp_PM_fit.pdf, page 1>
 Package pdftex.def Info: background/Figures/Hyp_PM_fit.pdf, page1 used on input
- line 1067.
+ line 1068.
 (pdftex.def)             Requested size: 455.24408pt x 455.25046pt.
- [104pdfTeX warning (ext4): destination with the same identifier (name{equation
+ [106pdfTeX warning (ext4): destination with the same identifier (name{equation
 .3.4.49}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.1083 F
-        or the means in the univariate \gls{gmm} of the \emph{true} \gls{ci}...
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.4.
-49}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.1083 F
-        or the means in the univariate \gls{gmm} of the \emph{true} \gls{ci}...
-] [105 <./background/Figures/Priors.pdf> <./background/Figures/Priors.pdf> <./b
-ackground/Figures/Priors.pdf> <./background/Figures/Priors.pdf>]
-<background/Figures/Priors_Color.pdf, id=4652, page=1, 505.89pt x 505.89pt>
+l.1075 
+        <./background/Figures/Hyp_PM_fit.pdf>]pdfTeX warning (ext4): destinatio
+n with the same identifier (name{equation.3.4.49}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.1076 \begin{equation}
+                       
+<background/Figures/Priors_Color.pdf, id=4663, page=1, 505.89pt x 505.89pt>
 File: background/Figures/Priors_Color.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors_Color.pdf, page 1>
 Package pdftex.def Info: background/Figures/Priors_Color.pdf, page1 used on inp
-ut line 1088.
+ut line 1089.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors_Color.pdf, id=4653, page=2, 505.89pt x 505.89pt>
+<background/Figures/Priors_Color.pdf, id=4664, page=2, 505.89pt x 505.89pt>
 File: background/Figures/Priors_Color.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors_Color.pdf, page 2>
 Package pdftex.def Info: background/Figures/Priors_Color.pdf, page2 used on inp
-ut line 1092.
+ut line 1093.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors_Color.pdf, id=4654, page=3, 505.89pt x 505.89pt>
+<background/Figures/Priors_Color.pdf, id=4665, page=3, 505.89pt x 505.89pt>
 File: background/Figures/Priors_Color.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors_Color.pdf, page 3>
 Package pdftex.def Info: background/Figures/Priors_Color.pdf, page3 used on inp
-ut line 1096.
+ut line 1097.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
 
-<background/Figures/Priors_Color.pdf, id=4655, page=4, 505.89pt x 505.89pt>
+<background/Figures/Priors_Color.pdf, id=4666, page=4, 505.89pt x 505.89pt>
 File: background/Figures/Priors_Color.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors_Color.pdf, page 4>
 Package pdftex.def Info: background/Figures/Priors_Color.pdf, page4 used on inp
-ut line 1100.
+ut line 1101.
 (pdftex.def)             Requested size: 218.51651pt x 256.07838pt.
- [106 <./background/Figures/Hyp_PM_fit.pdf>] [107 <./background/Figures/Priors_
-Color.pdf> <./background/Figures/Priors_Color.pdf> <./background/Figures/Priors
-_Color.pdf> <./background/Figures/Priors_Color.pdf>]
-<background/Figures/Photometry_fit.pdf, id=4709, page=2, 505.89pt x 505.89pt>
+
+<background/Figures/Photometry_fit.pdf, id=4693, page=2, 505.89pt x 505.89pt>
 File: background/Figures/Photometry_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Photometry_fit.pdf, page 2>
 Package pdftex.def Info: background/Figures/Photometry_fit.pdf, page2 used on i
-nput line 1112.
+nput line 1113.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/Photometry_fit.pdf, id=4710, page=4, 505.89pt x 505.89pt>
+<background/Figures/Photometry_fit.pdf, id=4694, page=4, 505.89pt x 505.89pt>
 File: background/Figures/Photometry_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Photometry_fit.pdf, page 4>
 Package pdftex.def Info: background/Figures/Photometry_fit.pdf, page4 used on i
-nput line 1116.
+nput line 1117.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/Photometry_fit.pdf, id=4711, page=6, 505.89pt x 505.89pt>
+<background/Figures/Photometry_fit.pdf, id=4695, page=6, 505.89pt x 505.89pt>
 File: background/Figures/Photometry_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Photometry_fit.pdf, page 6>
 Package pdftex.def Info: background/Figures/Photometry_fit.pdf, page6 used on i
-nput line 1120.
+nput line 1121.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/Photometry_fit.pdf, id=4712, page=8, 505.89pt x 505.89pt>
+<background/Figures/Photometry_fit.pdf, id=4696, page=8, 505.89pt x 505.89pt>
 File: background/Figures/Photometry_fit.pdf Graphic file (type pdf)
 
 <use background/Figures/Photometry_fit.pdf, page 8>
 Package pdftex.def Info: background/Figures/Photometry_fit.pdf, page8 used on i
-nput line 1124.
+nput line 1125.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
- [108 <./background/Figures/Photometry_fit.pdf> <./background/Figures/Photometr
-y_fit.pdf> <./background/Figures/Photometry_fit.pdf> <./background/Figures/Phot
-ometry_fit.pdf>]
-(./background/Tables/HyperParameters.txt
+ [107] [108 <./background/Figures/Priors_Color.pdf> <./background/Figures/Prior
+s_Color.pdf> <./background/Figures/Priors_Color.pdf> <./background/Figures/Prio
+rs_Color.pdf>] [109 <./background/Figures/Photometry_fit.pdf> <./background/Fig
+ures/Photometry_fit.pdf> <./background/Figures/Photometry_fit.pdf> <./backgroun
+d/Figures/Photometry_fit.pdf>] (./background/Tables/HyperParameters.txt
 Overfull \hbox (42.6378pt too wide) in paragraph at lines 6--32
  [][] 
  []
 
-) [109]
-<background/Figures/Priors_Coefs.pdf, id=4777, page=4, 505.89pt x 505.89pt>
+) <background/Figures/Priors_Coefs.pdf, id=4777, page=4, 505.89pt x 505.89pt>
 File: background/Figures/Priors_Coefs.pdf Graphic file (type pdf)
 
 <use background/Figures/Priors_Coefs.pdf, page 4>
 Package pdftex.def Info: background/Figures/Priors_Coefs.pdf, page4 used on inp
-ut line 1148.
+ut line 1149.
 (pdftex.def)             Requested size: 455.24408pt x 455.25046pt.
- [110] [111 <./background/Figures/Priors_Coefs.pdf>] [112] [113]pdfTeX warning 
-(ext4): destination with the same identifier (name{equation.3.5.50}) has been a
-lready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1193 \begin{equation}
-                        [114] [115]pdfTeX warning (ext4): destination with the 
-same identifier (name{equation.3.5.52}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.1231 \begin{equation}
-                       pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.3.5.52}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1236 \begin{equation}
-                        [116pdfTeX warning (ext4): destination with the same id
-entifier (name{equation.3.5.52}) has been already used, duplicate ignored
+ [110] [111 <./background/Figures/Priors_Coefs.pdf>] [112] [113] [114pdfTeX war
+ning (ext4): destination with the same identifier (name{equation.3.5.50}) has b
+een already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.1259 \end{equation}
-                     ] [117pdfTeX warning (ext4): destination with the same ide
-ntifier (name{equation.3.5.54}) has been already used, duplicate ignored
+l.1205 
+       ] [115] [116pdfTeX warning (ext4): destination with the same identifier 
+(name{equation.3.5.52}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.1277 
+l.1253 \subsubsection
+                     {Nested sampling}pdfTeX warning (ext4): destination with t
+he same identifier (name{equation.3.5.52}) has been already used, duplicate ign
+ored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.1253 \subsubsection
+                     {Nested sampling}pdfTeX warning (ext4): destination with t
+he same identifier (name{equation.3.5.52}) has been already used, duplicate ign
+ored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.1253 \subsubsection
+                     {Nested sampling}] [117pdfTeX warning (ext4): destination 
+with the same identifier (name{equation.3.5.54}) has been already used, duplica
+te ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.1272 
        ]
 <background/Figures/BHM/AllMeanParticles.pdf, id=5029, 505.89pt x 505.89pt>
 File: background/Figures/BHM/AllMeanParticles.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/AllMeanParticles.pdf>
 Package pdftex.def Info: background/Figures/BHM/AllMeanParticles.pdf used on in
-put line 1287.
+put line 1288.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
 <background/Figures/BHM/AllVarParticles.pdf, id=5030, 505.89pt x 505.89pt>
@@ -2656,26 +2665,26 @@ File: background/Figures/BHM/AllVarParticles.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/AllVarParticles.pdf>
 Package pdftex.def Info: background/Figures/BHM/AllVarParticles.pdf used on inp
-ut line 1292.
+ut line 1293.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
- [118 <./background/Figures/BHM/AllMeanParticles.pdf> <./background/Figures/BHM
-/AllVarParticles.pdf>] [119]
+ [118] [119 <./background/Figures/BHM/AllMeanParticles.pdf> <./background/Figur
+es/BHM/AllVarParticles.pdf>]
 [120] [121] [122] [123]
-<background/Figures/Analysis_Missing_GMM.pdf, id=5181, 433.6715pt x 334.88544pt
+<background/Figures/Analysis_Missing_GMM.pdf, id=5176, 433.6715pt x 334.88544pt
 >
 File: background/Figures/Analysis_Missing_GMM.pdf Graphic file (type pdf)
  <use background/Figures/Analysis_Missing_GMM.pdf>
 Package pdftex.def Info: background/Figures/Analysis_Missing_GMM.pdf used on in
-put line 1423.
+put line 1424.
 (pdftex.def)             Requested size: 455.24408pt x 351.5532pt.
- [124 <./background/Figures/Analysis_Missing_GMM.pdf>] [125] [126] [127] [128] 
-[129] [130] [131] [132])
-(./background/Chapter4.tex [133]
+ [124] [125 <./background/Figures/Analysis_Missing_GMM.pdf>] [126] [127] [128] 
+[129] [130] [131] [132]
+[133]) (./background/Chapter4.tex [134]
 Chapter 4.
-[134
+[135
 
-] [135] [136] [137] [138]
-<background/Figures/FTPRvsSarro.pdf, id=5530, 505.89pt x 505.89pt>
+] [136] [137] [138] [139]
+<background/Figures/FTPRvsSarro.pdf, id=5536, 505.89pt x 505.89pt>
 File: background/Figures/FTPRvsSarro.pdf Graphic file (type pdf)
 
 <use background/Figures/FTPRvsSarro.pdf>
@@ -2683,24 +2692,24 @@ Package pdftex.def Info: background/Figures/FTPRvsSarro.pdf used on input line
 59.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/PrecisionAccuracy.pdf, id=5551, 505.89pt x 505.89pt>
+<background/Figures/PrecisionAccuracy.pdf, id=5557, 505.89pt x 505.89pt>
 File: background/Figures/PrecisionAccuracy.pdf Graphic file (type pdf)
 
 <use background/Figures/PrecisionAccuracy.pdf>
 Package pdftex.def Info: background/Figures/PrecisionAccuracy.pdf used on input
  line 67.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
- [139 <./background/Figures/FTPRvsSarro.pdf>] [140 <./background/Figures/Precis
-ionAccuracy.pdf>] [141]
-<background/Figures/Probabilities.pdf, id=5614, page=1, 505.89pt x 505.89pt>
+ [140 <./background/Figures/FTPRvsSarro.pdf>] [141 <./background/Figures/Precis
+ionAccuracy.pdf>] [142]
+<background/Figures/Probabilities.pdf, id=5619, page=1, 505.89pt x 505.89pt>
 File: background/Figures/Probabilities.pdf Graphic file (type pdf)
 
 <use background/Figures/Probabilities.pdf, page 1>
 Package pdftex.def Info: background/Figures/Probabilities.pdf, page1 used on in
 put line 89.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
- [142 <./background/Figures/Probabilities.pdf>]
-<background/Figures/ROC.pdf, id=5660, page=1, 505.89pt x 505.89pt>
+ [143 <./background/Figures/Probabilities.pdf>]
+<background/Figures/ROC.pdf, id=5665, page=1, 505.89pt x 505.89pt>
 File: background/Figures/ROC.pdf Graphic file (type pdf)
 
 <use background/Figures/ROC.pdf, page 1>
@@ -2708,7 +2717,7 @@ Package pdftex.def Info: background/Figures/ROC.pdf, page1 used on input line 1
 03.
 (pdftex.def)             Requested size: 364.19664pt x 364.20192pt.
 
-<background/Figures/BHM/Cs_members.pdf, id=5686, page=1, 505.89pt x 505.89pt>
+<background/Figures/BHM/Cs_members.pdf, id=5691, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Cs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Cs_members.pdf, page 1>
@@ -2716,7 +2725,7 @@ Package pdftex.def Info: background/Figures/BHM/Cs_members.pdf, page1 used on i
 nput line 120.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Bs_members.pdf, id=5687, page=1, 505.89pt x 505.89pt>
+<background/Figures/BHM/Bs_members.pdf, id=5692, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Bs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Bs_members.pdf, page 1>
@@ -2724,7 +2733,7 @@ Package pdftex.def Info: background/Figures/BHM/Bs_members.pdf, page1 used on i
 nput line 123.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Cs_members.pdf, id=5688, page=7, 505.89pt x 505.89pt>
+<background/Figures/BHM/Cs_members.pdf, id=5693, page=7, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Cs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Cs_members.pdf, page 7>
@@ -2732,7 +2741,7 @@ Package pdftex.def Info: background/Figures/BHM/Cs_members.pdf, page7 used on i
 nput line 126.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Bs_members.pdf, id=5689, page=7, 505.89pt x 505.89pt>
+<background/Figures/BHM/Bs_members.pdf, id=5694, page=7, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Bs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Bs_members.pdf, page 7>
@@ -2740,7 +2749,7 @@ Package pdftex.def Info: background/Figures/BHM/Bs_members.pdf, page7 used on i
 nput line 129.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Cs_members.pdf, id=5698, page=9, 505.89pt x 505.89pt>
+<background/Figures/BHM/Cs_members.pdf, id=5703, page=9, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Cs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Cs_members.pdf, page 9>
@@ -2748,14 +2757,14 @@ Package pdftex.def Info: background/Figures/BHM/Cs_members.pdf, page9 used on i
 nput line 138.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Bs_members.pdf, id=5699, page=9, 505.89pt x 505.89pt>
+<background/Figures/BHM/Bs_members.pdf, id=5704, page=9, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Bs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Bs_members.pdf, page 9>
 Package pdftex.def Info: background/Figures/BHM/Bs_members.pdf, page9 used on i
 nput line 141.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
- [143] [144 <./background/Figures/ROC.pdf>] [145 <./background/Figures/BHM/Cs_m
+ [144] [145 <./background/Figures/ROC.pdf>] [146 <./background/Figures/BHM/Cs_m
 embers.pdf> <./background/Figures/BHM/Bs_members.pdf> <./background/Figures/BHM
 /Cs_members.pdf> <./background/Figures/BHM/Bs_members.pdf>]
 Package epstopdf Info: Source file: <background/Figures/ST1_pm.eps>
@@ -2770,7 +2779,7 @@ ps-converted-to.pdf background/Figures/ST1_pm.eps>
 (epstopdf)             \includegraphics on input line 168.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ST1_pm-eps-converted-to.pdf, id=6032, 361.35pt x 361.35pt>
+<background/Figures/ST1_pm-eps-converted-to.pdf, id=6037, 361.35pt x 361.35pt>
 File: background/Figures/ST1_pm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/ST1_pm-eps-converted-to.pdf>
@@ -2789,7 +2798,7 @@ ps-converted-to.pdf background/Figures/ST1_ph.eps>
 (epstopdf)             \includegraphics on input line 173.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ST1_ph-eps-converted-to.pdf, id=6033, 361.35pt x 361.35pt>
+<background/Figures/ST1_ph-eps-converted-to.pdf, id=6038, 361.35pt x 361.35pt>
 File: background/Figures/ST1_ph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/ST1_ph-eps-converted-to.pdf>
@@ -2808,7 +2817,7 @@ ps-converted-to.pdf background/Figures/ST2_pm.eps>
 (epstopdf)             \includegraphics on input line 184.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ST2_pm-eps-converted-to.pdf, id=6046, 361.35pt x 361.35pt>
+<background/Figures/ST2_pm-eps-converted-to.pdf, id=6051, 361.35pt x 361.35pt>
 File: background/Figures/ST2_pm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/ST2_pm-eps-converted-to.pdf>
@@ -2827,78 +2836,92 @@ ps-converted-to.pdf background/Figures/ST2_ph.eps>
 (epstopdf)             \includegraphics on input line 188.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/ST2_ph-eps-converted-to.pdf, id=6047, 361.35pt x 361.35pt>
+<background/Figures/ST2_ph-eps-converted-to.pdf, id=6052, 361.35pt x 361.35pt>
 File: background/Figures/ST2_ph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/ST2_ph-eps-converted-to.pdf>
 Package pdftex.def Info: background/Figures/ST2_ph-eps-converted-to.pdf used on
  input line 188.
 (pdftex.def)             Requested size: 204.85844pt x 204.85786pt.
- [146 <./background/Figures/BHM/Cs_members.pdf> <./background/Figures/BHM/Bs_me
-mbers.pdf>] [147 <./background/Figures/ST1_pm-eps-converted-to.pdf> <./backgrou
+ [147 <./background/Figures/BHM/Cs_members.pdf> <./background/Figures/BHM/Bs_me
+mbers.pdf>] [148 <./background/Figures/ST1_pm-eps-converted-to.pdf> <./backgrou
 nd/Figures/ST1_ph-eps-converted-to.pdf> <./background/Figures/ST2_pm-eps-conver
 ted-to.pdf> <./background/Figures/ST2_ph-eps-converted-to.pdf>]
-<background/Figures/BHM/BHMvsBouy.pdf, id=6130, 505.89pt x 505.89pt>
+<background/Figures/BHM/BHMvsBouy.pdf, id=6136, 505.89pt x 505.89pt>
 File: background/Figures/BHM/BHMvsBouy.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/BHMvsBouy.pdf>
 Package pdftex.def Info: background/Figures/BHM/BHMvsBouy.pdf used on input lin
 e 204.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
- [148 <./background/Figures/BHM/BHMvsBouy.pdf>]
-
-LaTeX Warning: Reference `fig:NAsKs' on page 149 undefined on input line 214.
-
-<background/Figures/BHM/Rejecteds.pdf, id=6180, page=1, 505.89pt x 505.89pt>
+ [149 <./background/Figures/BHM/BHMvsBouy.pdf>]
+<background/Figures/BHM/Rejecteds.pdf, id=6177, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Rejecteds.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Rejecteds.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/Rejecteds.pdf, page1 used on in
-put line 220.
+put line 216.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/Rejecteds.pdf, id=6181, page=5, 505.89pt x 505.89pt>
+<background/Figures/Rejecteds.pdf, id=6178, page=5, 505.89pt x 505.89pt>
 File: background/Figures/Rejecteds.pdf Graphic file (type pdf)
 
 <use background/Figures/Rejecteds.pdf, page 5>
 Package pdftex.def Info: background/Figures/Rejecteds.pdf, page5 used on input 
-line 220.
+line 216.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/BHM/RejectedsCOLORS.pdf, id=6194, page=1, 505.89pt x 505.89
+<background/Figures/BHM/RejectedsCOLORS.pdf, id=6191, page=1, 505.89pt x 505.89
 pt>
 File: background/Figures/BHM/RejectedsCOLORS.pdf Graphic file (type pdf)
  <use background/Figures/BHM/RejectedsCOLORS.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/RejectedsCOLORS.pdf, page1 used
- on input line 228.
+ on input line 224.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/RejectedsCOLORS.pdf, id=6195, page=5, 505.89pt x 505.89pt>
+<background/Figures/RejectedsCOLORS.pdf, id=6192, page=5, 505.89pt x 505.89pt>
 File: background/Figures/RejectedsCOLORS.pdf Graphic file (type pdf)
 
 <use background/Figures/RejectedsCOLORS.pdf, page 5>
 Package pdftex.def Info: background/Figures/RejectedsCOLORS.pdf, page5 used on 
-input line 228.
+input line 224.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
- [149]
-<background/Figures/BHM/NewOnes.pdf, id=6237, page=1, 505.89pt x 505.89pt>
+ [150]
+<background/Figures/BHM/Rejecteds.pdf, id=6231, page=7, 505.89pt x 505.89pt>
+File: background/Figures/BHM/Rejecteds.pdf Graphic file (type pdf)
+
+<use background/Figures/BHM/Rejecteds.pdf, page 7>
+Package pdftex.def Info: background/Figures/BHM/Rejecteds.pdf, page7 used on in
+put line 236.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+
+<background/Figures/RejectedsCOLORS.pdf, id=6232, page=7, 505.89pt x 505.89pt>
+File: background/Figures/RejectedsCOLORS.pdf Graphic file (type pdf)
+
+<use background/Figures/RejectedsCOLORS.pdf, page 7>
+Package pdftex.def Info: background/Figures/RejectedsCOLORS.pdf, page7 used on 
+input line 236.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [151 <./background/Figures/BHM/Rejecteds.pdf> <./background/Figures/Rejecteds.
+pdf>] [152 <./background/Figures/BHM/RejectedsCOLORS.pdf> <./background/Figures
+/RejectedsCOLORS.pdf> <./background/Figures/BHM/Rejecteds.pdf> <./background/Fi
+gures/RejectedsCOLORS.pdf>] <background/Figures/BHM/NewOnes.pdf, id=6588, page=
+1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/NewOnes.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/NewOnes.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/NewOnes.pdf, page1 used on inpu
-t line 240.
+t line 252.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-<background/Figures/NewOnes.pdf, id=6238, page=5, 505.89pt x 505.89pt>
+<background/Figures/NewOnes.pdf, id=6589, page=5, 505.89pt x 505.89pt>
 File: background/Figures/NewOnes.pdf Graphic file (type pdf)
 
 <use background/Figures/NewOnes.pdf, page 5>
 Package pdftex.def Info: background/Figures/NewOnes.pdf, page5 used on input li
-ne 240.
+ne 252.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
- [150 <./background/Figures/BHM/Rejecteds.pdf> <./background/Figures/Rejecteds.
-pdf>] [151 <./background/Figures/BHM/RejectedsCOLORS.pdf> <./background/Figures
-/RejectedsCOLORS.pdf>]
+ [153]
 Package epstopdf Info: Source file: <background/Figures/RT1_pm.eps>
 (epstopdf)                    date: 2017-06-29 11:01:54
 (epstopdf)                    size: 91357 bytes
@@ -2908,15 +2931,15 @@ Package epstopdf Info: Source file: <background/Figures/RT1_pm.eps>
 (epstopdf)                    size: 224223 bytes
 (epstopdf)             Command: <epstopdf --outfile=background/Figures/RT1_pm-e
 ps-converted-to.pdf background/Figures/RT1_pm.eps>
-(epstopdf)             \includegraphics on input line 258.
+(epstopdf)             \includegraphics on input line 272.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/RT1_pm-eps-converted-to.pdf, id=6577, 505.89pt x 505.89pt>
+<background/Figures/RT1_pm-eps-converted-to.pdf, id=6633, 505.89pt x 505.89pt>
 File: background/Figures/RT1_pm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/RT1_pm-eps-converted-to.pdf>
 Package pdftex.def Info: background/Figures/RT1_pm-eps-converted-to.pdf used on
- input line 258.
+ input line 272.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 Package epstopdf Info: Source file: <background/Figures/RT1_ph.eps>
 (epstopdf)                    date: 2017-06-29 11:01:55
@@ -2927,17 +2950,17 @@ Package epstopdf Info: Source file: <background/Figures/RT1_ph.eps>
 (epstopdf)                    size: 172088 bytes
 (epstopdf)             Command: <epstopdf --outfile=background/Figures/RT1_ph-e
 ps-converted-to.pdf background/Figures/RT1_ph.eps>
-(epstopdf)             \includegraphics on input line 263.
+(epstopdf)             \includegraphics on input line 277.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/RT1_ph-eps-converted-to.pdf, id=6578, 505.89pt x 505.89pt>
+<background/Figures/RT1_ph-eps-converted-to.pdf, id=6634, 505.89pt x 505.89pt>
 File: background/Figures/RT1_ph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/RT1_ph-eps-converted-to.pdf>
 Package pdftex.def Info: background/Figures/RT1_ph-eps-converted-to.pdf used on
- input line 263.
+ input line 277.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
- [152 <./background/Figures/BHM/NewOnes.pdf> <./background/Figures/NewOnes.pdf>
+ [154 <./background/Figures/BHM/NewOnes.pdf> <./background/Figures/NewOnes.pdf>
 ]
 Package epstopdf Info: Source file: <background/Figures/RT2_pm.eps>
 (epstopdf)                    date: 2017-06-29 11:01:56
@@ -2948,15 +2971,15 @@ Package epstopdf Info: Source file: <background/Figures/RT2_pm.eps>
 (epstopdf)                    size: 151293 bytes
 (epstopdf)             Command: <epstopdf --outfile=background/Figures/RT2_pm-e
 ps-converted-to.pdf background/Figures/RT2_pm.eps>
-(epstopdf)             \includegraphics on input line 276.
+(epstopdf)             \includegraphics on input line 290.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/RT2_pm-eps-converted-to.pdf, id=6885, 505.89pt x 505.89pt>
+<background/Figures/RT2_pm-eps-converted-to.pdf, id=6938, 505.89pt x 505.89pt>
 File: background/Figures/RT2_pm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/RT2_pm-eps-converted-to.pdf>
 Package pdftex.def Info: background/Figures/RT2_pm-eps-converted-to.pdf used on
- input line 276.
+ input line 290.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 Package epstopdf Info: Source file: <background/Figures/RT2_ph.eps>
 (epstopdf)                    date: 2017-06-29 11:01:57
@@ -2967,143 +2990,139 @@ Package epstopdf Info: Source file: <background/Figures/RT2_ph.eps>
 (epstopdf)                    size: 105674 bytes
 (epstopdf)             Command: <epstopdf --outfile=background/Figures/RT2_ph-e
 ps-converted-to.pdf background/Figures/RT2_ph.eps>
-(epstopdf)             \includegraphics on input line 281.
+(epstopdf)             \includegraphics on input line 295.
 Package epstopdf Info: Output file is already uptodate.
 
-<background/Figures/RT2_ph-eps-converted-to.pdf, id=6886, 505.89pt x 505.89pt>
+<background/Figures/RT2_ph-eps-converted-to.pdf, id=6939, 505.89pt x 505.89pt>
 File: background/Figures/RT2_ph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use background/Figures/RT2_ph-eps-converted-to.pdf>
 Package pdftex.def Info: background/Figures/RT2_ph-eps-converted-to.pdf used on
- input line 281.
+ input line 295.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
-
-<background/Figures/BHM/MembersModel.pdf, id=6908, page=7, 505.89pt x 505.89pt>
+ [155 <./background/Figures/RT1_pm-eps-converted-to.pdf> <./background/Figures/
+RT1_ph-eps-converted-to.pdf>]
+<background/Figures/BHM/MembersModel.pdf, id=6993, page=7, 505.89pt x 505.89pt>
 File: background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
 <use background/Figures/BHM/MembersModel.pdf, page 7>
 Package pdftex.def Info: background/Figures/BHM/MembersModel.pdf, page7 used on
- input line 296.
+ input line 310.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/BHM/MembersModel.pdf, id=6909, page=8, 505.89pt x 505.89pt>
+<background/Figures/BHM/MembersModel.pdf, id=6994, page=8, 505.89pt x 505.89pt>
 File: background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
 <use background/Figures/BHM/MembersModel.pdf, page 8>
 Package pdftex.def Info: background/Figures/BHM/MembersModel.pdf, page8 used on
- input line 300.
+ input line 314.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/BHM/MembersModel.pdf, id=6910, page=9, 505.89pt x 505.89pt>
+<background/Figures/BHM/MembersModel.pdf, id=6995, page=9, 505.89pt x 505.89pt>
 File: background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
 <use background/Figures/BHM/MembersModel.pdf, page 9>
 Package pdftex.def Info: background/Figures/BHM/MembersModel.pdf, page9 used on
- input line 304.
+ input line 318.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
 
-<background/Figures/BHM/MembersModel.pdf, id=6911, page=10, 505.89pt x 505.89pt
+<background/Figures/BHM/MembersModel.pdf, id=6996, page=10, 505.89pt x 505.89pt
 >
 File: background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
  <use background/Figures/BHM/MembersModel.pdf, page 10>
 Package pdftex.def Info: background/Figures/BHM/MembersModel.pdf, page10 used o
-n input line 308.
+n input line 322.
 (pdftex.def)             Requested size: 218.51651pt x 227.62523pt.
- [153 <./background/Figures/RT1_pm-eps-converted-to.pdf> <./background/Figures/
-RT1_ph-eps-converted-to.pdf>]
-<background/Figures/BHM/membersModel.pdf, id=6955, page=1, 505.89pt x 505.89pt>
+
+<background/Figures/BHM/membersModel.pdf, id=7009, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/membersModel.pdf Graphic file (type pdf)
 <use background/Figures/BHM/membersModel.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/membersModel.pdf, page1 used on
- input line 317.
+ input line 331.
 (pdftex.def)             Requested size: 455.24408pt x 455.25046pt.
-
-(./background/Tables/TableParameters.txt [154 <./background/Figures/RT2_pm-eps-
-converted-to.pdf> <./background/Figures/RT2_ph-eps-converted-to.pdf>] [155]
-[156])
-<background/Figures/BHM/Correlations.pdf, id=7020, page=1, 505.89pt x 505.89pt>
+ [156 <./background/Figures/RT2_pm-eps-converted-to.pdf> <./background/Figures/
+RT2_ph-eps-converted-to.pdf>] (./background/Tables/TableParameters.txt [157 <./
+background/Figures/BHM/MembersModel.pdf> <./background/Figures/BHM/MembersModel
+.pdf> <./background/Figures/BHM/MembersModel.pdf> <./background/Figures/BHM/Mem
+bersModel.pdf>] [158]
+[159])
+<background/Figures/BHM/Correlations.pdf, id=7092, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Correlations.pdf Graphic file (type pdf)
 <use background/Figures/BHM/Correlations.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/Correlations.pdf, page1 used on
- input line 330.
+ input line 344.
 (pdftex.def)             Requested size: 500.77126pt x 500.7786pt.
 
-Overfull \hbox (45.52718pt too wide) in paragraph at lines 330--331
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 344--345
  [] 
  []
 
-<background/Figures/BHM/Fractions.pdf, id=7038, page=1, 505.89pt x 505.89pt>
+<background/Figures/BHM/Fractions.pdf, id=7110, page=1, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Fractions.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Fractions.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/Fractions.pdf, page1 used on in
-put line 344.
+put line 358.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Fractions.pdf, id=7039, page=2, 505.89pt x 505.89pt>
+<background/Figures/BHM/Fractions.pdf, id=7111, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Fractions.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Fractions.pdf, page 2>
 Package pdftex.def Info: background/Figures/BHM/Fractions.pdf, page2 used on in
-put line 345.
+put line 359.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
- [157] [158 <./background/Figures/BHM/MembersModel.pdf> <./background/Figures/B
-HM/MembersModel.pdf> <./background/Figures/BHM/MembersModel.pdf> <./background/
-Figures/BHM/MembersModel.pdf>] [159 <./background/Figures/BHM/membersModel.pdf>
-]
-Overfull \vbox (14.23189pt too high) has occurred while \output is active []
-
-
-[160 <./background/Figures/BHM/Correlations.pdf>]
-(./Analysis/BayesFactors/BF_All_11_0.txt)
-<Analysis/Centre/EFF_11/EFF_fit.pdf, id=7119, page=2, 424.60631pt x 315.53458pt
+ [160] [161 <./background/Figures/BHM/membersModel.pdf>] [162 <./background/Fig
+ures/BHM/Correlations.pdf>]
+(./Analysis/BayesFactors/BF_All_11_0.txt) [163 <./background/Figures/BHM/Fracti
+ons.pdf> <./background/Figures/BHM/Fractions.pdf>]
+<Analysis/Centre/EFF_11/EFF_fit.pdf, id=7186, page=2, 424.60631pt x 315.53458pt
 >
 File: Analysis/Centre/EFF_11/EFF_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/EFF_11/EFF_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Centre/EFF_11/EFF_fit.pdf, page2 used on inpu
-t line 405.
+t line 419.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Centre/GDP_11/GDP_fit.pdf, id=7120, page=2, 424.60631pt x 315.53458pt
+<Analysis/Centre/GDP_11/GDP_fit.pdf, id=7187, page=2, 424.60631pt x 315.53458pt
 >
 File: Analysis/Centre/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/GDP_11/GDP_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Centre/GDP_11/GDP_fit.pdf, page2 used on inpu
-t line 409.
+t line 423.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Centre/GKing_11/GKing_fit.pdf, id=7121, page=2, 424.60631pt x 315.534
+<Analysis/Centre/GKing_11/GKing_fit.pdf, id=7188, page=2, 424.60631pt x 315.534
 58pt>
 File: Analysis/Centre/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/GKing_11/GKing_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Centre/GKing_11/GKing_fit.pdf, page2 used on 
-input line 413.
+input line 427.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Centre/King_11/King_fit.pdf, id=7122, page=2, 424.60631pt x 315.53458
+<Analysis/Centre/King_11/King_fit.pdf, id=7189, page=2, 424.60631pt x 315.53458
 pt>
 File: Analysis/Centre/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/King_11/King_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Centre/King_11/King_fit.pdf, page2 used on in
-put line 417.
+put line 431.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Centre/OGKing_11/OGKing_fit.pdf, id=7123, page=2, 424.60631pt x 315.5
+<Analysis/Centre/OGKing_11/OGKing_fit.pdf, id=7190, page=2, 424.60631pt x 315.5
 3458pt>
 File: Analysis/Centre/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/OGKing_11/OGKing_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Centre/OGKing_11/OGKing_fit.pdf, page2 used o
-n input line 421.
+n input line 435.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Centre/RGDP_11/RGDP_fit.pdf, id=7124, page=2, 424.60631pt x 315.53458
+<Analysis/Centre/RGDP_11/RGDP_fit.pdf, id=7191, page=2, 424.60631pt x 315.53458
 pt>
 File: Analysis/Centre/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/RGDP_11/RGDP_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Centre/RGDP_11/RGDP_fit.pdf, page2 used on in
-put line 425.
+put line 439.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-(./Analysis/BayesFactors/MAPs_Centre_11.txt) [161 <./background/Figures/BHM/Fra
-ctions.pdf> <./background/Figures/BHM/Fractions.pdf>] [162 <./Analysis/Centre/E
-FF_11/EFF_fit.pdf> <./Analysis/Centre/GDP_11/GDP_fit.pdf
+(./Analysis/BayesFactors/MAPs_Centre_11.txt) [164] [165 <./Analysis/Centre/EFF_
+11/EFF_fit.pdf> <./Analysis/Centre/GDP_11/GDP_fit.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Centre/GDP_11/GDP_fit.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
@@ -3124,57 +3143,56 @@ it.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Centre/RGDP_11/RGDP_fit.p
 df): PDF inclusion: multiple pdfs with page group included in a single page
->] [163]
-<Analysis/Elliptic/EFF_11/EFF_fit.pdf, id=7522, page=2, 424.60631pt x 315.53458
+>]
+<Analysis/Elliptic/EFF_11/EFF_fit.pdf, id=7576, page=2, 424.60631pt x 315.53458
 pt>
 File: Analysis/Elliptic/EFF_11/EFF_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/EFF_11/EFF_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Elliptic/EFF_11/EFF_fit.pdf, page2 used on in
-put line 501.
+put line 515.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Elliptic/GDP_11/GDP_fit.pdf, id=7523, page=2, 424.60631pt x 315.53458
+<Analysis/Elliptic/GDP_11/GDP_fit.pdf, id=7577, page=2, 424.60631pt x 315.53458
 pt>
 File: Analysis/Elliptic/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/GDP_11/GDP_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Elliptic/GDP_11/GDP_fit.pdf, page2 used on in
-put line 505.
+put line 519.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Elliptic/GKing_11/GKing_fit.pdf, id=7524, page=2, 424.60631pt x 315.5
+<Analysis/Elliptic/GKing_11/GKing_fit.pdf, id=7578, page=2, 424.60631pt x 315.5
 3458pt>
 File: Analysis/Elliptic/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/GKing_11/GKing_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Elliptic/GKing_11/GKing_fit.pdf, page2 used o
-n input line 509.
+n input line 523.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Elliptic/King_11/King_fit.pdf, id=7525, page=2, 424.60631pt x 315.534
+<Analysis/Elliptic/King_11/King_fit.pdf, id=7579, page=2, 424.60631pt x 315.534
 58pt>
 File: Analysis/Elliptic/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/King_11/King_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Elliptic/King_11/King_fit.pdf, page2 used on 
-input line 513.
+input line 527.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, id=7526, page=2, 424.60631pt x 315
+<Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, id=7580, page=2, 424.60631pt x 315
 .53458pt>
 File: Analysis/Elliptic/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, page2 used
- on input line 517.
+ on input line 531.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, id=7527, page=2, 424.60631pt x 315.534
+<Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, id=7581, page=2, 424.60631pt x 315.534
 58pt>
 File: Analysis/Elliptic/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, page2 used on 
-input line 521.
+input line 535.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
-
-(./Analysis/BayesFactors/MAPs_Elliptic_11.txt) [164] [165 <./Analysis/Elliptic/
-EFF_11/EFF_fit.pdf> <./Analysis/Elliptic/GDP_11/GDP_fit.pdf
+ [166] [167 <./Analysis/Elliptic/EFF_11/EFF_fit.pdf> <./Analysis/Elliptic/GDP_1
+1/GDP_fit.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Elliptic/GDP_11/GDP_fit.p
 df): PDF inclusion: multiple pdfs with page group included in a single page
@@ -3196,104 +3214,104 @@ ge
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Elliptic/RGDP_11/RGDP_fit
 .pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<Analysis/Segregated/EFF_11/EFF_fit.pdf, id=7940, page=2, 424.60631pt x 315.534
+>] (./Analysis/BayesFactors/MAPs_Elliptic_11.txt) [168]
+<Analysis/Segregated/EFF_11/EFF_fit.pdf, id=8001, page=2, 424.60631pt x 315.534
 58pt>
 File: Analysis/Segregated/EFF_11/EFF_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/EFF_11/EFF_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Segregated/EFF_11/EFF_fit.pdf, page2 used on 
-input line 566.
+input line 580.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/GDP_11/GDP_fit.pdf, id=7941, page=2, 424.60631pt x 315.534
+<Analysis/Segregated/GDP_11/GDP_fit.pdf, id=8002, page=2, 424.60631pt x 315.534
 58pt>
 File: Analysis/Segregated/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/GDP_11/GDP_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Segregated/GDP_11/GDP_fit.pdf, page2 used on 
-input line 570.
+input line 584.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/GKing_11/GKing_fit.pdf, id=7942, page=2, 424.60631pt x 315
+<Analysis/Segregated/GKing_11/GKing_fit.pdf, id=8003, page=2, 424.60631pt x 315
 .53458pt>
 File: Analysis/Segregated/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/GKing_11/GKing_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Segregated/GKing_11/GKing_fit.pdf, page2 used
- on input line 574.
+ on input line 588.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/King_11/King_fit.pdf, id=7943, page=2, 424.60631pt x 315.5
+<Analysis/Segregated/King_11/King_fit.pdf, id=8004, page=2, 424.60631pt x 315.5
 3458pt>
 File: Analysis/Segregated/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/King_11/King_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Segregated/King_11/King_fit.pdf, page2 used o
-n input line 578.
+n input line 592.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/OGKing_11/OGKing_fit.pdf, id=7944, page=2, 424.60631pt x 3
+<Analysis/Segregated/OGKing_11/OGKing_fit.pdf, id=8005, page=2, 424.60631pt x 3
 15.53458pt>
 File: Analysis/Segregated/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/OGKing_11/OGKing_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Segregated/OGKing_11/OGKing_fit.pdf, page2 us
-ed on input line 582.
+ed on input line 596.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/RGDP_11/RGDP_fit.pdf, id=7945, page=2, 424.60631pt x 315.5
+<Analysis/Segregated/RGDP_11/RGDP_fit.pdf, id=8006, page=2, 424.60631pt x 315.5
 3458pt>
 File: Analysis/Segregated/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/RGDP_11/RGDP_fit.pdf, page 2>
 Package pdftex.def Info: Analysis/Segregated/RGDP_11/RGDP_fit.pdf, page2 used o
-n input line 586.
+n input line 600.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/EFF_11/EFF_fit.pdf, id=7948, page=5, 424.60631pt x 315.534
+<Analysis/Segregated/EFF_11/EFF_fit.pdf, id=8009, page=5, 424.60631pt x 315.534
 58pt>
 File: Analysis/Segregated/EFF_11/EFF_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/EFF_11/EFF_fit.pdf, page 5>
 Package pdftex.def Info: Analysis/Segregated/EFF_11/EFF_fit.pdf, page5 used on 
-input line 597.
+input line 611.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/GDP_11/GDP_fit.pdf, id=7949, page=5, 424.60631pt x 315.534
+<Analysis/Segregated/GDP_11/GDP_fit.pdf, id=8010, page=5, 424.60631pt x 315.534
 58pt>
 File: Analysis/Segregated/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/GDP_11/GDP_fit.pdf, page 5>
 Package pdftex.def Info: Analysis/Segregated/GDP_11/GDP_fit.pdf, page5 used on 
-input line 601.
+input line 615.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/GKing_11/GKing_fit.pdf, id=7950, page=5, 424.60631pt x 315
+<Analysis/Segregated/GKing_11/GKing_fit.pdf, id=8011, page=5, 424.60631pt x 315
 .53458pt>
 File: Analysis/Segregated/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/GKing_11/GKing_fit.pdf, page 5>
 Package pdftex.def Info: Analysis/Segregated/GKing_11/GKing_fit.pdf, page5 used
- on input line 605.
+ on input line 619.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/King_11/King_fit.pdf, id=7951, page=5, 424.60631pt x 315.5
+<Analysis/Segregated/King_11/King_fit.pdf, id=8012, page=5, 424.60631pt x 315.5
 3458pt>
 File: Analysis/Segregated/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/King_11/King_fit.pdf, page 5>
 Package pdftex.def Info: Analysis/Segregated/King_11/King_fit.pdf, page5 used o
-n input line 609.
+n input line 623.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/OGKing_11/OGKing_fit.pdf, id=7952, page=5, 424.60631pt x 3
+<Analysis/Segregated/OGKing_11/OGKing_fit.pdf, id=8013, page=5, 424.60631pt x 3
 15.53458pt>
 File: Analysis/Segregated/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/OGKing_11/OGKing_fit.pdf, page 5>
 Package pdftex.def Info: Analysis/Segregated/OGKing_11/OGKing_fit.pdf, page5 us
-ed on input line 613.
+ed on input line 627.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-<Analysis/Segregated/RGDP_11/RGDP_fit.pdf, id=7953, page=5, 424.60631pt x 315.5
+<Analysis/Segregated/RGDP_11/RGDP_fit.pdf, id=8014, page=5, 424.60631pt x 315.5
 3458pt>
 File: Analysis/Segregated/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/RGDP_11/RGDP_fit.pdf, page 5>
 Package pdftex.def Info: Analysis/Segregated/RGDP_11/RGDP_fit.pdf, page5 used o
-n input line 617.
+n input line 631.
 (pdftex.def)             Requested size: 204.85844pt x 152.23485pt.
 
-(./Analysis/BayesFactors/MAPs_Segregated_11.txt) [166] [167 <./Analysis/Segrega
+(./Analysis/BayesFactors/MAPs_Segregated_11.txt) [169] [170 <./Analysis/Segrega
 ted/EFF_11/EFF_fit.pdf> <./Analysis/Segregated/GDP_11/GDP_fit.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Segregated/GDP_11/GDP_fit
@@ -3318,7 +3336,7 @@ page
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Segregated/RGDP_11/RGDP_f
 it.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
->] [168 <./Analysis/Segregated/EFF_11/EFF_fit.pdf> <./Analysis/Segregated/GDP_1
+>] [171 <./Analysis/Segregated/EFF_11/EFF_fit.pdf> <./Analysis/Segregated/GDP_1
 1/GDP_fit.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Segregated/GDP_11/GDP_fit
@@ -3344,177 +3362,176 @@ pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Segregated/RGDP_11/RGDP_f
 it.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 >]
-<background/Figures/BHM/MembersModel.pdf, id=8405, page=2, 505.89pt x 505.89pt>
+<background/Figures/BHM/MembersModel.pdf, id=8466, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
 <use background/Figures/BHM/MembersModel.pdf, page 2>
 Package pdftex.def Info: background/Figures/BHM/MembersModel.pdf, page2 used on
- input line 654.
+ input line 668.
 (pdftex.def)             Requested size: 455.24408pt x 455.25046pt.
 
-<background/Figures/BHM/Cs_members.pdf, id=8418, page=2, 505.89pt x 505.89pt>
+<background/Figures/BHM/Cs_members.pdf, id=8479, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Cs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Cs_members.pdf, page 2>
 Package pdftex.def Info: background/Figures/BHM/Cs_members.pdf, page2 used on i
-nput line 664.
+nput line 678.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Cs_members.pdf, id=8419, page=3, 505.89pt x 505.89pt>
+<background/Figures/BHM/Cs_members.pdf, id=8480, page=3, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Cs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Cs_members.pdf, page 3>
 Package pdftex.def Info: background/Figures/BHM/Cs_members.pdf, page3 used on i
-nput line 669.
+nput line 683.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Bs_members.pdf, id=8432, page=2, 505.89pt x 505.89pt>
+<background/Figures/BHM/Bs_members.pdf, id=8493, page=2, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Bs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Bs_members.pdf, page 2>
 Package pdftex.def Info: background/Figures/BHM/Bs_members.pdf, page2 used on i
-nput line 680.
+nput line 694.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/Bs_members.pdf, id=8433, page=3, 505.89pt x 505.89pt>
+<background/Figures/BHM/Bs_members.pdf, id=8494, page=3, 505.89pt x 505.89pt>
 File: background/Figures/BHM/Bs_members.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/Bs_members.pdf, page 3>
 Package pdftex.def Info: background/Figures/BHM/Bs_members.pdf, page3 used on i
-nput line 685.
+nput line 699.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/MembersModel_p>05.pdf, id=8459, page=3, 505.89pt x 505.
+<background/Figures/BHM/MembersModel_p>05.pdf, id=8520, page=3, 505.89pt x 505.
 89pt>
 File: background/Figures/BHM/MembersModel_p>05.pdf Graphic file (type pdf)
  <use background/Figures/BHM/MembersModel_p>05.pdf, page 3>
 Package pdftex.def Info: background/Figures/BHM/MembersModel_p>05.pdf, page3 us
-ed on input line 698.
+ed on input line 712.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/MembersModel_p>05.pdf, id=8460, page=4, 505.89pt x 505.
+<background/Figures/BHM/MembersModel_p>05.pdf, id=8521, page=4, 505.89pt x 505.
 89pt>
 File: background/Figures/BHM/MembersModel_p>05.pdf Graphic file (type pdf)
  <use background/Figures/BHM/MembersModel_p>05.pdf, page 4>
 Package pdftex.def Info: background/Figures/BHM/MembersModel_p>05.pdf, page4 us
-ed on input line 703.
+ed on input line 717.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
- [169] [170 <./background/Figures/BHM/MembersModel.pdf>]
+ [172] [173 <./background/Figures/BHM/MembersModel.pdf>]
 
-LaTeX Warning: Text page 171 contains only floats.
+LaTeX Warning: Text page 174 contains only floats.
 
-[171 <./background/Figures/BHM/Cs_members.pdf> <./background/Figures/BHM/Cs_mem
+[174 <./background/Figures/BHM/Cs_members.pdf> <./background/Figures/BHM/Cs_mem
 bers.pdf> <./background/Figures/BHM/Bs_members.pdf> <./background/Figures/BHM/B
-s_members.pdf>] [172 <./background/Figures/BHM/MembersModel_p>05.pdf> <./backgr
-ound/Figures/BHM/MembersModel_p>05.pdf>] [173] [174]
-<background/Figures/BHM/absolute_JHK-log.pdf, id=8835, 375.4025pt x 505.89pt>
+s_members.pdf>] [175 <./background/Figures/BHM/MembersModel_p>05.pdf> <./backgr
+ound/Figures/BHM/MembersModel_p>05.pdf>] [176]
+<background/Figures/BHM/absolute_JHK-log.pdf, id=8888, 375.4025pt x 505.89pt>
 File: background/Figures/BHM/absolute_JHK-log.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/absolute_JHK-log.pdf>
 Package pdftex.def Info: background/Figures/BHM/absolute_JHK-log.pdf used on in
-put line 771.
+put line 785.
 (pdftex.def)             Requested size: 364.19664pt x 490.82077pt.
 
 
-LaTeX Warning: Float too large for page by 8.8645pt on input line 775.
+LaTeX Warning: Float too large for page by 8.8645pt on input line 789.
 
-[175] [176 <./background/Figures/BHM/absolute_JHK-log.pdf>]
-<background/Figures/BHM/BHM_vs_BT-Settl.pdf, id=8892, page=1, 505.89pt x 505.89
+[177] [178 <./background/Figures/BHM/absolute_JHK-log.pdf>]
+<background/Figures/BHM/BHM_vs_BT-Settl.pdf, id=8944, page=1, 505.89pt x 505.89
 pt>
 File: background/Figures/BHM/BHM_vs_BT-Settl.pdf Graphic file (type pdf)
  <use background/Figures/BHM/BHM_vs_BT-Settl.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/BHM_vs_BT-Settl.pdf, page1 used
- on input line 791.
+ on input line 805.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/BHM_vs_BT-Settl.pdf, id=8893, page=2, 505.89pt x 505.89
+<background/Figures/BHM/BHM_vs_BT-Settl.pdf, id=8945, page=2, 505.89pt x 505.89
 pt>
 File: background/Figures/BHM/BHM_vs_BT-Settl.pdf Graphic file (type pdf)
  <use background/Figures/BHM/BHM_vs_BT-Settl.pdf, page 2>
 Package pdftex.def Info: background/Figures/BHM/BHM_vs_BT-Settl.pdf, page2 used
- on input line 795.
+ on input line 809.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/BHM_vs_BT-Settl.pdf, id=8894, page=4, 505.89pt x 505.89
+<background/Figures/BHM/BHM_vs_BT-Settl.pdf, id=8946, page=4, 505.89pt x 505.89
 pt>
 File: background/Figures/BHM/BHM_vs_BT-Settl.pdf Graphic file (type pdf)
  <use background/Figures/BHM/BHM_vs_BT-Settl.pdf, page 4>
 Package pdftex.def Info: background/Figures/BHM/BHM_vs_BT-Settl.pdf, page4 used
- on input line 799.
+ on input line 813.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
 
-<background/Figures/BHM/BHM_vs_BT-Settl.pdf, id=8895, page=6, 505.89pt x 505.89
+<background/Figures/BHM/BHM_vs_BT-Settl.pdf, id=8947, page=6, 505.89pt x 505.89
 pt>
 File: background/Figures/BHM/BHM_vs_BT-Settl.pdf Graphic file (type pdf)
  <use background/Figures/BHM/BHM_vs_BT-Settl.pdf, page 6>
 Package pdftex.def Info: background/Figures/BHM/BHM_vs_BT-Settl.pdf, page6 used
- on input line 803.
+ on input line 817.
 (pdftex.def)             Requested size: 204.85844pt x 204.86116pt.
-
-<background/Figures/FitSpline_AllardModels.pdf, id=8908, page=1, 409.94215pt x 
+ [179] [180 <./background/Figures/BHM/BHM_vs_BT-Settl.pdf> <./background/Figure
+s/BHM/BHM_vs_BT-Settl.pdf> <./background/Figures/BHM/BHM_vs_BT-Settl.pdf> <./ba
+ckground/Figures/BHM/BHM_vs_BT-Settl.pdf>]
+<background/Figures/FitSpline_AllardModels.pdf, id=8986, page=1, 409.94215pt x 
 317.19704pt>
 File: background/Figures/FitSpline_AllardModels.pdf Graphic file (type pdf)
  <use background/Figures/FitSpline_AllardModels.pdf, page 1>
 Package pdftex.def Info: background/Figures/FitSpline_AllardModels.pdf, page1 u
-sed on input line 818.
+sed on input line 832.
 (pdftex.def)             Requested size: 318.66946pt x 246.57535pt.
 
-<background/Figures/FitSpline_AllardModels.pdf, id=8909, page=2, 427.06863pt x 
+<background/Figures/FitSpline_AllardModels.pdf, id=8987, page=2, 427.06863pt x 
 317.49503pt>
 File: background/Figures/FitSpline_AllardModels.pdf Graphic file (type pdf)
  <use background/Figures/FitSpline_AllardModels.pdf, page 2>
 Package pdftex.def Info: background/Figures/FitSpline_AllardModels.pdf, page2 u
-sed on input line 824.
+sed on input line 838.
 (pdftex.def)             Requested size: 318.66946pt x 236.90952pt.
 
-[177]
-<background/Figures/BHM/MassDistribution.pdf, id=8929, 578.16pt x 433.62pt>
+<background/Figures/BHM/MassDistribution.pdf, id=8999, 578.16pt x 433.62pt>
 File: background/Figures/BHM/MassDistribution.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/MassDistribution.pdf>
 Package pdftex.def Info: background/Figures/BHM/MassDistribution.pdf used on in
-put line 838.
+put line 852.
 (pdftex.def)             Requested size: 455.24408pt x 341.43124pt.
- [178 <./background/Figures/BHM/BHM_vs_BT-Settl.pdf> <./background/Figures/BHM/
-BHM_vs_BT-Settl.pdf> <./background/Figures/BHM/BHM_vs_BT-Settl.pdf> <./backgrou
-nd/Figures/BHM/BHM_vs_BT-Settl.pdf>] [179 <./background/Figures/FitSpline_Allar
-dModels.pdf> <./background/Figures/FitSpline_AllardModels.pdf
+ [181] [182 <./background/Figures/FitSpline_AllardModels.pdf> <./background/Fig
+ures/FitSpline_AllardModels.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./background/Figures/FitSpline_Allar
 dModels.pdf): PDF inclusion: multiple pdfs with page group included in a single
  page
->] [180 <./background/Figures/BHM/MassDistribution.pdf>] [181]
-<background/Figures/BHM/ModelsMassDistribution.pdf, id=9117, page=1, 578.16pt x
+>] [183 <./background/Figures/BHM/MassDistribution.pdf>] [184]
+<background/Figures/BHM/ModelsMassDistribution.pdf, id=9177, page=1, 578.16pt x
  433.62pt>
 File: background/Figures/BHM/ModelsMassDistribution.pdf Graphic file (type pdf)
 
  <use background/Figures/BHM/ModelsMassDistribution.pdf, page 1>
 Package pdftex.def Info: background/Figures/BHM/ModelsMassDistribution.pdf, pag
-e1 used on input line 887.
+e1 used on input line 901.
 (pdftex.def)             Requested size: 578.15858pt x 433.61894pt.
 
-[182] [183 <./background/Figures/BHM/ModelsMassDistribution.pdf>] [184]
-<background/Figures/BHM/M45vsM42vsM44.pdf, id=9223, 505.89pt x 505.89pt>
+[185] [186 <./background/Figures/BHM/ModelsMassDistribution.pdf>]
+<background/Figures/BHM/M45vsM42vsM44.pdf, id=9275, 505.89pt x 505.89pt>
 File: background/Figures/BHM/M45vsM42vsM44.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/M45vsM42vsM44.pdf>
 Package pdftex.def Info: background/Figures/BHM/M45vsM42vsM44.pdf used on input
- line 913.
+ line 927.
 (pdftex.def)             Requested size: 455.24408pt x 455.25046pt.
 
-<background/Figures/BHM/CDF_comparison.pdf, id=9230, 505.89pt x 505.89pt>
+<background/Figures/BHM/CDF_comparison.pdf, id=9282, 505.89pt x 505.89pt>
 File: background/Figures/BHM/CDF_comparison.pdf Graphic file (type pdf)
 
 <use background/Figures/BHM/CDF_comparison.pdf>
 Package pdftex.def Info: background/Figures/BHM/CDF_comparison.pdf used on inpu
-t line 921.
+t line 935.
 (pdftex.def)             Requested size: 455.24408pt x 455.25046pt.
- [185 <./background/Figures/BHM/M45vsM42vsM44.pdf>] [186 <./background/Figures/
-BHM/CDF_comparison.pdf>])
-(./conclusions/conclusions.tex [187]
+ [187] [188 <./background/Figures/BHM/M45vsM42vsM44.pdf>] [189 <./background/Fi
+gures/BHM/CDF_comparison.pdf>])
+(./conclusions/conclusions.tex [190]
 Chapter 5.
-[188
+[191
 
-] [189] [190] [191]) (./appendix/app1.tex [192]
+] [192] [193] [194]) (./appendix/app1.tex [195]
 Appendix A.
 (./Analysis/Centre/EFF_11/EFF_covariance.txt)
 (./Analysis/Centre/GDP_11/GDP_covariance.txt)
@@ -3526,10 +3543,10 @@ Overfull \hbox (17.6378pt too wide) in paragraph at lines 49--97
 [][]
  []
 
-[193
+[196
 
 ]
-<Analysis/Centre/GDP_11/GDP_fit.pdf, id=9488, page=4, 981.30942pt x 975.74535pt
+<Analysis/Centre/GDP_11/GDP_fit.pdf, id=9546, page=4, 981.30942pt x 975.74535pt
 >
 File: Analysis/Centre/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/GDP_11/GDP_fit.pdf, page 4>
@@ -3537,7 +3554,7 @@ Package pdftex.def Info: Analysis/Centre/GDP_11/GDP_fit.pdf, page4 used on inpu
 t line 100.
 (pdftex.def)             Requested size: 455.24408pt x 452.6747pt.
 
-<Analysis/Centre/GKing_11/GKing_fit.pdf, id=9489, page=4, 977.92139pt x 975.745
+<Analysis/Centre/GKing_11/GKing_fit.pdf, id=9547, page=4, 977.92139pt x 975.745
 35pt>
 File: Analysis/Centre/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/GKing_11/GKing_fit.pdf, page 4>
@@ -3545,7 +3562,7 @@ Package pdftex.def Info: Analysis/Centre/GKing_11/GKing_fit.pdf, page4 used on
 input line 107.
 (pdftex.def)             Requested size: 455.24408pt x 454.22311pt.
 
-<Analysis/Centre/King_11/King_fit.pdf, id=9490, page=4, 672.21138pt x 672.21138
+<Analysis/Centre/King_11/King_fit.pdf, id=9548, page=4, 672.21138pt x 672.21138
 pt>
 File: Analysis/Centre/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/King_11/King_fit.pdf, page 4>
@@ -3553,7 +3570,7 @@ Package pdftex.def Info: Analysis/Centre/King_11/King_fit.pdf, page4 used on in
 put line 114.
 (pdftex.def)             Requested size: 455.24408pt x 455.25142pt.
 
-<Analysis/Centre/OGKing_11/OGKing_fit.pdf, id=9491, page=4, 676.64421pt x 672.2
+<Analysis/Centre/OGKing_11/OGKing_fit.pdf, id=9549, page=4, 676.64421pt x 672.2
 1138pt>
 File: Analysis/Centre/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/OGKing_11/OGKing_fit.pdf, page 4>
@@ -3561,7 +3578,7 @@ Package pdftex.def Info: Analysis/Centre/OGKing_11/OGKing_fit.pdf, page4 used o
 n input line 121.
 (pdftex.def)             Requested size: 455.24408pt x 452.2666pt.
 
-<Analysis/Centre/RGDP_11/RGDP_fit.pdf, id=9492, page=4, 828.41122pt x 823.9784p
+<Analysis/Centre/RGDP_11/RGDP_fit.pdf, id=9550, page=4, 828.41122pt x 823.9784p
 t>
 File: Analysis/Centre/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Centre/RGDP_11/RGDP_fit.pdf, page 4>
@@ -3580,7 +3597,7 @@ Overfull \hbox (17.62958pt too wide) in paragraph at lines 136--198
  []
 
 
-<Analysis/Elliptic/GDP_11/GDP_fit.pdf, id=9493, page=4, 1284.84337pt x 1279.279
+<Analysis/Elliptic/GDP_11/GDP_fit.pdf, id=9551, page=4, 1284.84337pt x 1279.279
 37pt>
 File: Analysis/Elliptic/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/GDP_11/GDP_fit.pdf, page 4>
@@ -3588,7 +3605,7 @@ Package pdftex.def Info: Analysis/Elliptic/GDP_11/GDP_fit.pdf, page4 used on in
 put line 201.
 (pdftex.def)             Requested size: 455.24408pt x 453.27872pt.
 
-<Analysis/Elliptic/GKing_11/GKing_fit.pdf, id=9494, page=4, 1433.22243pt x 1431
+<Analysis/Elliptic/GKing_11/GKing_fit.pdf, id=9552, page=4, 1433.22243pt x 1431
 .04633pt>
 File: Analysis/Elliptic/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/GKing_11/GKing_fit.pdf, page 4>
@@ -3596,7 +3613,7 @@ Package pdftex.def Info: Analysis/Elliptic/GKing_11/GKing_fit.pdf, page4 used o
 n input line 208.
 (pdftex.def)             Requested size: 455.24408pt x 454.53777pt.
 
-<Analysis/Elliptic/King_11/King_fit.pdf, id=9495, page=4, 1127.51242pt x 1127.5
+<Analysis/Elliptic/King_11/King_fit.pdf, id=9553, page=4, 1127.51242pt x 1127.5
 1242pt>
 File: Analysis/Elliptic/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/King_11/King_fit.pdf, page 4>
@@ -3604,7 +3621,7 @@ Package pdftex.def Info: Analysis/Elliptic/King_11/King_fit.pdf, page4 used on
 input line 215.
 (pdftex.def)             Requested size: 455.24408pt x 455.24648pt.
 
-<Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, id=9496, page=4, 1131.94525pt x 11
+<Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, id=9554, page=4, 1131.94525pt x 11
 27.51242pt>
 File: Analysis/Elliptic/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, page 4>
@@ -3612,7 +3629,7 @@ Package pdftex.def Info: Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, page4 used
  on input line 222.
 (pdftex.def)             Requested size: 455.24408pt x 453.45721pt.
 
-<Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, id=9497, page=4, 1131.94525pt x 1127.5
+<Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, id=9555, page=4, 1131.94525pt x 1127.5
 1242pt>
 File: Analysis/Elliptic/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, page 4>
@@ -3620,7 +3637,7 @@ Package pdftex.def Info: Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, page4 used on
 input line 229.
 (pdftex.def)             Requested size: 455.24408pt x 453.45721pt.
 
-<Analysis/Elliptic/EFF_11/EFF_fit.pdf, id=9498, page=5, 407.0799pt x 315.53458p
+<Analysis/Elliptic/EFF_11/EFF_fit.pdf, id=9556, page=5, 407.0799pt x 315.53458p
 t>
 File: Analysis/Elliptic/EFF_11/EFF_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/EFF_11/EFF_fit.pdf, page 5>
@@ -3628,7 +3645,7 @@ Package pdftex.def Info: Analysis/Elliptic/EFF_11/EFF_fit.pdf, page5 used on in
 put line 239.
 (pdftex.def)             Requested size: 204.85844pt x 158.7876pt.
 
-<Analysis/Elliptic/GDP_11/GDP_fit.pdf, id=9499, page=5, 407.0799pt x 315.53458p
+<Analysis/Elliptic/GDP_11/GDP_fit.pdf, id=9557, page=5, 407.0799pt x 315.53458p
 t>
 File: Analysis/Elliptic/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/GDP_11/GDP_fit.pdf, page 5>
@@ -3636,7 +3653,7 @@ Package pdftex.def Info: Analysis/Elliptic/GDP_11/GDP_fit.pdf, page5 used on in
 put line 243.
 (pdftex.def)             Requested size: 204.85844pt x 158.7876pt.
 
-<Analysis/Elliptic/GKing_11/GKing_fit.pdf, id=9500, page=5, 407.0799pt x 315.53
+<Analysis/Elliptic/GKing_11/GKing_fit.pdf, id=9558, page=5, 407.0799pt x 315.53
 458pt>
 File: Analysis/Elliptic/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/GKing_11/GKing_fit.pdf, page 5>
@@ -3644,7 +3661,7 @@ Package pdftex.def Info: Analysis/Elliptic/GKing_11/GKing_fit.pdf, page5 used o
 n input line 247.
 (pdftex.def)             Requested size: 204.85844pt x 158.7876pt.
 
-<Analysis/Elliptic/King_11/King_fit.pdf, id=9501, page=5, 407.0799pt x 315.5345
+<Analysis/Elliptic/King_11/King_fit.pdf, id=9559, page=5, 407.0799pt x 315.5345
 8pt>
 File: Analysis/Elliptic/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/King_11/King_fit.pdf, page 5>
@@ -3652,7 +3669,7 @@ Package pdftex.def Info: Analysis/Elliptic/King_11/King_fit.pdf, page5 used on
 input line 251.
 (pdftex.def)             Requested size: 204.85844pt x 158.7876pt.
 
-<Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, id=9502, page=5, 407.0799pt x 316.
+<Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, id=9560, page=5, 407.0799pt x 316.
 2407pt>
 File: Analysis/Elliptic/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, page 5>
@@ -3660,7 +3677,7 @@ Package pdftex.def Info: Analysis/Elliptic/OGKing_11/OGKing_fit.pdf, page5 used
  on input line 255.
 (pdftex.def)             Requested size: 204.85844pt x 159.14294pt.
 
-<Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, id=9503, page=5, 407.0799pt x 315.5345
+<Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, id=9561, page=5, 407.0799pt x 315.5345
 8pt>
 File: Analysis/Elliptic/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Elliptic/RGDP_11/RGDP_fit.pdf, page 5>
@@ -3673,14 +3690,14 @@ input line 259.
 (./Analysis/Segregated/GKing_11/GKing_covariance.txt)
 (./Analysis/Segregated/King_11/King_covariance.txt)
 (./Analysis/Segregated/OGKing_11/OGKing_covariance.txt)
-(./Analysis/Segregated/RGDP_11/RGDP_covariance.txt) [194] [195 <./Analysis/Cent
-re/GDP_11/GDP_fit.pdf>] [196 <./Analysis/Centre/GKing_11/GKing_fit.pdf>]
-[197 <./Analysis/Centre/King_11/King_fit.pdf>] [198 <./Analysis/Centre/OGKing_1
-1/OGKing_fit.pdf>] [199 <./Analysis/Centre/RGDP_11/RGDP_fit.pdf>] [200 <./Analy
-sis/Elliptic/GDP_11/GDP_fit.pdf>] [201 <./Analysis/Elliptic/GKing_11/GKing_fit.
-pdf>] [202 <./Analysis/Elliptic/King_11/King_fit.pdf>] [203 <./Analysis/Ellipti
-c/OGKing_11/OGKing_fit.pdf>] [204 <./Analysis/Elliptic/RGDP_11/RGDP_fit.pdf>]
-[205 <./Analysis/Elliptic/EFF_11/EFF_fit.pdf> <./Analysis/Elliptic/GDP_11/GDP_f
+(./Analysis/Segregated/RGDP_11/RGDP_covariance.txt) [197] [198 <./Analysis/Cent
+re/GDP_11/GDP_fit.pdf>] [199 <./Analysis/Centre/GKing_11/GKing_fit.pdf>]
+[200 <./Analysis/Centre/King_11/King_fit.pdf>] [201 <./Analysis/Centre/OGKing_1
+1/OGKing_fit.pdf>] [202 <./Analysis/Centre/RGDP_11/RGDP_fit.pdf>] [203 <./Analy
+sis/Elliptic/GDP_11/GDP_fit.pdf>] [204 <./Analysis/Elliptic/GKing_11/GKing_fit.
+pdf>] [205 <./Analysis/Elliptic/King_11/King_fit.pdf>] [206 <./Analysis/Ellipti
+c/OGKing_11/OGKing_fit.pdf>] [207 <./Analysis/Elliptic/RGDP_11/RGDP_fit.pdf>]
+[208 <./Analysis/Elliptic/EFF_11/EFF_fit.pdf> <./Analysis/Elliptic/GDP_11/GDP_f
 it.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Elliptic/GDP_11/GDP_fit.p
@@ -3704,7 +3721,7 @@ ge
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Elliptic/RGDP_11/RGDP_fit
 .pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<Analysis/Segregated/EFF_11/EFF_fit.pdf, id=10244, page=4, 1134.08017pt x 1128.
+<Analysis/Segregated/EFF_11/EFF_fit.pdf, id=10303, page=4, 1134.08017pt x 1128.
 51617pt>
 File: Analysis/Segregated/EFF_11/EFF_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/EFF_11/EFF_fit.pdf, page 4>
@@ -3712,7 +3729,7 @@ Package pdftex.def Info: Analysis/Segregated/EFF_11/EFF_fit.pdf, page4 used on
 input line 334.
 (pdftex.def)             Requested size: 455.24408pt x 452.99991pt.
 
-<Analysis/Segregated/GDP_11/GDP_fit.pdf, id=10245, page=4, 1437.6142pt x 1432.0
+<Analysis/Segregated/GDP_11/GDP_fit.pdf, id=10304, page=4, 1437.6142pt x 1432.0
 5008pt>
 File: Analysis/Segregated/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/GDP_11/GDP_fit.pdf, page 4>
@@ -3720,7 +3737,7 @@ Package pdftex.def Info: Analysis/Segregated/GDP_11/GDP_fit.pdf, page4 used on
 input line 341.
 (pdftex.def)             Requested size: 455.24408pt x 453.47995pt.
 
-<Analysis/Segregated/GKing_11/GKing_fit.pdf, id=10246, page=4, 1589.38115pt x 1
+<Analysis/Segregated/GKing_11/GKing_fit.pdf, id=10305, page=4, 1589.38115pt x 1
 583.81715pt>
 File: Analysis/Segregated/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/GKing_11/GKing_fit.pdf, page 4>
@@ -3728,7 +3745,7 @@ Package pdftex.def Info: Analysis/Segregated/GKing_11/GKing_fit.pdf, page4 used
  on input line 348.
 (pdftex.def)             Requested size: 455.24408pt x 453.64012pt.
 
-<Analysis/Segregated/King_11/King_fit.pdf, id=10247, page=4, 1285.84712pt x 128
+<Analysis/Segregated/King_11/King_fit.pdf, id=10306, page=4, 1285.84712pt x 128
 0.28313pt>
 File: Analysis/Segregated/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/King_11/King_fit.pdf, page 4>
@@ -3736,7 +3753,7 @@ Package pdftex.def Info: Analysis/Segregated/King_11/King_fit.pdf, page4 used o
 n input line 355.
 (pdftex.def)             Requested size: 455.24408pt x 453.26318pt.
 
-<Analysis/Segregated/OGKing_11/OGKing_fit.pdf, id=10248, page=4, 1285.84712pt x
+<Analysis/Segregated/OGKing_11/OGKing_fit.pdf, id=10307, page=4, 1285.84712pt x
  1280.28313pt>
 File: Analysis/Segregated/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/OGKing_11/OGKing_fit.pdf, page 4>
@@ -3744,7 +3761,7 @@ Package pdftex.def Info: Analysis/Segregated/OGKing_11/OGKing_fit.pdf, page4 us
 ed on input line 362.
 (pdftex.def)             Requested size: 455.24408pt x 453.26318pt.
 
-<Analysis/Segregated/RGDP_11/RGDP_fit.pdf, id=10249, page=4, 1285.84712pt x 128
+<Analysis/Segregated/RGDP_11/RGDP_fit.pdf, id=10308, page=4, 1285.84712pt x 128
 0.28313pt>
 File: Analysis/Segregated/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/RGDP_11/RGDP_fit.pdf, page 4>
@@ -3752,7 +3769,7 @@ Package pdftex.def Info: Analysis/Segregated/RGDP_11/RGDP_fit.pdf, page4 used o
 n input line 369.
 (pdftex.def)             Requested size: 455.24408pt x 453.26318pt.
 
-<Analysis/Segregated/EFF_11/EFF_fit.pdf, id=10250, page=6, 407.0799pt x 315.534
+<Analysis/Segregated/EFF_11/EFF_fit.pdf, id=10309, page=6, 407.0799pt x 315.534
 58pt>
 File: Analysis/Segregated/EFF_11/EFF_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/EFF_11/EFF_fit.pdf, page 6>
@@ -3760,7 +3777,7 @@ Package pdftex.def Info: Analysis/Segregated/EFF_11/EFF_fit.pdf, page6 used on
 input line 378.
 (pdftex.def)             Requested size: 204.85844pt x 158.7876pt.
 
-<Analysis/Segregated/GDP_11/GDP_fit.pdf, id=10251, page=6, 407.0799pt x 315.534
+<Analysis/Segregated/GDP_11/GDP_fit.pdf, id=10310, page=6, 407.0799pt x 315.534
 58pt>
 File: Analysis/Segregated/GDP_11/GDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/GDP_11/GDP_fit.pdf, page 6>
@@ -3768,7 +3785,7 @@ Package pdftex.def Info: Analysis/Segregated/GDP_11/GDP_fit.pdf, page6 used on
 input line 382.
 (pdftex.def)             Requested size: 204.85844pt x 158.7876pt.
 
-<Analysis/Segregated/GKing_11/GKing_fit.pdf, id=10252, page=6, 397.49722pt x 31
+<Analysis/Segregated/GKing_11/GKing_fit.pdf, id=10311, page=6, 397.49722pt x 31
 5.53458pt>
 File: Analysis/Segregated/GKing_11/GKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/GKing_11/GKing_fit.pdf, page 6>
@@ -3776,7 +3793,7 @@ Package pdftex.def Info: Analysis/Segregated/GKing_11/GKing_fit.pdf, page6 used
  on input line 386.
 (pdftex.def)             Requested size: 204.85844pt x 162.62007pt.
 
-<Analysis/Segregated/King_11/King_fit.pdf, id=10253, page=6, 397.49722pt x 315.
+<Analysis/Segregated/King_11/King_fit.pdf, id=10312, page=6, 397.49722pt x 315.
 53458pt>
 File: Analysis/Segregated/King_11/King_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/King_11/King_fit.pdf, page 6>
@@ -3784,7 +3801,7 @@ Package pdftex.def Info: Analysis/Segregated/King_11/King_fit.pdf, page6 used o
 n input line 390.
 (pdftex.def)             Requested size: 204.85844pt x 162.62007pt.
 
-<Analysis/Segregated/OGKing_11/OGKing_fit.pdf, id=10254, page=6, 407.0799pt x 3
+<Analysis/Segregated/OGKing_11/OGKing_fit.pdf, id=10313, page=6, 407.0799pt x 3
 15.53458pt>
 File: Analysis/Segregated/OGKing_11/OGKing_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/OGKing_11/OGKing_fit.pdf, page 6>
@@ -3792,7 +3809,7 @@ Package pdftex.def Info: Analysis/Segregated/OGKing_11/OGKing_fit.pdf, page6 us
 ed on input line 394.
 (pdftex.def)             Requested size: 204.85844pt x 158.7876pt.
 
-<Analysis/Segregated/RGDP_11/RGDP_fit.pdf, id=10255, page=6, 407.0799pt x 315.5
+<Analysis/Segregated/RGDP_11/RGDP_fit.pdf, id=10314, page=6, 407.0799pt x 315.5
 3458pt>
 File: Analysis/Segregated/RGDP_11/RGDP_fit.pdf Graphic file (type pdf)
  <use Analysis/Segregated/RGDP_11/RGDP_fit.pdf, page 6>
@@ -3800,11 +3817,11 @@ Package pdftex.def Info: Analysis/Segregated/RGDP_11/RGDP_fit.pdf, page6 used o
 n input line 398.
 (pdftex.def)             Requested size: 204.85844pt x 158.7876pt.
 ) (./thesis.bbl
-[206] [207 <./Analysis/Segregated/EFF_11/EFF_fit.pdf>] [208 <./Analysis/Segrega
-ted/GDP_11/GDP_fit.pdf>] [209 <./Analysis/Segregated/GKing_11/GKing_fit.pdf>]
-[210 <./Analysis/Segregated/King_11/King_fit.pdf>] [211 <./Analysis/Segregated/
-OGKing_11/OGKing_fit.pdf>] [212 <./Analysis/Segregated/RGDP_11/RGDP_fit.pdf>]
-[213 <./Analysis/Segregated/EFF_11/EFF_fit.pdf> <./Analysis/Segregated/GDP_11/G
+[209] [210 <./Analysis/Segregated/EFF_11/EFF_fit.pdf>] [211 <./Analysis/Segrega
+ted/GDP_11/GDP_fit.pdf>] [212 <./Analysis/Segregated/GKing_11/GKing_fit.pdf>]
+[213 <./Analysis/Segregated/King_11/King_fit.pdf>] [214 <./Analysis/Segregated/
+OGKing_11/OGKing_fit.pdf>] [215 <./Analysis/Segregated/RGDP_11/RGDP_fit.pdf>]
+[216 <./Analysis/Segregated/EFF_11/EFF_fit.pdf> <./Analysis/Segregated/GDP_11/G
 DP_fit.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Segregated/GDP_11/GDP_fit
@@ -3829,10 +3846,10 @@ page
 pdfTeX warning: /usr/texbin/pdflatex (file ./Analysis/Segregated/RGDP_11/RGDP_f
 it.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
->] [214
+>] [217
 
-] [215] [216] [217] [218] [219] [220] [221] [222] [223]) (./thesis.gls)
-(./thesis.acr [224] [225
+] [218] [219] [220] [221] [222] [223] [224] [225] [226]) (./thesis.gls)
+(./thesis.acr [227] [228
 
 
 ]
@@ -3848,7 +3865,7 @@ ine 168.
 Package glossaries Warning: Glossary entry `gp' has not been defined on input l
 ine 168.
 
-[226]
+[229]
 
 Package glossaries Warning: Glossary entry `rgp' has not been defined on input 
 line 340.
@@ -3861,23 +3878,14 @@ line 340.
 Package glossaries Warning: Glossary entry `rgp' has not been defined on input 
 line 340.
 
-[227]) [228]
+[230]) [231]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 425.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 425.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 425.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 425.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 502F17F2E37F4D84B33C06939E21D61F;3191
-(rerunfilecheck)             After:  06B769CF4BD62AAD1C1A4E89497D6348;3182.
-
-LaTeX Warning: There were undefined references.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 3E797EAE330940283793614C9E24F467;3182.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3885,11 +3893,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 425.
  ) 
 Here is how much of TeX's memory you used:
- 39175 strings out of 493109
- 740095 string characters out of 6135003
- 1128335 words of memory out of 5000000
- 40582 multiletter control sequences out of 15000+600000
- 31652 words of font info for 192 fonts, out of 8000000 for 9000
+ 39192 strings out of 493109
+ 740739 string characters out of 6135003
+ 1133539 words of memory out of 5000000
+ 40588 multiletter control sequences out of 15000+600000
+ 31920 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,18n,88p,3237b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:rgdp} has been referenced but does not exist,
@@ -3898,7 +3906,7 @@ pdfTeX warning (dest): name{glo:rgdp} has been referenced but does not exist,
 pdfTeX warning (dest): name{glo:gdp} has been referenced but does not exist, re
 placed by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.34} has been referenced but does not exis
+pdfTeX warning (dest): name{Hfootnote.35} has been referenced but does not exis
 t, replaced by a fixed one
 
 pdfTeX warning (dest): name{glo:hrd} has been referenced but does not exist, re
@@ -3965,10 +3973,10 @@ exlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (235 pages, 25458619 bytes).
+Output written on thesis.pdf (238 pages, 25146872 bytes).
 PDF statistics:
- 11474 PDF objects out of 12825 (max. 8388607)
- 8010 compressed objects within 81 object streams
- 908 named destinations out of 1000 (max. 500000)
- 28988 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 11533 PDF objects out of 12825 (max. 8388607)
+ 8068 compressed objects within 81 object streams
+ 913 named destinations out of 1000 (max. 500000)
+ 28998 words of extra memory for PDF output out of 29859 (max. 10000000)
 
