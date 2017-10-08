@@ -2,51 +2,55 @@ This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: aa.bst
-Reallocated field_info (elt_size=4) to 10244 items from 5000.
+Reallocated field_info (elt_size=4) to 10382 items from 5000.
 Database file #1: biblio.bib
+Repeated entry---line 209 of file biblio.bib
+ : @article{2010MNRAS.407.2241K
+ :                             ,
+I'm skipping whatever remains of this entry
 Warning--empty publisher in 1910pgcs.book.....B
 Warning--can't use both author and editor fields in 2013pss5.book..115K
 Warning--empty publisher in 2013pss5.book..115K
 Warning--empty publisher in Smart1977
-You've used 228 entries,
+You've used 234 entries,
             2947 wiz_defined-function locations,
-            2098 strings with 48185 characters,
-and the built_in function-call counts, 109471 in all, are:
-= -- 9130
-> -- 8265
-< -- 135
-+ -- 2775
-- -- 2521
-* -- 8996
-:= -- 20182
-add.period$ -- 228
-call.type$ -- 228
-change.case$ -- 1746
-chr.to.int$ -- 231
-cite$ -- 232
-duplicate$ -- 4330
-empty$ -- 6287
-format.name$ -- 3118
-if$ -- 21731
-int.to.chr$ -- 7
+            2131 strings with 49228 characters,
+and the built_in function-call counts, 112584 in all, are:
+= -- 9373
+> -- 8488
+< -- 141
++ -- 2850
+- -- 2588
+* -- 9268
+:= -- 20735
+add.period$ -- 234
+call.type$ -- 234
+change.case$ -- 1783
+chr.to.int$ -- 235
+cite$ -- 238
+duplicate$ -- 4463
+empty$ -- 6489
+format.name$ -- 3205
+if$ -- 22358
+int.to.chr$ -- 9
 int.to.str$ -- 1
-missing$ -- 204
-newline$ -- 688
-num.names$ -- 929
-pop$ -- 1829
+missing$ -- 208
+newline$ -- 706
+num.names$ -- 955
+pop$ -- 1875
 preamble$ -- 1
-purify$ -- 1739
+purify$ -- 1776
 quote$ -- 0
-skip$ -- 3797
+skip$ -- 3914
 stack$ -- 0
-substring$ -- 4736
-swap$ -- 176
-text.length$ -- 16
+substring$ -- 4888
+swap$ -- 200
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2010
+type$ -- 2061
 warning$ -- 4
-while$ -- 920
+while$ -- 947
 width$ -- 0
-write$ -- 2279
-(There were 4 warnings)
+write$ -- 2339
+(There was 1 error message)
