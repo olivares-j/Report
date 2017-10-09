@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;\red0\green31\blue103;\red14\green0\blue45;\red73\green0\blue0;
-\red110\green5\blue0;}
+}
 \paperw11900\paperh16840\margl1440\margr1440\vieww25320\viewh14600\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
@@ -18,23 +18,27 @@ The thesis would have benefit of one additional full review (i.e. commented by a
 \
 To summarize, Javier thesis is very appreciable for his purpose, for the emphasis given to the importance of taking care about some important issues, for the attempt of putting order in the subject, in finding a way to have the computation done in the available CPU time, etc. However, it fails to fulfill what promised in the abstract (and also in other locations of the thesis): proper treatment of missing values and objective choice of the prior. The failure is however mostly an overstating of the thesis goals more than a failure per se: the content is, once rephrased in a way closer to the work actually done, interesting and might led to better inferences than what published so far.\cf0 \
 \
-Concerning the three main points that you describe as weaknesses, I must said broadly speaking that: \
-\
-i) The treatment of missing values, although incomplete, nevertheless renders less biases results that if the incompleteness were ignored. I fully recognise that in the general case the use of a uniform prior for the distribution of missing values (i.e. assuming missing at random) is of little help. However, as I prove to you with a very simple example, and as it is now proven in the manuscript, this very simple assumption, in the particular case of the data set I have, renders far better results than if incompleteness were ignored.\
+
+\i0 Concerning the three main points that you describe as weaknesses, I must said broadly speaking that: 
+\i \
 \
 
-\i0 ii) About the objectivity in the prior, I do agree that in the abstract I stated it in a very simplistic way. Of course there is no way to fully avoid the subjectivity of the prior, but the Hierarchical approach offers the least subjective way to do it. So, it avoids much of the subjectivity of the prior. But, even in the case of a fully-hierarchichal model (mine is partially hierarchical), the subjectivity would not vanish. If you allow me to say it in this way, no decision is guarantied to be fully objective. Even in the frequentist approach, where there are no priors (well there are but not explicitly stated) we can always put in question if the chosen likelihood is completely objective. \
-In the hierarchical model, as you correctly pointed out, the subjectivity moves to the next level. Yes! and in the lower level, I am inferring the parameters of the prior from the data, which I guess you will agree with me is far less subjective than fix them. About using the data twice for settling the priors, yes I am doing it with a subtle consideration. For the hyper-priors values, it is true that I use 
-\i some
-\i0  of the data that I later use in the likelihood, but notice that in fact my prior information, the one used for the hyper-priors, is given by the previous estimates of membership probabilities from the literature (the ones done by Bouy et al. 2015) so formally speaking, it is not the same data. If you allow me, I will compare myself to Robert Trumpler (yes, I know the comparison is way to high and I am far from being such a good astronomer, but let me do it for a moment). Well, in his very famous (in the open cluster community) paper of 1921 he established membership probabilities based on proper motions (amongst other quantities) that he himself measured together with a compilation of other proper motion measurements from the literature, which included the measurements of Lewis Boss. Then, to estimate the membership probabilities he used the distance, in the space of proper motions, that each star showed with respect to the mean proper motion of the pleiades. Guess who\'92s value used for the mean proper motion of the Pleiades? Yes, the one from Lewis Boss. So, yes, some times we use 
-\i some
-\i0  data to set our prior believes. Is that correct? well, as you mention is debatable. I think it is what we Bayesians do, to update our previous beliefs based on the data. You may argue that we update our beliefs based on 
-\i new
-\i0  data, and I agree. But we also have another way of update our beliefs, by means of new models, and this is what I am doing, I update my model based on a previous one. I can not formally quantify how better the new model compared to the old one, because computing the bayesian evidence will take for ever. However, you ca have a pretty good idea of how better the model is by the quantitative comparisons made in the first two sections of Chapter 4.\
+\i0 i) The treatment of missing values, although incomplete, nevertheless renders less biases results that if the incompleteness were ignored. I fully recognise that in the general case the use of a uniform prior for the distribution of missing values (i.e. assuming missing at random) is of little help. However, as I prove to you with a very simple example, and as it is now proven in the manuscript, this very simple assumption, in the particular case of the data set I have, renders far better results than if incompleteness were ignored. I would have loved to include all the points that you mention, however, I was not able to include neither selection nor detection probabilities mainly because i) we currently not have them and performing them for all instrumental combinations in the DANCe will take\
+a lot of time, and ii) the computational constraints would not have allowed it. 
+\i \
 \
-iii) The debatable chose of the i-Ks colour index. I hope you agree with me that the a priori information (I am not referring to a prior probability) should be used whenever available. In particular, if others have already proven its usefulness. So, you ask why only one colour and why in particular the i-Ks. Well, as it is stated in the manuscript, Sarro et al. 2014 did a detailed analysis on the discriminative power of all the observables (except the sky positions) in the data set that I am using. They proved that the particular combination of observables that I use is the best to discriminate between cluster and field objects. Why only one colour? as it is now stated in the manuscript, I used Y-J colour index but it resulted in more contaminated samples than the use of only Y band (unfortunately this was done very early in the thesis and I did quantify the differences in contamination between the use of Y and Y-J colour index). Nevertheless, as it is stated in the manuscript, my model uses an inferred, but constant width along the cluster sequence. This intrinsic dispersion (if I recall well you call it intrinsic scatter in your 2012 paper with Hurn) helps to model variations in the photometry that will otherwise not be covered by the observational uncertainties (e.g different distances). It turns out that when using two colour indices, the intrinsic dispersion of the known members is not constant but varies across colour. Since my model is simplistic and does not model this varying intrinsic dispersion, if I include the Y-J colour index it results in more contaminated samples.\
+
+\i0 ii) About the objectivity in the prior, I do agree that in the abstract I stated it in a very simplistic way. Of course there is no way to fully avoid the subjectivity of the prior, but the Hierarchical approach offers the least subjective way to do it. But, even in the case of a fully-hierarchichal model (mine is partially hierarchical), the subjectivity would not vanish. If you allow me to say it in this way, no decision is guarantied to be fully objective. Even in the frequentist approach, where there are no priors (well there are but not explicitly stated) we can always put in question if the chosen likelihood is completely objective.\
+ \
+In the hierarchical model, as you correctly pointed out, the subjectivity moves to the next level. By moving the subjectivity upwards, the lower levels become less subjective.\
 \
-Also, I have included, in Chapter 3, a description of the reasons for which i-K was used as parameter to model the photometric bands. \
+About using the data twice for settling the priors, yes I am doing it with a subtle consideration. For the hyper-priors values, it is true that I use 
+\i some
+\i0  of the data that I later use in the likelihood, but notice that in fact my prior information, the one used for the hyper-priors, is given by the previous estimates of membership probabilities from the literature (the ones done by Bouy et al. 2015) so formally speaking, it is not exactly the same data. This equivalent to a three level hierarchical model in which the second level parameters, the ones that i am fixing with the data and a priori membership probabilities, are also inferred from the data. \
+\
+iii) The debatable chose of the i-Ks colour index. I hope you agree with me that the a priori information (I am not referring to a prior probability) should be used whenever available. In particular, if others have already proven its usefulness. As it is stated in the manuscript, Sarro et al. 2014 did a detailed analysis on the discriminative power of all the observables (except the sky positions) that are in the data set that I am using. They proved that the particular combination of observables that I use is the best one to discriminate between cluster and field objects. \
+\
+As it is now stated in chapter three, the i-K colour index is a good empirical estimator of the effective temperature, which in turn, as proven by our current understanding of stellar models, is, together with the mass and metallicity, the main element driving the spectral energy distribution of stars.\
 
 \i \
 \
@@ -50,7 +54,7 @@ Data & Likelihood.\
 \cf2 Almost certainly (but never stated), the proportion member/field is luminosity-dependent. Description of the used sample has been inserted in version 4 of the thesis on my request, and even now it is not very detailed, for example plots with spatial completness as a function of magnitude (for each magnitude) are missing. Based on the information present, the 2 million and the 10^5 samples turn out to have different (statistical) properties: for example, while in the original sample K mag was missing for 30% of the objects, in the studied sample is missing for 5% only (and for ~0% for the subsample of members). About i-K color, there is a marked difference between field and clusters (99% vs 30% missing). Javier analysis put emphasis on missing data and therefore a missing fraction of 0% (subsample of members), 30% (whole sample), 99% (one more subsample) or undetermined (original version of the thesis) makes a remarkable difference.\
 \
 
-\i0 \cf0 I have included plots with the spatial completeness of the DDR2 ( 1.5 million sources). Indeed, the restricted sample of 10^5 does not share all the properties from the DDR2 because it is not a random sample from it, but one selected based on membership probability.
+\i0 \cf0 I have included plots with the spatial completeness of the DDR2 ( 1.5 million sources). Indeed, the restricted sample of 10^5 does not share all the properties from the DDR2 because it is not a random sample from it
 \i \cf2 \
 \
 Because of the emphasis given by the thesis to the treatment of missing values, more attention should have be posed to the description of missing data and the reason why are missing: is the 10^5 sample complete down to some limit (in which magnitude?)\
@@ -88,9 +92,7 @@ i-K color is available for 1-5% of the sample. Is this choice preferable to use 
 Or why to ignore four bands (after having spent space in the thesis to mention and describe them)? They do carry some information for the 95-99% of objects without i-K. Or perhaps they are not available for the objects without i-K, but the thesis lacks to mention if this is the case.\
 \
 
-\i0 \cf0 The reasons to chose the particular set of observables that I later use are described in Section 2.7.1 Selection of observables. There, I explain that the main reason to use the selected observables is the work done by Sarro et al. 2014. Those authors demonstrated that the observables I use are the most discriminant from amongst those in the DANCe DR2 data set.  \
-\
-Also, I move the explanation for the use of i-K into chapter 3. \
+\i0 \cf0 The reasons to chose the particular set of observables that I later use are described in Section 2.7.1 Selection of observables. There, I explain that the main reason to use the selected observables is the work done by Sarro et al. 2014. Those authors demonstrated that the observables I use are the most discriminant from amongst those in the DANCe DR2 data set.\
 \
 
 \i \cf2 Why not to swap then ordinate and abscissa, which leaves a larger choice? \
@@ -126,19 +128,15 @@ Or, finally, given that all interesting (cluster) objects are clustered in color
 This is more rigorous than selecting by membership probability, update it, and then ignoring that this would led to a different sample selection.\
 \
 
-\i0 \cf0 I do agree that doing so will be more rigorous for the field model, but what about the cluster model. If I have selected by membership probability, and allowed to include members with a very very low membership probability (10^-11), then is it not correct to assume that the probability of including all cluster members (from the larger data set) into the 10^5 sample is equal or almost exactly equal to one? Then, is it not correct to assume that the cluster selection probability is one? When you use the selection function (Eq. 30 of your paper with Hurn, or 7.1-7.3 in your book, the one you kindly suggested me) you transform your selection function into a probability. \
-\
-Is it not correct then to assume that if all cluster members (from the larger data set) are in my smaller data set then my selection probability function is one? \
-I have included this assumptions in Section 3.3.1 which I know renamed Treatment of missing information. Let me know what you think.
+\i0 \cf0 Concerning the cluster, as it is proven in Section 4.9, no cluster member within the DDR2 was discarded.
 \i \cf2 \
+\
 \
 In short, I would have appreciated a discussion on the strategy, and why the used magnitudes, colors and selections have been chosen (and why i-K, and none of the other colors, play a special role, even if missing for almost all objects).\
 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\i0 \cf4 You are totally right, I have now move the description of the reasons for the use of i-K colour in to chapter 3.  The basic reason for the use of this colour is that it provides the best indicator, from within the available colour indices, of the effective temperature, and therefore of the luminosity. In addition it avoids the degeneracies caused by the other colours.\
+\i0 \cf0 You are totally right, I have now move the description of the reasons for the use of i-K colour in to chapter 3.  The basic reason for the use of this colour is that it provides the best indicator, from within the available colour indices, of the effective temperature, and therefore of the luminosity. In addition it avoids the degeneracies caused by the other colours.\cf4 \
 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
 \i \cf2 \
 Methods.\
@@ -205,21 +203,19 @@ This approach is said to be the only feasible given CPU restrictions. Neverthele
 - The distribution of field stars inferred from the most probable field members could be skewed compared to the true one, because the probability to be a field star is based on the location of the star parameters in the data space (point mentioned in the thesis). Their distribution, which is what Javier computed, could be therefore biased away from the true field distribution. As emphasized many times in the thesis, cluster data only consist of 2 % of all data, i.e. are 50 times less abundant of field data (a minor error on the field "level" has systematic effects on cluster parameters).\
 \
 
-\i0 \cf0 Yes, because selection was done using cluster membership probabilities, the field population resulting from this selection is not a random sample from the true field population. For this reason, the field model has to be computed for each data set selected, and can not be computed from a random sample of the true field population. However, I must say that our objective lays in the cluster population, thus what is important here, as you correctly mentioned is that the field level remains constant.\cf5  I have included a Section in Chapter 4 where I compare the initial and final selection of candidates and field models.
+\i0 \cf0 Yes, because selection was done using cluster membership probabilities, the field population resulting from this selection is not a random sample from the true field population. For this reason, the field model has to be computed for each data set selected, and can not be computed from a random sample of the true field population. However, I must say that our objective lays in the cluster population, thus what is important here, as you correctly mentioned is that the field level remains constant. I have included a Section in Chapter 4 where I compare the initial and final selection of candidates and field models.
 \i \cf2 \
 \
 - Always in the effort of reducing CPU time, the thesis assumes some membership probabilities for selecting the sample, compute different membership probabilities for another part of the analysis, and does not revise the sample selection according to the new membership probabilities (nor updates field parameters given the changed sample). \
 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\i0 \cf4 On this I agree completelly. As I mentioned, before I included one section explaining that the selection of the cluster remains identical (i.e. no cluster member was originally discarded from the data set, as assumed), and compare the initial to final cluster parameters. 
+\i0 \cf0 On this I agree completely. As I mentioned, before I included one section explaining that the selection of the cluster remains identical (i.e. no cluster member was originally discarded from the data set, as assumed), and compare the initial to final cluster parameters. 
 \i \cf2 \
 \
 \
 Furthermore, because these probabilities are not the same in different parts of the analysis, the total weight of each datum is not identically one, i.e. some data is used more than once, some others less than once. In the former case this lead to optimistically-estimated errors, in the latter case to pessimistically-estimated one. This problems originates from the cluster posterior parameters weighted by 1-pi, while field likelihood weighted by pi1 with pi1+(1-pi) != 1 (eq. 3.24 prescribes instead the field pi being equal to 1 minus the cluster pi). \
 This can be appreciated in fig 4.7: all points away from the line p(Bouy)=p(BMH) have been used more than once or less than once in the fit.\
 \
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
 \i0 \cf0 I have checked the mentioned equation in both first and last versions of the manuscript and in both the field model is weighted with pi and the cluster with 1-pi.\
 Since pi is inferred in the model, both cluster and field fractions are updated in each step of the MCMC and thus they always add to one. The pi1 you mentioned is the initial value given to the MCMC. 
@@ -284,7 +280,7 @@ As already mentioned, there are many many limitations in the analysis that shoul
 A more properly stated conclusion should include a sentence like: "our analysis presents many limitations and assumptions, whose removal is left to future improvements".\
 \
 
-\i0 \cf5 These list has been included in the new version of the manuscript.
+\i0 \cf0 These list has been included in the new version of the manuscript.
 \i   
 \i0 Except that about the inconsistent membership for field and cluster. As mentioned before,\
 the pi fraction of the field and that of the cluster at all steps of the inference process add to one, because pi is also a parameter of the model.
@@ -300,6 +296,9 @@ I conclude my report with a suggestion for possible, future, different strategy 
 - finally, compute the posterior.\
 For galaxy clusters it turned out to be useful to estimate field parameters far enough from the cluster center not to be contaminated by it (but not too far, otherwise the field distribution may differ). Maybe this should be considered for globular clusters, if possible. Furthermore, if a parametric model for the radial profile is allowed (e.g. if the cluster can be assumed to have circular symmetry or some simple shape), "far enough from" can part of the modeling or used to select some of the parameters/prior.\
 \
+
+\i0 \cf0 Thank you for this kind suggestion, believe me that I would keep in mind in the near future.
+\i \cf2 \
 \
 \
 \

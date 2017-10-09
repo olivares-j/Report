@@ -960,7 +960,42 @@ In the first version of this manuscript, the evidences for the \gls{psd} models 
 \subsection{Assumptions}
 The posterior checking not only must be performed on the inferred parameters but also in the model itself. In such spirit, this section describes how two key assumptions in the field model have been modified by our posterior inference.
 
+\subsubsection{Initial selection of candidates.}
 
+In Section \ref{sect:RDR2}, it was assumed that the selection of candidate members based on membership probability lave no candidate member from the \gls{ddr2} out of the \gls{rdr2}. As mentioned in Section \ref{sect:memberscomparison}
+, once the \gls{bhm} was inferred from the \gls{rdr2}, it was applied to the \gls{ddr2}. Based on the optimal classification threshold derived in Section \ref{sect:classifier}, no new cluster members was found within the \gls{ddr2}, thus confirming our original assumption.
+
+\subsubsection{Fixed field parameters.}
+
+In Section \ref{sect:field_population}, it was assumed that the field parameters could remain fixed during the inference process. This assumption was based  both in the large size of the data set, compared to that of the cluster, and in the small fraction of cluster members expected to be below the 0.75 probability threshold imposed for the field.
+
+After the \gls{bhm} was inferred from the \gls{rdr2}, and the membership probabilities of the objects in the \gls{ddr2} computed from this model, I computed the new field parameters from the new selection of field members. Then, using the Old and New field parameters, I calculated the absolute relative differences in the rendered densities, using the Old model as reference. Figure \ref{fig:FieldChecking} shows: i) in contours, the absolute relative difference between New and Old models, ii) in colour code the absolute difference in the counts returned by a 2D histograms, red shows new field objects and blue lost field objects (new cluster members), and iii) in grey scale, the Original field density.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[page=1,width=0.8\textwidth]{background/Figures/DifferenceField.pdf}
+\includegraphics[page=5,width=0.8\textwidth]{background/Figures/DifferenceField.pdf}
+\caption{Proper motions and $K_s$ vs $i-Ks$ \gls{cmd} showing: the absolute difference between the Original field (grey scale) and the New field (blue and red scale), and the absolute relative difference in the densities resulting from the New and Original field models. }
+\label{fig:FieldChecking}
+\end{center}
+\end{figure}
+
+As can be seen from this Figure, the field parameters of the proper motions have remained similar to those of the Original model, with the maximum relative variation of 0.08 and a RMSRD of 0.03 (see Eq. \ref{eq:rmsrd}). On the other hand, the field parameter of the photometry have suffer local changes that add up to 1.0 in central region $\gls{ci}\sim3$, with a global RMSRD of 0.4. This comparison shows that the field photometric model changed. Updating this field and recomputing the model must be done if future works.
+
+\subsubsection{Independence between photometry and proper motions}
+
+This assumption has been made in both the cluster and field models (see Section \ref{sect:generative-model}). As proven in Section \ref{sect:PSDresults}, the cluster \gls{psd} shows evidence of mass segregation (at least of luminosity segregation). Due to the age of the Pleiades cluster, we can expect it to be virialised, and thus its space distribution to be coupled with the velocity distribution. Therefore, the mass segregation may indicate that the proper motions of the cluster members should be correlated with their luminosity. Although correlation does not imply causality, Fig. \ref{fig:correlations}, shows that the variances of the proper motions \gls{gmm}, both of single stars and \gls{emb} are correlated with the photometry. In order to fully test this correlation, future cluster models must relax this assumption.
+
+On the other hand, concerning the same assumption but applied on the field model, the correlation is smaller and the bias made by this assumption negligible. During the summer of 2017 I co-supervised the internship of a 2nd year student from the École National de la Statistique et de l'Analyse de l'Information. On of his tasks was to determine the theoretical and observable bias introduced by assuming the the field model can be independently model in proper motions and photometry. As shown in Figure \ref{fig:PMPHIndep} both the theoretical and measured bias made on the densities of the resulting models are negligible, with values near the 3\% of relative deviations. The previous results prove that our original assumption of independence was valid within this 3\% limit.
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[page=1,width=0.8\textwidth]{background/Figures/Florian1.png}
+\includegraphics[page=5,width=0.8\textwidth]{background/Figures/Florian2.png}
+\caption{Mean absolute relative deviation between the densities resulting from true model (without the independence assumption) and those in which the model has been assumed to be independent in proper motions and photometry, as function of the sample size in which the independent model is inferred.  Solid lines show the mean of the 15 random realisations, dashed lines show the theoretical difference obtained from the true model by fixing the proper motion and photometric correlations to zero. Image by Florian Lalande.}
+\label{fig:PMPHIndep}
+\end{center}
+\end{figure}
 
 Finally, I hope that this last Section has transmitted the reader how dynamic, iterative and reflexive the creation of a model is. While the Bayesian formalism enable us to update our prior knowledge based on the data, transform it into posteriors, and select the best models based on evidence, the Bayesian Hierarchical approach allows us to directly update our prior beliefs within the inference process. In summary, the Bayesian formalism help us to update our knowledge based not just in the light of new data, but also in the light of new models.
  

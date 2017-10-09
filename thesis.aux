@@ -606,6 +606,7 @@
 \newlabel{eq:mask_missing}{{3.23}{77}{Validity of the \emph {ignorability} assumption}{equation.3.3.23}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Density distributions in $Y,J,H$ and $K_s$ bands of the synthetic objects in the Complete, Missing and, Observed data sets. See text.\relax }}{78}{figure.caption.40}}
 \newlabel{fig:ignorability_synthetic}{{3.2}{78}{Density distributions in $Y,J,H$ and $K_s$ bands of the synthetic objects in the Complete, Missing and, Observed data sets. See text.\relax }{figure.caption.40}{}}
+\newlabel{eq:rmsrd}{{3.24}{78}{Validity of the \emph {ignorability} assumption}{equation.3.3.24}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Contours comparing the deviations in the density (in units of mag$^{-2}$) of the Observed (left panels) and Missing (right panels) \glspl {gmm} when compared to the Complete \gls {gmm} (in grey scale at the background), projected in each of the \glspl {cmd} used in this work. Regions where the density of the Complete model goes below $10^{-3}$ are not shown.\relax }}{79}{figure.caption.41}}
 \newlabel{fig:ignorable_and_naive}{{3.3}{79}{Contours comparing the deviations in the density (in units of mag$^{-2}$) of the Observed (left panels) and Missing (right panels) \glspl {gmm} when compared to the Complete \gls {gmm} (in grey scale at the background), projected in each of the \glspl {cmd} used in this work. Regions where the density of the Complete model goes below $10^{-3}$ are not shown.\relax }{figure.caption.41}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}The generative model}{80}{subsection.3.3.2}}
@@ -720,7 +721,7 @@
 \citation{Fan2011}
 \@writefile{toc}{\contentsline {subsubsection}{Proper motion model of EMB and single stars}{100}{section*.55}}
 \newlabel{sect:cluster_pm}{{3.3.4}{100}{Proper motion model of EMB and single stars}{section*.55}{}}
-\newlabel{foot:extendedCI}{{23}{100}{}{Hfootnote.37}{}}
+\newlabel{foot:extendedCI}{{24}{100}{}{Hfootnote.38}{}}
 \citation{Bouy2015}
 \citation{Bouy2015}
 \citation{Bouy2015}
@@ -1212,12 +1213,19 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.34}{\ignorespaces Posterior distributions of the $\pi $ and $\pi _{CB}$ parameters (orange lines) together with their corresponding priors. Notice that due to the large data set, the posterior distributions are highly concentrated.\relax }}{192}{figure.caption.116}}
 \newlabel{fig:fractions}{{4.34}{192}{Posterior distributions of the $\pi $ and $\pi _{CB}$ parameters (orange lines) together with their corresponding priors. Notice that due to the large data set, the posterior distributions are highly concentrated.\relax }{figure.caption.116}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.9.1}Assumptions}{193}{subsection.4.9.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Initial selection of candidates.}{193}{section*.117}}
+\@writefile{toc}{\contentsline {subsubsection}{Fixed field parameters.}{193}{section*.118}}
+\@writefile{toc}{\contentsline {subsubsection}{Independence between photometry and proper motions}{193}{section*.120}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.35}{\ignorespaces Proper motions and $K_s$ vs $i-Ks$ \gls {cmd} showing: the absolute difference between the Original field (grey scale) and the New field (blue and red scale), and the absolute relative difference in the densities resulting from the New and Original field models. \relax }}{194}{figure.caption.119}}
+\newlabel{fig:FieldChecking}{{4.35}{194}{Proper motions and $K_s$ vs $i-Ks$ \gls {cmd} showing: the absolute difference between the Original field (grey scale) and the New field (blue and red scale), and the absolute relative difference in the densities resulting from the New and Original field models. \relax }{figure.caption.119}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.36}{\ignorespaces Mean absolute relative deviation between the densities resulting from true model (without the independence assumption) and those in which the model has been assumed to be independent in proper motions and photometry, as function of the sample size in which the independent model is inferred. Solid lines show the mean of the 15 random realisations, dashed lines show the theoretical difference obtained from the true model by fixing the proper motion and photometric correlations to zero. Image by Florian Lalande.\relax }}{195}{figure.caption.121}}
+\newlabel{fig:PMPHIndep}{{4.36}{195}{Mean absolute relative deviation between the densities resulting from true model (without the independence assumption) and those in which the model has been assumed to be independent in proper motions and photometry, as function of the sample size in which the independent model is inferred. Solid lines show the mean of the 15 random realisations, dashed lines show the theoretical difference obtained from the true model by fixing the proper motion and photometric correlations to zero. Image by Florian Lalande.\relax }{figure.caption.121}{}}
 \citation{Kennedy1995,Clerc2002}
 \citation{Foreman2013}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusions and future work}{194}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusions and future work}{197}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:conclusions}{{5}{194}{Conclusions and future work}{chapter.5}{}}
+\newlabel{chap:conclusions}{{5}{197}{Conclusions and future work}{chapter.5}{}}
 \citation{Bouy2015}
 \citation{Bouy2015}
 \citation{Rebull2016}
@@ -1228,57 +1236,59 @@
 \citation{Thies2007}
 \citation{Chabrier2005}
 \citation{Thies2007}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Current issues and future improvements}{196}{section.5.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Assumptions that must be investigated and removed}{199}{section.5.1}}
+\citation{2017arXiv170704878E}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Current issues and future improvements}{200}{section.5.2}}
 \citation{Duquennoy1991}
 \citation{corner}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Posterior distributions of the PSD }{199}{appendix.A}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Posterior distributions of the PSD }{203}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:posteriors}{{A}{199}{Posterior distributions of the PSD}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Models with radial symmetry}{200}{section.A.1}}
-\newlabel{sect:app_radial}{{A.1}{200}{Models with radial symmetry}{section.A.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Models with biaxial symmetry}{200}{section.A.2}}
-\newlabel{sect:app_biaxial}{{A.2}{200}{Models with biaxial symmetry}{section.A.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Projections of the posterior distribution for the GDP model.\relax }}{201}{figure.caption.117}}
-\newlabel{fig:GDPctr}{{A.1}{201}{Projections of the posterior distribution for the GDP model.\relax }{figure.caption.117}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Projections of the posterior distribution for the GKing model.\relax }}{202}{figure.caption.118}}
-\newlabel{fig:GKingctr}{{A.2}{202}{Projections of the posterior distribution for the GKing model.\relax }{figure.caption.118}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces Projections of the posterior distribution for the King's model.\relax }}{203}{figure.caption.119}}
-\newlabel{fig:Kingctr}{{A.3}{203}{Projections of the posterior distribution for the King's model.\relax }{figure.caption.119}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces Projections of the posterior distribution for the OGKing model.\relax }}{204}{figure.caption.120}}
-\newlabel{fig:OGKingctr}{{A.4}{204}{Projections of the posterior distribution for the OGKing model.\relax }{figure.caption.120}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.5}{\ignorespaces Projections of the posterior distribution for the RGDP model.\relax }}{205}{figure.caption.121}}
-\newlabel{fig:RGDPctr}{{A.5}{205}{Projections of the posterior distribution for the RGDP model.\relax }{figure.caption.121}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.6}{\ignorespaces Projections of the posterior distribution for the GDP biaxially symmetric model.\relax }}{206}{figure.caption.122}}
-\newlabel{fig:GDP7Ell}{{A.6}{206}{Projections of the posterior distribution for the GDP biaxially symmetric model.\relax }{figure.caption.122}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.7}{\ignorespaces Projection of the posterior distribution for the GKing biaxially symmetric model.\relax }}{207}{figure.caption.123}}
-\newlabel{fig:GKingEll}{{A.7}{207}{Projection of the posterior distribution for the GKing biaxially symmetric model.\relax }{figure.caption.123}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.8}{\ignorespaces Projection of the posterior distribution for the King's biaxially symmetric model.\relax }}{208}{figure.caption.124}}
-\newlabel{fig:KingEll}{{A.8}{208}{Projection of the posterior distribution for the King's biaxially symmetric model.\relax }{figure.caption.124}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.9}{\ignorespaces Projection of the posterior distribution for the OGKing biaxially symmetric model.\relax }}{209}{figure.caption.125}}
-\newlabel{fig:OGKingEll}{{A.9}{209}{Projection of the posterior distribution for the OGKing biaxially symmetric model.\relax }{figure.caption.125}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.10}{\ignorespaces Projection of the posterior distribution for the RGDP biaxially symmetric model.\relax }}{210}{figure.caption.126}}
-\newlabel{fig:RGDPEll}{{A.10}{210}{Projection of the posterior distribution for the RGDP biaxially symmetric model.\relax }{figure.caption.126}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.11}{\ignorespaces Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry.\relax }}{211}{figure.caption.127}}
-\newlabel{fig:ElliticityEll}{{A.11}{211}{Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry.\relax }{figure.caption.127}{}}
+\newlabel{app:posteriors}{{A}{203}{Posterior distributions of the PSD}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Models with radial symmetry}{204}{section.A.1}}
+\newlabel{sect:app_radial}{{A.1}{204}{Models with radial symmetry}{section.A.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Models with biaxial symmetry}{204}{section.A.2}}
+\newlabel{sect:app_biaxial}{{A.2}{204}{Models with biaxial symmetry}{section.A.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces Projections of the posterior distribution for the GDP model.\relax }}{205}{figure.caption.122}}
+\newlabel{fig:GDPctr}{{A.1}{205}{Projections of the posterior distribution for the GDP model.\relax }{figure.caption.122}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Projections of the posterior distribution for the GKing model.\relax }}{206}{figure.caption.123}}
+\newlabel{fig:GKingctr}{{A.2}{206}{Projections of the posterior distribution for the GKing model.\relax }{figure.caption.123}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces Projections of the posterior distribution for the King's model.\relax }}{207}{figure.caption.124}}
+\newlabel{fig:Kingctr}{{A.3}{207}{Projections of the posterior distribution for the King's model.\relax }{figure.caption.124}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces Projections of the posterior distribution for the OGKing model.\relax }}{208}{figure.caption.125}}
+\newlabel{fig:OGKingctr}{{A.4}{208}{Projections of the posterior distribution for the OGKing model.\relax }{figure.caption.125}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.5}{\ignorespaces Projections of the posterior distribution for the RGDP model.\relax }}{209}{figure.caption.126}}
+\newlabel{fig:RGDPctr}{{A.5}{209}{Projections of the posterior distribution for the RGDP model.\relax }{figure.caption.126}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.6}{\ignorespaces Projections of the posterior distribution for the GDP biaxially symmetric model.\relax }}{210}{figure.caption.127}}
+\newlabel{fig:GDP7Ell}{{A.6}{210}{Projections of the posterior distribution for the GDP biaxially symmetric model.\relax }{figure.caption.127}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.7}{\ignorespaces Projection of the posterior distribution for the GKing biaxially symmetric model.\relax }}{211}{figure.caption.128}}
+\newlabel{fig:GKingEll}{{A.7}{211}{Projection of the posterior distribution for the GKing biaxially symmetric model.\relax }{figure.caption.128}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.8}{\ignorespaces Projection of the posterior distribution for the King's biaxially symmetric model.\relax }}{212}{figure.caption.129}}
+\newlabel{fig:KingEll}{{A.8}{212}{Projection of the posterior distribution for the King's biaxially symmetric model.\relax }{figure.caption.129}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.9}{\ignorespaces Projection of the posterior distribution for the OGKing biaxially symmetric model.\relax }}{213}{figure.caption.130}}
+\newlabel{fig:OGKingEll}{{A.9}{213}{Projection of the posterior distribution for the OGKing biaxially symmetric model.\relax }{figure.caption.130}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.10}{\ignorespaces Projection of the posterior distribution for the RGDP biaxially symmetric model.\relax }}{214}{figure.caption.131}}
+\newlabel{fig:RGDPEll}{{A.10}{214}{Projection of the posterior distribution for the RGDP biaxially symmetric model.\relax }{figure.caption.131}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.11}{\ignorespaces Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry.\relax }}{215}{figure.caption.132}}
+\newlabel{fig:ElliticityEll}{{A.11}{215}{Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry.\relax }{figure.caption.132}{}}
 \bibdata{biblio}
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Models with luminosity segregation}{212}{section.A.3}}
-\newlabel{sect:app_segregated}{{A.3}{212}{Models with luminosity segregation}{section.A.3}{}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{212}{figure.caption.134}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.12}{\ignorespaces Projections of the posterior distribution for the EFF luminosity segregated model.\relax }}{213}{figure.caption.128}}
-\newlabel{fig:EFFSeg}{{A.12}{213}{Projections of the posterior distribution for the EFF luminosity segregated model.\relax }{figure.caption.128}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.13}{\ignorespaces Projections of the posterior distribution for the GDP luminosity segregated model.\relax }}{214}{figure.caption.129}}
-\newlabel{fig:GDPSeg}{{A.13}{214}{Projections of the posterior distribution for the GDP luminosity segregated model.\relax }{figure.caption.129}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.14}{\ignorespaces Projections of the posterior distribution for the GKing luminosity segregated model.\relax }}{215}{figure.caption.130}}
-\newlabel{fig:GKingSeg}{{A.14}{215}{Projections of the posterior distribution for the GKing luminosity segregated model.\relax }{figure.caption.130}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.15}{\ignorespaces Projections of the posterior distribution for the King's luminosity segregated model.\relax }}{216}{figure.caption.131}}
-\newlabel{fig:KingSeg}{{A.15}{216}{Projections of the posterior distribution for the King's luminosity segregated model.\relax }{figure.caption.131}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.16}{\ignorespaces Projections of the posterior distribution for the OGKing luminosity segregated model.\relax }}{217}{figure.caption.132}}
-\newlabel{fig:OGKingSeg}{{A.16}{217}{Projections of the posterior distribution for the OGKing luminosity segregated model.\relax }{figure.caption.132}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.17}{\ignorespaces Projections of the posterior distribution for the RGDP luminosity segregated model.\relax }}{218}{figure.caption.133}}
-\newlabel{fig:RGDPSeg}{{A.17}{218}{Projections of the posterior distribution for the RGDP luminosity segregated model.\relax }{figure.caption.133}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.18}{\ignorespaces Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry and luminosity segregation.\relax }}{219}{figure.caption.134}}
-\newlabel{fig:EllipticitySeg}{{A.18}{219}{Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry and luminosity segregation.\relax }{figure.caption.134}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Models with luminosity segregation}{216}{section.A.3}}
+\newlabel{sect:app_segregated}{{A.3}{216}{Models with luminosity segregation}{section.A.3}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{216}{figure.caption.139}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.12}{\ignorespaces Projections of the posterior distribution for the EFF luminosity segregated model.\relax }}{217}{figure.caption.133}}
+\newlabel{fig:EFFSeg}{{A.12}{217}{Projections of the posterior distribution for the EFF luminosity segregated model.\relax }{figure.caption.133}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.13}{\ignorespaces Projections of the posterior distribution for the GDP luminosity segregated model.\relax }}{218}{figure.caption.134}}
+\newlabel{fig:GDPSeg}{{A.13}{218}{Projections of the posterior distribution for the GDP luminosity segregated model.\relax }{figure.caption.134}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.14}{\ignorespaces Projections of the posterior distribution for the GKing luminosity segregated model.\relax }}{219}{figure.caption.135}}
+\newlabel{fig:GKingSeg}{{A.14}{219}{Projections of the posterior distribution for the GKing luminosity segregated model.\relax }{figure.caption.135}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.15}{\ignorespaces Projections of the posterior distribution for the King's luminosity segregated model.\relax }}{220}{figure.caption.136}}
+\newlabel{fig:KingSeg}{{A.15}{220}{Projections of the posterior distribution for the King's luminosity segregated model.\relax }{figure.caption.136}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.16}{\ignorespaces Projections of the posterior distribution for the OGKing luminosity segregated model.\relax }}{221}{figure.caption.137}}
+\newlabel{fig:OGKingSeg}{{A.16}{221}{Projections of the posterior distribution for the OGKing luminosity segregated model.\relax }{figure.caption.137}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.17}{\ignorespaces Projections of the posterior distribution for the RGDP luminosity segregated model.\relax }}{222}{figure.caption.138}}
+\newlabel{fig:RGDPSeg}{{A.17}{222}{Projections of the posterior distribution for the RGDP luminosity segregated model.\relax }{figure.caption.138}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.18}{\ignorespaces Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry and luminosity segregation.\relax }}{223}{figure.caption.139}}
+\newlabel{fig:EllipticitySeg}{{A.18}{223}{Ellipticity distribution computed from the posterior distribution of the models with biaxial symmetry and luminosity segregation.\relax }{figure.caption.139}{}}
 \bibcite{Adams2001}{{1}{2001}{{{Adams} {et~al.}}}{{{Adams}, {Stauffer}, {Monet}, {Skrutskie}, \& {Beichman}}}}
 \bibcite{1904ApJ....19..338A}{{2}{1904}{{Adams}}{{}}}
 \bibcite{Akeret2013}{{3}{2013}{{Akeret {et~al.}}}{{Akeret, Seehars, Amara, Refregier, \& Csillaghy}}}
@@ -1341,177 +1351,178 @@
 \bibcite{1942RSPSA.180....1D}{{60}{1942}{{Dirac}}{{}}}
 \bibcite{Duane1987}{{61}{1987}{{Duane {et~al.}}}{{Duane, Kennedy, Pendleton, \& Roweth}}}
 \bibcite{Duquennoy1991}{{62}{1991}{{{Duquennoy} \& {Mayor}}}{{}}}
-\bibcite{1986PASP...98..755E}{{63}{1986}{{Eggen}}{{}}}
-\bibcite{EFF1987}{{64}{1987}{{{Elson} {et~al.}}}{{{Elson}, {Fall}, \& {Freeman}}}}
-\bibcite{Faherty2012}{{65}{2012}{{{Faherty} {et~al.}}}{{{Faherty}, {Burgasser}, {Walter}, {Van der Bliek}, {Shara}, {Cruz}, {West}, {Vrba}, \& {Anglada-Escud{\'e}}}}}
-\bibcite{Fan2011}{{66}{2011}{{Fan \& Sisson}}{{}}}
-\bibcite{Feeney2013}{{67}{2013}{{{Feeney} {et~al.}}}{{{Feeney}, {Johnson}, {McEwen}, {Mortlock}, \& {Peiris}}}}
-\bibcite{Fei2005}{{68}{2005}{{Fei-Fei \& Perona}}{{}}}
-\bibcite{Feroz2009}{{69}{2009}{{Feroz {et~al.}}}{{Feroz, Hobson, \& Bridges}}}
-\bibcite{mcmcse}{{70}{2016}{{Flegal {et~al.}}}{{Flegal, Hughes, \& Vats}}}
-\bibcite{corner}{{71}{2016}{{Foreman-Mackey}}{{}}}
-\bibcite{Foreman2013}{{72}{2013}{{Foreman-Mackey {et~al.}}}{{Foreman-Mackey, Hogg, Lang, \& Goodman}}}
-\bibcite{Franklin2002}{{73}{2002}{{Franklin}}{{}}}
-\bibcite{Gagne2014}{{74}{2014}{{{Gagn{\'e}} {et~al.}}}{{{Gagn{\'e}}, {Lafreni{\`e}re}, {Doyon}, {Malo}, \& {Artigau}}}}
-\bibcite{GAIA}{{75}{2016{a}}{{{Gaia Collaboration} {et~al.}}}{{{Gaia Collaboration}, {Prusti}, {de Bruijne}, {Brown}, {Vallenari}, {Babusiaux}, {Bailer-Jones}, {Bastian}, {Biermann}, {Evans}, \& et~al.}}}
-\bibcite{2016A&A...595A...1G}{{76}{2016{b}}{{{Gaia Collaboration} {et~al.}}}{{{Gaia Collaboration}, {Prusti}, {de Bruijne}, {Brown}, {Vallenari}, {Babusiaux}, {Bailer-Jones}, {Bastian}, {Biermann}, {Evans}, \& et~al.}}}
-\bibcite{2017A&A...601A..19G}{{77}{2017}{{{Gaia Collaboration} {et~al.}}}{{{Gaia Collaboration}, {van Leeuwen}, {Vallenari}, {Jordi}, {Lindegren}, {Bastian}, {Prusti}, {de Bruijne}, {Brown}, {Babusiaux}, \& et~al.}}}
-\bibcite{Galli2017}{{78}{2017}{{{Galli} {et~al.}}}{{{Galli}, {Moraux}, {Bouy}, {Bouvier}, {Olivares}, \& {Teixeira}}}}
-\bibcite{2000ApJ...533..938G}{{79}{2000}{{{Gatewood} {et~al.}}}{{{Gatewood}, {de Jonge}, \& {Han}}}}
-\bibcite{Gelman2006}{{80}{2006}{{Gelman}}{{}}}
-\bibcite{Gelman2012}{{81}{2012}{{Gelman}}{{}}}
-\bibcite{Gelman2013}{{82}{2013}{{{Gelman} {et~al.}}}{{{Gelman}, {Carlin}, {Stern}, {Dunson}, {Vehtari}, \& {Rubin}}}}
-\bibcite{Gelman2007}{{83}{2007}{{Gelman \& Hill}}{{}}}
-\bibcite{Gelman2008}{{84}{2008}{{Gelman {et~al.}}}{{Gelman, Jakulin, Pittau, \& Su}}}
-\bibcite{Geman1984}{{85}{1984}{{Geman \& Geman}}{{}}}
-\bibcite{1995A&A...293..360G}{{86}{1995}{{Giannuzzi}}{{}}}
-\bibcite{Gong2016}{{87}{2016}{{Gong \& Flegal}}{{}}}
-\bibcite{Gonzalez-Farias2004}{{88}{2004}{{Gonz{\'{a}}lez-Farias {et~al.}}}{{Gonz{\'{a}}lez-Farias, Dominguez-Molina, \& Gupta}}}
-\bibcite{Good1980}{{89}{1980}{{Good}}{{}}}
-\bibcite{Goodman2010}{{90}{2010}{{Goodman \& Weare}}{{}}}
-\bibcite{Gupta2004}{{91}{2004}{{Gupta {et~al.}}}{{Gupta, Gonz{\'{a}}lez-Farias, \& Dominguez-Molina}}}
-\bibcite{Guthrie1987}{{92}{1987}{{Guthrie}}{{}}}
-\bibcite{Hambly1991}{{93}{1991}{{{Hambly} \& {Jameson}}}{{}}}
-\bibcite{Hastings1970}{{94}{1970}{{Hastings}}{{}}}
-\bibcite{1990ApJ...350..334H}{{95}{1990}{{{Henry} \& {McCarthy}}}{{}}}
-\bibcite{1990ApJ...356..359H}{{96}{1990}{{Hernquist}}{{}}}
-\bibcite{Hertzsprung1947}{{97}{1947}{{Hertzsprung}}{{}}}
-\bibcite{2008ASPC..384..200H}{{98}{2008}{{{Hillenbrand} {et~al.}}}{{{Hillenbrand}, {Bauermeister}, \& {White}}}}
-\bibcite{2000ASPC..198...59H}{{99}{2000}{{{Hodgkin} \& {Jameson}}}{{}}}
-\bibcite{Hogg2010a}{{100}{2010{a}}{{{Hogg} {et~al.}}}{{{Hogg}, {Bovy}, \& {Lang}}}}
-\bibcite{Hogg2010}{{101}{2010{b}}{{{Hogg} {et~al.}}}{{{Hogg}, {Myers}, \& {Bovy}}}}
-\bibcite{2010IAUS..261..320H}{{102}{2010}{{{Holl} {et~al.}}}{{{Holl}, {Hobbs}, \& {Lindegren}}}}
-\bibcite{Hong2016}{{103}{2016}{{Hong {et~al.}}}{{Hong, Balzano, \& Fessler}}}
-\bibcite{Huang2013}{{104}{2013}{{Huang \& Wand}}{{}}}
-\bibcite{1983MNRAS.202..995J}{{105}{1983}{{Jaffe}}{{}}}
-\bibcite{2002MNRAS.335..853J}{{106}{2002}{{{Jameson} {et~al.}}}{{{Jameson}, {Dobbie}, {Hodgkin}, \& {Pinfield}}}}
-\bibcite{2005A&A...435..611J}{{107}{2005}{{{Jappsen} {et~al.}}}{{{Jappsen}, {Klessen}, {Larson}, {Li}, \& {Mac Low}}}}
-\bibcite{Jaynes2003}{{108}{2003}{{Jaynes}}{{}}}
-\bibcite{GUM2008}{{109}{2008}{{JCGM}}{{}}}
-\bibcite{Jefferys2007}{{110}{2007}{{{Jefferys} {et~al.}}}{{{Jefferys}, {Jefferys}, {Barnes}, \& {Dambis}}}}
-\bibcite{Jeffreys61}{{111}{1961}{{Jeffreys}}{{}}}
-\bibcite{2016MNRAS.458.2848J}{{112}{2016}{{{Jiang} \& {van den Bosch}}}{{}}}
-\bibcite{Johnson1958}{{113}{1958}{{{Johnson} \& {Mitchell}}}{{}}}
-\bibcite{1970AJ.....75..563J}{{114}{1970}{{Jones}}{{}}}
-\bibcite{2010A&A...523A..48J}{{115}{2010}{{{Jordi} {et~al.}}}{{{Jordi}, {Gebran}, {Carrasco}, {de Bruijne}, {Voss}, {Fabricius}, {Knude}, {Vallenari}, {Kohley}, \& {Mora}}}}
-\bibcite{Kaas1995}{{116}{1995}{{Kass \& Raftery}}{{}}}
-\bibcite{Kennedy1995}{{117}{1995}{{Kennedy \& Eberhart}}{{}}}
-\bibcite{1998ASPC..142....1K}{{118}{1998}{{Kennicutt}}{{}}}
-\bibcite{King1962}{{119}{1962}{{King}}{{}}}
-\bibcite{Koller2009}{{120}{2009}{{Koller \& Friedman}}{{}}}
-\bibcite{2013AJ....146..134K}{{121}{2013}{{{Kordopatis} {et~al.}}}{{{Kordopatis}, {Gilmore}, {Steinmetz}, {Boeche}, {Seabroke}, {Siebert}, {Zwitter}, {Binney}, {de Laverny}, {Recio-Blanco}, {Williams}, {Piffl}, {Enke}, {Roeser}, {Bijaoui}, {Wyse}, {Freeman}, {Munari}, {Carrillo}, {Anguiano}, {Burton}, {Campbell}, {Cass}, {Fiegert}, {Hartley}, {Parker}, {Reid}, {Ritter}, {Russell}, {Stupar}, {Watson}, {Bienaym{\'e}}, {Bland-Hawthorn}, {Gerhard}, {Gibson}, {Grebel}, {Helmi}, {Navarro}, {Conrad}, {Famaey}, {Faure}, {Just}, {Kos}, {Matijevi{\v c}}, {McMillan}, {Minchev}, {Scholz}, {Sharma}, {Siviero}, {de Boer}, \& {{\v Z}erjal}}}}
-\bibcite{1995AJ....109..672K}{{122}{1995}{{{Kozhurina-Platais} {et~al.}}}{{{Kozhurina-Platais}, {Girard}, {Platais}, {van Altena}, {Ianna}, \& {Cannon}}}}
-\bibcite{KroneMartins2014}{{123}{2014}{{{Krone-Martins} \& {Moitinho}}}{{}}}
-\bibcite{2001MNRAS.322..231K}{{124}{2001}{{Kroupa}}{{}}}
-\bibcite{2002Sci...295...82K}{{125}{2002}{{Kroupa}}{{}}}
-\bibcite{1991MNRAS.251..293K}{{126}{1991}{{{Kroupa} {et~al.}}}{{{Kroupa}, {Gilmore}, \& {Tout}}}}
-\bibcite{2013pss5.book..115K}{{127}{2013}{{{Kroupa} {et~al.}}}{{{Kroupa}, {Weidner}, {Pflamm-Altenburg}, {Thies}, {Dabringhausen}, {Marks}, \& {Maschberger}}}}
-\bibcite{2010MNRAS.407.2241K}{{128}{2010{a}}{{{K{\"u}pper} {et~al.}}}{{{K{\"u}pper}, {Kroupa}, {Baumgardt}, \& {Heggie}}}}
-\bibcite{2010MNRAS.401..105K}{{129}{2010{b}}{{{K{\"u}pper} {et~al.}}}{{{K{\"u}pper}, {Kroupa}, {Baumgardt}, \& {Heggie}}}}
-\bibcite{2015ApJ...815...27K}{{130}{2015}{{{Kuznetsova} {et~al.}}}{{{Kuznetsova}, {Hartmann}, \& {Ballesteros-Paredes}}}}
-\bibcite{2003ARA&A..41...57L}{{131}{2003}{{{Lada} \& {Lada}}}{{}}}
-\bibcite{1995AJ....110.2622L}{{132}{1995}{{{Lauer} {et~al.}}}{{{Lauer}, {Ajhar}, {Byun}, {Dressler}, {Faber}, {Grillmair}, {Kormendy}, {Richstone}, \& {Tremaine}}}}
-\bibcite{2007MNRAS.379.1599L}{{133}{2007}{{{Lawrence} {et~al.}}}{{{Lawrence}, {Warren}, {Almaini}, {Edge}, {Hambly}, {Jameson}, {Lucas}, {Casali}, {Adamson}, {Dye}, {Emerson}, {Foucaud}, {Hewett}, {Hirst}, {Hodgkin}, {Irwin}, {Lodieu}, {McMahon}, {Simpson}, {Smail}, {Mortlock}, \& {Folger}}}}
-\bibcite{1995JKAS...28...45L}{{134}{1995}{{{Lee} \& {Sung}}}{{}}}
-\bibcite{Limber1960}{{135}{1960}{{Limber}}{{}}}
-\bibcite{Limber1961}{{136}{1961}{{Limber}}{{}}}
-\bibcite{Limber1962}{{137}{1962}{{Limber}}{{}}}
-\bibcite{Lin2006}{{138}{2006}{{Lin {et~al.}}}{{Lin, Lee, \& Ho}}}
-\bibcite{Lindstrom1999}{{139}{1999}{{Lindstrom}}{{}}}
-\bibcite{1991ApJ...377..141L}{{140}{1991}{{{Liu} {et~al.}}}{{{Liu}, {Janes}, \& {Bania}}}}
-\bibcite{Lodieu2012}{{141}{2012}{{{Lodieu} {et~al.}}}{{{Lodieu}, {Deacon}, \& {Hambly}}}}
-\bibcite{2007MNRAS.380..712L}{{142}{2007}{{{Lodieu} {et~al.}}}{{{Lodieu}, {Dobbie}, {Deacon}, {Hodgkin}, {Hambly}, \& {Jameson}}}}
-\bibcite{2006ARep...50..714L}{{143}{2006}{{Loktin}}{{}}}
-\bibcite{Lutz1973}{{144}{1973}{{{Lutz} \& {Kelker}}}{{}}}
-\bibcite{1939POMin...7....1L}{{145}{1939}{{Luyten}}{{}}}
-\bibcite{1941NYASA..42..201L}{{146}{1941}{{Luyten}}{{}}}
-\bibcite{2003hstc.conf..346M}{{147}{2003}{{Ma{\'{\i }}z-Apell{\'a}niz}}{{}}}
-\bibcite{Malo2013}{{148}{2013}{{{Malo} {et~al.}}}{{{Malo}, {Doyon}, {Lafreni{\`e}re}, {Artigau}, {Gagn{\'e}}, {Baron}, \& {Riedel}}}}
-\bibcite{March2014}{{149}{2014}{{{March} {et~al.}}}{{{March}, {Karpenka}, {Feroz}, \& {Hobson}}}}
-\bibcite{1996ApJ...469..706M}{{150}{1996}{{{Martin} {et~al.}}}{{{Martin}, {Rebolo}, \& {Zapatero-Osorio}}}}
-\bibcite{2013MNRAS.429.1725M}{{151}{2013}{{Maschberger}}{{}}}
-\bibcite{McMichael1996}{{152}{1996}{{McMichael}}{{}}}
-\bibcite{2014Sci...345.1029M}{{153}{2014}{{{Melis} {et~al.}}}{{{Melis}, {Reid}, {Mioduszewski}, {Stauffer}, \& {Bower}}}}
-\bibcite{1979BICDS..16....2M}{{154}{1979}{{Mermilliod}}{{}}}
-\bibcite{1997A&A...320...74M}{{155}{1997}{{{Mermilliod} {et~al.}}}{{{Mermilliod}, {Bratschi}, \& {Mayor}}}}
-\bibcite{2009A&A...498..949M}{{156}{2009}{{{Mermilliod} {et~al.}}}{{{Mermilliod}, {Mayor}, \& {Udry}}}}
-\bibcite{Metropolis1953}{{157}{1953}{{Metropolis {et~al.}}}{{Metropolis, Rosenbluth, Rosenbluth, Teller, \& Teller}}}
-\bibcite{1979ApJS...41..513M}{{158}{1979}{{{Miller} \& {Scalo}}}{{}}}
-\bibcite{1999MNRAS.310.1147M}{{159}{1999}{{{Moore} {et~al.}}}{{{Moore}, {Quinn}, {Governato}, {Stadel}, \& {Lake}}}}
-\bibcite{2001A&A...367..211M}{{160}{2001}{{{Moraux} {et~al.}}}{{{Moraux}, {Bouvier}, \& {Stauffer}}}}
-\bibcite{2003A&A...400..891M}{{161}{2003}{{{Moraux} {et~al.}}}{{{Moraux}, {Bouvier}, {Stauffer}, \& {Cuillandre}}}}
-\bibcite{2004A&A...426...75M}{{162}{2004}{{{Moraux} {et~al.}}}{{{Moraux}, {Kroupa}, \& {Bouvier}}}}
-\bibcite{Morris1983}{{163}{1983}{{Morris}}{{}}}
-\bibcite{Muench2002}{{164}{2002}{{{Muench} {et~al.}}}{{{Muench}, {Lada}, {Lada}, \& {Alves}}}}
-\bibcite{2015ApJ...814..130M}{{165}{2015}{{{Mulders} {et~al.}}}{{{Mulders}, {Pascucci}, \& {Apai}}}}
-\bibcite{2017ApJ...840L..25M}{{166}{2017}{{{Myeong} {et~al.}}}{{{Myeong}, {Jerjen}, {Mackey}, \& {Da Costa}}}}
-\bibcite{2012MNRAS.423.3601N}{{167}{2012}{{{Narayanan} \& {Dav{\'e}}}}{{}}}
-\bibcite{1997ApJ...490..493N}{{168}{1997}{{{Navarro} {et~al.}}}{{{Navarro}, {Frenk}, \& {White}}}}
-\bibcite{Neal1996}{{169}{1996}{{Neal}}{{}}}
-\bibcite{1994MNRAS.268..181O}{{170}{1994}{{{O'dell} {et~al.}}}{{{O'dell}, {Hendry}, \& {Collier Cameron}}}}
-\bibcite{Offner2014}{{171}{2014}{{{Offner} {et~al.}}}{{{Offner}, {Clark}, {Hennebelle}, {Bastian}, {Bate}, {Hopkins}, {Moraux}, \& {Whitworth}}}}
-\bibcite{2013AJ....146..106O}{{172}{2013}{{{Olivares} {et~al.}}}{{{Olivares}, {S{\'a}nchez}, {Ruelas-Mayorga}, {Allen}, {Costero}, \& {Poveda}}}}
-\bibcite{Olivares2017}{{173}{2017}{{Olivares {et~al.}}}{{Olivares, Sarro, Moraux, Berihuete, \& Bouy}}}
-\bibcite{2017MNRAS.468.2684P}{{174}{2017}{{{Panwar} {et~al.}}}{{{Panwar}, {Samal}, {Pandey}, {Jose}, {Chen}, {Ojha}, {Ogura}, {Singh}, \& {Yadav}}}}
-\bibcite{2016MNRAS.459L.119P}{{175}{2016}{{{Parker} {et~al.}}}{{{Parker}, {Goodwin}, {Wright}, {Meyer}, \& {Quanz}}}}
-\bibcite{Patel2013}{{176}{2013}{{Patel {et~al.}}}{{Patel, Sharma, \& Gupta}}}
-\bibcite{1997A&A...323L..49P}{{177}{1997}{{{Perryman} {et~al.}}}{{{Perryman}, {Lindegren}, {Kovalevsky}, {Hoeg}, {Bastian}, {Bernacca}, {Cr{\'e}z{\'e}}, {Donati}, {Grenon}, {Grewing}, {van Leeuwen}, {van der Marel}, {Mignard}, {Murray}, {Le Poole}, {Schrijver}, {Turon}, {Arenou}, {Froeschl{\'e}}, \& {Petersen}}}}
-\bibcite{Pinfield1998}{{178}{1998}{{{Pinfield} {et~al.}}}{{{Pinfield}, {Jameson}, \& {Hodgkin}}}}
-\bibcite{1911MNRAS..71..460P}{{179}{1911}{{Plummer}}{{}}}
-\bibcite{2003AJ....126.1916P}{{180}{2003}{{{Porras} {et~al.}}}{{{Porras}, {Christopher}, {Allen}, {Di Francesco}, {Megeath}, \& {Myers}}}}
-\bibcite{Press1997}{{181}{1997}{{Press}}{{}}}
-\bibcite{1884MNRAS..44..355P}{{182}{1884}{{Pritchard}}{{}}}
-\bibcite{Raboud1998}{{183}{1998}{{{Raboud} \& {Mermilliod}}}{{}}}
-\bibcite{Rebull2016}{{184}{2016}{{{Rebull} {et~al.}}}{{{Rebull}, {Stauffer}, {Bouvier}, {Cody}, {Hillenbrand}, {Soderblom}, {Valenti}, {Barrado}, {Bouy}, {Ciardi}, {Pinsonneault}, {Stassun}, {Micela}, {Aigrain}, {Vrba}, {Somers}, {Christiansen}, {Gillen}, \& {Collier Cameron}}}}
-\bibcite{2004AJ....128..463R}{{185}{2004}{{{Reid} {et~al.}}}{{{Reid}, {Cruz}, {Allen}, {Mungall}, {Kilkenny}, {Liebert}, {Hawley}, {Fraser}, {Covey}, {Lowrance}, {Kirkpatrick}, \& {Burgasser}}}}
-\bibcite{2002AJ....124.2721R}{{186}{2002}{{{Reid} {et~al.}}}{{{Reid}, {Gizis}, \& {Hawley}}}}
-\bibcite{Riedel2017}{{187}{2017}{{{Riedel} {et~al.}}}{{{Riedel}, {Blunt}, {Lambrides}, {Rice}, {Cruz}, \& {Faherty}}}}
-\bibcite{Roberts2004}{{188}{2004}{{Roberts \& Rosenthal}}{{}}}
-\bibcite{2017MNRAS.466.1513R}{{189}{2017}{{{Robotham} {et~al.}}}{{{Robotham}, {Taranu}, {Tobar}, {Moffett}, \& {Driver}}}}
-\bibcite{1992A&A...255..130R}{{190}{1992}{{{Rosvick} {et~al.}}}{{{Rosvick}, {Mermilliod}, \& {Mayor}}}}
-\bibcite{Rueda1992}{{191}{1992}{{Rueda}}{{}}}
-\bibcite{1990ApJ...361..408S}{{192}{1990}{{{Sackett} \& {Sparke}}}{{}}}
-\bibcite{Sale2012}{{193}{2012}{{Sale}}{{}}}
-\bibcite{Salpeter1955}{{194}{1955}{{Salpeter}}{{}}}
-\bibcite{Sampedro2016}{{195}{2016}{{{Sampedro} \& {Alfaro}}}{{}}}
-\bibcite{Sanders1971}{{196}{1971}{{Sanders}}{{}}}
-\bibcite{Sarro2013}{{197}{2013}{{{Sarro} {et~al.}}}{{{Sarro}, {Berihuete}, {Carri{\'o}n}, {Barrado}, {Cruz}, \& {Isasi}}}}
-\bibcite{Sarro2014}{{198}{2014}{{Sarro {et~al.}}}{{Sarro, Bouy, Berihuete, Bertin, Moraux, Bouvier, Cuillandre, Barrado, \& Solano}}}
-\bibcite{1986FCPh...11....1S}{{199}{1986}{{Scalo}}{{}}}
-\bibcite{Schwarz1978}{{200}{1978}{{Schwarz}}{{}}}
-\bibcite{Shariff2016}{{201}{2016}{{{Shariff} {et~al.}}}{{{Shariff}, {Dhawan}, {Jiao}, {Leibundgut}, {Trotta}, \& {van Dyk}}}}
-\bibcite{Shkedy2007}{{202}{2007}{{{Shkedy} {et~al.}}}{{{Shkedy}, {Decin}, {Molenberghs}, \& {Aerts}}}}
-\bibcite{simon1997}{{203}{1997}{{Simon}}{{}}}
-\bibcite{Skilling2004}{{204}{2004}{{Skilling}}{{}}}
-\bibcite{Skilling2006}{{205}{2006}{{Skilling}}{{}}}
-\bibcite{Smart1977}{{206}{1977}{{{Smart} \& {Green}}}{{}}}
-\bibcite{1944ApJ...100..360S}{{207}{1944}{{{Smith} \& {Struve}}}{{}}}
-\bibcite{2005AJ....129.1616S}{{208}{2005}{{{Soderblom} {et~al.}}}{{{Soderblom}, {Nelan}, {Benedict}, {McArthur}, {Ramirez}, {Spiesman}, \& {Jones}}}}
-\bibcite{2007ApJ...663..960S}{{209}{2007}{{{Sohn} {et~al.}}}{{{Sohn}, {Majewski}, {Mu{\~n}oz}, {Kunkel}, {Johnston}, {Ostheimer}, {Guhathakurta}, {Patterson}, {Siegel}, \& {Cooper}}}}
-\bibcite{Spiriti2013}{{210}{2013}{{Spiriti {et~al.}}}{{Spiriti, Eubank, Smith, \& Young}}}
-\bibcite{Stauffer2007}{{211}{2007}{{{Stauffer} {et~al.}}}{{{Stauffer}, {Hartmann}, {Fazio}, {Allen}, {Patten}, {Lowrance}, {Hurt}, {Rebull}, {Cutri}, {Ramirez}, {Young}, {Rieke}, {Gorlova}, {Muzerolle}, {Slesnick}, \& {Skrutskie}}}}
-\bibcite{1994AJ....108..160S}{{212}{1994}{{{Stauffer} {et~al.}}}{{{Stauffer}, {Liebert}, {Giampapa}, {Macintosh}, {Reid}, \& {Hamilton}}}}
-\bibcite{Stauffer1998}{{213}{1998}{{{Stauffer} {et~al.}}}{{{Stauffer}, {Schultz}, \& {Kirkpatrick}}}}
-\bibcite{Takeda2017}{{214}{2017}{{{Takeda} {et~al.}}}{{{Takeda}, {Hashimoto}, \& {Honda}}}}
-\bibcite{Tapiador2017}{{215}{2017}{{{Tapiador} {et~al.}}}{{{Tapiador}, {Berihuete}, {Sarro}, {Julbe}, \& {Huedo}}}}
-\bibcite{1987MNRAS.224..193T}{{216}{1987}{{Terlevich}}{{}}}
-\bibcite{2000AJ....119.1303T}{{217}{2000}{{{Terndrup} {et~al.}}}{{{Terndrup}, {Stauffer}, {Pinsonneault}, {Sills}, {Yuan}, {Jones}, {Fischer}, \& {Krishnamurthi}}}}
-\bibcite{Thies2007}{{218}{2007}{{{Thies} \& {Kroupa}}}{{}}}
-\bibcite{2008MNRAS.390.1200T}{{219}{2008}{{{Thies} \& {Kroupa}}}{{}}}
-\bibcite{1938AJ.....47...25T}{{220}{1938}{{Titus}}{{}}}
-\bibcite{Trotta2008}{{221}{2008}{{Trotta}}{{}}}
-\bibcite{Trumpler1921}{{222}{1921}{{Trumpler}}{{}}}
-\bibcite{2006A&A...445..513V}{{223}{2006}{{{van de Ven} {et~al.}}}{{{van de Ven}, {van den Bosch}, {Verolme}, \& {de Zeeuw}}}}
-\bibcite{1980IAUS...85..157V}{{224}{1980}{{van Leeuwen}}{{}}}
-\bibcite{1997ESASP.402..203V}{{225}{1997}{{van Leeuwen}}{{}}}
-\bibcite{2009A&A...497..209V}{{226}{2009}{{van Leeuwen}}{{}}}
-\bibcite{1997ESASP.402..689V}{{227}{1997}{{{van Leeuwen} \& {Hansen Ruiz}}}{{}}}
-\bibcite{1925PGro...38D...1V}{{228}{1925}{{van Rhijn}}{{}}}
-\bibcite{1936PGro...47....1V}{{229}{1936}{{van Rhijn}}{{}}}
-\bibcite{Vasilevskis1958}{{230}{1958}{{{Vasilevskis} {et~al.}}}{{{Vasilevskis}, {Klemola}, \& {Preston}}}}
-\bibcite{1924PhDT.........1W}{{231}{1924}{{Wells}}{{}}}
-\bibcite{2009AAS...21340702W}{{232}{2009}{{Wheeler}}{{}}}
-\bibcite{Wolfgang2015}{{233}{2015}{{{Wolfgang} \& {Lopez}}}{{}}}
-\bibcite{1956MNRAS.116..296W}{{234}{1956}{{Woolley}}{{}}}
-\bibcite{Zhao1997}{{235}{1997}{{Zhao}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Acronyms}{232}{section*.136}}
+\bibcite{2017arXiv170704878E}{{63}{2017}{{{Edwards} {et~al.}}}{{{Edwards}, {Meyer}, \& {Christensen}}}}
+\bibcite{1986PASP...98..755E}{{64}{1986}{{Eggen}}{{}}}
+\bibcite{EFF1987}{{65}{1987}{{{Elson} {et~al.}}}{{{Elson}, {Fall}, \& {Freeman}}}}
+\bibcite{Faherty2012}{{66}{2012}{{{Faherty} {et~al.}}}{{{Faherty}, {Burgasser}, {Walter}, {Van der Bliek}, {Shara}, {Cruz}, {West}, {Vrba}, \& {Anglada-Escud{\'e}}}}}
+\bibcite{Fan2011}{{67}{2011}{{Fan \& Sisson}}{{}}}
+\bibcite{Feeney2013}{{68}{2013}{{{Feeney} {et~al.}}}{{{Feeney}, {Johnson}, {McEwen}, {Mortlock}, \& {Peiris}}}}
+\bibcite{Fei2005}{{69}{2005}{{Fei-Fei \& Perona}}{{}}}
+\bibcite{Feroz2009}{{70}{2009}{{Feroz {et~al.}}}{{Feroz, Hobson, \& Bridges}}}
+\bibcite{mcmcse}{{71}{2016}{{Flegal {et~al.}}}{{Flegal, Hughes, \& Vats}}}
+\bibcite{corner}{{72}{2016}{{Foreman-Mackey}}{{}}}
+\bibcite{Foreman2013}{{73}{2013}{{Foreman-Mackey {et~al.}}}{{Foreman-Mackey, Hogg, Lang, \& Goodman}}}
+\bibcite{Franklin2002}{{74}{2002}{{Franklin}}{{}}}
+\bibcite{Gagne2014}{{75}{2014}{{{Gagn{\'e}} {et~al.}}}{{{Gagn{\'e}}, {Lafreni{\`e}re}, {Doyon}, {Malo}, \& {Artigau}}}}
+\bibcite{GAIA}{{76}{2016{a}}{{{Gaia Collaboration} {et~al.}}}{{{Gaia Collaboration}, {Prusti}, {de Bruijne}, {Brown}, {Vallenari}, {Babusiaux}, {Bailer-Jones}, {Bastian}, {Biermann}, {Evans}, \& et~al.}}}
+\bibcite{2016A&A...595A...1G}{{77}{2016{b}}{{{Gaia Collaboration} {et~al.}}}{{{Gaia Collaboration}, {Prusti}, {de Bruijne}, {Brown}, {Vallenari}, {Babusiaux}, {Bailer-Jones}, {Bastian}, {Biermann}, {Evans}, \& et~al.}}}
+\bibcite{2017A&A...601A..19G}{{78}{2017}{{{Gaia Collaboration} {et~al.}}}{{{Gaia Collaboration}, {van Leeuwen}, {Vallenari}, {Jordi}, {Lindegren}, {Bastian}, {Prusti}, {de Bruijne}, {Brown}, {Babusiaux}, \& et~al.}}}
+\bibcite{Galli2017}{{79}{2017}{{{Galli} {et~al.}}}{{{Galli}, {Moraux}, {Bouy}, {Bouvier}, {Olivares}, \& {Teixeira}}}}
+\bibcite{2000ApJ...533..938G}{{80}{2000}{{{Gatewood} {et~al.}}}{{{Gatewood}, {de Jonge}, \& {Han}}}}
+\bibcite{Gelman2006}{{81}{2006}{{Gelman}}{{}}}
+\bibcite{Gelman2012}{{82}{2012}{{Gelman}}{{}}}
+\bibcite{Gelman2013}{{83}{2013}{{{Gelman} {et~al.}}}{{{Gelman}, {Carlin}, {Stern}, {Dunson}, {Vehtari}, \& {Rubin}}}}
+\bibcite{Gelman2007}{{84}{2007}{{Gelman \& Hill}}{{}}}
+\bibcite{Gelman2008}{{85}{2008}{{Gelman {et~al.}}}{{Gelman, Jakulin, Pittau, \& Su}}}
+\bibcite{Geman1984}{{86}{1984}{{Geman \& Geman}}{{}}}
+\bibcite{1995A&A...293..360G}{{87}{1995}{{Giannuzzi}}{{}}}
+\bibcite{Gong2016}{{88}{2016}{{Gong \& Flegal}}{{}}}
+\bibcite{Gonzalez-Farias2004}{{89}{2004}{{Gonz{\'{a}}lez-Farias {et~al.}}}{{Gonz{\'{a}}lez-Farias, Dominguez-Molina, \& Gupta}}}
+\bibcite{Good1980}{{90}{1980}{{Good}}{{}}}
+\bibcite{Goodman2010}{{91}{2010}{{Goodman \& Weare}}{{}}}
+\bibcite{Gupta2004}{{92}{2004}{{Gupta {et~al.}}}{{Gupta, Gonz{\'{a}}lez-Farias, \& Dominguez-Molina}}}
+\bibcite{Guthrie1987}{{93}{1987}{{Guthrie}}{{}}}
+\bibcite{Hambly1991}{{94}{1991}{{{Hambly} \& {Jameson}}}{{}}}
+\bibcite{Hastings1970}{{95}{1970}{{Hastings}}{{}}}
+\bibcite{1990ApJ...350..334H}{{96}{1990}{{{Henry} \& {McCarthy}}}{{}}}
+\bibcite{1990ApJ...356..359H}{{97}{1990}{{Hernquist}}{{}}}
+\bibcite{Hertzsprung1947}{{98}{1947}{{Hertzsprung}}{{}}}
+\bibcite{2008ASPC..384..200H}{{99}{2008}{{{Hillenbrand} {et~al.}}}{{{Hillenbrand}, {Bauermeister}, \& {White}}}}
+\bibcite{2000ASPC..198...59H}{{100}{2000}{{{Hodgkin} \& {Jameson}}}{{}}}
+\bibcite{Hogg2010a}{{101}{2010{a}}{{{Hogg} {et~al.}}}{{{Hogg}, {Bovy}, \& {Lang}}}}
+\bibcite{Hogg2010}{{102}{2010{b}}{{{Hogg} {et~al.}}}{{{Hogg}, {Myers}, \& {Bovy}}}}
+\bibcite{2010IAUS..261..320H}{{103}{2010}{{{Holl} {et~al.}}}{{{Holl}, {Hobbs}, \& {Lindegren}}}}
+\bibcite{Hong2016}{{104}{2016}{{Hong {et~al.}}}{{Hong, Balzano, \& Fessler}}}
+\bibcite{Huang2013}{{105}{2013}{{Huang \& Wand}}{{}}}
+\bibcite{1983MNRAS.202..995J}{{106}{1983}{{Jaffe}}{{}}}
+\bibcite{2002MNRAS.335..853J}{{107}{2002}{{{Jameson} {et~al.}}}{{{Jameson}, {Dobbie}, {Hodgkin}, \& {Pinfield}}}}
+\bibcite{2005A&A...435..611J}{{108}{2005}{{{Jappsen} {et~al.}}}{{{Jappsen}, {Klessen}, {Larson}, {Li}, \& {Mac Low}}}}
+\bibcite{Jaynes2003}{{109}{2003}{{Jaynes}}{{}}}
+\bibcite{GUM2008}{{110}{2008}{{JCGM}}{{}}}
+\bibcite{Jefferys2007}{{111}{2007}{{{Jefferys} {et~al.}}}{{{Jefferys}, {Jefferys}, {Barnes}, \& {Dambis}}}}
+\bibcite{Jeffreys61}{{112}{1961}{{Jeffreys}}{{}}}
+\bibcite{2016MNRAS.458.2848J}{{113}{2016}{{{Jiang} \& {van den Bosch}}}{{}}}
+\bibcite{Johnson1958}{{114}{1958}{{{Johnson} \& {Mitchell}}}{{}}}
+\bibcite{1970AJ.....75..563J}{{115}{1970}{{Jones}}{{}}}
+\bibcite{2010A&A...523A..48J}{{116}{2010}{{{Jordi} {et~al.}}}{{{Jordi}, {Gebran}, {Carrasco}, {de Bruijne}, {Voss}, {Fabricius}, {Knude}, {Vallenari}, {Kohley}, \& {Mora}}}}
+\bibcite{Kaas1995}{{117}{1995}{{Kass \& Raftery}}{{}}}
+\bibcite{Kennedy1995}{{118}{1995}{{Kennedy \& Eberhart}}{{}}}
+\bibcite{1998ASPC..142....1K}{{119}{1998}{{Kennicutt}}{{}}}
+\bibcite{King1962}{{120}{1962}{{King}}{{}}}
+\bibcite{Koller2009}{{121}{2009}{{Koller \& Friedman}}{{}}}
+\bibcite{2013AJ....146..134K}{{122}{2013}{{{Kordopatis} {et~al.}}}{{{Kordopatis}, {Gilmore}, {Steinmetz}, {Boeche}, {Seabroke}, {Siebert}, {Zwitter}, {Binney}, {de Laverny}, {Recio-Blanco}, {Williams}, {Piffl}, {Enke}, {Roeser}, {Bijaoui}, {Wyse}, {Freeman}, {Munari}, {Carrillo}, {Anguiano}, {Burton}, {Campbell}, {Cass}, {Fiegert}, {Hartley}, {Parker}, {Reid}, {Ritter}, {Russell}, {Stupar}, {Watson}, {Bienaym{\'e}}, {Bland-Hawthorn}, {Gerhard}, {Gibson}, {Grebel}, {Helmi}, {Navarro}, {Conrad}, {Famaey}, {Faure}, {Just}, {Kos}, {Matijevi{\v c}}, {McMillan}, {Minchev}, {Scholz}, {Sharma}, {Siviero}, {de Boer}, \& {{\v Z}erjal}}}}
+\bibcite{1995AJ....109..672K}{{123}{1995}{{{Kozhurina-Platais} {et~al.}}}{{{Kozhurina-Platais}, {Girard}, {Platais}, {van Altena}, {Ianna}, \& {Cannon}}}}
+\bibcite{KroneMartins2014}{{124}{2014}{{{Krone-Martins} \& {Moitinho}}}{{}}}
+\bibcite{2001MNRAS.322..231K}{{125}{2001}{{Kroupa}}{{}}}
+\bibcite{2002Sci...295...82K}{{126}{2002}{{Kroupa}}{{}}}
+\bibcite{1991MNRAS.251..293K}{{127}{1991}{{{Kroupa} {et~al.}}}{{{Kroupa}, {Gilmore}, \& {Tout}}}}
+\bibcite{2013pss5.book..115K}{{128}{2013}{{{Kroupa} {et~al.}}}{{{Kroupa}, {Weidner}, {Pflamm-Altenburg}, {Thies}, {Dabringhausen}, {Marks}, \& {Maschberger}}}}
+\bibcite{2010MNRAS.407.2241K}{{129}{2010{a}}{{{K{\"u}pper} {et~al.}}}{{{K{\"u}pper}, {Kroupa}, {Baumgardt}, \& {Heggie}}}}
+\bibcite{2010MNRAS.401..105K}{{130}{2010{b}}{{{K{\"u}pper} {et~al.}}}{{{K{\"u}pper}, {Kroupa}, {Baumgardt}, \& {Heggie}}}}
+\bibcite{2015ApJ...815...27K}{{131}{2015}{{{Kuznetsova} {et~al.}}}{{{Kuznetsova}, {Hartmann}, \& {Ballesteros-Paredes}}}}
+\bibcite{2003ARA&A..41...57L}{{132}{2003}{{{Lada} \& {Lada}}}{{}}}
+\bibcite{1995AJ....110.2622L}{{133}{1995}{{{Lauer} {et~al.}}}{{{Lauer}, {Ajhar}, {Byun}, {Dressler}, {Faber}, {Grillmair}, {Kormendy}, {Richstone}, \& {Tremaine}}}}
+\bibcite{2007MNRAS.379.1599L}{{134}{2007}{{{Lawrence} {et~al.}}}{{{Lawrence}, {Warren}, {Almaini}, {Edge}, {Hambly}, {Jameson}, {Lucas}, {Casali}, {Adamson}, {Dye}, {Emerson}, {Foucaud}, {Hewett}, {Hirst}, {Hodgkin}, {Irwin}, {Lodieu}, {McMahon}, {Simpson}, {Smail}, {Mortlock}, \& {Folger}}}}
+\bibcite{1995JKAS...28...45L}{{135}{1995}{{{Lee} \& {Sung}}}{{}}}
+\bibcite{Limber1960}{{136}{1960}{{Limber}}{{}}}
+\bibcite{Limber1961}{{137}{1961}{{Limber}}{{}}}
+\bibcite{Limber1962}{{138}{1962}{{Limber}}{{}}}
+\bibcite{Lin2006}{{139}{2006}{{Lin {et~al.}}}{{Lin, Lee, \& Ho}}}
+\bibcite{Lindstrom1999}{{140}{1999}{{Lindstrom}}{{}}}
+\bibcite{1991ApJ...377..141L}{{141}{1991}{{{Liu} {et~al.}}}{{{Liu}, {Janes}, \& {Bania}}}}
+\bibcite{Lodieu2012}{{142}{2012}{{{Lodieu} {et~al.}}}{{{Lodieu}, {Deacon}, \& {Hambly}}}}
+\bibcite{2007MNRAS.380..712L}{{143}{2007}{{{Lodieu} {et~al.}}}{{{Lodieu}, {Dobbie}, {Deacon}, {Hodgkin}, {Hambly}, \& {Jameson}}}}
+\bibcite{2006ARep...50..714L}{{144}{2006}{{Loktin}}{{}}}
+\bibcite{Lutz1973}{{145}{1973}{{{Lutz} \& {Kelker}}}{{}}}
+\bibcite{1939POMin...7....1L}{{146}{1939}{{Luyten}}{{}}}
+\bibcite{1941NYASA..42..201L}{{147}{1941}{{Luyten}}{{}}}
+\bibcite{2003hstc.conf..346M}{{148}{2003}{{Ma{\'{\i }}z-Apell{\'a}niz}}{{}}}
+\bibcite{Malo2013}{{149}{2013}{{{Malo} {et~al.}}}{{{Malo}, {Doyon}, {Lafreni{\`e}re}, {Artigau}, {Gagn{\'e}}, {Baron}, \& {Riedel}}}}
+\bibcite{March2014}{{150}{2014}{{{March} {et~al.}}}{{{March}, {Karpenka}, {Feroz}, \& {Hobson}}}}
+\bibcite{1996ApJ...469..706M}{{151}{1996}{{{Martin} {et~al.}}}{{{Martin}, {Rebolo}, \& {Zapatero-Osorio}}}}
+\bibcite{2013MNRAS.429.1725M}{{152}{2013}{{Maschberger}}{{}}}
+\bibcite{McMichael1996}{{153}{1996}{{McMichael}}{{}}}
+\bibcite{2014Sci...345.1029M}{{154}{2014}{{{Melis} {et~al.}}}{{{Melis}, {Reid}, {Mioduszewski}, {Stauffer}, \& {Bower}}}}
+\bibcite{1979BICDS..16....2M}{{155}{1979}{{Mermilliod}}{{}}}
+\bibcite{1997A&A...320...74M}{{156}{1997}{{{Mermilliod} {et~al.}}}{{{Mermilliod}, {Bratschi}, \& {Mayor}}}}
+\bibcite{2009A&A...498..949M}{{157}{2009}{{{Mermilliod} {et~al.}}}{{{Mermilliod}, {Mayor}, \& {Udry}}}}
+\bibcite{Metropolis1953}{{158}{1953}{{Metropolis {et~al.}}}{{Metropolis, Rosenbluth, Rosenbluth, Teller, \& Teller}}}
+\bibcite{1979ApJS...41..513M}{{159}{1979}{{{Miller} \& {Scalo}}}{{}}}
+\bibcite{1999MNRAS.310.1147M}{{160}{1999}{{{Moore} {et~al.}}}{{{Moore}, {Quinn}, {Governato}, {Stadel}, \& {Lake}}}}
+\bibcite{2001A&A...367..211M}{{161}{2001}{{{Moraux} {et~al.}}}{{{Moraux}, {Bouvier}, \& {Stauffer}}}}
+\bibcite{2003A&A...400..891M}{{162}{2003}{{{Moraux} {et~al.}}}{{{Moraux}, {Bouvier}, {Stauffer}, \& {Cuillandre}}}}
+\bibcite{2004A&A...426...75M}{{163}{2004}{{{Moraux} {et~al.}}}{{{Moraux}, {Kroupa}, \& {Bouvier}}}}
+\bibcite{Morris1983}{{164}{1983}{{Morris}}{{}}}
+\bibcite{Muench2002}{{165}{2002}{{{Muench} {et~al.}}}{{{Muench}, {Lada}, {Lada}, \& {Alves}}}}
+\bibcite{2015ApJ...814..130M}{{166}{2015}{{{Mulders} {et~al.}}}{{{Mulders}, {Pascucci}, \& {Apai}}}}
+\bibcite{2017ApJ...840L..25M}{{167}{2017}{{{Myeong} {et~al.}}}{{{Myeong}, {Jerjen}, {Mackey}, \& {Da Costa}}}}
+\bibcite{2012MNRAS.423.3601N}{{168}{2012}{{{Narayanan} \& {Dav{\'e}}}}{{}}}
+\bibcite{1997ApJ...490..493N}{{169}{1997}{{{Navarro} {et~al.}}}{{{Navarro}, {Frenk}, \& {White}}}}
+\bibcite{Neal1996}{{170}{1996}{{Neal}}{{}}}
+\bibcite{1994MNRAS.268..181O}{{171}{1994}{{{O'dell} {et~al.}}}{{{O'dell}, {Hendry}, \& {Collier Cameron}}}}
+\bibcite{Offner2014}{{172}{2014}{{{Offner} {et~al.}}}{{{Offner}, {Clark}, {Hennebelle}, {Bastian}, {Bate}, {Hopkins}, {Moraux}, \& {Whitworth}}}}
+\bibcite{2013AJ....146..106O}{{173}{2013}{{{Olivares} {et~al.}}}{{{Olivares}, {S{\'a}nchez}, {Ruelas-Mayorga}, {Allen}, {Costero}, \& {Poveda}}}}
+\bibcite{Olivares2017}{{174}{2017}{{Olivares {et~al.}}}{{Olivares, Sarro, Moraux, Berihuete, \& Bouy}}}
+\bibcite{2017MNRAS.468.2684P}{{175}{2017}{{{Panwar} {et~al.}}}{{{Panwar}, {Samal}, {Pandey}, {Jose}, {Chen}, {Ojha}, {Ogura}, {Singh}, \& {Yadav}}}}
+\bibcite{2016MNRAS.459L.119P}{{176}{2016}{{{Parker} {et~al.}}}{{{Parker}, {Goodwin}, {Wright}, {Meyer}, \& {Quanz}}}}
+\bibcite{Patel2013}{{177}{2013}{{Patel {et~al.}}}{{Patel, Sharma, \& Gupta}}}
+\bibcite{1997A&A...323L..49P}{{178}{1997}{{{Perryman} {et~al.}}}{{{Perryman}, {Lindegren}, {Kovalevsky}, {Hoeg}, {Bastian}, {Bernacca}, {Cr{\'e}z{\'e}}, {Donati}, {Grenon}, {Grewing}, {van Leeuwen}, {van der Marel}, {Mignard}, {Murray}, {Le Poole}, {Schrijver}, {Turon}, {Arenou}, {Froeschl{\'e}}, \& {Petersen}}}}
+\bibcite{Pinfield1998}{{179}{1998}{{{Pinfield} {et~al.}}}{{{Pinfield}, {Jameson}, \& {Hodgkin}}}}
+\bibcite{1911MNRAS..71..460P}{{180}{1911}{{Plummer}}{{}}}
+\bibcite{2003AJ....126.1916P}{{181}{2003}{{{Porras} {et~al.}}}{{{Porras}, {Christopher}, {Allen}, {Di Francesco}, {Megeath}, \& {Myers}}}}
+\bibcite{Press1997}{{182}{1997}{{Press}}{{}}}
+\bibcite{1884MNRAS..44..355P}{{183}{1884}{{Pritchard}}{{}}}
+\bibcite{Raboud1998}{{184}{1998}{{{Raboud} \& {Mermilliod}}}{{}}}
+\bibcite{Rebull2016}{{185}{2016}{{{Rebull} {et~al.}}}{{{Rebull}, {Stauffer}, {Bouvier}, {Cody}, {Hillenbrand}, {Soderblom}, {Valenti}, {Barrado}, {Bouy}, {Ciardi}, {Pinsonneault}, {Stassun}, {Micela}, {Aigrain}, {Vrba}, {Somers}, {Christiansen}, {Gillen}, \& {Collier Cameron}}}}
+\bibcite{2004AJ....128..463R}{{186}{2004}{{{Reid} {et~al.}}}{{{Reid}, {Cruz}, {Allen}, {Mungall}, {Kilkenny}, {Liebert}, {Hawley}, {Fraser}, {Covey}, {Lowrance}, {Kirkpatrick}, \& {Burgasser}}}}
+\bibcite{2002AJ....124.2721R}{{187}{2002}{{{Reid} {et~al.}}}{{{Reid}, {Gizis}, \& {Hawley}}}}
+\bibcite{Riedel2017}{{188}{2017}{{{Riedel} {et~al.}}}{{{Riedel}, {Blunt}, {Lambrides}, {Rice}, {Cruz}, \& {Faherty}}}}
+\bibcite{Roberts2004}{{189}{2004}{{Roberts \& Rosenthal}}{{}}}
+\bibcite{2017MNRAS.466.1513R}{{190}{2017}{{{Robotham} {et~al.}}}{{{Robotham}, {Taranu}, {Tobar}, {Moffett}, \& {Driver}}}}
+\bibcite{1992A&A...255..130R}{{191}{1992}{{{Rosvick} {et~al.}}}{{{Rosvick}, {Mermilliod}, \& {Mayor}}}}
+\bibcite{Rueda1992}{{192}{1992}{{Rueda}}{{}}}
+\bibcite{1990ApJ...361..408S}{{193}{1990}{{{Sackett} \& {Sparke}}}{{}}}
+\bibcite{Sale2012}{{194}{2012}{{Sale}}{{}}}
+\bibcite{Salpeter1955}{{195}{1955}{{Salpeter}}{{}}}
+\bibcite{Sampedro2016}{{196}{2016}{{{Sampedro} \& {Alfaro}}}{{}}}
+\bibcite{Sanders1971}{{197}{1971}{{Sanders}}{{}}}
+\bibcite{Sarro2013}{{198}{2013}{{{Sarro} {et~al.}}}{{{Sarro}, {Berihuete}, {Carri{\'o}n}, {Barrado}, {Cruz}, \& {Isasi}}}}
+\bibcite{Sarro2014}{{199}{2014}{{Sarro {et~al.}}}{{Sarro, Bouy, Berihuete, Bertin, Moraux, Bouvier, Cuillandre, Barrado, \& Solano}}}
+\bibcite{1986FCPh...11....1S}{{200}{1986}{{Scalo}}{{}}}
+\bibcite{Schwarz1978}{{201}{1978}{{Schwarz}}{{}}}
+\bibcite{Shariff2016}{{202}{2016}{{{Shariff} {et~al.}}}{{{Shariff}, {Dhawan}, {Jiao}, {Leibundgut}, {Trotta}, \& {van Dyk}}}}
+\bibcite{Shkedy2007}{{203}{2007}{{{Shkedy} {et~al.}}}{{{Shkedy}, {Decin}, {Molenberghs}, \& {Aerts}}}}
+\bibcite{simon1997}{{204}{1997}{{Simon}}{{}}}
+\bibcite{Skilling2004}{{205}{2004}{{Skilling}}{{}}}
+\bibcite{Skilling2006}{{206}{2006}{{Skilling}}{{}}}
+\bibcite{Smart1977}{{207}{1977}{{{Smart} \& {Green}}}{{}}}
+\bibcite{1944ApJ...100..360S}{{208}{1944}{{{Smith} \& {Struve}}}{{}}}
+\bibcite{2005AJ....129.1616S}{{209}{2005}{{{Soderblom} {et~al.}}}{{{Soderblom}, {Nelan}, {Benedict}, {McArthur}, {Ramirez}, {Spiesman}, \& {Jones}}}}
+\bibcite{2007ApJ...663..960S}{{210}{2007}{{{Sohn} {et~al.}}}{{{Sohn}, {Majewski}, {Mu{\~n}oz}, {Kunkel}, {Johnston}, {Ostheimer}, {Guhathakurta}, {Patterson}, {Siegel}, \& {Cooper}}}}
+\bibcite{Spiriti2013}{{211}{2013}{{Spiriti {et~al.}}}{{Spiriti, Eubank, Smith, \& Young}}}
+\bibcite{Stauffer2007}{{212}{2007}{{{Stauffer} {et~al.}}}{{{Stauffer}, {Hartmann}, {Fazio}, {Allen}, {Patten}, {Lowrance}, {Hurt}, {Rebull}, {Cutri}, {Ramirez}, {Young}, {Rieke}, {Gorlova}, {Muzerolle}, {Slesnick}, \& {Skrutskie}}}}
+\bibcite{1994AJ....108..160S}{{213}{1994}{{{Stauffer} {et~al.}}}{{{Stauffer}, {Liebert}, {Giampapa}, {Macintosh}, {Reid}, \& {Hamilton}}}}
+\bibcite{Stauffer1998}{{214}{1998}{{{Stauffer} {et~al.}}}{{{Stauffer}, {Schultz}, \& {Kirkpatrick}}}}
+\bibcite{Takeda2017}{{215}{2017}{{{Takeda} {et~al.}}}{{{Takeda}, {Hashimoto}, \& {Honda}}}}
+\bibcite{Tapiador2017}{{216}{2017}{{{Tapiador} {et~al.}}}{{{Tapiador}, {Berihuete}, {Sarro}, {Julbe}, \& {Huedo}}}}
+\bibcite{1987MNRAS.224..193T}{{217}{1987}{{Terlevich}}{{}}}
+\bibcite{2000AJ....119.1303T}{{218}{2000}{{{Terndrup} {et~al.}}}{{{Terndrup}, {Stauffer}, {Pinsonneault}, {Sills}, {Yuan}, {Jones}, {Fischer}, \& {Krishnamurthi}}}}
+\bibcite{Thies2007}{{219}{2007}{{{Thies} \& {Kroupa}}}{{}}}
+\bibcite{2008MNRAS.390.1200T}{{220}{2008}{{{Thies} \& {Kroupa}}}{{}}}
+\bibcite{1938AJ.....47...25T}{{221}{1938}{{Titus}}{{}}}
+\bibcite{Trotta2008}{{222}{2008}{{Trotta}}{{}}}
+\bibcite{Trumpler1921}{{223}{1921}{{Trumpler}}{{}}}
+\bibcite{2006A&A...445..513V}{{224}{2006}{{{van de Ven} {et~al.}}}{{{van de Ven}, {van den Bosch}, {Verolme}, \& {de Zeeuw}}}}
+\bibcite{1980IAUS...85..157V}{{225}{1980}{{van Leeuwen}}{{}}}
+\bibcite{1997ESASP.402..203V}{{226}{1997}{{van Leeuwen}}{{}}}
+\bibcite{2009A&A...497..209V}{{227}{2009}{{van Leeuwen}}{{}}}
+\bibcite{1997ESASP.402..689V}{{228}{1997}{{{van Leeuwen} \& {Hansen Ruiz}}}{{}}}
+\bibcite{1925PGro...38D...1V}{{229}{1925}{{van Rhijn}}{{}}}
+\bibcite{1936PGro...47....1V}{{230}{1936}{{van Rhijn}}{{}}}
+\bibcite{Vasilevskis1958}{{231}{1958}{{{Vasilevskis} {et~al.}}}{{{Vasilevskis}, {Klemola}, \& {Preston}}}}
+\bibcite{1924PhDT.........1W}{{232}{1924}{{Wells}}{{}}}
+\bibcite{2009AAS...21340702W}{{233}{2009}{{Wheeler}}{{}}}
+\bibcite{Wolfgang2015}{{234}{2015}{{{Wolfgang} \& {Lopez}}}{{}}}
+\bibcite{1956MNRAS.116..296W}{{235}{1956}{{Woolley}}{{}}}
+\bibcite{Zhao1997}{{236}{1997}{{Zhao}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{Acronyms}{236}{section*.141}}

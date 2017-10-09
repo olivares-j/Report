@@ -364,7 +364,7 @@ p(\mathbf{d}_{obs},I|\boldsymbol{\theta})=\int p(\mathbf{d}|\boldsymbol{\theta})
 \end{equation}
 where the missing values have been marginalised with the aid the prior $p(I|\mathbf{d},\boldsymbol{\theta})$. 
 
-The probability $p(I|\mathbf{d})$ can be assumed to be uniform, which results in what is called the \emph{ignorability} of the data collection mechanism. The result of this assumption is that $p(\mathbf{d}_{obs},I|\boldsymbol{\theta})= p(\mathbf{d}_{obs}|\boldsymbol{\theta})$, which is equivalent to ignore the missing mechanism. This assumption is incorrect because, as shown in Section \ref{sect:DR2}, missing values are most probable at the faint photometric ends.
+The probability $p(I|\mathbf{d})$ can be assumed to be uniform, which results in what is called the \emph{ignorability}\footnote{This assumption is also called \emph{missing completely at random}, which I do not use to avoid confusion with the \emph{missing at random} assumption.} of the data collection mechanism. The result of this assumption is that $p(\mathbf{d}_{obs},I|\boldsymbol{\theta})= p(\mathbf{d}_{obs}|\boldsymbol{\theta})$, which is equivalent to ignore the missing mechanism. This assumption is incorrect because, as shown in Section \ref{sect:DR2}, missing values are most probable at the faint photometric ends.
 
 The probability $p(I|\mathbf{d},\boldsymbol{\theta})$ is formally not known because \gls{ddr2} is a compilation of data from a variety of surveys. Thus the data collection mechanism is neither homogeneous nor totally understood\footnote{ The DANCe team is currently working on the assessing of the missingness process. In particular, we are interested in the detection probability as a function of signal-to-noise and sky position. The latter is of paramount importance in the vicinity of bright sources where halos and artefacts have the largest impact.}. In spite of that, it can also be assumed that the collection mechanism depends only on the observed values, $\mathbf{d}_{obs}$. Such assumption is called \emph{missing at random} \cite[][p. 450]{Gelman2013} because the distribution of the missing-data mechanism does not depend on the missing values. This assumption is still incorrect because, as shown in Section \ref{sect:DR2},  the probability of detecting an object depends on its brightness. However, under this assumption, $p(I|\mathbf{d},\boldsymbol{\theta})=p(I|\mathbf{d}_{obs})$. Thus, Equation \ref{eq:marginalmis} reduces to,
 
@@ -457,6 +457,7 @@ Thus, I now have three synthetic data sets. The original one, with completely ob
 By means of these three set of parameters, I can quantify the bias induced by the \emph{ignorability} and \emph{naivety} assumptions. The first is given by the Missing data set and the parameters derived from it, while the later by the Observed data set and its derived parameters. Furthermore, to minimise the effects of the sample size, instead of comparing the Missing and Observed set of parameters to the true one, I  compare them to the Complete set of parameters. To quantify differences, I use the Root Mean Square Relative Deviation, which is defined as, 
 
 \begin{equation}
+\label{eq:rmsrd}
 RMSRD = \sqrt{\frac{\sum_i^n\left(\frac{x_i-y_i}{y_i}\right)^2}{n}}, \nonumber
 \end{equation}
 

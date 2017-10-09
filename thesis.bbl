@@ -1,4 +1,4 @@
-\begin{thebibliography}{235}
+\begin{thebibliography}{236}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -259,6 +259,10 @@ Duane, S., Kennedy, A.~D., Pendleton, B.~J., \& Roweth, D. 1987, Physics
 
 \bibitem[{{Duquennoy} \& {Mayor}(1991)}]{Duquennoy1991}
 {Duquennoy}, A. \& {Mayor}, M. 1991, \aap, 248, 485
+
+\bibitem[{{Edwards} {et~al.}(2017){Edwards}, {Meyer}, \&
+  {Christensen}}]{2017arXiv170704878E}
+{Edwards}, M.~C., {Meyer}, R., \& {Christensen}, N. 2017, ArXiv e-prints
 
 \bibitem[{{Eggen}(1986)}]{1986PASP...98..755E}
 {Eggen}, O.~J. 1986, \pasp, 98, 755

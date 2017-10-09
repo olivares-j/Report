@@ -10,7 +10,7 @@ Thanks to its Bayesian framework, the Bayesian Hierarchical Models methodology a
 
 To learn the posterior distributions of the parameters in the cluster model, the \gls{bhm}, as we call this new \gls{is}, uses a combination of learning techniques, the \acrlong{pso} of \citet{Kennedy1995,Clerc2002} and the \emph{emcee} \acrlong{mcmc} method of \citet{Foreman2013}. Both are implemented in \acrlong{hpc} environments to use large data sets ($10^5$ to $10^6$ objects) and multidimensional observable spaces. While the multidimensionality of the observable space (proper motions and photometry) add valuable information to constrain the cluster model and render it accurate, the large size of the data set increases its precision. 
 
-The performance of the \gls{bhm} as a classifiers was analysed on synthetic data sets. The results of this analysis show that at an optimal probability threshold of $p=0.84$ the it has a \acrlong{tpr} (recovery rate) of $90.0\pm0.05$\% and a contamination rate of $4.3\pm0.2$\%. The \acrlong{auc} \acrlong{roc} is 0.99 which indicates that it as an excellent classifier. The synthetic analysis reveals that the expected value of the contamination in the kinematic and photometric cluster distributions is $5.8\pm 0.2$\%.
+The performance of the \gls{bhm} as a classifiers was analysed on synthetic data sets. The results of this analysis show that at an optimal probability threshold of $p=0.84$, it has a \acrlong{tpr} (recovery rate) of $90.0\pm0.05$\% and a contamination rate of $4.3\pm0.2$\%. The \acrlong{auc} \acrlong{roc} is 0.99 which indicates that it as an excellent classifier. The synthetic analysis reveals that the expected value of the contamination in the kinematic and photometric cluster distributions is $5.8\pm 0.2$\%.
 
 The \gls{bhm} has been thoroughly tested and validated on the \acrlong{ddr2} \citep{Bouy2015}. Since the Pleiades is one of the most studied clusters in the history of astronomy, it offers the perfect case study for the benchmarking of an \gls{is} aiming at the analysis of \gls{nyc}. In addition, the high precision and carefully designed observations of the \gls{dance} project for the Pleiades cluster provide the necessary detailed information and sufficient statistics to benchmark the \gls{bhm} and constrain its posterior distribution, in the high dimensionality (85) of its parametric space specifically. 
 
@@ -19,15 +19,16 @@ The results of applying the \gls{bhm} to the \acrfull{rdr2} data set yield the f
 \begin{itemize}
 \item The by-product cluster membership probabilities, which are now delivered as full \glspl{pdf}, show that (see Section \ref{sect:memberscomparison}):
 \begin{itemize}
-\item  There is an outstanding agreement of 99\% with the classification process done by \citet{Bouy2015} on the one hundred thousands objects data set.
+\item  There is an outstanding agreement of 99\% with the classification process done by \citet{Bouy2015} on the one hundred thousands objects in data set.
 \item From the 1967 pleiads candidate members found in this work, 205 are new ones. It represents 10\% of the cluster population. 
 \item From the candidate members of \citet{Rebull2016}, 91\% are classified as members. This figure is better than our estimated value of the \acrlong{tpr}, $ 90.0 \pm0.05$.
 \end{itemize}
 \item The model selection analysis of the \acrfull{psd} performed on the \acrfull{hmps} of candidate members recovered by the \gls{bhm} shows that (see Section \ref{sect:PSDresults}):
 \begin{itemize}
-\item The King's profile \citep{King1962} is not just a good model due to its physical interpretability, but also has the largest Bayesian evidence when compared to classical profiles from the literature.
+\item The King's profile \citep{King1962} is not just a good model due to its physical interpretability, but also has large Bayesian evidence when compared to classical profiles from the literature.
+\item The family of models introduced in this work and called the \glsfirst{gking} profiles show better evidences than the classical King's profile. 
 \item There is enough Bayesian evidence to support luminosity segregation of the Pleiades cluster.
-\item The Pleiades data set supports, with large Bayesian evidence, \gls{psd} models with biaxial symmetry indicating the non negligible ellipticity of the cluster ($\epsilon=0.13$).
+\item The Pleiades data set supports, with large Bayesian evidence, \gls{psd} models with biaxial symmetry indicating the non negligible ellipticity of the cluster.
 \end{itemize}
 \item The kinematic and photometric distribution of the cluster populations show that (see Section \ref{sect:PMresults} and \ref{sect:luminosity}):
 \begin{itemize}
@@ -43,11 +44,36 @@ The results of applying the \gls{bhm} to the \acrfull{rdr2} data set yield the f
 \end{itemize}
 \end{itemize}
 
-By minimising bias, propagating uncertainties, including correlations and doing a comprehensive modelling of the data particularities (missing values and heteroscedastic uncertainties) the \gls{bhm}, developed, tested and validated in the present work, delivers the kinematic and photometric distributions of the cluster single and equal-mass binary populations. This new intelligent system represents the state of the art in the statistical analysis of \glspl{nyc}.
+By minimising bias, propagating uncertainties, including correlations and doing a comprehensive modelling of the data particularities the \gls{bhm}, developed, tested and validated in the present work, delivers the kinematic and photometric distributions of the cluster single and equal-mass binary populations. This new intelligent system represents the state of the art in the statistical analysis of \glspl{nyc}.
+
+\section{Assumptions that must be investigated and removed}
+
+The following is a list of non-exhaustive assumptions that the \gls{bhm} makes, which must be removed or at least revisited in the near future.
+
+\begin{itemize}
+\item Missing values. It is well known that the probability of detecting an object depends on its true value. In future applications of the \gls{bhm} this \emph{detection probability} must be known for all observables in the data set, correlations included. Then, provided that enough computer power is available, these assumptions must be removed. In particular the following:
+\begin{itemize}
+\item \emph{Missing at random}. Currently it is assumed that the \emph{selection probability} of cluster objects is identically one. This is a simplistic assumption which must be removed by introducing, in addition to the  \emph{detection probability}, the \emph{selection probability}.
+\item \emph{Ignorability}.Currently it is assumed that the missing data mechanism in the field objects is ignorable. This an over simplistic assumption which must be removed.
+\end{itemize}
+\item Homoscedastic intrinsic cluster photometric dispersion. This an assumption which must be tested in future works. In particular, the current photometric model must be compared to one in which the cluster photometric sequence is modelled with its intrinsic heteroscedasticity. A the bayesian evidence will then tell if this assumption is or not valid.
+
+\item Fixed field model. Currently, the field model remains fixed under the assumption of its invariability. This assumption must be tested once the field model is computed in larger data sets. If it continues to be violated, then an iterative scheme must be performed until the field model remains static. 
+
+\item MLE field model. Currently the field model is inferred with \gls{mle} techniques and the variations in its parameters neglected. This assumption has as a consequence that the uncertainties in the field model are not propagated into the cluster. In particular, in spite that the field sample represents 98\% of the data (a small change on it may have a large impact on the minority, cluster, population). For this assumption to be removed, the field model must be included in the inference process.
+
+\item Independence between proper motions and photometry. Although this assumption is currently valid for the field population in the  \gls{ddr2}, it must be tested in any new data set in which the \gls{bhm} is applied. In addition, the cluster model must include correlation parameters to properly test if this assumption is also valid for it.
+
+\item Fixed knots in the \gls{bspline}. Currently, the knots of the splines are assumed to be fixed to avoid degeneracies, however new techniques seem to be able to perform simultaneous inference in both the knots and the coefficients of the splines \citep{2017arXiv170704878E}.
+
+\end{itemize}
+
 
 \section{Current issues and future improvements}
 
-Despite the fact that the \gls{bhm} presented here solves the issues present in current methodologies from the literature, the following is a non-exhaustive list of important aspects to tackle in the near future.
+Despite the fact that the \gls{bhm} presented here solves the issues present in current methodologies from the literature, the following is a non-exhaustive list of important issues still present in the \gls{bhm}, which must be tackled in  future works.
+
+
 
 \begin{itemize}
 \item The \gls{bhm} must be able to deal with:
@@ -81,16 +107,6 @@ Finally, I  list some future perspectives of the \gls{bhm}.
 \item In the \emph{Gaia} era, it will continue to provide not just accurate lists of candidate members, but also unbiased kinematic and photometric distributions with correctly propagated uncertainties for objects all along from the high mass domain down to the planetary mass regime.
 \end{itemize}
 
-USE OF OTHER COLOUR INDICES
-VARYING INTRINSIC DISPERSION
-
-independence between proper motions and photometry
-
-spatial incompleteness due to bright sources
-
-Photometric incompleteness in the i band. Panstarss
-
-- Because the field parameters are fixed, uncertainty in field parameters are not propagated to cluster parameters, in spite the field sample represents 98\% of the data (a small change on it may have a large impact on the minority, cluster, population).
 
 
 
