@@ -71,24 +71,24 @@
 \contentsline {subsection}{\numberline {4.2.2}Candidate members from \citet {Bouy2015}}{150}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Candidate members from \citet {Rebull2016}}{156}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}The statistical distributions of the Pleiades.}{158}{section.4.3}
-\contentsline {section}{\numberline {4.4}Updating the assumptions and priors}{162}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Assumptions}{163}{subsection.4.4.1}
-\contentsline {section}{\numberline {4.5}Projected spatial distribution}{164}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Selection of models with radial symmetry}{165}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Selection of models with biaxial symmetry}{168}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Selection of models with luminosity segregation}{171}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Proper motions distribution}{171}{section.4.6}
-\contentsline {section}{\numberline {4.7}Luminosity distribution}{174}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Derivation of the magnitude distributions}{174}{subsection.4.7.1}
-\contentsline {section}{\numberline {4.8}Mass distribution}{181}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}The mass-luminosity relation}{181}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Present day system mass distribution}{183}{subsection.4.8.2}
-\contentsline {section}{\numberline {4.9}The mass distribution on time}{187}{section.4.9}
-\contentsline {chapter}{\numberline {5}Conclusions and future work}{193}{chapter.5}
-\contentsline {section}{\numberline {5.1}Current issues and future improvements}{195}{section.5.1}
-\contentsline {chapter}{\numberline {A}Posterior distributions of the PSD }{198}{appendix.A}
-\contentsline {section}{\numberline {A.1}Models with radial symmetry}{199}{section.A.1}
-\contentsline {section}{\numberline {A.2}Models with biaxial symmetry}{199}{section.A.2}
-\contentsline {section}{\numberline {A.3}Models with luminosity segregation}{211}{section.A.3}
-\contentsline {chapter}{Bibliography}{211}{figure.caption.134}
-\contentsline {chapter}{Acronyms}{231}{section*.136}
+\contentsline {section}{\numberline {4.4}Projected spatial distribution}{162}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Selection of models with radial symmetry}{164}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Selection of models with biaxial symmetry}{167}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Selection of models with luminosity segregation}{169}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Proper motions distribution}{170}{section.4.5}
+\contentsline {section}{\numberline {4.6}Luminosity distribution}{176}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Derivation of the magnitude distributions}{176}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}Mass distribution}{179}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}The mass-luminosity relation}{179}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Present day system mass distribution}{181}{subsection.4.7.2}
+\contentsline {section}{\numberline {4.8}The mass distribution on time}{186}{section.4.8}
+\contentsline {section}{\numberline {4.9}Updating priors and assumptions}{191}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Assumptions}{193}{subsection.4.9.1}
+\contentsline {chapter}{\numberline {5}Conclusions and future work}{194}{chapter.5}
+\contentsline {section}{\numberline {5.1}Current issues and future improvements}{196}{section.5.1}
+\contentsline {chapter}{\numberline {A}Posterior distributions of the PSD }{199}{appendix.A}
+\contentsline {section}{\numberline {A.1}Models with radial symmetry}{200}{section.A.1}
+\contentsline {section}{\numberline {A.2}Models with biaxial symmetry}{200}{section.A.2}
+\contentsline {section}{\numberline {A.3}Models with luminosity segregation}{212}{section.A.3}
+\contentsline {chapter}{Bibliography}{212}{figure.caption.134}
+\contentsline {chapter}{Acronyms}{232}{section*.136}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{234}
+\begin{thebibliography}{235}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2001){Adams}, {Stauffer}, {Monet}, {Skrutskie}, \&
@@ -111,13 +111,9 @@ Berger, J.~O., Bernardo, J.~M., \& Sun, D. 2009, Ann. Statist., 37, 905
   {Plez}}]{1998A&A...333..231B}
 {Bessell}, M.~S., {Castelli}, F., \& {Plez}, B. 1998, \aap, 333, 231
 
-\bibitem[{{Binney} \& {Tremaine}(2008{\natexlab{a}})}]{2008gady.book.....B}
-{Binney}, J. \& {Tremaine}, S. 2008{\natexlab{a}}, {Galactic Dynamics: Second
-  Edition} (Princeton University Press)
-
-\bibitem[{{Binney} \& {Tremaine}(2008{\natexlab{b}})}]{Binney2008}
-{Binney}, J. \& {Tremaine}, S. 2008{\natexlab{b}}, {Galactic Dynamics: Second
-  Edition} (Princeton University Press)
+\bibitem[{{Binney} \& {Tremaine}(2008)}]{2008gady.book.....B}
+{Binney}, J. \& {Tremaine}, S. 2008, {Galactic Dynamics: Second Edition}
+  (Princeton University Press)
 
 \bibitem[{Bishop(2006)}]{Bishop2006}
 Bishop, C. 2006, Pattern Recognition and Machine Learning, Information Science
@@ -731,6 +727,11 @@ Olivares, J., Sarro, L., Moraux, E., Berihuete, A., \& Bouy, H. 2017, \aap,
   {Ojha}, {Ogura}, {Singh}, \& {Yadav}}]{2017MNRAS.468.2684P}
 {Panwar}, N., {Samal}, M.~R., {Pandey}, A.~K., {et~al.} 2017, \mnras, 468, 2684
 
+\bibitem[{{Parker} {et~al.}(2016){Parker}, {Goodwin}, {Wright}, {Meyer}, \&
+  {Quanz}}]{2016MNRAS.459L.119P}
+{Parker}, R.~J., {Goodwin}, S.~P., {Wright}, N.~J., {Meyer}, M.~R., \& {Quanz},
+  S.~P. 2016, \mnras, 459, L119
+
 \bibitem[{Patel {et~al.}(2013)Patel, Sharma, \& Gupta}]{Patel2013}
 Patel, P.~K., Sharma, V., \& Gupta, K. 2013, International Journal of Computer
   Applications, 73
@@ -912,6 +913,9 @@ Spiriti, S., Eubank, R., Smith, P.~W., \& Young, D. 2013, Journal of
 
 \bibitem[{{Titus}(1938)}]{1938AJ.....47...25T}
 {Titus}, J. 1938, \aj, 47, 25
+
+\bibitem[{{Trotta}(2008)}]{Trotta2008}
+{Trotta}, R. 2008, Contemporary Physics, 49, 71
 
 \bibitem[{{Trumpler}(1921)}]{Trumpler1921}
 {Trumpler}, R.~J. 1921, Lick Observatory Bulletin, 10, 110

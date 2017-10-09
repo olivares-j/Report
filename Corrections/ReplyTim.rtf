@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
 {\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 ArialMT;}
-{\colortbl;\red255\green255\blue255;\red20\green0\blue65;\red0\green61\blue204;\red164\green8\blue0;
-\red0\green45\blue153;\red0\green68\blue254;\red110\green5\blue0;\red0\green31\blue103;}
+{\colortbl;\red255\green255\blue255;\red20\green0\blue65;\red0\green61\blue204;\red0\green45\blue153;
+\red0\green68\blue254;\red110\green5\blue0;\red0\green31\blue103;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww25320\viewh14600\viewkind0
 \deftab720
 \pard\pardeftab720\sa240
@@ -31,7 +31,7 @@
 \i a
 \i0 ). This needs re-writing to reflect the fact that in Bayesian analysis no probability is simply a frequency (to paraphrase Jeffreys in Section VIII of \'93Theory of Probability\'94).\
 \pard\pardeftab720\sa240
-\cf3 I have modified this and stated that probability is our reasonable degree of confidence, as mentioned by Jeffreys.
+\cf3 I have modified this and stated that probability is our reasonable degree of confidence, as mentioned by Jeffreys. Thanks for pointing me to his book.
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -40,7 +40,9 @@
 \cf3 As it is now stated in Section 3.3.2, the membership probabilities become pdfs once the prior probability mass function, which is hierarchically modelled becomes a pdf. If I were to use fixed prior probabilities as in Eq. 3.19 and commonly done in the literature, I would have obtained membership probabilities that would have been probability mass functions. By inferring the prior probabilities from the data, and as continuous distributions the result is a PDF membership probability.  \cf2 \
 I think the final paragraph of Page 53 is wrong (though am quite happy for the candidate to argue with me). I agree that in some sense as the number of parameters increases the probability density must get lower per dimension. However, in assessing the evidence for a model we integrate over the space, so the density per dimension is not relevant.\
 \pard\pardeftab720\sa240
-\cf4 That will be in the extreme case in which the likelihood is not informative at all, thus we integrate over the prior, which if is proper adds to one independent of the dimension. However, 
+\cf4 I must admit that I wrote it in a very simplistic manner. Since the integrand depends both on the likelihood and the prior, and it is integrated over the parametric space, then I agree that if the likelihood provides no information for a set of parameters, then the integral would not be changed with respect to the integral carried out on the parameters that are effectively affected by the likelihood. This is similar to say that the evidence only penalises those parameters that \'93waste\'94 the parameter space. Thus, the name of this integral is quite appropriate, it quantifies the available evidence to support the model.\
+That say, in my statement I made the (debatable) assumption that in every day cases, the likelihoods we propose contain parameters that we expect to have and effect on the likelihood. But, theoretically, you are right.  \
+I have modified it to account our discussion.
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -50,7 +52,7 @@ I think the final paragraph of Page 53 is wrong (though am quite happy for the c
 
 \f1 \cf2 There are a few places where I disagree on points of fact, but my main requests for changes here center around enhancing the critical assessment of the material presented, sometimes with a greater emphasis on being quantitative.\
 \pard\pardeftab720\sa240
-\cf5 I must confess that the intention of this section was not to provide a critical assessment of the literature but mainly to provide the reader with a general background. Nevertheless, I have done the suggested corrections. 
+\cf4 I must confess that the intention of this section was not to provide a critical assessment of the literature but mainly to provide the reader with a general background. Nevertheless, I have done the suggested corrections. 
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -59,22 +61,22 @@ I think the final paragraph of Page 53 is wrong (though am quite happy for the c
 
 \f1 The first of these examples is on Page 27, where there is a remark that Loktin (2006) failed to find any mass segregation, which is apparently in direct contradiction with the results of Pinfield (1998) discussed earlier, who does find it. \
 \pard\pardeftab720\sa240
-\cf6 I have included the following lines: However, due to the scarcity and small area coverage of his sample of members (17% of the total number of Bouy et al. 2015 candidate members, and distributed in only the central 2\uc0\u9702 ), together with his simplistic approach to select them (only using proper motions), may suggest that his data and methodology may not allow him to detect the mentioned effects.\cf2 \
+\cf5 I have included the following lines: However, due to the scarcity and small area coverage of his sample of members (17% of the total number of Bouy et al. 2015 candidate members, and distributed in only the central 2\uc0\u9702 ), together with his simplistic approach to select them (only using proper motions), may suggest that his data and methodology may not allow him to detect the mentioned effects.\cf2 \
 A second example is the discussion of the luminosity function (Section 2.5), where the thesis presents a series of such distributions from historical sources, but no attempt is made to say which are right, and which later proved to be wrong. \
-\cf6 I have introduced an small paragraph at the end of Section 2.5 mentioning that the luminosity distribution derived by Bouy2015 is superior to that of Lodieu2012 because of its extent and contamination rate. \cf2 \
+\cf5 I have introduced an small paragraph at the end of Section 2.5 mentioning that the luminosity distribution derived by Bouy2015 is superior to that of Lodieu2012 because of its extent and contamination rate. \cf2 \
 A final example is where the method of Limber (1960) for deriving an age is described, but there is no discussion as to whether it is technically correct, or why it gives the wrong age. \
 \pard\pardeftab720\sa240
-\cf5 I have introduced a small phrase mentioning that his estimate of the contraction time was roughly wrong by a factor of 2. \cf2 \
+\cf4 I have introduced a small phrase mentioning that his estimate of the contraction time was roughly wrong by a factor of 2. \cf2 \
 All these three examples need a discussion which states what is right and what wrong, along with reasons.
 \f0 \
 \pard\pardeftab720\sa240
 
 \f1 \cf2 There are two examples of where the discussion could be more quantitative as well as critical. In Section 2.6 there is a discussion of the difference between the mass functions of Lodieu et al. (2012) and Bouy et al. (2015), where a stronger conclusion needs to be drawn. In particular the effects of differing theoretical mass-luminosity relationships is given as a possible reason for the difference, but the candidate needs to find the functions used, and then calculate whether the differences are sufficient to explain the discrepancy in in mass functions. Similarly, the effects on the mass functions of the differing distances used should be calculated. \
 \pard\pardeftab720\sa240
-\cf6 I have transformed the luminosity distribution of Lodieu2012 into a mass function using the same set of assumptions as in Bouy+2015. I believe the comparison is now faire, and shows that there is a clear contradiction in the mass function of both works at the low-mass ends. The most probable scenario of such contradiction is the contamination rate in the work of Lodieu+2012, which unfortunately those authors do not estimate.  \cf2 \
+\cf5 I have transformed the luminosity distribution of Lodieu2012 into a mass function using the same set of assumptions as in Bouy+2015. I believe the comparison is now faire, and shows that there is a clear contradiction in the mass function of both works at the low-mass ends. The most probable scenario of such contradiction is the contamination rate in the work of Lodieu+2012, which unfortunately those authors do not estimate.  \cf2 \
 Finally, some overall comment about the differences in total masses derived for the cluster (Section 2.6.1) should be provided.\
 \pard\pardeftab720\sa240
-\cf5 An small paragraph at the end of this section discusses the values an provide a critic of them.
+\cf4 An small paragraph at the end of this section discusses the values an provide a critic of them.
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -83,19 +85,22 @@ Finally, some overall comment about the differences in total masses derived for 
 
 \f1 On page 22, there is a discussion of the HIPPARCOS distance to the Pleiades. This needs to be framed in the context of the pervious distances which had been derived using stellar models, which were at odds with that from the then new spaced-based parallaxes.\
 \pard\pardeftab720\sa240
-\cf6 I have complemented the paragraph with some references to previous distance determinations, and stressed that the Hipparcos data was discrepant with most of them (mainly the photometric ones). 
+\cf5 I have complemented the paragraph with some references to previous distance determinations, and stressed that the Hipparcos data was discrepant with most of them (mainly the photometric ones). 
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
 \f1 \cf2 On page 26 the discussion of Pritchard (1884) misses the point. The quotation continues \'93and not simply that common motion of the whole which would necessarily arise simply from the translation of the solar system in space\'94. I.e. he did not detect proper motion, this should be made clear.\
 \pard\pardeftab720\sa240
-\cf5 I though that was clear from the quotation but I have now explained that his work is probably the first qualitative appreciation of the velocity distribution. However, as you clearly point out, the determination of the proper motions was not possible from his observations.
+\cf4 I though that was clear from the quotation but I have now explained that his work is probably the first qualitative appreciation of the velocity distribution. However, as you clearly point out, the determination of the proper motions was not possible from his observations.
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
 \f1 \cf2 The final paragraph of page 64 needs a more technically sophisticated discussion, which should include equipartition of energy and violent relaxation as well as slower virialisation.\
 \pard\pardeftab720\sa240
-\cf7 To be done.
+\cf3 I have modified this paragraph and included a more sophisticated and modern reference. As these authors prove, mass segregation is not a consequence of energy equipartition. The new paragraph reads:\
+In stellar clusters, the massive objects are expected to be preferentially located at the centre of the gravitational potential as a consequence of primordial mass segregation, violent relaxation and/or two-body relaxation (Parker et al. 2016). Since binaries and multiple systems are typically more massive than the average object, they are expected to be prominently at the cluster centre.\cf6 \
+\pard\pardeftab720\sa240
+
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -123,7 +128,7 @@ Yes, if we were to use the mass, or the effective temperature (as discussed in t
 
 \f1 \cf0 I like the idea of modelling the sequence with splines (Section 3.3.4), and here a good justification is given, in terms of other methods tried. However, the candidate states that the sequence has to be continuous. This is not true in general for stellar isochrones, with their gradient discontinuities at key stages of their evolution reflecting structural changes. This is a well-known source of problems in interpolating isochrones. So, whilst I think it is desirable that the isochrones are continuous, I think a little more justification is required.\cf2 \
 \pard\pardeftab720\sa240
-\cf5 As it is now stated in a footnote. The problem of the continuity lies not in the isochrone but in the transformation from colour to magnitude. In fact, due to their piece-wise properties splines can have discontinuities in its derivative. However, if the splines were not continuous, the transformation of colour distribution to magnitude distribution, although still mathematically possible, would have required to be done by parts. Those parts in where the spline and its derivative are continuous.
+\cf4 As it is now stated in a footnote. The problem of the continuity lies not in the isochrone but in the transformation from colour to magnitude. In fact, due to their piece-wise properties splines can have discontinuities in its derivative. However, if the splines were not continuous, the transformation of colour distribution to magnitude distribution, although still mathematically possible, would have required to be done by parts. Those parts in where the spline and its derivative are continuous.
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -136,13 +141,13 @@ I have now modified and explained that indeed, the names I use are an abuse of t
 
 \f1 \cf2 I don\'92t completely follow the way that the spatial distribution on the sky has been fitted. I can understand how an extra term for the symmetry is introduced (Equation 3.51). What I\'92m unclear about (and I think this is just a problem of my understanding, but it needs explanation) is how Equation 3.52 is applied. Is the radius for each star measured and one instance of this equation applied for each star?\
 \pard\pardeftab720\sa240
-\cf5 Yes, that is correct. This equation is applied to each star, and each of them has a different core and tidal radius, which now instead of being circles are ellipsoids. I have modified this explanation, and stating that it is computed for each star. I hope it is now clear. Notice that I have displaced this section to the end of the chapter. 
+\cf4 Yes, that is correct. This equation is applied to each star, and each of them has a different core and tidal radius, which now instead of being circles are ellipsoids. I have modified this explanation, and stating that it is computed for each star. I hope it is now clear. Notice that I have displaced this section to the end of the chapter. 
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
 \f1 \cf2 In the results section, the candidate states in the second paragraph of Section 4.8.1 that the mass-luminosity relationship used is for the 2MASS AB photometric system. I\'92m not sure what is going on here, the 2MASS system is nominally a Vega one not an AB system. The situation is complicated by the fact it takes quite a careful reading of Cohen, Wheaton & Megeath (2003, AJ 126, 1090) to understand the zero points, and the documentation for the Allard et al files is not explicit. A first step in understanding this may be to compare the mass-luminosity relationships derived from the Allard et al AB and Vega files. Maybe also comparing the data with the models might ensure a gross error has not been made.\
 \pard\pardeftab720\sa240
-\cf8 I am so sorry, this is a mistake. Yes, the 2MASS is a Vega system. I got confused with the Sloan AB used for the i band. This has been corrected.\
+\cf7 I am so sorry, this is a mistake. Yes, the 2MASS is a Vega system. I got confused with the Sloan AB used for the i band. This has been corrected.\
 Also, I have included the figures that you suggest. Figure 4.29 shows the J and i vs Ks magnitude magnitude diagrams with the BT-Settl models. While the J vs Ks model fits the data in the DDR2, the i vs Ks needs to be shifted in order to also fit the data. This figure also shows the Ks and J vs i-Ks CMDs together with the BT-Settl model, the BHM, and the candidate members.\
 As it is now explained in the text, the discrepancy in the Sloan AB system may be due to an error  in the computations. France Allard explained me, in a private communication, that while the 2MASS and UKIDSS models have already been corrected some of the photometric systems were awaiting for correction. I presume this may be the case for the Sloan AB. Nevertheless, the computations in the rest of my work depend only in the  mass-luminosity relation given by the J,H,And Ks bands, which, as stated by Allard, were already corrected.  \cf2 \
 \pard\pardeftab720\sa240
@@ -156,7 +161,7 @@ As it is now explained in the text, the discrepancy in the Sloan AB system may b
 
 \f1 \cf2 On page 112 (3rd paragraph) I do not follow why missing data preferentially affect the field stars. What matters here is the ratio of field density to cluster density, not the absolute value. This then questions the analysis in the following paragraph which suggests that this, along with the large proper motion uncertainties causes the discrepancy in membership probabilities. I suspect it is purely the PM uncertainties which cause the difference, but the candidate needs to give some numbers to show that this is (or is not) the case.\
 \pard\pardeftab720\sa240
-\cf5 I believe that my previous explanation lead to a confusion. The missing data does not preferentially affects the field stars, as you correctly state. And I do agree, the important point is the cluster-to-field likelihood ratio. In the new version of the manuscript I have introduced the possible options to explain these lower membership probabilities: either the new cluster likelihood is lower, the field likelihood is higher or both together. \
+\cf4 I believe that my previous explanation lead to a confusion. The missing data does not preferentially affects the field stars, as you correctly state. And I do agree, the important point is the cluster-to-field likelihood ratio. In the new version of the manuscript I have introduced the possible options to explain these lower membership probabilities: either the new cluster likelihood is lower, the field likelihood is higher or both together. \
 In the previous version of the manuscript I advocated for the second option: the field likelihood of the BHM is higher than that of Bouy+2015. As it is now explained in Section 3.3.1 Validity of the ignorability assumption. Assuming that the field density can be estimated only based on fully observed objects, as  Bouy+2015 did, leads to densities that are overestimated in the central regions of the cluster sequence (i-K ~3.2) and underestimated in the bright and faint ends. This effect alone can explain the lower membership probabilities of the objects in the lower and faint regions.\
 Also, I have introduced the alternate scenario in which the field density remains constant and is the cluster likelihood which has changed. Inded, as explained in the manuscript, the methodology used by Bouy+2015 as that in the BHM use multivariate normal distributions to model the spread of the cluster sequence. \
 While in the BHM the covariance matrix of this multivariate normal is constant across the sequence and represents the true intrinsic dispersion (uncertainties are deconvolved) in Bouy+2015 the covariance matrix varies along the sequence and is dependant of the number of objects in the region and of their uncertainties. As stated in Sarro+2014, their covariance matrices are overestimated with respect to the true ones.\
@@ -166,7 +171,7 @@ Both effects acting together explain the observed discrepancies. I do restrain m
 
 \f1 \cf2 The statement at the end of Page 120 is worrying, since it implies that the priors have a significant effect on the results. I would like to see some ratios of priors to posteriors so we can see what their effect is.\
 \pard\pardeftab720\sa240
-\cf5 This Figures have been included. As it is now explained in the text, due to the large data set, the likelihood is highly informative and thus the prior probabilities play a small roll on the posterior. In fact, as a result of the prior updating in the mentioned example, no new member was recovered and the parameters remained almost intact. 
+\cf4 This Figures have been included. As it is now explained in the text, due to the large data set, the likelihood is highly informative and thus the prior probabilities play a small roll on the posterior. In fact, as a result of the prior updating in the mentioned example, no new member was recovered and the parameters remained almost intact. 
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -174,18 +179,14 @@ Both effects acting together explain the observed discrepancies. I do restrain m
 \f0  
 \f1 motion objects. I would like the candidate to explore whether they are real or a product of the model. Do the simulations show anything similar? Why does the EMB sequence not show something similar?\
 \pard\pardeftab720\sa240
-\cf7 The large wings in the proper motion model reflect the flexibility of the BHM to fit the data. The new mixture of Gaussian has 4 components (3 effectively) which is two more (one in fact) that the model of Bouy+2015. These long wings reflect that objects far from the cluster centre (in proper motions) also have a non negligible likelihood in the new cluster model. \
-As it is now stated in the manuscript, these long wings are composed of 87% of objects with a missing colour index  \
-\
-The EMB does not shows this effect because binaries are few and are highly concentrated\cf2 \
-\pard\pardeftab720\sa240
-
+\cf4 Thanks for pointing this out. I believe the original version of the manuscript lacked the analysis of this wings. The simulations with synthetic data show no difference in the recovered proper motions distributions of objects with and without missing values. However, they were constructed based on the real model, inferred from a smaller data set. This real model showed no wings, neither in the real not in the synthetic data sets irrespective of the missing values. \
+I have introduced a discussion saying that since this objects have been preferentially affected by missing values, the value of the wings can be affected by contamination. However, we have no reasons to believe that the field contaminants preferentially affect objects with proper motions laying in this particular halo. On the other hand, cluster members, due to mass segregation can indeed be prominently affected by missing value. This halo would correspond to less massive and fainter objects, more prone to be affected by missing values. Thus, although the values of the wings could be overestimated as a consequence of the missing values, I believe within this wings lay true cluster members. Proving this would have to await for data with less missing values.\cf5  Something that I hope to do in the following moths.
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
 \f1 \cf2 In the discussion of the mass-luminosity relationship (Page 149) it is stated that \'93the mass-luminosity relation relies entirely on the current models of stellar atmospheres\'94, whereas in fact it is largely the structure models which matter. This statement should be corrected.\
 \pard\pardeftab720\sa240
-\cf5 I agree that is largely the structure models which are important but the atmospheres provide important details for these low-mass objects. I have modified the statement and it now reads, \'93the mass-luminosity relation relies entirely on the current models of stellar structure, where the atmospheres also play an important role.\'94
+\cf4 I agree that is largely the structure models which are important but the atmospheres provide important details for these low-mass objects. I have modified the statement and it now reads, \'93the mass-luminosity relation relies entirely on the current models of stellar structure, where the atmospheres also play an important role.\'94
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -197,7 +198,7 @@ The EMB does not shows this effect because binaries are few and are highly conce
 \i K 
 \i0 bands are very different around a log mass of -1.3, but there is no discussion of this, and the thesis then moves on to using the K-band with no detail of why. A discussion of this is needed.\
 \pard\pardeftab720\sa240
-\cf5 This is a well known artefact introduced by the BT-Settl model. An small paragraph mentioning it as been introduced. As Allard mentions in her 2013b paper, this excess is probably caused by the porosity or shape of grains in the atmosphere of Hot Jupiters, which currently are modelled as spherical grains.
+\cf4 This is a well known artefact introduced by the BT-Settl model. An small paragraph mentioning it as been introduced. As Allard mentions in her 2013b paper, this excess is probably caused by the porosity or shape of grains in the atmosphere of Hot Jupiters, which currently are modelled as spherical grains.
 \f0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -213,7 +214,7 @@ Estelle and I talked about writing a paper in which we estimate the uncertaintie
 Also, unless the candidate can suggest something, the comments about comparing two calculated datasets using Bayes\'92 theorem seems to be misplaced. Bayes\'92 theorem allows one to compare two models of data, not two datasets which should be consistent.\
 \
 \pard\pardeftab720\sa240
-\cf5 Yes, you are right, I meant that Bayes\'92 theorem allows us to obtain the BHM of other clusters. This has been corrected. \cf2 \
+\cf4 Yes, you are right, I meant that Bayes\'92 theorem allows us to obtain the BHM of other clusters. This has been corrected. \cf2 \
 \
 \pard\pardeftab720\sa240
 
@@ -229,14 +230,14 @@ Also, unless the candidate can suggest something, the comments about comparing t
 \i0 needs to be italic, and various, as do various symbols in the equation above it.)\
 \pard\pardeftab720\sa240
 
-\i \cf5 Thanks, this has been corrected.
+\i \cf4 Thanks, this has been corrected.
 \f0\i0 \cf2 \
 \pard\pardeftab720\sa240
 
 \f1 \cf2 Third line from the bottom of page 64, astronomical -> astrometric.\
 \pard\pardeftab720\sa240
 
-\i \cf5 Thanks, this has been corrected.
+\i \cf4 Thanks, this has been corrected.
 \f0\i0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -248,7 +249,7 @@ Also, unless the candidate can suggest something, the comments about comparing t
 \f1 \'93...plane of the sky R. In this work we will assume that the analytical expression in Eq. 3.41 is correctly stated in terms of the projected number density and not of projected mass density\'94\
 \pard\pardeftab720\sa240
 
-\i \cf5 Thanks, this has been corrected.
+\i \cf4 Thanks, this has been corrected.
 \f0\i0 \cf2 \
 \pard\pardeftab720\sa240
 
@@ -260,14 +261,14 @@ Also, unless the candidate can suggest something, the comments about comparing t
 \i0 in these cases.\
 \pard\pardeftab720\sa240
 
-\i \cf5 Thanks, this has been corrected.
+\i \cf4 Thanks, this has been corrected.
 \f0\i0 \cf2 \
 \pard\pardeftab720\sa240
 
 \f1 \cf2 On page 104 the sentence \'93To do this, I compare the membership probabilities, summarised by the mode, recovered after inferring the model on two synthetic data sets of\'94 seems to have go mangled. I assume this means that a single synthetic data set was created with complete set of observables for all stars, and then a second was created from it, with some values masked as missing.\
 \pard\pardeftab720\sa240
 
-\i \cf5 Thanks, this has been corrected as you mentioned.
+\i \cf4 Thanks, this has been corrected as you mentioned.
 \f0\i0 \cf2 \
 \
 \

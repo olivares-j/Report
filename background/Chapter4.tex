@@ -347,25 +347,6 @@ Also, for the sake of completeness, in Fig. \ref{fig:correlations}, I depict the
 \end{center}
 \end{figure}
 
-\section{Updating the assumptions and priors}
-\label{sect:updating_priors}
-As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the statistics reported in Table \ref{tab:parameters}. These values indicate, for example, that the number of  \gls{gmm} modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian are both to near zero values. Probably, a better model would be that in which the parameters of these extra gaussian will not be part of the model. Ideally, I should choose between these two models based on the evidence they show (see Section \ref{sect:modelselection}). To my knowledge, the only reliable approach to compute the evidence of a model inferred using \gls{mcmc}, is by means of Nested Sampling (see Section \ref{sect:NestedSampling}). However, running the \gls{bhm} in the \emph{MultiNest} package lies beyond our current computational resources.
-
-Another example of inspection of the posterior is the following. In a past run of the \gls{bhm} on the \gls{rdr2}, I realised that the prior distribution for the parameter modelling field fraction was too narrow. Although the maximum of the posterior distribution was allowed by this prior (by definition), the prior density at this \gls{map} was negligible. Therefore, I updated the prior distribution to a distribution with a larger variance. Thus, I weaken the prior information. As can be seen from Fig. \ref{fig:fractions}, the posterior distribution of the $\pi$ and $\pi_{CB}$ fraction parameters in the \gls{bhm} are now allowed by the prior distributions. It is important to notice that, given the large information provided by the data, the prior distributions play a small roll in the estimation of the posterior (i.e. the likelihood is highly informative).
-
-\begin{figure}[ht!]
-\begin{center}
-\includegraphics[page=1,width=0.45\textwidth]{background/Figures/BHM/Fractions.pdf}
-\includegraphics[page=2,width=0.45\textwidth]{background/Figures/BHM/Fractions.pdf}
-\caption{Posterior distributions of the $\pi$ and $\pi_{CB}$ parameters (orange lines) together with their corresponding priors. Notice that due to the large data set, the posterior distributions are highly concentrated.}
-\label{fig:fractions}
-\end{center}
-\end{figure}
-
-\subsection{Assumptions}
-
-Include section with newfield model.
-
 \section{Projected spatial distribution}
 \label{sect:PSDresults}
 In this Section, I present the results of the model selection analysis of the \glsfirst{psd} models of the Pleiades cluster. The Bayesian model selection approach and the \gls{psd} models are described in Sections \ref{sect:modelselection} and \ref{sect:PSDmethod}, respectively. The Bayesian \emph{evidence} is computed by means of the Python package \emph{PyMultiNest} \citep{Buchner2014}, which is a Python wrapper of the C++ package \emph{MultiNest} \citep{Feroz2009} that implements the Nested Sampling algorithm of \citet{Skilling2004,Skilling2006} (see Section \ref{sect:NestedSampling}).
@@ -572,6 +553,7 @@ Table \ref{tab:MAPEll} shows the MAP estimate of the parameters in the models of
 We can observe that models that do not posses a tidal radius have similar $\epsilon_{rc}$ ellipticities with a mean value of $0.23\pm0.01$. This value is similar to the 0.17  found by \citep{Raboud1998}, who use a multicomponent analysis to derive the directions (although its value is not given) and the aspect ratio of the ellipse axes. However, it is very interesting to see that the models within King's family result in lower values of the ellipticity in the central region and larger values in the outer one. This result is expected from the interaction with the galactic potential and is predicted by the numerical simulations of open clusters \cite[see for example][]{1987MNRAS.224..193T}.
 
 \subsection{Selection of models with luminosity segregation}
+\label{sect:luminosity_segregation}
 The inferred posterior distributions of the parameters in our models with biaxial symmetry and luminosity segregation are shown in Fig. \ref{fig:PSDSeg} by means of 100 samples randomly drawn, together with the \gls{map} value. For comparison, the data has been binned and is shown with poisson uncertainties. In addition, Fig. \ref{fig:Segregated} shows the density profiles of the luminosity segregated models, together with the J band data in three bins ($J < 12$, $12 \lesssim J \lesssim 15$, and $15 < J$). The three shown models have core radii as given by Eq. \ref{eq:rc_segregated}, in which the value of J band correspond to the mean of each bin.
 
 \begin {figure}
@@ -661,7 +643,9 @@ The evidences of the luminosity segregated models strongly favour them against t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proper motions distribution}
 \label{sect:PMresults}
-The bivariate proper motions distributions of both single and \gls{emb} is directly recovered by the \gls{bhm}. These bivariate distributions and their univariate projections, in the $\mu_{\alpha}\cdot cos(\delta)$ and $\mu_{\delta}$ components, are shown in Figs. \ref{fig:PM}, and,  \ref{fig:PMCs} and \ref{fig:PMBs}, respectively. These latter figures also display the \gls{kde} of the proper motions of the candidate members in: i) \citet{Bouy2015}, and ii) the \gls{hmps}. Interestingly, the densities rendered by this two samples of candidate members are almost identical. Notice that, the density resulting from the \gls{bhm} differs from the \gls{kde} of the \gls{hmps}. The \gls{bhm} recovers the posterior distribution of its parameters using the likelihood of all the objects in the data set, with the contribution of individual objects proportional to their cluster membership probability. Therefore, the observed difference comes as a result of the two different samples of objects. While the \gls{hmps} uses only 1967 objects with cluster membership probability grater than 0.84, the expected number of cluster members is $3301\pm 140$. Thus, the difference between the projected densities in the $\mu_{\alpha}\cdot cos(\delta)$ and $\mu_{\delta}$ result from the $\sim1300$ expected cluster with membership probability in the range 0-0.84.
+The bivariate proper motions distributions of both single and \gls{emb} is directly recovered by the \gls{bhm}. These bivariate distributions and their univariate projections, in the $\mu_{\alpha}\cdot cos(\delta)$ and $\mu_{\delta}$ components, are shown in Figs. \ref{fig:PM}, and,  \ref{fig:PMCs} and \ref{fig:PMBs}, respectively. These two latter figures also display the \gls{kde} of the proper motions of the candidate members in: i) \citet{Bouy2015}, and ii) the \gls{hmps}. Interestingly, the densities rendered by this two samples of candidate members are almost identical, except perhaps by the small excess of \citet{Bouy2015} in the region at  $\mu_{\delta}\sim -30$ mas yr$^{-1}$. 
+
+Notice that, the density resulting from the \gls{bhm} differs from the \gls{kde} of the \gls{hmps}. I remember the reader that the \gls{bhm} recovers the posterior distribution of its parameters using the likelihood of all the objects in the data set (the $10^5$ in the \gls{rdr2}), with the contribution of individual objects proportional to their cluster membership probability. Therefore, the observed difference is the result of the two different samples of objects. The \gls{hmps} \gls{kde} uses only 1967 objects with cluster membership probability grater than 0.84, and not weighted by membership probability
 
 \begin{figure}[ht!]
 \begin{center}
@@ -703,7 +687,7 @@ The bivariate proper motions distributions of both single and \gls{emb} is direc
 \label{fig:PMBs}
 \end{figure}
 
-As the analysis of Section \ref{sect:classifier} indicates, objects with a missing \gls{ci} may have a biased membership probability, preferably towards higher values (see Fig. \ref{figure:IncVsCom}), and with a bias rms of 0.12. Thus, if I were to use a probability classification threshold of 0.5 instead of the 0.84 determined in Section \ref{sect:classifier}, the result will be a sample of  2907 candidate members whose proper motion probability distribution would match that of the \gls{bhm}, see Fig. \ref{fig:PMCs>0.5}. From these 2907 hypothetical candidates, 1453 (50\%) have a missing \gls{ci}. In contrast, using the correct probability threshold of 0.84 produces only 629 (32\%) of candidates with missing \gls{ci}. These values indicate that 87\% of the hypothetic candidates within the probability range of 0.5 to 0.84 have a missing \gls{ci} and therefore their membership probability could be overestimated.
+Nevertheless, it is important to notice that, as the analysis of Section \ref{sect:classifier} indicates, objects with a missing \gls{ci} may have a biased membership probability, preferably towards higher values (see Fig. \ref{figure:IncVsCom}), and with a bias rms of 0.14. Thus, if I were to use a probability classification threshold of 0.5 instead of the 0.84 determined in Section \ref{sect:classifier}, the result will be a sample of  2907 candidate members whose \gls{kde} proper motion probability distribution would match that of the \gls{bhm} (see Fig. \ref{fig:PMCs>0.5}). From these 2907 hypothetical candidates, 50\% (1453) have a missing \gls{ci}. In contrast, using the correct probability threshold of 0.84 produces only 32\% (629) of candidates members with missing \gls{ci}. It is important to remark that not all objects with a missing \gls{ci} are biased. As estimated in Section \ref{sect:classifier} based on the synthetic data, the expected value of these contaminants all along the entire range of probability threshold is $5.8\pm 0.2$\%. Furthermore, the simulations with synthetic data, show no appreciable difference in the recovered proper motions distributions of objects with missing values when compared to those without them.
 
 \begin{figure}[ht!]
     \centering
@@ -721,8 +705,10 @@ As the analysis of Section \ref{sect:classifier} indicates, objects with a missi
 \label{fig:PMCs>0.5}
 \end{figure}
 
+The large wings in the proper motions distribution of the \gls{bhm} could be an effect of contamination, particularly because they are far from the cluster centre. However, proper motions and photometry have been independently modelled. Therefore, we have no reasons to believe that missing values affect predominately field objects with proper motions lying in this particular halo around the cluster centre. 
 
-Nevertheless, as estimated in Section \ref{sect:classifier}, the expected value of the \gls{cr} in the \gls{bhm} is $\langle \gls{cr} \rangle=5.8\pm 0.2$\%. If we were to discard as cluster members all objects below the probability threshold of 0.84, within these discarded objects would also be a 10\% of true cluster members. Discarding these true members from the statistical analysis will render it biased. Thus, we decided to include these 10\% true members at the small price of a mean $5.8\pm 0.2$\% of contamination.
+In contrast, due to mass segregation, the cluster members could be predominantly affected by missing values. If mass segregation were indeed present, as shown in Section \ref{sect:luminosity_segregation} with a luminosity proxy, then the fainter cluster members would be located in a halo around the cluster centre both in position and proper motions. This hypothesis is also supported by the lack of this effect in the proper motions distribution of \gls{emb} (see Fig. \ref{fig:PMBs}), this objects are massive than the average star, and therefore are brighter, less affected by missing values (at least in \gls{ci}), and due to the gravitational potential are located in the inner cluster region with lower proper motions. In any case, to taste the validity of this assumption we will have to wait the arrival of better data, with less missing values particularly.
+
 
 \section{Luminosity distribution}
 \label{sect:luminosity}
@@ -951,6 +937,32 @@ First, the uncertainties in the \gls{pdsmd} must be properly established, partic
 Second, the luminosity distributions of all compared clusters must include the properly propagated uncertainties from the data, as in the \gls{bhm}, and not just from the poissonian counts as in those of the Trapezium and Hyades. Thus, in the future, the \gls{bhm} of the remaining clusters must be computed. 
 
 Once this issues are solved, the \glspl{bhm} of different clusters will allow us to gauge how similar these clusters are. Indeed, by comparing the posterior \glspl{pdf} of the model parameters returned by the data sets of different clusters, given the same model and set of assumptions, we would be able to properly measure, by means of hypothesis tests \cite[see for example][]{Rueda1992}, the probability that these models were drawn from the same parent \gls{pdf}. 
+
+\section{Updating priors and assumptions}
+\label{sect:updating_priors}
+As mentioned by \citet{Gelman2006}, the posterior distribution must be inspected to update our previous knowledge. To inspect these posterior distribution, I use the statistics reported in Table \ref{tab:parameters}. These values indicate, for example, that the number of  \gls{gmm} modelling the proper motions of the single stars is overestimated. The fraction and variance of the last gaussian are both to near zero values. Probably, a better model would be that in which the parameters of these extra gaussian will not be part of the model. Ideally, I should select one of these two models based on their evidence (see Section \ref{sect:modelselection}). To my knowledge, the only reliable approach to compute the evidence of a model inferred using \gls{mcmc}, is by means of the Nested Sampling algorithm (see Section \ref{sect:NestedSampling}). However, running the \gls{bhm} in the \emph{MultiNest} package lies far beyond our current computational resources.
+
+The following are two examples of posterior checking that were performed in the iterative cycle of model and inference. 
+
+In a past run of the \gls{bhm} on the \gls{rdr2}, I realised that the prior distribution for the parameter modelling field fraction was too narrow. Although the maximum of the posterior distribution was allowed by this prior (by definition), the prior density at this \gls{map} was negligible. Therefore, I updated the prior to a distribution with a larger variance, thus weakening the prior information. As can be seen from Fig. \ref{fig:fractions}, the posterior distribution of the $\pi$ and $\pi_{CB}$ fraction parameters in the \gls{bhm} are now allowed by the prior distributions. It is important to notice that, given the large information provided by the data, the prior distributions play a small roll in the estimation of the posterior (i.e. the likelihood is highly informative). 
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[page=1,width=0.45\textwidth]{background/Figures/BHM/Fractions.pdf}
+\includegraphics[page=2,width=0.45\textwidth]{background/Figures/BHM/Fractions.pdf}
+\caption{Posterior distributions of the $\pi$ and $\pi_{CB}$ parameters (orange lines) together with their corresponding priors. Notice that due to the large data set, the posterior distributions are highly concentrated.}
+\label{fig:fractions}
+\end{center}
+\end{figure}
+
+In the first version of this manuscript, the evidences for the \gls{psd} models presented in Section \ref{sect:PSDresults} were computed using uniform priors for all parameters. As kindly pointed out by Coryn Bailer-Jones, one of the referees of this work, the truncation limits of those priors have an influence on the estimated evidences. By modifying those priors and allowing them to \textit{reflect the available parameter space under the model $\mathcal{M}$, independently of experimental constraints we might already be aware of} \cite[taken from][]{Trotta2008}, we were able to measure the simplicity (evidence) of the model itself. 
+
+\subsection{Assumptions}
+The posterior checking not only must be performed on the inferred parameters but also in the model itself. In such spirit, this section describes how two key assumptions in the field model have been modified by our posterior inference.
+
+
+
+Finally, I hope that this last Section has transmitted the reader how dynamic, iterative and reflexive the creation of a model is. While the Bayesian formalism enable us to update our prior knowledge based on the data, transform it into posteriors, and select the best models based on evidence, the Bayesian Hierarchical approach allows us to directly update our prior beliefs within the inference process. In summary, the Bayesian formalism help us to update our knowledge based not just in the light of new data, but also in the light of new models.
  
 
 
