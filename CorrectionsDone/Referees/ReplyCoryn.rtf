@@ -9,14 +9,14 @@
 It's good to see that you take (unknown) binarity into account in your cluster model, but why only equal-mass binaries? Exactly zero systems will have equal masses, so why not relax this by adding an additional parameter (the mass ratio)? I don't suppose it would be a big additional computational burden.\cf3 \
 \cf0 \
 
-\i0 Having the pdf  of the mass ratio of each individual star or even the general mass-ratio of the cluster will be excellent and of great use, for the IMF particularly. However, there are two reasons for working only with equal-mass binaries.\
+\i0 Having the pdf of the mass ratio of each individual star or even the general mass-ratio of the cluster will be excellent and of great use, for the IMF particularly. However, there are two reasons for working only with equal-mass binaries.\
 \
 First, it will be a computational burden. Inferring the mass ratio of each star will require thousands of parameters, therefore this option is not realistic. To infer the posterior distribution of a general mass ratio will require to marginalise each individual mass ratio. Although this case is feasible, the computing time required to perform the thousands of integrals at each step of the MCMC is beyond the limits of our current computational capabilities.\
 \
 Second, cluster members located away from the cluster main photometric sequence arise not only by different mass ratios. For example, stellar variability can induce a shift in the \
 photometry that can mimic that of a binary system. Due to these degeneracies, the modelling of the mass ratio is not an easy task.\
 \
- The mass ratio is indeed a very interesting and important topic that we hope to address in the near future.\
+ The mass ratio is indeed a very interesting and important topic that we hope to address in the near future. As it is mentioned in the manuscript, we plan to do it by means of an skewed multivariate distribution (the close skew normal). It is already included in the code but for now we turn off this module, it increases 50% the computing time. I hope to solve this issue in the near future.\
 \
 As you correctly state, there are exactly zero binaries with equal mass. For this reason we also add an intrinsic dispersion to the equal-mass binary systems. This is stated in Section 3.3 Phtometric model of single and EMB stars.
 \i \
@@ -33,13 +33,19 @@ In other parts of the manuscript, not concerning with inference, I deal with mis
 \cf2 One of the motivations for the hierarchical approach is to reduce the dependence on the choice of priors, by introducing one or more levels of marginalization. Ultimately, of course, one must set top-level priors (whether empirical or theoretical, parametric or nonparametric, this makes no difference). In reading through the specification of the many priors in chapter 3, I found myself asking how sensitive the results are to these choices (and there are a lot of choices in Table 3.2). It would be a lot of work to do a sensitivity test, but it would have been interesting to see how different the results would be from some plausible non-hierarchical model. How much do the point estimates (and in particular the confidence intervals) on the parameters of interest change by taking a (simpler) non-hierarchical approach?\cf0 \
 \
 
-\i0 This is a pretty good question, I can not answer it quantitatively because I have not created this non-hierarchical approach. However, concerning the choice of the priors and their possible impact, three aspects come to my mind. First, the BHM approach is essentially created to minimise as much as possible the subjectivity of the prior choice and its impact in the results. Second, the priors chosen and shown in Table 3.2 fall in the category of weakly informative one. This means that they convey less information that the one actually available. These two point remark the qualitative properties of the priors chose. The third point is that, a non-hierarchical approach was used by Bouy et al. 2015 to perform their analysis. This can be used as an analogous model of the hypothetical one you mention. As can be seen in Chapter 4, results, both the non-hierarchical and the hierarchical approaches lead to similar results. However, in my opinion the hierarchical approach is far superior by the points exposed in Chapter 1.
+\i0 This is a pretty good question, I can not answer it quantitatively because I have not created this non-hierarchical approach. However, concerning the choice of the priors and their possible impact, two aspects come to my mind. First, the chosen priors, shown in Table 3.2, fall in the category of weakly informative one. This means that they convey less information that the one actually available. The third point is that, a non-hierarchical approach was used by Bouy et al. 2015 to perform their analysis. This can be used as an analogous model of the hypothetical one you mention. As can be seen in Chapter 4, results, both the non-hierarchical and the hierarchical approaches lead to similar results. However, in my opinion the hierarchical approach is far superior by the points exposed in Chapter 1.
 \i \
 \
-\cf2 I am missing a clear exposition of the big picture of the photometric model for the cluster. I understand that each photometric band is modelled as a spline function of the colour index CI, with intrinsic multivariate Gaussian scatter. (The GMMs are not used for the photometric model?) Do you derive a posterior PDF over the magnitudes for each star (and these are the inputs for determining the LF)? Or do you infer posteriors only for the parameters of the model?\cf0 \
+\cf2 I am missing a clear exposition of the big picture of the photometric model for the cluster. I understand that each photometric band is modelled as a spline function of the colour index CI, with intrinsic multivariate Gaussian scatter. (The GMMs are not used for the photometric model?) \
+
+\i0 \cf0 \
+The GMMs in the photometric model are only used to model the colour index CI.
+\i \cf2 \
+\
+Do you derive a posterior PDF over the magnitudes for each star (and these are the inputs for determining the LF)? Or do you infer posteriors only for the parameters of the model?\cf0 \
 \
 
-\i0 I derive the LF from the posterior distributions of the cluster parameters. This is described in detail in Section 4.7.1 Derivation of the magnitude distributions. In addition, and to help the reading, I included a small paragraph at the beginning  of Section 3.3 The BHM for the Pleiades DANCe data set. 
+\i0 I derive the LF from the posterior distributions of the cluster parameters. To do so, I take the posterior for each parameter of the colour CI, and reconstruct the posterior of the colour CI. The, with the splines and the intrinsic width of the cluster sequence I transform the previous  colour CI distribution into the magnitude distributions. This is described in detail in Section 4.7.1 Derivation of the magnitude distributions. In addition, and to help the reading, I included a small paragraph at the beginning  of Section 3.3 The BHM for the Pleiades DANCe data set. I hope it gives the broad view of the photometric model.
 \i \
 \
 \cf2 Given N photometric bands, you choose to work with one colour index and N-1 magnitudes? Is there any particular reason for this rather than, say, N-1 colour indices and 1 magnitude?\
@@ -59,7 +65,7 @@ In other parts of the manuscript, not concerning with inference, I deal with mis
 \cf2 p. 59: If Fig. 3.2 is showing the distributions where at least one other photometric band is missing, it would have been nice to see the distributions for objects with no missing data (and then not to scale the distributions to have a maximum of 1.) Is it really the case that more than 99% of the data used in the model have at least one photometric band missing (one interpretation of the statement in the middle of p. 112)?\cf0 \
 \
 
-\i0 I have modified the figure, and included the observed band. As can be seen, most of the missing values come from the missing i-Ks colour index. The distribution of the latter is almost identical to that of the band, thus proving that almost all the data have missing values.
+\i0 I have modified the figure, and also included the distribution of objects with no missing data. As can be seen now, the latter distribution is almost identical to that of objects with missing values in i-Ks. Thus proving that almost 98% of objects have missing values, particularly in i-Ks.
 \i \
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
@@ -75,12 +81,17 @@ In other parts of the manuscript, not concerning with inference, I deal with mis
 \
 \
 
-\i0 Thanks, indeed it was a bit confusing, the delta_q was supposed to stand for each of the 2^N possible states. I have now removed it and instead explained int the texts that the marginalisation integral transforms into a sum, because q_n is discrete and that this sum is over all 2^N possible states.
+\i0 Thanks. Indeed it was a bit confusing. The delta_q was supposed to stand for each of the 2^N possible states. I have now removed it and included a (hopefully) clearer explanation.
 \i \
 \
 \cf2 p. 61: The first sentence of the final paragraph of section 3.3.2 doesn't make sense (and doesn't help me understand how you have treated missing data). In fact I don't really understand the rest of the paragraph. (Also, does "belong to the multivariate normal family" just mean "are multivariate normal"?)\cf0 \
 \
-This has been corrected.\
+
+\i0 The treatment I use for missing values is very simplistic. Given that we currently do not have a selection function, I assume them to be missing at random. \
+Characterising the selection function for the DANCe data set, given its heterogeneous origins and large combinations of telescopes, instruments, filters and integration times, is currently beyond the scope of my work. So what I do is to marginalise the missing value with the aid of a uniform prior. This is now stated in the manuscript. I hope it is now more clear.  
+\i \cf2  (Also, does "belong to the multivariate normal family" just mean "are multivariate normal"?) 
+\i0 \cf0 Yes, I have modified that sentence. Thanks.
+\i \
 \
 \cf2 p. 62: Including the few expected Pleiades members in the fit to the field model is pragmatic, and certainly plausible for the 3D spatial distribution because the Pleiades is not very dense. But the cluster stands out more in the HRD and kinematics, so might it not create some bias here? After all, it's not just the number of "contaminating" objects which counts, but how different their distribution is. I can nonetheless imagine that the impact is small. Was this tested?\cf0 \
 \
@@ -93,14 +104,14 @@ This has been corrected.\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\i0 \cf0 These plots have are now in the manuscript.
+\i0 \cf0 These plots are now in the manuscript.
 \i \
 \
 \cf2 sec. 3.3.4 (see also "general comments"):\
 - Early on p.66 it's not clear to me in what space the splines are being fit. The parameter vector "t" is later noted to be a vector of the data, but then I don't see how only one knot per dimension (quoted on p. 66) can be specified.\cf0 \
 \
 
-\i0 I have modified this section and introduced a figure with the splines fits and the knots positions. I thin it is now more clear.
+\i0 I have modified this section and introduced a figure with the splines fits and the knots positions. I think it is now more clear.
 \i \
 \
 -\cf5  What about non-equal-mass binaries?\cf0 \
@@ -192,14 +203,31 @@ In any case, a random binary classifier, with prior probabilities as  p_field=0.
 \
 \cf2 sec. 4.5: Am I right in thinking that this section has nothing to do with the BHM? I ask, because it is stated in the first paragraph that uniform priors are used for all parameters. Why now switch to uniform priors? The Bayesian evidence is generally more sensitive to the choice of priors than is the posterior, so this strikes me as a very odd thing to do, especially given the careful discussion of priors for the BHM. How have the bounds of the priors been chosen, and how sensitive are the results to these choices? Also, why not retain the hierarchical approach here? (Too computationally demanding?)\
 \cf0 \
+\cf2 Am I right in thinking that this section has nothing to do with the BHM? \
 
-\i0 You are totally right. I have now rephrased this Section and included non-uniform priors. The truncation introduced in those concerning the exponents are nevertheless truncated to avoid numerical overflows.
+\i0 \cf0 Yes, and now to avoid confusion I move it to the end of chapter 3. There I explain that it is not part of the BHM.\
+\
+
+\i \cf2 Why now switch to uniform priors?\
+
+\i0 \cf0 At that moment, it was an unfortunate choice. Thanks to your comment and to the work of Roberto Trotta (Bayes in the sky, Contemporary Physics 2008) I understand that indeed my choice was a poor one. As you mention, the evidence is more sensitive to the prior choice. As it is now stated in the manuscript, I use a gaussian prior for the centre of the cluster, uniform priors for the position angle for the semi-major axis, half-cauchy for the core radius and tidal radius, and exponential ones for the exponents. \
+\
+
+\i \cf2 how sensitive are the results to these choices?\
+
+\i0 \cf0 To the new priors, the results are insensitive to the following parameters: the scale of the bivariate normal for the centre (tested between 0.5 to 3 deg), the scale of the half-cauhy for r_c and r_t (tested from 1pc to 10 pc), and of the exponential distributions (scale 1 to 5). However, I must truncate the latter to avoid numerical overflows. This truncation was set empirically to a value of 100.
 \i \
 \
-\cf2 sec. 4.5.2 (last paragraph): If there's no evidence for ellipticity, isn't the model then radially symmetric?\cf0 \
+\cf2 Also, why not retain the hierarchical approach here? (Too computationally demanding?)\
+
+\i0 \cf0 Given how insensitive it seems to be to the new priors, I believe the hierarchical approach is not necessary here.\
+However, I will test this in the article of the spatial distribution.
+\i \
+\
+\cf2 sec. 4.5.2 (last paragraph): If there's no evidence for ellipticity, isn't the model then radially symmetric?\
 \
 
-\i0 With the use of new priors and assessing the completeness of the data set, the evidence in favour of the biaxially symmetric models is now strong.
+\i0 \cf0 That was the case in the previous version, where I just assumed what Bouy+2015 mentioned about the completeness of the sample. In that work, we assume the completeness to be restricted to the central 7 pc ( 3 degree) region. After reassessing the completeness, assuming that the field is uniformly distributed. The sample seem to be complete up to 11.5 pc. With this new sample, the evidence for biaxial symmetry is higher. 
 \i \
 \
 \cf2 sec. 4.7 and 4.8: Do the derivations of the LF and MF use just a single point estimate of the magnitudes for each star? Or just the inferred parameters of the photometric model? (See also my comment below on Fig. 4.22)\cf0 \
@@ -223,25 +251,29 @@ In any case, a random binary classifier, with prior probabilities as  p_field=0.
 \cf2 p. 135: I don't follow why the maximum density in the i,Ks diagram should (must?) be selected as the "upper completeness limit". And what does that term mean? Does it mean that the sample is 100% complete for brighter sources (up to the "lower completeness limit")? I don't see why that would be (unless you are making some very simple, but unstated, assumptions). Also, what is the justification for the value of the lower completeness limit?\cf0 \
 \
 
-\i0 As suggested by other referees, I move the section about the completeness into the data description section. Nevertheless, you are right,  there was a lack of explanation about it. I have assumed that the completeness interval is that in which the distribution of sources follows a power-law distribution. This is a simple assumption that does not take into account any galaxy extra galactic model. Thus, the resulting completeness limits are just rough estimates.
+\i0 As suggested by other referees, I move the section about the completeness into the data description section. Nevertheless, you are right,  there was a lack of explanation about it. I have assumed that the completeness interval is that in which the distribution of sources follows a power-law distribution. This is a simple assumption that does not take into account any galactic model. Thus, the resulting completeness limits are just rough estimates.
 \i \cf6 \
 \cf0 \
 \cf2 Fig 4.22: I missed how the "BHM" results differs from the "samples" results. Both are from this work, but the former only uses the candidates found by the BHM. So which objects were used for the latter?\cf0 \
 \
 
-\i0 Here I the nomenclature is confusing. The BHM refers to the KDE estimation of the luminosity distribution as derived from the candidate members with p>0.84. Where as samples refers to the luminosity functions derived from the posterior distribution of the cluster parameters. I have modified this to avoid the confusion.
+\i0 Here the nomenclature is confusing. The BHM refers to the KDE estimation of the luminosity distribution as derived from the candidate members with p>0.84. Where as samples refers to the luminosity functions derived from the posterior distribution of the cluster parameters. I have modified this to avoid the confusion.
 \i \
 \
 \cf2 Fig. 4.22: The differences between the Bouy et al. and your determinations of the LF appear quite small (although the vertical axis is a log scale, so maybe their integrals over the "complete" regions show larger differences; it would have been interesting to report this). Should we therefore conclude that the simpler treatment in Bouy et al. was adequate for the LF determination?\cf0 \
 \
 
 \i0 I have included an Anderson-Darling test to estimate how different the distributions are. As this test suggests, the probability that both distributions came from the same parent distribution is negligible. So we can conclude that although the results look similar the distributions are statistically different.\
+\
+\pard\pardeftab720
+\cf0 Please, never forget the many advantages of the new model. Even if the results were the same, there are many things that can be done in the new model that could have never been introduced in the old one. Not to mention the arbitrariness of some of the procedures there. If there had been total coincidence, it would have only meant that my arbitrary choices were right on the spot. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\i \
+\i \cf0 \
 \cf2 Table 4.8: I don't follow the explanation of the evidence computation. The text suggests the parameters are fixed (at the MAP), and then the likelihood is computed. This is not the evidence, however.\cf0 \
 \
 
-\i0 This is a misunderstanding. The Table shows the MAP of the parameters for each model, together with the log evidences. At any moment the evidences were computed using the the MAP. I have rephrased the paragraph hoping to avoid the confusion.
+\i0 This is a misunderstanding. The Table shows the MAP of the parameters for each model, together with the log evidences. The evidences were never computed using the the MAP. I have rephrased the paragraph hoping to avoid the confusion.
 \i \
 \
 \cf2 sec. 4.8: I wouldn't say Trapezium and Hyades are just the Pleiades at different times. I don't think all clusters are born identical!\cf0 \
