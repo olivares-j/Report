@@ -1,0 +1,88 @@
+\documentclass[]{beamer}
+%\usepackage{babel}
+\usepackage[latin9]{inputenc}
+\usepackage{color,colortbl}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{xmpmulti}
+\definecolor{LRed}{rgb}{1,.8,.8}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{subscript}
+\usepackage{subfigure}
+\usepackage{beamerthemesplit} %// Activate for custom appearance
+\usetheme{Berkeley} 
+\usecolortheme{orchid}
+\beamertemplatenavigationsymbolsempty
+
+
+\makeatletter
+\newcommand\insertlogoii{}
+\newcommand\logoii[1]{\renewcommand\insertlogoii{#1}}
+\setbeamertemplate{headline}
+  {%
+    \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
+      \ifx\beamer@sidebarside\beamer@lefttext%
+      \else%
+        \hfill%
+      \fi%
+      \ifdim\beamer@sidebarwidth>0pt%  
+        \usebeamercolor[bg]{logo}%
+        \vrule width\beamer@sidebarwidth height \beamer@headheight%
+        \hskip-\beamer@sidebarwidth%
+        \hbox to \beamer@sidebarwidth{\hss\vbox to
+          \beamer@headheight{\vss\hbox{\color{fg}\insertlogo}\vss}\hss}%
+        \hfill%
+        \vrule width\beamer@sidebarwidth height \beamer@headheight%
+        \hskip-\beamer@sidebarwidth%
+        \hbox to \beamer@sidebarwidth{\hss\vbox to
+          \beamer@headheight{\vss\hbox{\color{fg}\insertlogoii}\vss}\hss}%
+      \else%
+        \vrule width0pt height \beamer@headheight%  
+      \fi%
+    \end{beamercolorbox}
+}
+\makeatother
+\renewcommand*{\thesubfigure}{}
+
+%----PhYHeader------
+\input{phyheader.tex}
+
+\title{Bayesian Hierarchical Modelling of Young Stellar Clusters}
+\author{Javier Olivares}
+
+\logoii{\includegraphics[width=1.2cm]{Logos/UNED-logo.jpg}}
+\logo{\includegraphics[width=2cm]{Logos/IPAG-logo.png}}
+\institute{}
+\date{\tiny{October 2017}}
+
+\definecolor{olive}{rgb}{0.3, 0.3, .5}
+\definecolor{beamer@blendedblue}{rgb}{0.3,0.3,0.8} % changed this
+\setbeamercolor{structure}{fg=beamer@blendedblue}
+
+\beamertemplatenavigationsymbolsempty 
+
+\setbeamersize{sidebar width left=0pt}
+\setbeamertemplate{footline}{}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%% INICIO %%%%%%%%%%%%%%%%%
+\frame{
+\frametitle{\hspace{2cm}Objectives}
+
+\begin{columns}[T]
+\begin{column}[T]{0.8\textwidth}
+\begin{center}
+\includegraphics[width=\columnwidth,height=0.9\textheight]{Media/DANCe-2.png}
+\end{center}
+\end{column}
+\begin{column}[T]{0.2\textwidth}
+\vspace{1cm}
+\begin{center}
+\includegraphics[width=\columnwidth,height=0.5\textheight]{Media/DANCe-2b.png}
+\end{center}
+\end{column}
+\end{columns}
+}
+%%%%%%%%%%%%%%%%%%%%%  %%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

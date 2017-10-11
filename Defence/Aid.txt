@@ -1,0 +1,61 @@
+*************** Notes for the defence *************
+
+45 to 50 minutes.
+
+- Keep in mind that the info is already present in the manuscript.
+
+- Do not put tables. Minimise the number of equations.
+
+-Check colours. Specially for colour blind people.
+
+- Figures should have units. And I must read them.
+
+- Make sure the graphs look good.
+
+- Do not read!!!!!!!!!
+
+- Reduce text to minimum!!
+
+- Take time in each slide. Breath!
+
+- One idea for slide.
+
+- Speak clearly and fluent.
+
+***************** TIME *************
+40% in the methodology (2 slides top for code development)
+30% in the results (including synthetic data)
+10% in current limitations and future work:
+	- GPU
+	- Binaries
+	- Extinction
+20% in Introduction:
+  - Context
+  - The pleiades, why?
+  - Current methodologies. How they fail?
+  - How I plan to solve it?
+
+************** Answers to referees *******
+- Answers must be implicit in the presentation.
+
+
+************** Specifics ***********
+- Explain why some graphs have empty gaussians.
+
+- Monotonicity. Answer stefano.
+
+- make clear the problem of multidimensional incompleteness.
+
+- Mention that astronomy is an observational science. Therefore there is no random sample.
+
+- We cannot include the selection effects! 
+
+- The BHM allows to marginalise and include magnitude limits.
+
+- mass segregation
+
+- poisson uncertainties.
+
+-current incompleteness will disappear in future data sets.
+
+
