@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  31 JAN 2017 00:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.22)  13 OCT 2017 13:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -872,20 +872,20 @@ Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )) (./phyheader.tex) (./Slides.aux)
 \openout1 = `Slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -951,7 +951,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 68.
+Package hyperref Info: Link coloring OFF on input line 66.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -961,71 +961,71 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count173
 )
-LaTeX Info: Redefining \ref on input line 68.
-LaTeX Info: Redefining \pageref on input line 68.
-LaTeX Info: Redefining \nameref on input line 68.
+LaTeX Info: Redefining \ref on input line 66.
+LaTeX Info: Redefining \pageref on input line 66.
+LaTeX Info: Redefining \nameref on input line 66.
 
 (./Slides.out) (./Slides.out)
 \@outlinefile=\write5
 \openout5 = `Slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 68.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 66.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 68.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 66.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 68.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 68.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 68.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 68.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 68.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 68.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 68.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 68.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 68.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 68.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 68.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 66.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 68.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 68.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 66.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 68.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 66.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 68.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 68.
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 68.
+(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 68.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 68.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 68.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 68.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 66.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 68
+(Font)              `pureletters' in the math version `normal' on input line 66
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 68
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 66
 .
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 68.
+(Font)              `pureletters' in the math version `bold' on input line 66.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  T1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 6
-8.
+6.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 68.
+ut line 66.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/beamer/translator/dicts/translato
 r-basic-dictionary/translator-basic-dictionary-English.dict
@@ -1051,337 +1051,961 @@ Dictionary: translator-numbers-dictionary, Language: English
 r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 68.
- (./Slides.nav) <Media/IPAG-logo.png, id=13, 284.5029pt x 201.1515pt>
-File: Media/IPAG-logo.png Graphic file (type png)
+LaTeX Info: Redefining \includegraphics on input line 66.
+ (./Slides.nav) <Logos/IPAG-logo.png, id=13, 284.5029pt x 201.1515pt>
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 68.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 66.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
- <Media/UNED-logo.jpg, id=15, 686.565pt x 686.565pt>
-File: Media/UNED-logo.jpg Graphic file (type jpg)
+ <Logos/UNED-logo.jpg, id=15, 686.565pt x 686.565pt>
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
 
-<use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 68.
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 66.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
- <Media/DANCe-1.png, id=16, 775.89874pt x 616.3025pt>
-File: Media/DANCe-1.png Graphic file (type png)
+ <Media/Pleiades.jpg, id=16, 1806.75pt x 915.42pt>
+File: Media/Pleiades.jpg Graphic file (type jpg)
 
-<use Media/DANCe-1.png>
-Package pdftex.def Info: Media/DANCe-1.png used on input line 71.
-(pdftex.def)             Requested size: 335.74918pt x 224.1445pt.
-
-Overfull \vbox (0.99788pt too high) detected at line 71
- []
+<use Media/Pleiades.jpg>
+Package pdftex.def Info: Media/Pleiades.jpg used on input line 93.
+(pdftex.def)             Requested size: 335.74263pt x 170.10432pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/bx/n' in size <4> not available
-(Font)              size <5> substituted on input line 71.
+(Font)              size <5> substituted on input line 93.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 71.
+(Font)              size <5> substituted on input line 93.
 
-File: Media/IPAG-logo.png Graphic file (type png)
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 71.
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 93.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 71.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 93.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./Media/IPAG-logo.png> <./Media/UNED-logo.jpg> <./Media/DANCe-1.png>]
-<Media/pourJavier.pdf, id=27, page=2, 722.7pt x 542.025pt>
-File: Media/pourJavier.pdf Graphic file (type pdf)
+ <./Logos/IPAG-logo.png> <./Logos/UNED-logo.jpg> <./Media/Pleiades.jpg>]
+<Media/Pleiades-RADec.png, id=28, 715.67375pt x 638.385pt>
+File: Media/Pleiades-RADec.png Graphic file (type png)
 
-<use Media/pourJavier.pdf, page 2>
-Package pdftex.def Info: Media/pourJavier.pdf, page2 used on input line 75.
-(pdftex.def)             Requested size: 335.74326pt x 224.1422pt.
+<use Media/Pleiades-RADec.png>
+Package pdftex.def Info: Media/Pleiades-RADec.png used on input line 93.
+(pdftex.def)             Requested size: 235.01881pt x 209.63515pt.
 
-Overfull \vbox (3.71558pt too high) detected at line 75
+Overfull \vbox (1.20853pt too high) detected at line 93
  []
 
-File: Media/IPAG-logo.png Graphic file (type png)
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 75.
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 93.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 75.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 93.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
  [2
 
- <./Media/pourJavier.pdf>] <Media/DANCe-2.png, id=101, 769.87625pt x 426.59375p
-t>
-File: Media/DANCe-2.png Graphic file (type png)
+ <./Media/Pleiades-RADec.png (PNG copy)>] <Media/Pleiades-pmRADec.png, id=35, 6
+84.5575pt x 638.385pt>
+File: Media/Pleiades-pmRADec.png Graphic file (type png)
 
-<use Media/DANCe-2.png>
-Package pdftex.def Info: Media/DANCe-2.png used on input line 91.
-(pdftex.def)             Requested size: 268.60316pt x 201.73584pt.
+<use Media/Pleiades-pmRADec.png>
+Package pdftex.def Info: Media/Pleiades-pmRADec.png used on input line 93.
+(pdftex.def)             Requested size: 235.01881pt x 219.1618pt.
 
-<Media/DANCe-2b.png, id=102, 203.76125pt x 326.21875pt>
-File: Media/DANCe-2b.png Graphic file (type png)
-
-<use Media/DANCe-2b.png>
-Package pdftex.def Info: Media/DANCe-2b.png used on input line 91.
-(pdftex.def)             Requested size: 67.14813pt x 112.0727pt.
-
-Overfull \vbox (6.90923pt too high) detected at line 91
+Overfull \vbox (10.73518pt too high) detected at line 93
  []
 
-File: Media/IPAG-logo.png Graphic file (type png)
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 91.
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 93.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 91.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 93.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
  [3
 
- <./Media/DANCe-2.png> <./Media/DANCe-2b.png>]
-<Media/DANCe-GaiaLimit.pdf, id=109, 616.15222pt x 611.76418pt>
-File: Media/DANCe-GaiaLimit.pdf Graphic file (type pdf)
+ <./Media/Pleiades-pmRADec.png (PNG copy)>] <Media/Pleiades-K_i_K.png, id=42, 8
+48.16875pt x 638.385pt>
+File: Media/Pleiades-K_i_K.png Graphic file (type png)
 
-<use Media/DANCe-GaiaLimit.pdf>
-Package pdftex.def Info: Media/DANCe-GaiaLimit.pdf used on input line 97.
-(pdftex.def)             Requested size: 203.18044pt x 201.73059pt.
-File: Media/IPAG-logo.png Graphic file (type png)
- <use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 97.
+<use Media/Pleiades-K_i_K.png>
+Package pdftex.def Info: Media/Pleiades-K_i_K.png used on input line 93.
+(pdftex.def)             Requested size: 268.59512pt x 202.16383pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 93.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
 
-<use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 97.
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 93.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
  [4
 
- <./Media/DANCe-GaiaLimit.pdf>]
-<Media/DANCe-4.pdf, id=157, 503.3896pt x 507.72023pt>
-File: Media/DANCe-4.pdf Graphic file (type pdf)
- <use Media/DANCe-4.pdf>
-Package pdftex.def Info: Media/DANCe-4.pdf used on input line 109.
-(pdftex.def)             Requested size: 167.87036pt x 179.31615pt.
+ <./Media/Pleiades-K_i_K.png (PNG copy)>]
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-<Media/DANCe-3.png, id=158, 361.35pt x 520.94624pt>
-File: Media/DANCe-3.png Graphic file (type png)
- <use Media/DANCe-3.png>
-Package pdftex.def Info: Media/DANCe-3.png used on input line 109.
-(pdftex.def)             Requested size: 167.87163pt x 201.72945pt.
-File: Media/IPAG-logo.png Graphic file (type png)
-
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 109.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 132.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 109.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 132.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
  [5
 
- <./Media/DANCe-4.pdf> <./Media/DANCe-3.png>]
-<Media/Bouy_DANCE.pdf, id=190, page=6, 1027.84pt x 770.88pt>
-File: Media/Bouy_DANCE.pdf Graphic file (type pdf)
+]
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-<use Media/Bouy_DANCE.pdf, page 6>
-Package pdftex.def Info: Media/Bouy_DANCE.pdf, page6 used on input line 113.
-(pdftex.def)             Requested size: 335.73787pt x 224.1376pt.
-
-Overfull \vbox (3.71098pt too high) detected at line 113
- []
-
-File: Media/IPAG-logo.png Graphic file (type png)
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 113.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 145.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 113.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 145.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
  [6
 
- <./Media/Bouy_DANCE.pdf>] <Media/DANCe-5.png, id=241, 332.24126pt x 290.08376p
-t>
-File: Media/DANCe-5.png Graphic file (type png)
+]
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-<use Media/DANCe-5.png>
-Package pdftex.def Info: Media/DANCe-5.png used on input line 135.
-(pdftex.def)             Requested size: 167.87428pt x 179.31891pt.
-File: Media/IPAG-logo.png Graphic file (type png)
- <use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 135.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 174.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 135.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 174.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [7
 
-[7
+]
+File: Logos/IPAG-logo.png Graphic file (type png)
 
- <./Media/DANCe-5.png>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 156.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 174.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 174.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [8
+
+]
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 185.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 185.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [9
+
+]
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 197.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 197.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [10
+
+]
+<../background/Figures/F1_Bouy2013.pdf, id=90, 506.26294pt x 507.44553pt>
+File: ../background/Figures/F1_Bouy2013.pdf Graphic file (type pdf)
+
+<use ../background/Figures/F1_Bouy2013.pdf>
+Package pdftex.def Info: ../background/Figures/F1_Bouy2013.pdf used on input li
+ne 209.
+(pdftex.def)             Requested size: 235.01881pt x 235.57257pt.
+
+Overfull \vbox (15.14595pt too high) detected at line 209
+ []
+
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 209.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 209.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [11
+
+ <../background/Figures/F1_Bouy2013.pdf>] <Media/PM_precision.pdf, id=121, 885.
+42053pt x 446.78307pt>
+File: Media/PM_precision.pdf Graphic file (type pdf)
+
+<use Media/PM_precision.pdf>
+Package pdftex.def Info: Media/PM_precision.pdf used on input line 209.
+(pdftex.def)             Requested size: 235.01881pt x 118.58783pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 209.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 209.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [12
+
+ <./Media/PM_precision.pdf>]
+<Media/Pleiades-RADec2.png, id=171, 754.82pt x 638.385pt>
+File: Media/Pleiades-RADec2.png Graphic file (type png)
+
+<use Media/Pleiades-RADec2.png>
+Package pdftex.def Info: Media/Pleiades-RADec2.png used on input line 209.
+(pdftex.def)             Requested size: 235.01881pt x 198.76424pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 209.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 209.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [13
+
+ <./Media/Pleiades-RADec2.png (PNG copy)>]
+<Media/Pleiades-Dec_i.png, id=179, 679.53876pt x 638.385pt>
+File: Media/Pleiades-Dec_i.png Graphic file (type png)
+
+<use Media/Pleiades-Dec_i.png>
+Package pdftex.def Info: Media/Pleiades-Dec_i.png used on input line 209.
+(pdftex.def)             Requested size: 235.01881pt x 220.77881pt.
+
+Overfull \vbox (0.35219pt too high) detected at line 209
+ []
+
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 209.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 209.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [14
+
+ <./Media/Pleiades-Dec_i.png (PNG copy)>] <Media/Pleiades-Dec_K.png, id=186, 67
+9.53876pt x 638.385pt>
+File: Media/Pleiades-Dec_K.png Graphic file (type png)
+
+<use Media/Pleiades-Dec_K.png>
+Package pdftex.def Info: Media/Pleiades-Dec_K.png used on input line 209.
+(pdftex.def)             Requested size: 235.01881pt x 220.77881pt.
+
+Overfull \vbox (0.35219pt too high) detected at line 209
+ []
+
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 209.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 209.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [15
+
+ <./Media/Pleiades-Dec_K.png (PNG copy)>]
+<../background/Figures/MagnitudeDistributionsDDR2.pdf, id=193, 505.89pt x 505.8
+9pt>
+File: ../background/Figures/MagnitudeDistributionsDDR2.pdf Graphic file (type p
+df)
+ <use ../background/Figures/MagnitudeDistributionsDDR2.pdf>
+Package pdftex.def Info: ../background/Figures/MagnitudeDistributionsDDR2.pdf u
+sed on input line 209.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 209.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 209.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [16
+
+ <../background/Figures/MagnitudeDistributionsDDR2.pdf>]
+<../background/Figures/MissingDistributionsDDR2.pdf, id=206, 505.89pt x 505.89p
+t>
+File: ../background/Figures/MissingDistributionsDDR2.pdf Graphic file (type pdf
+)
+ <use ../background/Figures/MissingDistributionsDDR2.pdf>
+Package pdftex.def Info: ../background/Figures/MissingDistributionsDDR2.pdf use
+d on input line 209.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 209.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 209.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [17
+
+ <../background/Figures/MissingDistributionsDDR2.pdf>]
+<../background/Figures/MagnitudeDistributions.pdf, id=218, page=1, 505.89pt x 5
+05.89pt>
+File: ../background/Figures/MagnitudeDistributions.pdf Graphic file (type pdf)
+ <use ../background/Figures/MagnitudeDistributions.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/MagnitudeDistributions.pdf, page
+1 used on input line 228.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 228.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 228.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [18
+
+ <../background/Figures/MagnitudeDistributions.pdf>]
+<../background/Figures/MissingDistributions.pdf, id=232, page=4, 505.89pt x 505
+.89pt>
+File: ../background/Figures/MissingDistributions.pdf Graphic file (type pdf)
+ <use ../background/Figures/MissingDistributions.pdf, page 4>
+Package pdftex.def Info: ../background/Figures/MissingDistributions.pdf, page4 
+used on input line 228.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 228.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 228.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [19
+
+ <../background/Figures/MissingDistributions.pdf>]
+<../background/Figures/ObservedDistributions.pdf, id=245, 505.89pt x 505.89pt>
+File: ../background/Figures/ObservedDistributions.pdf Graphic file (type pdf)
+
+<use ../background/Figures/ObservedDistributions.pdf>
+Package pdftex.def Info: ../background/Figures/ObservedDistributions.pdf used o
+n input line 228.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 228.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 228.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [20
+
+ <../background/Figures/ObservedDistributions.pdf>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 228.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 156.
+LaTeX Font Info:    Try loading font information for U+msb on input line 228.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 156.
+line 228.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-File: Media/IPAG-logo.png Graphic file (type png)
- <use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 156.
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 228.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 156.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 228.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
- [8
+ [21
 
 ]
-<Media/ProperMotions.pdf, id=263, page=1, 505.89pt x 505.89pt>
-File: Media/ProperMotions.pdf Graphic file (type pdf)
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-<use Media/ProperMotions.pdf, page 1>
-Package pdftex.def Info: Media/ProperMotions.pdf, page1 used on input line 163.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 245.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 245.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [22
 
-(pdftex.def)             Requested size: 224.15157pt x 224.14662pt.
+]
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-Overfull \vbox (15.72pt too high) detected at line 163
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 264.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 264.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [23
+
+]
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 284.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 284.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [24
+
+]
+<../background/Figures/Field_GMM.pdf, id=293, page=1, 405.85988pt x 311.91939pt
+>
+File: ../background/Figures/Field_GMM.pdf Graphic file (type pdf)
+ <use ../background/Figures/Field_GMM.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/Field_GMM.pdf, page1 used on inp
+ut line 284.
+(pdftex.def)             Requested size: 235.01881pt x 180.62779pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 284.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 284.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [25
+
+ <../background/Figures/Field_GMM.pdf>]
+<../background/Figures/Field_GMM.pdf, id=379, page=7, 393.41974pt x 310.34052pt
+>
+File: ../background/Figures/Field_GMM.pdf Graphic file (type pdf)
+ <use ../background/Figures/Field_GMM.pdf, page 7>
+Package pdftex.def Info: ../background/Figures/Field_GMM.pdf, page7 used on inp
+ut line 284.
+(pdftex.def)             Requested size: 235.01881pt x 185.39125pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 284.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 284.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [26
+
+ <../background/Figures/Field_GMM.pdf>]
+<../background/Figures/Field_GMM.pdf, id=451, page=5, 393.41974pt x 310.34052pt
+>
+File: ../background/Figures/Field_GMM.pdf Graphic file (type pdf)
+ <use ../background/Figures/Field_GMM.pdf, page 5>
+Package pdftex.def Info: ../background/Figures/Field_GMM.pdf, page5 used on inp
+ut line 284.
+(pdftex.def)             Requested size: 235.01881pt x 185.39125pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 284.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 284.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [27
+
+ <../background/Figures/Field_GMM.pdf>]
+<../background/Figures/validationMissing.pdf, id=524, page=4, 409.67213pt x 310
+.34052pt>
+File: ../background/Figures/validationMissing.pdf Graphic file (type pdf)
+ <use ../background/Figures/validationMissing.pdf, page 4>
+Package pdftex.def Info: ../background/Figures/validationMissing.pdf, page4 use
+d on input line 308.
+(pdftex.def)             Requested size: 201.44746pt x 179.32045pt.
+
+Overfull \hbox (33.57616pt too wide) in paragraph at lines 308--308
+[][]  
  []
 
-File: Media/IPAG-logo.png Graphic file (type png)
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 163.
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 308.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 163.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 308.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
- [9
+ [28
 
- <./Media/ProperMotions.pdf>] <Media/Probability.pdf, id=282, page=5, 505.89pt 
-x 505.89pt>
-File: Media/Probability.pdf Graphic file (type pdf)
-
-<use Media/Probability.pdf, page 5>
-Package pdftex.def Info: Media/Probability.pdf, page5 used on input line 170.
-(pdftex.def)             Requested size: 235.02026pt x 201.73486pt.
-File: Media/IPAG-logo.png Graphic file (type png)
- <use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 170.
+ <../background/Figures/validationMissing.pdf>]
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 341.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
-
-<use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 170.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 341.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
- [10
 
- <./Media/Probability.pdf>]
-<Media/absolute_JHK-log.pdf, id=733, page=1, 505.89pt x 505.89pt>
-File: Media/absolute_JHK-log.pdf Graphic file (type pdf)
+[29
 
-<use Media/absolute_JHK-log.pdf, page 1>
-Package pdftex.def Info: Media/absolute_JHK-log.pdf, page1 used on input line 1
-76.
-(pdftex.def)             Requested size: 224.15157pt x 224.14662pt.
+]
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 361.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 361.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [30
 
-Overfull \vbox (15.72pt too high) detected at line 176
+]
+<../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, id=588, page=1,
+ 452.60153pt x 315.86394pt>
+File: ../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf Graphic fil
+e (type pdf)
+
+<use ../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_p
+hot.pdf, page1 used on input line 361.
+(pdftex.def)             Requested size: 235.01881pt x 164.01402pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 361.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 361.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [31
+
+ <../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf>]
+<../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, id=671, page=3,
+ 423.03795pt x 315.53458pt>
+File: ../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf Graphic fil
+e (type pdf)
+
+<use ../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf, page 3>
+Package pdftex.def Info: ../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_p
+hot.pdf, page3 used on input line 361.
+(pdftex.def)             Requested size: 235.01881pt x 175.29709pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 361.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 361.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [32
+
+ <../background/Figures/BT-Settl-2011bc-120Myr_Teff_vs_phot.pdf>]
+<../background/Figures/Photometry_fit.pdf, id=753, page=7, 505.89pt x 505.89pt>
+File: ../background/Figures/Photometry_fit.pdf Graphic file (type pdf)
+<use ../background/Figures/Photometry_fit.pdf, page 7>
+Package pdftex.def Info: ../background/Figures/Photometry_fit.pdf, page7 used o
+n input line 361.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 361.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 361.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [33
+
+ <../background/Figures/Photometry_fit.pdf>]
+<../background/Figures/Photometry_fit.pdf, id=769, page=8, 505.89pt x 505.89pt>
+File: ../background/Figures/Photometry_fit.pdf Graphic file (type pdf)
+<use ../background/Figures/Photometry_fit.pdf, page 8>
+Package pdftex.def Info: ../background/Figures/Photometry_fit.pdf, page8 used o
+n input line 361.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 361.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 361.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [34
+
+ <../background/Figures/Photometry_fit.pdf>]
+<../background/Figures/F2_Hillenbrand2008.pdf, id=784, 344.52515pt x 346.683pt>
+File: ../background/Figures/F2_Hillenbrand2008.pdf Graphic file (type pdf)
+<use ../background/Figures/F2_Hillenbrand2008.pdf>
+Package pdftex.def Info: ../background/Figures/F2_Hillenbrand2008.pdf used on i
+nput line 361.
+(pdftex.def)             Requested size: 201.44762pt x 202.71086pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 361.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 361.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [35
+
+ <../background/Figures/F2_Hillenbrand2008.pdf>]
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 381.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 381.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [36
+
+]
+<../background/Figures/FTPRvsSarro.pdf, id=816, page=1, 505.89pt x 505.89pt>
+File: ../background/Figures/FTPRvsSarro.pdf Graphic file (type pdf)
+
+<use ../background/Figures/FTPRvsSarro.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/FTPRvsSarro.pdf, page1 used on i
+nput line 381.
+(pdftex.def)             Requested size: 235.01881pt x 235.02026pt.
+
+Overfull \vbox (42.93114pt too high) detected at line 381
  []
 
-File: Media/IPAG-logo.png Graphic file (type png)
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 176.
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 381.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 176.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 381.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
- [11
+ [37
 
- <./Media/absolute_JHK-log.pdf>] <Media/MassDistribution.pdf, id=749, page=1, 5
-05.89pt x 505.89pt>
-File: Media/MassDistribution.pdf Graphic file (type pdf)
+ <../background/Figures/FTPRvsSarro.pdf>]
+<../background/Figures/PrecisionAccuracy.pdf, id=830, page=1, 505.89pt x 505.89
+pt>
+File: ../background/Figures/PrecisionAccuracy.pdf Graphic file (type pdf)
+ <use ../background/Figures/PrecisionAccuracy.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/PrecisionAccuracy.pdf, page1 use
+d on input line 381.
+(pdftex.def)             Requested size: 167.8713pt x 167.87051pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-<use Media/MassDistribution.pdf, page 1>
-Package pdftex.def Info: Media/MassDistribution.pdf, page1 used on input line 1
-80.
-(pdftex.def)             Requested size: 335.74876pt x 246.56827pt.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 381.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 381.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [38
 
-Overfull \vbox (26.14165pt too high) detected at line 180
+ <../background/Figures/PrecisionAccuracy.pdf>]
+<../background/Figures/ST1_ph-eps-converted-to.pdf, id=843, page=1, 361.35pt x 
+361.35pt>
+File: ../background/Figures/ST1_ph-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ../background/Figures/ST1_ph-eps-converted-to.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/ST1_ph-eps-converted-to.pdf, pag
+e1 used on input line 392.
+(pdftex.def)             Requested size: 201.44762pt x 201.45036pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 392.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 392.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [39
+
+ <../background/Figures/ST1_ph-eps-converted-to.pdf>]
+<../background/Figures/ST1_pm-eps-converted-to.pdf, id=861, page=1, 361.35pt x 
+361.35pt>
+File: ../background/Figures/ST1_pm-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ../background/Figures/ST1_pm-eps-converted-to.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/ST1_pm-eps-converted-to.pdf, pag
+e1 used on input line 392.
+(pdftex.def)             Requested size: 201.44762pt x 201.45036pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 392.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 392.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [40
+
+ <../background/Figures/ST1_pm-eps-converted-to.pdf>]
+<../background/Figures/BHM/BHMvsBouy.pdf, id=880, page=1, 505.89pt x 505.89pt>
+File: ../background/Figures/BHM/BHMvsBouy.pdf Graphic file (type pdf)
+
+<use ../background/Figures/BHM/BHMvsBouy.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/BHM/BHMvsBouy.pdf, page1 used on
+ input line 392.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 392.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 392.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [41
+
+ <../background/Figures/BHM/BHMvsBouy.pdf>]
+<../background/Figures/RT1_ph-eps-converted-to.pdf, id=895, page=1, 505.89pt x 
+505.89pt>
+File: ../background/Figures/RT1_ph-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ../background/Figures/RT1_ph-eps-converted-to.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/RT1_ph-eps-converted-to.pdf, pag
+e1 used on input line 392.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 392.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 392.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [42
+
+ <../background/Figures/RT1_ph-eps-converted-to.pdf>]
+<../background/Figures/RT1_pm-eps-converted-to.pdf, id=913, page=1, 505.89pt x 
+505.89pt>
+File: ../background/Figures/RT1_pm-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ../background/Figures/RT1_pm-eps-converted-to.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/RT1_pm-eps-converted-to.pdf, pag
+e1 used on input line 392.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 392.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 392.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [43
+
+ <../background/Figures/RT1_pm-eps-converted-to.pdf>]
+<../background/Figures/BHM/Probability.pdf, id=933, page=1, 505.89pt x 505.89pt
+>
+File: ../background/Figures/BHM/Probability.pdf Graphic file (type pdf)
+ <use ../background/Figures/BHM/Probability.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/BHM/Probability.pdf, page1 used 
+on input line 406.
+(pdftex.def)             Requested size: 235.01881pt x 235.02026pt.
+
+Overfull \vbox (26.59364pt too high) detected at line 406
  []
 
-File: Media/IPAG-logo.png Graphic file (type png)
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 180.
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 406.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 180.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 406.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
- [12
+ [44
 
- <./Media/MassDistribution.pdf>] <Media/PDMF_comparison.pdf, id=767, page=1, 50
-5.89pt x 505.89pt>
-File: Media/PDMF_comparison.pdf Graphic file (type pdf)
+ <../background/Figures/BHM/Probability.pdf>]
+<../background/Figures/BHM/Probability.pdf, id=1054, page=5, 505.89pt x 505.89p
+t>
+File: ../background/Figures/BHM/Probability.pdf Graphic file (type pdf)
+ <use ../background/Figures/BHM/Probability.pdf, page 5>
+Package pdftex.def Info: ../background/Figures/BHM/Probability.pdf, page5 used 
+on input line 406.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-<use Media/PDMF_comparison.pdf, page 1>
-Package pdftex.def Info: Media/PDMF_comparison.pdf, page1 used on input line 18
-5.
-(pdftex.def)             Requested size: 167.87051pt x 179.31816pt.
-
-<Media/CDF_comparison.pdf, id=768, page=1, 505.89pt x 505.89pt>
-File: Media/CDF_comparison.pdf Graphic file (type pdf)
-
-<use Media/CDF_comparison.pdf, page 1>
-Package pdftex.def Info: Media/CDF_comparison.pdf, page1 used on input line 185
-.
-(pdftex.def)             Requested size: 167.87051pt x 179.31816pt.
-File: Media/IPAG-logo.png Graphic file (type png)
- <use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 185.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 406.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
-
-<use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 185.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 406.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
- [13
+ [45
 
- <./Media/PDMF_comparison.pdf> <./Media/CDF_comparison.pdf>] <Media/Bouy_DANCE.
-pdf, id=796, page=21, 1027.84pt x 770.88pt>
-File: Media/Bouy_DANCE.pdf Graphic file (type pdf)
+ <../background/Figures/BHM/Probability.pdf>]
+<../background/Figures/BHM/MembersModel.pdf, id=1175, page=1, 505.89pt x 505.89
+pt>
+File: ../background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
+ <use ../background/Figures/BHM/MembersModel.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/BHM/MembersModel.pdf, page1 used
+ on input line 406.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
 
-<use Media/Bouy_DANCE.pdf, page 21>
-Package pdftex.def Info: Media/Bouy_DANCE.pdf, page21 used on input line 189.
-(pdftex.def)             Requested size: 335.73787pt x 224.1376pt.
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 406.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 406.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [46
 
-Overfull \vbox (3.71098pt too high) detected at line 189
+ <../background/Figures/BHM/MembersModel.pdf>]
+<../background/Figures/BHM/MembersModel.pdf, id=1194, page=2, 505.89pt x 505.89
+pt>
+File: ../background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
+ <use ../background/Figures/BHM/MembersModel.pdf, page 2>
+Package pdftex.def Info: ../background/Figures/BHM/MembersModel.pdf, page2 used
+ on input line 406.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 406.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 406.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [47
+
+ <../background/Figures/BHM/MembersModel.pdf>]
+<../background/Figures/BHM/MembersModel.pdf, id=1213, page=10, 505.89pt x 505.8
+9pt>
+File: ../background/Figures/BHM/MembersModel.pdf Graphic file (type pdf)
+ <use ../background/Figures/BHM/MembersModel.pdf, page 10>
+Package pdftex.def Info: ../background/Figures/BHM/MembersModel.pdf, page10 use
+d on input line 406.
+(pdftex.def)             Requested size: 201.44762pt x 201.44925pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 406.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 406.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [48
+
+ <../background/Figures/BHM/MembersModel.pdf>]
+<../background/Figures/BHM/absolute_JHK-log.pdf, id=1232, page=1, 375.4025pt x 
+505.89pt>
+File: ../background/Figures/BHM/absolute_JHK-log.pdf Graphic file (type pdf)
+ <use ../background/Figures/BHM/absolute_JHK-log.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/BHM/absolute_JHK-log.pdf, page1 
+used on input line 406.
+(pdftex.def)             Requested size: 167.8713pt x 226.22804pt.
+
+Overfull \vbox (17.80142pt too high) detected at line 406
  []
 
-File: Media/IPAG-logo.png Graphic file (type png)
-<use Media/IPAG-logo.png>
-Package pdftex.def Info: Media/IPAG-logo.png used on input line 189.
+File: Logos/IPAG-logo.png Graphic file (type png)
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 406.
 (pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
-File: Media/UNED-logo.jpg Graphic file (type jpg)
- <use Media/UNED-logo.jpg>
-Package pdftex.def Info: Media/UNED-logo.jpg used on input line 189.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 406.
 (pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
- [14
+ [49
 
- <./Media/Bouy_DANCE.pdf>]
+ <../background/Figures/BHM/absolute_JHK-log.pdf>]
+<../background/Figures/BHM/MassDistribution.pdf, id=1250, page=1, 578.16pt x 43
+3.62pt>
+File: ../background/Figures/BHM/MassDistribution.pdf Graphic file (type pdf)
+ <use ../background/Figures/BHM/MassDistribution.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/BHM/MassDistribution.pdf, page1 
+used on input line 406.
+(pdftex.def)             Requested size: 201.44762pt x 151.08115pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 406.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 406.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [50
+
+ <../background/Figures/BHM/MassDistribution.pdf>]
+<../background/Figures/BHM/ModelsMassDistribution.pdf, id=1287, page=1, 578.16p
+t x 433.62pt>
+File: ../background/Figures/BHM/ModelsMassDistribution.pdf Graphic file (type p
+df)
+
+<use ../background/Figures/BHM/ModelsMassDistribution.pdf, page 1>
+Package pdftex.def Info: ../background/Figures/BHM/ModelsMassDistribution.pdf, 
+page1 used on input line 406.
+(pdftex.def)             Requested size: 201.44762pt x 151.08115pt.
+File: Logos/IPAG-logo.png Graphic file (type png)
+
+<use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 406.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+ <use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 406.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [51
+
+ <../background/Figures/BHM/ModelsMassDistribution.pdf>]
+File: Logos/IPAG-logo.png Graphic file (type png)
+ <use Logos/IPAG-logo.png>
+Package pdftex.def Info: Logos/IPAG-logo.png used on input line 415.
+(pdftex.def)             Requested size: 56.9055pt x 40.23265pt.
+File: Logos/UNED-logo.jpg Graphic file (type jpg)
+
+<use Logos/UNED-logo.jpg>
+Package pdftex.def Info: Logos/UNED-logo.jpg used on input line 415.
+(pdftex.def)             Requested size: 34.14322pt x 34.14168pt.
+ [52
+
+]
 \tf@nav=\write6
 \openout6 = `Slides.nav'.
 
@@ -1391,11 +2015,11 @@ Package pdftex.def Info: Media/UNED-logo.jpg used on input line 189.
 \tf@snm=\write8
 \openout8 = `Slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 417.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 417.
  (./Slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 417.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 417.
 Package rerunfilecheck Info: File `Slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1403,35 +2027,55 @@ Package rerunfilecheck Info: File `Slides.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 417.
  ) 
 Here is how much of TeX's memory you used:
- 20106 strings out of 493109
- 397370 string characters out of 6135003
- 459481 words of memory out of 5000000
- 23020 multiletter control sequences out of 15000+600000
- 18883 words of font info for 44 fonts, out of 8000000 for 9000
+ 20391 strings out of 493109
+ 405914 string characters out of 6135003
+ 462493 words of memory out of 5000000
+ 23195 multiletter control sequences out of 15000+600000
+ 29228 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,20n,59p,484b,602s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfsi0800.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on Slides.pdf (14 pages, 7042115 bytes).
+ 56i,20n,59p,415b,687s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Navigation55} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2014/texmf-dist/fon
+ts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/cm-super/sfsx0800.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/txfonts/txsy.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/he
+lvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/helvetic/
+uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Slides.pdf (52 pages, 11659153 bytes).
 PDF statistics:
- 939 PDF objects out of 1000 (max. 8388607)
- 779 compressed objects within 8 object streams
- 29 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1420 PDF objects out of 1440 (max. 8388607)
+ 985 compressed objects within 10 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 243 words of extra memory for PDF output out of 10000 (max. 10000000)
 

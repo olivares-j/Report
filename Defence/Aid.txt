@@ -59,3 +59,201 @@
 -current incompleteness will disappear in future data sets.
 
 
+************************************ TED ****************************************
+- Tell something new: The BHM is new why? give reasons to the audience.
+		- Correctly propagating uncertainties from all observables.
+			Never before uncertainties in proper motions were in the MF.
+			Never before a data set to construct the model have been this big.
+			Never before objects with missing values have been used to construct a model.
+			Never before a BHM in stellar clusters.
+			Never before a posterior probability for a membership probability.
+
+		- What is new in the hierarchical approach?
+			Inferring prior from the data
+			Allows to marginalise unknown parameters and obtain their global properties.
+
+
+- Be contagious about the use of these new things. 
+		- The BHM was developed in the 60’s but people could not use it because it was computationally demanding.
+		- With new computers we suddenly have BHM every where. Health, biology, artificial vision.
+		- Model selection. Compare and chose in an objective way.
+
+- Express your feeling. How complicate was at the beginning. How difficult was to learn statistics from scratch.
+		- Tell your past about statistics.
+		- Tell them that it was not easy to deal with programming languages, computers, clusters, mcmc, pso, convergence,
+		- Tell them that slowly you started to gain trust in yourself. and then started to experiment. to search for what other have done before.
+		- Tell them how cool is to pass knowledge from one area to the other. 
+		- Tell them how difficult is to convince others.
+
+		- Idea with a personal story at the centre. 
+		- Be contagious about your excitement for astronomy.
+		- Tell them about yourself. How deep you wanted to prepared for gaia. How when you where searching for a PhD Coryn rejected you,
+		   and now he says your work is very good. I do not know where to say this.
+		- Be yourself, not what others want you to be. Be fun, as you are, naturally. Do not force it.
+
+- Start on something compelling and interesting.
+
+- Focus in. One idea simply expressed instead of several non communicated. Be effective. You want to communicate. A talk is to communicate ideas. Take time, be sure the audience gets, catch, understand the idea.
+
+————————
+- How do you  want to change your audience by the end of the presentation?
+- What do you want to communicate?
+I want them to understand the importance of “better” modelling your data. 
+What is better?
+—— Bayasian.
+—- Hierarchical.
+— heteroscedastic.
+— missing values.
+
+What is your goal?
+
+Achievable goal
+
+Where do you want them to be.
+
+Do an inception!…. plant an idea in someones mind!
+They must embrace it and strategically take action.
+
+You have to transmit your beliefs.
+
+The goal must be there every time, and you must think of during the entire presentation.
+Every ting you must be focus towards your goal.
+——————————
+- Tell a story.
+——Convey your ideas into a story.
+
+— First act: the hero: the idea: the Bayesian formalism with the hierarchical structure.
+—— friends of my hero: heteroscedastic data. missing values.
+—- Nemesis: computing time, contamination, 
+- Encounters road blocks: the construction of the model, the computing time, the different clusters, 
+- Hero emerges triunfant -> provides the results.
+
+
+First. What it is now: The state of the art. the previous methods.
+       What it could be: the perfect ideal world. Contrast everything done by previous works.
+
+Second. Move back and fort showing what is what it could be, what is what it could be. and catch them.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- Remove slides
+- Keep the pace
+- Step back from the details:
+	- Talk less of missing values
+	- More on the results
+- Shrink state of the art.
+- Be synthetic on the works of others.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Slide title name 
+- Why study clusters?
+- Global properties: 
+- Why do we need?
+- Dynamical evolution
+- Mass function? -> Key property
+- Evolution defined by the mass function
+- 
+——————————————
+Simplify the message and put image together with bigger labels.
+Mention the observables
+
+—remove ideal vs reality
+—————————————
+Codes:
+What they do not address?
+Mention the caveats more the codes in the last few years.
+This was as enormous effort but where where thinks not achieved this is why we start.
+———————
+- remove Approaching the ideal and describe what you plan to address.
+——————————————
+Strategy.
+Develop a new tool
+Pleiades: benchmarking pretty well now.
+Point one: Create a tool based on the best methodology.
+Why we go bayesian
+Frame on the COSMIC DANCe- tool fully expolteid in the future.
+
+4 Evaluation and validataion
+5 Discussion on the results.
+—————————————————
+DATA sets
+too much slides
+keep slides for the discussion.
+merge slides Dec vs i mag and K mag
+———
+Explain why we did RDDR2
+What that implies.
+-explain the axes of each plot.
+———
+selection of observables
+remove selection models for the spatial distribution (move it to the future aspects)
+—— we did not include the positions because we did not want to bias the result with bad model
+——
+Remove equations:
+- Bayes theorem.
+- Plate notation.
+——————
+Treatment of missing information
+- mention that assumptions are simple but are better than previous
+- I have slides preparad to prove that this assumptions are indeed better.
+——
+Ignorability vs Naivety - > move to questions
+Remove the numbers 
+and explain
+——
+
+TILTES HAVE TO BE MORE INFORMATIVE
+BEFORE INT HE LITERATURE
+
+OVERVIEW of the cluster —— move to the beginning to the presentation.
+
+—— merge overview of cluster and field together.
+
+——————
+colour index-
+resume the discussion
+
+—— remove slide 34 faherty. to better constrain the spline.
+— remove hillebrand 2008
+————
+Validation remove equation
+describe texts and explain that the optimum was chose objectively.
+———
+Explain the acronyms
+and put two graphs together
+change colour commons
+—comparison with hervé change names
+——Rebull remove it
+——put results on probability before the comparison.
+put binaries in answering questions
+—TILTES MORE EXPLICIT IN THE RESULTS
+—————m
+mass distribution
+- remove prior and add jh
+—————
+spatial distribution
+2 slides—— methodology
+—————————— results
+
+555555555555555555555555555
+conclusions
+10^6
+205 new candidate members
+————————————
+limitiations 
+perspectives to improve the work
+broader context
+_________
+code public 
+clusters
+gaia + pans-starrs
+
+—————————————————————
+Conclusion and perspectives
+Applying for next cluster
+Other
+modules
+
+
+
+
+
+
