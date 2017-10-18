@@ -145,11 +145,12 @@ Second. Move back and fort showing what is what it could be, what is what it cou
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Slide title name 
 - Why study clusters?
-- Global properties: 
-- Why do we need?
 - Dynamical evolution
 - Mass function? -> Key property
 - Evolution defined by the mass function
+- Global properties: 
+- Why do we need?
+
 - 
 ——————————————
 Simplify the message and put image together with bigger labels.
@@ -251,6 +252,18 @@ Conclusion and perspectives
 Applying for next cluster
 Other
 modules
+
+
+cambiar colores de ellipses en el campo
+el resto de las combinaciones de color aparecen penalizadas en la classifacacion de random forest.
+Estos indices de color son poco informativos en la region the alta masa.
+
+Incluir tablas de sarro para la classificacion con random forest.
+
+mencionar las infraestructuras computacionales
+PM: cambiar leyenda BS Cs
+luminosidad: quitar HMPS Y DISCUTIR DIFFERENCIAS
+
 
 
 
